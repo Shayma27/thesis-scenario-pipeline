@@ -1,0 +1,71 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "enter_roadway_muehlenstr_2328",
+    "date": "2024-11-09",
+    "time": "23:28",
+    "raw_text": "Eine Pkw fahrende Person befuhr den äußerst linken Fahrstreifen der Mühlenstr. als eine Rad fahrende Person unvermittelt vom Gehweg auf Höhe der Hausnummer 89 auf die Fahrbahn fuhr. Es kam zum Zusammenstoß. Datum: Sa, 09.11.2024 Uhrzeit: 23:28 Uhr"
+  },
+  "classification": {
+    "scenario_type": "enter_roadway_conflict",
+    "confidence": 0.8
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Mühlenstr",
+    "secondary_road": null,
+    "osm_query": "Mühlenstr / Hausnummer 89, Berlin, Germany",
+    "osm_roads": [
+      "Mühlenstr"
+    ],
+    "house_number_reference": "89",
+    "location_type": "midblock",
+    "direction_references": [
+      "unknown"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "unknown",
+    "bike_facility_type": "unknown",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "unknown"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "enter_roadway",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "unknown"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "cyclist_entered_roadway_from_sidewalk",
+    "collision_happened": true,
+    "collision_description": "A car collided with a cyclist who entered the roadway from the sidewalk.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line"
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {}
+    }
+  },
+  "missing_parameters": []
+}

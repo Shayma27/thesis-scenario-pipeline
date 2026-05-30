@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 145382490,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 1430586741,
+    "lat": "52.5199523",
+    "lon": "13.2700873",
+    "category": "highway",
+    "type": "secondary",
+    "place_rank": 26,
+    "importance": 0.26704010519783294,
+    "addresstype": "road",
+    "name": "Spandauer Damm",
+    "display_name": "Spandauer Damm, Villenkolonie Westend, Westend, Charlottenburg-Wilmersdorf, Berlin, 14050, Deutschland",
+    "boundingbox": [
+      "52.5196082",
+      "52.5202981",
+      "13.2681773",
+      "13.2719976"
+    ]
+  }
+]

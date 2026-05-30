@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 145310280,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 1462580102,
+    "lat": "52.5453113",
+    "lon": "13.1948593",
+    "category": "highway",
+    "type": "secondary",
+    "place_rank": 26,
+    "importance": 0.05342208819714653,
+    "addresstype": "road",
+    "name": "Falkenseer Damm",
+    "display_name": "Falkenseer Damm, Neustadt, Spandau, Berlin, 13585, Deutschland",
+    "boundingbox": [
+      "52.5451392",
+      "52.5454836",
+      "13.1946587",
+      "13.1950601"
+    ]
+  }
+]

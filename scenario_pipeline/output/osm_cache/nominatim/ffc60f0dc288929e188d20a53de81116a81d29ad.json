@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 417585094,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 1511914088,
+    "lat": "52.5208130",
+    "lon": "13.2994087",
+    "category": "highway",
+    "type": "secondary",
+    "place_rank": 26,
+    "importance": 0.19619210675062,
+    "addresstype": "road",
+    "name": "Luisenplatz",
+    "display_name": "Luisenplatz, Mierendorffkiez, Charlottenburg, Charlottenburg-Wilmersdorf, Berlin, 10585, Deutschland",
+    "boundingbox": [
+      "52.5207770",
+      "52.5208489",
+      "13.2993955",
+      "13.2994219"
+    ]
+  }
+]

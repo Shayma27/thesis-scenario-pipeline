@@ -1,0 +1,72 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "left_turn_oranienburger_1820",
+    "date": "2024-11-01",
+    "time": "18:20",
+    "raw_text": "Eine Rad fahrende Person befuhr den Radfahrschutzstreifen der Oranienburger Straße nach Norden und wollte nach links in den Taldorfer Weg abbiegen, ohne auf den nachfolgenden in gleicher Richtung fahrenden Pkw zu achten. Es kam zum Zusammenstoß. Datum: Fr, 01.11.2024 Uhrzeit: 18:20 Uhr"
+  },
+  "classification": {
+    "scenario_type": "left_turn_conflict",
+    "confidence": 0.8
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Oranienburger Straße",
+    "secondary_road": "Taldorfer Weg",
+    "osm_query": "Oranienburger Straße / Taldorfer Weg, Berlin, Germany",
+    "osm_roads": [
+      "Oranienburger Straße",
+      "Taldorfer Weg"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "norden"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "unknown",
+    "bike_facility_type": "bike_lane",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": "north",
+      "traffic_rule_status": "priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "turn_left",
+      "initial_direction": "north",
+      "traffic_rule_status": "violated_priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "left_turn_across_path",
+    "collision_happened": true,
+    "collision_description": "A car collided with a cyclist who was turning left from the bike lane.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line"
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {}
+    }
+  },
+  "missing_parameters": []
+}

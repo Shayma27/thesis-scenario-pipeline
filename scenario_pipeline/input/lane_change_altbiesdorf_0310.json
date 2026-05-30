@@ -1,0 +1,73 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "lane_change_altbiesdorf_0310",
+    "date": "2021-10-17",
+    "time": "03:10",
+    "raw_text": "Ein Radfahrer befuhr den linken der drei Fahrstreifen auf der Straße Alt-Biesdorf von der Lötschbergstraße kommend in Richtung Grabensprung. In Höhe der Braunsdorfstraße wechselte der Radfahrer auf den äußerst rechten Fahrstreifen, wobei es zum Zusammenstoß mit einem Toyota-Fahrer kam. Datum: 17.10.2021 Uhrzeit: 03:10 Uhr"
+  },
+  "classification": {
+    "scenario_type": "lane_change_conflict",
+    "confidence": 0.8
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Alt-Biesdorf",
+    "secondary_road": "Braunsdorfstraße",
+    "osm_query": "Alt-Biesdorf / Braunsdorfstraße, Berlin, Germany",
+    "osm_roads": [
+      "Alt-Biesdorf",
+      "Braunsdorfstraße",
+      "Lötschbergstraße"
+    ],
+    "house_number_reference": null,
+    "location_type": "midblock",
+    "direction_references": [
+      "unknown"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "no",
+    "bike_facility_type": "unknown",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "3"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "unknown"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "change_lane",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "unknown"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "lane_change_across_path",
+    "collision_happened": true,
+    "collision_description": "A cyclist collided with a Toyota car while changing lanes.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line"
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {}
+    }
+  },
+  "missing_parameters": []
+}

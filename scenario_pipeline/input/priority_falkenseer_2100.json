@@ -1,0 +1,73 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "priority_falkenseer_2100",
+    "date": "2023-01-02",
+    "time": "21:00",
+    "raw_text": "Der Radfahrer befuhr mit seinem Fahrrad den Falkenseer Damm in Richtung Falkenseer Chaussee und wendete an der Einmündung Askanierring in Richtung des südlichen Fahrradweges. Dabei missachtete er den entgegenkommenden Pkw-Fahrer, der die Falkenseer Chaussee in Richtung Falkenseer Damm befuhr. Datum: Mo 02.01.2023 Uhrzeit: 21:00 Uhr"
+  },
+  "classification": {
+    "scenario_type": "priority_violation_conflict",
+    "confidence": 0.8
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Falkenseer Damm",
+    "secondary_road": "Falkenseer Chaussee",
+    "osm_query": "Falkenseer Damm / Falkenseer Chaussee, Berlin, Germany",
+    "osm_roads": [
+      "Falkenseer Damm",
+      "Falkenseer Chaussee",
+      "Askanierring"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "south"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "no",
+    "bike_facility_type": "separated_cycle_track",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": "north",
+      "traffic_rule_status": "priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "turn_left",
+      "initial_direction": "north",
+      "traffic_rule_status": "violated_priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "cyclist_turned_into_oncoming_traffic",
+    "collision_happened": false,
+    "collision_description": "No collision occurred as the cyclist turned into the path of an oncoming car.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line"
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {}
+    }
+  },
+  "missing_parameters": []
+}

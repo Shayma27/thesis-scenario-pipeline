@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 144761037,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "node",
+    "osm_id": 2134525648,
+    "lat": "52.5252246",
+    "lon": "13.3930145",
+    "category": "railway",
+    "type": "station",
+    "place_rank": 30,
+    "importance": 0.3763219162544729,
+    "addresstype": "railway",
+    "name": "Oranienburger Straße",
+    "display_name": "Oranienburger Straße, Tucholskystraße, Spandauer Vorstadt, Mitte, Berlin, 10117, Deutschland",
+    "boundingbox": [
+      "52.5202246",
+      "52.5302246",
+      "13.3880145",
+      "13.3980145"
+    ]
+  }
+]

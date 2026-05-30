@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 146191419,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "node",
+    "osm_id": 2844623027,
+    "lat": "52.4139693",
+    "lon": "13.6662718",
+    "category": "place",
+    "type": "house",
+    "place_rank": 30,
+    "importance": 8.875486381318407e-05,
+    "addresstype": "place",
+    "name": "",
+    "display_name": "22, Odernheimer Straße, Alt-Müggelheim, Müggelheim, Treptow-Köpenick, Berlin, 12559, Deutschland",
+    "boundingbox": [
+      "52.4139193",
+      "52.4140193",
+      "13.6662218",
+      "13.6663218"
+    ]
+  }
+]

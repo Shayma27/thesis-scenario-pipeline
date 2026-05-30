@@ -1,0 +1,162 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "straight_crossing_unter_den_eichen_1420",
+    "date": null,
+    "time": "14:20",
+    "raw_text": "Eine Radfahrerin befuhr den rechten Fahrstreifen der Nebenfahrbahn Unter den Eichen und fuhr bei Rot in den Kreuzungsbereich Unter den Eichen / Drakestraße / Habelschwerdter Allee ein. Dabei kam es zur Kollision mit einem Pkw, der den linken Fahrstreifen der Drakestraße in Richtung Unter den Eichen befuhr."
+  },
+  "classification": {
+    "scenario_type": "straight_crossing_conflict",
+    "secondary_type": "red_light_violation",
+    "confidence": 0.9
+  },
+  "location": {
+    "city": "Berlin",
+    "district": "Steglitz-Zehlendorf",
+    "primary_road": "Unter den Eichen Nebenfahrbahn to Drakestraße approach",
+    "secondary_road": "Drakestraße to Unter den Eichen approach",
+    "osm_query": "Unter den Eichen Drakestraße Habelschwerdter Allee, Berlin, Germany",
+    "osm_query_candidates": [
+      "Unter den Eichen Drakestraße, Berlin, Germany",
+      "Drakestraße Unter den Eichen, Berlin, Germany",
+      "Habelschwerdter Allee Unter den Eichen, Berlin, Germany"
+    ],
+    "osm_roads": [
+      "Unter den Eichen",
+      "Drakestraße",
+      "Habelschwerdter Allee"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "from Unter den Eichen toward Drakestraße",
+      "from Drakestraße toward Unter den Eichen"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "yes",
+    "bike_facility_type": "none_reported",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "cyclist right lane, car left lane",
+    "signal_context": "cyclist entered intersection on red",
+    "road_layout": "divided_main_road_with_side_road",
+    "heading_overrides": {
+      "primary_heading_rad": {
+        "value": 0.541071,
+        "source": "manual_map_review",
+        "reason": "The screenshot shows the cyclist on the Unter den Eichen Nebenfahrbahn travelling along the side roadway direction. Nearby OSM segments contain both directions of the divided road, so the side-road heading is selected manually from map review."
+      }
+    },
+    "lane_count_overrides": {
+      "secondary_road_lanes": {
+        "value": 4,
+        "source": "manual_map_review",
+        "reason": "Manual review of the OSM/imagery screenshot confirms that the report-relevant Drakestraße approach is a broad four-lane approach. The Pkw is placed on the leftmost of these lanes."
+      },
+      "secondary_forward_lanes": {
+        "value": 2,
+        "source": "manual_map_review",
+        "reason": "The report places the Pkw on the left Fahrstreifen of Drakestraße in the direction of Unter den Eichen, so the generated approach needs two lanes in the Pkw travel direction."
+      },
+      "secondary_opposite_lanes": {
+        "value": 2,
+        "source": "manual_map_review",
+        "reason": "The map screenshot shows the remaining Drakestraße lanes as the opposite-direction side of the same street; they are kept as visual road-topology context."
+      }
+    }
+  },
+  "participants": [
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "enter_intersection_on_red_go_straight",
+      "initial_direction": "toward Drakestraße",
+      "road_position": "rightmost_motor_lane",
+      "traffic_rule_status": "red_light_violation"
+    },
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight_through_intersection",
+      "initial_direction": "toward Unter den Eichen",
+      "road_position": "leftmost_motor_lane",
+      "traffic_rule_status": "priority_assumed"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "signalized_intersection_crossing_paths",
+    "collision_happened": true,
+    "collision_description": "Cyclist enters the signalized intersection on red from the right lane of the Unter den Eichen side roadway and collides with a passenger car travelling from Drakestraße toward Unter den Eichen.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "road_geometry": "crossing",
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 0,
+      "junction_type": "intersection"
+    },
+    "openscenario": {
+      "simulation_duration_s": 9,
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -1,
+          "initial_s_m": 27.75,
+          "initial_speed_mps": 6.0
+        },
+        "car_1": {
+          "vehicle_category": "car",
+          "initial_road_id": 1,
+          "initial_lane_id": -1,
+          "initial_s_m": 12.25,
+          "initial_speed_mps": 9.0
+        }
+      },
+      "conflict": {
+        "conflict_world_x_m": -1.75,
+        "conflict_world_y_m": 1.75,
+        "conflict_time_s": 4.0,
+        "trigger_time_s": 1.0
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "date",
+      "value_used": null,
+      "source": "explicit_missing",
+      "reason": "The supplied report excerpt gives the date as unknown."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 6.0,
+      "source": "default_assumption",
+      "reason": "Cyclist speed was not provided in the report."
+    },
+    {
+      "parameter": "car_1.initial_speed_mps",
+      "value_used": 9.0,
+      "source": "default_assumption",
+      "reason": "Car speed was not provided in the report; an urban intersection approach speed is used."
+    },
+    {
+      "parameter": "initial_positions",
+      "value_used": "cyclist and car start upstream of the conflict point on their report-relevant approach lanes",
+      "source": "default_assumption_with_report_lane_roles",
+      "reason": "Exact starting positions are not in the report; they are chosen so both actors reach the red-point conflict area at t=4s. Lane ids may be refined by OSM/manual map review before generation."
+    },
+    {
+      "parameter": "intersection_geometry",
+      "value_used": "skewed crossing abstraction with Unter den Eichen side roadway, Drakestraße 2+2 lane topology, and visual context roads for the divided B1 carriageway",
+      "source": "manual_map_review_abstraction",
+      "reason": "The exact junction geometry is more complex than a simple two-road crossing; OSM and the map screenshot are used to preserve the report-relevant approach directions and lane topology while keeping the prototype runnable in esmini."
+    }
+  ]
+}

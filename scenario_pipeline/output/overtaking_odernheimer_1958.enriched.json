@@ -1,0 +1,556 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "overtaking_odernheimer_1958",
+    "date": "2023-09-29",
+    "time": "19:58",
+    "raw_text": "Ein Busfahrer fuhr die Odernheimer Str. aus Richtung Neuhelgoländer Weg kommend in Richtung Alt Müggelheim. In Höhe der Odernheimer Str. 22 überholte der Busfahrer eine Radfahrerin, welche in die gleiche Richtung fuhr. Es kam zum Zusammenstoß der beiden Fahrzeuge, wodurch die Radfahrerin stürzte und von dem Bus überrollt wurde. Datum: Fr., 29.09.2023 Uhrzeit: 19:58 Uhr"
+  },
+  "classification": {
+    "scenario_type": "overtaking_conflict",
+    "confidence": 0.9
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Odernheimer Str.",
+    "secondary_road": null,
+    "osm_query": "Odernheimer Str. / Neuhelgoländer Weg, Berlin, Germany",
+    "osm_roads": [
+      "Odernheimer Str.",
+      "Neuhelgoländer Weg"
+    ],
+    "house_number_reference": "22",
+    "location_type": "midblock",
+    "direction_references": [
+      "east"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "no",
+    "bike_facility_type": "unknown",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "bus_1",
+      "class": "motor_vehicle",
+      "type": "bus",
+      "maneuver": "overtake",
+      "initial_direction": "east",
+      "traffic_rule_status": "violated_priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "east",
+      "traffic_rule_status": "priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "overtaking_from_behind",
+    "collision_happened": true,
+    "collision_description": "The bus collided with the cyclist while overtaking from behind.",
+    "severity_text": "fatal"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line",
+      "primary_has_bike_facility": false
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -1,
+          "initial_s_m": 10.0,
+          "initial_speed_mps": 4.5
+        },
+        "bus_1": {
+          "vehicle_category": "bus",
+          "initial_road_id": 0,
+          "initial_lane_id": -1,
+          "initial_s_m": 25.0,
+          "initial_speed_mps": 7.0
+        }
+      },
+      "cyclist_lateral_position": "both",
+      "conflict": {
+        "conflict_s_m": 50.0,
+        "trigger_time_s": 1.0
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "both",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    },
+    {
+      "parameter": "cyclist_1.vehicle_category",
+      "value_used": "bicycle",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'overtaking_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'overtaking_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'overtaking_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_s_m",
+      "value_used": 10.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'overtaking_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 4.5,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'overtaking_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "bus_1.vehicle_category",
+      "value_used": "bus",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'overtaking_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "bus_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'overtaking_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "bus_1.initial_lane_id",
+      "value_used": -1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'overtaking_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "bus_1.initial_s_m",
+      "value_used": 25.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'overtaking_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "bus_1.initial_speed_mps",
+      "value_used": 7.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'overtaking_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    }
+  ],
+  "osm_context": {
+    "query": "Odernheimer Str. 22, Berlin, Germany",
+    "queries_tried": [
+      "Odernheimer Str. / Neuhelgoländer Weg, Berlin, Germany",
+      "Odernheimer Str. 22, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 153879679,
+        "name": null,
+        "highway": "path",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4133079,
+            "lon": 13.6646235
+          },
+          {
+            "lat": 52.4133565,
+            "lon": 13.6646276
+          },
+          {
+            "lat": 52.4134962,
+            "lon": 13.6646675
+          },
+          {
+            "lat": 52.4135715,
+            "lon": 13.6646968
+          },
+          {
+            "lat": 52.4139253,
+            "lon": 13.6649078
+          },
+          {
+            "lat": 52.4140091,
+            "lon": 13.6648961
+          },
+          {
+            "lat": 52.414179,
+            "lon": 13.6647396
+          },
+          {
+            "lat": 52.4143996,
+            "lon": 13.6645248
+          },
+          {
+            "lat": 52.4146384,
+            "lon": 13.6642745
+          },
+          {
+            "lat": 52.4146757,
+            "lon": 13.6641988
+          },
+          {
+            "lat": 52.4147951,
+            "lon": 13.6639564
+          },
+          {
+            "lat": 52.4150259,
+            "lon": 13.6631679
+          },
+          {
+            "lat": 52.4150758,
+            "lon": 13.6630479
+          },
+          {
+            "lat": 52.4150913,
+            "lon": 13.6630107
+          },
+          {
+            "lat": 52.4160475,
+            "lon": 13.6618987
+          },
+          {
+            "lat": 52.4161989,
+            "lon": 13.6621618
+          },
+          {
+            "lat": 52.4163095,
+            "lon": 13.6621307
+          },
+          {
+            "lat": 52.4164201,
+            "lon": 13.6614856
+          },
+          {
+            "lat": 52.4172635,
+            "lon": 13.6599756
+          }
+        ]
+      },
+      {
+        "osm_id": 153879688,
+        "name": null,
+        "highway": "path",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4143996,
+            "lon": 13.6645248
+          },
+          {
+            "lat": 52.4153247,
+            "lon": 13.6643965
+          },
+          {
+            "lat": 52.4157647,
+            "lon": 13.6643267
+          },
+          {
+            "lat": 52.4161522,
+            "lon": 13.664173
+          }
+        ]
+      },
+      {
+        "osm_id": 213024294,
+        "name": "Odernheimer Straße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4133764,
+            "lon": 13.6668432
+          },
+          {
+            "lat": 52.4134696,
+            "lon": 13.6666671
+          },
+          {
+            "lat": 52.4134926,
+            "lon": 13.6666239
+          },
+          {
+            "lat": 52.4134952,
+            "lon": 13.6666192
+          },
+          {
+            "lat": 52.4135697,
+            "lon": 13.6664794
+          },
+          {
+            "lat": 52.4136735,
+            "lon": 13.6662848
+          },
+          {
+            "lat": 52.4136847,
+            "lon": 13.666264
+          },
+          {
+            "lat": 52.4137,
+            "lon": 13.6662351
+          },
+          {
+            "lat": 52.4137058,
+            "lon": 13.6662244
+          },
+          {
+            "lat": 52.4138882,
+            "lon": 13.6658823
+          },
+          {
+            "lat": 52.4138965,
+            "lon": 13.665867
+          },
+          {
+            "lat": 52.4139315,
+            "lon": 13.6658049
+          }
+        ]
+      },
+      {
+        "osm_id": 319412233,
+        "name": "Annweilerweg",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4150629,
+            "lon": 13.6673997
+          },
+          {
+            "lat": 52.4149961,
+            "lon": 13.6672859
+          }
+        ]
+      },
+      {
+        "osm_id": 325396254,
+        "name": "Birkweilerstraße",
+        "highway": "service",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4128665,
+            "lon": 13.6655039
+          },
+          {
+            "lat": 52.4124539,
+            "lon": 13.6649
+          }
+        ]
+      },
+      {
+        "osm_id": 325396302,
+        "name": null,
+        "highway": "footway",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4151164,
+            "lon": 13.6675743
+          },
+          {
+            "lat": 52.4150918,
+            "lon": 13.6676195
+          },
+          {
+            "lat": 52.4146919,
+            "lon": 13.6683528
+          },
+          {
+            "lat": 52.4144794,
+            "lon": 13.6680426
+          }
+        ]
+      },
+      {
+        "osm_id": 389175762,
+        "name": "Annweilerweg",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4149608,
+            "lon": 13.6674175
+          },
+          {
+            "lat": 52.4148509,
+            "lon": 13.6672619
+          }
+        ]
+      },
+      {
+        "osm_id": 1089244793,
+        "name": null,
+        "highway": "footway",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4156204,
+            "lon": 13.6684169
+          },
+          {
+            "lat": 52.4150918,
+            "lon": 13.6676195
+          },
+          {
+            "lat": 52.4138965,
+            "lon": 13.665867
+          },
+          {
+            "lat": 52.4132204,
+            "lon": 13.6648611
+          }
+        ]
+      }
+    ],
+    "traffic_signals_nearby": "no",
+    "notes": [],
+    "geocoded": {
+      "display_name": "22, Odernheimer Straße, Alt-Müggelheim, Müggelheim, Treptow-Köpenick, Berlin, 12559, Deutschland",
+      "lat": 52.4139693,
+      "lon": 13.6662718,
+      "osm_type": "node",
+      "osm_id": 2844623027
+    },
+    "cyclist_lateral_position": {
+      "value": "both",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 30.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

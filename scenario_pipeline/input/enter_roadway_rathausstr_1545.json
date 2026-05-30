@@ -1,0 +1,72 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "enter_roadway_rathausstr_1545",
+    "date": "2021-09-05",
+    "time": "15:45",
+    "raw_text": "Ein Pedelec-Fahrer befuhr die Rathausstraße von der Poststraße kommend in Richtung Spreeufer. Ein Pkw Fahrer fuhr vom rechten Fahrbahnrand an und übersah den Pedelec-Fahrer. Es kam zur Kollision. Datum: 05.09.2021 Uhrzeit: 15:45 Uhr"
+  },
+  "classification": {
+    "scenario_type": "enter_roadway_conflict",
+    "confidence": 0.8
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Rathausstraße",
+    "secondary_road": "Poststraße",
+    "osm_query": "Rathausstraße / Poststraße, Berlin, Germany",
+    "osm_roads": [
+      "Rathausstraße",
+      "Poststraße"
+    ],
+    "house_number_reference": null,
+    "location_type": "midblock",
+    "direction_references": [
+      "Spreeufer"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "unknown",
+    "bike_facility_type": "unknown",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "enter_roadway",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "violated_priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "e_bike",
+      "maneuver": "go_straight",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "car_entered_roadway_into_cyclist_path",
+    "collision_happened": true,
+    "collision_description": "A car collided with an e-bike after entering the roadway and failing to yield to the cyclist.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line"
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {}
+    }
+  },
+  "missing_parameters": []
+}

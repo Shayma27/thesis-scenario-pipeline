@@ -1,0 +1,72 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "midblock_landsberger_0007",
+    "date": "2024-11-26",
+    "time": "00:07",
+    "raw_text": "Eine Rad fahrende Person querte an einer Querungshilfe unachtsam die stadteinwärts führende Richtungsfahrbahn der Landsberger Allee vom begrünten Mittelstreifen kommend nach Norden. Dabei wurde sie von einer Pkw fahrenden Person ungebremst erfasst, die auf der Landsberger Allee Richtung Westen mit deutlich überhöhter Geschwindigkeit fuhr. Datum: Di, 26.11.2024 Uhrzeit: 00:07 Uhr"
+  },
+  "classification": {
+    "scenario_type": "straight_crossing_conflict",
+    "confidence": 0.8
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Landsberger Allee",
+    "secondary_road": null,
+    "osm_query": "Landsberger Allee, Berlin, Germany",
+    "osm_roads": [
+      "Landsberger Allee"
+    ],
+    "house_number_reference": null,
+    "location_type": "midblock",
+    "direction_references": [
+      "Norden",
+      "Westen"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "no",
+    "bike_facility_type": "unknown",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": "west",
+      "traffic_rule_status": "violated_priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "north",
+      "traffic_rule_status": "priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "straight_crossing_collision",
+    "collision_happened": true,
+    "collision_description": "A cyclist was hit by a car while crossing the road.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line"
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {}
+    }
+  },
+  "missing_parameters": []
+}

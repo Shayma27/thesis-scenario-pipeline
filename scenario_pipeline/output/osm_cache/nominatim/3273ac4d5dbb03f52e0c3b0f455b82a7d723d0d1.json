@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 145127736,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 1155000864,
+    "lat": "52.4430603",
+    "lon": "13.5902161",
+    "category": "highway",
+    "type": "residential",
+    "place_rank": 26,
+    "importance": 0.1570394422394589,
+    "addresstype": "road",
+    "name": "Salvador-Allende-Straße",
+    "display_name": "Salvador-Allende-Straße, Salvador-Allende-Viertel I, Köpenick, Treptow-Köpenick, Berlin, 12559, Deutschland",
+    "boundingbox": [
+      "52.4425386",
+      "52.4435824",
+      "13.5901773",
+      "13.5902487"
+    ]
+  }
+]

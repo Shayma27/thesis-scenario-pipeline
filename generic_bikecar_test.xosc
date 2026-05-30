@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='utf-8'?>
+<OpenSCENARIO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OpenScenario.xsd">
+    <FileHeader description="Generic_BikeCar_Test" author="Shayma" revMajor="1" revMinor="3" date="2026-04-19T22:18:04.451409"/>
+    <CatalogLocations/>
+    <RoadNetwork>
+        <LogicFile filepath="generic_bikecar_testroad.xodr"/>
+    </RoadNetwork>
+    <Entities>
+        <ScenarioObject name="Truck">
+            <Vehicle name="Truck" vehicleCategory="truck">
+                <BoundingBox>
+                    <Center x="1.5" y="0.0" z="1.2"/>
+                    <Dimensions width="2.5" length="8.0" height="3.0"/>
+                </BoundingBox>
+                <Performance maxSpeed="60.0" maxDeceleration="10.0" maxAcceleration="10.0"/>
+                <Axles>
+                    <FrontAxle maxSteering="0.5" wheelDiameter="0.8" trackWidth="2.0" positionX="5.5" positionZ="0.4"/>
+                    <RearAxle maxSteering="0.5" wheelDiameter="0.8" trackWidth="2.0" positionX="0.0" positionZ="0.4"/>
+                </Axles>
+                <Properties>
+                    <Property name="model_id" value="0"/>
+                </Properties>
+            </Vehicle>
+        </ScenarioObject>
+        <ScenarioObject name="Bicycle">
+            <Vehicle name="Bicycle" vehicleCategory="bicycle">
+                <BoundingBox>
+                    <Center x="0.3" y="0.0" z="0.8"/>
+                    <Dimensions width="0.6" length="1.8" height="1.5"/>
+                </BoundingBox>
+                <Performance maxSpeed="15.0" maxDeceleration="5.0" maxAcceleration="5.0"/>
+                <Axles>
+                    <FrontAxle maxSteering="0.0" wheelDiameter="0.3" trackWidth="0.5" positionX="1.2" positionZ="0.15"/>
+                    <RearAxle maxSteering="0.0" wheelDiameter="0.3" trackWidth="0.5" positionX="0.0" positionZ="0.15"/>
+                </Axles>
+                <Properties>
+                    <Property name="model_id" value="2"/>
+                </Properties>
+            </Vehicle>
+        </ScenarioObject>
+    </Entities>
+    <Storyboard>
+        <Init>
+            <Actions>
+                <Private entityRef="Truck">
+                    <PrivateAction>
+                        <TeleportAction>
+                            <Position>
+                                <LanePosition roadId="1" laneId="-1" s="0.0" offset="0.0"/>
+                            </Position>
+                        </TeleportAction>
+                    </PrivateAction>
+                    <PrivateAction>
+                        <LongitudinalAction>
+                            <SpeedAction>
+                                <SpeedActionDynamics dynamicsShape="step" value="1.0" dynamicsDimension="time"/>
+                                <SpeedActionTarget>
+                                    <AbsoluteTargetSpeed value="8.0"/>
+                                </SpeedActionTarget>
+                            </SpeedAction>
+                        </LongitudinalAction>
+                    </PrivateAction>
+                </Private>
+                <Private entityRef="Bicycle">
+                    <PrivateAction>
+                        <TeleportAction>
+                            <Position>
+                                <LanePosition roadId="1" laneId="-2" s="8.0" offset="0.0"/>
+                            </Position>
+                        </TeleportAction>
+                    </PrivateAction>
+                    <PrivateAction>
+                        <LongitudinalAction>
+                            <SpeedAction>
+                                <SpeedActionDynamics dynamicsShape="step" value="1.0" dynamicsDimension="time"/>
+                                <SpeedActionTarget>
+                                    <AbsoluteTargetSpeed value="6.0"/>
+                                </SpeedActionTarget>
+                            </SpeedAction>
+                        </LongitudinalAction>
+                    </PrivateAction>
+                </Private>
+            </Actions>
+        </Init>
+        <Story name="story_act_maneuvuergroup_TruckManeuver">
+            <Act name="act_maneuvuergroup_TruckManeuver">
+                <ManeuverGroup name="maneuvuergroup_TruckManeuver" maximumExecutionCount="1">
+                    <Actors selectTriggeringEntities="false">
+                        <EntityRef entityRef="Truck"/>
+                    </Actors>
+                    <Maneuver name="TruckManeuver">
+                        <Event name="TruckEvent" priority="override" maximumExecutionCount="1">
+                            <Action name="TruckAssignRoute">
+                                <PrivateAction>
+                                    <RoutingAction>
+                                        <AssignRouteAction>
+                                            <Route name="TruckRoute" closed="false">
+                                                <Waypoint routeStrategy="fastest">
+                                                    <Position>
+                                                        <LanePosition roadId="1" laneId="-1" s="30.0" offset="0.0"/>
+                                                    </Position>
+                                                </Waypoint>
+                                                <Waypoint routeStrategy="fastest">
+                                                    <Position>
+                                                        <LanePosition roadId="1" laneId="-1" s="90.0" offset="0.0"/>
+                                                    </Position>
+                                                </Waypoint>
+                                            </Route>
+                                        </AssignRouteAction>
+                                    </RoutingAction>
+                                </PrivateAction>
+                            </Action>
+                            <StartTrigger>
+                                <ConditionGroup>
+                                    <Condition name="TruckStart" delay="0.0" conditionEdge="none">
+                                        <ByValueCondition>
+                                            <SimulationTimeCondition value="1.0" rule="greaterThan"/>
+                                        </ByValueCondition>
+                                    </Condition>
+                                </ConditionGroup>
+                            </StartTrigger>
+                        </Event>
+                    </Maneuver>
+                </ManeuverGroup>
+                <StartTrigger>
+                    <ConditionGroup>
+                        <Condition name="act_start" delay="0.0" conditionEdge="rising">
+                            <ByValueCondition>
+                                <SimulationTimeCondition value="0.0" rule="greaterThan"/>
+                            </ByValueCondition>
+                        </Condition>
+                    </ConditionGroup>
+                </StartTrigger>
+                <StopTrigger/>
+            </Act>
+        </Story>
+        <Story name="story_act_maneuvuergroup_BikeManeuver">
+            <Act name="act_maneuvuergroup_BikeManeuver">
+                <ManeuverGroup name="maneuvuergroup_BikeManeuver" maximumExecutionCount="1">
+                    <Actors selectTriggeringEntities="false">
+                        <EntityRef entityRef="Bicycle"/>
+                    </Actors>
+                    <Maneuver name="BikeManeuver">
+                        <Event name="BikeEvent" priority="override" maximumExecutionCount="1">
+                            <Action name="BikeAssignRoute">
+                                <PrivateAction>
+                                    <RoutingAction>
+                                        <AssignRouteAction>
+                                            <Route name="BikeRoute" closed="false">
+                                                <Waypoint routeStrategy="fastest">
+                                                    <Position>
+                                                        <LanePosition roadId="1" laneId="-2" s="20.0" offset="0.0"/>
+                                                    </Position>
+                                                </Waypoint>
+                                                <Waypoint routeStrategy="fastest">
+                                                    <Position>
+                                                        <LanePosition roadId="1" laneId="-2" s="100.0" offset="0.0"/>
+                                                    </Position>
+                                                </Waypoint>
+                                            </Route>
+                                        </AssignRouteAction>
+                                    </RoutingAction>
+                                </PrivateAction>
+                            </Action>
+                            <StartTrigger>
+                                <ConditionGroup>
+                                    <Condition name="BikeStart" delay="0.0" conditionEdge="none">
+                                        <ByValueCondition>
+                                            <SimulationTimeCondition value="1.0" rule="greaterThan"/>
+                                        </ByValueCondition>
+                                    </Condition>
+                                </ConditionGroup>
+                            </StartTrigger>
+                        </Event>
+                    </Maneuver>
+                </ManeuverGroup>
+                <StartTrigger>
+                    <ConditionGroup>
+                        <Condition name="act_start" delay="0.0" conditionEdge="rising">
+                            <ByValueCondition>
+                                <SimulationTimeCondition value="0.0" rule="greaterThan"/>
+                            </ByValueCondition>
+                        </Condition>
+                    </ConditionGroup>
+                </StartTrigger>
+                <StopTrigger/>
+            </Act>
+        </Story>
+        <StopTrigger>
+            <ConditionGroup>
+                <Condition name="StopSim" delay="0.0" conditionEdge="rising">
+                    <ByValueCondition>
+                        <SimulationTimeCondition value="20.0" rule="greaterThan"/>
+                    </ByValueCondition>
+                </Condition>
+            </ConditionGroup>
+        </StopTrigger>
+    </Storyboard>
+</OpenSCENARIO>

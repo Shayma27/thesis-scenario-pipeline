@@ -1,0 +1,73 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "priority_sundgauer_1100",
+    "date": "2025-06-14",
+    "time": "11:00",
+    "raw_text": "Eine Pkw fahrende Person befuhr die Sundgauer Straße vom Lützelsteiner Weg zur Clayallee nordwestwärts. An der Kreuzung Sundgauer Straße/Clayallee kam es zum Zusammenstoß mit einer vorfahrtberechtigten Rad fahrenden Person, die auf dem Radweg der Clayallee nach Norden fuhr. Datum: Sa, 14.06.2025 Uhrzeit: 11:00 Uhr"
+  },
+  "classification": {
+    "scenario_type": "right_turn_conflict",
+    "confidence": 0.8
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Sundgauer Straße",
+    "secondary_road": "Clayallee",
+    "osm_query": "Sundgauer Straße / Clayallee, Berlin, Germany",
+    "osm_roads": [
+      "Sundgauer Straße",
+      "Clayallee"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "nordwestwärts",
+      "Norden"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": null,
+    "bike_facility_type": "separated_cycle_track",
+    "parking_present": null,
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "turn_right",
+      "initial_direction": "northwest",
+      "traffic_rule_status": "violated_priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "north",
+      "traffic_rule_status": "priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across_cycle_track",
+    "collision_happened": true,
+    "collision_description": "A car turning right collided with a cyclist going straight on a separated cycle track.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line"
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {}
+    }
+  },
+  "missing_parameters": []
+}

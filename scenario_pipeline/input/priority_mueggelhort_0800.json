@@ -1,0 +1,72 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "priority_mueggelhort_0800",
+    "date": "2025-11-03",
+    "time": "08:00",
+    "raw_text": "Eine Pkw fahrende Person fuhr auf der Straße zum Müggelhort nach Süden zum Müggelheimer Damm. Dort bog sie nach rechts nach Köpenick ab, ohne die Vorfahrtregelung durch Z.205 zu beachten. Sie übersah beim Abbiegen eine Rad fahrenden Person, die auf dem gemeinsamen Geh- und Radweg des Müggelheimer Damm vorfahrtberechtigt war. Datum: Mo, 03.11.2025 Uhrzeit: 08:00 Uhr"
+  },
+  "classification": {
+    "scenario_type": "priority_violation_conflict",
+    "confidence": 0.9
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Müggelheimer Damm",
+    "secondary_road": "Straße zum Müggelhort",
+    "osm_query": "Müggelheimer Damm / Straße zum Müggelhort, Berlin, Germany",
+    "osm_roads": [
+      "Müggelheimer Damm",
+      "Straße zum Müggelhort"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "south"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "no",
+    "bike_facility_type": "shared_foot_cycle_path",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "turn_right",
+      "initial_direction": "south",
+      "traffic_rule_status": "violated_priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across_shared_foot_cycle_path",
+    "collision_happened": true,
+    "collision_description": "A car turned right into a cyclist on a shared foot and cycle path.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line"
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {}
+    }
+  },
+  "missing_parameters": []
+}

@@ -1,0 +1,150 @@
+ROLE SETTING
+Assume you are an expert in autonomous-driving testing and ASAM OpenX scenario generation. Your task is to convert a German police accident report into one intermediate JSON scenario representation for a thesis pipeline that generates car-cyclist accident scenarios using foundation models.
+The JSON is not the final scenario file. It is a structured representation that will later be transformed into:
+- ASAM OpenDRIVE 1.8.1 (.xodr): static road network description, including roads, reference lines, lanes, junctions, road marks, objects, and signals.
+- ASAM OpenSCENARIO 2.0.0 (.osc): dynamic scenario description, including actors, behavior, interactions, constraints, abstract/logical/concrete scenario hints, KPIs, and stop conditions.
+Generate the scenario representation from the report based on this Domain-Specific Language Hierarchical Scenario Repository. First choose elements from the repository. If no element describes the report correctly, keep the report-specific element as free text in a detail/hint field and list it in quality_control.schema_compliance_notes.
+HIERARCHICAL SCENARIO REPOSITORY
+{
+  "Road Topology": ["intersection", "t_junction", "roundabout", "midblock", "parking_access", "driveway_access", "bus_stop_area", "highway", "unknown"],
+  "Transportation Facilities": {
+    "cycling_infrastructure": ["separated_cycle_track", "bike_lane", "protected_bike_lane", "shared_foot_cycle_path", "cycle_crossing", "roadway_mixed", "sidewalk", "shoulder", "none", "unknown"],
+    "junction_control_type": ["traffic_light", "priority_sign", "uncontrolled", "unknown"],
+    "signal_state": ["green", "yellow", "red", "off", "unknown"]
+  },
+  "Temporary Changes or Obstacles": ["parked_vehicle", "open_door", "construction", "road_debris", "none", "unknown"],
+  "Traffic Participants": {
+    "type": ["car", "truck", "bus", "van", "motorcycle", "bicycle", "e_bike", "pedestrian", "other", "unknown"],
+    "role": ["ego_vehicle", "motor_vehicle", "cyclist", "pedestrian", "other", "unknown"],
+    "maneuver": ["go_straight", "turn_right", "turn_left", "u_turn", "cross", "wait", "stop", "parked", "open_door", "enter_roadway", "change_lane", "overtake", "brake", "accelerate", "avoid_obstacle", "unknown"],
+    "priority_status": ["has_priority", "must_yield", "violated_priority", "unknown"]
+  },
+  "Conflict": {
+    "scenario_type": ["right_turn_conflict", "left_turn_conflict", "straight_crossing_conflict", "midblock_crossing_conflict", "priority_violation_conflict", "parking_access_conflict", "driveway_access_conflict", "enter_roadway_conflict", "lane_change_conflict", "overtaking_conflict", "dooring", "rear_end_conflict", "unknown"],
+    "collision_zone": ["turning_area", "cycle_crossing", "door_zone", "parking_access_crossing", "driveway_access_crossing", "lane_edge", "midblock_carriageway", "bus_stop_area", "junction_conflict_zone", "shoulder", "unknown"],
+    "relative_path_conflict": ["vehicle_turns_across_cyclist_path", "cyclist_crosses_vehicle_path", "door_opens_into_cyclist_path", "vehicle_overtakes_cyclist", "vehicle_rear_ends_cyclist", "parallel_same_direction_contact", "cyclist_changes_lane_across_vehicle_path", "vehicle_enters_cyclist_path", "unknown"]
+  },
+  "Environment": ["weather", "lighting", "road_surface"],
+  "Map Source": ["exact_real_location", "named_location_only", "topology_only", "unknown"]
+}
+FEW-SHOT EXAMPLES
+LLM Input1:
+Der Fahrer wartete in dem von ihm geführten LKW auf der Fahrbahn der Salvador-Allende-Str. vor der Rotlicht abstrahlenden LSA. Als die LSA für seine Richtung grünes Licht abstrahlte, bog er nach rechts in den Müggelschlößchenweg ab und erfasste die neben ihm in gleicher Richtung geradeaus fahrende Radfahrerin. Sie befuhr den von der Fahrbahn baulich getrennten Radweg der Salvador-Allende-Str. in nördliche Richtung. Die LSA für Radfahrende strahlte grünes Wechsellicht ab.
+LLM Output1:
+{
+  "scenario_type": "right_turn_conflict",
+  "location": {"location_raw": "Salvador-Allende-Str. / Müggelschlößchenweg", "city": "Berlin", "primary_road_name": "Salvador-Allende-Str.", "secondary_road_name_or_access": "Müggelschlößchenweg", "map_source_type": "named_location_only"},
+  "hierarchical_scenario_elements": {"road_topology": {"topology_type": "intersection", "junction_control_type": "traffic_light", "traffic_light_present": true}, "transportation_facilities": {"cycling_infrastructure": "separated_cycle_track", "traffic_signs_or_signals": ["LSA green for truck direction", "LSA green for cyclist"], "road_markings": []}, "temporary_changes_or_obstacles": [], "environment": {"weather": null, "lighting": null, "road_surface": null}},
+  "participants": [{"id": "P1", "role": "motor_vehicle", "type": "truck", "maneuver_before_conflict": "turn_right", "signal_state": "green", "priority_status": "must_yield", "travel_direction_detail": "right turn from Salvador-Allende-Str. into Müggelschlößchenweg"}, {"id": "P2", "role": "cyclist", "type": "bicycle", "maneuver_before_conflict": "go_straight", "signal_state": "green", "priority_status": "has_priority", "travel_direction_detail": "northbound on separated cycle track"}],
+  "conflict_geometry": {"collision_occurred": true, "collision_zone": "cycle_crossing", "relative_path_conflict": "vehicle_turns_across_cyclist_path", "turn_across_cycle_facility": true},
+  "explicit_items": ["Truck turned right after green light", "Cyclist rode straight in the same direction on a separated cycle track", "Cyclist signal was green", "Truck collided with cyclist"],
+  "inferred_items": ["Truck must cross the cyclist path during the right turn"],
+  "missing_critical_items": ["exact coordinates", "lane widths", "initial positions", "speeds", "headings", "exact impact point"]
+}
+LLM Input2:
+Ein Busfahrer fuhr die Odernheimer Str. aus Richtung Neuhelgoländer Weg kommend in Richtung Alt Müggelheim. In Höhe der Odernheimer Str. 22 überholte der Busfahrer eine Radfahrerin, welche in die gleiche Richtung fuhr. Es kam zum Zusammenstoß der beiden Fahrzeuge, wodurch die Radfahrerin stürzte und von dem Bus überrollt wurde.
+LLM Output2:
+{
+  "scenario_type": "overtaking_conflict",
+  "location": {"location_raw": "Odernheimer Str. 22", "city": "Berlin", "primary_road_name": "Odernheimer Str.", "secondary_road_name_or_access": null, "house_number_reference": "22", "map_source_type": "named_location_only"},
+  "hierarchical_scenario_elements": {"road_topology": {"topology_type": "midblock", "junction_control_type": null, "traffic_light_present": null}, "transportation_facilities": {"cycling_infrastructure": "roadway_mixed", "traffic_signs_or_signals": [], "road_markings": []}, "temporary_changes_or_obstacles": [], "environment": {"weather": null, "lighting": null, "road_surface": null}},
+  "participants": [{"id": "P1", "role": "motor_vehicle", "type": "bus", "maneuver_before_conflict": "overtake", "travel_direction_detail": "from Neuhelgoländer Weg toward Alt Müggelheim"}, {"id": "P2", "role": "cyclist", "type": "bicycle", "maneuver_before_conflict": "go_straight", "travel_direction_detail": "same direction as bus"}],
+  "conflict_geometry": {"collision_occurred": true, "collision_zone": "midblock_carriageway", "relative_path_conflict": "vehicle_overtakes_cyclist", "overtaking_or_lateral_passing": true},
+  "explicit_items": ["Bus traveled on Odernheimer Str. from Neuhelgoländer Weg toward Alt Müggelheim", "Bus overtook cyclist near Odernheimer Str. 22", "Bus and cyclist collided"],
+  "inferred_items": ["Midblock topology is inferred because no junction or access maneuver is described"],
+  "missing_critical_items": ["exact coordinates", "lane count", "lane widths", "speeds", "lateral passing distance", "exact impact point"]
+}
+CHAIN-OF-THOUGHT INSTRUCTIONS
+Think step by step internally, but do not output reasoning:
+1. Identify road topology first because all static and dynamic elements depend on it.
+2. Identify traffic facilities: cycle infrastructure, signs, signals, priority signs, crossings, parking/driveway access.
+3. Identify participants and their maneuvers before conflict.
+4. Determine priority/right-of-way only if stated or strongly implied by the described control/facility.
+5. Classify scenario_type and conflict geometry.
+6. Separate explicit facts from inferences.
+7. Produce OpenDRIVE hints only for static road-network generation.
+8. Produce OpenSCENARIO 2.0 hints only for dynamic behavior, interactions, constraints, KPIs, and stop conditions.
+SYNTAX ALIGNMENT CHECKING
+Knowledge Validation:
+- Check whether every output element is consistent with the input report. Correct inconsistencies before final output.
+- Do not add facts absent from the report. Use null for unknown values.
+Syntax Harmonization:
+- Use repository values for enum fields whenever possible.
+- If no repository element matches, keep the closest stable enum and store the specific wording in a detail/hint field.
+- Output only one parseable JSON object with this full schema:
+{
+  "case_id": null,
+  "source_type": "police_report",
+  "source_language": "de",
+  "scenario_type": null,
+  "scenario_summary": null,
+  "location": {
+    "location_raw": null,
+    "city": "Berlin",
+    "primary_road_name": null,
+    "secondary_road_name_or_access": null,
+    "house_number_reference": null,
+    "map_source_type": null
+  },
+  "hierarchical_scenario_elements": {
+    "road_topology": {"topology_type": null, "junction_control_type": null, "traffic_light_present": null},
+    "transportation_facilities": {"cycling_infrastructure": null, "traffic_signs_or_signals": [], "road_markings": []},
+    "temporary_changes_or_obstacles": [],
+    "traffic_participants": [],
+    "environment": {"weather": null, "lighting": null, "road_surface": null}
+  },
+  "participants": [
+    {"id": "P1", "role": null, "type": null, "vehicle_type_detail": null, "maneuver_before_conflict": null, "signal_state": null, "priority_status": null, "travel_direction_detail": null, "position_hint": null, "speed_mps": null},
+    {"id": "P2", "role": null, "type": null, "vehicle_type_detail": null, "maneuver_before_conflict": null, "signal_state": null, "priority_status": null, "travel_direction_detail": null, "position_hint": null, "speed_mps": null}
+  ],
+  "event_sequence": [],
+  "conflict_geometry": {
+    "collision_occurred": null,
+    "collision_zone": null,
+    "relative_path_conflict": null,
+    "same_direction_parallel_motion": null,
+    "turn_across_cycle_facility": null,
+    "overtaking_or_lateral_passing": null,
+    "impact_point_hint": null
+  },
+  "openx_generation_hints": {
+    "opendrive_1_8_1": {
+      "ready_for_simplified_generation": null,
+      "needs_real_map_matching": null,
+      "recommended_road_model": null,
+      "reference_line_hint": null,
+      "recommended_lane_model": [],
+Local comment
+Comment on line R127
+
+
+Cancel
+Comment
+      "recommended_junction_model": null,
+      "recommended_signal_model": null,
+      "static_objects": []
+    },
+    "openscenario_2_0_0": {
+      "abstraction_level": null,
+      "ready_for_simplified_generation": null,
+      "recommended_entities": [],
+      "recommended_init": {"p1_initial_position_hint": null, "p2_initial_position_hint": null, "p1_initial_motion_state": null, "p2_initial_motion_state": null},
+      "recommended_actions": [],
+      "recommended_constraints": [],
+      "recommended_kpis": ["collision", "violation_of_road_rights"],
+      "recommended_stop_condition": null
+    }
+  },
+  "evaluation_hints": {"syntactic_validity_risks": [], "scenario_diversity_tags": [], "criticality_tags": []},
+  "explicit_items": [],
+  "inferred_items": [],
+  "missing_critical_items": [],
+  "quality_control": {"schema_compliance_notes": [], "generation_risks": [], "confidence": null}
+}
+SELF-CONSISTENCY
+Before returning JSON, internally compare at least three plausible classifications. Choose the one best supported by the report. If confidence is low, set scenario_type to "unknown" and explain why in quality_control.generation_risks.
+FINAL INPUT
+Based on the prompt flow, examples, repository, and ASAM constraints above, convert this testing scenario text into the corresponding JSON scenario representation:
+{-Datum: Mo, 17.07.2023 Uhrzeit: 10:38 Uhr
+Der Fahrer wartete in dem von ihm geführten LKW auf der Fahrbahn der Salvador-Allende-Str. vor der Rotlicht abstrahlenden LSA. Als die LSA für seine Richtung grünes Licht abstrahlte, bog er nach rechts in den Müggelschlößchenweg ab und erfasste die neben ihm in gleicher Richtung geradeaus fahrende Radfahrerin. Sie befuhr den von der Fahrbahn baulich getrennten Radweg der Salvador-Allende-Str. in nördliche Richtung. Die LSA für Radfahrende strahlte grünes Wechsellicht ab. Die Radfahrerin und das Fahrrad wurden durch den rechts abbiegenden LKW vollständig überrollt.
+}

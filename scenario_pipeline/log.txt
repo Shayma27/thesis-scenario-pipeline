@@ -1,0 +1,94 @@
+esmini GIT REV: v3.0.4-0-1d33e9f2
+esmini GIT TAG: v3.0.4
+esmini GIT BRANCH: tags/v3.0.4^0
+esmini BUILD VERSION: 6144
+[] [info] Loaded config file: /home/chimo/tools/esmini/esmini-demo/config.yml (/home/chimo/tools/esmini/esmini-demo/bin/../config.yml)
+[] [info] Loaded /home/chimo/Shayma/Shayma/scenario_pipeline/output/right_turn_salvador_allende_1038.xosc
+[2026-05-28 13:45:40]
+[] [info] Player options: --osc /home/chimo/Shayma/Shayma/scenario_pipeline/output/right_turn_salvador_allende_1038.xosc --camera_mode orbit --fixed_timestep 0.05 --ground_plane auto --info_text 1 --logfile_path log.txt --log_level info --text_scale 1.0 --traj_filter 0.1 
+[] [info] Run simulation decoupled from realtime, with fixed timestep: 0.05
+[] [info] Generated seed 1896908814
+[] [info] Loading /home/chimo/Shayma/Shayma/scenario_pipeline/output/right_turn_salvador_allende_1038.xosc (v1.3)
+[] [info] 0 variables
+[] [info] Loaded OpenDRIVE: /home/chimo/Shayma/Shayma/scenario_pipeline/output/right_turn_salvador_allende_1038.xodr
+[] [info] Add and deactivate new object "truck_1" (id 0)
+[] [info] Add and deactivate new object "cyclist_1" (id 1)
+[] [info] 0 parameters
+[0.000] [info] Window created at 104,146 with size 800,600
+[0.000] [info] Generating a simplistic 3D model of the road network
+[0.000] [info] Name: truck_1
+[0.000] [info] Name: cyclist_1
+[0.000] [info] Init truck_1 TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] truck_1 New position:
+[0.000] [info] Pos(30.00, -1.75, 0.00) Rot(0.00, 0.00, 0.00) roadId 0 laneId -1 s 30.00 offset 0.00 t -1.75
+[0.000] [info] Init truck_1 LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] Init cyclist_1 TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] cyclist_1 New position:
+[0.000] [info] Pos(10.00, -4.50, 0.00) Rot(0.00, 0.00, 0.00) roadId 0 laneId -2 s 10.00 offset 0.00 t -4.50
+[0.000] [info] Init cyclist_1 LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] storyBoard initState -> startTransition -> runningState
+[0.000] [info] story_act_maneuvuergroup_TruckTurnRightIntoParkingManeuver initState -> startTransition -> runningState
+[0.000] [info] act_maneuvuergroup_TruckTurnRightIntoParkingManeuver initState -> initToStandbyTransition -> standbyState
+[0.000] [info] story_act_maneuvuergroup_CyclistGoStraightManeuver initState -> startTransition -> runningState
+[0.000] [info] act_maneuvuergroup_CyclistGoStraightManeuver initState -> initToStandbyTransition -> standbyState
+[0.000] [info] Init truck_1 TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init truck_1 LongitudinalAction runningState -> endTransition -> completeState
+[0.000] [info] Init cyclist_1 TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init cyclist_1 LongitudinalAction runningState -> endTransition -> completeState
+[0.050] [info] act_start: true, delay: 0.00, 0.0500 > 0.0000, edge: rising
+[0.050] [info] Trigger /------------------------------------------------
+[0.050] [info] Group 0:
+[0.050] [info] act_start: true
+[0.050] [info] Trigger  ------------------------------------------------/
+[0.050] [info] act_maneuvuergroup_TruckTurnRightIntoParkingManeuver standbyState -> startTransition -> runningState
+[0.050] [info] maneuvuergroup_TruckTurnRightIntoParkingManeuver initState -> startTransition -> runningState
+[0.050] [info] TruckTurnRightIntoParkingManeuver initState -> startTransition -> runningState
+[0.050] [info] TruckTurnRightIntoParkingEvent initState -> initToStandbyTransition -> standbyState
+[0.050] [info] act_start: true, delay: 0.00, 0.0500 > 0.0000, edge: rising
+[0.050] [info] Trigger /------------------------------------------------
+[0.050] [info] Group 0:
+[0.050] [info] act_start: true
+[0.050] [info] Trigger  ------------------------------------------------/
+[0.050] [info] act_maneuvuergroup_CyclistGoStraightManeuver standbyState -> startTransition -> runningState
+[0.050] [info] maneuvuergroup_CyclistGoStraightManeuver initState -> startTransition -> runningState
+[0.050] [info] CyclistGoStraightManeuver initState -> startTransition -> runningState
+[0.050] [info] CyclistGoStraightEvent initState -> initToStandbyTransition -> standbyState
+[0.150] [info] TruckTurnRightIntoParkingStart: true, delay: 0.00, 0.1500 > 0.1000, edge: none
+[0.150] [info] Trigger /------------------------------------------------
+[0.150] [info] Group 0:
+[0.150] [info] TruckTurnRightIntoParkingStart: true
+[0.150] [info] Trigger  ------------------------------------------------/
+[0.150] [info] TruckTurnRightIntoParkingEvent standbyState -> startTransition -> runningState
+[0.150] [info] TruckTurnRightIntoParkingFollowTrajectory initState -> startTransition -> runningState
+[0.150] [info] CyclistGoStraightStart: true, delay: 0.00, 0.1500 > 0.1000, edge: none
+[0.150] [info] Trigger /------------------------------------------------
+[0.150] [info] Group 0:
+[0.150] [info] CyclistGoStraightStart: true
+[0.150] [info] Trigger  ------------------------------------------------/
+[0.150] [info] CyclistGoStraightEvent standbyState -> startTransition -> runningState
+[0.150] [info] CyclistGoStraightFollowTrajectory initState -> startTransition -> runningState
+[10.050] [info] StopSimulation: true, delay: 0.00, 10.0500 > 10.0000, edge: rising
+[10.050] [info] Trigger /------------------------------------------------
+[10.050] [info] Group 0:
+[10.050] [info] StopSimulation: true
+[10.050] [info] Trigger  ------------------------------------------------/
+[10.050] [info] TruckTurnRightIntoParkingFollowTrajectory runningState -> stopTransition -> completeState
+[10.050] [info] TruckTurnRightIntoParkingEvent complete after 1 execution
+[10.050] [info] TruckTurnRightIntoParkingEvent runningState -> endTransition -> completeState
+[10.050] [info] TruckTurnRightIntoParkingManeuver runningState -> endTransition -> completeState
+[10.050] [info] maneuvuergroup_TruckTurnRightIntoParkingManeuver complete after 1 execution
+[10.050] [info] maneuvuergroup_TruckTurnRightIntoParkingManeuver runningState -> endTransition -> completeState
+[10.050] [info] act_maneuvuergroup_TruckTurnRightIntoParkingManeuver runningState -> endTransition -> completeState
+[10.050] [info] story_act_maneuvuergroup_TruckTurnRightIntoParkingManeuver runningState -> endTransition -> completeState
+[10.050] [info] CyclistGoStraightFollowTrajectory runningState -> stopTransition -> completeState
+[10.050] [info] CyclistGoStraightEvent complete after 1 execution
+[10.050] [info] CyclistGoStraightEvent runningState -> endTransition -> completeState
+[10.050] [info] CyclistGoStraightManeuver runningState -> endTransition -> completeState
+[10.050] [info] maneuvuergroup_CyclistGoStraightManeuver complete after 1 execution
+[10.050] [info] maneuvuergroup_CyclistGoStraightManeuver runningState -> endTransition -> completeState
+[10.050] [info] act_maneuvuergroup_CyclistGoStraightManeuver runningState -> endTransition -> completeState
+[10.050] [info] story_act_maneuvuergroup_CyclistGoStraightManeuver runningState -> endTransition -> completeState
+[10.050] [info] storyBoard runningState -> stopTransition -> completeState
+[10.050] [info] Closing

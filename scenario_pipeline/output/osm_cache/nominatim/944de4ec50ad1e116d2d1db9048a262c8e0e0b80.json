@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 146208966,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "node",
+    "osm_id": 831808684,
+    "lat": "52.5689394",
+    "lon": "13.4041122",
+    "category": "place",
+    "type": "house",
+    "place_rank": 30,
+    "importance": 8.875486381318407e-05,
+    "addresstype": "place",
+    "name": "",
+    "display_name": "89, Mühlenstraße, Alt-Pankow, Florakiez, Pankow, Berlin, 13187, Deutschland",
+    "boundingbox": [
+      "52.5688894",
+      "52.5689894",
+      "13.4040622",
+      "13.4041622"
+    ]
+  }
+]

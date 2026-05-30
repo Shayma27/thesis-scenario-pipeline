@@ -1,0 +1,802 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-28T12:55:29Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 153879679,
+      "bounds": {
+        "minlat": 52.4133079,
+        "minlon": 13.6599756,
+        "maxlat": 52.4172635,
+        "maxlon": 13.6649078
+      },
+      "geometry": [
+        {
+          "lat": 52.4133079,
+          "lon": 13.6646235
+        },
+        {
+          "lat": 52.4133565,
+          "lon": 13.6646276
+        },
+        {
+          "lat": 52.4134962,
+          "lon": 13.6646675
+        },
+        {
+          "lat": 52.4135715,
+          "lon": 13.6646968
+        },
+        {
+          "lat": 52.4139253,
+          "lon": 13.6649078
+        },
+        {
+          "lat": 52.4140091,
+          "lon": 13.6648961
+        },
+        {
+          "lat": 52.414179,
+          "lon": 13.6647396
+        },
+        {
+          "lat": 52.4143996,
+          "lon": 13.6645248
+        },
+        {
+          "lat": 52.4146384,
+          "lon": 13.6642745
+        },
+        {
+          "lat": 52.4146757,
+          "lon": 13.6641988
+        },
+        {
+          "lat": 52.4147951,
+          "lon": 13.6639564
+        },
+        {
+          "lat": 52.4150259,
+          "lon": 13.6631679
+        },
+        {
+          "lat": 52.4150758,
+          "lon": 13.6630479
+        },
+        {
+          "lat": 52.4150913,
+          "lon": 13.6630107
+        },
+        {
+          "lat": 52.4160475,
+          "lon": 13.6618987
+        },
+        {
+          "lat": 52.4161989,
+          "lon": 13.6621618
+        },
+        {
+          "lat": 52.4163095,
+          "lon": 13.6621307
+        },
+        {
+          "lat": 52.4164201,
+          "lon": 13.6614856
+        },
+        {
+          "lat": 52.4172635,
+          "lon": 13.6599756
+        }
+      ],
+      "tags": {
+        "highway": "path",
+        "lit": "no",
+        "surface": "grass"
+      }
+    },
+    {
+      "type": "way",
+      "id": 153879688,
+      "bounds": {
+        "minlat": 52.4143996,
+        "minlon": 13.664173,
+        "maxlat": 52.4161522,
+        "maxlon": 13.6645248
+      },
+      "geometry": [
+        {
+          "lat": 52.4143996,
+          "lon": 13.6645248
+        },
+        {
+          "lat": 52.4153247,
+          "lon": 13.6643965
+        },
+        {
+          "lat": 52.4157647,
+          "lon": 13.6643267
+        },
+        {
+          "lat": 52.4161522,
+          "lon": 13.664173
+        }
+      ],
+      "tags": {
+        "highway": "path",
+        "lit": "no",
+        "surface": "dirt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 213024294,
+      "bounds": {
+        "minlat": 52.4133764,
+        "minlon": 13.6658049,
+        "maxlat": 52.4139315,
+        "maxlon": 13.6668432
+      },
+      "geometry": [
+        {
+          "lat": 52.4133764,
+          "lon": 13.6668432
+        },
+        {
+          "lat": 52.4134696,
+          "lon": 13.6666671
+        },
+        {
+          "lat": 52.4134926,
+          "lon": 13.6666239
+        },
+        {
+          "lat": 52.4134952,
+          "lon": 13.6666192
+        },
+        {
+          "lat": 52.4135697,
+          "lon": 13.6664794
+        },
+        {
+          "lat": 52.4136735,
+          "lon": 13.6662848
+        },
+        {
+          "lat": 52.4136847,
+          "lon": 13.666264
+        },
+        {
+          "lat": 52.4137,
+          "lon": 13.6662351
+        },
+        {
+          "lat": 52.4137058,
+          "lon": 13.6662244
+        },
+        {
+          "lat": 52.4138882,
+          "lon": 13.6658823
+        },
+        {
+          "lat": 52.4138965,
+          "lon": 13.665867
+        },
+        {
+          "lat": 52.4139315,
+          "lon": 13.6658049
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Odernheimer Straße",
+        "name:etymology:wikidata": "Q658702",
+        "parking:left": "shoulder",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:informal": "yes",
+        "parking:left:orientation": "parallel",
+        "parking:right": "shoulder",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:informal": "yes",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "sidewalk:both": "no",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 319412233,
+      "bounds": {
+        "minlat": 52.4149961,
+        "minlon": 13.6672859,
+        "maxlat": 52.4150629,
+        "maxlon": 13.6673997
+      },
+      "geometry": [
+        {
+          "lat": 52.4150629,
+          "lon": 13.6673997
+        },
+        {
+          "lat": 52.4149961,
+          "lon": 13.6672859
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Annweilerweg",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 325396254,
+      "bounds": {
+        "minlat": 52.4124539,
+        "minlon": 13.6649,
+        "maxlat": 52.4128665,
+        "maxlon": 13.6655039
+      },
+      "geometry": [
+        {
+          "lat": 52.4128665,
+          "lon": 13.6655039
+        },
+        {
+          "lat": 52.4124539,
+          "lon": 13.6649
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "no",
+        "name": "Birkweilerstraße",
+        "name:etymology:wikidata": "Q565152",
+        "smoothness": "bad",
+        "surface": "fine_gravel"
+      }
+    },
+    {
+      "type": "way",
+      "id": 325396302,
+      "bounds": {
+        "minlat": 52.4144794,
+        "minlon": 13.6675743,
+        "maxlat": 52.4151164,
+        "maxlon": 13.6683528
+      },
+      "geometry": [
+        {
+          "lat": 52.4151164,
+          "lon": 13.6675743
+        },
+        {
+          "lat": 52.4150918,
+          "lon": 13.6676195
+        },
+        {
+          "lat": 52.4146919,
+          "lon": 13.6683528
+        },
+        {
+          "lat": 52.4144794,
+          "lon": 13.6680426
+        }
+      ],
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 389175762,
+      "bounds": {
+        "minlat": 52.4148509,
+        "minlon": 13.6672619,
+        "maxlat": 52.4149608,
+        "maxlon": 13.6674175
+      },
+      "geometry": [
+        {
+          "lat": 52.4149608,
+          "lon": 13.6674175
+        },
+        {
+          "lat": 52.4148509,
+          "lon": 13.6672619
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "no",
+        "name": "Annweilerweg",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1089244793,
+      "bounds": {
+        "minlat": 52.4132204,
+        "minlon": 13.6648611,
+        "maxlat": 52.4156204,
+        "maxlon": 13.6684169
+      },
+      "geometry": [
+        {
+          "lat": 52.4156204,
+          "lon": 13.6684169
+        },
+        {
+          "lat": 52.4150918,
+          "lon": 13.6676195
+        },
+        {
+          "lat": 52.4138965,
+          "lon": 13.665867
+        },
+        {
+          "lat": 52.4132204,
+          "lon": 13.6648611
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1110715061,
+      "bounds": {
+        "minlat": 52.412007,
+        "minlon": 13.6630538,
+        "maxlat": 52.4132204,
+        "maxlon": 13.6648611
+      },
+      "geometry": [
+        {
+          "lat": 52.4132204,
+          "lon": 13.6648611
+        },
+        {
+          "lat": 52.412007,
+          "lon": 13.6630538
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1162737579,
+      "bounds": {
+        "minlat": 52.4132985,
+        "minlon": 13.6648918,
+        "maxlat": 52.4146791,
+        "maxlon": 13.666936
+      },
+      "geometry": [
+        {
+          "lat": 52.4146791,
+          "lon": 13.666936
+        },
+        {
+          "lat": 52.4146649,
+          "lon": 13.6669157
+        },
+        {
+          "lat": 52.4139315,
+          "lon": 13.6658049
+        },
+        {
+          "lat": 52.4132985,
+          "lon": 13.6648918
+        }
+      ],
+      "tags": {
+        "cycleway": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-18:00)",
+        "name": "Odernheimer Straße",
+        "name:etymology:wikidata": "Q658702",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "12559",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1224784133,
+      "bounds": {
+        "minlat": 52.4134962,
+        "minlon": 13.6642162,
+        "maxlat": 52.4139652,
+        "maxlon": 13.6646675
+      },
+      "geometry": [
+        {
+          "lat": 52.4134962,
+          "lon": 13.6646675
+        },
+        {
+          "lat": 52.413614,
+          "lon": 13.6643572
+        },
+        {
+          "lat": 52.4137152,
+          "lon": 13.6642213
+        },
+        {
+          "lat": 52.4137663,
+          "lon": 13.6642162
+        },
+        {
+          "lat": 52.4139652,
+          "lon": 13.6642618
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "highway": "path",
+        "informal": "yes",
+        "surface": "dirt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443482778,
+      "bounds": {
+        "minlat": 52.4123042,
+        "minlon": 13.6633894,
+        "maxlat": 52.4132985,
+        "maxlon": 13.6648918
+      },
+      "geometry": [
+        {
+          "lat": 52.4132985,
+          "lon": 13.6648918
+        },
+        {
+          "lat": 52.4132463,
+          "lon": 13.664814
+        },
+        {
+          "lat": 52.4132342,
+          "lon": 13.6647867
+        },
+        {
+          "lat": 52.4123042,
+          "lon": 13.6633894
+        }
+      ],
+      "tags": {
+        "cycleway": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-18:00)",
+        "name": "Odernheimer Straße",
+        "name:etymology:wikidata": "Q658702",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443482779,
+      "bounds": {
+        "minlat": 52.4146791,
+        "minlon": 13.666936,
+        "maxlat": 52.4151339,
+        "maxlon": 13.6676003
+      },
+      "geometry": [
+        {
+          "lat": 52.4151339,
+          "lon": 13.6676003
+        },
+        {
+          "lat": 52.4151164,
+          "lon": 13.6675743
+        },
+        {
+          "lat": 52.4149873,
+          "lon": 13.6673822
+        },
+        {
+          "lat": 52.4149504,
+          "lon": 13.6673232
+        },
+        {
+          "lat": 52.4146791,
+          "lon": 13.666936
+        }
+      ],
+      "tags": {
+        "cycleway": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-18:00)",
+        "name": "Odernheimer Straße",
+        "name:etymology:wikidata": "Q658702",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443565284,
+      "bounds": {
+        "minlat": 52.412735,
+        "minlon": 13.6651612,
+        "maxlat": 52.4130552,
+        "maxlon": 13.6657465
+      },
+      "geometry": [
+        {
+          "lat": 52.412735,
+          "lon": 13.6657465
+        },
+        {
+          "lat": 52.4128665,
+          "lon": 13.6655039
+        },
+        {
+          "lat": 52.4130552,
+          "lon": 13.6651612
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Birkweilerstraße",
+        "name:etymology:wikidata": "Q565152",
+        "parking:left": "separate",
+        "parking:right": "shoulder",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:informal": "yes",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "sidewalk:both": "no",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443565285,
+      "bounds": {
+        "minlat": 52.4130552,
+        "minlon": 13.664814,
+        "maxlat": 52.4132463,
+        "maxlon": 13.6651612
+      },
+      "geometry": [
+        {
+          "lat": 52.4130552,
+          "lon": 13.6651612
+        },
+        {
+          "lat": 52.4130789,
+          "lon": 13.6651181
+        },
+        {
+          "lat": 52.4132093,
+          "lon": 13.6648813
+        },
+        {
+          "lat": 52.4132204,
+          "lon": 13.6648611
+        },
+        {
+          "lat": 52.4132463,
+          "lon": 13.664814
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Birkweilerstraße",
+        "name:etymology:wikidata": "Q565152",
+        "parking:left": "shoulder",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:informal": "yes",
+        "parking:left:orientation": "parallel",
+        "parking:right": "shoulder",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:informal": "yes",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "sidewalk:both": "no",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1447973155,
+      "bounds": {
+        "minlat": 52.4151367,
+        "minlon": 13.6656672,
+        "maxlat": 52.4153613,
+        "maxlon": 13.6660574
+      },
+      "geometry": [
+        {
+          "lat": 52.4153613,
+          "lon": 13.6656672
+        },
+        {
+          "lat": 52.4151367,
+          "lon": 13.6660574
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Norheimer Straße",
+        "name:etymology:wikidata": "Q651363",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1447973156,
+      "bounds": {
+        "minlat": 52.4146649,
+        "minlon": 13.6660574,
+        "maxlat": 52.4151367,
+        "maxlon": 13.6669157
+      },
+      "geometry": [
+        {
+          "lat": 52.4151367,
+          "lon": 13.6660574
+        },
+        {
+          "lat": 52.4146649,
+          "lon": 13.6669157
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Norheimer Straße",
+        "name:etymology:wikidata": "Q651363",
+        "parking:left": "no",
+        "parking:right": "shoulder",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:informal": "yes",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1447988389,
+      "bounds": {
+        "minlat": 52.4132342,
+        "minlon": 13.6641475,
+        "maxlat": 52.413497,
+        "maxlon": 13.6647867
+      },
+      "geometry": [
+        {
+          "lat": 52.413497,
+          "lon": 13.6641475
+        },
+        {
+          "lat": 52.4133079,
+          "lon": 13.6646235
+        },
+        {
+          "lat": 52.4132342,
+          "lon": 13.6647867
+        }
+      ],
+      "tags": {
+        "highway": "track",
+        "lit": "no",
+        "operator:type": "private",
+        "parking:left": "no",
+        "parking:right": "shoulder",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:informal": "yes",
+        "parking:right:orientation": "parallel",
+        "surface": "dirt",
+        "tracktype": "grade3"
+      }
+    }
+  ]
+}

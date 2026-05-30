@@ -1,0 +1,92 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "right_turn_salvador_allende_1038",
+    "date": "2023-07-17",
+    "time": "10:38",
+    "raw_text": "Datum: Mo, 17.07.2023 Uhrzeit: 10:38 Uhr Der Fahrer wartete in dem von ihm geführten LKW auf der Fahrbahn der Salvador-Allende-Str. vor der Rotlicht abstrahlenden LSA. Als die LSA für seine Richtung grünes Licht abstrahlte, bog er nach rechts in den Müggelschlößchenweg ab und erfasste die neben ihm in gleicher Richtung geradeaus fahrende Radfahrerin. Sie befuhr den von der Fahrbahn baulich getrennten Radweg der Salvador-Allende-Str. in nördliche Richtung. Die LSA für Radfahrende strahlte grünes Wechsellicht ab. Die Radfahrerin und das Fahrrad wurden durch den rechts abbiegenden LKW vollständig überrollt."
+  },
+  "classification": {
+    "scenario_type": "right_turn_conflict",
+    "confidence": 1.0
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Salvador-Allende-Str",
+    "secondary_road": "Müggelschlößchenweg",
+    "osm_query": "Salvador-Allende-Str / Müggelschlößchenweg, Berlin, Germany",
+    "osm_roads": [
+      "Salvador-Allende-Str",
+      "Müggelschlößchenweg"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "nördliche Richtung"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "yes",
+    "bike_facility_type": "separated_cycle_track",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "truck_1",
+      "class": "motor_vehicle",
+      "type": "truck",
+      "maneuver": "turn_right",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "north",
+      "traffic_rule_status": "priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across_separated_cycle_track",
+    "collision_happened": true,
+    "collision_description": "The truck turned right and collided with the cyclist who was riding straight on a separated cycle track.",
+    "severity_text": "serious"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line",
+      "parking_access_s_m": 50
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {
+        "truck_1": {
+          "vehicle_category": "truck",
+          "initial_road_id": 0,
+          "initial_lane_id": -1,
+          "initial_s_m": 30,
+          "initial_speed_mps": 3.0
+        },
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -2,
+          "initial_s_m": 10,
+          "initial_speed_mps": 4.5
+        }
+      },
+      "conflict": {
+        "conflict_s_m": 50,
+        "trigger_time_s": 1.0
+      }
+    }
+  },
+  "missing_parameters": []
+}

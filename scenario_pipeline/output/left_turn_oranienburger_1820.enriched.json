@@ -1,0 +1,475 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "left_turn_oranienburger_1820",
+    "date": "2024-11-01",
+    "time": "18:20",
+    "raw_text": "Eine Rad fahrende Person befuhr den Radfahrschutzstreifen der Oranienburger Straße nach Norden und wollte nach links in den Taldorfer Weg abbiegen, ohne auf den nachfolgenden in gleicher Richtung fahrenden Pkw zu achten. Es kam zum Zusammenstoß. Datum: Fr, 01.11.2024 Uhrzeit: 18:20 Uhr"
+  },
+  "classification": {
+    "scenario_type": "left_turn_conflict",
+    "confidence": 0.8
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Oranienburger Straße",
+    "secondary_road": "Taldorfer Weg",
+    "osm_query": "Oranienburger Straße / Taldorfer Weg, Berlin, Germany",
+    "osm_roads": [
+      "Oranienburger Straße",
+      "Taldorfer Weg"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "norden"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "yes",
+    "bike_facility_type": "bike_lane",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": "north",
+      "traffic_rule_status": "priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "turn_left",
+      "initial_direction": "north",
+      "traffic_rule_status": "violated_priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "left_turn_across_path",
+    "collision_happened": true,
+    "collision_description": "A car collided with a cyclist who was turning left from the bike lane.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line",
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "bike_lane",
+      "primary_bike_facility_position": "right"
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -2,
+          "initial_s_m": 10.0,
+          "initial_speed_mps": 4.5
+        },
+        "car_1": {
+          "vehicle_category": "car",
+          "initial_road_id": 0,
+          "initial_lane_id": -1,
+          "initial_s_m": 30.0,
+          "initial_speed_mps": 8.0
+        }
+      },
+      "cyclist_lateral_position": "right",
+      "conflict": {
+        "conflict_s_m": 50.0,
+        "trigger_time_s": 1.0
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "bike_lane",
+      "source": "explicit_from_report",
+      "reason": "The report explicitly describes the cycling infrastructure."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "right",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    },
+    {
+      "parameter": "cyclist_1.vehicle_category",
+      "value_used": "bicycle",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -2,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_s_m",
+      "value_used": 10.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 4.5,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.vehicle_category",
+      "value_used": "car",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_lane_id",
+      "value_used": -1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_s_m",
+      "value_used": 30.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_speed_mps",
+      "value_used": 8.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    }
+  ],
+  "osm_context": {
+    "query": "Oranienburger Straße, Berlin, Germany",
+    "queries_tried": [
+      "Oranienburger Straße / Taldorfer Weg, Berlin, Germany",
+      "Oranienburger Straße Taldorfer Weg, Berlin, Germany",
+      "Oranienburger Straße, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 4396823,
+        "name": "Oranienburger Straße",
+        "highway": "tertiary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5251889,
+            "lon": 13.3920445
+          },
+          {
+            "lat": 52.5252604,
+            "lon": 13.391752
+          },
+          {
+            "lat": 52.5253508,
+            "lon": 13.3913822
+          },
+          {
+            "lat": 52.5253705,
+            "lon": 13.3913013
+          },
+          {
+            "lat": 52.52539,
+            "lon": 13.3912218
+          }
+        ]
+      },
+      {
+        "osm_id": 437325048,
+        "name": "Oranienburger Straße",
+        "highway": "tertiary",
+        "maxspeed": "30",
+        "lanes": "3",
+        "lanes_forward": "2",
+        "lanes_backward": "1",
+        "turn_lanes": "left|through;right",
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5248297,
+            "lon": 13.3935093
+          },
+          {
+            "lat": 52.5249235,
+            "lon": 13.3931227
+          },
+          {
+            "lat": 52.5249391,
+            "lon": 13.3930588
+          }
+        ]
+      },
+      {
+        "osm_id": 465398528,
+        "name": "Oranienburger Straße",
+        "highway": "tertiary",
+        "maxspeed": "30",
+        "lanes": "3",
+        "lanes_forward": "2",
+        "lanes_backward": "1",
+        "turn_lanes": "left|through;right",
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5249391,
+            "lon": 13.3930588
+          },
+          {
+            "lat": 52.5249879,
+            "lon": 13.3928669
+          }
+        ]
+      },
+      {
+        "osm_id": 465398529,
+        "name": "Oranienburger Straße",
+        "highway": "tertiary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5249879,
+            "lon": 13.3928669
+          },
+          {
+            "lat": 52.5250302,
+            "lon": 13.3926936
+          },
+          {
+            "lat": 52.5250447,
+            "lon": 13.3926345
+          },
+          {
+            "lat": 52.5250935,
+            "lon": 13.3924344
+          }
+        ]
+      },
+      {
+        "osm_id": 560370523,
+        "name": "Oranienburger Straße",
+        "highway": "tertiary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "track",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:segregated": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "red",
+          "cycleway:right:traffic_sign": "DE:237",
+          "cycleway:right:width": "1.5"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5244845,
+            "lon": 13.3949013
+          },
+          {
+            "lat": 52.524549,
+            "lon": 13.3946341
+          },
+          {
+            "lat": 52.5246949,
+            "lon": 13.3940472
+          },
+          {
+            "lat": 52.5248297,
+            "lon": 13.3935093
+          }
+        ]
+      },
+      {
+        "osm_id": 1462571485,
+        "name": "Oranienburger Straße",
+        "highway": "tertiary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.52539,
+            "lon": 13.3912218
+          },
+          {
+            "lat": 52.5254193,
+            "lon": 13.3911019
+          },
+          {
+            "lat": 52.5254903,
+            "lon": 13.3908101
+          },
+          {
+            "lat": 52.5256268,
+            "lon": 13.3902538
+          }
+        ]
+      },
+      {
+        "osm_id": 1491810062,
+        "name": "Oranienburger Straße",
+        "highway": "tertiary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5250935,
+            "lon": 13.3924344
+          },
+          {
+            "lat": 52.5251889,
+            "lon": 13.3920445
+          }
+        ]
+      }
+    ],
+    "traffic_signals_nearby": "yes",
+    "notes": [],
+    "geocoded": {
+      "display_name": "Oranienburger Straße, Tucholskystraße, Spandauer Vorstadt, Mitte, Berlin, 10117, Deutschland",
+      "lat": 52.5252246,
+      "lon": 13.3930145,
+      "osm_type": "node",
+      "osm_id": 2134525648
+    },
+    "bike_facility": {
+      "type": "bike_lane",
+      "position": "right",
+      "source": "explicit_from_report",
+      "osm_evidence": {
+        "bike_facility_type": "separated_cycle_track",
+        "position": "right",
+        "tags": {
+          "cycleway:right": "track"
+        }
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "right",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 30.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

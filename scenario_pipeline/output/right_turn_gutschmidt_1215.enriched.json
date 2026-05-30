@@ -1,0 +1,923 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "right_turn_gutschmidt_1215",
+    "date": "2025-03-18",
+    "time": "12:15",
+    "raw_text": "Eine Lkw fahrende Person befuhr die Gutschmidtstraße in Richtung Westen und bog nach rechts auf den Buckower Damm Richtung Britzer Damm ab. Dabei kam es in Höhe der Radverkehrsfuhrt zum Zusammenstoß mit einer E-Bike fahrenden Person, die aus der Gutschmidtstraße kommend geradeaus auf die Kreuzung fuhr. Datum: Di, 18.03.2025 Uhrzeit: 12:15 Uhr"
+  },
+  "classification": {
+    "scenario_type": "right_turn_conflict",
+    "confidence": 0.9
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Gutschmidtstraße",
+    "secondary_road": "Buckower Damm",
+    "osm_query": "Gutschmidtstraße / Buckower Damm, Berlin, Germany",
+    "osm_roads": [
+      "Gutschmidtstraße",
+      "Buckower Damm"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "Westen"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "yes",
+    "bike_facility_type": "roadway_mixed",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "truck_1",
+      "class": "motor_vehicle",
+      "type": "truck",
+      "maneuver": "turn_right",
+      "initial_direction": "west",
+      "traffic_rule_status": "unknown"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "e_bike",
+      "maneuver": "go_straight",
+      "initial_direction": "west",
+      "traffic_rule_status": "unknown"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across_cyclist_path",
+    "collision_happened": true,
+    "collision_description": "A truck collided with an e-bike while turning right at an intersection.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line",
+      "primary_has_bike_facility": false
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "e_bike",
+          "initial_road_id": 0,
+          "initial_lane_id": -1,
+          "initial_s_m": 10.0,
+          "initial_speed_mps": 5.5
+        },
+        "truck_1": {
+          "vehicle_category": "truck",
+          "initial_road_id": 0,
+          "initial_lane_id": -1,
+          "initial_s_m": 30.0,
+          "initial_speed_mps": 3.0
+        }
+      },
+      "cyclist_lateral_position": "left",
+      "conflict": {
+        "conflict_s_m": 50.0,
+        "trigger_time_s": 1.0
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "left",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    },
+    {
+      "parameter": "cyclist_1.vehicle_category",
+      "value_used": "e_bike",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_s_m",
+      "value_used": 10.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 5.5,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.vehicle_category",
+      "value_used": "truck",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.initial_lane_id",
+      "value_used": -1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.initial_s_m",
+      "value_used": 30.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.initial_speed_mps",
+      "value_used": 3.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    }
+  ],
+  "osm_context": {
+    "query": "Gutschmidtstraße / Buckower Damm, Berlin, Germany",
+    "queries_tried": [
+      "Gutschmidtstraße / Buckower Damm, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 4662878,
+        "name": "Buckower Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4393194,
+            "lon": 13.4349767
+          },
+          {
+            "lat": 52.439393,
+            "lon": 13.4349711
+          },
+          {
+            "lat": 52.4400863,
+            "lon": 13.4349182
+          },
+          {
+            "lat": 52.4402264,
+            "lon": 13.4349075
+          },
+          {
+            "lat": 52.4402662,
+            "lon": 13.4349044
+          },
+          {
+            "lat": 52.4403024,
+            "lon": 13.4349017
+          },
+          {
+            "lat": 52.4403726,
+            "lon": 13.4348963
+          }
+        ]
+      },
+      {
+        "osm_id": 30140696,
+        "name": "Buckower Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|left|through|none",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.44101,
+            "lon": 13.4346441
+          },
+          {
+            "lat": 52.4406774,
+            "lon": 13.4346662
+          }
+        ]
+      },
+      {
+        "osm_id": 138515672,
+        "name": "Buckower Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "share_busway",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:traffic_sign": "DE:245,1022-10",
+          "cycleway:right:width": "2.7"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4410841,
+            "lon": 13.4348186
+          },
+          {
+            "lat": 52.4412093,
+            "lon": 13.4348015
+          },
+          {
+            "lat": 52.4414337,
+            "lon": 13.4347527
+          },
+          {
+            "lat": 52.4415545,
+            "lon": 13.434722
+          },
+          {
+            "lat": 52.4416118,
+            "lon": 13.434701
+          },
+          {
+            "lat": 52.4418329,
+            "lon": 13.43462
+          },
+          {
+            "lat": 52.4422209,
+            "lon": 13.4344661
+          },
+          {
+            "lat": 52.4426581,
+            "lon": 13.4342926
+          }
+        ]
+      },
+      {
+        "osm_id": 138515673,
+        "name": "Buckower Damm",
+        "highway": "secondary_link",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.44101,
+            "lon": 13.4346441
+          },
+          {
+            "lat": 52.4410137,
+            "lon": 13.4348263
+          }
+        ]
+      },
+      {
+        "osm_id": 138515674,
+        "name": "Buckower Damm",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:both": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4403726,
+            "lon": 13.4348963
+          },
+          {
+            "lat": 52.440369,
+            "lon": 13.4346867
+          }
+        ]
+      },
+      {
+        "osm_id": 205756201,
+        "name": "Buckower Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.440369,
+            "lon": 13.4346867
+          },
+          {
+            "lat": 52.4402958,
+            "lon": 13.4346928
+          },
+          {
+            "lat": 52.440259,
+            "lon": 13.4346959
+          },
+          {
+            "lat": 52.4398299,
+            "lon": 13.4347316
+          },
+          {
+            "lat": 52.4397202,
+            "lon": 13.4347408
+          }
+        ]
+      },
+      {
+        "osm_id": 383987236,
+        "name": "Buckower Damm/Gutschmidtstraße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4399694,
+            "lon": 13.4361233
+          },
+          {
+            "lat": 52.4400222,
+            "lon": 13.4360337
+          },
+          {
+            "lat": 52.4401168,
+            "lon": 13.4358742
+          }
+        ]
+      },
+      {
+        "osm_id": 383987237,
+        "name": "Buckower Damm/Gutschmidtstraße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4405889,
+            "lon": 13.4345742
+          },
+          {
+            "lat": 52.4407579,
+            "lon": 13.4345601
+          }
+        ]
+      },
+      {
+        "osm_id": 383987238,
+        "name": "Buckower Damm/Gutschmidtstraße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4408197,
+            "lon": 13.4349359
+          },
+          {
+            "lat": 52.4406756,
+            "lon": 13.4349466
+          }
+        ]
+      },
+      {
+        "osm_id": 438238614,
+        "name": "Buckower Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.441481,
+            "lon": 13.4345419
+          },
+          {
+            "lat": 52.4414225,
+            "lon": 13.4345604
+          },
+          {
+            "lat": 52.4410834,
+            "lon": 13.4346346
+          },
+          {
+            "lat": 52.44101,
+            "lon": 13.4346441
+          }
+        ]
+      },
+      {
+        "osm_id": 438238616,
+        "name": "Gutschmidtstraße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": "2",
+        "lanes_backward": "2",
+        "turn_lanes": "left|right",
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:both": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4403726,
+            "lon": 13.4348963
+          },
+          {
+            "lat": 52.4403742,
+            "lon": 13.4349851
+          },
+          {
+            "lat": 52.4403759,
+            "lon": 13.4350563
+          },
+          {
+            "lat": 52.4403775,
+            "lon": 13.4351275
+          },
+          {
+            "lat": 52.4403764,
+            "lon": 13.4352309
+          },
+          {
+            "lat": 52.4403711,
+            "lon": 13.4353268
+          },
+          {
+            "lat": 52.4403583,
+            "lon": 13.4354374
+          },
+          {
+            "lat": 52.4403346,
+            "lon": 13.4355531
+          },
+          {
+            "lat": 52.4403209,
+            "lon": 13.4356098
+          }
+        ]
+      },
+      {
+        "osm_id": 1300389737,
+        "name": "Buckower Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|left|through|none",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4406774,
+            "lon": 13.4346662
+          },
+          {
+            "lat": 52.4406553,
+            "lon": 13.4346677
+          },
+          {
+            "lat": 52.4405337,
+            "lon": 13.4346758
+          },
+          {
+            "lat": 52.4404925,
+            "lon": 13.4346785
+          },
+          {
+            "lat": 52.4404352,
+            "lon": 13.4346823
+          },
+          {
+            "lat": 52.440369,
+            "lon": 13.4346867
+          }
+        ]
+      },
+      {
+        "osm_id": 1370680774,
+        "name": "Buckower Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "share_busway",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:traffic_sign": "DE:245,1022-10",
+          "cycleway:right:width": "2.7"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4403726,
+            "lon": 13.4348963
+          },
+          {
+            "lat": 52.4404388,
+            "lon": 13.4348891
+          },
+          {
+            "lat": 52.4404986,
+            "lon": 13.4348825
+          },
+          {
+            "lat": 52.4405465,
+            "lon": 13.4348773
+          },
+          {
+            "lat": 52.4408088,
+            "lon": 13.4348487
+          },
+          {
+            "lat": 52.4410137,
+            "lon": 13.4348263
+          },
+          {
+            "lat": 52.4410841,
+            "lon": 13.4348186
+          }
+        ]
+      },
+      {
+        "osm_id": 1435897601,
+        "name": "Gutschmidtstraße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:both": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4401847,
+            "lon": 13.4359121
+          },
+          {
+            "lat": 52.4400227,
+            "lon": 13.4361806
+          },
+          {
+            "lat": 52.4399848,
+            "lon": 13.4362484
+          },
+          {
+            "lat": 52.4398686,
+            "lon": 13.4364565
+          },
+          {
+            "lat": 52.439791,
+            "lon": 13.436601
+          }
+        ]
+      },
+      {
+        "osm_id": 1435897602,
+        "name": "Gutschmidtstraße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": "2",
+        "lanes_backward": "2",
+        "turn_lanes": "left;right|right",
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:both": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4403209,
+            "lon": 13.4356098
+          },
+          {
+            "lat": 52.4402756,
+            "lon": 13.4357341
+          },
+          {
+            "lat": 52.4401847,
+            "lon": 13.4359121
+          }
+        ]
+      },
+      {
+        "osm_id": 1436166101,
+        "name": "Buckower Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4434747,
+            "lon": 13.4337099
+          },
+          {
+            "lat": 52.4433755,
+            "lon": 13.4337526
+          },
+          {
+            "lat": 52.4427998,
+            "lon": 13.4340059
+          },
+          {
+            "lat": 52.4422551,
+            "lon": 13.4342334
+          },
+          {
+            "lat": 52.4418654,
+            "lon": 13.4343961
+          }
+        ]
+      },
+      {
+        "osm_id": 1442158070,
+        "name": "Buckower Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4397202,
+            "lon": 13.4347408
+          },
+          {
+            "lat": 52.4393879,
+            "lon": 13.4347685
+          },
+          {
+            "lat": 52.4393134,
+            "lon": 13.4347747
+          }
+        ]
+      },
+      {
+        "osm_id": 1479656363,
+        "name": "Buckower Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4418654,
+            "lon": 13.4343961
+          },
+          {
+            "lat": 52.441481,
+            "lon": 13.4345419
+          }
+        ]
+      }
+    ],
+    "traffic_signals_nearby": "yes",
+    "notes": [],
+    "geocoded": {
+      "display_name": "Buckower Damm/Gutschmidtstraße, Buckower Damm, Britz, Neukölln, Berlin, 12349, Deutschland",
+      "lat": 52.4406734,
+      "lon": 13.4345672,
+      "osm_type": "way",
+      "osm_id": 383987237
+    },
+    "cyclist_lateral_position": {
+      "value": "left",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

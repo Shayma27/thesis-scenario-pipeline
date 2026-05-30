@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 145977799,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 10699438,
+    "lat": "52.4401792",
+    "lon": "13.5882884",
+    "category": "highway",
+    "type": "secondary",
+    "place_rank": 26,
+    "importance": 0.05342208819714653,
+    "addresstype": "road",
+    "name": "Müggelheimer Damm",
+    "display_name": "Müggelheimer Damm, Kietzer Feld, Köpenick, Treptow-Köpenick, Berlin, 12557, Deutschland",
+    "boundingbox": [
+      "52.4399309",
+      "52.4404310",
+      "13.5876369",
+      "13.5889414"
+    ]
+  }
+]

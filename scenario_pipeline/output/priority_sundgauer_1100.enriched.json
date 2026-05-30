@@ -1,0 +1,641 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "priority_sundgauer_1100",
+    "date": "2025-06-14",
+    "time": "11:00",
+    "raw_text": "Eine Pkw fahrende Person befuhr die Sundgauer Straße vom Lützelsteiner Weg zur Clayallee nordwestwärts. An der Kreuzung Sundgauer Straße/Clayallee kam es zum Zusammenstoß mit einer vorfahrtberechtigten Rad fahrenden Person, die auf dem Radweg der Clayallee nach Norden fuhr. Datum: Sa, 14.06.2025 Uhrzeit: 11:00 Uhr"
+  },
+  "classification": {
+    "scenario_type": "right_turn_conflict",
+    "confidence": 0.8
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Sundgauer Straße",
+    "secondary_road": "Clayallee",
+    "osm_query": "Sundgauer Straße / Clayallee, Berlin, Germany",
+    "osm_roads": [
+      "Sundgauer Straße",
+      "Clayallee"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "nordwestwärts",
+      "Norden"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "yes",
+    "bike_facility_type": "separated_cycle_track",
+    "parking_present": null,
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "turn_right",
+      "initial_direction": "northwest",
+      "traffic_rule_status": "violated_priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "north",
+      "traffic_rule_status": "priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across_cycle_track",
+    "collision_happened": true,
+    "collision_description": "A car turning right collided with a cyclist going straight on a separated cycle track.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line",
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "separated_cycle_track",
+      "primary_bike_facility_position": "rightmost",
+      "motor_lane_count": 2
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -3,
+          "initial_s_m": 10.0,
+          "initial_speed_mps": 4.5
+        },
+        "car_1": {
+          "vehicle_category": "car",
+          "initial_road_id": 0,
+          "initial_lane_id": -2,
+          "initial_s_m": 30.0,
+          "initial_speed_mps": 4.0
+        }
+      },
+      "cyclist_lateral_position": "rightmost",
+      "conflict": {
+        "conflict_s_m": 50.0,
+        "trigger_time_s": 1.0
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "separated_cycle_track",
+      "source": "explicit_from_report",
+      "reason": "The report explicitly describes the cycling infrastructure."
+    },
+    {
+      "parameter": "motor_lane_count",
+      "value_used": 2,
+      "source": "osm_tag",
+      "reason": "OpenDRIVE motor-lane count was derived from nearby OSM lanes tags."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "rightmost",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    },
+    {
+      "parameter": "cyclist_1.vehicle_category",
+      "value_used": "bicycle",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -3,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_s_m",
+      "value_used": 10.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 4.5,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.vehicle_category",
+      "value_used": "car",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_lane_id",
+      "value_used": -2,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_s_m",
+      "value_used": 30.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_speed_mps",
+      "value_used": 4.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    }
+  ],
+  "osm_context": {
+    "query": "Sundgauer Straße, Berlin, Germany",
+    "queries_tried": [
+      "Sundgauer Straße / Clayallee, Berlin, Germany",
+      "Sundgauer Straße Clayallee, Berlin, Germany",
+      "Sundgauer Straße, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 26005183,
+        "name": "Sundgauer Straße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4363264,
+            "lon": 13.2732987
+          },
+          {
+            "lat": 52.4362697,
+            "lon": 13.2733466
+          },
+          {
+            "lat": 52.4358947,
+            "lon": 13.2736994
+          },
+          {
+            "lat": 52.4358821,
+            "lon": 13.2737113
+          }
+        ]
+      },
+      {
+        "osm_id": 41764794,
+        "name": "Sundgauer Straße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4371141,
+            "lon": 13.2725558
+          },
+          {
+            "lat": 52.436651,
+            "lon": 13.2729846
+          },
+          {
+            "lat": 52.4365428,
+            "lon": 13.273089
+          },
+          {
+            "lat": 52.4363427,
+            "lon": 13.2732827
+          },
+          {
+            "lat": 52.4363264,
+            "lon": 13.2732987
+          }
+        ]
+      },
+      {
+        "osm_id": 191525363,
+        "name": "Sundgauer Straße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4355152,
+            "lon": 13.2740572
+          },
+          {
+            "lat": 52.4354683,
+            "lon": 13.2741014
+          },
+          {
+            "lat": 52.4352564,
+            "lon": 13.2743011
+          },
+          {
+            "lat": 52.4351438,
+            "lon": 13.2744073
+          },
+          {
+            "lat": 52.4349995,
+            "lon": 13.2745432
+          },
+          {
+            "lat": 52.4344196,
+            "lon": 13.2751135
+          },
+          {
+            "lat": 52.4337351,
+            "lon": 13.2758701
+          },
+          {
+            "lat": 52.4336814,
+            "lon": 13.2759227
+          },
+          {
+            "lat": 52.4335274,
+            "lon": 13.2760857
+          }
+        ]
+      },
+      {
+        "osm_id": 253117615,
+        "name": "Sundgauer Straße",
+        "highway": "footway",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "2",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4378345,
+            "lon": 13.2766641
+          },
+          {
+            "lat": 52.4373778,
+            "lon": 13.2753623
+          },
+          {
+            "lat": 52.4371783,
+            "lon": 13.2748112
+          },
+          {
+            "lat": 52.437156,
+            "lon": 13.2748344
+          },
+          {
+            "lat": 52.4367817,
+            "lon": 13.2737722
+          },
+          {
+            "lat": 52.4368828,
+            "lon": 13.2736627
+          },
+          {
+            "lat": 52.4369436,
+            "lon": 13.2735365
+          },
+          {
+            "lat": 52.4369577,
+            "lon": 13.2733639
+          },
+          {
+            "lat": 52.4369139,
+            "lon": 13.2732239
+          },
+          {
+            "lat": 52.4368986,
+            "lon": 13.2731316
+          },
+          {
+            "lat": 52.4368992,
+            "lon": 13.2730198
+          },
+          {
+            "lat": 52.436906,
+            "lon": 13.2729898
+          }
+        ]
+      },
+      {
+        "osm_id": 383944941,
+        "name": "S Sundgauer Straße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4365782,
+            "lon": 13.2731879
+          },
+          {
+            "lat": 52.436451,
+            "lon": 13.273309
+          }
+        ]
+      },
+      {
+        "osm_id": 383944944,
+        "name": "S Sundgauer Straße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4355277,
+            "lon": 13.2739648
+          },
+          {
+            "lat": 52.4356213,
+            "lon": 13.2738779
+          },
+          {
+            "lat": 52.4356801,
+            "lon": 13.2738233
+          }
+        ]
+      },
+      {
+        "osm_id": 432657218,
+        "name": "Sundgauer Straße",
+        "highway": "service",
+        "maxspeed": "20",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "both",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4370469,
+            "lon": 13.2743271
+          },
+          {
+            "lat": 52.4373332,
+            "lon": 13.2751463
+          },
+          {
+            "lat": 52.4374019,
+            "lon": 13.2753396
+          },
+          {
+            "lat": 52.4374676,
+            "lon": 13.2755309
+          },
+          {
+            "lat": 52.4377688,
+            "lon": 13.2763929
+          },
+          {
+            "lat": 52.4378547,
+            "lon": 13.2766389
+          }
+        ]
+      },
+      {
+        "osm_id": 832482309,
+        "name": "Sundgauer Straße",
+        "highway": "service",
+        "maxspeed": "20",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:right": "no"
+        },
+        "sidewalk": "both",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.436947,
+            "lon": 13.2740413
+          },
+          {
+            "lat": 52.4370469,
+            "lon": 13.2743271
+          }
+        ]
+      },
+      {
+        "osm_id": 1208904604,
+        "name": "Sundgauer Straße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4371841,
+            "lon": 13.272487
+          },
+          {
+            "lat": 52.4371141,
+            "lon": 13.2725558
+          }
+        ]
+      },
+      {
+        "osm_id": 1425021859,
+        "name": "Sundgauer Straße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4358821,
+            "lon": 13.2737113
+          },
+          {
+            "lat": 52.4358623,
+            "lon": 13.2737299
+          },
+          {
+            "lat": 52.4358291,
+            "lon": 13.2737613
+          },
+          {
+            "lat": 52.4356425,
+            "lon": 13.2739371
+          },
+          {
+            "lat": 52.4356243,
+            "lon": 13.2739543
+          },
+          {
+            "lat": 52.4355152,
+            "lon": 13.2740572
+          }
+        ]
+      }
+    ],
+    "traffic_signals_nearby": "yes",
+    "notes": [],
+    "geocoded": {
+      "display_name": "Sundgauer Straße, Siedlung Am Mühlenberg, Zehlendorf, Steglitz-Zehlendorf, Berlin, 14169, Deutschland",
+      "lat": 52.4364399,
+      "lon": 13.2742012,
+      "osm_type": "node",
+      "osm_id": 2465354489
+    },
+    "bike_facility": {
+      "type": "separated_cycle_track",
+      "position": "rightmost",
+      "source": "explicit_from_report",
+      "osm_evidence": null
+    },
+    "cyclist_lateral_position": {
+      "value": "rightmost",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

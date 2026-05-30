@@ -1,0 +1,799 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "lane_change_markgrafendamm_1745",
+    "date": "2021-09-18",
+    "time": "17:45",
+    "raw_text": "Eine Radfahrerin befuhr den Markgrafendamm auf dem Schutzstreifen für Fahrradfahrende in Richtung Hauptstraße. Kurz nach der Einmündung zur Persiusstraße wechselte sie nach links in den danebenliegenden rechten Fahrstreifen, wo sie von einem Pkw erfasst wurde. Datum: 18.09.2021 Uhrzeit: 17:45 Uhr"
+  },
+  "classification": {
+    "scenario_type": "lane_change_conflict",
+    "confidence": 0.8
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Markgrafendamm",
+    "secondary_road": "Persiusstraße",
+    "osm_query": "Markgrafendamm / Persiusstraße, Berlin, Germany",
+    "osm_roads": [
+      "Markgrafendamm",
+      "Persiusstraße"
+    ],
+    "house_number_reference": null,
+    "location_type": "midblock",
+    "direction_references": [
+      "Hauptstraße"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "no",
+    "bike_facility_type": "bike_lane",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "change_lane",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "must_yield"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "lane_change_into_path_of_oncoming_car",
+    "collision_happened": true,
+    "collision_description": "A cyclist was hit by a car while changing lanes.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line",
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "bike_lane",
+      "primary_bike_facility_position": "both"
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -2,
+          "initial_s_m": 10.0,
+          "initial_speed_mps": 4.5
+        },
+        "car_1": {
+          "vehicle_category": "car",
+          "initial_road_id": 0,
+          "initial_lane_id": -1,
+          "initial_s_m": 25.0,
+          "initial_speed_mps": 8.0
+        }
+      },
+      "cyclist_lateral_position": "both",
+      "conflict": {
+        "conflict_s_m": 50.0,
+        "trigger_time_s": 1.0
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "bike_lane",
+      "source": "explicit_from_report",
+      "reason": "The report explicitly describes the cycling infrastructure."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "both",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    },
+    {
+      "parameter": "cyclist_1.vehicle_category",
+      "value_used": "bicycle",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'lane_change_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'lane_change_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -2,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'lane_change_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_s_m",
+      "value_used": 10.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'lane_change_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 4.5,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'lane_change_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.vehicle_category",
+      "value_used": "car",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'lane_change_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'lane_change_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_lane_id",
+      "value_used": -1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'lane_change_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_s_m",
+      "value_used": 25.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'lane_change_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_speed_mps",
+      "value_used": 8.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'lane_change_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    }
+  ],
+  "osm_context": {
+    "query": "Markgrafendamm / Persiusstraße, Berlin, Germany",
+    "queries_tried": [
+      "Markgrafendamm / Persiusstraße, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 60819742,
+        "name": "Markgrafendamm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:both": "lane",
+          "cycleway:both:lane": "advisory",
+          "cycleway:both:width": "1.1"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5005251,
+            "lon": 13.466318
+          },
+          {
+            "lat": 52.5006087,
+            "lon": 13.4663524
+          },
+          {
+            "lat": 52.5007463,
+            "lon": 13.4664102
+          },
+          {
+            "lat": 52.500982,
+            "lon": 13.4665092
+          },
+          {
+            "lat": 52.5011489,
+            "lon": 13.4665779
+          },
+          {
+            "lat": 52.5011773,
+            "lon": 13.4665858
+          },
+          {
+            "lat": 52.5012143,
+            "lon": 13.4665903
+          },
+          {
+            "lat": 52.5012611,
+            "lon": 13.4665907
+          },
+          {
+            "lat": 52.5014181,
+            "lon": 13.4665711
+          },
+          {
+            "lat": 52.5016602,
+            "lon": 13.4665367
+          },
+          {
+            "lat": 52.5018034,
+            "lon": 13.4665164
+          },
+          {
+            "lat": 52.5018354,
+            "lon": 13.4665119
+          },
+          {
+            "lat": 52.5020045,
+            "lon": 13.4664881
+          },
+          {
+            "lat": 52.5020502,
+            "lon": 13.4664862
+          },
+          {
+            "lat": 52.5020895,
+            "lon": 13.4664925
+          },
+          {
+            "lat": 52.5021244,
+            "lon": 13.4665042
+          },
+          {
+            "lat": 52.5022419,
+            "lon": 13.466557
+          },
+          {
+            "lat": 52.5024089,
+            "lon": 13.4666322
+          }
+        ]
+      },
+      {
+        "osm_id": 155605329,
+        "name": "Markgrafendamm",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "shared_lane",
+        "cycleway_tags": {
+          "cycleway:left": "shared_lane",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "advisory"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4987208,
+            "lon": 13.4655248
+          },
+          {
+            "lat": 52.4988386,
+            "lon": 13.4655956
+          },
+          {
+            "lat": 52.498944,
+            "lon": 13.4656524
+          },
+          {
+            "lat": 52.4991,
+            "lon": 13.4657224
+          },
+          {
+            "lat": 52.4991627,
+            "lon": 13.4657494
+          },
+          {
+            "lat": 52.4992493,
+            "lon": 13.4657866
+          },
+          {
+            "lat": 52.4992902,
+            "lon": 13.4658039
+          },
+          {
+            "lat": 52.4994744,
+            "lon": 13.465882
+          }
+        ]
+      },
+      {
+        "osm_id": 383776457,
+        "name": "Markgrafendamm",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5001788,
+            "lon": 13.4649675
+          },
+          {
+            "lat": 52.5001356,
+            "lon": 13.4651222
+          },
+          {
+            "lat": 52.5001026,
+            "lon": 13.4652405
+          }
+        ]
+      },
+      {
+        "osm_id": 383776458,
+        "name": "Markgrafendamm",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5002652,
+            "lon": 13.4651357
+          },
+          {
+            "lat": 52.5002459,
+            "lon": 13.4652061
+          },
+          {
+            "lat": 52.5002098,
+            "lon": 13.4653383
+          }
+        ]
+      },
+      {
+        "osm_id": 383776459,
+        "name": "Markgrafendamm",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4992472,
+            "lon": 13.4656563
+          },
+          {
+            "lat": 52.4994096,
+            "lon": 13.465723
+          }
+        ]
+      },
+      {
+        "osm_id": 383776460,
+        "name": "Markgrafendamm",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4991021,
+            "lon": 13.4658515
+          },
+          {
+            "lat": 52.4989267,
+            "lon": 13.4657707
+          }
+        ]
+      },
+      {
+        "osm_id": 432763465,
+        "name": "Persiusstraße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": "3",
+        "lanes_forward": "2",
+        "lanes_backward": "1",
+        "turn_lanes": "left|right",
+        "oneway": "no",
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5000961,
+            "lon": 13.4654547
+          },
+          {
+            "lat": 52.5000163,
+            "lon": 13.4657465
+          },
+          {
+            "lat": 52.4999829,
+            "lon": 13.4658726
+          },
+          {
+            "lat": 52.4999527,
+            "lon": 13.4660772
+          }
+        ]
+      },
+      {
+        "osm_id": 847020780,
+        "name": "Persiusstraße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5005028,
+            "lon": 13.4639093
+          },
+          {
+            "lat": 52.5004796,
+            "lon": 13.4640392
+          },
+          {
+            "lat": 52.5003417,
+            "lon": 13.4645388
+          }
+        ]
+      },
+      {
+        "osm_id": 1081349077,
+        "name": "Persiusstraße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5005028,
+            "lon": 13.4639093
+          },
+          {
+            "lat": 52.5005194,
+            "lon": 13.4638039
+          },
+          {
+            "lat": 52.5006033,
+            "lon": 13.4633259
+          },
+          {
+            "lat": 52.5006142,
+            "lon": 13.4632638
+          },
+          {
+            "lat": 52.500664,
+            "lon": 13.462979
+          }
+        ]
+      },
+      {
+        "osm_id": 1101803171,
+        "name": "Markgrafendamm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": "2",
+        "lanes_backward": "2",
+        "turn_lanes": "through|right",
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:both": "lane",
+          "cycleway:both:lane": "advisory",
+          "cycleway:both:width": "1.1"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4999527,
+            "lon": 13.4660772
+          },
+          {
+            "lat": 52.5000639,
+            "lon": 13.4661235
+          },
+          {
+            "lat": 52.5001013,
+            "lon": 13.4661386
+          },
+          {
+            "lat": 52.5005251,
+            "lon": 13.466318
+          }
+        ]
+      },
+      {
+        "osm_id": 1101803172,
+        "name": "Markgrafendamm",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "4",
+        "lanes_forward": "2",
+        "lanes_backward": "2",
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:both": "lane",
+          "cycleway:both:lane": "advisory",
+          "cycleway:both:width": "1.1"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4994744,
+            "lon": 13.465882
+          },
+          {
+            "lat": 52.4995083,
+            "lon": 13.4658964
+          },
+          {
+            "lat": 52.4996695,
+            "lon": 13.4659647
+          },
+          {
+            "lat": 52.4998226,
+            "lon": 13.4660257
+          },
+          {
+            "lat": 52.4998461,
+            "lon": 13.466035
+          },
+          {
+            "lat": 52.4998828,
+            "lon": 13.4660499
+          },
+          {
+            "lat": 52.4999527,
+            "lon": 13.4660772
+          }
+        ]
+      },
+      {
+        "osm_id": 1457896183,
+        "name": "Persiusstraße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5003417,
+            "lon": 13.4645388
+          },
+          {
+            "lat": 52.500226,
+            "lon": 13.4649548
+          }
+        ]
+      },
+      {
+        "osm_id": 1457896184,
+        "name": "Persiusstraße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5001209,
+            "lon": 13.4653413
+          },
+          {
+            "lat": 52.5000961,
+            "lon": 13.4654547
+          }
+        ]
+      },
+      {
+        "osm_id": 1457896187,
+        "name": "Persiusstraße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.500226,
+            "lon": 13.4649548
+          },
+          {
+            "lat": 52.500177,
+            "lon": 13.4651343
+          },
+          {
+            "lat": 52.5001716,
+            "lon": 13.4651541
+          },
+          {
+            "lat": 52.5001209,
+            "lon": 13.4653413
+          }
+        ]
+      }
+    ],
+    "traffic_signals_nearby": "yes",
+    "notes": [],
+    "geocoded": {
+      "display_name": "Markgrafendamm, Persiusstraße, Laskerkiez, Rudolfkiez, Friedrichshain, Friedrichshain-Kreuzberg, Berlin, 10245, Deutschland",
+      "lat": 52.5001407,
+      "lon": 13.465104,
+      "osm_type": "way",
+      "osm_id": 383776457
+    },
+    "bike_facility": {
+      "type": "bike_lane",
+      "position": "both",
+      "source": "explicit_from_report",
+      "osm_evidence": {
+        "bike_facility_type": "bike_lane",
+        "position": "both",
+        "tags": {
+          "cycleway:both": "lane"
+        }
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "both",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

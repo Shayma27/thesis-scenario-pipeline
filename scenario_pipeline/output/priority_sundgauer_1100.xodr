@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<OpenDRIVE>
+    <header name="priority_sundgauer_1100" revMajor="1" revMinor="5" date="2026-05-28 14:56:13.704507" north="0.0" south="0.0" east="0.0" west="0.0"/>
+    <road name="Sundgauer Straße" rule="RHT" id="0" junction="-1" length="100.0">
+        <link/>
+        <planView>
+            <geometry s="0" x="0" y="0" hdg="0" length="100.0">
+                <line/>
+            </geometry>
+        </planView>
+        <elevationProfile/>
+        <lateralProfile/>
+        <lanes>
+            <laneSection s="0">
+                <center>
+                    <lane id="0" type="none" level="false">
+                        <roadMark sOffset="0" type="solid" weight="standard" color="standard" width="0.15"/>
+                    </lane>
+                </center>
+                <right>
+                    <lane id="-1" type="driving" level="false">
+                        <link/>
+                        <width a="3.5" b="0" c="0" d="0" sOffset="0"/>
+                        <roadMark sOffset="0" type="solid" weight="standard" color="standard" width="0.12"/>
+                    </lane>
+                    <lane id="-2" type="driving" level="false">
+                        <link/>
+                        <width a="3.5" b="0" c="0" d="0" sOffset="0"/>
+                        <roadMark sOffset="0" type="solid" weight="standard" color="standard" width="0.12"/>
+                    </lane>
+                    <lane id="-3" type="biking" level="false">
+                        <link/>
+                        <width a="2.0" b="0" c="0" d="0" sOffset="0"/>
+                        <roadMark sOffset="0" type="solid" weight="standard" color="standard" width="0.08"/>
+                    </lane>
+                    <lane id="-4" type="sidewalk" level="false">
+                        <link/>
+                        <width a="1.5" b="0" c="0" d="0" sOffset="0"/>
+                        <roadMark sOffset="0" type="solid" weight="standard" color="standard" width="0.08"/>
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+</OpenDRIVE>

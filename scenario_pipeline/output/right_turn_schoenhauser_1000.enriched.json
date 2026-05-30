@@ -1,0 +1,522 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "right_turn_schoenhauser_1000",
+    "date": "2021-10-13",
+    "time": "10:00",
+    "raw_text": "Eine Radfahrerin befuhr die Schönhauser Straße in Richtung Torstraße. Als sie auf die Kreuzung der Torstraße in Richtung Alte Schönhauser fuhr, erfasste sie ein Lkw-Fahrer, der zunächst in gleicher Richtung fahrend dort nach rechts in die Torstraße abbog. Datum: 13.10.2021 Uhrzeit: 10:00 Uhr"
+  },
+  "classification": {
+    "scenario_type": "right_turn_conflict",
+    "confidence": 0.9
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Schönhauser Straße",
+    "secondary_road": "Torstraße",
+    "osm_query": "Schönhauser Straße / Torstraße, Berlin, Germany",
+    "osm_roads": [
+      "Schönhauser Straße",
+      "Torstraße"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "east",
+      "north"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "no",
+    "bike_facility_type": null,
+    "parking_present": null,
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "truck_1",
+      "class": "motor_vehicle",
+      "type": "truck",
+      "maneuver": "turn_right",
+      "initial_direction": "east",
+      "traffic_rule_status": "priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "east",
+      "traffic_rule_status": "must_yield"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across_cyclist_path",
+    "collision_happened": true,
+    "collision_description": "A truck driver turned right into a cyclist going straight.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line",
+      "primary_has_bike_facility": false
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -1,
+          "initial_s_m": 10.0,
+          "initial_speed_mps": 4.5
+        },
+        "truck_1": {
+          "vehicle_category": "truck",
+          "initial_road_id": 0,
+          "initial_lane_id": -1,
+          "initial_s_m": 30.0,
+          "initial_speed_mps": 3.0
+        }
+      },
+      "cyclist_lateral_position": "both",
+      "conflict": {
+        "conflict_s_m": 50.0,
+        "trigger_time_s": 1.0
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "both",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    },
+    {
+      "parameter": "cyclist_1.vehicle_category",
+      "value_used": "bicycle",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_s_m",
+      "value_used": 10.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 4.5,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.vehicle_category",
+      "value_used": "truck",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.initial_lane_id",
+      "value_used": -1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.initial_s_m",
+      "value_used": 30.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.initial_speed_mps",
+      "value_used": 3.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    }
+  ],
+  "osm_context": {
+    "query": "Schönhauser Straße, Berlin, Germany",
+    "queries_tried": [
+      "Schönhauser Straße / Torstraße, Berlin, Germany",
+      "Schönhauser Straße Torstraße, Berlin, Germany",
+      "Schönhauser Straße, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 145671835,
+        "name": "Schönhauser Straße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "right",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5980355,
+            "lon": 13.3839099
+          },
+          {
+            "lat": 52.5977679,
+            "lon": 13.3845743
+          },
+          {
+            "lat": 52.5977261,
+            "lon": 13.3846782
+          },
+          {
+            "lat": 52.5975819,
+            "lon": 13.3850159
+          }
+        ]
+      },
+      {
+        "osm_id": 1105815307,
+        "name": "Schönhauser Straße",
+        "highway": "tertiary",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5985156,
+            "lon": 13.3826932
+          },
+          {
+            "lat": 52.5984543,
+            "lon": 13.3828412
+          },
+          {
+            "lat": 52.5983345,
+            "lon": 13.3831302
+          }
+        ]
+      },
+      {
+        "osm_id": 1105815308,
+        "name": "Schönhauser Straße",
+        "highway": "tertiary",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.598196,
+            "lon": 13.3834832
+          },
+          {
+            "lat": 52.5981681,
+            "lon": 13.3835608
+          }
+        ]
+      },
+      {
+        "osm_id": 1429033308,
+        "name": "Schönhauser Straße",
+        "highway": "tertiary",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5981681,
+            "lon": 13.3835608
+          },
+          {
+            "lat": 52.5981026,
+            "lon": 13.3837434
+          }
+        ]
+      },
+      {
+        "osm_id": 1429033310,
+        "name": "Schönhauser Straße",
+        "highway": "tertiary",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5982399,
+            "lon": 13.3833714
+          },
+          {
+            "lat": 52.598196,
+            "lon": 13.3834832
+          }
+        ]
+      },
+      {
+        "osm_id": 1429033311,
+        "name": "Schönhauser Straße",
+        "highway": "tertiary",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5983345,
+            "lon": 13.3831302
+          },
+          {
+            "lat": 52.5982399,
+            "lon": 13.3833714
+          }
+        ]
+      },
+      {
+        "osm_id": 1429033313,
+        "name": "Schönhauser Straße",
+        "highway": "tertiary",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5985393,
+            "lon": 13.3826362
+          },
+          {
+            "lat": 52.5985156,
+            "lon": 13.3826932
+          }
+        ]
+      },
+      {
+        "osm_id": 1429033314,
+        "name": "Schönhauser Straße",
+        "highway": "tertiary",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5987203,
+            "lon": 13.3821954
+          },
+          {
+            "lat": 52.5986145,
+            "lon": 13.3824547
+          },
+          {
+            "lat": 52.5985393,
+            "lon": 13.3826362
+          }
+        ]
+      },
+      {
+        "osm_id": 1429037314,
+        "name": "Schönhauser Straße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5991416,
+            "lon": 13.3811671
+          },
+          {
+            "lat": 52.5988526,
+            "lon": 13.3818649
+          },
+          {
+            "lat": 52.5987203,
+            "lon": 13.3821954
+          }
+        ]
+      },
+      {
+        "osm_id": 1497888052,
+        "name": "Schönhauser Straße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "right",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5981026,
+            "lon": 13.3837434
+          },
+          {
+            "lat": 52.5980355,
+            "lon": 13.3839099
+          }
+        ]
+      }
+    ],
+    "traffic_signals_nearby": "no",
+    "notes": [],
+    "geocoded": {
+      "display_name": "Schönhauser Straße, Siedlung Eigene Scholle, Rosenthal, Pankow, Berlin, 13158, Deutschland",
+      "lat": 52.5984251,
+      "lon": 13.3829117,
+      "osm_type": "way",
+      "osm_id": 1105815307
+    },
+    "cyclist_lateral_position": {
+      "value": "both",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

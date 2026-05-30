@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 145014413,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 192497993,
+    "lat": "52.5086897",
+    "lon": "13.5602514",
+    "category": "highway",
+    "type": "primary",
+    "place_rank": 26,
+    "importance": 0.205345191009919,
+    "addresstype": "road",
+    "name": "Alt-Biesdorf",
+    "display_name": "Alt-Biesdorf, Südlicher Dorfanger, Habichtshorst, Biesdorf, Marzahn-Hellersdorf, Berlin, 12683, Deutschland",
+    "boundingbox": [
+      "52.5086165",
+      "52.5086923",
+      "13.5593541",
+      "13.5611443"
+    ]
+  }
+]

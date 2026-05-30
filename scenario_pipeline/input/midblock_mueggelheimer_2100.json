@@ -1,0 +1,73 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "midblock_mueggelheimer_2100",
+    "date": "2024-06-27",
+    "time": "21:00",
+    "raw_text": "Eine Pkw fahrende Person befuhr den Müggelheimer Damm mit deutlich überhöhter Geschwindigkeit Richtung Südosten nach Müggelheim und kollidierte an der Kreuzung Waldnesselweg/Erwin-Bock Str. mit einer unachtsam die Fahrbahn querenden Gruppe von Radfahrenden. Datum: Do, 27.06.2024 Uhrzeit: 21:00 Uhr"
+  },
+  "classification": {
+    "scenario_type": "straight_crossing_conflict",
+    "confidence": 0.8
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Müggelheimer Damm",
+    "secondary_road": "Waldnesselweg/Erwin-Bock Str.",
+    "osm_query": "Müggelheimer Damm / Waldnesselweg, Berlin, Germany",
+    "osm_roads": [
+      "Müggelheimer Damm",
+      "Waldnesselweg",
+      "Erwin-Bock Str."
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "südosten"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "unknown",
+    "bike_facility_type": "unknown",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": "southeast",
+      "traffic_rule_status": "priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "must_yield"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "straight_crossing_collision",
+    "collision_happened": true,
+    "collision_description": "A car collided with a group of cyclists crossing the road.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line"
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {}
+    }
+  },
+  "missing_parameters": []
+}

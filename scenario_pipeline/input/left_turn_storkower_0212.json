@@ -1,0 +1,71 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "left_turn_storkower_0212",
+    "date": "2024-05-31",
+    "time": "02:12",
+    "raw_text": "Eine Rad fahrende Person befuhr die Storkower Straße in Richtung Osten und übersah beim Linksabbiegen einen in gleicher Richtung fahrenden Pkw. Es kam zum Zusammenstoß. Datum: Fr, 31.05.2024 Uhrzeit: 02:12 Uhr"
+  },
+  "classification": {
+    "scenario_type": "left_turn_conflict",
+    "confidence": 0.9
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Storkower Straße",
+    "secondary_road": null,
+    "osm_query": "Storkower Straße, Berlin, Germany",
+    "osm_roads": [
+      "Storkower Straße"
+    ],
+    "house_number_reference": null,
+    "location_type": "unknown",
+    "direction_references": [
+      "Osten"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "unknown",
+    "bike_facility_type": "unknown",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": "east",
+      "traffic_rule_status": "priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "turn_left",
+      "initial_direction": "east",
+      "traffic_rule_status": "must_yield"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "left_turn_across_cyclist_path",
+    "collision_happened": true,
+    "collision_description": "A car collided with a cyclist when the cyclist turned left and the car was going straight in the same direction.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line"
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {}
+    }
+  },
+  "missing_parameters": []
+}

@@ -1,0 +1,1101 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-15T19:43:14Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 26568703,
+      "lat": 52.4201846,
+      "lon": 13.3592194,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 270539525,
+      "lat": 52.4201987,
+      "lon": 13.3588241,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11379298336,
+      "lat": 52.4199914,
+      "lon": 13.3591157,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30198982,
+      "center": {
+        "lat": 52.4182014,
+        "lon": 13.3614044
+      },
+      "tags": {
+        "highway": "footway",
+        "postal_code": "12277"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30198989,
+      "center": {
+        "lat": 52.4185772,
+        "lon": 13.3600838
+      },
+      "tags": {
+        "highway": "service",
+        "service": "parking_aisle",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30222558,
+      "center": {
+        "lat": 52.4188103,
+        "lon": 13.3610202
+      },
+      "tags": {
+        "access": "private",
+        "highway": "service",
+        "postal_code": "12277",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30284529,
+      "center": {
+        "lat": 52.4194732,
+        "lon": 13.3595308
+      },
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30284530,
+      "center": {
+        "lat": 52.4198876,
+        "lon": 13.3596761
+      },
+      "tags": {
+        "access": "customers",
+        "highway": "service",
+        "lit": "yes",
+        "service": "parking_aisle",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30701991,
+      "center": {
+        "lat": 52.4198167,
+        "lon": 13.3591363
+      },
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Malteserstraße",
+        "name:etymology:wikidata": "Q190353",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12277",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30701992,
+      "center": {
+        "lat": 52.4198322,
+        "lon": 13.3591907
+      },
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Malteserstraße",
+        "name:etymology:wikidata": "Q190353",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12277",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30719507,
+      "center": {
+        "lat": 52.420098,
+        "lon": 13.358975
+      },
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Friedrichrodaer Straße",
+        "name:etymology:wikidata": "Q520025",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "12249",
+        "sidewalk:both": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30953815,
+      "center": {
+        "lat": 52.4202594,
+        "lon": 13.3575728
+      },
+      "tags": {
+        "access": "yes",
+        "highway": "footway",
+        "lit": "no",
+        "surface": "paved",
+        "width": "2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30953816,
+      "center": {
+        "lat": 52.4203855,
+        "lon": 13.358101
+      },
+      "tags": {
+        "highway": "footway",
+        "lit": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 42822803,
+      "center": {
+        "lat": 52.4200145,
+        "lon": 13.3591028
+      },
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Malteserstraße",
+        "name:etymology:wikidata": "Q190353",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12249",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 76608774,
+      "center": {
+        "lat": 52.4197,
+        "lon": 13.3596053
+      },
+      "tags": {
+        "access": "customers",
+        "highway": "service",
+        "lit": "yes",
+        "service": "parking_aisle",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 115727313,
+      "center": {
+        "lat": 52.4203736,
+        "lon": 13.358772
+      },
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Malteserstraße",
+        "name:etymology:wikidata": "Q190353",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12249",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 218895747,
+      "center": {
+        "lat": 52.4199407,
+        "lon": 13.3575802
+      },
+      "tags": {
+        "highway": "footway",
+        "lit": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 218895748,
+      "center": {
+        "lat": 52.4200139,
+        "lon": 13.3577267
+      },
+      "tags": {
+        "highway": "footway",
+        "lit": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 218895749,
+      "center": {
+        "lat": 52.4199183,
+        "lon": 13.3575659
+      },
+      "tags": {
+        "highway": "footway",
+        "lit": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 218896160,
+      "center": {
+        "lat": 52.4198902,
+        "lon": 13.3583841
+      },
+      "tags": {
+        "highway": "footway",
+        "lit": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 218898345,
+      "center": {
+        "lat": 52.4195481,
+        "lon": 13.3569854
+      },
+      "tags": {
+        "highway": "footway",
+        "lit": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 701045476,
+      "center": {
+        "lat": 52.4181524,
+        "lon": 13.3576457
+      },
+      "tags": {
+        "highway": "service"
+      }
+    },
+    {
+      "type": "way",
+      "id": 701045477,
+      "center": {
+        "lat": 52.4182312,
+        "lon": 13.357426
+      },
+      "tags": {
+        "highway": "service"
+      }
+    },
+    {
+      "type": "way",
+      "id": 701079926,
+      "center": {
+        "lat": 52.419049,
+        "lon": 13.3586145
+      },
+      "tags": {
+        "highway": "service"
+      }
+    },
+    {
+      "type": "way",
+      "id": 754176302,
+      "center": {
+        "lat": 52.4185207,
+        "lon": 13.3598189
+      },
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 754176303,
+      "center": {
+        "lat": 52.4184575,
+        "lon": 13.3592764
+      },
+      "tags": {
+        "highway": "service",
+        "service": "parking_aisle"
+      }
+    },
+    {
+      "type": "way",
+      "id": 754176304,
+      "center": {
+        "lat": 52.4186225,
+        "lon": 13.3597534
+      },
+      "tags": {
+        "highway": "service",
+        "maxspeed": "10",
+        "oneway": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 754176305,
+      "center": {
+        "lat": 52.4186271,
+        "lon": 13.3582955
+      },
+      "tags": {
+        "highway": "service"
+      }
+    },
+    {
+      "type": "way",
+      "id": 754176306,
+      "center": {
+        "lat": 52.4184286,
+        "lon": 13.3587634
+      },
+      "tags": {
+        "highway": "service"
+      }
+    },
+    {
+      "type": "way",
+      "id": 964171705,
+      "center": {
+        "lat": 52.4175587,
+        "lon": 13.360681
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Malteserstraße",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1000107684,
+      "center": {
+        "lat": 52.4198868,
+        "lon": 13.3590186
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Malteserstraße",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1093098839,
+      "center": {
+        "lat": 52.4176322,
+        "lon": 13.3591932
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1093767401,
+      "center": {
+        "lat": 52.4178352,
+        "lon": 13.3597883
+      },
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Symeonstraße",
+        "name:etymology:wikidata": "Q50143220",
+        "name:etymology:wikipedia": "de:Symeon (Berlin)",
+        "parking:left": "lane",
+        "parking:left:orientation": "parallel",
+        "parking:left:restriction:conditional": "no_stopping @ (Mo-Fr 08:00-17:00)",
+        "parking:right": "no",
+        "parking:right:restriction": "no_parking",
+        "sidewalk": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1155405812,
+      "center": {
+        "lat": 52.4206538,
+        "lon": 13.3583741
+      },
+      "tags": {
+        "highway": "footway",
+        "lit": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1227126767,
+      "center": {
+        "lat": 52.4201972,
+        "lon": 13.3589993
+      },
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1227126768,
+      "center": {
+        "lat": 52.4200289,
+        "lon": 13.3591013
+      },
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1227126769,
+      "center": {
+        "lat": 52.4201476,
+        "lon": 13.3591349
+      },
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Malteserstraße",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1227126770,
+      "center": {
+        "lat": 52.4197901,
+        "lon": 13.3593526
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Malteserstraße",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1227126771,
+      "center": {
+        "lat": 52.4218286,
+        "lon": 13.3582998
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Malteserstraße",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1227126772,
+      "center": {
+        "lat": 52.4203894,
+        "lon": 13.3599008
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1227126773,
+      "center": {
+        "lat": 52.420165,
+        "lon": 13.3591662
+      },
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Friedrichrodaer Straße",
+        "name:etymology:wikidata": "Q520025",
+        "parking:left": "lane",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12249",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1[30]",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1227126774,
+      "center": {
+        "lat": 52.4202283,
+        "lon": 13.3593156
+      },
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Friedrichrodaer Straße",
+        "name:etymology:wikidata": "Q520025",
+        "parking:left": "lane",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12249",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1[30]",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1227126776,
+      "center": {
+        "lat": 52.4193279,
+        "lon": 13.3597613
+      },
+      "tags": {
+        "access": "customers",
+        "highway": "service",
+        "lit": "yes",
+        "service": "parking_aisle",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1227126777,
+      "center": {
+        "lat": 52.4194502,
+        "lon": 13.3601509
+      },
+      "tags": {
+        "access": "delivery",
+        "highway": "service",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1254282115,
+      "center": {
+        "lat": 52.4190409,
+        "lon": 13.3601526
+      },
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1254282195,
+      "center": {
+        "lat": 52.4190856,
+        "lon": 13.3606447
+      },
+      "tags": {
+        "highway": "footway",
+        "surface": "dirt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1281910970,
+      "center": {
+        "lat": 52.4195819,
+        "lon": 13.3612002
+      },
+      "tags": {
+        "highway": "service",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1281921967,
+      "center": {
+        "lat": 52.4205182,
+        "lon": 13.3598256
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1305044060,
+      "center": {
+        "lat": 52.4201428,
+        "lon": 13.3587623
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1305044061,
+      "center": {
+        "lat": 52.4201591,
+        "lon": 13.3588334
+      },
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1305044062,
+      "center": {
+        "lat": 52.4201788,
+        "lon": 13.3589195
+      },
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1305044063,
+      "center": {
+        "lat": 52.4202142,
+        "lon": 13.3590736
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1305044064,
+      "center": {
+        "lat": 52.4199893,
+        "lon": 13.3589542
+      },
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1305044065,
+      "center": {
+        "lat": 52.4200112,
+        "lon": 13.3590302
+      },
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1305044066,
+      "center": {
+        "lat": 52.4200466,
+        "lon": 13.3591741
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1305047681,
+      "center": {
+        "lat": 52.4179305,
+        "lon": 13.3601854
+      },
+      "tags": {
+        "crossing": "unmarked",
+        "crossing:markings": "no",
+        "footway": "crossing",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Malteserstraße",
+        "lit": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1305597765,
+      "center": {
+        "lat": 52.4199696,
+        "lon": 13.3588869
+      },
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1395672619,
+      "center": {
+        "lat": 52.4203353,
+        "lon": 13.3589196
+      },
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Malteserstraße",
+        "name:etymology:wikidata": "Q190353",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12249",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1395684102,
+      "center": {
+        "lat": 52.4203924,
+        "lon": 13.3596782
+      },
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Friedrichrodaer Straße",
+        "name:etymology:wikidata": "Q520025",
+        "parking:both": "lane",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12249",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1[30]",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1418295556,
+      "center": {
+        "lat": 52.4197133,
+        "lon": 13.3592453
+      },
+      "tags": {
+        "cycleway": "track",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Malteserstraße",
+        "name:etymology:wikidata": "Q190353",
+        "parking:left": "no",
+        "parking:left:restriction": "no_stopping",
+        "parking:right": "lane",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12277",
+        "sidewalk:both": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1418295557,
+      "center": {
+        "lat": 52.4198642,
+        "lon": 13.3589945
+      },
+      "tags": {
+        "highway": "service",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1418295558,
+      "center": {
+        "lat": 52.4192064,
+        "lon": 13.3595395
+      },
+      "tags": {
+        "cycleway": "track",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Malteserstraße",
+        "name:etymology:wikidata": "Q190353",
+        "parking:both": "lane",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12277",
+        "sidewalk:both": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1418295560,
+      "center": {
+        "lat": 52.4196559,
+        "lon": 13.3591924
+      },
+      "tags": {
+        "highway": "service",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1418347766,
+      "center": {
+        "lat": 52.4187388,
+        "lon": 13.3598844
+      },
+      "tags": {
+        "highway": "service",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1418347767,
+      "center": {
+        "lat": 52.4181925,
+        "lon": 13.360157
+      },
+      "tags": {
+        "cycleway": "track",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Malteserstraße",
+        "name:etymology:wikidata": "Q190353",
+        "parking:both": "lane",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12277",
+        "sidewalk:both": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1418347780,
+      "center": {
+        "lat": 52.4185811,
+        "lon": 13.3599021
+      },
+      "tags": {
+        "cycleway": "track",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Malteserstraße",
+        "name:etymology:wikidata": "Q190353",
+        "parking:both": "lane",
+        "parking:both:orientation": "parallel",
+        "parking:left:restriction:conditional": "no_stopping @ (Mo-Sa 07:00-20:00; So 07:00-16:00)",
+        "postal_code": "12277",
+        "sidewalk:both": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1418347783,
+      "center": {
+        "lat": 52.4178485,
+        "lon": 13.3596853
+      },
+      "tags": {
+        "highway": "service",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1418347784,
+      "center": {
+        "lat": 52.4177799,
+        "lon": 13.3593861
+      },
+      "tags": {
+        "highway": "service",
+        "service": "driveway"
+      }
+    }
+  ]
+}

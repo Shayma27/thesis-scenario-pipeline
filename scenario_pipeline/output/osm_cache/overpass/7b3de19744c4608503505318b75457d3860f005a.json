@@ -1,0 +1,4202 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-28T12:54:28Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 30784220,
+      "lat": 52.5459133,
+      "lon": 13.194162,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 482728387,
+      "lat": 52.5456845,
+      "lon": 13.193854,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2879834361,
+      "lat": 52.5456465,
+      "lon": 13.1943746,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5963916748,
+      "lat": 52.5456996,
+      "lon": 13.1945427,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4797967,
+      "bounds": {
+        "minlat": 52.5446366,
+        "minlon": 13.1950601,
+        "maxlat": 52.5451392,
+        "maxlon": 13.1957989
+      },
+      "geometry": [
+        {
+          "lat": 52.5446366,
+          "lon": 13.1957989
+        },
+        {
+          "lat": 52.5446803,
+          "lon": 13.1957276
+        },
+        {
+          "lat": 52.5448673,
+          "lon": 13.1954396
+        },
+        {
+          "lat": 52.5449813,
+          "lon": 13.1952725
+        },
+        {
+          "lat": 52.5450663,
+          "lon": 13.19515
+        },
+        {
+          "lat": 52.5451392,
+          "lon": 13.1950601
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Falkensee;Ev.-Wald-Krankenhaus",
+        "destination:colour": "none;white",
+        "destination:symbol": "none;hospital",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed:conditional": "30 @ (Mo-Fr 06:00-18:00)",
+        "maxspeed:type": "DE:urban",
+        "name": "Falkenseer Damm",
+        "name:etymology:wikidata": "Q14842",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "13585",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4797969,
+      "bounds": {
+        "minlat": 52.5429587,
+        "minlon": 13.1952264,
+        "maxlat": 52.5448243,
+        "maxlon": 13.1982171
+      },
+      "geometry": [
+        {
+          "lat": 52.5448243,
+          "lon": 13.1952264
+        },
+        {
+          "lat": 52.5439237,
+          "lon": 13.196677
+        },
+        {
+          "lat": 52.543631,
+          "lon": 13.1971437
+        },
+        {
+          "lat": 52.543389,
+          "lon": 13.197529
+        },
+        {
+          "lat": 52.5431496,
+          "lon": 13.1979117
+        },
+        {
+          "lat": 52.5431157,
+          "lon": 13.1979659
+        },
+        {
+          "lat": 52.5429587,
+          "lon": 13.1982171
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Falkenseer Damm",
+        "name:etymology:wikidata": "Q14842",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction": "yes",
+        "postal_code": "13585",
+        "psv:lanes:conditional": "yes|yes|designated@(Mo-Sa 06:00-20:00)",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4978508,
+      "bounds": {
+        "minlat": 52.5463902,
+        "minlon": 13.194014,
+        "maxlat": 52.5466471,
+        "maxlon": 13.1940674
+      },
+      "geometry": [
+        {
+          "lat": 52.5466471,
+          "lon": 13.1940207
+        },
+        {
+          "lat": 52.5465676,
+          "lon": 13.194014
+        },
+        {
+          "lat": 52.5464176,
+          "lon": 13.1940587
+        },
+        {
+          "lat": 52.5463902,
+          "lon": 13.1940674
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Askanierring",
+        "name:etymology:wikidata": "Q168352",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13585",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4978509,
+      "bounds": {
+        "minlat": 52.5459331,
+        "minlon": 13.1940207,
+        "maxlat": 52.5466471,
+        "maxlon": 13.1943898
+      },
+      "geometry": [
+        {
+          "lat": 52.5459331,
+          "lon": 13.1943898
+        },
+        {
+          "lat": 52.5459487,
+          "lon": 13.1943835
+        },
+        {
+          "lat": 52.5460034,
+          "lon": 13.1943603
+        },
+        {
+          "lat": 52.5462887,
+          "lon": 13.1942505
+        },
+        {
+          "lat": 52.5463902,
+          "lon": 13.1942125
+        },
+        {
+          "lat": 52.5464392,
+          "lon": 13.1941851
+        },
+        {
+          "lat": 52.5465779,
+          "lon": 13.1940821
+        },
+        {
+          "lat": 52.5466471,
+          "lon": 13.1940207
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Askanierring",
+        "name:etymology:wikidata": "Q168352",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "13585",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 5000791,
+      "bounds": {
+        "minlat": 52.5457746,
+        "minlon": 13.1938232,
+        "maxlat": 52.5458706,
+        "maxlon": 13.1941191
+      },
+      "geometry": [
+        {
+          "lat": 52.5457746,
+          "lon": 13.1941191
+        },
+        {
+          "lat": 52.5458339,
+          "lon": 13.1939449
+        },
+        {
+          "lat": 52.5458432,
+          "lon": 13.1939166
+        },
+        {
+          "lat": 52.5458706,
+          "lon": 13.1938232
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Falkenseer Chaussee",
+        "name:etymology:wikidata": "Q14842",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13583",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 5216394,
+      "bounds": {
+        "minlat": 52.5461178,
+        "minlon": 13.195963,
+        "maxlat": 52.549353,
+        "maxlon": 13.1987856
+      },
+      "geometry": [
+        {
+          "lat": 52.549353,
+          "lon": 13.1987856
+        },
+        {
+          "lat": 52.5492987,
+          "lon": 13.1987621
+        },
+        {
+          "lat": 52.5488523,
+          "lon": 13.1985684
+        },
+        {
+          "lat": 52.5485229,
+          "lon": 13.198424
+        },
+        {
+          "lat": 52.548461,
+          "lon": 13.1983969
+        },
+        {
+          "lat": 52.5484049,
+          "lon": 13.1983716
+        },
+        {
+          "lat": 52.5472371,
+          "lon": 13.1978436
+        },
+        {
+          "lat": 52.5472235,
+          "lon": 13.1978395
+        },
+        {
+          "lat": 52.5471309,
+          "lon": 13.1978113
+        },
+        {
+          "lat": 52.5470368,
+          "lon": 13.1977842
+        },
+        {
+          "lat": 52.5469612,
+          "lon": 13.1977095
+        },
+        {
+          "lat": 52.5467916,
+          "lon": 13.1974084
+        },
+        {
+          "lat": 52.5461802,
+          "lon": 13.196293
+        },
+        {
+          "lat": 52.5461539,
+          "lon": 13.1962166
+        },
+        {
+          "lat": 52.5461405,
+          "lon": 13.1961546
+        },
+        {
+          "lat": 52.5461339,
+          "lon": 13.1960381
+        },
+        {
+          "lat": 52.5461178,
+          "lon": 13.195963
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Ackerstraße",
+        "name:etymology:wikidata": "Q188869",
+        "name:etymology:wikipedia": "de:Acker",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "13585",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "sett",
+        "source:maxspeed": "DE:zone:30",
+        "source:width": "ARCore",
+        "surface": "sett",
+        "traffic_sign": "DE:274.1[30]",
+        "width": "8.2",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 6074349,
+      "bounds": {
+        "minlat": 52.5446029,
+        "minlon": 13.1948885,
+        "maxlat": 52.5449617,
+        "maxlon": 13.1950051
+      },
+      "geometry": [
+        {
+          "lat": 52.5449617,
+          "lon": 13.1950051
+        },
+        {
+          "lat": 52.544903,
+          "lon": 13.1949507
+        },
+        {
+          "lat": 52.5448687,
+          "lon": 13.1949228
+        },
+        {
+          "lat": 52.544786,
+          "lon": 13.1948897
+        },
+        {
+          "lat": 52.5446841,
+          "lon": 13.1948885
+        },
+        {
+          "lat": 52.5446029,
+          "lon": 13.1949269
+        }
+      ],
+      "tags": {
+        "cycleway:right": "track",
+        "highway": "residential",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lanes:backward": "2",
+        "lanes:forward": "1",
+        "lit": "yes",
+        "name": "Askanierring",
+        "name:etymology:wikidata": "Q168352",
+        "parking:both": "no",
+        "postal_code": "13585",
+        "sidewalk:both": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 26781939,
+      "bounds": {
+        "minlat": 52.5459737,
+        "minlon": 13.1951466,
+        "maxlat": 52.5479145,
+        "maxlon": 13.1959423
+      },
+      "geometry": [
+        {
+          "lat": 52.5459737,
+          "lon": 13.1952418
+        },
+        {
+          "lat": 52.5459908,
+          "lon": 13.1952131
+        },
+        {
+          "lat": 52.5460328,
+          "lon": 13.195176
+        },
+        {
+          "lat": 52.5460881,
+          "lon": 13.1951584
+        },
+        {
+          "lat": 52.5471358,
+          "lon": 13.1951466
+        },
+        {
+          "lat": 52.5472318,
+          "lon": 13.1951855
+        },
+        {
+          "lat": 52.5478469,
+          "lon": 13.1958674
+        },
+        {
+          "lat": 52.5479145,
+          "lon": 13.1959423
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Frobenstraße",
+        "name:etymology:wikidata": "Q1334656",
+        "parking:both": "lane",
+        "parking:both:orientation": "parallel",
+        "postal_code": "13585",
+        "ref:DE-BE:STR": "01418",
+        "sidewalk:both": "separate",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1[30]",
+        "wikidata": "Q111258405",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 26802043,
+      "bounds": {
+        "minlat": 52.5457593,
+        "minlon": 13.1944463,
+        "maxlat": 52.5457813,
+        "maxlon": 13.1945361
+      },
+      "geometry": [
+        {
+          "lat": 52.5457813,
+          "lon": 13.1945361
+        },
+        {
+          "lat": 52.5457711,
+          "lon": 13.1944945
+        },
+        {
+          "lat": 52.5457593,
+          "lon": 13.1944463
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Damm",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 33066937,
+      "bounds": {
+        "minlat": 52.5455901,
+        "minlon": 13.1933069,
+        "maxlat": 52.5458407,
+        "maxlon": 13.1940746
+      },
+      "geometry": [
+        {
+          "lat": 52.5458407,
+          "lon": 13.1933069
+        },
+        {
+          "lat": 52.5457964,
+          "lon": 13.1934981
+        },
+        {
+          "lat": 52.5457597,
+          "lon": 13.1936259
+        },
+        {
+          "lat": 52.5457554,
+          "lon": 13.1936406
+        },
+        {
+          "lat": 52.5457343,
+          "lon": 13.1937076
+        },
+        {
+          "lat": 52.5457154,
+          "lon": 13.1937652
+        },
+        {
+          "lat": 52.5456845,
+          "lon": 13.193854
+        },
+        {
+          "lat": 52.5456641,
+          "lon": 13.1939082
+        },
+        {
+          "lat": 52.5455901,
+          "lon": 13.1940746
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Falkenseer Chaussee",
+        "name:etymology:wikidata": "Q14842",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13583",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 66861338,
+      "bounds": {
+        "minlat": 52.5457842,
+        "minlon": 13.1943533,
+        "maxlat": 52.5459331,
+        "maxlon": 13.1943898
+      },
+      "geometry": [
+        {
+          "lat": 52.5457842,
+          "lon": 13.1943533
+        },
+        {
+          "lat": 52.5458093,
+          "lon": 13.1943623
+        },
+        {
+          "lat": 52.5458508,
+          "lon": 13.194376
+        },
+        {
+          "lat": 52.5459331,
+          "lon": 13.1943898
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Askanierring",
+        "name:etymology:wikidata": "Q168352",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13583",
+        "sidewalk": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 66861339,
+      "bounds": {
+        "minlat": 52.5455901,
+        "minlon": 13.1940746,
+        "maxlat": 52.545701,
+        "maxlon": 13.1942806
+      },
+      "geometry": [
+        {
+          "lat": 52.5455901,
+          "lon": 13.1940746
+        },
+        {
+          "lat": 52.545701,
+          "lon": 13.1942806
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary_link",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13583",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 66861340,
+      "bounds": {
+        "minlat": 52.5455901,
+        "minlon": 13.1940746,
+        "maxlat": 52.5457746,
+        "maxlon": 13.1941191
+      },
+      "geometry": [
+        {
+          "lat": 52.5457746,
+          "lon": 13.1941191
+        },
+        {
+          "lat": 52.5455901,
+          "lon": 13.1940746
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:buffer:both": "no",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:marking:both": "dashed_line",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:surface:colour": "none",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "1.6",
+        "foot": "use_sidepath",
+        "highway": "secondary_link",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:cycleway:right:width": "infra3D",
+        "surface": "asphalt",
+        "turn:lanes": "left|left"
+      }
+    },
+    {
+      "type": "way",
+      "id": 284232568,
+      "bounds": {
+        "minlat": 52.5457343,
+        "minlon": 13.1937076,
+        "maxlat": 52.5458706,
+        "maxlon": 13.1938232
+      },
+      "geometry": [
+        {
+          "lat": 52.5457343,
+          "lon": 13.1937076
+        },
+        {
+          "lat": 52.5458706,
+          "lon": 13.1938232
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "secondary_link",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 330951950,
+      "bounds": {
+        "minlat": 52.546145,
+        "minlon": 13.1940674,
+        "maxlat": 52.5463902,
+        "maxlon": 13.1941452
+      },
+      "geometry": [
+        {
+          "lat": 52.5463902,
+          "lon": 13.1940674
+        },
+        {
+          "lat": 52.546145,
+          "lon": 13.1941452
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Askanierring",
+        "name:etymology:wikidata": "Q168352",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13585",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 330951951,
+      "bounds": {
+        "minlat": 52.5458996,
+        "minlon": 13.1941452,
+        "maxlat": 52.546145,
+        "maxlon": 13.1941748
+      },
+      "geometry": [
+        {
+          "lat": 52.546145,
+          "lon": 13.1941452
+        },
+        {
+          "lat": 52.5460675,
+          "lon": 13.1941693
+        },
+        {
+          "lat": 52.5459768,
+          "lon": 13.1941748
+        },
+        {
+          "lat": 52.5459133,
+          "lon": 13.194162
+        },
+        {
+          "lat": 52.5458996,
+          "lon": 13.1941593
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Askanierring",
+        "name:etymology:wikidata": "Q168352",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk": "separate",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 396277153,
+      "bounds": {
+        "minlat": 52.5456898,
+        "minlon": 13.1935035,
+        "maxlat": 52.5457386,
+        "maxlon": 13.1936704
+      },
+      "geometry": [
+        {
+          "lat": 52.5456898,
+          "lon": 13.1936704
+        },
+        {
+          "lat": 52.545716,
+          "lon": 13.1935887
+        },
+        {
+          "lat": 52.5457386,
+          "lon": 13.1935035
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2021-05-27",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Askanierring",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 396277154,
+      "bounds": {
+        "minlat": 52.5459348,
+        "minlon": 13.1935884,
+        "maxlat": 52.5459871,
+        "maxlon": 13.1937991
+      },
+      "geometry": [
+        {
+          "lat": 52.5459348,
+          "lon": 13.1937991
+        },
+        {
+          "lat": 52.5459871,
+          "lon": 13.1935884
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:shelter": "2023-07-29",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Askanierring",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 490349093,
+      "bounds": {
+        "minlat": 52.5459236,
+        "minlon": 13.1962166,
+        "maxlat": 52.5461539,
+        "maxlon": 13.1968363
+      },
+      "geometry": [
+        {
+          "lat": 52.5459236,
+          "lon": 13.1968363
+        },
+        {
+          "lat": 52.5461092,
+          "lon": 13.1962579
+        },
+        {
+          "lat": 52.5461539,
+          "lon": 13.1962166
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Blumenstraße",
+        "name:etymology:wikidata": "Q886167",
+        "name:etymology:wikipedia": "de:Blumen",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "13585",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "sett",
+        "source:maxspeed": "DE:zone:30",
+        "surface": "sett",
+        "traffic_sign": "DE:274.1[30]",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 490368932,
+      "bounds": {
+        "minlat": 52.545985,
+        "minlon": 13.1955038,
+        "maxlat": 52.5461178,
+        "maxlon": 13.195963
+      },
+      "geometry": [
+        {
+          "lat": 52.5461178,
+          "lon": 13.195963
+        },
+        {
+          "lat": 52.5461015,
+          "lon": 13.1958872
+        },
+        {
+          "lat": 52.545985,
+          "lon": 13.1955038
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Ackerstraße",
+        "name:etymology:wikidata": "Q188869",
+        "name:etymology:wikipedia": "de:Acker",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "street_side",
+        "parking:right:orientation": "perpendicular",
+        "postal_code": "13585",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "sett",
+        "source:maxspeed": "DE:zone:30",
+        "surface": "sett",
+        "traffic_sign": "DE:274.1[30]",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 490368933,
+      "bounds": {
+        "minlat": 52.5459594,
+        "minlon": 13.1952418,
+        "maxlat": 52.545985,
+        "maxlon": 13.1955038
+      },
+      "geometry": [
+        {
+          "lat": 52.545985,
+          "lon": 13.1955038
+        },
+        {
+          "lat": 52.5459736,
+          "lon": 13.1954508
+        },
+        {
+          "lat": 52.5459594,
+          "lon": 13.1953442
+        },
+        {
+          "lat": 52.5459644,
+          "lon": 13.1952876
+        },
+        {
+          "lat": 52.5459737,
+          "lon": 13.1952418
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Ackerstraße",
+        "name:etymology:wikidata": "Q188869",
+        "name:etymology:wikipedia": "de:Acker",
+        "parking:left": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "yes",
+        "parking:right:orientation": "parallel",
+        "postal_code": "13585",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "sett",
+        "source:maxspeed": "DE:zone:30",
+        "surface": "sett",
+        "traffic_sign": "DE:274.1[30]",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 596155537,
+      "bounds": {
+        "minlat": 52.5454836,
+        "minlon": 13.1941191,
+        "maxlat": 52.5457746,
+        "maxlon": 13.1946587
+      },
+      "geometry": [
+        {
+          "lat": 52.5454836,
+          "lon": 13.1946587
+        },
+        {
+          "lat": 52.5455926,
+          "lon": 13.1944683
+        },
+        {
+          "lat": 52.5456465,
+          "lon": 13.1943746
+        },
+        {
+          "lat": 52.545701,
+          "lon": 13.1942806
+        },
+        {
+          "lat": 52.5457746,
+          "lon": 13.1941191
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Falkenseer Chaussee",
+        "name:etymology:wikidata": "Q14842",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13583",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 783931489,
+      "bounds": {
+        "minlat": 52.5449617,
+        "minlon": 13.1950051,
+        "maxlat": 52.5450663,
+        "maxlon": 13.19515
+      },
+      "geometry": [
+        {
+          "lat": 52.5450663,
+          "lon": 13.19515
+        },
+        {
+          "lat": 52.5450154,
+          "lon": 13.1950743
+        },
+        {
+          "lat": 52.5449617,
+          "lon": 13.1950051
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary_link",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed:type": "DE:urban",
+        "parking:both": "no",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 784873679,
+      "bounds": {
+        "minlat": 52.5458706,
+        "minlon": 13.1934663,
+        "maxlat": 52.5459537,
+        "maxlon": 13.1938232
+      },
+      "geometry": [
+        {
+          "lat": 52.5458706,
+          "lon": 13.1938232
+        },
+        {
+          "lat": 52.5458947,
+          "lon": 13.1937378
+        },
+        {
+          "lat": 52.5459141,
+          "lon": 13.1936608
+        },
+        {
+          "lat": 52.5459379,
+          "lon": 13.1935467
+        },
+        {
+          "lat": 52.5459537,
+          "lon": 13.1934663
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Falkenseer Chaussee",
+        "name:etymology:wikidata": "Q14842",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13583",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 784873680,
+      "bounds": {
+        "minlat": 52.5457842,
+        "minlon": 13.1943533,
+        "maxlat": 52.545892,
+        "maxlon": 13.1945148
+      },
+      "geometry": [
+        {
+          "lat": 52.5457842,
+          "lon": 13.1943533
+        },
+        {
+          "lat": 52.5458272,
+          "lon": 13.1944275
+        },
+        {
+          "lat": 52.5458402,
+          "lon": 13.1944498
+        },
+        {
+          "lat": 52.545867,
+          "lon": 13.1944845
+        },
+        {
+          "lat": 52.545892,
+          "lon": 13.1945148
+        }
+      ],
+      "tags": {
+        "cycleway": "crossing",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "tertiary",
+        "is_sidepath:of:name": "Askanierring",
+        "lit": "yes",
+        "marking:both": "dashed_line",
+        "oneway": "yes",
+        "source:width": "infra3D",
+        "surface": "asphalt",
+        "surface:colour": "none",
+        "traffic_mode:right": "foot",
+        "traffic_sign": "none",
+        "width": "1.4"
+      }
+    },
+    {
+      "type": "way",
+      "id": 784873681,
+      "bounds": {
+        "minlat": 52.5457854,
+        "minlon": 13.1939344,
+        "maxlat": 52.5459072,
+        "maxlon": 13.1939607
+      },
+      "geometry": [
+        {
+          "lat": 52.5457854,
+          "lon": 13.1939344
+        },
+        {
+          "lat": 52.5458339,
+          "lon": 13.1939449
+        },
+        {
+          "lat": 52.5458993,
+          "lon": 13.193959
+        },
+        {
+          "lat": 52.5459072,
+          "lon": 13.1939607
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 784873682,
+      "bounds": {
+        "minlat": 52.5457465,
+        "minlon": 13.1946193,
+        "maxlat": 52.5459737,
+        "maxlon": 13.1952418
+      },
+      "geometry": [
+        {
+          "lat": 52.5459737,
+          "lon": 13.1952418
+        },
+        {
+          "lat": 52.5459283,
+          "lon": 13.1951654
+        },
+        {
+          "lat": 52.5458767,
+          "lon": 13.1950784
+        },
+        {
+          "lat": 52.5457853,
+          "lon": 13.1947965
+        },
+        {
+          "lat": 52.5457465,
+          "lon": 13.1946193
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "highway": "footway",
+        "is_sidepath": "no",
+        "oneway:bicycle": "no",
+        "postal_code": "13585",
+        "source:traffic_sign:mapillary": "768673595726036",
+        "source:width": "infra3D",
+        "surface": "paving_stones",
+        "surface:colour": "none",
+        "traffic_sign": "DE:239,1022-10",
+        "width": "2.7"
+      }
+    },
+    {
+      "type": "way",
+      "id": 784873683,
+      "bounds": {
+        "minlat": 52.5458058,
+        "minlon": 13.1939311,
+        "maxlat": 52.5459088,
+        "maxlon": 13.1941974
+      },
+      "geometry": [
+        {
+          "lat": 52.5458058,
+          "lon": 13.1941974
+        },
+        {
+          "lat": 52.5458318,
+          "lon": 13.1941374
+        },
+        {
+          "lat": 52.545862,
+          "lon": 13.1940637
+        },
+        {
+          "lat": 52.5458892,
+          "lon": 13.1939877
+        },
+        {
+          "lat": 52.5458993,
+          "lon": 13.193959
+        },
+        {
+          "lat": 52.5459088,
+          "lon": 13.1939311
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "cycleway": "crossing",
+        "foot": "no",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Chaussee",
+        "lit": "yes",
+        "marking:both": "dashed_line",
+        "oneway": "yes",
+        "source:width": "infra3D",
+        "surface": "asphalt",
+        "surface:colour": "none",
+        "traffic_mode:right": "foot",
+        "traffic_sign": "none",
+        "width": "1.3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 965168575,
+      "bounds": {
+        "minlat": 52.5449464,
+        "minlon": 13.1952181,
+        "maxlat": 52.545016,
+        "maxlon": 13.1953266
+      },
+      "geometry": [
+        {
+          "lat": 52.5449464,
+          "lon": 13.1952181
+        },
+        {
+          "lat": 52.5449813,
+          "lon": 13.1952725
+        },
+        {
+          "lat": 52.545016,
+          "lon": 13.1953266
+        }
+      ],
+      "tags": {
+        "crossing": "unmarked",
+        "crossing:island": "no",
+        "crossing:markings": "no",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 970172850,
+      "bounds": {
+        "minlat": 52.5456626,
+        "minlon": 13.1944181,
+        "maxlat": 52.5458893,
+        "maxlon": 13.1945676
+      },
+      "geometry": [
+        {
+          "lat": 52.5456626,
+          "lon": 13.1945676
+        },
+        {
+          "lat": 52.5456996,
+          "lon": 13.1945427
+        },
+        {
+          "lat": 52.5457239,
+          "lon": 13.1945263
+        },
+        {
+          "lat": 52.5457711,
+          "lon": 13.1944945
+        },
+        {
+          "lat": 52.5458099,
+          "lon": 13.1944694
+        },
+        {
+          "lat": 52.5458402,
+          "lon": 13.1944498
+        },
+        {
+          "lat": 52.5458893,
+          "lon": 13.1944181
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Askanierring",
+        "name:etymology:wikidata": "Q168352",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13585",
+        "sidewalk": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 982221224,
+      "bounds": {
+        "minlat": 52.5430261,
+        "minlon": 13.1946193,
+        "maxlat": 52.5457465,
+        "maxlon": 13.1985935
+      },
+      "geometry": [
+        {
+          "lat": 52.5430261,
+          "lon": 13.1985935
+        },
+        {
+          "lat": 52.5430476,
+          "lon": 13.1985592
+        },
+        {
+          "lat": 52.5432978,
+          "lon": 13.1981619
+        },
+        {
+          "lat": 52.5436739,
+          "lon": 13.1975408
+        },
+        {
+          "lat": 52.5441085,
+          "lon": 13.1968408
+        },
+        {
+          "lat": 52.5443334,
+          "lon": 13.1964749
+        },
+        {
+          "lat": 52.5447356,
+          "lon": 13.1958217
+        },
+        {
+          "lat": 52.5448152,
+          "lon": 13.1956924
+        },
+        {
+          "lat": 52.5450367,
+          "lon": 13.1953589
+        },
+        {
+          "lat": 52.5450908,
+          "lon": 13.1952847
+        },
+        {
+          "lat": 52.5451184,
+          "lon": 13.1952499
+        },
+        {
+          "lat": 52.5452592,
+          "lon": 13.1950719
+        },
+        {
+          "lat": 52.5454631,
+          "lon": 13.1948417
+        },
+        {
+          "lat": 52.5456155,
+          "lon": 13.1947118
+        },
+        {
+          "lat": 52.5457249,
+          "lon": 13.1946346
+        },
+        {
+          "lat": 52.5457465,
+          "lon": 13.1946193
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:surface": "asphalt",
+        "cycleway:surface:colour": "none",
+        "cycleway:width": "1.7",
+        "footway": "sidewalk",
+        "footway:surface": "paving_stones",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Damm",
+        "lit": "yes",
+        "oneway:bicycle": "yes",
+        "segregated": "yes",
+        "sidewalk:surface": "paving_stones",
+        "source:cycleway:width": "ARCore",
+        "traffic_sign": "none"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1005124618,
+      "bounds": {
+        "minlat": 52.5457465,
+        "minlon": 13.1938329,
+        "maxlat": 52.5481007,
+        "maxlon": 13.1946193
+      },
+      "geometry": [
+        {
+          "lat": 52.5457465,
+          "lon": 13.1946193
+        },
+        {
+          "lat": 52.5457936,
+          "lon": 13.1945868
+        },
+        {
+          "lat": 52.5458375,
+          "lon": 13.1945573
+        },
+        {
+          "lat": 52.545892,
+          "lon": 13.1945148
+        },
+        {
+          "lat": 52.5459901,
+          "lon": 13.1944657
+        },
+        {
+          "lat": 52.5461009,
+          "lon": 13.1944208
+        },
+        {
+          "lat": 52.5464457,
+          "lon": 13.1942918
+        },
+        {
+          "lat": 52.546834,
+          "lon": 13.1941399
+        },
+        {
+          "lat": 52.547064,
+          "lon": 13.1940783
+        },
+        {
+          "lat": 52.5476948,
+          "lon": 13.1939287
+        },
+        {
+          "lat": 52.5481007,
+          "lon": 13.1938329
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:surface": "asphalt",
+        "cycleway:surface:colour": "none",
+        "cycleway:width": "1.6",
+        "footway": "sidewalk",
+        "footway:surface": "paving_stones",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "tertiary",
+        "is_sidepath:of:name": "Askanierring",
+        "lit": "yes",
+        "oneway:bicycle": "yes",
+        "segregated": "yes",
+        "sidewalk:surface": "paving_stones",
+        "source:cycleway:width": "ARCore",
+        "traffic_sign": "none"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1005124621,
+      "bounds": {
+        "minlat": 52.5448152,
+        "minlon": 13.1956924,
+        "maxlat": 52.5458103,
+        "maxlon": 13.1970183
+      },
+      "geometry": [
+        {
+          "lat": 52.5458103,
+          "lon": 13.1970183
+        },
+        {
+          "lat": 52.5457588,
+          "lon": 13.1969801
+        },
+        {
+          "lat": 52.5455703,
+          "lon": 13.1968666
+        },
+        {
+          "lat": 52.5454999,
+          "lon": 13.1967939
+        },
+        {
+          "lat": 52.5454906,
+          "lon": 13.1965201
+        },
+        {
+          "lat": 52.5452403,
+          "lon": 13.1964693
+        },
+        {
+          "lat": 52.5452011,
+          "lon": 13.1964357
+        },
+        {
+          "lat": 52.5448675,
+          "lon": 13.1957842
+        },
+        {
+          "lat": 52.5448152,
+          "lon": 13.1956924
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1005124622,
+      "bounds": {
+        "minlat": 52.5450663,
+        "minlon": 13.19515,
+        "maxlat": 52.5451184,
+        "maxlon": 13.1952499
+      },
+      "geometry": [
+        {
+          "lat": 52.5450663,
+          "lon": 13.19515
+        },
+        {
+          "lat": 52.5451184,
+          "lon": 13.1952499
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "highway": "cycleway",
+        "lit": "yes",
+        "surface": "asphalt",
+        "traffic_sign": "none",
+        "width": "5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1005124628,
+      "bounds": {
+        "minlat": 52.5459226,
+        "minlon": 13.1932684,
+        "maxlat": 52.5489281,
+        "maxlon": 13.1940252
+      },
+      "geometry": [
+        {
+          "lat": 52.5489281,
+          "lon": 13.1932684
+        },
+        {
+          "lat": 52.5488591,
+          "lon": 13.1933252
+        },
+        {
+          "lat": 52.5487629,
+          "lon": 13.1933629
+        },
+        {
+          "lat": 52.548737,
+          "lon": 13.1933686
+        },
+        {
+          "lat": 52.5481611,
+          "lon": 13.193495
+        },
+        {
+          "lat": 52.5469762,
+          "lon": 13.1937828
+        },
+        {
+          "lat": 52.5467654,
+          "lon": 13.1938344
+        },
+        {
+          "lat": 52.5460787,
+          "lon": 13.1939981
+        },
+        {
+          "lat": 52.5459653,
+          "lon": 13.1940252
+        },
+        {
+          "lat": 52.5459226,
+          "lon": 13.1940131
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "tertiary",
+        "is_sidepath:of:name": "Askanierring",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1051375211,
+      "bounds": {
+        "minlat": 52.5455318,
+        "minlon": 13.1918276,
+        "maxlat": 52.5460534,
+        "maxlon": 13.1940057
+      },
+      "geometry": [
+        {
+          "lat": 52.5460534,
+          "lon": 13.1918276
+        },
+        {
+          "lat": 52.5460178,
+          "lon": 13.1919662
+        },
+        {
+          "lat": 52.5457287,
+          "lon": 13.1934933
+        },
+        {
+          "lat": 52.5457111,
+          "lon": 13.193563
+        },
+        {
+          "lat": 52.5456774,
+          "lon": 13.193659
+        },
+        {
+          "lat": 52.5456442,
+          "lon": 13.1937523
+        },
+        {
+          "lat": 52.5455832,
+          "lon": 13.1938917
+        },
+        {
+          "lat": 52.5455318,
+          "lon": 13.1940057
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "foot": "no",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Chaussee",
+        "lit": "yes",
+        "oneway": "yes",
+        "separation:left": "tree_row;kerb",
+        "separation:right": "no",
+        "source:width": "infra3D",
+        "surface": "asphalt",
+        "surface:colour": "none",
+        "traffic_mode:right": "foot",
+        "traffic_sign": "none",
+        "width": "1.6"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1051375212,
+      "bounds": {
+        "minlat": 52.5447734,
+        "minlon": 13.1948014,
+        "maxlat": 52.5450122,
+        "maxlon": 13.1951281
+      },
+      "geometry": [
+        {
+          "lat": 52.5450122,
+          "lon": 13.1948014
+        },
+        {
+          "lat": 52.544903,
+          "lon": 13.1949507
+        },
+        {
+          "lat": 52.5447969,
+          "lon": 13.1950959
+        },
+        {
+          "lat": 52.5447734,
+          "lon": 13.1951281
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "cycleway": "crossing",
+        "foot": "no",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Damm",
+        "lit": "yes",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1051375213,
+      "bounds": {
+        "minlat": 52.5428532,
+        "minlon": 13.1951281,
+        "maxlat": 52.5447734,
+        "maxlon": 13.1982394
+      },
+      "geometry": [
+        {
+          "lat": 52.5447734,
+          "lon": 13.1951281
+        },
+        {
+          "lat": 52.5435868,
+          "lon": 13.1970559
+        },
+        {
+          "lat": 52.5433414,
+          "lon": 13.1974482
+        },
+        {
+          "lat": 52.543102,
+          "lon": 13.1978362
+        },
+        {
+          "lat": 52.5430704,
+          "lon": 13.1978875
+        },
+        {
+          "lat": 52.542876,
+          "lon": 13.1982026
+        },
+        {
+          "lat": 52.5428575,
+          "lon": 13.1982326
+        },
+        {
+          "lat": 52.5428532,
+          "lon": 13.1982394
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "foot": "no",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Damm",
+        "lit": "yes",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1051375219,
+      "bounds": {
+        "minlat": 52.5455127,
+        "minlon": 13.1917157,
+        "maxlat": 52.5460457,
+        "maxlon": 13.1940049
+      },
+      "geometry": [
+        {
+          "lat": 52.5460457,
+          "lon": 13.1917157
+        },
+        {
+          "lat": 52.5460256,
+          "lon": 13.1918059
+        },
+        {
+          "lat": 52.5459522,
+          "lon": 13.1921987
+        },
+        {
+          "lat": 52.5457152,
+          "lon": 13.1934789
+        },
+        {
+          "lat": 52.545703,
+          "lon": 13.1935348
+        },
+        {
+          "lat": 52.5456684,
+          "lon": 13.1936505
+        },
+        {
+          "lat": 52.5456559,
+          "lon": 13.1936823
+        },
+        {
+          "lat": 52.5455672,
+          "lon": 13.1938752
+        },
+        {
+          "lat": 52.5455127,
+          "lon": 13.1940049
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Chaussee",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1051375220,
+      "bounds": {
+        "minlat": 52.5448025,
+        "minlon": 13.1948158,
+        "maxlat": 52.5449579,
+        "maxlon": 13.1950177
+      },
+      "geometry": [
+        {
+          "lat": 52.5449579,
+          "lon": 13.1948158
+        },
+        {
+          "lat": 52.5448687,
+          "lon": 13.1949228
+        },
+        {
+          "lat": 52.5448025,
+          "lon": 13.1950177
+        }
+      ],
+      "tags": {
+        "crossing": "unmarked",
+        "crossing:island": "yes",
+        "crossing:markings": "no",
+        "crossing:surface": "asphalt",
+        "footway": "crossing",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Damm",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1051375228,
+      "bounds": {
+        "minlat": 52.5459088,
+        "minlon": 13.1917771,
+        "maxlat": 52.546339,
+        "maxlon": 13.1939311
+      },
+      "geometry": [
+        {
+          "lat": 52.5459088,
+          "lon": 13.1939311
+        },
+        {
+          "lat": 52.5459471,
+          "lon": 13.1938088
+        },
+        {
+          "lat": 52.5459779,
+          "lon": 13.1936997
+        },
+        {
+          "lat": 52.5460017,
+          "lon": 13.1935974
+        },
+        {
+          "lat": 52.5460166,
+          "lon": 13.1935247
+        },
+        {
+          "lat": 52.5462793,
+          "lon": 13.192124
+        },
+        {
+          "lat": 52.5463215,
+          "lon": 13.1919026
+        },
+        {
+          "lat": 52.546339,
+          "lon": 13.1917771
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "foot": "no",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Chaussee",
+        "lit": "yes",
+        "oneway": "yes",
+        "separation:left": "tree_row;kerb",
+        "separation:right": "no",
+        "source:width": "infra3D",
+        "surface": "asphalt",
+        "surface:colour": "red",
+        "traffic_mode:right": "foot",
+        "traffic_sign": "none",
+        "width": "1.6"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1051375235,
+      "bounds": {
+        "minlat": 52.5459107,
+        "minlon": 13.1916438,
+        "maxlat": 52.5463955,
+        "maxlon": 13.1940603
+      },
+      "geometry": [
+        {
+          "lat": 52.5459107,
+          "lon": 13.1940603
+        },
+        {
+          "lat": 52.5459226,
+          "lon": 13.1940131
+        },
+        {
+          "lat": 52.5459316,
+          "lon": 13.1939772
+        },
+        {
+          "lat": 52.5459674,
+          "lon": 13.1938243
+        },
+        {
+          "lat": 52.5459725,
+          "lon": 13.1938027
+        },
+        {
+          "lat": 52.5460184,
+          "lon": 13.1936076
+        },
+        {
+          "lat": 52.5460391,
+          "lon": 13.1935331
+        },
+        {
+          "lat": 52.5463066,
+          "lon": 13.1921393
+        },
+        {
+          "lat": 52.5463794,
+          "lon": 13.1917279
+        },
+        {
+          "lat": 52.5463955,
+          "lon": 13.1916438
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Chaussee",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1051375242,
+      "bounds": {
+        "minlat": 52.5450122,
+        "minlon": 13.1940057,
+        "maxlat": 52.5455318,
+        "maxlon": 13.1948014
+      },
+      "geometry": [
+        {
+          "lat": 52.5455318,
+          "lon": 13.1940057
+        },
+        {
+          "lat": 52.5454777,
+          "lon": 13.194115
+        },
+        {
+          "lat": 52.5454501,
+          "lon": 13.1942048
+        },
+        {
+          "lat": 52.5453696,
+          "lon": 13.1943383
+        },
+        {
+          "lat": 52.5450122,
+          "lon": 13.1948014
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "foot": "no",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Damm",
+        "lit": "yes",
+        "oneway": "yes",
+        "separation:left": "kerb",
+        "separation:right": "no",
+        "source:width": "infra3D",
+        "surface": "asphalt",
+        "surface:colour": "none",
+        "traffic_mode:right": "foot",
+        "traffic_sign": "none",
+        "width": "1.4"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1051375243,
+      "bounds": {
+        "minlat": 52.5449579,
+        "minlon": 13.1940049,
+        "maxlat": 52.5455127,
+        "maxlon": 13.1948158
+      },
+      "geometry": [
+        {
+          "lat": 52.5455127,
+          "lon": 13.1940049
+        },
+        {
+          "lat": 52.5454636,
+          "lon": 13.1941057
+        },
+        {
+          "lat": 52.5454379,
+          "lon": 13.1941644
+        },
+        {
+          "lat": 52.5453606,
+          "lon": 13.1943007
+        },
+        {
+          "lat": 52.5449749,
+          "lon": 13.1947947
+        },
+        {
+          "lat": 52.5449579,
+          "lon": 13.1948158
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Damm",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1051375250,
+      "bounds": {
+        "minlat": 52.5459871,
+        "minlon": 13.1935884,
+        "maxlat": 52.5460184,
+        "maxlon": 13.1936076
+      },
+      "geometry": [
+        {
+          "lat": 52.5459871,
+          "lon": 13.1935884
+        },
+        {
+          "lat": 52.5460017,
+          "lon": 13.1935974
+        },
+        {
+          "lat": 52.5460184,
+          "lon": 13.1936076
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1051375251,
+      "bounds": {
+        "minlat": 52.5459348,
+        "minlon": 13.1937991,
+        "maxlat": 52.5459674,
+        "maxlon": 13.1938243
+      },
+      "geometry": [
+        {
+          "lat": 52.5459348,
+          "lon": 13.1937991
+        },
+        {
+          "lat": 52.5459471,
+          "lon": 13.1938088
+        },
+        {
+          "lat": 52.5459674,
+          "lon": 13.1938243
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1051375253,
+      "bounds": {
+        "minlat": 52.5456684,
+        "minlon": 13.1936505,
+        "maxlat": 52.5456898,
+        "maxlon": 13.1936704
+      },
+      "geometry": [
+        {
+          "lat": 52.5456898,
+          "lon": 13.1936704
+        },
+        {
+          "lat": 52.5456774,
+          "lon": 13.193659
+        },
+        {
+          "lat": 52.5456684,
+          "lon": 13.1936505
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1051444928,
+      "bounds": {
+        "minlat": 52.542792,
+        "minlon": 13.1950177,
+        "maxlat": 52.5448025,
+        "maxlon": 13.1982589
+      },
+      "geometry": [
+        {
+          "lat": 52.5448025,
+          "lon": 13.1950177
+        },
+        {
+          "lat": 52.5447714,
+          "lon": 13.1950665
+        },
+        {
+          "lat": 52.5439145,
+          "lon": 13.1964505
+        },
+        {
+          "lat": 52.543567,
+          "lon": 13.1970138
+        },
+        {
+          "lat": 52.5435064,
+          "lon": 13.1971115
+        },
+        {
+          "lat": 52.5433204,
+          "lon": 13.1974125
+        },
+        {
+          "lat": 52.5430803,
+          "lon": 13.1978007
+        },
+        {
+          "lat": 52.5430496,
+          "lon": 13.1978504
+        },
+        {
+          "lat": 52.5428354,
+          "lon": 13.1981959
+        },
+        {
+          "lat": 52.5428083,
+          "lon": 13.198231
+        },
+        {
+          "lat": 52.542792,
+          "lon": 13.1982589
+        }
+      ],
+      "tags": {
+        "check_date:footway:surface": "2023-07-29",
+        "cycleway:surface": "asphalt",
+        "cycleway:width": "1.6",
+        "footway": "sidewalk",
+        "footway:surface": "paving_stones",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Damm",
+        "lit": "yes",
+        "segregated": "yes",
+        "source:cycleway:width": "ARCore",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1051444930,
+      "bounds": {
+        "minlat": 52.5446803,
+        "minlon": 13.1957276,
+        "maxlat": 52.5447891,
+        "maxlon": 13.1959108
+      },
+      "geometry": [
+        {
+          "lat": 52.5447891,
+          "lon": 13.1959108
+        },
+        {
+          "lat": 52.5447356,
+          "lon": 13.1958217
+        },
+        {
+          "lat": 52.544715,
+          "lon": 13.1957867
+        },
+        {
+          "lat": 52.5446803,
+          "lon": 13.1957276
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "driveway",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1106097329,
+      "bounds": {
+        "minlat": 52.543443,
+        "minlon": 13.1949269,
+        "maxlat": 52.5446029,
+        "maxlon": 13.1956378
+      },
+      "geometry": [
+        {
+          "lat": 52.5446029,
+          "lon": 13.1949269
+        },
+        {
+          "lat": 52.5438235,
+          "lon": 13.1954022
+        },
+        {
+          "lat": 52.5437816,
+          "lon": 13.1954242
+        },
+        {
+          "lat": 52.5435418,
+          "lon": 13.1955758
+        },
+        {
+          "lat": 52.543443,
+          "lon": 13.1956378
+        }
+      ],
+      "tags": {
+        "cycleway": "track",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "name": "Askanierring",
+        "name:etymology:wikidata": "Q168352",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "13585",
+        "sidewalk:both": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1133812186,
+      "bounds": {
+        "minlat": 52.5461339,
+        "minlon": 13.1960049,
+        "maxlat": 52.546686,
+        "maxlon": 13.196237
+      },
+      "geometry": [
+        {
+          "lat": 52.5461339,
+          "lon": 13.1960381
+        },
+        {
+          "lat": 52.5462127,
+          "lon": 13.1960099
+        },
+        {
+          "lat": 52.546248,
+          "lon": 13.1960049
+        },
+        {
+          "lat": 52.5464122,
+          "lon": 13.1960911
+        },
+        {
+          "lat": 52.5465934,
+          "lon": 13.1961696
+        },
+        {
+          "lat": 52.546686,
+          "lon": 13.196237
+        }
+      ],
+      "tags": {
+        "access": "permit",
+        "highway": "service",
+        "lanes": "1",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1172284261,
+      "bounds": {
+        "minlat": 52.5424327,
+        "minlon": 13.1950368,
+        "maxlat": 52.5447884,
+        "maxlon": 13.1965111
+      },
+      "geometry": [
+        {
+          "lat": 52.5424327,
+          "lon": 13.1965111
+        },
+        {
+          "lat": 52.5424364,
+          "lon": 13.1964768
+        },
+        {
+          "lat": 52.5432134,
+          "lon": 13.195956
+        },
+        {
+          "lat": 52.5432824,
+          "lon": 13.1959043
+        },
+        {
+          "lat": 52.5435894,
+          "lon": 13.1957175
+        },
+        {
+          "lat": 52.5438452,
+          "lon": 13.1955619
+        },
+        {
+          "lat": 52.5446907,
+          "lon": 13.1950433
+        },
+        {
+          "lat": 52.5447232,
+          "lon": 13.1950368
+        },
+        {
+          "lat": 52.5447488,
+          "lon": 13.1950449
+        },
+        {
+          "lat": 52.5447714,
+          "lon": 13.1950665
+        },
+        {
+          "lat": 52.5447884,
+          "lon": 13.1950885
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1172284262,
+      "bounds": {
+        "minlat": 52.5447884,
+        "minlon": 13.1950885,
+        "maxlat": 52.5449011,
+        "maxlon": 13.1951784
+      },
+      "geometry": [
+        {
+          "lat": 52.5447884,
+          "lon": 13.1950885
+        },
+        {
+          "lat": 52.5447969,
+          "lon": 13.1950959
+        },
+        {
+          "lat": 52.5448698,
+          "lon": 13.1951532
+        },
+        {
+          "lat": 52.5449011,
+          "lon": 13.1951784
+        }
+      ],
+      "tags": {
+        "crossing": "unmarked",
+        "crossing:island": "no",
+        "crossing:markings": "no",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1172284263,
+      "bounds": {
+        "minlat": 52.5449011,
+        "minlon": 13.1951784,
+        "maxlat": 52.5449464,
+        "maxlon": 13.1952181
+      },
+      "geometry": [
+        {
+          "lat": 52.5449011,
+          "lon": 13.1951784
+        },
+        {
+          "lat": 52.5449464,
+          "lon": 13.1952181
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1172284264,
+      "bounds": {
+        "minlat": 52.5455672,
+        "minlon": 13.1938752,
+        "maxlat": 52.5456158,
+        "maxlon": 13.1938978
+      },
+      "geometry": [
+        {
+          "lat": 52.5455672,
+          "lon": 13.1938752
+        },
+        {
+          "lat": 52.5455832,
+          "lon": 13.1938917
+        },
+        {
+          "lat": 52.5456158,
+          "lon": 13.1938978
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1172284265,
+      "bounds": {
+        "minlat": 52.5459072,
+        "minlon": 13.1939607,
+        "maxlat": 52.5459316,
+        "maxlon": 13.1939772
+      },
+      "geometry": [
+        {
+          "lat": 52.5459072,
+          "lon": 13.1939607
+        },
+        {
+          "lat": 52.5459316,
+          "lon": 13.1939772
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1172284266,
+      "bounds": {
+        "minlat": 52.5456158,
+        "minlon": 13.1938978,
+        "maxlat": 52.5457144,
+        "maxlon": 13.1939191
+      },
+      "geometry": [
+        {
+          "lat": 52.5456158,
+          "lon": 13.1938978
+        },
+        {
+          "lat": 52.5456641,
+          "lon": 13.1939082
+        },
+        {
+          "lat": 52.5457144,
+          "lon": 13.1939191
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1172284267,
+      "bounds": {
+        "minlat": 52.5457144,
+        "minlon": 13.1939191,
+        "maxlat": 52.5457854,
+        "maxlon": 13.1939344
+      },
+      "geometry": [
+        {
+          "lat": 52.5457144,
+          "lon": 13.1939191
+        },
+        {
+          "lat": 52.5457854,
+          "lon": 13.1939344
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1172284268,
+      "bounds": {
+        "minlat": 52.5458443,
+        "minlon": 13.1940603,
+        "maxlat": 52.5459107,
+        "maxlon": 13.1942137
+      },
+      "geometry": [
+        {
+          "lat": 52.5458443,
+          "lon": 13.1942137
+        },
+        {
+          "lat": 52.5458717,
+          "lon": 13.1941506
+        },
+        {
+          "lat": 52.5459107,
+          "lon": 13.1940603
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Damm",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1172284269,
+      "bounds": {
+        "minlat": 52.5458038,
+        "minlon": 13.1942137,
+        "maxlat": 52.5458443,
+        "maxlon": 13.1943079
+      },
+      "geometry": [
+        {
+          "lat": 52.5458038,
+          "lon": 13.1943079
+        },
+        {
+          "lat": 52.5458443,
+          "lon": 13.1942137
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Damm",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1172284270,
+      "bounds": {
+        "minlat": 52.545768,
+        "minlon": 13.1943079,
+        "maxlat": 52.5458038,
+        "maxlon": 13.1943908
+      },
+      "geometry": [
+        {
+          "lat": 52.545768,
+          "lon": 13.1943908
+        },
+        {
+          "lat": 52.5457842,
+          "lon": 13.1943533
+        },
+        {
+          "lat": 52.5458038,
+          "lon": 13.1943079
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Damm",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1172284271,
+      "bounds": {
+        "minlat": 52.5457593,
+        "minlon": 13.1943908,
+        "maxlat": 52.545768,
+        "maxlon": 13.1944463
+      },
+      "geometry": [
+        {
+          "lat": 52.5457593,
+          "lon": 13.1944463
+        },
+        {
+          "lat": 52.545768,
+          "lon": 13.1943908
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Damm",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1172284272,
+      "bounds": {
+        "minlat": 52.5457813,
+        "minlon": 13.1945361,
+        "maxlat": 52.5457936,
+        "maxlon": 13.1945868
+      },
+      "geometry": [
+        {
+          "lat": 52.5457936,
+          "lon": 13.1945868
+        },
+        {
+          "lat": 52.5457893,
+          "lon": 13.1945689
+        },
+        {
+          "lat": 52.5457813,
+          "lon": 13.1945361
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Damm",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1172451724,
+      "bounds": {
+        "minlat": 52.545734,
+        "minlon": 13.1945677,
+        "maxlat": 52.5457465,
+        "maxlon": 13.1946193
+      },
+      "geometry": [
+        {
+          "lat": 52.5457465,
+          "lon": 13.1946193
+        },
+        {
+          "lat": 52.5457403,
+          "lon": 13.1945935
+        },
+        {
+          "lat": 52.545734,
+          "lon": 13.1945677
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "foot": "no",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Chaussee",
+        "lit": "yes",
+        "oneway": "yes",
+        "separation:left": "kerb",
+        "separation:right": "no",
+        "source:width": "infra3D",
+        "surface": "asphalt",
+        "surface:colour": "red",
+        "traffic_mode:right": "foot",
+        "traffic_sign": "none",
+        "width": "1.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1172451725,
+      "bounds": {
+        "minlat": 52.5457123,
+        "minlon": 13.1944789,
+        "maxlat": 52.545734,
+        "maxlon": 13.1945677
+      },
+      "geometry": [
+        {
+          "lat": 52.545734,
+          "lon": 13.1945677
+        },
+        {
+          "lat": 52.5457239,
+          "lon": 13.1945263
+        },
+        {
+          "lat": 52.5457181,
+          "lon": 13.1945026
+        },
+        {
+          "lat": 52.5457123,
+          "lon": 13.1944789
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "cycleway": "crossing",
+        "foot": "no",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Chaussee",
+        "lit": "yes",
+        "marking:both": "dashed_line",
+        "oneway": "yes",
+        "source:width": "infra3D",
+        "surface": "asphalt",
+        "surface:colour": "none",
+        "traffic_mode:right": "foot",
+        "traffic_sign": "none",
+        "width": "1.3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1172451726,
+      "bounds": {
+        "minlat": 52.5457093,
+        "minlon": 13.194373,
+        "maxlat": 52.5457315,
+        "maxlon": 13.1944789
+      },
+      "geometry": [
+        {
+          "lat": 52.5457123,
+          "lon": 13.1944789
+        },
+        {
+          "lat": 52.5457093,
+          "lon": 13.1944517
+        },
+        {
+          "lat": 52.5457105,
+          "lon": 13.194435
+        },
+        {
+          "lat": 52.5457152,
+          "lon": 13.1944164
+        },
+        {
+          "lat": 52.5457315,
+          "lon": 13.194373
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "cycleway": "traffic_island",
+        "foot": "no",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Chaussee",
+        "lit": "yes",
+        "oneway": "yes",
+        "separation:left": "kerb",
+        "separation:right": "no",
+        "source:width": "infra3D",
+        "surface": "asphalt",
+        "surface:colour": "red",
+        "traffic_mode:right": "foot",
+        "traffic_sign": "none",
+        "width": "1.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1172451727,
+      "bounds": {
+        "minlat": 52.5457315,
+        "minlon": 13.1942913,
+        "maxlat": 52.5457661,
+        "maxlon": 13.194373
+      },
+      "geometry": [
+        {
+          "lat": 52.5457315,
+          "lon": 13.194373
+        },
+        {
+          "lat": 52.5457483,
+          "lon": 13.1943333
+        },
+        {
+          "lat": 52.5457661,
+          "lon": 13.1942913
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "cycleway": "crossing",
+        "foot": "no",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Chaussee",
+        "lit": "yes",
+        "marking:both": "dashed_line",
+        "oneway": "yes",
+        "source:width": "infra3D",
+        "surface": "asphalt",
+        "surface:colour": "none",
+        "traffic_mode:right": "foot",
+        "traffic_sign": "none",
+        "width": "1.3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1172451728,
+      "bounds": {
+        "minlat": 52.5457661,
+        "minlon": 13.1941974,
+        "maxlat": 52.5458058,
+        "maxlon": 13.1942913
+      },
+      "geometry": [
+        {
+          "lat": 52.5457661,
+          "lon": 13.1942913
+        },
+        {
+          "lat": 52.5458058,
+          "lon": 13.1941974
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "cycleway": "traffic_island",
+        "foot": "no",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Falkenseer Chaussee",
+        "lit": "yes",
+        "oneway": "yes",
+        "separation:left": "kerb",
+        "separation:right": "no",
+        "source:width": "infra3D",
+        "surface": "asphalt",
+        "surface:colour": "red",
+        "traffic_mode:right": "foot",
+        "traffic_sign": "none",
+        "width": "1.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1172586972,
+      "bounds": {
+        "minlat": 52.5459725,
+        "minlon": 13.1938027,
+        "maxlat": 52.5460787,
+        "maxlon": 13.1939981
+      },
+      "geometry": [
+        {
+          "lat": 52.5460787,
+          "lon": 13.1939981
+        },
+        {
+          "lat": 52.5459725,
+          "lon": 13.1938027
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1298054543,
+      "bounds": {
+        "minlat": 52.545016,
+        "minlon": 13.1953266,
+        "maxlat": 52.5450367,
+        "maxlon": 13.1953589
+      },
+      "geometry": [
+        {
+          "lat": 52.545016,
+          "lon": 13.1953266
+        },
+        {
+          "lat": 52.5450367,
+          "lon": 13.1953589
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1305808820,
+      "bounds": {
+        "minlat": 52.5455318,
+        "minlon": 13.1940057,
+        "maxlat": 52.5455901,
+        "maxlon": 13.1940746
+      },
+      "geometry": [
+        {
+          "lat": 52.5455318,
+          "lon": 13.1940057
+        },
+        {
+          "lat": 52.5455563,
+          "lon": 13.1940347
+        },
+        {
+          "lat": 52.5455901,
+          "lon": 13.1940746
+        }
+      ],
+      "tags": {
+        "cycleway": "crossing",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "lit": "yes",
+        "marking:both": "dashed_line",
+        "oneway": "yes",
+        "source:width": "infra3D",
+        "surface": "asphalt",
+        "surface:colour": "none",
+        "traffic_sign": "none",
+        "width": "1.6"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1362057524,
+      "bounds": {
+        "minlat": 52.5452976,
+        "minlon": 13.1950408,
+        "maxlat": 52.5478828,
+        "maxlon": 13.1986337
+      },
+      "geometry": [
+        {
+          "lat": 52.5478828,
+          "lon": 13.1957821
+        },
+        {
+          "lat": 52.5472624,
+          "lon": 13.1951003
+        },
+        {
+          "lat": 52.5472069,
+          "lon": 13.1950587
+        },
+        {
+          "lat": 52.5471453,
+          "lon": 13.1950408
+        },
+        {
+          "lat": 52.5460257,
+          "lon": 13.1950646
+        },
+        {
+          "lat": 52.5459883,
+          "lon": 13.1950805
+        },
+        {
+          "lat": 52.5459496,
+          "lon": 13.195126
+        },
+        {
+          "lat": 52.5459283,
+          "lon": 13.1951654
+        },
+        {
+          "lat": 52.5459034,
+          "lon": 13.1952204
+        },
+        {
+          "lat": 52.5458852,
+          "lon": 13.1952839
+        },
+        {
+          "lat": 52.5458815,
+          "lon": 13.1953391
+        },
+        {
+          "lat": 52.5458859,
+          "lon": 13.1954085
+        },
+        {
+          "lat": 52.5458954,
+          "lon": 13.1954541
+        },
+        {
+          "lat": 52.5460762,
+          "lon": 13.1961088
+        },
+        {
+          "lat": 52.5460828,
+          "lon": 13.1961507
+        },
+        {
+          "lat": 52.5460734,
+          "lon": 13.1961892
+        },
+        {
+          "lat": 52.5458103,
+          "lon": 13.1970183
+        },
+        {
+          "lat": 52.5452976,
+          "lon": 13.1986337
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1362057527,
+      "bounds": {
+        "minlat": 52.5460372,
+        "minlon": 13.1952427,
+        "maxlat": 52.5478122,
+        "maxlon": 13.1976907
+      },
+      "geometry": [
+        {
+          "lat": 52.5478122,
+          "lon": 13.1959495
+        },
+        {
+          "lat": 52.5472171,
+          "lon": 13.1952835
+        },
+        {
+          "lat": 52.5471831,
+          "lon": 13.1952556
+        },
+        {
+          "lat": 52.547132,
+          "lon": 13.1952427
+        },
+        {
+          "lat": 52.547081,
+          "lon": 13.1952427
+        },
+        {
+          "lat": 52.5460738,
+          "lon": 13.1952706
+        },
+        {
+          "lat": 52.5460529,
+          "lon": 13.19529
+        },
+        {
+          "lat": 52.5460372,
+          "lon": 13.1953244
+        },
+        {
+          "lat": 52.5460411,
+          "lon": 13.1953739
+        },
+        {
+          "lat": 52.5461706,
+          "lon": 13.195746
+        },
+        {
+          "lat": 52.5461994,
+          "lon": 13.1958579
+        },
+        {
+          "lat": 52.5462116,
+          "lon": 13.195924
+        },
+        {
+          "lat": 52.5462127,
+          "lon": 13.1960099
+        },
+        {
+          "lat": 52.5462198,
+          "lon": 13.1962414
+        },
+        {
+          "lat": 52.5462463,
+          "lon": 13.1963086
+        },
+        {
+          "lat": 52.546979,
+          "lon": 13.1976347
+        },
+        {
+          "lat": 52.5470156,
+          "lon": 13.1976669
+        },
+        {
+          "lat": 52.547079,
+          "lon": 13.1976907
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1362057543,
+      "bounds": {
+        "minlat": 52.5451753,
+        "minlon": 13.1963554,
+        "maxlat": 52.5461322,
+        "maxlon": 13.1993553
+      },
+      "geometry": [
+        {
+          "lat": 52.5451753,
+          "lon": 13.1993553
+        },
+        {
+          "lat": 52.5453472,
+          "lon": 13.1988199
+        },
+        {
+          "lat": 52.5453834,
+          "lon": 13.1987042
+        },
+        {
+          "lat": 52.545646,
+          "lon": 13.1978825
+        },
+        {
+          "lat": 52.5457997,
+          "lon": 13.197389
+        },
+        {
+          "lat": 52.5458454,
+          "lon": 13.1972435
+        },
+        {
+          "lat": 52.5461322,
+          "lon": 13.1963554
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1362057544,
+      "bounds": {
+        "minlat": 52.5460828,
+        "minlon": 13.1961507,
+        "maxlat": 52.5461322,
+        "maxlon": 13.1963554
+      },
+      "geometry": [
+        {
+          "lat": 52.5461322,
+          "lon": 13.1963554
+        },
+        {
+          "lat": 52.5461092,
+          "lon": 13.1962579
+        },
+        {
+          "lat": 52.5460828,
+          "lon": 13.1961507
+        }
+      ],
+      "tags": {
+        "crossing": "unmarked",
+        "crossing:markings": "no",
+        "footway": "crossing",
+        "highway": "footway",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1362057545,
+      "bounds": {
+        "minlat": 52.5461322,
+        "minlon": 13.1962414,
+        "maxlat": 52.5462198,
+        "maxlon": 13.1963554
+      },
+      "geometry": [
+        {
+          "lat": 52.5461322,
+          "lon": 13.1963554
+        },
+        {
+          "lat": 52.5461802,
+          "lon": 13.196293
+        },
+        {
+          "lat": 52.5462198,
+          "lon": 13.1962414
+        }
+      ],
+      "tags": {
+        "crossing": "unmarked",
+        "crossing:markings": "no",
+        "footway": "crossing",
+        "highway": "footway",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1362057546,
+      "bounds": {
+        "minlat": 52.5461322,
+        "minlon": 13.1963554,
+        "maxlat": 52.5469935,
+        "maxlon": 13.1978941
+      },
+      "geometry": [
+        {
+          "lat": 52.5461322,
+          "lon": 13.1963554
+        },
+        {
+          "lat": 52.5467568,
+          "lon": 13.1974713
+        },
+        {
+          "lat": 52.5469935,
+          "lon": 13.1978941
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1362377726,
+      "bounds": {
+        "minlat": 52.5438023,
+        "minlon": 13.1943007,
+        "maxlat": 52.5453606,
+        "maxlon": 13.1952462
+      },
+      "geometry": [
+        {
+          "lat": 52.5438023,
+          "lon": 13.1952462
+        },
+        {
+          "lat": 52.5447051,
+          "lon": 13.1946985
+        },
+        {
+          "lat": 52.5453606,
+          "lon": 13.1943007
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1362377727,
+      "bounds": {
+        "minlat": 52.5447051,
+        "minlon": 13.1946985,
+        "maxlat": 52.5449749,
+        "maxlon": 13.1947947
+      },
+      "geometry": [
+        {
+          "lat": 52.5449749,
+          "lon": 13.1947947
+        },
+        {
+          "lat": 52.5447051,
+          "lon": 13.1946985
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1445428105,
+      "bounds": {
+        "minlat": 52.545701,
+        "minlon": 13.1942806,
+        "maxlat": 52.5457842,
+        "maxlon": 13.1943533
+      },
+      "geometry": [
+        {
+          "lat": 52.545701,
+          "lon": 13.1942806
+        },
+        {
+          "lat": 52.5457483,
+          "lon": 13.1943333
+        },
+        {
+          "lat": 52.5457842,
+          "lon": 13.1943533
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Askanierring",
+        "name:etymology:wikidata": "Q168352",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13583",
+        "sidewalk": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1445428106,
+      "bounds": {
+        "minlat": 52.5457746,
+        "minlon": 13.1941191,
+        "maxlat": 52.5458996,
+        "maxlon": 13.1941593
+      },
+      "geometry": [
+        {
+          "lat": 52.5458996,
+          "lon": 13.1941593
+        },
+        {
+          "lat": 52.5458717,
+          "lon": 13.1941506
+        },
+        {
+          "lat": 52.5458318,
+          "lon": 13.1941374
+        },
+        {
+          "lat": 52.5457746,
+          "lon": 13.1941191
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:buffer:both": "no",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:marking:both": "dashed_line",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:surface:colour": "none",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "1.6",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Askanierring",
+        "name:etymology:wikidata": "Q168352",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk": "separate",
+        "source:cycleway:right:width": "infra3D",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1462572255,
+      "bounds": {
+        "minlat": 52.5454836,
+        "minlon": 13.1945676,
+        "maxlat": 52.5456626,
+        "maxlon": 13.1946587
+      },
+      "geometry": [
+        {
+          "lat": 52.5454836,
+          "lon": 13.1946587
+        },
+        {
+          "lat": 52.5456394,
+          "lon": 13.1945832
+        },
+        {
+          "lat": 52.5456626,
+          "lon": 13.1945676
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Askanierring",
+        "name:etymology:wikidata": "Q168352",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "13585",
+        "sidewalk": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1462572256,
+      "bounds": {
+        "minlat": 52.5458893,
+        "minlon": 13.1943898,
+        "maxlat": 52.5459331,
+        "maxlon": 13.1944181
+      },
+      "geometry": [
+        {
+          "lat": 52.5458893,
+          "lon": 13.1944181
+        },
+        {
+          "lat": 52.5459331,
+          "lon": 13.1943898
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Askanierring",
+        "name:etymology:wikidata": "Q168352",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "13585",
+        "sidewalk": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1462580102,
+      "bounds": {
+        "minlat": 52.5451392,
+        "minlon": 13.1946587,
+        "maxlat": 52.5454836,
+        "maxlon": 13.1950601
+      },
+      "geometry": [
+        {
+          "lat": 52.5451392,
+          "lon": 13.1950601
+        },
+        {
+          "lat": 52.54516,
+          "lon": 13.1950345
+        },
+        {
+          "lat": 52.5454645,
+          "lon": 13.194682
+        },
+        {
+          "lat": 52.5454836,
+          "lon": 13.1946587
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Falkensee;Ev.-Wald-Krankenhaus",
+        "destination:colour": "none;white",
+        "destination:symbol": "none;hospital",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed:conditional": "30 @ (Mo-Fr 06:00-18:00)",
+        "maxspeed:type": "DE:urban",
+        "name": "Falkenseer Damm",
+        "name:etymology:wikidata": "Q14842",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:orientation": "parallel",
+        "postal_code": "13585",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1462580103,
+      "bounds": {
+        "minlat": 52.5448243,
+        "minlon": 13.194818,
+        "maxlat": 52.5451007,
+        "maxlon": 13.1952264
+      },
+      "geometry": [
+        {
+          "lat": 52.5451007,
+          "lon": 13.194818
+        },
+        {
+          "lat": 52.5449617,
+          "lon": 13.1950051
+        },
+        {
+          "lat": 52.5448698,
+          "lon": 13.1951532
+        },
+        {
+          "lat": 52.5448243,
+          "lon": 13.1952264
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Falkenseer Damm",
+        "name:etymology:wikidata": "Q14842",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13585",
+        "psv:lanes:conditional": "yes|yes|designated@(Mo-Sa 06:00-20:00)",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1462580104,
+      "bounds": {
+        "minlat": 52.5451007,
+        "minlon": 13.1942223,
+        "maxlat": 52.5455137,
+        "maxlon": 13.194818
+      },
+      "geometry": [
+        {
+          "lat": 52.5455137,
+          "lon": 13.1942223
+        },
+        {
+          "lat": 52.545452,
+          "lon": 13.1943311
+        },
+        {
+          "lat": 52.5452824,
+          "lon": 13.1945735
+        },
+        {
+          "lat": 52.5451007,
+          "lon": 13.194818
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Falkenseer Damm",
+        "name:etymology:wikidata": "Q14842",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction": "yes",
+        "postal_code": "13585",
+        "psv:lanes:conditional": "yes|yes|designated@(Mo-Sa 06:00-20:00)",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1462580105,
+      "bounds": {
+        "minlat": 52.5455137,
+        "minlon": 13.1940746,
+        "maxlat": 52.5455901,
+        "maxlon": 13.1942223
+      },
+      "geometry": [
+        {
+          "lat": 52.5455901,
+          "lon": 13.1940746
+        },
+        {
+          "lat": 52.5455137,
+          "lon": 13.1942223
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Falkenseer Damm",
+        "name:etymology:wikidata": "Q14842",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13585",
+        "psv:lanes:conditional": "yes|yes|designated@(Mo-Sa 06:00-20:00)",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1462580106,
+      "bounds": {
+        "minlat": 52.5458407,
+        "minlon": 13.1918945,
+        "maxlat": 52.546105,
+        "maxlon": 13.1933069
+      },
+      "geometry": [
+        {
+          "lat": 52.546105,
+          "lon": 13.1918945
+        },
+        {
+          "lat": 52.5459979,
+          "lon": 13.1924726
+        },
+        {
+          "lat": 52.5459009,
+          "lon": 13.1929872
+        },
+        {
+          "lat": 52.5458407,
+          "lon": 13.1933069
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Falkenseer Chaussee",
+        "name:etymology:wikidata": "Q14842",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "13583",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1462580107,
+      "bounds": {
+        "minlat": 52.5459537,
+        "minlon": 13.1919124,
+        "maxlat": 52.5462477,
+        "maxlon": 13.1934663
+      },
+      "geometry": [
+        {
+          "lat": 52.5459537,
+          "lon": 13.1934663
+        },
+        {
+          "lat": 52.5459605,
+          "lon": 13.1934316
+        },
+        {
+          "lat": 52.546005,
+          "lon": 13.1932014
+        },
+        {
+          "lat": 52.5462155,
+          "lon": 13.192088
+        },
+        {
+          "lat": 52.5462477,
+          "lon": 13.1919124
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Falkenseer Chaussee",
+        "name:etymology:wikidata": "Q14842",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "13583",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1462595201,
+      "bounds": {
+        "minlat": 52.5432455,
+        "minlon": 13.1957989,
+        "maxlat": 52.5446366,
+        "maxlon": 13.1980674
+      },
+      "geometry": [
+        {
+          "lat": 52.5432455,
+          "lon": 13.1980674
+        },
+        {
+          "lat": 52.5436218,
+          "lon": 13.1974553
+        },
+        {
+          "lat": 52.5446366,
+          "lon": 13.1957989
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Falkensee;Ev.-Wald-Krankenhaus",
+        "destination:colour": "none;white",
+        "destination:symbol": "none;hospital",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed:conditional": "30 @ (Mo-Fr 06:00-18:00)",
+        "maxspeed:type": "DE:urban",
+        "name": "Falkenseer Damm",
+        "name:etymology:wikidata": "Q14842",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:orientation": "parallel",
+        "postal_code": "13585",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10"
+      }
+    }
+  ]
+}

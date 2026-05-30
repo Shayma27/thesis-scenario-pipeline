@@ -1,0 +1,429 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "enter_roadway_rathausstr_1545",
+    "date": "2021-09-05",
+    "time": "15:45",
+    "raw_text": "Ein Pedelec-Fahrer befuhr die Rathausstraße von der Poststraße kommend in Richtung Spreeufer. Ein Pkw Fahrer fuhr vom rechten Fahrbahnrand an und übersah den Pedelec-Fahrer. Es kam zur Kollision. Datum: 05.09.2021 Uhrzeit: 15:45 Uhr"
+  },
+  "classification": {
+    "scenario_type": "enter_roadway_conflict",
+    "confidence": 0.8
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Rathausstraße",
+    "secondary_road": "Poststraße",
+    "osm_query": "Rathausstraße / Poststraße, Berlin, Germany",
+    "osm_roads": [
+      "Rathausstraße",
+      "Poststraße"
+    ],
+    "house_number_reference": null,
+    "location_type": "midblock",
+    "direction_references": [
+      "Spreeufer"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "yes",
+    "bike_facility_type": "bike_lane",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "enter_roadway",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "violated_priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "e_bike",
+      "maneuver": "go_straight",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "car_entered_roadway_into_cyclist_path",
+    "collision_happened": true,
+    "collision_description": "A car collided with an e-bike after entering the roadway and failing to yield to the cyclist.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line",
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "bike_lane",
+      "primary_bike_facility_position": "both"
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "e_bike",
+          "initial_road_id": 0,
+          "initial_lane_id": -2,
+          "initial_s_m": 10.0,
+          "initial_speed_mps": 5.5
+        },
+        "car_1": {
+          "vehicle_category": "car",
+          "initial_road_id": 0,
+          "initial_lane_id": -1,
+          "initial_s_m": 25.0,
+          "initial_speed_mps": 8.0
+        }
+      },
+      "cyclist_lateral_position": "both",
+      "conflict": {
+        "conflict_s_m": 50.0,
+        "trigger_time_s": 1.0
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "bike_lane",
+      "source": "osm_tag",
+      "reason": "OSM cycleway tags indicate bike_lane."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "both",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    },
+    {
+      "parameter": "cyclist_1.vehicle_category",
+      "value_used": "e_bike",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'enter_roadway_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'enter_roadway_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -2,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'enter_roadway_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_s_m",
+      "value_used": 10.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'enter_roadway_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 5.5,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'enter_roadway_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.vehicle_category",
+      "value_used": "car",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'enter_roadway_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'enter_roadway_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_lane_id",
+      "value_used": -1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'enter_roadway_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_s_m",
+      "value_used": 25.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'enter_roadway_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_speed_mps",
+      "value_used": 8.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'enter_roadway_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    }
+  ],
+  "osm_context": {
+    "query": "Rathausstraße, Berlin, Germany",
+    "queries_tried": [
+      "Rathausstraße / Poststraße, Berlin, Germany",
+      "Rathausstraße Poststraße, Berlin, Germany",
+      "Rathausstraße, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 136571494,
+        "name": "Rathausstraße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": "6",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5173193,
+            "lon": 13.4045954
+          },
+          {
+            "lat": 52.5176468,
+            "lon": 13.4053738
+          },
+          {
+            "lat": 52.517692,
+            "lon": 13.4054795
+          }
+        ]
+      },
+      {
+        "osm_id": 159482052,
+        "name": "Poststraße",
+        "highway": "pedestrian",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5176468,
+            "lon": 13.4053738
+          },
+          {
+            "lat": 52.5175961,
+            "lon": 13.4054319
+          },
+          {
+            "lat": 52.5175157,
+            "lon": 13.4055241
+          },
+          {
+            "lat": 52.5169272,
+            "lon": 13.4061985
+          },
+          {
+            "lat": 52.5166808,
+            "lon": 13.4064809
+          }
+        ]
+      },
+      {
+        "osm_id": 780327577,
+        "name": "Rathausstraße",
+        "highway": "footway",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5181756,
+            "lon": 13.4071512
+          },
+          {
+            "lat": 52.5175157,
+            "lon": 13.4055241
+          }
+        ]
+      },
+      {
+        "osm_id": 1127595983,
+        "name": "Rathausstraße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": "6",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:both": "lane",
+          "cycleway:both:buffer:both": "no",
+          "cycleway:both:marking:right": "no",
+          "cycleway:both:oneway": "yes",
+          "cycleway:both:separation:left": "no",
+          "cycleway:both:surface": "asphalt",
+          "cycleway:both:surface:colour": "no",
+          "cycleway:both:traffic_sign": "DE:237",
+          "cycleway:both:width": "1.85",
+          "cycleway:left:lane": "exclusive",
+          "cycleway:left:marking:left": "solid_line",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:left": "dashed_line"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5171978,
+            "lon": 13.4043066
+          },
+          {
+            "lat": 52.5172144,
+            "lon": 13.404346
+          },
+          {
+            "lat": 52.5172778,
+            "lon": 13.4044968
+          }
+        ]
+      },
+      {
+        "osm_id": 1395722654,
+        "name": "Rathausstraße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": "6",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5172778,
+            "lon": 13.4044968
+          },
+          {
+            "lat": 52.5173193,
+            "lon": 13.4045954
+          }
+        ]
+      },
+      {
+        "osm_id": 1476466618,
+        "name": "Rathausstraße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": "6",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.517692,
+            "lon": 13.4054795
+          },
+          {
+            "lat": 52.5180385,
+            "lon": 13.4062901
+          },
+          {
+            "lat": 52.5182042,
+            "lon": 13.406692
+          }
+        ]
+      }
+    ],
+    "traffic_signals_nearby": "yes",
+    "notes": [],
+    "geocoded": {
+      "display_name": "Rathausstraße, Nikolaiviertel, Spandauer Vorstadt, Mitte, Berlin, 10178, Deutschland",
+      "lat": 52.5172378,
+      "lon": 13.4044017,
+      "osm_type": "way",
+      "osm_id": 1127595983
+    },
+    "bike_facility": {
+      "type": "bike_lane",
+      "position": "both",
+      "source": "osm_tag",
+      "osm_evidence": {
+        "bike_facility_type": "bike_lane",
+        "position": "both",
+        "tags": {
+          "cycleway:both": "lane"
+        }
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "both",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 30.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

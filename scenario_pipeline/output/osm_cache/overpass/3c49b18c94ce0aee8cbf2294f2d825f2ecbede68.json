@@ -1,0 +1,3792 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-28T12:54:28Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 283725463,
+      "lat": 52.4358291,
+      "lon": 13.2737613,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "backward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13590808481,
+      "lat": 52.4358947,
+      "lon": 13.2736994,
+      "tags": {
+        "highway": "traffic_signals",
+        "layer": "1",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "way",
+      "id": 26005183,
+      "bounds": {
+        "minlat": 52.4358821,
+        "minlon": 13.2732987,
+        "maxlat": 52.4363264,
+        "maxlon": 13.2737113
+      },
+      "geometry": [
+        {
+          "lat": 52.4363264,
+          "lon": 13.2732987
+        },
+        {
+          "lat": 52.4362697,
+          "lon": 13.2733466
+        },
+        {
+          "lat": 52.4358947,
+          "lon": 13.2736994
+        },
+        {
+          "lat": 52.4358821,
+          "lon": 13.2737113
+        }
+      ],
+      "tags": {
+        "bridge": "yes",
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "layer": "1",
+        "level": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Sundgauer Straße",
+        "name:etymology:wikidata": "Q252268",
+        "parking:both": "no",
+        "postal_code": "14169",
+        "sidewalk:both": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 27472475,
+      "bounds": {
+        "minlat": 52.4363891,
+        "minlon": 13.2733941,
+        "maxlat": 52.436536,
+        "maxlon": 13.2736735
+      },
+      "geometry": [
+        {
+          "lat": 52.436536,
+          "lon": 13.2736715
+        },
+        {
+          "lat": 52.4364869,
+          "lon": 13.2736735
+        },
+        {
+          "lat": 52.4363947,
+          "lon": 13.2734099
+        },
+        {
+          "lat": 52.4363891,
+          "lon": 13.2733941
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 41764794,
+      "bounds": {
+        "minlat": 52.4363264,
+        "minlon": 13.2725558,
+        "maxlat": 52.4371141,
+        "maxlon": 13.2732987
+      },
+      "geometry": [
+        {
+          "lat": 52.4371141,
+          "lon": 13.2725558
+        },
+        {
+          "lat": 52.436651,
+          "lon": 13.2729846
+        },
+        {
+          "lat": 52.4365428,
+          "lon": 13.273089
+        },
+        {
+          "lat": 52.4363427,
+          "lon": 13.2732827
+        },
+        {
+          "lat": 52.4363264,
+          "lon": 13.2732987
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Sundgauer Straße",
+        "name:etymology:wikidata": "Q252268",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "parking:left": "half_on_kerb",
+        "parking:right": "on_kerb",
+        "postal_code": "14169",
+        "sidewalk:both": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 41923812,
+      "bounds": {
+        "minlat": 52.4356926,
+        "minlon": 13.2732174,
+        "maxlat": 52.4358068,
+        "maxlon": 13.2735376
+      },
+      "geometry": [
+        {
+          "lat": 52.4356926,
+          "lon": 13.2732174
+        },
+        {
+          "lat": 52.4358068,
+          "lon": 13.2735376
+        }
+      ],
+      "tags": {
+        "bicycle": "dismount",
+        "highway": "footway",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 41969092,
+      "bounds": {
+        "minlat": 52.4358068,
+        "minlon": 13.2735376,
+        "maxlat": 52.4358431,
+        "maxlon": 13.2736394
+      },
+      "geometry": [
+        {
+          "lat": 52.4358068,
+          "lon": 13.2735376
+        },
+        {
+          "lat": 52.4358431,
+          "lon": 13.2736394
+        }
+      ],
+      "tags": {
+        "bicycle": "dismount",
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "up",
+        "ramp": "no",
+        "step_count": "26",
+        "surface": "paving_stones",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 80762920,
+      "bounds": {
+        "minlat": 52.4362382,
+        "minlon": 13.2730053,
+        "maxlat": 52.4363006,
+        "maxlon": 13.2731756
+      },
+      "geometry": [
+        {
+          "lat": 52.4362382,
+          "lon": 13.2730053
+        },
+        {
+          "lat": 52.4363006,
+          "lon": 13.2731756
+        }
+      ],
+      "tags": {
+        "access": "yes",
+        "foot": "yes",
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "up",
+        "motor_vehicle": "no",
+        "name": "Kleinaustraße",
+        "name:etymology:wikidata": "Q15842690",
+        "name:etymology:wikipedia": "de:Robert Kleinau",
+        "ramp": "no",
+        "sidewalk": "no",
+        "step_count": "22",
+        "surface": "asphalt",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 80762921,
+      "bounds": {
+        "minlat": 52.435016,
+        "minlon": 13.2697016,
+        "maxlat": 52.4362382,
+        "maxlon": 13.2730053
+      },
+      "geometry": [
+        {
+          "lat": 52.435016,
+          "lon": 13.2697016
+        },
+        {
+          "lat": 52.4350487,
+          "lon": 13.2698222
+        },
+        {
+          "lat": 52.4353113,
+          "lon": 13.2705742
+        },
+        {
+          "lat": 52.4354746,
+          "lon": 13.2709468
+        },
+        {
+          "lat": 52.4355545,
+          "lon": 13.2711129
+        },
+        {
+          "lat": 52.4355991,
+          "lon": 13.2712168
+        },
+        {
+          "lat": 52.4357589,
+          "lon": 13.2716624
+        },
+        {
+          "lat": 52.4359197,
+          "lon": 13.2721177
+        },
+        {
+          "lat": 52.4360929,
+          "lon": 13.272597
+        },
+        {
+          "lat": 52.4362382,
+          "lon": 13.2730053
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "name": "Kleinaustraße",
+        "name:etymology:wikidata": "Q15842690",
+        "name:etymology:wikipedia": "de:Robert Kleinau",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 85990897,
+      "bounds": {
+        "minlat": 52.4352294,
+        "minlon": 13.2744827,
+        "maxlat": 52.435479,
+        "maxlon": 13.2748434
+      },
+      "geometry": [
+        {
+          "lat": 52.4353434,
+          "lon": 13.2745499
+        },
+        {
+          "lat": 52.4354133,
+          "lon": 13.2744827
+        },
+        {
+          "lat": 52.4354552,
+          "lon": 13.2745998
+        },
+        {
+          "lat": 52.435479,
+          "lon": 13.2746665
+        },
+        {
+          "lat": 52.4352951,
+          "lon": 13.2748434
+        },
+        {
+          "lat": 52.4352294,
+          "lon": 13.2746596
+        },
+        {
+          "lat": 52.4352314,
+          "lon": 13.2746576
+        },
+        {
+          "lat": 52.4353434,
+          "lon": 13.2745499
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "parking_aisle",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 108013991,
+      "bounds": {
+        "minlat": 52.4337814,
+        "minlon": 13.2750172,
+        "maxlat": 52.4355519,
+        "maxlon": 13.2767578
+      },
+      "geometry": [
+        {
+          "lat": 52.4337814,
+          "lon": 13.2767578
+        },
+        {
+          "lat": 52.4349122,
+          "lon": 13.2756619
+        },
+        {
+          "lat": 52.4355519,
+          "lon": 13.2750172
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "compacted"
+      }
+    },
+    {
+      "type": "way",
+      "id": 108013992,
+      "bounds": {
+        "minlat": 52.4355519,
+        "minlon": 13.2745497,
+        "maxlat": 52.4362136,
+        "maxlon": 13.2750172
+      },
+      "geometry": [
+        {
+          "lat": 52.4355519,
+          "lon": 13.2750172
+        },
+        {
+          "lat": 52.4360363,
+          "lon": 13.2745497
+        },
+        {
+          "lat": 52.4361093,
+          "lon": 13.2745745
+        },
+        {
+          "lat": 52.4361921,
+          "lon": 13.2746857
+        },
+        {
+          "lat": 52.4362136,
+          "lon": 13.2746921
+        }
+      ],
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 108013993,
+      "bounds": {
+        "minlat": 52.4354683,
+        "minlon": 13.2741014,
+        "maxlat": 52.4356707,
+        "maxlon": 13.2746449
+      },
+      "geometry": [
+        {
+          "lat": 52.4354683,
+          "lon": 13.2741014
+        },
+        {
+          "lat": 52.4354868,
+          "lon": 13.2741513
+        },
+        {
+          "lat": 52.4354998,
+          "lon": 13.2741862
+        },
+        {
+          "lat": 52.4355206,
+          "lon": 13.2742421
+        },
+        {
+          "lat": 52.4355436,
+          "lon": 13.2743037
+        },
+        {
+          "lat": 52.4356015,
+          "lon": 13.2744591
+        },
+        {
+          "lat": 52.4356707,
+          "lon": 13.2746449
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 108656631,
+      "bounds": {
+        "minlat": 52.4351438,
+        "minlon": 13.2744073,
+        "maxlat": 52.4352314,
+        "maxlon": 13.2746576
+      },
+      "geometry": [
+        {
+          "lat": 52.4352314,
+          "lon": 13.2746576
+        },
+        {
+          "lat": 52.4352091,
+          "lon": 13.2745938
+        },
+        {
+          "lat": 52.4351739,
+          "lon": 13.2744932
+        },
+        {
+          "lat": 52.4351612,
+          "lon": 13.274457
+        },
+        {
+          "lat": 52.4351438,
+          "lon": 13.2744073
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "driveway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 110280170,
+      "bounds": {
+        "minlat": 52.4361408,
+        "minlon": 13.2749781,
+        "maxlat": 52.4362191,
+        "maxlon": 13.2750629
+      },
+      "geometry": [
+        {
+          "lat": 52.4362191,
+          "lon": 13.2749781
+        },
+        {
+          "lat": 52.4362124,
+          "lon": 13.2749989
+        },
+        {
+          "lat": 52.4361408,
+          "lon": 13.2750629
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 110312735,
+      "bounds": {
+        "minlat": 52.436536,
+        "minlon": 13.2736715,
+        "maxlat": 52.4365928,
+        "maxlon": 13.2738262
+      },
+      "geometry": [
+        {
+          "lat": 52.4365928,
+          "lon": 13.2738262
+        },
+        {
+          "lat": 52.436536,
+          "lon": 13.2736715
+        }
+      ],
+      "tags": {
+        "access": "yes",
+        "foot": "yes",
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "up",
+        "lit": "yes",
+        "motor_vehicle": "no",
+        "ramp": "no",
+        "sidewalk": "no",
+        "step_count": "31",
+        "surface": "paving_stones",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 146987624,
+      "bounds": {
+        "minlat": 52.4370469,
+        "minlon": 13.2737242,
+        "maxlat": 52.4376801,
+        "maxlon": 13.2743271
+      },
+      "geometry": [
+        {
+          "lat": 52.4370469,
+          "lon": 13.2743271
+        },
+        {
+          "lat": 52.4376313,
+          "lon": 13.2737707
+        },
+        {
+          "lat": 52.4376801,
+          "lon": 13.2737242
+        }
+      ],
+      "tags": {
+        "access": "destination",
+        "cycleway:right": "no",
+        "highway": "service",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Mörchinger Straße",
+        "name:etymology:wikidata": "Q22353",
+        "name:etymology:wikipedia": "de:Morhange",
+        "oneway": "yes",
+        "postal_code": "14169",
+        "sidewalk": "both",
+        "sidewalk:both:surface": "paving_stones",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 146987626,
+      "bounds": {
+        "minlat": 52.4373332,
+        "minlon": 13.2745536,
+        "maxlat": 52.4379638,
+        "maxlon": 13.2751463
+      },
+      "geometry": [
+        {
+          "lat": 52.4379638,
+          "lon": 13.2745536
+        },
+        {
+          "lat": 52.437916,
+          "lon": 13.2745986
+        },
+        {
+          "lat": 52.4373332,
+          "lon": 13.2751463
+        }
+      ],
+      "tags": {
+        "access": "destination",
+        "cycleway:right": "no",
+        "highway": "service",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Mörchinger Straße",
+        "name:etymology:wikidata": "Q22353",
+        "name:etymology:wikipedia": "de:Morhange",
+        "oneway": "yes",
+        "postal_code": "14169",
+        "sidewalk": "both",
+        "sidewalk:both:surface": "paving_stones",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 146987628,
+      "bounds": {
+        "minlat": 52.436947,
+        "minlon": 13.2734437,
+        "maxlat": 52.4375841,
+        "maxlon": 13.2740413
+      },
+      "geometry": [
+        {
+          "lat": 52.4375841,
+          "lon": 13.2734437
+        },
+        {
+          "lat": 52.4375347,
+          "lon": 13.27349
+        },
+        {
+          "lat": 52.436947,
+          "lon": 13.2740413
+        }
+      ],
+      "tags": {
+        "access": "destination",
+        "cycleway:right": "no",
+        "highway": "service",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Mörchinger Straße",
+        "name:etymology:wikidata": "Q22353",
+        "name:etymology:wikipedia": "de:Morhange",
+        "oneway": "yes",
+        "postal_code": "14169",
+        "sidewalk": "both",
+        "sidewalk:both:surface": "paving_stones",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 148699027,
+      "bounds": {
+        "minlat": 52.436355,
+        "minlon": 13.2760518,
+        "maxlat": 52.4366025,
+        "maxlon": 13.2762965
+      },
+      "geometry": [
+        {
+          "lat": 52.436355,
+          "lon": 13.2762965
+        },
+        {
+          "lat": 52.4364308,
+          "lon": 13.2762216
+        },
+        {
+          "lat": 52.4366025,
+          "lon": 13.2760518
+        }
+      ],
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 148699030,
+      "bounds": {
+        "minlat": 52.4355322,
+        "minlon": 13.276204,
+        "maxlat": 52.436355,
+        "maxlon": 13.2771051
+      },
+      "geometry": [
+        {
+          "lat": 52.4355322,
+          "lon": 13.2771051
+        },
+        {
+          "lat": 52.436355,
+          "lon": 13.2762965
+        },
+        {
+          "lat": 52.4363263,
+          "lon": 13.276204
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "dirt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 148699040,
+      "bounds": {
+        "minlat": 52.4362136,
+        "minlon": 13.2746921,
+        "maxlat": 52.4373476,
+        "maxlon": 13.2781248
+      },
+      "geometry": [
+        {
+          "lat": 52.4373476,
+          "lon": 13.2781248
+        },
+        {
+          "lat": 52.4372982,
+          "lon": 13.2779705
+        },
+        {
+          "lat": 52.4372017,
+          "lon": 13.2775162
+        },
+        {
+          "lat": 52.4371465,
+          "lon": 13.2772744
+        },
+        {
+          "lat": 52.4370088,
+          "lon": 13.2768482
+        },
+        {
+          "lat": 52.436784,
+          "lon": 13.2763298
+        },
+        {
+          "lat": 52.4366025,
+          "lon": 13.2760518
+        },
+        {
+          "lat": 52.4362191,
+          "lon": 13.2749781
+        },
+        {
+          "lat": 52.4362525,
+          "lon": 13.274935
+        },
+        {
+          "lat": 52.4362517,
+          "lon": 13.2748096
+        },
+        {
+          "lat": 52.4362136,
+          "lon": 13.2746921
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 152727673,
+      "bounds": {
+        "minlat": 52.4373556,
+        "minlon": 13.2753396,
+        "maxlat": 52.4374019,
+        "maxlon": 13.2753833
+      },
+      "geometry": [
+        {
+          "lat": 52.4373556,
+          "lon": 13.2753833
+        },
+        {
+          "lat": 52.4373778,
+          "lon": 13.2753623
+        },
+        {
+          "lat": 52.4374019,
+          "lon": 13.2753396
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "14169",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 159635101,
+      "bounds": {
+        "minlat": 52.4354993,
+        "minlon": 13.2731941,
+        "maxlat": 52.4356926,
+        "maxlon": 13.2732437
+      },
+      "geometry": [
+        {
+          "lat": 52.4354993,
+          "lon": 13.2732437
+        },
+        {
+          "lat": 52.435624,
+          "lon": 13.2731941
+        },
+        {
+          "lat": 52.4356926,
+          "lon": 13.2732174
+        }
+      ],
+      "tags": {
+        "bicycle": "dismount",
+        "highway": "footway",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 159635102,
+      "bounds": {
+        "minlat": 52.4354697,
+        "minlon": 13.2732437,
+        "maxlat": 52.4354993,
+        "maxlon": 13.2732646
+      },
+      "geometry": [
+        {
+          "lat": 52.4354697,
+          "lon": 13.2732646
+        },
+        {
+          "lat": 52.4354993,
+          "lon": 13.2732437
+        }
+      ],
+      "tags": {
+        "bicycle": "dismount",
+        "highway": "footway",
+        "surface": "sett",
+        "tunnel": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 159635103,
+      "bounds": {
+        "minlat": 52.435191,
+        "minlon": 13.2732433,
+        "maxlat": 52.4353819,
+        "maxlon": 13.2732978
+      },
+      "geometry": [
+        {
+          "lat": 52.435191,
+          "lon": 13.2732433
+        },
+        {
+          "lat": 52.4352583,
+          "lon": 13.2732725
+        },
+        {
+          "lat": 52.4353168,
+          "lon": 13.2732978
+        },
+        {
+          "lat": 52.4353819,
+          "lon": 13.2732976
+        }
+      ],
+      "tags": {
+        "bicycle": "dismount",
+        "crossing": "unmarked",
+        "footway": "crossing",
+        "highway": "footway",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 163585037,
+      "bounds": {
+        "minlat": 52.4360929,
+        "minlon": 13.2724028,
+        "maxlat": 52.4363944,
+        "maxlon": 13.272597
+      },
+      "geometry": [
+        {
+          "lat": 52.4360929,
+          "lon": 13.272597
+        },
+        {
+          "lat": 52.4363005,
+          "lon": 13.2724028
+        },
+        {
+          "lat": 52.4363944,
+          "lon": 13.272476
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones",
+        "width": "1"
+      }
+    },
+    {
+      "type": "way",
+      "id": 164366344,
+      "bounds": {
+        "minlat": 52.4361105,
+        "minlon": 13.274389,
+        "maxlat": 52.4362032,
+        "maxlon": 13.2746575
+      },
+      "geometry": [
+        {
+          "lat": 52.4362032,
+          "lon": 13.2746575
+        },
+        {
+          "lat": 52.4361105,
+          "lon": 13.274389
+        }
+      ],
+      "tags": {
+        "bicycle": "dismount",
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "up",
+        "ramp": "no",
+        "surface": "concrete",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 164366345,
+      "bounds": {
+        "minlat": 52.4356926,
+        "minlon": 13.2732174,
+        "maxlat": 52.4359668,
+        "maxlon": 13.2734839
+      },
+      "geometry": [
+        {
+          "lat": 52.4356926,
+          "lon": 13.2732174
+        },
+        {
+          "lat": 52.4358316,
+          "lon": 13.2733062
+        },
+        {
+          "lat": 52.4359073,
+          "lon": 13.2733714
+        },
+        {
+          "lat": 52.4359668,
+          "lon": 13.2734839
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "highway": "path",
+        "surface": "compacted"
+      }
+    },
+    {
+      "type": "way",
+      "id": 179404218,
+      "bounds": {
+        "minlat": 52.4339137,
+        "minlon": 13.2753238,
+        "maxlat": 52.4362739,
+        "maxlon": 13.2773256
+      },
+      "geometry": [
+        {
+          "lat": 52.4339137,
+          "lon": 13.2773256
+        },
+        {
+          "lat": 52.4339686,
+          "lon": 13.277271
+        },
+        {
+          "lat": 52.435097,
+          "lon": 13.2761628
+        },
+        {
+          "lat": 52.4359467,
+          "lon": 13.2753238
+        },
+        {
+          "lat": 52.4360123,
+          "lon": 13.2753351
+        },
+        {
+          "lat": 52.4360387,
+          "lon": 13.2753697
+        },
+        {
+          "lat": 52.4362739,
+          "lon": 13.2760519
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Brettnacher Straße",
+        "name:etymology:wikidata": "Q21898",
+        "name:etymology:wikipedia": "de:Brettnach",
+        "parking:both": "yes",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "sidewalk:both": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 191525363,
+      "bounds": {
+        "minlat": 52.4335274,
+        "minlon": 13.2740572,
+        "maxlat": 52.4355152,
+        "maxlon": 13.2760857
+      },
+      "geometry": [
+        {
+          "lat": 52.4355152,
+          "lon": 13.2740572
+        },
+        {
+          "lat": 52.4354683,
+          "lon": 13.2741014
+        },
+        {
+          "lat": 52.4352564,
+          "lon": 13.2743011
+        },
+        {
+          "lat": 52.4351438,
+          "lon": 13.2744073
+        },
+        {
+          "lat": 52.4349995,
+          "lon": 13.2745432
+        },
+        {
+          "lat": 52.4344196,
+          "lon": 13.2751135
+        },
+        {
+          "lat": 52.4337351,
+          "lon": 13.2758701
+        },
+        {
+          "lat": 52.4336814,
+          "lon": 13.2759227
+        },
+        {
+          "lat": 52.4335274,
+          "lon": 13.2760857
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Sundgauer Straße",
+        "name:etymology:wikidata": "Q252268",
+        "parking:both": "on_kerb",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "14167",
+        "sidewalk:both": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 223026989,
+      "bounds": {
+        "minlat": 52.435833,
+        "minlon": 13.2758743,
+        "maxlat": 52.4358907,
+        "maxlon": 13.2760259
+      },
+      "geometry": [
+        {
+          "lat": 52.4358907,
+          "lon": 13.2760259
+        },
+        {
+          "lat": 52.4358678,
+          "lon": 13.2759626
+        },
+        {
+          "lat": 52.435833,
+          "lon": 13.2758743
+        }
+      ],
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 223026995,
+      "bounds": {
+        "minlat": 52.4357453,
+        "minlon": 13.276204,
+        "maxlat": 52.4363263,
+        "maxlon": 13.2768085
+      },
+      "geometry": [
+        {
+          "lat": 52.4357453,
+          "lon": 13.2768085
+        },
+        {
+          "lat": 52.4360653,
+          "lon": 13.2765078
+        },
+        {
+          "lat": 52.4362316,
+          "lon": 13.2763543
+        },
+        {
+          "lat": 52.4362731,
+          "lon": 13.276316
+        },
+        {
+          "lat": 52.4363263,
+          "lon": 13.276204
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "bicycle": "destination",
+        "highway": "service",
+        "maxspeed": "10",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 223028672,
+      "bounds": {
+        "minlat": 52.4361078,
+        "minlon": 13.2750629,
+        "maxlat": 52.4361408,
+        "maxlon": 13.275097
+      },
+      "geometry": [
+        {
+          "lat": 52.4361408,
+          "lon": 13.2750629
+        },
+        {
+          "lat": 52.4361078,
+          "lon": 13.275097
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones",
+        "tunnel": "building_passage"
+      }
+    },
+    {
+      "type": "way",
+      "id": 223028673,
+      "bounds": {
+        "minlat": 52.4358678,
+        "minlon": 13.2758657,
+        "maxlat": 52.4359652,
+        "maxlon": 13.2759626
+      },
+      "geometry": [
+        {
+          "lat": 52.4358678,
+          "lon": 13.2759626
+        },
+        {
+          "lat": 52.4359652,
+          "lon": 13.2758657
+        }
+      ],
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 223028674,
+      "bounds": {
+        "minlat": 52.4360264,
+        "minlon": 13.275097,
+        "maxlat": 52.4361078,
+        "maxlon": 13.2752331
+      },
+      "geometry": [
+        {
+          "lat": 52.4361078,
+          "lon": 13.275097
+        },
+        {
+          "lat": 52.4360308,
+          "lon": 13.2751789
+        },
+        {
+          "lat": 52.4360264,
+          "lon": 13.2752331
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 223028675,
+      "bounds": {
+        "minlat": 52.4360454,
+        "minlon": 13.2737169,
+        "maxlat": 52.4362157,
+        "maxlon": 13.2746921
+      },
+      "geometry": [
+        {
+          "lat": 52.4360454,
+          "lon": 13.2737169
+        },
+        {
+          "lat": 52.436108,
+          "lon": 13.273936
+        },
+        {
+          "lat": 52.4361596,
+          "lon": 13.2742002
+        },
+        {
+          "lat": 52.4361911,
+          "lon": 13.2744049
+        },
+        {
+          "lat": 52.4362157,
+          "lon": 13.2745756
+        },
+        {
+          "lat": 52.4362136,
+          "lon": 13.2746921
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "highway": "path",
+        "surface": "compacted"
+      }
+    },
+    {
+      "type": "way",
+      "id": 223028676,
+      "bounds": {
+        "minlat": 52.4359668,
+        "minlon": 13.2734839,
+        "maxlat": 52.4360454,
+        "maxlon": 13.2737169
+      },
+      "geometry": [
+        {
+          "lat": 52.4359668,
+          "lon": 13.2734839
+        },
+        {
+          "lat": 52.4360454,
+          "lon": 13.2737169
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "highway": "path",
+        "layer": "-1",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 223136040,
+      "bounds": {
+        "minlat": 52.4357571,
+        "minlon": 13.2756381,
+        "maxlat": 52.4357859,
+        "maxlon": 13.2757174
+      },
+      "geometry": [
+        {
+          "lat": 52.4357859,
+          "lon": 13.2757174
+        },
+        {
+          "lat": 52.4357571,
+          "lon": 13.2756381
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 223136042,
+      "bounds": {
+        "minlat": 52.4359988,
+        "minlon": 13.2750868,
+        "maxlat": 52.4360308,
+        "maxlon": 13.2751789
+      },
+      "geometry": [
+        {
+          "lat": 52.4359988,
+          "lon": 13.2750868
+        },
+        {
+          "lat": 52.4360308,
+          "lon": 13.2751789
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 223136046,
+      "bounds": {
+        "minlat": 52.4355313,
+        "minlon": 13.2755386,
+        "maxlat": 52.4355554,
+        "maxlon": 13.2756059
+      },
+      "geometry": [
+        {
+          "lat": 52.4355313,
+          "lon": 13.2755386
+        },
+        {
+          "lat": 52.4355554,
+          "lon": 13.2756059
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 223136047,
+      "bounds": {
+        "minlat": 52.4357701,
+        "minlon": 13.2753078,
+        "maxlat": 52.4357937,
+        "maxlon": 13.2753724
+      },
+      "geometry": [
+        {
+          "lat": 52.4357701,
+          "lon": 13.2753078
+        },
+        {
+          "lat": 52.4357937,
+          "lon": 13.2753724
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 236589619,
+      "bounds": {
+        "minlat": 52.4354552,
+        "minlon": 13.2744591,
+        "maxlat": 52.4356015,
+        "maxlon": 13.2745998
+      },
+      "geometry": [
+        {
+          "lat": 52.4356015,
+          "lon": 13.2744591
+        },
+        {
+          "lat": 52.4354552,
+          "lon": 13.2745998
+        }
+      ],
+      "tags": {
+        "check_date:surface": "2026-04-04",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 238736117,
+      "bounds": {
+        "minlat": 52.4362737,
+        "minlon": 13.2736947,
+        "maxlat": 52.436304,
+        "maxlon": 13.2737813
+      },
+      "geometry": [
+        {
+          "lat": 52.436304,
+          "lon": 13.2737813
+        },
+        {
+          "lat": 52.4362737,
+          "lon": 13.2736947
+        }
+      ],
+      "tags": {
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "down",
+        "indoor": "yes",
+        "level": "0",
+        "lit": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 238736118,
+      "bounds": {
+        "minlat": 52.436304,
+        "minlon": 13.2737813,
+        "maxlat": 52.4363219,
+        "maxlon": 13.2738312
+      },
+      "geometry": [
+        {
+          "lat": 52.4363219,
+          "lon": 13.2738312
+        },
+        {
+          "lat": 52.436304,
+          "lon": 13.2737813
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "layer": "1",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 238736119,
+      "bounds": {
+        "minlat": 52.436331,
+        "minlon": 13.2738583,
+        "maxlat": 52.436362,
+        "maxlon": 13.2739447
+      },
+      "geometry": [
+        {
+          "lat": 52.436331,
+          "lon": 13.2738583
+        },
+        {
+          "lat": 52.436362,
+          "lon": 13.2739447
+        }
+      ],
+      "tags": {
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "down",
+        "indoor": "yes",
+        "level": "0",
+        "lit": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 238736120,
+      "bounds": {
+        "minlat": 52.4363296,
+        "minlon": 13.2739414,
+        "maxlat": 52.4364123,
+        "maxlon": 13.2740213
+      },
+      "geometry": [
+        {
+          "lat": 52.4364123,
+          "lon": 13.2739414
+        },
+        {
+          "lat": 52.4363723,
+          "lon": 13.2739763
+        },
+        {
+          "lat": 52.4363296,
+          "lon": 13.2740213
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "indoor": "yes",
+        "level": "0",
+        "lit": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 238736121,
+      "bounds": {
+        "minlat": 52.4363466,
+        "minlon": 13.2734099,
+        "maxlat": 52.4363947,
+        "maxlon": 13.2735014
+      },
+      "geometry": [
+        {
+          "lat": 52.4363947,
+          "lon": 13.2734099
+        },
+        {
+          "lat": 52.4363466,
+          "lon": 13.2734586
+        },
+        {
+          "lat": 52.4363598,
+          "lon": 13.2735014
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 238736122,
+      "bounds": {
+        "minlat": 52.4362193,
+        "minlon": 13.2736295,
+        "maxlat": 52.4363014,
+        "maxlon": 13.2737097
+      },
+      "geometry": [
+        {
+          "lat": 52.4363014,
+          "lon": 13.2736295
+        },
+        {
+          "lat": 52.4362635,
+          "lon": 13.2736661
+        },
+        {
+          "lat": 52.4362193,
+          "lon": 13.2737097
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "indoor": "yes",
+        "level": "0",
+        "lit": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 238736126,
+      "bounds": {
+        "minlat": 52.4364688,
+        "minlon": 13.2736735,
+        "maxlat": 52.4364869,
+        "maxlon": 13.2737056
+      },
+      "geometry": [
+        {
+          "lat": 52.4364869,
+          "lon": 13.2736735
+        },
+        {
+          "lat": 52.4364688,
+          "lon": 13.2737056
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "layer": "1",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 253117615,
+      "bounds": {
+        "minlat": 52.4367817,
+        "minlon": 13.2729898,
+        "maxlat": 52.4378345,
+        "maxlon": 13.2766641
+      },
+      "geometry": [
+        {
+          "lat": 52.4378345,
+          "lon": 13.2766641
+        },
+        {
+          "lat": 52.4373778,
+          "lon": 13.2753623
+        },
+        {
+          "lat": 52.4371783,
+          "lon": 13.2748112
+        },
+        {
+          "lat": 52.437156,
+          "lon": 13.2748344
+        },
+        {
+          "lat": 52.4367817,
+          "lon": 13.2737722
+        },
+        {
+          "lat": 52.4368828,
+          "lon": 13.2736627
+        },
+        {
+          "lat": 52.4369436,
+          "lon": 13.2735365
+        },
+        {
+          "lat": 52.4369577,
+          "lon": 13.2733639
+        },
+        {
+          "lat": 52.4369139,
+          "lon": 13.2732239
+        },
+        {
+          "lat": 52.4368986,
+          "lon": 13.2731316
+        },
+        {
+          "lat": 52.4368992,
+          "lon": 13.2730198
+        },
+        {
+          "lat": 52.436906,
+          "lon": 13.2729898
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "name": "Sundgauer Straße",
+        "name:etymology:wikidata": "Q252268",
+        "surface": "paving_stones",
+        "width": "2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 253117616,
+      "bounds": {
+        "minlat": 52.4368043,
+        "minlon": 13.2729522,
+        "maxlat": 52.4368175,
+        "maxlon": 13.2729886
+      },
+      "geometry": [
+        {
+          "lat": 52.4368175,
+          "lon": 13.2729886
+        },
+        {
+          "lat": 52.4368043,
+          "lon": 13.2729522
+        }
+      ],
+      "tags": {
+        "handrail": "yes",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 253117617,
+      "bounds": {
+        "minlat": 52.4370293,
+        "minlon": 13.2727461,
+        "maxlat": 52.437038,
+        "maxlon": 13.2727741
+      },
+      "geometry": [
+        {
+          "lat": 52.437038,
+          "lon": 13.2727741
+        },
+        {
+          "lat": 52.4370293,
+          "lon": 13.2727461
+        }
+      ],
+      "tags": {
+        "handrail": "yes",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 253117618,
+      "bounds": {
+        "minlat": 52.4372329,
+        "minlon": 13.2726534,
+        "maxlat": 52.4372438,
+        "maxlon": 13.2727598
+      },
+      "geometry": [
+        {
+          "lat": 52.4372438,
+          "lon": 13.2726534
+        },
+        {
+          "lat": 52.4372329,
+          "lon": 13.2727598
+        }
+      ],
+      "tags": {
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "down",
+        "lit": "yes",
+        "ramp": "no",
+        "step_count": "9",
+        "surface": "sett",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 253117619,
+      "bounds": {
+        "minlat": 52.4368917,
+        "minlon": 13.2729898,
+        "maxlat": 52.436906,
+        "maxlon": 13.2729904
+      },
+      "geometry": [
+        {
+          "lat": 52.436906,
+          "lon": 13.2729898
+        },
+        {
+          "lat": 52.4368917,
+          "lon": 13.2729904
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 253117620,
+      "bounds": {
+        "minlat": 52.4372329,
+        "minlon": 13.2727598,
+        "maxlat": 52.4374373,
+        "maxlon": 13.273354
+      },
+      "geometry": [
+        {
+          "lat": 52.4372329,
+          "lon": 13.2727598
+        },
+        {
+          "lat": 52.4374373,
+          "lon": 13.273354
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 265907410,
+      "bounds": {
+        "minlat": 52.4359019,
+        "minlon": 13.2738074,
+        "maxlat": 52.4361105,
+        "maxlon": 13.274389
+      },
+      "geometry": [
+        {
+          "lat": 52.4361105,
+          "lon": 13.274389
+        },
+        {
+          "lat": 52.4359019,
+          "lon": 13.2738074
+        }
+      ],
+      "tags": {
+        "bicycle": "dismount",
+        "highway": "footway",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 265907412,
+      "bounds": {
+        "minlat": 52.4360873,
+        "minlon": 13.2732463,
+        "maxlat": 52.436125,
+        "maxlon": 13.2733133
+      },
+      "geometry": [
+        {
+          "lat": 52.436125,
+          "lon": 13.273293
+        },
+        {
+          "lat": 52.4361041,
+          "lon": 13.2733133
+        },
+        {
+          "lat": 52.4360873,
+          "lon": 13.2732666
+        },
+        {
+          "lat": 52.4361083,
+          "lon": 13.2732463
+        },
+        {
+          "lat": 52.436125,
+          "lon": 13.273293
+        }
+      ],
+      "tags": {
+        "access": "yes",
+        "bicycle": "yes",
+        "building:levels": "0",
+        "building:part": "yes",
+        "highway": "elevator",
+        "indoor": "yes",
+        "level": "1",
+        "levelpart": "elevator_platform",
+        "roof:levels": "0",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 276249404,
+      "bounds": {
+        "minlat": 52.4363219,
+        "minlon": 13.2738312,
+        "maxlat": 52.436331,
+        "maxlon": 13.2738583
+      },
+      "geometry": [
+        {
+          "lat": 52.4363219,
+          "lon": 13.2738312
+        },
+        {
+          "lat": 52.436331,
+          "lon": 13.2738583
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "layer": "1",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 276249405,
+      "bounds": {
+        "minlat": 52.4363219,
+        "minlon": 13.2737056,
+        "maxlat": 52.4364688,
+        "maxlon": 13.2738312
+      },
+      "geometry": [
+        {
+          "lat": 52.4364688,
+          "lon": 13.2737056
+        },
+        {
+          "lat": 52.4363219,
+          "lon": 13.2738312
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "indoor": "yes",
+        "layer": "1",
+        "level": "1",
+        "lit": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 283870808,
+      "bounds": {
+        "minlat": 52.4356243,
+        "minlon": 13.2738999,
+        "maxlat": 52.4358597,
+        "maxlon": 13.2740892
+      },
+      "geometry": [
+        {
+          "lat": 52.4358597,
+          "lon": 13.2738999
+        },
+        {
+          "lat": 52.4356717,
+          "lon": 13.2740892
+        },
+        {
+          "lat": 52.4356545,
+          "lon": 13.2740404
+        },
+        {
+          "lat": 52.4356422,
+          "lon": 13.2740054
+        },
+        {
+          "lat": 52.4356243,
+          "lon": 13.2739543
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "parking_aisle",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 283870810,
+      "bounds": {
+        "minlat": 52.4355206,
+        "minlon": 13.2740892,
+        "maxlat": 52.4356717,
+        "maxlon": 13.2742421
+      },
+      "geometry": [
+        {
+          "lat": 52.4355206,
+          "lon": 13.2742421
+        },
+        {
+          "lat": 52.4356717,
+          "lon": 13.2740892
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 285543916,
+      "bounds": {
+        "minlat": 52.4355556,
+        "minlon": 13.2760259,
+        "maxlat": 52.4360653,
+        "maxlon": 13.2765078
+      },
+      "geometry": [
+        {
+          "lat": 52.4355556,
+          "lon": 13.2763525
+        },
+        {
+          "lat": 52.4355694,
+          "lon": 13.2763391
+        },
+        {
+          "lat": 52.4356893,
+          "lon": 13.2762242
+        },
+        {
+          "lat": 52.4358907,
+          "lon": 13.2760259
+        },
+        {
+          "lat": 52.4359854,
+          "lon": 13.2762872
+        },
+        {
+          "lat": 52.4359929,
+          "lon": 13.2763079
+        },
+        {
+          "lat": 52.4360653,
+          "lon": 13.2765078
+        }
+      ],
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 285543921,
+      "bounds": {
+        "minlat": 52.4365928,
+        "minlon": 13.2738262,
+        "maxlat": 52.4379055,
+        "maxlon": 13.277635
+      },
+      "geometry": [
+        {
+          "lat": 52.4379055,
+          "lon": 13.277635
+        },
+        {
+          "lat": 52.4378801,
+          "lon": 13.2774772
+        },
+        {
+          "lat": 52.4372033,
+          "lon": 13.2755299
+        },
+        {
+          "lat": 52.4365928,
+          "lon": 13.2738262
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "fine_gravel"
+      }
+    },
+    {
+      "type": "way",
+      "id": 285543922,
+      "bounds": {
+        "minlat": 52.436906,
+        "minlon": 13.2728647,
+        "maxlat": 52.4370224,
+        "maxlon": 13.2729898
+      },
+      "geometry": [
+        {
+          "lat": 52.436906,
+          "lon": 13.2729898
+        },
+        {
+          "lat": 52.4370224,
+          "lon": 13.2728647
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 299696382,
+      "bounds": {
+        "minlat": 52.4349915,
+        "minlon": 13.2713068,
+        "maxlat": 52.4356926,
+        "maxlon": 13.2732174
+      },
+      "geometry": [
+        {
+          "lat": 52.4349915,
+          "lon": 13.2713068
+        },
+        {
+          "lat": 52.4356926,
+          "lon": 13.2732174
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "highway": "path",
+        "lit": "no",
+        "smoothness": "intermediate",
+        "surface": "fine_gravel"
+      }
+    },
+    {
+      "type": "way",
+      "id": 383944941,
+      "bounds": {
+        "minlat": 52.436451,
+        "minlon": 13.2731879,
+        "maxlat": 52.4365782,
+        "maxlon": 13.273309
+      },
+      "geometry": [
+        {
+          "lat": 52.4365782,
+          "lon": 13.2731879
+        },
+        {
+          "lat": 52.436451,
+          "lon": 13.273309
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "S Sundgauer Straße",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 383944944,
+      "bounds": {
+        "minlat": 52.4355277,
+        "minlon": 13.2738233,
+        "maxlat": 52.4356801,
+        "maxlon": 13.2739648
+      },
+      "geometry": [
+        {
+          "lat": 52.4355277,
+          "lon": 13.2739648
+        },
+        {
+          "lat": 52.4356213,
+          "lon": 13.2738779
+        },
+        {
+          "lat": 52.4356801,
+          "lon": 13.2738233
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "S Sundgauer Straße",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 404905923,
+      "bounds": {
+        "minlat": 52.4361066,
+        "minlon": 13.2732792,
+        "maxlat": 52.436123,
+        "maxlon": 13.2733251
+      },
+      "geometry": [
+        {
+          "lat": 52.4361066,
+          "lon": 13.2732792
+        },
+        {
+          "lat": 52.436123,
+          "lon": 13.2733251
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "indoor": "yes",
+        "level": "0"
+      }
+    },
+    {
+      "type": "way",
+      "id": 404905924,
+      "bounds": {
+        "minlat": 52.436362,
+        "minlon": 13.2739447,
+        "maxlat": 52.4363723,
+        "maxlon": 13.2739763
+      },
+      "geometry": [
+        {
+          "lat": 52.4363723,
+          "lon": 13.2739763
+        },
+        {
+          "lat": 52.436362,
+          "lon": 13.2739447
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "indoor": "yes",
+        "level": "0",
+        "lit": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 404905925,
+      "bounds": {
+        "minlat": 52.4362635,
+        "minlon": 13.2736661,
+        "maxlat": 52.4362737,
+        "maxlon": 13.2736947
+      },
+      "geometry": [
+        {
+          "lat": 52.4362635,
+          "lon": 13.2736661
+        },
+        {
+          "lat": 52.4362737,
+          "lon": 13.2736947
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "indoor": "yes",
+        "level": "0",
+        "lit": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 404905926,
+      "bounds": {
+        "minlat": 52.436093,
+        "minlon": 13.2732783,
+        "maxlat": 52.4361777,
+        "maxlon": 13.2733507
+      },
+      "geometry": [
+        {
+          "lat": 52.4361777,
+          "lon": 13.2732783
+        },
+        {
+          "lat": 52.436123,
+          "lon": 13.2733251
+        },
+        {
+          "lat": 52.436093,
+          "lon": 13.2733507
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "indoor": "yes",
+        "level": "0"
+      }
+    },
+    {
+      "type": "way",
+      "id": 404905927,
+      "bounds": {
+        "minlat": 52.4360874,
+        "minlon": 13.2732465,
+        "maxlat": 52.4361251,
+        "maxlon": 13.2733135
+      },
+      "geometry": [
+        {
+          "lat": 52.4361251,
+          "lon": 13.2732932
+        },
+        {
+          "lat": 52.4361149,
+          "lon": 13.2733031
+        },
+        {
+          "lat": 52.4361042,
+          "lon": 13.2733135
+        },
+        {
+          "lat": 52.4360874,
+          "lon": 13.2732668
+        },
+        {
+          "lat": 52.4361084,
+          "lon": 13.2732465
+        },
+        {
+          "lat": 52.4361251,
+          "lon": 13.2732932
+        }
+      ],
+      "tags": {
+        "access": "yes",
+        "bicycle": "yes",
+        "building:levels": "1",
+        "building:part": "yes",
+        "highway": "elevator",
+        "indoor": "yes",
+        "level": "0",
+        "levelpart": "elevator_platform",
+        "roof:levels": "0",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 432657218,
+      "bounds": {
+        "minlat": 52.4370469,
+        "minlon": 13.2743271,
+        "maxlat": 52.4378547,
+        "maxlon": 13.2766389
+      },
+      "geometry": [
+        {
+          "lat": 52.4370469,
+          "lon": 13.2743271
+        },
+        {
+          "lat": 52.4373332,
+          "lon": 13.2751463
+        },
+        {
+          "lat": 52.4374019,
+          "lon": 13.2753396
+        },
+        {
+          "lat": 52.4374676,
+          "lon": 13.2755309
+        },
+        {
+          "lat": 52.4377688,
+          "lon": 13.2763929
+        },
+        {
+          "lat": 52.4378547,
+          "lon": 13.2766389
+        }
+      ],
+      "tags": {
+        "access": "destination",
+        "cycleway:both": "no",
+        "highway": "service",
+        "lit": "yes",
+        "maxspeed": "20",
+        "name": "Sundgauer Straße",
+        "oneway": "no",
+        "postal_code": "14169",
+        "sidewalk": "both",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 535575652,
+      "bounds": {
+        "minlat": 52.4361066,
+        "minlon": 13.2732792,
+        "maxlat": 52.4361328,
+        "maxlon": 13.2733624
+      },
+      "geometry": [
+        {
+          "lat": 52.4361066,
+          "lon": 13.2732792
+        },
+        {
+          "lat": 52.4361149,
+          "lon": 13.2733031
+        },
+        {
+          "lat": 52.4361328,
+          "lon": 13.2733624
+        }
+      ],
+      "tags": {
+        "bridge": "yes",
+        "highway": "footway",
+        "layer": "1",
+        "level": "1",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 710383604,
+      "bounds": {
+        "minlat": 52.4363944,
+        "minlon": 13.271855,
+        "maxlat": 52.437023,
+        "maxlon": 13.272476
+      },
+      "geometry": [
+        {
+          "lat": 52.4363944,
+          "lon": 13.272476
+        },
+        {
+          "lat": 52.4369702,
+          "lon": 13.2719072
+        },
+        {
+          "lat": 52.437023,
+          "lon": 13.271855
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "bicycle": "destination",
+        "foot": "permissive",
+        "highway": "service",
+        "name": "Mörchinger Straße",
+        "postal_code": "14169",
+        "service": "parking_aisle",
+        "sidewalk": "no",
+        "surface": "paving_stones",
+        "width": "1"
+      }
+    },
+    {
+      "type": "way",
+      "id": 761822573,
+      "bounds": {
+        "minlat": 52.4374373,
+        "minlon": 13.273354,
+        "maxlat": 52.4374978,
+        "maxlon": 13.2733838
+      },
+      "geometry": [
+        {
+          "lat": 52.4374373,
+          "lon": 13.273354
+        },
+        {
+          "lat": 52.4374978,
+          "lon": 13.2733838
+        }
+      ],
+      "tags": {
+        "access": "yes",
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "up",
+        "ramp": "no",
+        "surface": "sett",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 766282710,
+      "bounds": {
+        "minlat": 52.4372721,
+        "minlon": 13.2753833,
+        "maxlat": 52.4373556,
+        "maxlon": 13.275462
+      },
+      "geometry": [
+        {
+          "lat": 52.4372721,
+          "lon": 13.275462
+        },
+        {
+          "lat": 52.4373556,
+          "lon": 13.2753833
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones",
+        "tunnel": "building_passage"
+      }
+    },
+    {
+      "type": "way",
+      "id": 766282711,
+      "bounds": {
+        "minlat": 52.4372033,
+        "minlon": 13.275462,
+        "maxlat": 52.4372721,
+        "maxlon": 13.2755299
+      },
+      "geometry": [
+        {
+          "lat": 52.4372033,
+          "lon": 13.2755299
+        },
+        {
+          "lat": 52.4372721,
+          "lon": 13.275462
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "14169",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 832482309,
+      "bounds": {
+        "minlat": 52.436947,
+        "minlon": 13.2740413,
+        "maxlat": 52.4370469,
+        "maxlon": 13.2743271
+      },
+      "geometry": [
+        {
+          "lat": 52.436947,
+          "lon": 13.2740413
+        },
+        {
+          "lat": 52.4370469,
+          "lon": 13.2743271
+        }
+      ],
+      "tags": {
+        "access": "destination",
+        "cycleway:right": "no",
+        "highway": "service",
+        "lit": "yes",
+        "maxspeed": "20",
+        "name": "Sundgauer Straße",
+        "name:etymology:wikidata": "Q108564999",
+        "oneway": "yes",
+        "postal_code": "14169",
+        "sidewalk": "both",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 934763776,
+      "bounds": {
+        "minlat": 52.4363208,
+        "minlon": 13.2732306,
+        "maxlat": 52.436377,
+        "maxlon": 13.2733646
+      },
+      "geometry": [
+        {
+          "lat": 52.4363208,
+          "lon": 13.2732306
+        },
+        {
+          "lat": 52.4363427,
+          "lon": 13.2732827
+        },
+        {
+          "lat": 52.436377,
+          "lon": 13.2733646
+        }
+      ],
+      "tags": {
+        "crossing": "unmarked",
+        "crossing:markings": "no",
+        "footway": "crossing",
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 934763777,
+      "bounds": {
+        "minlat": 52.4368175,
+        "minlon": 13.2729886,
+        "maxlat": 52.4368917,
+        "maxlon": 13.2729904
+      },
+      "geometry": [
+        {
+          "lat": 52.4368917,
+          "lon": 13.2729904
+        },
+        {
+          "lat": 52.4368175,
+          "lon": 13.2729886
+        }
+      ],
+      "tags": {
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "up",
+        "lit": "no",
+        "ramp": "no",
+        "surface": "sett",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 934763778,
+      "bounds": {
+        "minlat": 52.4370224,
+        "minlon": 13.2727741,
+        "maxlat": 52.437038,
+        "maxlon": 13.2728647
+      },
+      "geometry": [
+        {
+          "lat": 52.4370224,
+          "lon": 13.2728647
+        },
+        {
+          "lat": 52.437038,
+          "lon": 13.2727741
+        }
+      ],
+      "tags": {
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "up",
+        "lit": "yes",
+        "ramp": "no",
+        "step_count": "5",
+        "surface": "sett",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 966179935,
+      "bounds": {
+        "minlat": 52.4362032,
+        "minlon": 13.2746575,
+        "maxlat": 52.4362136,
+        "maxlon": 13.2746921
+      },
+      "geometry": [
+        {
+          "lat": 52.4362136,
+          "lon": 13.2746921
+        },
+        {
+          "lat": 52.4362032,
+          "lon": 13.2746575
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1208904604,
+      "bounds": {
+        "minlat": 52.4371141,
+        "minlon": 13.272487,
+        "maxlat": 52.4371841,
+        "maxlon": 13.2725558
+      },
+      "geometry": [
+        {
+          "lat": 52.4371841,
+          "lon": 13.272487
+        },
+        {
+          "lat": 52.4371141,
+          "lon": 13.2725558
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Sundgauer Straße",
+        "name:etymology:wikidata": "Q252268",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "parking:left": "half_on_kerb",
+        "parking:right": "on_kerb",
+        "postal_code": "14169",
+        "sidewalk:both": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1278818298,
+      "bounds": {
+        "minlat": 52.433566,
+        "minlon": 13.2737972,
+        "maxlat": 52.4359123,
+        "maxlon": 13.2762277
+      },
+      "geometry": [
+        {
+          "lat": 52.433566,
+          "lon": 13.2762277
+        },
+        {
+          "lat": 52.4335799,
+          "lon": 13.2762139
+        },
+        {
+          "lat": 52.4336157,
+          "lon": 13.276146
+        },
+        {
+          "lat": 52.4337195,
+          "lon": 13.276036
+        },
+        {
+          "lat": 52.4338419,
+          "lon": 13.2759063
+        },
+        {
+          "lat": 52.4340746,
+          "lon": 13.2756332
+        },
+        {
+          "lat": 52.4346135,
+          "lon": 13.2750308
+        },
+        {
+          "lat": 52.4349766,
+          "lon": 13.2746825
+        },
+        {
+          "lat": 52.4351739,
+          "lon": 13.2744932
+        },
+        {
+          "lat": 52.4352865,
+          "lon": 13.2743872
+        },
+        {
+          "lat": 52.4354998,
+          "lon": 13.2741862
+        },
+        {
+          "lat": 52.4356545,
+          "lon": 13.2740404
+        },
+        {
+          "lat": 52.4358929,
+          "lon": 13.2738159
+        },
+        {
+          "lat": 52.4359019,
+          "lon": 13.2738074
+        },
+        {
+          "lat": 52.4359123,
+          "lon": 13.2737972
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1278818299,
+      "bounds": {
+        "minlat": 52.4334656,
+        "minlon": 13.2736277,
+        "maxlat": 52.4358527,
+        "maxlon": 13.2759535
+      },
+      "geometry": [
+        {
+          "lat": 52.4334656,
+          "lon": 13.2759535
+        },
+        {
+          "lat": 52.4334781,
+          "lon": 13.2759416
+        },
+        {
+          "lat": 52.4335321,
+          "lon": 13.27591
+        },
+        {
+          "lat": 52.4336593,
+          "lon": 13.2757875
+        },
+        {
+          "lat": 52.4336974,
+          "lon": 13.2757741
+        },
+        {
+          "lat": 52.4337559,
+          "lon": 13.2757176
+        },
+        {
+          "lat": 52.4337959,
+          "lon": 13.2756486
+        },
+        {
+          "lat": 52.434135,
+          "lon": 13.2752927
+        },
+        {
+          "lat": 52.4343817,
+          "lon": 13.2750203
+        },
+        {
+          "lat": 52.4348059,
+          "lon": 13.2746026
+        },
+        {
+          "lat": 52.4352038,
+          "lon": 13.2742272
+        },
+        {
+          "lat": 52.4356126,
+          "lon": 13.2738526
+        },
+        {
+          "lat": 52.4358177,
+          "lon": 13.2736646
+        },
+        {
+          "lat": 52.4358341,
+          "lon": 13.2736504
+        },
+        {
+          "lat": 52.4358431,
+          "lon": 13.2736394
+        },
+        {
+          "lat": 52.4358527,
+          "lon": 13.2736277
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1278818300,
+      "bounds": {
+        "minlat": 52.4358441,
+        "minlon": 13.2736785,
+        "maxlat": 52.4358807,
+        "maxlon": 13.2737815
+      },
+      "geometry": [
+        {
+          "lat": 52.4358807,
+          "lon": 13.2737815
+        },
+        {
+          "lat": 52.4358623,
+          "lon": 13.2737299
+        },
+        {
+          "lat": 52.4358441,
+          "lon": 13.2736785
+        }
+      ],
+      "tags": {
+        "bicycle": "dismount",
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1278818301,
+      "bounds": {
+        "minlat": 52.4359123,
+        "minlon": 13.2734054,
+        "maxlat": 52.4363638,
+        "maxlon": 13.2737972
+      },
+      "geometry": [
+        {
+          "lat": 52.4359123,
+          "lon": 13.2737972
+        },
+        {
+          "lat": 52.4363021,
+          "lon": 13.2734275
+        },
+        {
+          "lat": 52.4363638,
+          "lon": 13.2734054
+        }
+      ],
+      "tags": {
+        "bridge": "yes",
+        "footway": "sidewalk",
+        "highway": "footway",
+        "layer": "1",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1278818302,
+      "bounds": {
+        "minlat": 52.4358527,
+        "minlon": 13.2732088,
+        "maxlat": 52.4362949,
+        "maxlon": 13.2736277
+      },
+      "geometry": [
+        {
+          "lat": 52.4358527,
+          "lon": 13.2736277
+        },
+        {
+          "lat": 52.4361328,
+          "lon": 13.2733624
+        },
+        {
+          "lat": 52.4362949,
+          "lon": 13.2732088
+        }
+      ],
+      "tags": {
+        "bridge": "yes",
+        "footway": "sidewalk",
+        "highway": "footway",
+        "layer": "1",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1278818303,
+      "bounds": {
+        "minlat": 52.4363638,
+        "minlon": 13.2725527,
+        "maxlat": 52.4372373,
+        "maxlon": 13.2734054
+      },
+      "geometry": [
+        {
+          "lat": 52.4363638,
+          "lon": 13.2734054
+        },
+        {
+          "lat": 52.4363891,
+          "lon": 13.2733941
+        },
+        {
+          "lat": 52.4366695,
+          "lon": 13.2731163
+        },
+        {
+          "lat": 52.4366865,
+          "lon": 13.2730604
+        },
+        {
+          "lat": 52.4368043,
+          "lon": 13.2729522
+        },
+        {
+          "lat": 52.4370293,
+          "lon": 13.2727461
+        },
+        {
+          "lat": 52.4372156,
+          "lon": 13.2725725
+        },
+        {
+          "lat": 52.4372373,
+          "lon": 13.2725527
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1278818306,
+      "bounds": {
+        "minlat": 52.4372032,
+        "minlon": 13.2725388,
+        "maxlat": 52.4372438,
+        "maxlon": 13.2726534
+      },
+      "geometry": [
+        {
+          "lat": 52.4372032,
+          "lon": 13.2725388
+        },
+        {
+          "lat": 52.4372156,
+          "lon": 13.2725725
+        },
+        {
+          "lat": 52.4372438,
+          "lon": 13.2726534
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1278818307,
+      "bounds": {
+        "minlat": 52.4363006,
+        "minlon": 13.2731756,
+        "maxlat": 52.4363083,
+        "maxlon": 13.2731965
+      },
+      "geometry": [
+        {
+          "lat": 52.4363006,
+          "lon": 13.2731756
+        },
+        {
+          "lat": 52.4363083,
+          "lon": 13.2731965
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "name": "Kleinaustraße",
+        "name:etymology:wikidata": "Q15842690",
+        "name:etymology:wikipedia": "de:Robert Kleinau",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1278818308,
+      "bounds": {
+        "minlat": 52.4362949,
+        "minlon": 13.2723775,
+        "maxlat": 52.4371741,
+        "maxlon": 13.2732088
+      },
+      "geometry": [
+        {
+          "lat": 52.4362949,
+          "lon": 13.2732088
+        },
+        {
+          "lat": 52.4363083,
+          "lon": 13.2731965
+        },
+        {
+          "lat": 52.4371515,
+          "lon": 13.2723984
+        },
+        {
+          "lat": 52.4371741,
+          "lon": 13.2723775
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1278821456,
+      "bounds": {
+        "minlat": 52.4339402,
+        "minlon": 13.2752067,
+        "maxlat": 52.4364308,
+        "maxlon": 13.2771889
+      },
+      "geometry": [
+        {
+          "lat": 52.4339402,
+          "lon": 13.2771889
+        },
+        {
+          "lat": 52.4350684,
+          "lon": 13.2760832
+        },
+        {
+          "lat": 52.4351304,
+          "lon": 13.2760224
+        },
+        {
+          "lat": 52.435253,
+          "lon": 13.2759023
+        },
+        {
+          "lat": 52.4353808,
+          "lon": 13.275777
+        },
+        {
+          "lat": 52.4355554,
+          "lon": 13.2756059
+        },
+        {
+          "lat": 52.4357937,
+          "lon": 13.2753724
+        },
+        {
+          "lat": 52.4359628,
+          "lon": 13.2752067
+        },
+        {
+          "lat": 52.4360264,
+          "lon": 13.2752331
+        },
+        {
+          "lat": 52.4360788,
+          "lon": 13.2752549
+        },
+        {
+          "lat": 52.4364308,
+          "lon": 13.2762216
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1278821457,
+      "bounds": {
+        "minlat": 52.4359965,
+        "minlon": 13.2752331,
+        "maxlat": 52.4360264,
+        "maxlon": 13.2754484
+      },
+      "geometry": [
+        {
+          "lat": 52.4360264,
+          "lon": 13.2752331
+        },
+        {
+          "lat": 52.4360123,
+          "lon": 13.2753351
+        },
+        {
+          "lat": 52.4359965,
+          "lon": 13.2754484
+        }
+      ],
+      "tags": {
+        "crossing": "unmarked",
+        "footway": "crossing",
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1278821458,
+      "bounds": {
+        "minlat": 52.4351851,
+        "minlon": 13.2754445,
+        "maxlat": 52.4363263,
+        "maxlon": 13.2762048
+      },
+      "geometry": [
+        {
+          "lat": 52.4351851,
+          "lon": 13.2762048
+        },
+        {
+          "lat": 52.4353533,
+          "lon": 13.2760382
+        },
+        {
+          "lat": 52.4355522,
+          "lon": 13.2758411
+        },
+        {
+          "lat": 52.4357571,
+          "lon": 13.2756381
+        },
+        {
+          "lat": 52.4359446,
+          "lon": 13.2754522
+        },
+        {
+          "lat": 52.4359706,
+          "lon": 13.2754445
+        },
+        {
+          "lat": 52.4359965,
+          "lon": 13.2754484
+        },
+        {
+          "lat": 52.4360191,
+          "lon": 13.2754742
+        },
+        {
+          "lat": 52.4362581,
+          "lon": 13.2761513
+        },
+        {
+          "lat": 52.4363263,
+          "lon": 13.276204
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1278829625,
+      "bounds": {
+        "minlat": 52.4335657,
+        "minlon": 13.2707805,
+        "maxlat": 52.4353819,
+        "maxlon": 13.2732976
+      },
+      "geometry": [
+        {
+          "lat": 52.4335657,
+          "lon": 13.2707889
+        },
+        {
+          "lat": 52.4335743,
+          "lon": 13.2707805
+        },
+        {
+          "lat": 52.4336489,
+          "lon": 13.270793
+        },
+        {
+          "lat": 52.4337511,
+          "lon": 13.2708045
+        },
+        {
+          "lat": 52.4344149,
+          "lon": 13.2708933
+        },
+        {
+          "lat": 52.4344638,
+          "lon": 13.2709138
+        },
+        {
+          "lat": 52.4345051,
+          "lon": 13.2709405
+        },
+        {
+          "lat": 52.4345365,
+          "lon": 13.2709755
+        },
+        {
+          "lat": 52.4345753,
+          "lon": 13.2710372
+        },
+        {
+          "lat": 52.4346117,
+          "lon": 13.2711194
+        },
+        {
+          "lat": 52.4346605,
+          "lon": 13.271251
+        },
+        {
+          "lat": 52.4346996,
+          "lon": 13.2713617
+        },
+        {
+          "lat": 52.4347589,
+          "lon": 13.2715301
+        },
+        {
+          "lat": 52.4353819,
+          "lon": 13.2732976
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1278829634,
+      "bounds": {
+        "minlat": 52.4353819,
+        "minlon": 13.2732646,
+        "maxlat": 52.4354697,
+        "maxlon": 13.2732976
+      },
+      "geometry": [
+        {
+          "lat": 52.4353819,
+          "lon": 13.2732976
+        },
+        {
+          "lat": 52.4354697,
+          "lon": 13.2732646
+        }
+      ],
+      "tags": {
+        "bicycle": "dismount",
+        "highway": "footway",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1278829635,
+      "bounds": {
+        "minlat": 52.4333402,
+        "minlon": 13.2732976,
+        "maxlat": 52.4353819,
+        "maxlon": 13.2753072
+      },
+      "geometry": [
+        {
+          "lat": 52.4353819,
+          "lon": 13.2732976
+        },
+        {
+          "lat": 52.434352,
+          "lon": 13.2743114
+        },
+        {
+          "lat": 52.4333402,
+          "lon": 13.2753072
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1279711595,
+      "bounds": {
+        "minlat": 52.4372438,
+        "minlon": 13.2726534,
+        "maxlat": 52.4387137,
+        "maxlon": 13.2769181
+      },
+      "geometry": [
+        {
+          "lat": 52.4387137,
+          "lon": 13.2769181
+        },
+        {
+          "lat": 52.4384319,
+          "lon": 13.2760988
+        },
+        {
+          "lat": 52.4383463,
+          "lon": 13.2758499
+        },
+        {
+          "lat": 52.4380487,
+          "lon": 13.2749845
+        },
+        {
+          "lat": 52.437916,
+          "lon": 13.2745986
+        },
+        {
+          "lat": 52.4376313,
+          "lon": 13.2737707
+        },
+        {
+          "lat": 52.4375347,
+          "lon": 13.27349
+        },
+        {
+          "lat": 52.4374978,
+          "lon": 13.2733838
+        },
+        {
+          "lat": 52.4372438,
+          "lon": 13.2726534
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1424986787,
+      "bounds": {
+        "minlat": 52.4375841,
+        "minlon": 13.2734437,
+        "maxlat": 52.4376801,
+        "maxlon": 13.2737242
+      },
+      "geometry": [
+        {
+          "lat": 52.4375841,
+          "lon": 13.2734437
+        },
+        {
+          "lat": 52.4376801,
+          "lon": 13.2737242
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Mörchinger Straße",
+        "name:etymology:wikidata": "Q22353",
+        "name:etymology:wikipedia": "de:Morhange",
+        "parking:both:fee": "no",
+        "parking:left": "on_kerb",
+        "parking:left:orientation": "parallel",
+        "parking:right": "half_on_kerb",
+        "parking:right:orientation": "diagonal",
+        "postal_code": "14169",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1424986788,
+      "bounds": {
+        "minlat": 52.4373235,
+        "minlon": 13.2726816,
+        "maxlat": 52.4375841,
+        "maxlon": 13.2734437
+      },
+      "geometry": [
+        {
+          "lat": 52.4373235,
+          "lon": 13.2726816
+        },
+        {
+          "lat": 52.4375841,
+          "lon": 13.2734437
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Mörchinger Straße",
+        "name:etymology:wikidata": "Q22353",
+        "name:etymology:wikipedia": "de:Morhange",
+        "parking:both:fee": "no",
+        "parking:left": "half_on_kerb",
+        "parking:left:orientation": "diagonal",
+        "parking:right": "on_kerb",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14169",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1425021850,
+      "bounds": {
+        "minlat": 52.4362739,
+        "minlon": 13.2760519,
+        "maxlat": 52.4363263,
+        "maxlon": 13.276204
+      },
+      "geometry": [
+        {
+          "lat": 52.4362739,
+          "lon": 13.2760519
+        },
+        {
+          "lat": 52.4363263,
+          "lon": 13.276204
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Brettnacher Straße",
+        "name:etymology:wikidata": "Q21898",
+        "name:etymology:wikipedia": "de:Brettnach",
+        "parking:both": "no",
+        "sidewalk:both": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1425021859,
+      "bounds": {
+        "minlat": 52.4355152,
+        "minlon": 13.2737113,
+        "maxlat": 52.4358821,
+        "maxlon": 13.2740572
+      },
+      "geometry": [
+        {
+          "lat": 52.4358821,
+          "lon": 13.2737113
+        },
+        {
+          "lat": 52.4358623,
+          "lon": 13.2737299
+        },
+        {
+          "lat": 52.4358291,
+          "lon": 13.2737613
+        },
+        {
+          "lat": 52.4356425,
+          "lon": 13.2739371
+        },
+        {
+          "lat": 52.4356243,
+          "lon": 13.2739543
+        },
+        {
+          "lat": 52.4355152,
+          "lon": 13.2740572
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Sundgauer Straße",
+        "name:etymology:wikidata": "Q252268",
+        "parking:both": "no",
+        "postal_code": "14167",
+        "sidewalk:both": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1445424407,
+      "bounds": {
+        "minlat": 52.4352564,
+        "minlon": 13.2743011,
+        "maxlat": 52.4353434,
+        "maxlon": 13.2745499
+      },
+      "geometry": [
+        {
+          "lat": 52.4353434,
+          "lon": 13.2745499
+        },
+        {
+          "lat": 52.435323,
+          "lon": 13.2744914
+        },
+        {
+          "lat": 52.4352865,
+          "lon": 13.2743872
+        },
+        {
+          "lat": 52.4352739,
+          "lon": 13.2743512
+        },
+        {
+          "lat": 52.4352564,
+          "lon": 13.2743011
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "service": "driveway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1481965204,
+      "bounds": {
+        "minlat": 52.436377,
+        "minlon": 13.2733646,
+        "maxlat": 52.4363891,
+        "maxlon": 13.2733941
+      },
+      "geometry": [
+        {
+          "lat": 52.436377,
+          "lon": 13.2733646
+        },
+        {
+          "lat": 52.4363891,
+          "lon": 13.2733941
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1481965205,
+      "bounds": {
+        "minlat": 52.4363083,
+        "minlon": 13.2731965,
+        "maxlat": 52.4363208,
+        "maxlon": 13.2732306
+      },
+      "geometry": [
+        {
+          "lat": 52.4363083,
+          "lon": 13.2731965
+        },
+        {
+          "lat": 52.4363208,
+          "lon": 13.2732306
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1481965206,
+      "bounds": {
+        "minlat": 52.4358341,
+        "minlon": 13.2736504,
+        "maxlat": 52.4358441,
+        "maxlon": 13.2736785
+      },
+      "geometry": [
+        {
+          "lat": 52.4358441,
+          "lon": 13.2736785
+        },
+        {
+          "lat": 52.4358341,
+          "lon": 13.2736504
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1481965207,
+      "bounds": {
+        "minlat": 52.4358807,
+        "minlon": 13.2737815,
+        "maxlat": 52.4358929,
+        "maxlon": 13.2738159
+      },
+      "geometry": [
+        {
+          "lat": 52.4358929,
+          "lon": 13.2738159
+        },
+        {
+          "lat": 52.4358807,
+          "lon": 13.2737815
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1481965211,
+      "bounds": {
+        "minlat": 52.4356126,
+        "minlon": 13.2738526,
+        "maxlat": 52.4356213,
+        "maxlon": 13.2738779
+      },
+      "geometry": [
+        {
+          "lat": 52.4356213,
+          "lon": 13.2738779
+        },
+        {
+          "lat": 52.4356126,
+          "lon": 13.2738526
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 145725182,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 1117621336,
+    "lat": "52.5241117",
+    "lon": "13.4253074",
+    "category": "highway",
+    "type": "service",
+    "place_rank": 27,
+    "importance": 0.26244239079806453,
+    "addresstype": "road",
+    "name": "Mollstraße",
+    "display_name": "Mollstraße, Königsstadt, Andreasviertel, Friedrichshain, Friedrichshain-Kreuzberg, Berlin, 10249, Deutschland",
+    "boundingbox": [
+      "52.5240613",
+      "52.5241620",
+      "13.4251412",
+      "13.4254736"
+    ]
+  }
+]

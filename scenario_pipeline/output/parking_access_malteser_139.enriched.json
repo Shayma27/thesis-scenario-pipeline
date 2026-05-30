@@ -1,0 +1,554 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "parking_access_malteser_139",
+    "date": "2023-07-03",
+    "time": "09:04",
+    "raw_text": "Die Radfahrerin befuhr die Malteserstraße auf einem baulich von der Fahrbahn getrennten Radweg in südliche Richtung. In selber Richtung fuhr ein Lkw-Fahrer, welcher auf Höhe der Hausnummer 139 über den Radweg hinweg nach rechts auf den dortigen Parkplatz abbog. Während des Abbiegevorganges kam es zur Kollision zwischen Lkw und Fahrrad."
+  },
+  "classification": {
+    "scenario_type": "parking_access_conflict",
+    "confidence": 0.95
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Malteserstraße",
+    "secondary_road": null,
+    "osm_query": "Malteserstraße 139, Berlin, Germany",
+    "osm_roads": [
+      "Malteserstraße"
+    ],
+    "house_number_reference": "139",
+    "location_type": "parking_access",
+    "direction_references": [
+      "south"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "no",
+    "bike_facility_type": "separated_cycle_track",
+    "parking_present": "yes",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "truck_1",
+      "class": "motor_vehicle",
+      "type": "truck",
+      "maneuver": "turn_right_into_parking",
+      "initial_direction": "south",
+      "traffic_rule_status": "unknown"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "south",
+      "traffic_rule_status": "priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "same_direction_turn_across_bike_path",
+    "collision_happened": true,
+    "collision_description": "Truck turns right across separated cycle track into parking access and collides with cyclist.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "parking_access_s_m": 50,
+      "road_geometry": "line",
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "separated_cycle_track",
+      "primary_bike_facility_position": "right",
+      "motor_lane_count": 2
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {
+        "truck_1": {
+          "vehicle_category": "truck",
+          "initial_road_id": 0,
+          "initial_lane_id": -2,
+          "initial_s_m": 33,
+          "initial_speed_mps": 3.0
+        },
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -3,
+          "initial_s_m": 15,
+          "initial_speed_mps": 7.0
+        }
+      },
+      "conflict": {
+        "conflict_s_m": 50,
+        "trigger_time_s": 1.0
+      },
+      "cyclist_lateral_position": "right"
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "truck_1.initial_speed_mps",
+      "value_used": 3.0,
+      "source": "default_assumption",
+      "reason": "Truck was turning right across a cycle track; no exact speed was given in the report."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 7.0,
+      "source": "default_assumption",
+      "reason": "Cyclist speed was not given in the report; a faster urban bicycle speed makes the same-direction conflict visually clearer."
+    },
+    {
+      "parameter": "lane_widths",
+      "value_used": "3.5m motor lane, 2.0m bike lane",
+      "source": "default_assumption",
+      "reason": "Exact lane widths were not provided in the report."
+    },
+    {
+      "parameter": "truck_1.initial_s_m",
+      "value_used": 33,
+      "source": "default_assumption",
+      "reason": "Exact starting position was not given; truck starts close to the parking access because it is already preparing to turn."
+    },
+    {
+      "parameter": "cyclist_1.initial_s_m",
+      "value_used": 15,
+      "source": "default_assumption",
+      "reason": "Exact starting position was not given; cyclist starts farther back because the generated cyclist speed is higher."
+    },
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "separated_cycle_track",
+      "source": "explicit_from_report",
+      "reason": "The report explicitly describes the cycling infrastructure."
+    },
+    {
+      "parameter": "truck_1.initial_lane_id",
+      "value_used": -2,
+      "source": "derived_from_osm_motor_lane_count",
+      "reason": "For a right-turn/parking-access conflict, the truck starts in the rightmost motor-vehicle lane of the generated OpenDRIVE road."
+    },
+    {
+      "parameter": "motor_lane_count",
+      "value_used": 2,
+      "source": "osm_tag",
+      "reason": "OpenDRIVE motor-lane count was derived from nearby OSM lanes tags."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -3,
+      "source": "derived_from_cyclist_lateral_position",
+      "reason": "Cyclist OpenSCENARIO lane id follows the chosen lateral-position policy so the initial teleport matches the generated trajectory."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "right",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    }
+  ],
+  "osm_context": {
+    "query": "Malteserstraße 139, Berlin, Germany",
+    "queries_tried": [
+      "Malteserstraße 139, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 30701991,
+        "name": "Malteserstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4198837,
+            "lon": 13.3590522
+          },
+          {
+            "lat": 52.4197497,
+            "lon": 13.3592203
+          }
+        ]
+      },
+      {
+        "osm_id": 30701992,
+        "name": "Malteserstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4197497,
+            "lon": 13.3592203
+          },
+          {
+            "lat": 52.4197639,
+            "lon": 13.3592153
+          },
+          {
+            "lat": 52.4199147,
+            "lon": 13.3591611
+          }
+        ]
+      },
+      {
+        "osm_id": 42822803,
+        "name": "Malteserstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "track"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4199147,
+            "lon": 13.3591611
+          },
+          {
+            "lat": 52.4199914,
+            "lon": 13.3591157
+          },
+          {
+            "lat": 52.4200275,
+            "lon": 13.3590948
+          },
+          {
+            "lat": 52.4201143,
+            "lon": 13.3590445
+          }
+        ]
+      },
+      {
+        "osm_id": 115727313,
+        "name": "Malteserstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "track"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4208634,
+            "lon": 13.3584918
+          },
+          {
+            "lat": 52.4205779,
+            "lon": 13.3586345
+          },
+          {
+            "lat": 52.4205069,
+            "lon": 13.35867
+          },
+          {
+            "lat": 52.4201987,
+            "lon": 13.3588241
+          },
+          {
+            "lat": 52.4201619,
+            "lon": 13.3588457
+          },
+          {
+            "lat": 52.4200818,
+            "lon": 13.3589054
+          },
+          {
+            "lat": 52.4199941,
+            "lon": 13.3589707
+          },
+          {
+            "lat": 52.4198837,
+            "lon": 13.3590522
+          }
+        ]
+      },
+      {
+        "osm_id": 1395672619,
+        "name": "Malteserstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "track"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4201143,
+            "lon": 13.3590445
+          },
+          {
+            "lat": 52.4201966,
+            "lon": 13.3589968
+          },
+          {
+            "lat": 52.4204185,
+            "lon": 13.3588704
+          },
+          {
+            "lat": 52.4205315,
+            "lon": 13.3588068
+          },
+          {
+            "lat": 52.4205563,
+            "lon": 13.3587947
+          }
+        ]
+      },
+      {
+        "osm_id": 1418295556,
+        "name": "Malteserstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "track",
+        "cycleway_tags": {
+          "cycleway": "track"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4196768,
+            "lon": 13.3592702
+          },
+          {
+            "lat": 52.4197497,
+            "lon": 13.3592203
+          }
+        ]
+      },
+      {
+        "osm_id": 1418295558,
+        "name": "Malteserstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "track",
+        "cycleway_tags": {
+          "cycleway": "track"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4187361,
+            "lon": 13.3598088
+          },
+          {
+            "lat": 52.4193998,
+            "lon": 13.3594426
+          },
+          {
+            "lat": 52.4194452,
+            "lon": 13.359415
+          },
+          {
+            "lat": 52.4196768,
+            "lon": 13.3592702
+          }
+        ]
+      },
+      {
+        "osm_id": 1418347767,
+        "name": "Malteserstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "track",
+        "cycleway_tags": {
+          "cycleway": "track"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4179588,
+            "lon": 13.3603185
+          },
+          {
+            "lat": 52.4179997,
+            "lon": 13.3602908
+          },
+          {
+            "lat": 52.4184261,
+            "lon": 13.3599954
+          }
+        ]
+      },
+      {
+        "osm_id": 1418347780,
+        "name": "Malteserstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "track",
+        "cycleway_tags": {
+          "cycleway": "track"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4184261,
+            "lon": 13.3599954
+          },
+          {
+            "lat": 52.4185454,
+            "lon": 13.3599223
+          },
+          {
+            "lat": 52.4186452,
+            "lon": 13.3598609
+          },
+          {
+            "lat": 52.418724,
+            "lon": 13.3598157
+          },
+          {
+            "lat": 52.4187361,
+            "lon": 13.3598088
+          }
+        ]
+      }
+    ],
+    "traffic_signals_nearby": "yes",
+    "notes": [],
+    "geocoded": {
+      "display_name": "139, Malteserstraße, Großwohnsiedlung Waldsassener Straße, Marienfelde, Tempelhof-Schöneberg, Berlin, 12277, Deutschland",
+      "lat": 52.4190585,
+      "lon": 13.3593039,
+      "osm_type": "node",
+      "osm_id": 2824838615
+    },
+    "bike_facility": {
+      "type": "separated_cycle_track",
+      "position": "right",
+      "source": "explicit_from_report",
+      "osm_evidence": {
+        "bike_facility_type": "bike_lane",
+        "position": "right",
+        "tags": {
+          "cycleway:right": "lane"
+        }
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "right",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

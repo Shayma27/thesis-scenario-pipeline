@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 146313149,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "node",
+    "osm_id": 2824838615,
+    "lat": "52.4190585",
+    "lon": "13.3593039",
+    "category": "place",
+    "type": "house",
+    "place_rank": 30,
+    "importance": 8.875486381318407e-05,
+    "addresstype": "place",
+    "name": "",
+    "display_name": "139, Malteserstraße, Großwohnsiedlung Waldsassener Straße, Marienfelde, Tempelhof-Schöneberg, Berlin, 12277, Deutschland",
+    "boundingbox": [
+      "52.4190085",
+      "52.4191085",
+      "13.3592539",
+      "13.3593539"
+    ]
+  }
+]

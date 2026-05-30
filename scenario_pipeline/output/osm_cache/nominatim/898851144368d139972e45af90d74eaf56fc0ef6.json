@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 145920560,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "node",
+    "osm_id": 3872632789,
+    "lat": "52.5294820",
+    "lon": "13.4547803",
+    "category": "railway",
+    "type": "station",
+    "place_rank": 30,
+    "importance": 0.36107739355702545,
+    "addresstype": "railway",
+    "name": "Landsberger Allee",
+    "display_name": "Landsberger Allee, 117, Landsberger Allee, Eldenaer Viertel, Prenzlauer Berg, Pankow, Berlin, 10407, Deutschland",
+    "boundingbox": [
+      "52.5244820",
+      "52.5344820",
+      "13.4497803",
+      "13.4597803"
+    ]
+  }
+]

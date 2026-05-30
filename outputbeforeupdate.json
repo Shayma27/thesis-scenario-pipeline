@@ -1,0 +1,105 @@
+{
+  "case_id": null,
+  "source_type": "police_report",
+  "source_language": "de",
+  "scenario_type": "overtaking_conflict",
+  "location": {
+    "location_raw": "Odernheimer Str. 22, Berlin",
+    "city": "Berlin",
+    "intersection": null,
+    "house_number_reference": "22",
+    "geo_reference_available": false,
+    "map_source_type": "named_location_only"
+  },
+  "road_network": {
+    "topology_type": "midblock",
+    "traffic_light_present": null,
+    "cycling_infrastructure": "roadway_mixed",
+    "road_generation_hints": {
+      "motor_vehicle_road_count": null,
+      "motor_vehicle_lane_count_same_direction": null,
+      "opposing_traffic_possible": null,
+      "cycle_facility_separated_from_carriageway": null,
+      "parking_access_present": null,
+      "driveway_access_present": null,
+      "junction_control_type": null,
+      "crossing_of_cycle_facility_required_for_turn": null
+    },
+    "map_anchor_hints": {
+      "primary_road_name": "Odernheimer Str.",
+      "secondary_road_name_or_access": "Neuhelgoländer Weg",
+      "approach_reference_for_p1": "Odernheimer Str. toward Alt Müggelheim",
+      "approach_reference_for_p2": "same direction on Odernheimer Str."
+    }
+  },
+  "participants": [
+    {
+      "id": "P1",
+      "role": "motor_vehicle",
+      "type": "bus",
+      "vehicle_type_detail": null,
+      "maneuver": "go_straight",
+      "signal_state": null,
+      "priority_status": null,
+      "travel_direction": null,
+      "lane_relation": "on_main_carriageway"
+    },
+    {
+      "id": "P2",
+      "role": "cyclist",
+      "type": "bicycle",
+      "vehicle_type_detail": null,
+      "maneuver": "go_straight",
+      "signal_state": null,
+      "priority_status": null,
+      "travel_direction": null,
+      "lane_relation": "on_main_carriageway"
+    }
+  ],
+  "event_sequence": [
+    "Bus travels along Odernheimer Str. from Neuhelgoländer Weg toward Alt Müggelheim",
+    "Cyclist travels in same direction on Odernheimer Str.",
+    "Bus overtakes cyclist near Odernheimer Str. 22",
+    "Collision occurs, cyclist falls and is run over by bus"
+  ],
+  "conflict_geometry": {
+    "collision_occurred": true,
+    "collision_zone": "midblock_carriageway",
+    "relative_path_conflict": "vehicle_overtakes_cyclist",
+    "turn_across_cycle_facility": false
+  },
+  "simulation_hints": {
+    "xosc_ready": true,
+    "xodr_ready": true,
+    "minimal_openx_requirements": {
+      "needs_real_map_matching": true,
+      "can_generate_simplified_xodr": true,
+      "requires_manual_map_review": true
+    },
+    "initial_state_hints": {
+      "p1_initial_motion_state": "moving",
+      "p2_initial_motion_state": "moving",
+      "p1_before_conflict_action": "overtake",
+      "p2_before_conflict_action": "go_straight"
+    }
+  },
+  "explicit_items": [
+    "Bus traveled from Neuhelgoländer Weg towards Alt Müggelheim on Odernheimer Str.",
+    "Cyclist traveled in the same direction on Odernheimer Str.",
+    "Bus overtook cyclist at Odernheimer Str. 22",
+    "Collision caused cyclist to fall and be run over by bus"
+  ],
+  "inferred_items": [
+    "Scenario occurs on a midblock segment",
+    "Cyclist used the roadway mixed with motor traffic"
+  ],
+  "missing_critical_items": [
+    "exact coordinates",
+    "lane count and width",
+    "vehicle speeds at impact",
+    "exact impact point details"
+  ],
+  "confidence_notes": [
+    "Report provides sufficient information for overtaking conflict classification but lacks detailed geometric data."
+  ]
+}

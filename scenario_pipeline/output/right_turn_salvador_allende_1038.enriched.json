@@ -1,0 +1,573 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "right_turn_salvador_allende_1038",
+    "date": "2023-07-17",
+    "time": "10:38",
+    "raw_text": "Datum: Mo, 17.07.2023 Uhrzeit: 10:38 Uhr Der Fahrer wartete in dem von ihm geführten LKW auf der Fahrbahn der Salvador-Allende-Str. vor der Rotlicht abstrahlenden LSA. Als die LSA für seine Richtung grünes Licht abstrahlte, bog er nach rechts in den Müggelschlößchenweg ab und erfasste die neben ihm in gleicher Richtung geradeaus fahrende Radfahrerin. Sie befuhr den von der Fahrbahn baulich getrennten Radweg der Salvador-Allende-Str. in nördliche Richtung. Die LSA für Radfahrende strahlte grünes Wechsellicht ab. Die Radfahrerin und das Fahrrad wurden durch den rechts abbiegenden LKW vollständig überrollt."
+  },
+  "classification": {
+    "scenario_type": "right_turn_conflict",
+    "confidence": 1.0
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Salvador-Allende-Str",
+    "secondary_road": "Müggelschlößchenweg",
+    "osm_query": "Salvador-Allende-Str / Müggelschlößchenweg, Berlin, Germany",
+    "osm_roads": [
+      "Salvador-Allende-Str",
+      "Müggelschlößchenweg"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "nördliche Richtung"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "yes",
+    "bike_facility_type": "separated_cycle_track",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "truck_1",
+      "class": "motor_vehicle",
+      "type": "truck",
+      "maneuver": "turn_right",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "north",
+      "traffic_rule_status": "priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across_separated_cycle_track",
+    "collision_happened": true,
+    "collision_description": "The truck turned right and collided with the cyclist who was riding straight on a separated cycle track.",
+    "severity_text": "serious"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line",
+      "parking_access_s_m": 50,
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "separated_cycle_track",
+      "primary_bike_facility_position": "rightmost"
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {
+        "truck_1": {
+          "vehicle_category": "truck",
+          "initial_road_id": 0,
+          "initial_lane_id": -1,
+          "initial_s_m": 30,
+          "initial_speed_mps": 3.0
+        },
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -2,
+          "initial_s_m": 10,
+          "initial_speed_mps": 4.5
+        }
+      },
+      "conflict": {
+        "conflict_s_m": 50,
+        "trigger_time_s": 1.0
+      },
+      "cyclist_lateral_position": "rightmost"
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "separated_cycle_track",
+      "source": "explicit_from_report",
+      "reason": "The report explicitly describes the cycling infrastructure."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -2,
+      "source": "derived_from_cyclist_lateral_position",
+      "reason": "Cyclist OpenSCENARIO lane id follows the chosen lateral-position policy so the initial teleport matches the generated trajectory."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "rightmost",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    }
+  ],
+  "osm_context": {
+    "query": "Salvador-Allende-Str, Berlin, Germany",
+    "queries_tried": [
+      "Salvador-Allende-Str / Müggelschlößchenweg, Berlin, Germany",
+      "Salvador-Allende-Str Müggelschlößchenweg, Berlin, Germany",
+      "Salvador-Allende-Str, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 25815410,
+        "name": "Salvador-Allende-Straße",
+        "highway": "service",
+        "maxspeed": "10",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4428982,
+            "lon": 13.5902029
+          },
+          {
+            "lat": 52.4428924,
+            "lon": 13.5903382
+          },
+          {
+            "lat": 52.4428823,
+            "lon": 13.590382
+          },
+          {
+            "lat": 52.4428547,
+            "lon": 13.5905012
+          },
+          {
+            "lat": 52.4428463,
+            "lon": 13.5907694
+          },
+          {
+            "lat": 52.4428373,
+            "lon": 13.5910763
+          },
+          {
+            "lat": 52.4428273,
+            "lon": 13.5914136
+          },
+          {
+            "lat": 52.4428218,
+            "lon": 13.5916006
+          },
+          {
+            "lat": 52.4427599,
+            "lon": 13.5919533
+          },
+          {
+            "lat": 52.4427526,
+            "lon": 13.5922379
+          },
+          {
+            "lat": 52.4427511,
+            "lon": 13.5923431
+          },
+          {
+            "lat": 52.4427549,
+            "lon": 13.5924394
+          },
+          {
+            "lat": 52.4427824,
+            "lon": 13.5924782
+          },
+          {
+            "lat": 52.4431473,
+            "lon": 13.5925023
+          },
+          {
+            "lat": 52.4432354,
+            "lon": 13.5925065
+          },
+          {
+            "lat": 52.4433806,
+            "lon": 13.5925144
+          },
+          {
+            "lat": 52.4434707,
+            "lon": 13.5924596
+          },
+          {
+            "lat": 52.4435997,
+            "lon": 13.5924642
+          },
+          {
+            "lat": 52.443861,
+            "lon": 13.5924737
+          },
+          {
+            "lat": 52.4439779,
+            "lon": 13.5924779
+          },
+          {
+            "lat": 52.4441609,
+            "lon": 13.5925232
+          },
+          {
+            "lat": 52.4442651,
+            "lon": 13.5925941
+          },
+          {
+            "lat": 52.4443852,
+            "lon": 13.5926059
+          },
+          {
+            "lat": 52.4446538,
+            "lon": 13.5926322
+          },
+          {
+            "lat": 52.4447446,
+            "lon": 13.5926154
+          }
+        ]
+      },
+      {
+        "osm_id": 25815428,
+        "name": "Salvador-Allende-Straße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "left",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4450993,
+            "lon": 13.591269
+          },
+          {
+            "lat": 52.445067,
+            "lon": 13.5912522
+          },
+          {
+            "lat": 52.4449043,
+            "lon": 13.5912386
+          },
+          {
+            "lat": 52.444862,
+            "lon": 13.5912343
+          },
+          {
+            "lat": 52.4445502,
+            "lon": 13.5912098
+          },
+          {
+            "lat": 52.4442022,
+            "lon": 13.5911822
+          },
+          {
+            "lat": 52.4440137,
+            "lon": 13.5911668
+          }
+        ]
+      },
+      {
+        "osm_id": 59966138,
+        "name": "Salvador-Allende-Straße",
+        "highway": "service",
+        "maxspeed": "10",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4439184,
+            "lon": 13.5918323
+          },
+          {
+            "lat": 52.4432042,
+            "lon": 13.5917624
+          }
+        ]
+      },
+      {
+        "osm_id": 516456556,
+        "name": "Salvador-Allende-Straße",
+        "highway": "service",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "right",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4442022,
+            "lon": 13.5911822
+          },
+          {
+            "lat": 52.4442298,
+            "lon": 13.5902897
+          }
+        ]
+      },
+      {
+        "osm_id": 1154990641,
+        "name": "Salvador-Allende-Straße",
+        "highway": "service",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4440137,
+            "lon": 13.5911668
+          },
+          {
+            "lat": 52.4440108,
+            "lon": 13.5912456
+          },
+          {
+            "lat": 52.4440001,
+            "lon": 13.5915304
+          },
+          {
+            "lat": 52.4439977,
+            "lon": 13.5915942
+          },
+          {
+            "lat": 52.4439961,
+            "lon": 13.5916363
+          }
+        ]
+      },
+      {
+        "osm_id": 1155000864,
+        "name": "Salvador-Allende-Straße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "both",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4435824,
+            "lon": 13.5902487
+          },
+          {
+            "lat": 52.4431664,
+            "lon": 13.5902247
+          },
+          {
+            "lat": 52.4428982,
+            "lon": 13.5902029
+          },
+          {
+            "lat": 52.4426947,
+            "lon": 13.5901884
+          },
+          {
+            "lat": 52.4426304,
+            "lon": 13.5901838
+          },
+          {
+            "lat": 52.4425865,
+            "lon": 13.5901807
+          },
+          {
+            "lat": 52.4425386,
+            "lon": 13.5901773
+          }
+        ]
+      },
+      {
+        "osm_id": 1431007684,
+        "name": "Salvador-Allende-Straße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "both",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4440384,
+            "lon": 13.5902751
+          },
+          {
+            "lat": 52.4435824,
+            "lon": 13.5902487
+          }
+        ]
+      },
+      {
+        "osm_id": 1431007685,
+        "name": "Salvador-Allende-Straße",
+        "highway": "service",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "right",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4442298,
+            "lon": 13.5902897
+          },
+          {
+            "lat": 52.4440384,
+            "lon": 13.5902751
+          }
+        ]
+      },
+      {
+        "osm_id": 1431007686,
+        "name": "Salvador-Allende-Straße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "left",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4440137,
+            "lon": 13.5911668
+          },
+          {
+            "lat": 52.4440308,
+            "lon": 13.59055
+          },
+          {
+            "lat": 52.4440384,
+            "lon": 13.5902751
+          }
+        ]
+      }
+    ],
+    "traffic_signals_nearby": "no",
+    "notes": [],
+    "geocoded": {
+      "display_name": "Salvador-Allende-Straße, Salvador-Allende-Viertel I, Köpenick, Treptow-Köpenick, Berlin, 12559, Deutschland",
+      "lat": 52.4430603,
+      "lon": 13.5902161,
+      "osm_type": "way",
+      "osm_id": 1155000864
+    },
+    "bike_facility": {
+      "type": "separated_cycle_track",
+      "position": "rightmost",
+      "source": "explicit_from_report",
+      "osm_evidence": null
+    },
+    "cyclist_lateral_position": {
+      "value": "rightmost",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 10.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

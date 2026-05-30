@@ -1,0 +1,1348 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "priority_falkenseer_2100",
+    "date": "2023-01-02",
+    "time": "21:00",
+    "raw_text": "Der Radfahrer befuhr mit seinem Fahrrad den Falkenseer Damm in Richtung Falkenseer Chaussee und wendete an der Einmündung Askanierring in Richtung des südlichen Fahrradweges. Dabei missachtete er den entgegenkommenden Pkw-Fahrer, der die Falkenseer Chaussee in Richtung Falkenseer Damm befuhr. Datum: Mo 02.01.2023 Uhrzeit: 21:00 Uhr"
+  },
+  "classification": {
+    "scenario_type": "priority_violation_conflict",
+    "confidence": 0.8
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Falkenseer Damm",
+    "secondary_road": "Falkenseer Chaussee",
+    "osm_query": "Falkenseer Damm / Falkenseer Chaussee, Berlin, Germany",
+    "osm_roads": [
+      "Falkenseer Damm",
+      "Falkenseer Chaussee",
+      "Askanierring"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "south"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "no",
+    "bike_facility_type": "separated_cycle_track",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": "north",
+      "traffic_rule_status": "priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "turn_left",
+      "initial_direction": "north",
+      "traffic_rule_status": "violated_priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "cyclist_turned_into_oncoming_traffic",
+    "collision_happened": false,
+    "collision_description": "No collision occurred as the cyclist turned into the path of an oncoming car.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line",
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "separated_cycle_track",
+      "primary_bike_facility_position": "right",
+      "motor_lane_count": 3
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -4,
+          "initial_s_m": 10.0,
+          "initial_speed_mps": 4.5
+        },
+        "car_1": {
+          "vehicle_category": "car",
+          "initial_road_id": 0,
+          "initial_lane_id": -3,
+          "initial_s_m": 25.0,
+          "initial_speed_mps": 8.0
+        }
+      },
+      "cyclist_lateral_position": "right",
+      "conflict": {
+        "conflict_s_m": 50.0,
+        "trigger_time_s": 1.0
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "separated_cycle_track",
+      "source": "explicit_from_report",
+      "reason": "The report explicitly describes the cycling infrastructure."
+    },
+    {
+      "parameter": "motor_lane_count",
+      "value_used": 3,
+      "source": "osm_tag",
+      "reason": "OpenDRIVE motor-lane count was derived from nearby OSM lanes tags."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "right",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    },
+    {
+      "parameter": "cyclist_1.vehicle_category",
+      "value_used": "bicycle",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -4,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_s_m",
+      "value_used": 10.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 4.5,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.vehicle_category",
+      "value_used": "car",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_lane_id",
+      "value_used": -3,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_s_m",
+      "value_used": 25.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_speed_mps",
+      "value_used": 8.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    }
+  ],
+  "osm_context": {
+    "query": "Falkenseer Damm, Berlin, Germany",
+    "queries_tried": [
+      "Falkenseer Damm / Falkenseer Chaussee, Berlin, Germany",
+      "Falkenseer Damm Falkenseer Chaussee, Berlin, Germany",
+      "Falkenseer Damm, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 4797967,
+        "name": "Falkenseer Damm",
+        "highway": "secondary",
+        "maxspeed": null,
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5446366,
+            "lon": 13.1957989
+          },
+          {
+            "lat": 52.5446803,
+            "lon": 13.1957276
+          },
+          {
+            "lat": 52.5448673,
+            "lon": 13.1954396
+          },
+          {
+            "lat": 52.5449813,
+            "lon": 13.1952725
+          },
+          {
+            "lat": 52.5450663,
+            "lon": 13.19515
+          },
+          {
+            "lat": 52.5451392,
+            "lon": 13.1950601
+          }
+        ]
+      },
+      {
+        "osm_id": 4797969,
+        "name": "Falkenseer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5448243,
+            "lon": 13.1952264
+          },
+          {
+            "lat": 52.5439237,
+            "lon": 13.196677
+          },
+          {
+            "lat": 52.543631,
+            "lon": 13.1971437
+          },
+          {
+            "lat": 52.543389,
+            "lon": 13.197529
+          },
+          {
+            "lat": 52.5431496,
+            "lon": 13.1979117
+          },
+          {
+            "lat": 52.5431157,
+            "lon": 13.1979659
+          },
+          {
+            "lat": 52.5429587,
+            "lon": 13.1982171
+          }
+        ]
+      },
+      {
+        "osm_id": 4978508,
+        "name": "Askanierring",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "1",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "advisory"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5466471,
+            "lon": 13.1940207
+          },
+          {
+            "lat": 52.5465676,
+            "lon": 13.194014
+          },
+          {
+            "lat": 52.5464176,
+            "lon": 13.1940587
+          },
+          {
+            "lat": 52.5463902,
+            "lon": 13.1940674
+          }
+        ]
+      },
+      {
+        "osm_id": 4978509,
+        "name": "Askanierring",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5459331,
+            "lon": 13.1943898
+          },
+          {
+            "lat": 52.5459487,
+            "lon": 13.1943835
+          },
+          {
+            "lat": 52.5460034,
+            "lon": 13.1943603
+          },
+          {
+            "lat": 52.5462887,
+            "lon": 13.1942505
+          },
+          {
+            "lat": 52.5463902,
+            "lon": 13.1942125
+          },
+          {
+            "lat": 52.5464392,
+            "lon": 13.1941851
+          },
+          {
+            "lat": 52.5465779,
+            "lon": 13.1940821
+          },
+          {
+            "lat": 52.5466471,
+            "lon": 13.1940207
+          }
+        ]
+      },
+      {
+        "osm_id": 5000791,
+        "name": "Falkenseer Chaussee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5457746,
+            "lon": 13.1941191
+          },
+          {
+            "lat": 52.5458339,
+            "lon": 13.1939449
+          },
+          {
+            "lat": 52.5458432,
+            "lon": 13.1939166
+          },
+          {
+            "lat": 52.5458706,
+            "lon": 13.1938232
+          }
+        ]
+      },
+      {
+        "osm_id": 6074349,
+        "name": "Askanierring",
+        "highway": "residential",
+        "maxspeed": null,
+        "lanes": "3",
+        "lanes_forward": "1",
+        "lanes_backward": "2",
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "track",
+        "cycleway_tags": {
+          "cycleway:right": "track"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5449617,
+            "lon": 13.1950051
+          },
+          {
+            "lat": 52.544903,
+            "lon": 13.1949507
+          },
+          {
+            "lat": 52.5448687,
+            "lon": 13.1949228
+          },
+          {
+            "lat": 52.544786,
+            "lon": 13.1948897
+          },
+          {
+            "lat": 52.5446841,
+            "lon": 13.1948885
+          },
+          {
+            "lat": 52.5446029,
+            "lon": 13.1949269
+          }
+        ]
+      },
+      {
+        "osm_id": 33066937,
+        "name": "Falkenseer Chaussee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5458407,
+            "lon": 13.1933069
+          },
+          {
+            "lat": 52.5457964,
+            "lon": 13.1934981
+          },
+          {
+            "lat": 52.5457597,
+            "lon": 13.1936259
+          },
+          {
+            "lat": 52.5457554,
+            "lon": 13.1936406
+          },
+          {
+            "lat": 52.5457343,
+            "lon": 13.1937076
+          },
+          {
+            "lat": 52.5457154,
+            "lon": 13.1937652
+          },
+          {
+            "lat": 52.5456845,
+            "lon": 13.193854
+          },
+          {
+            "lat": 52.5456641,
+            "lon": 13.1939082
+          },
+          {
+            "lat": 52.5455901,
+            "lon": 13.1940746
+          }
+        ]
+      },
+      {
+        "osm_id": 66861338,
+        "name": "Askanierring",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5457842,
+            "lon": 13.1943533
+          },
+          {
+            "lat": 52.5458093,
+            "lon": 13.1943623
+          },
+          {
+            "lat": 52.5458508,
+            "lon": 13.194376
+          },
+          {
+            "lat": 52.5459331,
+            "lon": 13.1943898
+          }
+        ]
+      },
+      {
+        "osm_id": 330951950,
+        "name": "Askanierring",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "advisory"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5463902,
+            "lon": 13.1940674
+          },
+          {
+            "lat": 52.546145,
+            "lon": 13.1941452
+          }
+        ]
+      },
+      {
+        "osm_id": 330951951,
+        "name": "Askanierring",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|left|right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "exclusive"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.546145,
+            "lon": 13.1941452
+          },
+          {
+            "lat": 52.5460675,
+            "lon": 13.1941693
+          },
+          {
+            "lat": 52.5459768,
+            "lon": 13.1941748
+          },
+          {
+            "lat": 52.5459133,
+            "lon": 13.194162
+          },
+          {
+            "lat": 52.5458996,
+            "lon": 13.1941593
+          }
+        ]
+      },
+      {
+        "osm_id": 396277153,
+        "name": "Askanierring",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5456898,
+            "lon": 13.1936704
+          },
+          {
+            "lat": 52.545716,
+            "lon": 13.1935887
+          },
+          {
+            "lat": 52.5457386,
+            "lon": 13.1935035
+          }
+        ]
+      },
+      {
+        "osm_id": 396277154,
+        "name": "Askanierring",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5459348,
+            "lon": 13.1937991
+          },
+          {
+            "lat": 52.5459871,
+            "lon": 13.1935884
+          }
+        ]
+      },
+      {
+        "osm_id": 596155537,
+        "name": "Falkenseer Chaussee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5454836,
+            "lon": 13.1946587
+          },
+          {
+            "lat": 52.5455926,
+            "lon": 13.1944683
+          },
+          {
+            "lat": 52.5456465,
+            "lon": 13.1943746
+          },
+          {
+            "lat": 52.545701,
+            "lon": 13.1942806
+          },
+          {
+            "lat": 52.5457746,
+            "lon": 13.1941191
+          }
+        ]
+      },
+      {
+        "osm_id": 784873679,
+        "name": "Falkenseer Chaussee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5458706,
+            "lon": 13.1938232
+          },
+          {
+            "lat": 52.5458947,
+            "lon": 13.1937378
+          },
+          {
+            "lat": 52.5459141,
+            "lon": 13.1936608
+          },
+          {
+            "lat": 52.5459379,
+            "lon": 13.1935467
+          },
+          {
+            "lat": 52.5459537,
+            "lon": 13.1934663
+          }
+        ]
+      },
+      {
+        "osm_id": 970172850,
+        "name": "Askanierring",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5456626,
+            "lon": 13.1945676
+          },
+          {
+            "lat": 52.5456996,
+            "lon": 13.1945427
+          },
+          {
+            "lat": 52.5457239,
+            "lon": 13.1945263
+          },
+          {
+            "lat": 52.5457711,
+            "lon": 13.1944945
+          },
+          {
+            "lat": 52.5458099,
+            "lon": 13.1944694
+          },
+          {
+            "lat": 52.5458402,
+            "lon": 13.1944498
+          },
+          {
+            "lat": 52.5458893,
+            "lon": 13.1944181
+          }
+        ]
+      },
+      {
+        "osm_id": 1106097329,
+        "name": "Askanierring",
+        "highway": "residential",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "track",
+        "cycleway_tags": {
+          "cycleway": "track"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5446029,
+            "lon": 13.1949269
+          },
+          {
+            "lat": 52.5438235,
+            "lon": 13.1954022
+          },
+          {
+            "lat": 52.5437816,
+            "lon": 13.1954242
+          },
+          {
+            "lat": 52.5435418,
+            "lon": 13.1955758
+          },
+          {
+            "lat": 52.543443,
+            "lon": 13.1956378
+          }
+        ]
+      },
+      {
+        "osm_id": 1445428105,
+        "name": "Askanierring",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.545701,
+            "lon": 13.1942806
+          },
+          {
+            "lat": 52.5457483,
+            "lon": 13.1943333
+          },
+          {
+            "lat": 52.5457842,
+            "lon": 13.1943533
+          }
+        ]
+      },
+      {
+        "osm_id": 1445428106,
+        "name": "Askanierring",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|left|right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer:both": "no",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:both": "dashed_line",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_sign": "none",
+          "cycleway:right:width": "1.6"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5458996,
+            "lon": 13.1941593
+          },
+          {
+            "lat": 52.5458717,
+            "lon": 13.1941506
+          },
+          {
+            "lat": 52.5458318,
+            "lon": 13.1941374
+          },
+          {
+            "lat": 52.5457746,
+            "lon": 13.1941191
+          }
+        ]
+      },
+      {
+        "osm_id": 1462572255,
+        "name": "Askanierring",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5454836,
+            "lon": 13.1946587
+          },
+          {
+            "lat": 52.5456394,
+            "lon": 13.1945832
+          },
+          {
+            "lat": 52.5456626,
+            "lon": 13.1945676
+          }
+        ]
+      },
+      {
+        "osm_id": 1462572256,
+        "name": "Askanierring",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5458893,
+            "lon": 13.1944181
+          },
+          {
+            "lat": 52.5459331,
+            "lon": 13.1943898
+          }
+        ]
+      },
+      {
+        "osm_id": 1462580102,
+        "name": "Falkenseer Damm",
+        "highway": "secondary",
+        "maxspeed": null,
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5451392,
+            "lon": 13.1950601
+          },
+          {
+            "lat": 52.54516,
+            "lon": 13.1950345
+          },
+          {
+            "lat": 52.5454645,
+            "lon": 13.194682
+          },
+          {
+            "lat": 52.5454836,
+            "lon": 13.1946587
+          }
+        ]
+      },
+      {
+        "osm_id": 1462580103,
+        "name": "Falkenseer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5451007,
+            "lon": 13.194818
+          },
+          {
+            "lat": 52.5449617,
+            "lon": 13.1950051
+          },
+          {
+            "lat": 52.5448698,
+            "lon": 13.1951532
+          },
+          {
+            "lat": 52.5448243,
+            "lon": 13.1952264
+          }
+        ]
+      },
+      {
+        "osm_id": 1462580104,
+        "name": "Falkenseer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5455137,
+            "lon": 13.1942223
+          },
+          {
+            "lat": 52.545452,
+            "lon": 13.1943311
+          },
+          {
+            "lat": 52.5452824,
+            "lon": 13.1945735
+          },
+          {
+            "lat": 52.5451007,
+            "lon": 13.194818
+          }
+        ]
+      },
+      {
+        "osm_id": 1462580105,
+        "name": "Falkenseer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5455901,
+            "lon": 13.1940746
+          },
+          {
+            "lat": 52.5455137,
+            "lon": 13.1942223
+          }
+        ]
+      },
+      {
+        "osm_id": 1462580106,
+        "name": "Falkenseer Chaussee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.546105,
+            "lon": 13.1918945
+          },
+          {
+            "lat": 52.5459979,
+            "lon": 13.1924726
+          },
+          {
+            "lat": 52.5459009,
+            "lon": 13.1929872
+          },
+          {
+            "lat": 52.5458407,
+            "lon": 13.1933069
+          }
+        ]
+      },
+      {
+        "osm_id": 1462580107,
+        "name": "Falkenseer Chaussee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5459537,
+            "lon": 13.1934663
+          },
+          {
+            "lat": 52.5459605,
+            "lon": 13.1934316
+          },
+          {
+            "lat": 52.546005,
+            "lon": 13.1932014
+          },
+          {
+            "lat": 52.5462155,
+            "lon": 13.192088
+          },
+          {
+            "lat": 52.5462477,
+            "lon": 13.1919124
+          }
+        ]
+      },
+      {
+        "osm_id": 1462595201,
+        "name": "Falkenseer Damm",
+        "highway": "secondary",
+        "maxspeed": null,
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5432455,
+            "lon": 13.1980674
+          },
+          {
+            "lat": 52.5436218,
+            "lon": 13.1974553
+          },
+          {
+            "lat": 52.5446366,
+            "lon": 13.1957989
+          }
+        ]
+      }
+    ],
+    "traffic_signals_nearby": "yes",
+    "notes": [],
+    "geocoded": {
+      "display_name": "Falkenseer Damm, Neustadt, Spandau, Berlin, 13585, Deutschland",
+      "lat": 52.5453113,
+      "lon": 13.1948593,
+      "osm_type": "way",
+      "osm_id": 1462580102
+    },
+    "bike_facility": {
+      "type": "separated_cycle_track",
+      "position": "right",
+      "source": "explicit_from_report",
+      "osm_evidence": {
+        "bike_facility_type": "separated_cycle_track",
+        "position": "right",
+        "tags": {
+          "cycleway:right": "separate"
+        }
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "right",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

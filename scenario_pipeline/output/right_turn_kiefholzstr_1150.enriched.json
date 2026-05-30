@@ -1,0 +1,573 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "right_turn_kiefholzstr_1150",
+    "date": "2022-09-13",
+    "time": "11:50",
+    "raw_text": "Ein Lastwagen samt Anhänger befuhr die Kiefholzstraße in Richtung Südostallee. Beim Rechtsabbiegen in den Dammweg übersah der Fahrer eine Radfahrerin, wodurch es zur Kollision kam. Datum: 13.09.2022 Uhrzeit: 11:50 Uhr"
+  },
+  "classification": {
+    "scenario_type": "right_turn_conflict",
+    "confidence": 1.0
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Kiefholzstraße",
+    "secondary_road": "Dammweg",
+    "osm_query": "Kiefholzstraße / Dammweg, Berlin, Germany",
+    "osm_roads": [
+      "Kiefholzstraße",
+      "Dammweg"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "southeast"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "no",
+    "bike_facility_type": "bike_lane",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "truck_1",
+      "class": "motor_vehicle",
+      "type": "truck",
+      "maneuver": "turn_right",
+      "initial_direction": "southeast",
+      "traffic_rule_status": "violated_priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across_cyclist_path",
+    "collision_happened": true,
+    "collision_description": "A truck collided with a cyclist while turning right into Dammweg.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line",
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "bike_lane",
+      "primary_bike_facility_position": "both",
+      "motor_lane_count": 2
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -3,
+          "initial_s_m": 10.0,
+          "initial_speed_mps": 4.5
+        },
+        "truck_1": {
+          "vehicle_category": "truck",
+          "initial_road_id": 0,
+          "initial_lane_id": -2,
+          "initial_s_m": 30.0,
+          "initial_speed_mps": 3.0
+        }
+      },
+      "cyclist_lateral_position": "both",
+      "conflict": {
+        "conflict_s_m": 50.0,
+        "trigger_time_s": 1.0
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "bike_lane",
+      "source": "osm_tag",
+      "reason": "OSM cycleway tags indicate bike_lane."
+    },
+    {
+      "parameter": "motor_lane_count",
+      "value_used": 2,
+      "source": "osm_tag",
+      "reason": "OpenDRIVE motor-lane count was derived from nearby OSM lanes tags."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "both",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    },
+    {
+      "parameter": "cyclist_1.vehicle_category",
+      "value_used": "bicycle",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -3,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_s_m",
+      "value_used": 10.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 4.5,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.vehicle_category",
+      "value_used": "truck",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.initial_lane_id",
+      "value_used": -2,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.initial_s_m",
+      "value_used": 30.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.initial_speed_mps",
+      "value_used": 3.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    }
+  ],
+  "osm_context": {
+    "query": "Kiefholzstraße, Berlin, Germany",
+    "queries_tried": [
+      "Kiefholzstraße / Dammweg, Berlin, Germany",
+      "Kiefholzstraße Dammweg, Berlin, Germany",
+      "Kiefholzstraße, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 384136087,
+        "name": "Kiefholzstraße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "12",
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:both": "lane",
+          "cycleway:both:buffer:right": "0.60",
+          "cycleway:both:lane": "exclusive",
+          "cycleway:both:marking:left": "double_solid_line",
+          "cycleway:both:marking:right": "solid_line",
+          "cycleway:both:separation:right": "kerb",
+          "cycleway:both:traffic_sign": "DE:237",
+          "cycleway:both:width": "1.65"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4858409,
+            "lon": 13.4583476
+          },
+          {
+            "lat": 52.4857626,
+            "lon": 13.4584576
+          },
+          {
+            "lat": 52.4857007,
+            "lon": 13.4585446
+          }
+        ]
+      },
+      {
+        "osm_id": 384136088,
+        "name": "Kiefholzstraße",
+        "highway": "tertiary",
+        "maxspeed": null,
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "12",
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:both": "lane",
+          "cycleway:both:buffer:right": "0.60",
+          "cycleway:both:lane": "exclusive",
+          "cycleway:both:marking:left": "double_solid_line",
+          "cycleway:both:marking:right": "solid_line",
+          "cycleway:both:separation:right": "kerb",
+          "cycleway:both:traffic_sign": "DE:237",
+          "cycleway:both:width": "1.65"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4852426,
+            "lon": 13.4591887
+          },
+          {
+            "lat": 52.48476,
+            "lon": 13.4599104
+          },
+          {
+            "lat": 52.4846827,
+            "lon": 13.460026
+          }
+        ]
+      },
+      {
+        "osm_id": 454034987,
+        "name": "Kiefholzstraße",
+        "highway": "tertiary",
+        "maxspeed": null,
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "12",
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:both": "lane",
+          "cycleway:both:buffer:right": "0.60",
+          "cycleway:both:lane": "exclusive",
+          "cycleway:both:marking:left": "double_solid_line",
+          "cycleway:both:marking:right": "solid_line",
+          "cycleway:both:separation:right": "kerb",
+          "cycleway:both:traffic_sign": "DE:237",
+          "cycleway:both:width": "1.65"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4846827,
+            "lon": 13.460026
+          },
+          {
+            "lat": 52.4842168,
+            "lon": 13.4607122
+          }
+        ]
+      },
+      {
+        "osm_id": 828776986,
+        "name": "Kiefholzstraße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "12",
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:both": "lane",
+          "cycleway:both:buffer:right": "0.60",
+          "cycleway:both:lane": "exclusive",
+          "cycleway:both:marking:left": "double_solid_line",
+          "cycleway:both:marking:right": "solid_line",
+          "cycleway:both:separation:right": "kerb",
+          "cycleway:both:traffic_sign": "DE:237",
+          "cycleway:both:width": "1.65"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4853175,
+            "lon": 13.4590834
+          },
+          {
+            "lat": 52.4852921,
+            "lon": 13.4591192
+          }
+        ]
+      },
+      {
+        "osm_id": 828776987,
+        "name": "Kiefholzstraße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "12",
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:both": "lane",
+          "cycleway:both:buffer:right": "0.60",
+          "cycleway:both:lane": "exclusive",
+          "cycleway:both:marking:left": "double_solid_line",
+          "cycleway:both:marking:right": "solid_line",
+          "cycleway:both:separation:right": "kerb",
+          "cycleway:both:traffic_sign": "DE:237",
+          "cycleway:both:width": "1.65"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4852921,
+            "lon": 13.4591192
+          },
+          {
+            "lat": 52.4852426,
+            "lon": 13.4591887
+          }
+        ]
+      },
+      {
+        "osm_id": 857752725,
+        "name": "Kiefholzstraße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "10",
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:both": "lane",
+          "cycleway:both:lane": "exclusive",
+          "cycleway:both:marking:left": "double_solid_line",
+          "cycleway:both:separation:right": "kerb",
+          "cycleway:both:traffic_sign": "DE:237",
+          "cycleway:left:width": "1.4",
+          "cycleway:right:buffer:right": "0.5",
+          "cycleway:right:marking:right": "solid_line",
+          "cycleway:right:width": "1"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4884531,
+            "lon": 13.4546763
+          },
+          {
+            "lat": 52.4884048,
+            "lon": 13.4547439
+          },
+          {
+            "lat": 52.4883027,
+            "lon": 13.4548879
+          },
+          {
+            "lat": 52.4879825,
+            "lon": 13.4553411
+          },
+          {
+            "lat": 52.4874502,
+            "lon": 13.4560882
+          },
+          {
+            "lat": 52.4872847,
+            "lon": 13.456324
+          },
+          {
+            "lat": 52.4872044,
+            "lon": 13.4564376
+          },
+          {
+            "lat": 52.4871261,
+            "lon": 13.4565482
+          },
+          {
+            "lat": 52.4870939,
+            "lon": 13.4565935
+          },
+          {
+            "lat": 52.4870303,
+            "lon": 13.4566828
+          },
+          {
+            "lat": 52.4869734,
+            "lon": 13.4567639
+          },
+          {
+            "lat": 52.4868083,
+            "lon": 13.4569926
+          },
+          {
+            "lat": 52.4866832,
+            "lon": 13.457171
+          },
+          {
+            "lat": 52.4866751,
+            "lon": 13.4571825
+          },
+          {
+            "lat": 52.4864659,
+            "lon": 13.4574803
+          },
+          {
+            "lat": 52.486318,
+            "lon": 13.4576894
+          },
+          {
+            "lat": 52.4861574,
+            "lon": 13.4579166
+          },
+          {
+            "lat": 52.4861106,
+            "lon": 13.457982
+          },
+          {
+            "lat": 52.4859754,
+            "lon": 13.4581615
+          },
+          {
+            "lat": 52.4859611,
+            "lon": 13.4581805
+          },
+          {
+            "lat": 52.4859047,
+            "lon": 13.458259
+          },
+          {
+            "lat": 52.4858409,
+            "lon": 13.4583476
+          }
+        ]
+      },
+      {
+        "osm_id": 1212039895,
+        "name": "Kiefholzstraße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "12",
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:both": "lane",
+          "cycleway:both:buffer:right": "0.60",
+          "cycleway:both:lane": "exclusive",
+          "cycleway:both:marking:left": "double_solid_line",
+          "cycleway:both:marking:right": "solid_line",
+          "cycleway:both:separation:right": "kerb",
+          "cycleway:both:traffic_sign": "DE:237",
+          "cycleway:both:width": "1.65"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4857007,
+            "lon": 13.4585446
+          },
+          {
+            "lat": 52.4853175,
+            "lon": 13.4590834
+          }
+        ]
+      }
+    ],
+    "traffic_signals_nearby": "no",
+    "notes": [],
+    "geocoded": {
+      "display_name": "Kiefholzstraße, Plänterwald, Treptow-Köpenick, Berlin, 12435, Deutschland",
+      "lat": 52.4853048,
+      "lon": 13.4591013,
+      "osm_type": "way",
+      "osm_id": 828776986
+    },
+    "bike_facility": {
+      "type": "bike_lane",
+      "position": "both",
+      "source": "osm_tag",
+      "osm_evidence": {
+        "bike_facility_type": "bike_lane",
+        "position": "both",
+        "tags": {
+          "cycleway:both": "lane"
+        }
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "both",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

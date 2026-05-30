@@ -1,0 +1,72 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "overtaking_odernheimer_1958",
+    "date": "2023-09-29",
+    "time": "19:58",
+    "raw_text": "Ein Busfahrer fuhr die Odernheimer Str. aus Richtung Neuhelgoländer Weg kommend in Richtung Alt Müggelheim. In Höhe der Odernheimer Str. 22 überholte der Busfahrer eine Radfahrerin, welche in die gleiche Richtung fuhr. Es kam zum Zusammenstoß der beiden Fahrzeuge, wodurch die Radfahrerin stürzte und von dem Bus überrollt wurde. Datum: Fr., 29.09.2023 Uhrzeit: 19:58 Uhr"
+  },
+  "classification": {
+    "scenario_type": "overtaking_conflict",
+    "confidence": 0.9
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Odernheimer Str.",
+    "secondary_road": null,
+    "osm_query": "Odernheimer Str. / Neuhelgoländer Weg, Berlin, Germany",
+    "osm_roads": [
+      "Odernheimer Str.",
+      "Neuhelgoländer Weg"
+    ],
+    "house_number_reference": "22",
+    "location_type": "midblock",
+    "direction_references": [
+      "east"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "no",
+    "bike_facility_type": "unknown",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "bus_1",
+      "class": "motor_vehicle",
+      "type": "bus",
+      "maneuver": "overtake",
+      "initial_direction": "east",
+      "traffic_rule_status": "violated_priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "east",
+      "traffic_rule_status": "priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "overtaking_from_behind",
+    "collision_happened": true,
+    "collision_description": "The bus collided with the cyclist while overtaking from behind.",
+    "severity_text": "fatal"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line"
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {}
+    }
+  },
+  "missing_parameters": []
+}

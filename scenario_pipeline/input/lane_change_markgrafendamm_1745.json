@@ -1,0 +1,72 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "lane_change_markgrafendamm_1745",
+    "date": "2021-09-18",
+    "time": "17:45",
+    "raw_text": "Eine Radfahrerin befuhr den Markgrafendamm auf dem Schutzstreifen für Fahrradfahrende in Richtung Hauptstraße. Kurz nach der Einmündung zur Persiusstraße wechselte sie nach links in den danebenliegenden rechten Fahrstreifen, wo sie von einem Pkw erfasst wurde. Datum: 18.09.2021 Uhrzeit: 17:45 Uhr"
+  },
+  "classification": {
+    "scenario_type": "lane_change_conflict",
+    "confidence": 0.8
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Markgrafendamm",
+    "secondary_road": "Persiusstraße",
+    "osm_query": "Markgrafendamm / Persiusstraße, Berlin, Germany",
+    "osm_roads": [
+      "Markgrafendamm",
+      "Persiusstraße"
+    ],
+    "house_number_reference": null,
+    "location_type": "midblock",
+    "direction_references": [
+      "Hauptstraße"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "no",
+    "bike_facility_type": "bike_lane",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "change_lane",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "must_yield"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "lane_change_into_path_of_oncoming_car",
+    "collision_happened": true,
+    "collision_description": "A cyclist was hit by a car while changing lanes.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line"
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {}
+    }
+  },
+  "missing_parameters": []
+}

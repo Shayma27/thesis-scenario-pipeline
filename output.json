@@ -1,0 +1,132 @@
+{
+  "case_id": null,
+  "source_type": "police_report",
+  "source_language": "de",
+  "scenario_type": "right_turn_conflict",
+  "scenario_summary": "Truck turned right at a traffic‑light controlled intersection and collided with a cyclist riding straight on a separated cycle track.",
+  "location": {
+    "location_raw": "Salvador-Allende-Str. / Müggelschlößchenweg",
+    "city": "Berlin",
+    "primary_road_name": "Salvador-Allende-Str.",
+    "secondary_road_name_or_access": "Müggelschlößchenweg",
+    "house_number_reference": null,
+    "map_source_type": "named_location_only"
+  },
+  "hierarchical_scenario_elements": {
+    "road_topology": {
+      "topology_type": "intersection",
+      "junction_control_type": "traffic_light",
+      "traffic_light_present": true
+    },
+    "transportation_facilities": {
+      "cycling_infrastructure": "separated_cycle_track",
+      "traffic_signs_or_signals": [
+        "LSA green for truck direction",
+        "LSA green for cyclists"
+      ],
+      "road_markings": []
+    },
+    "temporary_changes_or_obstacles": [],
+    "traffic_participants": [],
+    "environment": {
+      "weather": null,
+      "lighting": null,
+      "road_surface": null
+    }
+  },
+  "participants": [
+    {
+      "id": "P1",
+      "role": "motor_vehicle",
+      "type": "truck",
+      "vehicle_type_detail": null,
+      "maneuver_before_conflict": "turn_right",
+      "signal_state": "green",
+      "priority_status": "must_yield",
+      "travel_direction_detail": "right turn from Salvador-Allende-Str. into Müggelschlößchenweg",
+      "position_hint": null,
+      "speed_mps": null
+    },
+    {
+      "id": "P2",
+      "role": "cyclist",
+      "type": "bicycle",
+      "vehicle_type_detail": null,
+      "maneuver_before_conflict": "go_straight",
+      "signal_state": "green",
+      "priority_status": "has_priority",
+      "travel_direction_detail": "northbound on separated cycle track of Salvador-Allende-Str.",
+      "position_hint": null,
+      "speed_mps": null
+    }
+  ],
+  "event_sequence": [],
+  "conflict_geometry": {
+    "collision_occurred": true,
+    "collision_zone": "cycle_crossing",
+    "relative_path_conflict": "vehicle_turns_across_cyclist_path",
+    "same_direction_parallel_motion": null,
+    "turn_across_cycle_facility": true,
+    "overtaking_or_lateral_passing": null,
+    "impact_point_hint": "intersection of right‑turn path and cyclist track"
+  },
+  "openx_generation_hints": {
+    "opendrive_1_8_1": {
+      "ready_for_simplified_generation": null,
+      "needs_real_map_matching": null,
+      "recommended_road_model": null,
+      "reference_line_hint": null,
+      "recommended_lane_model": [],
+      "recommended_junction_model": null,
+      "recommended_signal_model": null,
+      "static_objects": []
+    },
+    "openscenario_2_0_0": {
+      "abstraction_level": null,
+      "ready_for_simplified_generation": null,
+      "recommended_entities": [],
+      "recommended_init": {
+        "p1_initial_position_hint": null,
+        "p2_initial_position_hint": null,
+        "p1_initial_motion_state": null,
+        "p2_initial_motion_state": null
+      },
+      "recommended_actions": [],
+      "recommended_constraints": [],
+      "recommended_kpis": [
+        "collision",
+        "violation_of_road_rights"
+      ],
+      "recommended_stop_condition": null
+    }
+  },
+  "evaluation_hints": {
+    "syntactic_validity_risks": [],
+    "scenario_diversity_tags": [],
+    "criticality_tags": []
+  },
+  "explicit_items": [
+    "Truck waited at red light on Salvador-Allende-Str.",
+    "Truck received green light and turned right into Müggelschlößchenweg",
+    "Cyclist rode straight northbound on a separated cycle track of Salvador-Allende-Str.",
+    "Cyclist signal was green (flashing)",
+    "Truck fully ran over cyclist and bicycle"
+  ],
+  "inferred_items": [
+    "Truck had to yield to cyclist who had priority on the separated cycle track",
+    "Collision occurred at the crossing of the right‑turn path and the cycle track"
+  ],
+  "missing_critical_items": [
+    "exact coordinates",
+    "lane widths",
+    "initial positions",
+    "speeds",
+    "headings",
+    "exact impact point"
+  ],
+  "quality_control": {
+    "schema_compliance_notes": [],
+    "generation_risks": [],
+    "confidence": null
+  }
+}

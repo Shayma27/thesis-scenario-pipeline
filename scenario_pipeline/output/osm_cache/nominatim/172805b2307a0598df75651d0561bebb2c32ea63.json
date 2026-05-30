@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 146192530,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 381471279,
+    "lat": "52.4461071",
+    "lon": "13.2934939",
+    "category": "highway",
+    "type": "platform",
+    "place_rank": 30,
+    "importance": 8.875486381318407e-05,
+    "addresstype": "highway",
+    "name": "Unter den Eichen/Drakestraße",
+    "display_name": "Unter den Eichen/Drakestraße, Habelschwerdter Allee, Dahlem, Steglitz-Zehlendorf, Berlin, 14195, Deutschland",
+    "boundingbox": [
+      "52.4460579",
+      "52.4461563",
+      "13.2934429",
+      "13.2935448"
+    ]
+  }
+]

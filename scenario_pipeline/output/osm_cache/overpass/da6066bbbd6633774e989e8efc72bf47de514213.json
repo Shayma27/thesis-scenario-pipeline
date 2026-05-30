@@ -1,0 +1,2854 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-28T12:54:28Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 1965563757,
+      "lat": 52.4405417,
+      "lon": 13.586514,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals:direction": "backward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3622886084,
+      "lat": 52.4407028,
+      "lon": 13.5869958,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3622886088,
+      "lat": 52.4409884,
+      "lon": 13.5868403,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8941732035,
+      "lat": 52.4408657,
+      "lon": 13.5868502,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "way",
+      "id": 10699438,
+      "bounds": {
+        "minlat": 52.4399309,
+        "minlon": 13.5876369,
+        "maxlat": 52.440431,
+        "maxlon": 13.5889414
+      },
+      "geometry": [
+        {
+          "lat": 52.4399309,
+          "lon": 13.5889414
+        },
+        {
+          "lat": 52.4402826,
+          "lon": 13.5880164
+        },
+        {
+          "lat": 52.4403723,
+          "lon": 13.5877828
+        },
+        {
+          "lat": 52.4403993,
+          "lon": 13.5877181
+        },
+        {
+          "lat": 52.440431,
+          "lon": 13.5876369
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12557",
+        "shoulder": "no",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "through|through;right",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 10781105,
+      "bounds": {
+        "minlat": 52.4407122,
+        "minlon": 13.5865377,
+        "maxlat": 52.4408865,
+        "maxlon": 13.5866852
+      },
+      "geometry": [
+        {
+          "lat": 52.4407122,
+          "lon": 13.5865377
+        },
+        {
+          "lat": 52.4407936,
+          "lon": 13.5865919
+        },
+        {
+          "lat": 52.440821,
+          "lon": 13.586616
+        },
+        {
+          "lat": 52.4408865,
+          "lon": 13.5866852
+        }
+      ],
+      "tags": {
+        "cycleway:left": "lane",
+        "cycleway:left:lane": "advisory",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "noname": "yes",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 20416124,
+      "bounds": {
+        "minlat": 52.4396982,
+        "minlon": 13.5881087,
+        "maxlat": 52.4397525,
+        "maxlon": 13.5881862
+      },
+      "geometry": [
+        {
+          "lat": 52.4396982,
+          "lon": 13.5881087
+        },
+        {
+          "lat": 52.4397345,
+          "lon": 13.5881493
+        },
+        {
+          "lat": 52.4397525,
+          "lon": 13.5881862
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Grüne Trift",
+        "name:etymology:wikidata": "Q1168568",
+        "name:etymology:wikipedia": "de:Viehtrift",
+        "operator:type": "private",
+        "parking:left": "street_side",
+        "parking:left:access": "private",
+        "parking:left:orientation": "perpendicular",
+        "parking:left:private": "residents",
+        "parking:right": "no",
+        "postal_code": "12557",
+        "sidewalk": "right",
+        "sidewalk:right:surface": "concrete",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "width": "5",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25278091,
+      "bounds": {
+        "minlat": 52.4407932,
+        "minlon": 13.5869874,
+        "maxlat": 52.4408852,
+        "maxlon": 13.5874172
+      },
+      "geometry": [
+        {
+          "lat": 52.4407932,
+          "lon": 13.5869874
+        },
+        {
+          "lat": 52.4408852,
+          "lon": 13.587038
+        },
+        {
+          "lat": 52.4408346,
+          "lon": 13.5874172
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25815941,
+      "bounds": {
+        "minlat": 52.4413126,
+        "minlon": 13.5864362,
+        "maxlat": 52.4421528,
+        "maxlon": 13.5884997
+      },
+      "geometry": [
+        {
+          "lat": 52.4413126,
+          "lon": 13.5884997
+        },
+        {
+          "lat": 52.4413388,
+          "lon": 13.5883295
+        },
+        {
+          "lat": 52.4413915,
+          "lon": 13.5882697
+        },
+        {
+          "lat": 52.4421005,
+          "lon": 13.5883313
+        },
+        {
+          "lat": 52.4421131,
+          "lon": 13.5879888
+        },
+        {
+          "lat": 52.4421441,
+          "lon": 13.587151
+        },
+        {
+          "lat": 52.4421528,
+          "lon": 13.5869151
+        },
+        {
+          "lat": 52.4421206,
+          "lon": 13.5867798
+        },
+        {
+          "lat": 52.4421094,
+          "lon": 13.5867329
+        },
+        {
+          "lat": 52.4419287,
+          "lon": 13.5864362
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25816000,
+      "bounds": {
+        "minlat": 52.4410359,
+        "minlon": 13.5863427,
+        "maxlat": 52.4415622,
+        "maxlon": 13.5869687
+      },
+      "geometry": [
+        {
+          "lat": 52.4415622,
+          "lon": 13.586647
+        },
+        {
+          "lat": 52.4415078,
+          "lon": 13.5865593
+        },
+        {
+          "lat": 52.4414871,
+          "lon": 13.5865335
+        },
+        {
+          "lat": 52.4413656,
+          "lon": 13.5863427
+        },
+        {
+          "lat": 52.4413009,
+          "lon": 13.5864745
+        },
+        {
+          "lat": 52.4412577,
+          "lon": 13.5865674
+        },
+        {
+          "lat": 52.4412371,
+          "lon": 13.5866544
+        },
+        {
+          "lat": 52.4412159,
+          "lon": 13.5867723
+        },
+        {
+          "lat": 52.4411706,
+          "lon": 13.5868507
+        },
+        {
+          "lat": 52.4411179,
+          "lon": 13.586903
+        },
+        {
+          "lat": 52.4410816,
+          "lon": 13.586939
+        },
+        {
+          "lat": 52.4410359,
+          "lon": 13.5869687
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lanes": "2",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25816398,
+      "bounds": {
+        "minlat": 52.4393076,
+        "minlon": 13.5880353,
+        "maxlat": 52.4407635,
+        "maxlon": 13.592115
+      },
+      "geometry": [
+        {
+          "lat": 52.4393076,
+          "lon": 13.592115
+        },
+        {
+          "lat": 52.4395108,
+          "lon": 13.5914986
+        },
+        {
+          "lat": 52.4399505,
+          "lon": 13.5901858
+        },
+        {
+          "lat": 52.4403193,
+          "lon": 13.589136
+        },
+        {
+          "lat": 52.4404224,
+          "lon": 13.5889428
+        },
+        {
+          "lat": 52.4406294,
+          "lon": 13.5882529
+        },
+        {
+          "lat": 52.4407635,
+          "lon": 13.5880353
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "description": "Radfahren verboten",
+        "highway": "footway",
+        "lit": "no",
+        "smoothness": "intermediate",
+        "surface": "compacted"
+      }
+    },
+    {
+      "type": "way",
+      "id": 26284869,
+      "bounds": {
+        "minlat": 52.4404224,
+        "minlon": 13.5889428,
+        "maxlat": 52.440852,
+        "maxlon": 13.589086
+      },
+      "geometry": [
+        {
+          "lat": 52.4404224,
+          "lon": 13.5889428
+        },
+        {
+          "lat": 52.4404906,
+          "lon": 13.5889943
+        },
+        {
+          "lat": 52.4406317,
+          "lon": 13.5890502
+        },
+        {
+          "lat": 52.4408159,
+          "lon": 13.5890801
+        },
+        {
+          "lat": 52.440852,
+          "lon": 13.589086
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "description": "Radfahren verboten",
+        "highway": "footway",
+        "lit": "no",
+        "smoothness": "intermediate",
+        "surface": "compacted"
+      }
+    },
+    {
+      "type": "way",
+      "id": 26284993,
+      "bounds": {
+        "minlat": 52.4388455,
+        "minlon": 13.5874505,
+        "maxlat": 52.4407103,
+        "maxlon": 13.5922872
+      },
+      "geometry": [
+        {
+          "lat": 52.4388455,
+          "lon": 13.5922872
+        },
+        {
+          "lat": 52.4388506,
+          "lon": 13.5922746
+        },
+        {
+          "lat": 52.4392212,
+          "lon": 13.5913016
+        },
+        {
+          "lat": 52.4407103,
+          "lon": 13.5874505
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "lit": "yes",
+        "segregated": "no",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "traffic_sign": "DE:237"
+      }
+    },
+    {
+      "type": "way",
+      "id": 26708284,
+      "bounds": {
+        "minlat": 52.4407337,
+        "minlon": 13.5866852,
+        "maxlat": 52.4408865,
+        "maxlon": 13.5869398
+      },
+      "geometry": [
+        {
+          "lat": 52.4407337,
+          "lon": 13.5869398
+        },
+        {
+          "lat": 52.4408865,
+          "lon": 13.5866852
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Müggelheimer Straße",
+        "name:etymology:wikidata": "Q644380",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12555",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "turn:lanes": "through|through;right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 26708288,
+      "bounds": {
+        "minlat": 52.4403681,
+        "minlon": 13.5867677,
+        "maxlat": 52.4406005,
+        "maxlon": 13.587261
+      },
+      "geometry": [
+        {
+          "lat": 52.4406005,
+          "lon": 13.5867677
+        },
+        {
+          "lat": 52.4405137,
+          "lon": 13.586887
+        },
+        {
+          "lat": 52.4403822,
+          "lon": 13.5871726
+        },
+        {
+          "lat": 52.4403681,
+          "lon": 13.587261
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "cycleway:both": "no",
+        "foot": "no",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12557",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "none|merge_to_left",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30803555,
+      "bounds": {
+        "minlat": 52.4406005,
+        "minlon": 13.5867677,
+        "maxlat": 52.4407337,
+        "maxlon": 13.5869398
+      },
+      "geometry": [
+        {
+          "lat": 52.4406005,
+          "lon": 13.5867677
+        },
+        {
+          "lat": 52.4406483,
+          "lon": 13.5868298
+        },
+        {
+          "lat": 52.4406699,
+          "lon": 13.5868576
+        },
+        {
+          "lat": 52.4407337,
+          "lon": 13.5869398
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "check_date:surface": "2023-10-20",
+        "cycleway:surface": "paving_stones",
+        "foot": "designated",
+        "footway:surface": "paving_stones",
+        "highway": "path",
+        "lit": "yes",
+        "segregated": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 31091000,
+      "bounds": {
+        "minlat": 52.4407337,
+        "minlon": 13.5869398,
+        "maxlat": 52.4407932,
+        "maxlon": 13.5869874
+      },
+      "geometry": [
+        {
+          "lat": 52.4407932,
+          "lon": 13.5869874
+        },
+        {
+          "lat": 52.4407337,
+          "lon": 13.5869398
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "cycleway:surface": "paving_stones",
+        "foot": "designated",
+        "footway:surface": "sett",
+        "highway": "path",
+        "lit": "yes",
+        "segregated": "yes",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 35554373,
+      "bounds": {
+        "minlat": 52.4391119,
+        "minlon": 13.5866008,
+        "maxlat": 52.4403533,
+        "maxlon": 13.587475
+      },
+      "geometry": [
+        {
+          "lat": 52.4403533,
+          "lon": 13.5866008
+        },
+        {
+          "lat": 52.4399875,
+          "lon": 13.5868549
+        },
+        {
+          "lat": 52.4396642,
+          "lon": 13.5870839
+        },
+        {
+          "lat": 52.4392169,
+          "lon": 13.5874007
+        },
+        {
+          "lat": 52.4391119,
+          "lon": 13.587475
+        }
+      ],
+      "tags": {
+        "cycleway": "track",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Grüne Trift",
+        "name:etymology:wikidata": "Q1168568",
+        "name:etymology:wikipedia": "de:Viehtrift",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "postal_code": "12557",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "width": "6",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 44956230,
+      "bounds": {
+        "minlat": 52.4408865,
+        "minlon": 13.5860312,
+        "maxlat": 52.4412596,
+        "maxlon": 13.5866852
+      },
+      "geometry": [
+        {
+          "lat": 52.4408865,
+          "lon": 13.5866852
+        },
+        {
+          "lat": 52.4409789,
+          "lon": 13.5865304
+        },
+        {
+          "lat": 52.4411303,
+          "lon": 13.5862786
+        },
+        {
+          "lat": 52.4412596,
+          "lon": 13.5860312
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Müggelheimer Straße",
+        "name:etymology:wikidata": "Q644380",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12555",
+        "sidewalk": "right",
+        "sidewalk:right:surface": "asphalt",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 44956231,
+      "bounds": {
+        "minlat": 52.4406005,
+        "minlon": 13.5865377,
+        "maxlat": 52.4407122,
+        "maxlon": 13.5867677
+      },
+      "geometry": [
+        {
+          "lat": 52.4407122,
+          "lon": 13.5865377
+        },
+        {
+          "lat": 52.4406005,
+          "lon": 13.5867677
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Müggelheimer Straße",
+        "name:etymology:wikidata": "Q644380",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12555",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 46829142,
+      "bounds": {
+        "minlat": 52.4410896,
+        "minlon": 13.5884997,
+        "maxlat": 52.4423366,
+        "maxlon": 13.5885775
+      },
+      "geometry": [
+        {
+          "lat": 52.4423366,
+          "lon": 13.5885775
+        },
+        {
+          "lat": 52.442327,
+          "lon": 13.588577
+        },
+        {
+          "lat": 52.4422941,
+          "lon": 13.5885745
+        },
+        {
+          "lat": 52.4421994,
+          "lon": 13.5885664
+        },
+        {
+          "lat": 52.441379,
+          "lon": 13.5885047
+        },
+        {
+          "lat": 52.4413126,
+          "lon": 13.5884997
+        },
+        {
+          "lat": 52.4411963,
+          "lon": 13.5884998
+        },
+        {
+          "lat": 52.4411797,
+          "lon": 13.5884998
+        },
+        {
+          "lat": 52.4410896,
+          "lon": 13.5884999
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "hazard": "children",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Pablo-Neruda-Straße",
+        "parking:left": "separate",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "sidewalk": "left",
+        "sidewalk:left:surface": "asphalt",
+        "sidewalk:right": "no",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 123718704,
+      "bounds": {
+        "minlat": 52.4411869,
+        "minlon": 13.5889793,
+        "maxlat": 52.4414472,
+        "maxlon": 13.5890063
+      },
+      "geometry": [
+        {
+          "lat": 52.4411869,
+          "lon": 13.5889793
+        },
+        {
+          "lat": 52.4413688,
+          "lon": 13.5889982
+        },
+        {
+          "lat": 52.4414472,
+          "lon": 13.5890063
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 160913105,
+      "bounds": {
+        "minlat": 52.4389915,
+        "minlon": 13.5868611,
+        "maxlat": 52.4391119,
+        "maxlon": 13.587475
+      },
+      "geometry": [
+        {
+          "lat": 52.4391119,
+          "lon": 13.587475
+        },
+        {
+          "lat": 52.4390605,
+          "lon": 13.5874016
+        },
+        {
+          "lat": 52.4390374,
+          "lon": 13.5873594
+        },
+        {
+          "lat": 52.4390087,
+          "lon": 13.5872394
+        },
+        {
+          "lat": 52.4390012,
+          "lon": 13.5871581
+        },
+        {
+          "lat": 52.4389915,
+          "lon": 13.5868611
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Charlottenstraße",
+        "name:etymology:wikidata": "Q57207",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12557",
+        "sidewalk": "both",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 185867069,
+      "bounds": {
+        "minlat": 52.4403533,
+        "minlon": 13.5866008,
+        "maxlat": 52.4405137,
+        "maxlon": 13.586887
+      },
+      "geometry": [
+        {
+          "lat": 52.4403533,
+          "lon": 13.5866008
+        },
+        {
+          "lat": 52.4404253,
+          "lon": 13.5866431
+        },
+        {
+          "lat": 52.4404422,
+          "lon": 13.5866726
+        },
+        {
+          "lat": 52.4404788,
+          "lon": 13.5867366
+        },
+        {
+          "lat": 52.4404855,
+          "lon": 13.5867656
+        },
+        {
+          "lat": 52.4404898,
+          "lon": 13.5867839
+        },
+        {
+          "lat": 52.4405137,
+          "lon": 13.586887
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "cycleway:both": "no",
+        "foot": "no",
+        "highway": "residential",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Grüne Trift",
+        "name:etymology:wikidata": "Q1168568",
+        "name:etymology:wikipedia": "de:Viehtrift",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12557",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 185867071,
+      "bounds": {
+        "minlat": 52.4408865,
+        "minlon": 13.5866852,
+        "maxlat": 52.4410678,
+        "maxlon": 13.5874737
+      },
+      "geometry": [
+        {
+          "lat": 52.4410678,
+          "lon": 13.5874737
+        },
+        {
+          "lat": 52.4410575,
+          "lon": 13.5870497
+        },
+        {
+          "lat": 52.4410359,
+          "lon": 13.5869687
+        },
+        {
+          "lat": 52.4409884,
+          "lon": 13.5868403
+        },
+        {
+          "lat": 52.4409688,
+          "lon": 13.5867996
+        },
+        {
+          "lat": 52.4409419,
+          "lon": 13.5867615
+        },
+        {
+          "lat": 52.4408865,
+          "lon": 13.5866852
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pablo-Neruda-Straße",
+        "name:etymology:wikidata": "Q34189",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 238053685,
+      "bounds": {
+        "minlat": 52.4399309,
+        "minlon": 13.587261,
+        "maxlat": 52.4403681,
+        "maxlon": 13.5889414
+      },
+      "geometry": [
+        {
+          "lat": 52.4403681,
+          "lon": 13.587261
+        },
+        {
+          "lat": 52.4403183,
+          "lon": 13.5877138
+        },
+        {
+          "lat": 52.440292,
+          "lon": 13.587841
+        },
+        {
+          "lat": 52.4402485,
+          "lon": 13.5879768
+        },
+        {
+          "lat": 52.4399644,
+          "lon": 13.5887182
+        },
+        {
+          "lat": 52.4399309,
+          "lon": 13.5889414
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "cycleway:both": "no",
+        "foot": "no",
+        "highway": "secondary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12557",
+        "shoulder": "no",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 238053686,
+      "bounds": {
+        "minlat": 52.4407122,
+        "minlon": 13.5858122,
+        "maxlat": 52.4411436,
+        "maxlon": 13.5865377
+      },
+      "geometry": [
+        {
+          "lat": 52.4411436,
+          "lon": 13.5858122
+        },
+        {
+          "lat": 52.4408522,
+          "lon": 13.5862658
+        },
+        {
+          "lat": 52.4408248,
+          "lon": 13.5863109
+        },
+        {
+          "lat": 52.4407122,
+          "lon": 13.5865377
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "cycleway:right:bicycle": "designated",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:segregated": "yes",
+        "cycleway:right:traffic_sign": "DE:237",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Müggelheimer Straße",
+        "name:etymology:wikidata": "Q644380",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12555",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 296146792,
+      "bounds": {
+        "minlat": 52.4389481,
+        "minlon": 13.5876944,
+        "maxlat": 52.4394072,
+        "maxlon": 13.5883182
+      },
+      "geometry": [
+        {
+          "lat": 52.4389481,
+          "lon": 13.5876944
+        },
+        {
+          "lat": 52.4390223,
+          "lon": 13.5879821
+        },
+        {
+          "lat": 52.439074,
+          "lon": 13.5880419
+        },
+        {
+          "lat": 52.4391912,
+          "lon": 13.5881777
+        },
+        {
+          "lat": 52.4392787,
+          "lon": 13.5882791
+        },
+        {
+          "lat": 52.4393124,
+          "lon": 13.5883182
+        },
+        {
+          "lat": 52.4394072,
+          "lon": 13.588283
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 296146794,
+      "bounds": {
+        "minlat": 52.4384898,
+        "minlon": 13.5879821,
+        "maxlat": 52.4390621,
+        "maxlon": 13.5903817
+      },
+      "geometry": [
+        {
+          "lat": 52.4384898,
+          "lon": 13.5903817
+        },
+        {
+          "lat": 52.4385324,
+          "lon": 13.5902559
+        },
+        {
+          "lat": 52.4385298,
+          "lon": 13.5901774
+        },
+        {
+          "lat": 52.4385961,
+          "lon": 13.5894355
+        },
+        {
+          "lat": 52.4389938,
+          "lon": 13.5886163
+        },
+        {
+          "lat": 52.4390621,
+          "lon": 13.5883025
+        },
+        {
+          "lat": 52.4390223,
+          "lon": 13.5879821
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 296146795,
+      "bounds": {
+        "minlat": 52.4391912,
+        "minlon": 13.5880857,
+        "maxlat": 52.439226,
+        "maxlon": 13.5881777
+      },
+      "geometry": [
+        {
+          "lat": 52.439226,
+          "lon": 13.5880857
+        },
+        {
+          "lat": 52.4391912,
+          "lon": 13.5881777
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 296146796,
+      "bounds": {
+        "minlat": 52.439074,
+        "minlon": 13.5879584,
+        "maxlat": 52.4391086,
+        "maxlon": 13.5880419
+      },
+      "geometry": [
+        {
+          "lat": 52.4391086,
+          "lon": 13.5879584
+        },
+        {
+          "lat": 52.439074,
+          "lon": 13.5880419
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 296146798,
+      "bounds": {
+        "minlat": 52.4392787,
+        "minlon": 13.588183,
+        "maxlat": 52.4393157,
+        "maxlon": 13.5882791
+      },
+      "geometry": [
+        {
+          "lat": 52.4393157,
+          "lon": 13.588183
+        },
+        {
+          "lat": 52.4392787,
+          "lon": 13.5882791
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 389175770,
+      "bounds": {
+        "minlat": 52.4403226,
+        "minlon": 13.5869163,
+        "maxlat": 52.440442,
+        "maxlon": 13.5871719
+      },
+      "geometry": [
+        {
+          "lat": 52.4403226,
+          "lon": 13.5871719
+        },
+        {
+          "lat": 52.440442,
+          "lon": 13.5869163
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:shelter": "2022-10-30",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Pablo-Neruda-Straße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 414498858,
+      "bounds": {
+        "minlat": 52.4391005,
+        "minlon": 13.5889414,
+        "maxlat": 52.4399309,
+        "maxlon": 13.5911025
+      },
+      "geometry": [
+        {
+          "lat": 52.4399309,
+          "lon": 13.5889414
+        },
+        {
+          "lat": 52.4391005,
+          "lon": 13.5911025
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "note": "Übergeordnete Straße, Stufe II",
+        "parking:both": "no",
+        "postal_code": "12557",
+        "shoulder": "no",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 445948854,
+      "bounds": {
+        "minlat": 52.4393809,
+        "minlon": 13.5859495,
+        "maxlat": 52.44061,
+        "maxlon": 13.5867586
+      },
+      "geometry": [
+        {
+          "lat": 52.44061,
+          "lon": 13.5859495
+        },
+        {
+          "lat": 52.4394149,
+          "lon": 13.5867586
+        },
+        {
+          "lat": 52.4393809,
+          "lon": 13.5866317
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 855153389,
+      "bounds": {
+        "minlat": 52.4407103,
+        "minlon": 13.5869874,
+        "maxlat": 52.4407932,
+        "maxlon": 13.5874505
+      },
+      "geometry": [
+        {
+          "lat": 52.4407103,
+          "lon": 13.5874505
+        },
+        {
+          "lat": 52.4407932,
+          "lon": 13.5869874
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "cycleway:surface": "paving_stones",
+        "foot": "designated",
+        "footway:surface": "sett",
+        "highway": "path",
+        "lit": "yes",
+        "segregated": "yes",
+        "traffic_sign": "DE:237"
+      }
+    },
+    {
+      "type": "way",
+      "id": 855153390,
+      "bounds": {
+        "minlat": 52.440852,
+        "minlon": 13.589086,
+        "maxlat": 52.4412009,
+        "maxlon": 13.5931134
+      },
+      "geometry": [
+        {
+          "lat": 52.440852,
+          "lon": 13.589086
+        },
+        {
+          "lat": 52.4408773,
+          "lon": 13.5916037
+        },
+        {
+          "lat": 52.4408784,
+          "lon": 13.591979
+        },
+        {
+          "lat": 52.4408788,
+          "lon": 13.592155
+        },
+        {
+          "lat": 52.4408767,
+          "lon": 13.5922516
+        },
+        {
+          "lat": 52.4409868,
+          "lon": 13.5925425
+        },
+        {
+          "lat": 52.4411586,
+          "lon": 13.5929968
+        },
+        {
+          "lat": 52.4412009,
+          "lon": 13.5931134
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "description": "Radfahren verboten",
+        "highway": "footway",
+        "lit": "no",
+        "smoothness": "intermediate",
+        "surface": "compacted"
+      }
+    },
+    {
+      "type": "way",
+      "id": 889571671,
+      "bounds": {
+        "minlat": 52.4407635,
+        "minlon": 13.5874172,
+        "maxlat": 52.4408346,
+        "maxlon": 13.5890801
+      },
+      "geometry": [
+        {
+          "lat": 52.4408346,
+          "lon": 13.5874172
+        },
+        {
+          "lat": 52.4407635,
+          "lon": 13.5880353
+        },
+        {
+          "lat": 52.4408066,
+          "lon": 13.5881705
+        },
+        {
+          "lat": 52.4408159,
+          "lon": 13.5890801
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "description": "Radfahren verboten",
+        "highway": "footway",
+        "lit": "no",
+        "smoothness": "intermediate",
+        "surface": "compacted"
+      }
+    },
+    {
+      "type": "way",
+      "id": 889571672,
+      "bounds": {
+        "minlat": 52.440852,
+        "minlon": 13.5890379,
+        "maxlat": 52.4410194,
+        "maxlon": 13.589086
+      },
+      "geometry": [
+        {
+          "lat": 52.440852,
+          "lon": 13.589086
+        },
+        {
+          "lat": 52.4408905,
+          "lon": 13.5890379
+        },
+        {
+          "lat": 52.4410194,
+          "lon": 13.5890423
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "description": "Radfahren verboten",
+        "highway": "footway",
+        "lit": "no",
+        "smoothness": "intermediate",
+        "surface": "compacted"
+      }
+    },
+    {
+      "type": "way",
+      "id": 966483432,
+      "bounds": {
+        "minlat": 52.4407932,
+        "minlon": 13.5866685,
+        "maxlat": 52.441012,
+        "maxlon": 13.5869874
+      },
+      "geometry": [
+        {
+          "lat": 52.4407932,
+          "lon": 13.5869874
+        },
+        {
+          "lat": 52.4408231,
+          "lon": 13.5869193
+        },
+        {
+          "lat": 52.4408657,
+          "lon": 13.5868502
+        },
+        {
+          "lat": 52.4409419,
+          "lon": 13.5867615
+        },
+        {
+          "lat": 52.4409981,
+          "lon": 13.5866879
+        },
+        {
+          "lat": 52.441012,
+          "lon": 13.5866685
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "cycleway": "crossing",
+        "highway": "cycleway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1089408498,
+      "bounds": {
+        "minlat": 52.440431,
+        "minlon": 13.5869398,
+        "maxlat": 52.4407337,
+        "maxlon": 13.5876369
+      },
+      "geometry": [
+        {
+          "lat": 52.440431,
+          "lon": 13.5876369
+        },
+        {
+          "lat": 52.4405448,
+          "lon": 13.5873452
+        },
+        {
+          "lat": 52.4407028,
+          "lon": 13.5869958
+        },
+        {
+          "lat": 52.4407337,
+          "lon": 13.5869398
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12557",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "through|through;right",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1089413543,
+      "bounds": {
+        "minlat": 52.4410104,
+        "minlon": 13.5883791,
+        "maxlat": 52.4410874,
+        "maxlon": 13.5883819
+      },
+      "geometry": [
+        {
+          "lat": 52.4410104,
+          "lon": 13.5883791
+        },
+        {
+          "lat": 52.4410874,
+          "lon": 13.5883819
+        }
+      ],
+      "tags": {
+        "crossing": "unmarked",
+        "crossing:markings": "no",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "intermediate",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1089413547,
+      "bounds": {
+        "minlat": 52.4390605,
+        "minlon": 13.5862184,
+        "maxlat": 52.440761,
+        "maxlon": 13.5874016
+      },
+      "geometry": [
+        {
+          "lat": 52.4390605,
+          "lon": 13.5874016
+        },
+        {
+          "lat": 52.4391808,
+          "lon": 13.5873163
+        },
+        {
+          "lat": 52.4391919,
+          "lon": 13.5873084
+        },
+        {
+          "lat": 52.4404694,
+          "lon": 13.5864248
+        },
+        {
+          "lat": 52.4406681,
+          "lon": 13.5863595
+        },
+        {
+          "lat": 52.4407315,
+          "lon": 13.5862638
+        },
+        {
+          "lat": 52.440761,
+          "lon": 13.5862184
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1089413548,
+      "bounds": {
+        "minlat": 52.4403088,
+        "minlon": 13.5866884,
+        "maxlat": 52.4405413,
+        "maxlon": 13.5871511
+      },
+      "geometry": [
+        {
+          "lat": 52.4405413,
+          "lon": 13.5866884
+        },
+        {
+          "lat": 52.4404898,
+          "lon": 13.5867839
+        },
+        {
+          "lat": 52.4404371,
+          "lon": 13.5868786
+        },
+        {
+          "lat": 52.4403548,
+          "lon": 13.5870534
+        },
+        {
+          "lat": 52.4403088,
+          "lon": 13.5871511
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1089413549,
+      "bounds": {
+        "minlat": 52.4405325,
+        "minlon": 13.5863595,
+        "maxlat": 52.4406681,
+        "maxlon": 13.586666
+      },
+      "geometry": [
+        {
+          "lat": 52.4406681,
+          "lon": 13.5863595
+        },
+        {
+          "lat": 52.4406035,
+          "lon": 13.5865084
+        },
+        {
+          "lat": 52.4405325,
+          "lon": 13.586666
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1089413550,
+      "bounds": {
+        "minlat": 52.4409044,
+        "minlon": 13.5866764,
+        "maxlat": 52.4410564,
+        "maxlon": 13.5868942
+      },
+      "geometry": [
+        {
+          "lat": 52.4409044,
+          "lon": 13.5868942
+        },
+        {
+          "lat": 52.4409688,
+          "lon": 13.5867996
+        },
+        {
+          "lat": 52.4410314,
+          "lon": 13.5867115
+        },
+        {
+          "lat": 52.4410564,
+          "lon": 13.5866764
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1089413551,
+      "bounds": {
+        "minlat": 52.4410564,
+        "minlon": 13.5866764,
+        "maxlat": 52.4413622,
+        "maxlon": 13.5931321
+      },
+      "geometry": [
+        {
+          "lat": 52.4413622,
+          "lon": 13.5931321
+        },
+        {
+          "lat": 52.4413425,
+          "lon": 13.5930436
+        },
+        {
+          "lat": 52.4413218,
+          "lon": 13.5927321
+        },
+        {
+          "lat": 52.4412801,
+          "lon": 13.5920524
+        },
+        {
+          "lat": 52.4412901,
+          "lon": 13.5920022
+        },
+        {
+          "lat": 52.4413112,
+          "lon": 13.5919375
+        },
+        {
+          "lat": 52.4412011,
+          "lon": 13.5901476
+        },
+        {
+          "lat": 52.4411869,
+          "lon": 13.5889793
+        },
+        {
+          "lat": 52.4411816,
+          "lon": 13.5886275
+        },
+        {
+          "lat": 52.4411797,
+          "lon": 13.5884998
+        },
+        {
+          "lat": 52.4411775,
+          "lon": 13.588382
+        },
+        {
+          "lat": 52.4411532,
+          "lon": 13.5870328
+        },
+        {
+          "lat": 52.4411179,
+          "lon": 13.586903
+        },
+        {
+          "lat": 52.4410564,
+          "lon": 13.5866764
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1089413554,
+      "bounds": {
+        "minlat": 52.4408852,
+        "minlon": 13.5868942,
+        "maxlat": 52.4412061,
+        "maxlon": 13.5931134
+      },
+      "geometry": [
+        {
+          "lat": 52.4412009,
+          "lon": 13.5931134
+        },
+        {
+          "lat": 52.4412061,
+          "lon": 13.592992
+        },
+        {
+          "lat": 52.4411454,
+          "lon": 13.5919925
+        },
+        {
+          "lat": 52.4410436,
+          "lon": 13.5903947
+        },
+        {
+          "lat": 52.4410194,
+          "lon": 13.5890423
+        },
+        {
+          "lat": 52.4410167,
+          "lon": 13.5887752
+        },
+        {
+          "lat": 52.4410144,
+          "lon": 13.5886278
+        },
+        {
+          "lat": 52.4410104,
+          "lon": 13.5883791
+        },
+        {
+          "lat": 52.4410017,
+          "lon": 13.5878273
+        },
+        {
+          "lat": 52.4409909,
+          "lon": 13.587141
+        },
+        {
+          "lat": 52.4408852,
+          "lon": 13.587038
+        },
+        {
+          "lat": 52.4409044,
+          "lon": 13.5868942
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "intermediate",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1089414477,
+      "bounds": {
+        "minlat": 52.4401519,
+        "minlon": 13.5868998,
+        "maxlat": 52.4403548,
+        "maxlon": 13.5870534
+      },
+      "geometry": [
+        {
+          "lat": 52.4403548,
+          "lon": 13.5870534
+        },
+        {
+          "lat": 52.4401519,
+          "lon": 13.5868998
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "concrete:plates"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1089414478,
+      "bounds": {
+        "minlat": 52.4389439,
+        "minlon": 13.586648,
+        "maxlat": 52.4405413,
+        "maxlon": 13.5876811
+      },
+      "geometry": [
+        {
+          "lat": 52.4405413,
+          "lon": 13.5866884
+        },
+        {
+          "lat": 52.4405325,
+          "lon": 13.586666
+        },
+        {
+          "lat": 52.4405124,
+          "lon": 13.586648
+        },
+        {
+          "lat": 52.4404827,
+          "lon": 13.5866532
+        },
+        {
+          "lat": 52.4404422,
+          "lon": 13.5866726
+        },
+        {
+          "lat": 52.4401519,
+          "lon": 13.5868998
+        },
+        {
+          "lat": 52.4397926,
+          "lon": 13.5871811
+        },
+        {
+          "lat": 52.4397135,
+          "lon": 13.5872351
+        },
+        {
+          "lat": 52.439616,
+          "lon": 13.5873016
+        },
+        {
+          "lat": 52.4395685,
+          "lon": 13.587369
+        },
+        {
+          "lat": 52.4394644,
+          "lon": 13.5874334
+        },
+        {
+          "lat": 52.4394404,
+          "lon": 13.5874315
+        },
+        {
+          "lat": 52.4392771,
+          "lon": 13.5875413
+        },
+        {
+          "lat": 52.4392566,
+          "lon": 13.5875476
+        },
+        {
+          "lat": 52.4392133,
+          "lon": 13.587561
+        },
+        {
+          "lat": 52.4390989,
+          "lon": 13.5875791
+        },
+        {
+          "lat": 52.4389439,
+          "lon": 13.5876811
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1092326742,
+      "bounds": {
+        "minlat": 52.4388823,
+        "minlon": 13.5876343,
+        "maxlat": 52.4389914,
+        "maxlon": 13.588122
+      },
+      "geometry": [
+        {
+          "lat": 52.4388823,
+          "lon": 13.5876343
+        },
+        {
+          "lat": 52.4389914,
+          "lon": 13.5880892
+        },
+        {
+          "lat": 52.4389459,
+          "lon": 13.588122
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1112683843,
+      "bounds": {
+        "minlat": 52.4410874,
+        "minlon": 13.5883819,
+        "maxlat": 52.4411775,
+        "maxlon": 13.588382
+      },
+      "geometry": [
+        {
+          "lat": 52.4410874,
+          "lon": 13.5883819
+        },
+        {
+          "lat": 52.4411775,
+          "lon": 13.588382
+        }
+      ],
+      "tags": {
+        "crossing": "unmarked",
+        "crossing:markings": "no",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1115114010,
+      "bounds": {
+        "minlat": 52.4405413,
+        "minlon": 13.5866884,
+        "maxlat": 52.4406005,
+        "maxlon": 13.5867677
+      },
+      "geometry": [
+        {
+          "lat": 52.4405413,
+          "lon": 13.5866884
+        },
+        {
+          "lat": 52.4406005,
+          "lon": 13.5867677
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "yes",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1115114013,
+      "bounds": {
+        "minlat": 52.441012,
+        "minlon": 13.5866685,
+        "maxlat": 52.4410581,
+        "maxlon": 13.5869687
+      },
+      "geometry": [
+        {
+          "lat": 52.4410359,
+          "lon": 13.5869687
+        },
+        {
+          "lat": 52.4410581,
+          "lon": 13.5868615
+        },
+        {
+          "lat": 52.4410504,
+          "lon": 13.5867593
+        },
+        {
+          "lat": 52.4410314,
+          "lon": 13.5867115
+        },
+        {
+          "lat": 52.441012,
+          "lon": 13.5866685
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "lit": "yes",
+        "oneway": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones",
+        "traffic_sign": "DE:237"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1115114014,
+      "bounds": {
+        "minlat": 52.4410678,
+        "minlon": 13.5874737,
+        "maxlat": 52.4410896,
+        "maxlon": 13.5884999
+      },
+      "geometry": [
+        {
+          "lat": 52.4410896,
+          "lon": 13.5884999
+        },
+        {
+          "lat": 52.4410874,
+          "lon": 13.5883819
+        },
+        {
+          "lat": 52.4410678,
+          "lon": 13.5874737
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pablo-Neruda-Straße",
+        "name:etymology:wikidata": "Q34189",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "8"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1120750218,
+      "bounds": {
+        "minlat": 52.4389937,
+        "minlon": 13.587475,
+        "maxlat": 52.4391119,
+        "maxlon": 13.5875571
+      },
+      "geometry": [
+        {
+          "lat": 52.4391119,
+          "lon": 13.587475
+        },
+        {
+          "lat": 52.4389937,
+          "lon": 13.5875571
+        }
+      ],
+      "tags": {
+        "cycleway": "track",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Grüne Trift",
+        "name:etymology:wikidata": "Q1168568",
+        "name:etymology:wikipedia": "de:Viehtrift",
+        "parking:both": "no",
+        "postal_code": "12557",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "yes",
+        "sidewalk:right:surface": "paving_stones",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "width": "6",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1120750262,
+      "bounds": {
+        "minlat": 52.4391119,
+        "minlon": 13.587475,
+        "maxlat": 52.4392133,
+        "maxlon": 13.587561
+      },
+      "geometry": [
+        {
+          "lat": 52.4391119,
+          "lon": 13.587475
+        },
+        {
+          "lat": 52.4392133,
+          "lon": 13.587561
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Grüne Trift",
+        "name:etymology:wikidata": "Q1168568",
+        "name:etymology:wikipedia": "de:Viehtrift",
+        "parking:both": "no",
+        "postal_code": "12557",
+        "sidewalk": "no",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "sett",
+        "traffic_sign": "DE:274.1",
+        "width": "5",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1131553727,
+      "bounds": {
+        "minlat": 52.4403533,
+        "minlon": 13.5865084,
+        "maxlat": 52.4407122,
+        "maxlon": 13.5866008
+      },
+      "geometry": [
+        {
+          "lat": 52.4407122,
+          "lon": 13.5865377
+        },
+        {
+          "lat": 52.4406035,
+          "lon": 13.5865084
+        },
+        {
+          "lat": 52.4405567,
+          "lon": 13.5865094
+        },
+        {
+          "lat": 52.4405417,
+          "lon": 13.586514
+        },
+        {
+          "lat": 52.4404757,
+          "lon": 13.5865327
+        },
+        {
+          "lat": 52.4404172,
+          "lon": 13.5865594
+        },
+        {
+          "lat": 52.4403533,
+          "lon": 13.5866008
+        }
+      ],
+      "tags": {
+        "cycleway": "track",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Grüne Trift",
+        "name:etymology:wikidata": "Q1168568",
+        "name:etymology:wikipedia": "de:Viehtrift",
+        "parking:both": "no",
+        "postal_code": "12557",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "6"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1155000872,
+      "bounds": {
+        "minlat": 52.4413775,
+        "minlon": 13.5885047,
+        "maxlat": 52.441379,
+        "maxlon": 13.5886711
+      },
+      "geometry": [
+        {
+          "lat": 52.4413775,
+          "lon": 13.5886711
+        },
+        {
+          "lat": 52.441379,
+          "lon": 13.5885047
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "driveway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1155000873,
+      "bounds": {
+        "minlat": 52.4413688,
+        "minlon": 13.5886711,
+        "maxlat": 52.4413775,
+        "maxlon": 13.5889982
+      },
+      "geometry": [
+        {
+          "lat": 52.4413775,
+          "lon": 13.5886711
+        },
+        {
+          "lat": 52.4413688,
+          "lon": 13.5889982
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1177802933,
+      "bounds": {
+        "minlat": 52.4396642,
+        "minlon": 13.5870839,
+        "maxlat": 52.4397337,
+        "maxlon": 13.5872739
+      },
+      "geometry": [
+        {
+          "lat": 52.4397337,
+          "lon": 13.5872739
+        },
+        {
+          "lat": 52.4397135,
+          "lon": 13.5872351
+        },
+        {
+          "lat": 52.4396877,
+          "lon": 13.5871695
+        },
+        {
+          "lat": 52.4396642,
+          "lon": 13.5870839
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1177802934,
+      "bounds": {
+        "minlat": 52.4390012,
+        "minlon": 13.5871425,
+        "maxlat": 52.4391808,
+        "maxlon": 13.5873163
+      },
+      "geometry": [
+        {
+          "lat": 52.4391808,
+          "lon": 13.5873163
+        },
+        {
+          "lat": 52.4391437,
+          "lon": 13.5872401
+        },
+        {
+          "lat": 52.4391152,
+          "lon": 13.5871425
+        },
+        {
+          "lat": 52.4390012,
+          "lon": 13.5871581
+        }
+      ],
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1177802935,
+      "bounds": {
+        "minlat": 52.4391919,
+        "minlon": 13.5873084,
+        "maxlat": 52.4392566,
+        "maxlon": 13.5875476
+      },
+      "geometry": [
+        {
+          "lat": 52.4392566,
+          "lon": 13.5875476
+        },
+        {
+          "lat": 52.4392169,
+          "lon": 13.5874007
+        },
+        {
+          "lat": 52.4391919,
+          "lon": 13.5873084
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1430812232,
+      "bounds": {
+        "minlat": 52.4410896,
+        "minlon": 13.5884999,
+        "maxlat": 52.4410926,
+        "maxlon": 13.5887153
+      },
+      "geometry": [
+        {
+          "lat": 52.4410926,
+          "lon": 13.5887153
+        },
+        {
+          "lat": 52.4410896,
+          "lon": 13.5884999
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "hgv:conditional": "no @ (22:00-05:00)",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "sign",
+        "name": "Pablo-Neruda-Straße",
+        "name:etymology:wikidata": "Q34189",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "sign",
+        "source:width": "ARCore",
+        "surface": "asphalt",
+        "width": "7.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1430812233,
+      "bounds": {
+        "minlat": 52.4410926,
+        "minlon": 13.5887153,
+        "maxlat": 52.4412315,
+        "maxlon": 13.5919971
+      },
+      "geometry": [
+        {
+          "lat": 52.4412315,
+          "lon": 13.5919971
+        },
+        {
+          "lat": 52.4411244,
+          "lon": 13.5904463
+        },
+        {
+          "lat": 52.4410926,
+          "lon": 13.5887153
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "hgv:conditional": "no @ (22:00-05:00)",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "sign",
+        "name": "Pablo-Neruda-Straße",
+        "name:etymology:wikidata": "Q34189",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "separate",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "sign",
+        "source:width": "ARCore",
+        "surface": "asphalt",
+        "width": "7.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1450740010,
+      "bounds": {
+        "minlat": 52.4392133,
+        "minlon": 13.587561,
+        "maxlat": 52.4392324,
+        "maxlon": 13.5875825
+      },
+      "geometry": [
+        {
+          "lat": 52.4392133,
+          "lon": 13.587561
+        },
+        {
+          "lat": 52.4392324,
+          "lon": 13.5875825
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Grüne Trift",
+        "name:etymology:wikidata": "Q1168568",
+        "name:etymology:wikipedia": "de:Viehtrift",
+        "parking:both": "no",
+        "postal_code": "12557",
+        "sidewalk": "right",
+        "sidewalk:right:surface": "concrete",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "width": "5",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1450742161,
+      "bounds": {
+        "minlat": 52.4397314,
+        "minlon": 13.5881862,
+        "maxlat": 52.4397525,
+        "maxlon": 13.588272
+      },
+      "geometry": [
+        {
+          "lat": 52.4397525,
+          "lon": 13.5881862
+        },
+        {
+          "lat": 52.4397439,
+          "lon": 13.5882298
+        },
+        {
+          "lat": 52.4397314,
+          "lon": 13.588272
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Grüne Trift",
+        "name:etymology:wikidata": "Q1168568",
+        "name:etymology:wikipedia": "de:Viehtrift",
+        "operator:type": "private",
+        "parking:both": "no",
+        "postal_code": "12557",
+        "sidewalk": "right",
+        "sidewalk:right:surface": "concrete",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "width": "5",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1450742162,
+      "bounds": {
+        "minlat": 52.438818,
+        "minlon": 13.5883227,
+        "maxlat": 52.4397109,
+        "maxlon": 13.5905344
+      },
+      "geometry": [
+        {
+          "lat": 52.4397109,
+          "lon": 13.5883227
+        },
+        {
+          "lat": 52.438818,
+          "lon": 13.5905344
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Grüne Trift",
+        "name:etymology:wikidata": "Q1168568",
+        "name:etymology:wikipedia": "de:Viehtrift",
+        "operator:type": "private",
+        "parking:both:access": "private",
+        "parking:left": "street_side",
+        "parking:left:orientation": "perpendicular",
+        "parking:left:private": "residents",
+        "parking:right": "lane",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12557",
+        "sidewalk": "right",
+        "sidewalk:right:surface": "concrete",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "width": "5",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1450742163,
+      "bounds": {
+        "minlat": 52.4397109,
+        "minlon": 13.588272,
+        "maxlat": 52.4397314,
+        "maxlon": 13.5883227
+      },
+      "geometry": [
+        {
+          "lat": 52.4397314,
+          "lon": 13.588272
+        },
+        {
+          "lat": 52.4397109,
+          "lon": 13.5883227
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Grüne Trift",
+        "name:etymology:wikidata": "Q1168568",
+        "name:etymology:wikipedia": "de:Viehtrift",
+        "operator:type": "private",
+        "parking:left": "street_side",
+        "parking:left:access": "private",
+        "parking:left:orientation": "perpendicular",
+        "parking:left:private": "residents",
+        "parking:right": "no",
+        "postal_code": "12557",
+        "sidewalk": "right",
+        "sidewalk:right:surface": "concrete",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "width": "5",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1450742164,
+      "bounds": {
+        "minlat": 52.4392324,
+        "minlon": 13.5875825,
+        "maxlat": 52.4396982,
+        "maxlon": 13.5881087
+      },
+      "geometry": [
+        {
+          "lat": 52.4392324,
+          "lon": 13.5875825
+        },
+        {
+          "lat": 52.4396982,
+          "lon": 13.5881087
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Grüne Trift",
+        "name:etymology:wikidata": "Q1168568",
+        "name:etymology:wikipedia": "de:Viehtrift",
+        "operator:type": "private",
+        "parking:both:access": "private",
+        "parking:left": "street_side",
+        "parking:left:orientation": "perpendicular",
+        "parking:left:private": "residents",
+        "parking:right": "lane",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12557",
+        "sidewalk": "right",
+        "sidewalk:right:surface": "concrete",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "width": "5",
+        "zone:maxspeed": "DE:30"
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 145932571,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 1105815307,
+    "lat": "52.5984251",
+    "lon": "13.3829117",
+    "category": "highway",
+    "type": "tertiary",
+    "place_rank": 26,
+    "importance": 0.05342208819714653,
+    "addresstype": "road",
+    "name": "Schönhauser Straße",
+    "display_name": "Schönhauser Straße, Siedlung Eigene Scholle, Rosenthal, Pankow, Berlin, 13158, Deutschland",
+    "boundingbox": [
+      "52.5983345",
+      "52.5985156",
+      "13.3826932",
+      "13.3831302"
+    ]
+  }
+]

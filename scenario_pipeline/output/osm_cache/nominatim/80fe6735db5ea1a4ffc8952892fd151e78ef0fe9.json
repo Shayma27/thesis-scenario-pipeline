@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 146429857,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "node",
+    "osm_id": 2465354489,
+    "lat": "52.4364399",
+    "lon": "13.2742012",
+    "category": "railway",
+    "type": "halt",
+    "place_rank": 30,
+    "importance": 0.33029660482760953,
+    "addresstype": "railway",
+    "name": "Sundgauer Straße",
+    "display_name": "Sundgauer Straße, Siedlung Am Mühlenberg, Zehlendorf, Steglitz-Zehlendorf, Berlin, 14169, Deutschland",
+    "boundingbox": [
+      "52.4363899",
+      "52.4364899",
+      "13.2741512",
+      "13.2742512"
+    ]
+  }
+]

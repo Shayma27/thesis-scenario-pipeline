@@ -1,0 +1,454 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "right_turn_spandauer_damm_1500",
+    "date": "2022-09-17",
+    "time": "15:00",
+    "raw_text": "Eine Radfahrerin befuhr den Spandauer Damm in Richtung Otto-Suhr-Allee. Ein in derselben Richtung fahrender Pkw bog nach rechts in die Sophie-Charlotten-Straße ab, wobei es zur Kollision kam. Datum: 17.09.2022 Uhrzeit: 15:00 Uhr"
+  },
+  "classification": {
+    "scenario_type": "right_turn_conflict",
+    "confidence": 1.0
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Spandauer Damm",
+    "secondary_road": "Sophie-Charlotten-Straße",
+    "osm_query": "Spandauer Damm / Sophie-Charlotten-Straße, Berlin, Germany",
+    "osm_roads": [
+      "Spandauer Damm",
+      "Sophie-Charlotten-Straße"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "Otto-Suhr-Allee"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "no",
+    "bike_facility_type": "separated_cycle_track",
+    "parking_present": null,
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "turn_right",
+      "initial_direction": "east",
+      "traffic_rule_status": "unknown"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "east",
+      "traffic_rule_status": "unknown"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across_cyclist_path",
+    "collision_happened": true,
+    "collision_description": "A car turned right into the path of a cyclist, resulting in a collision.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line",
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "separated_cycle_track",
+      "primary_bike_facility_position": "right",
+      "motor_lane_count": 2
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -3,
+          "initial_s_m": 10.0,
+          "initial_speed_mps": 4.5
+        },
+        "car_1": {
+          "vehicle_category": "car",
+          "initial_road_id": 0,
+          "initial_lane_id": -2,
+          "initial_s_m": 30.0,
+          "initial_speed_mps": 4.0
+        }
+      },
+      "cyclist_lateral_position": "right",
+      "conflict": {
+        "conflict_s_m": 50.0,
+        "trigger_time_s": 1.0
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "separated_cycle_track",
+      "source": "osm_tag",
+      "reason": "OSM cycleway tags indicate separated_cycle_track."
+    },
+    {
+      "parameter": "motor_lane_count",
+      "value_used": 2,
+      "source": "osm_tag",
+      "reason": "OpenDRIVE motor-lane count was derived from nearby OSM lanes tags."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "right",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    },
+    {
+      "parameter": "cyclist_1.vehicle_category",
+      "value_used": "bicycle",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -3,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_s_m",
+      "value_used": 10.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 4.5,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.vehicle_category",
+      "value_used": "car",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_lane_id",
+      "value_used": -2,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_s_m",
+      "value_used": 30.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_speed_mps",
+      "value_used": 4.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    }
+  ],
+  "osm_context": {
+    "query": "Spandauer Damm, Berlin, Germany",
+    "queries_tried": [
+      "Spandauer Damm / Sophie-Charlotten-Straße, Berlin, Germany",
+      "Spandauer Damm Sophie-Charlotten-Straße, Berlin, Germany",
+      "Spandauer Damm, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 328440058,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5203088,
+            "lon": 13.2671897
+          },
+          {
+            "lat": 52.520292,
+            "lon": 13.2672829
+          },
+          {
+            "lat": 52.5201492,
+            "lon": 13.2680754
+          },
+          {
+            "lat": 52.5198942,
+            "lon": 13.2694897
+          },
+          {
+            "lat": 52.5198702,
+            "lon": 13.2696231
+          },
+          {
+            "lat": 52.5196334,
+            "lon": 13.2709367
+          },
+          {
+            "lat": 52.5194768,
+            "lon": 13.2718056
+          },
+          {
+            "lat": 52.5194522,
+            "lon": 13.2719423
+          }
+        ]
+      },
+      {
+        "osm_id": 1112702300,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "yes",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5194841,
+            "lon": 13.2726732
+          },
+          {
+            "lat": 52.5195066,
+            "lon": 13.2725578
+          },
+          {
+            "lat": 52.5195199,
+            "lon": 13.2724841
+          },
+          {
+            "lat": 52.5195682,
+            "lon": 13.272218
+          },
+          {
+            "lat": 52.5196082,
+            "lon": 13.2719976
+          }
+        ]
+      },
+      {
+        "osm_id": 1430586740,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "yes",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5202981,
+            "lon": 13.2681773
+          },
+          {
+            "lat": 52.5203749,
+            "lon": 13.2677518
+          },
+          {
+            "lat": 52.5204057,
+            "lon": 13.2675813
+          }
+        ]
+      },
+      {
+        "osm_id": 1430586741,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "yes",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5196082,
+            "lon": 13.2719976
+          },
+          {
+            "lat": 52.5197879,
+            "lon": 13.2710023
+          },
+          {
+            "lat": 52.5197941,
+            "lon": 13.2709677
+          },
+          {
+            "lat": 52.5200465,
+            "lon": 13.2695628
+          },
+          {
+            "lat": 52.5200556,
+            "lon": 13.2695125
+          },
+          {
+            "lat": 52.5201953,
+            "lon": 13.2687461
+          },
+          {
+            "lat": 52.5202489,
+            "lon": 13.2684495
+          },
+          {
+            "lat": 52.5202981,
+            "lon": 13.2681773
+          }
+        ]
+      },
+      {
+        "osm_id": 1430586744,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5194522,
+            "lon": 13.2719423
+          },
+          {
+            "lat": 52.5194383,
+            "lon": 13.2720192
+          },
+          {
+            "lat": 52.5193816,
+            "lon": 13.2723339
+          },
+          {
+            "lat": 52.5193542,
+            "lon": 13.2724858
+          },
+          {
+            "lat": 52.5193335,
+            "lon": 13.2726006
+          }
+        ]
+      }
+    ],
+    "traffic_signals_nearby": "no",
+    "notes": [],
+    "geocoded": {
+      "display_name": "Spandauer Damm, Villenkolonie Westend, Westend, Charlottenburg-Wilmersdorf, Berlin, 14050, Deutschland",
+      "lat": 52.5199523,
+      "lon": 13.2700873,
+      "osm_type": "way",
+      "osm_id": 1430586741
+    },
+    "bike_facility": {
+      "type": "separated_cycle_track",
+      "position": "right",
+      "source": "osm_tag",
+      "osm_evidence": {
+        "bike_facility_type": "separated_cycle_track",
+        "position": "right",
+        "tags": {
+          "cycleway:right": "separate"
+        }
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "right",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "straight_crossing_charlottenburg_2021_10_17",
+    "date": "2021-10-17",
+    "time": "05:15",
+    "raw_text": "Eine Radfahrerin befuhr eine Straße in Charlottenburg vom Luisenplatz in Richtung Kaiser-Friedrich-Straße und fuhr in eine Kreuzung ein. Dabei kam es zur Kollision mit einem Pkw, der von der Otto-Suhr-Allee in Richtung Spandauer Damm unterwegs war."
+  },
+  "classification": {
+    "scenario_type": "straight_crossing_conflict",
+    "confidence": 0.86
+  },
+  "location": {
+    "city": "Berlin",
+    "district": "Charlottenburg",
+    "primary_road": "Luisenplatz to Kaiser-Friedrich-Straße approach",
+    "secondary_road": "Otto-Suhr-Allee to Spandauer Damm approach",
+    "osm_query": "Luisenplatz, Charlottenburg, Berlin, Germany",
+    "osm_query_candidates": [
+      "Otto-Suhr-Allee, Charlottenburg, Berlin, Germany",
+      "Kaiser-Friedrich-Straße, Charlottenburg, Berlin, Germany",
+      "Spandauer Damm, Charlottenburg, Berlin, Germany"
+    ],
+    "osm_roads": [
+      "Kaiser-Friedrich-Straße",
+      "Otto-Suhr-Allee",
+      "Spandauer Damm"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "from Luisenplatz toward Kaiser-Friedrich-Straße",
+      "from Otto-Suhr-Allee toward Spandauer Damm"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "unknown",
+    "bike_facility_type": "unknown",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "enter_intersection_go_straight",
+      "initial_direction": "toward Kaiser-Friedrich-Straße",
+      "traffic_rule_status": "unknown"
+    },
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight_through_intersection",
+      "initial_direction": "toward Spandauer Damm",
+      "traffic_rule_status": "unknown"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "intersection_crossing_paths",
+    "collision_happened": true,
+    "collision_description": "Cyclist enters the intersection and collides with a passenger car travelling through the crossing approach.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "road_geometry": "crossing",
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 0,
+      "junction_type": "intersection"
+    },
+    "openscenario": {
+      "simulation_duration_s": 9,
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -1,
+          "initial_s_m": 27.75,
+          "initial_speed_mps": 6.0
+        },
+        "car_1": {
+          "vehicle_category": "car",
+          "initial_road_id": 1,
+          "initial_lane_id": -1,
+          "initial_s_m": 12.25,
+          "initial_speed_mps": 9.0
+        }
+      },
+      "conflict": {
+        "conflict_world_x_m": -1.75,
+        "conflict_world_y_m": 1.75,
+        "conflict_time_s": 4.0,
+        "trigger_time_s": 1.0
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "traffic_light_present",
+      "value_used": "unknown",
+      "source": "explicit_missing",
+      "reason": "The report does not mention traffic lights or signal phases."
+    },
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "unknown",
+      "source": "explicit_missing",
+      "reason": "The report does not mention a bike lane or separated cycle track."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 6.0,
+      "source": "default_assumption",
+      "reason": "Cyclist speed was not provided in the report."
+    },
+    {
+      "parameter": "car_1.initial_speed_mps",
+      "value_used": 9.0,
+      "source": "default_assumption",
+      "reason": "Car speed was not provided in the report; an urban intersection approach speed is used."
+    },
+    {
+      "parameter": "initial_positions",
+      "value_used": "cyclist road 0 lane -1 s=27.75m, car road 1 lane -1 s=12.25m",
+      "source": "default_assumption",
+      "reason": "Exact starting positions are not in the report; they are chosen so both actors reach the intersection conflict point at t=4s."
+    },
+    {
+      "parameter": "intersection_geometry",
+      "value_used": "two straight roads crossing at right angle",
+      "source": "default_assumption",
+      "reason": "The exact junction geometry is not given; a minimal crossing abstraction is used for the first runnable simulation."
+    }
+  ]
+}

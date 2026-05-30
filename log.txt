@@ -1,0 +1,17 @@
+esmini GIT REV: v3.0.4-0-1d33e9f2
+esmini GIT TAG: v3.0.4
+esmini GIT BRANCH: tags/v3.0.4^0
+esmini BUILD VERSION: 6144
+[] [info] Loaded config file: /home/chimo/tools/esmini/esmini-demo/config.yml (/home/chimo/tools/esmini/esmini-demo/bin/../config.yml)
+[2026-05-18 10:52:22]
+[] [info] Player options: --osc output/straight_crossing_unter_den_eichen_1420.xosc --camera_mode orbit --collision --ground_plane auto --info_text 1 --logfile_path log.txt --log_level info --text_scale 1.0 --traj_filter 0.1 
+[] [info] No fixed timestep specified - running in realtime speed
+[] [info] Generated seed 307791266
+[] [info] OpenSCENARIO file search paths attempted for file straight_crossing_unter_den_eichen_1420.xosc:
+[] [info]   output/straight_crossing_unter_den_eichen_1420.xosc
+[] [info]   straight_crossing_unter_den_eichen_1420.xosc
+[] [info]   /home/chimo/tools/esmini/esmini-demo/bin/../resources/xosc/./output/straight_crossing_unter_den_eichen_1420.xosc
+[] [info]   /home/chimo/tools/esmini/esmini-demo/bin/../resources/xosc/./straight_crossing_unter_den_eichen_1420.xosc
+[] [warn] OpenSCENARIO file output/straight_crossing_unter_den_eichen_1420.xosc not located, using specified file path
+[] [error] Couldn't locate OpenSCENARIO file straight_crossing_unter_den_eichen_1420.xosc
+[0.000] [info] Closing

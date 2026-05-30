@@ -1,0 +1,1883 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "straight_crossing_unter_den_eichen_1420",
+    "date": null,
+    "time": "14:20",
+    "raw_text": "Eine Radfahrerin befuhr den rechten Fahrstreifen der Nebenfahrbahn Unter den Eichen und fuhr bei Rot in den Kreuzungsbereich Unter den Eichen / Drakestraße / Habelschwerdter Allee ein. Dabei kam es zur Kollision mit einem Pkw, der den linken Fahrstreifen der Drakestraße in Richtung Unter den Eichen befuhr."
+  },
+  "classification": {
+    "scenario_type": "straight_crossing_conflict",
+    "secondary_type": "red_light_violation",
+    "confidence": 0.9
+  },
+  "location": {
+    "city": "Berlin",
+    "district": "Steglitz-Zehlendorf",
+    "primary_road": "Unter den Eichen Nebenfahrbahn to Drakestraße approach",
+    "secondary_road": "Drakestraße to Unter den Eichen approach",
+    "osm_query": "Unter den Eichen Drakestraße Habelschwerdter Allee, Berlin, Germany",
+    "osm_query_candidates": [
+      "Unter den Eichen Drakestraße, Berlin, Germany",
+      "Drakestraße Unter den Eichen, Berlin, Germany",
+      "Habelschwerdter Allee Unter den Eichen, Berlin, Germany"
+    ],
+    "osm_roads": [
+      "Unter den Eichen",
+      "Drakestraße",
+      "Habelschwerdter Allee"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "from Unter den Eichen toward Drakestraße",
+      "from Drakestraße toward Unter den Eichen"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "yes",
+    "bike_facility_type": "none_reported",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "cyclist right lane, car left lane",
+    "signal_context": "cyclist entered intersection on red",
+    "road_layout": "divided_main_road_with_side_road",
+    "heading_overrides": {
+      "primary_heading_rad": {
+        "value": 0.541071,
+        "source": "manual_map_review",
+        "reason": "The screenshot shows the cyclist on the Unter den Eichen Nebenfahrbahn travelling along the side roadway direction. Nearby OSM segments contain both directions of the divided road, so the side-road heading is selected manually from map review."
+      }
+    },
+    "lane_count_overrides": {
+      "secondary_road_lanes": {
+        "value": 4,
+        "source": "manual_map_review",
+        "reason": "Manual review of the OSM/imagery screenshot confirms that the report-relevant Drakestraße approach is a broad four-lane approach. The Pkw is placed on the leftmost of these lanes."
+      },
+      "secondary_forward_lanes": {
+        "value": 2,
+        "source": "manual_map_review",
+        "reason": "The report places the Pkw on the left Fahrstreifen of Drakestraße in the direction of Unter den Eichen, so the generated approach needs two lanes in the Pkw travel direction."
+      },
+      "secondary_opposite_lanes": {
+        "value": 2,
+        "source": "manual_map_review",
+        "reason": "The map screenshot shows the remaining Drakestraße lanes as the opposite-direction side of the same street; they are kept as visual road-topology context."
+      }
+    }
+  },
+  "participants": [
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "enter_intersection_on_red_go_straight",
+      "initial_direction": "toward Drakestraße",
+      "road_position": "rightmost_motor_lane",
+      "traffic_rule_status": "red_light_violation"
+    },
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight_through_intersection",
+      "initial_direction": "toward Unter den Eichen",
+      "road_position": "leftmost_motor_lane",
+      "traffic_rule_status": "priority_assumed"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "signalized_intersection_crossing_paths",
+    "collision_happened": true,
+    "collision_description": "Cyclist enters the signalized intersection on red from the right lane of the Unter den Eichen side roadway and collides with a passenger car travelling from Drakestraße toward Unter den Eichen.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "road_geometry": "crossing",
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 0,
+      "junction_type": "intersection",
+      "primary_has_bike_facility": false,
+      "primary_road_lanes": 2,
+      "secondary_road_lanes": 4,
+      "primary_heading_rad": 0.541071,
+      "secondary_heading_rad": 2.081111,
+      "secondary_forward_lanes": 2,
+      "secondary_opposite_lanes": 2
+    },
+    "openscenario": {
+      "simulation_duration_s": 9,
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -2,
+          "initial_s_m": 27.75,
+          "initial_speed_mps": 6.0
+        },
+        "car_1": {
+          "vehicle_category": "car",
+          "initial_road_id": 1,
+          "initial_lane_id": -1,
+          "initial_s_m": 12.25,
+          "initial_speed_mps": 9.03
+        }
+      },
+      "conflict": {
+        "conflict_world_x_m": -1.75,
+        "conflict_world_y_m": 1.75,
+        "conflict_time_s": 4.0,
+        "trigger_time_s": 1.0
+      },
+      "cyclist_lateral_position": "rightmost_motor_lane"
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "date",
+      "value_used": null,
+      "source": "explicit_missing",
+      "reason": "The supplied report excerpt gives the date as unknown."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 6.0,
+      "source": "default_assumption",
+      "reason": "Cyclist speed was not provided in the report."
+    },
+    {
+      "parameter": "car_1.initial_speed_mps",
+      "value_used": 9.03,
+      "source": "osm_derived_assumption",
+      "reason": "OSM maxspeed=50.0 km/h was found near the location; the simulation uses 65% of the limit as an intersection approach speed."
+    },
+    {
+      "parameter": "initial_positions",
+      "value_used": "cyclist and car start upstream of the conflict point on their report-relevant approach lanes",
+      "source": "default_assumption_with_report_lane_roles",
+      "reason": "Exact starting positions are not in the report; they are chosen so both actors reach the red-point conflict area at t=4s. Lane ids may be refined by OSM/manual map review before generation."
+    },
+    {
+      "parameter": "intersection_geometry",
+      "value_used": "skewed crossing abstraction with Unter den Eichen side roadway, Drakestraße 2+2 lane topology, and visual context roads for the divided B1 carriageway",
+      "source": "manual_map_review_abstraction",
+      "reason": "The exact junction geometry is more complex than a simple two-road crossing; OSM and the map screenshot are used to preserve the report-relevant approach directions and lane topology while keeping the prototype runnable in esmini."
+    },
+    {
+      "parameter": "intersection_lane_counts",
+      "value_used": "primary=2, secondary=4",
+      "source": "manual_map_review_override",
+      "reason": "OSM lane tags were retained as evidence, but at least one approach lane count was manually overridden because the OSM intersection segment did not cleanly represent the report-relevant directional lane group."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -2,
+      "source": "derived_from_cyclist_lateral_position",
+      "reason": "Cyclist OpenSCENARIO lane id follows the chosen lateral-position policy so the initial teleport matches the generated trajectory."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "rightmost_motor_lane",
+      "source": "explicit_from_report",
+      "reason": "The report explicitly places the cyclist on a motor-vehicle lane."
+    }
+  ],
+  "osm_context": {
+    "query": "Unter den Eichen Drakestraße Habelschwerdter Allee, Berlin, Germany",
+    "queries_tried": [
+      "Unter den Eichen Drakestraße Habelschwerdter Allee, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 4484278,
+        "name": "Unter den Eichen",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.445565,
+            "lon": 13.2934806
+          },
+          {
+            "lat": 52.4457546,
+            "lon": 13.2939948
+          }
+        ]
+      },
+      {
+        "osm_id": 4484279,
+        "name": "Unter den Eichen",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4458219,
+            "lon": 13.293928
+          },
+          {
+            "lat": 52.4456344,
+            "lon": 13.2934111
+          }
+        ]
+      },
+      {
+        "osm_id": 4724992,
+        "name": "Drakestraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4454735,
+            "lon": 13.2938358
+          },
+          {
+            "lat": 52.4453488,
+            "lon": 13.2939776
+          },
+          {
+            "lat": 52.4452285,
+            "lon": 13.2941154
+          },
+          {
+            "lat": 52.4451185,
+            "lon": 13.2942684
+          }
+        ]
+      },
+      {
+        "osm_id": 4724993,
+        "name": "Drakestraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|none|none|none",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4449783,
+            "lon": 13.2944932
+          },
+          {
+            "lat": 52.4451699,
+            "lon": 13.29437
+          },
+          {
+            "lat": 52.4452227,
+            "lon": 13.2943361
+          },
+          {
+            "lat": 52.4452906,
+            "lon": 13.2942685
+          },
+          {
+            "lat": 52.4454215,
+            "lon": 13.2941262
+          },
+          {
+            "lat": 52.44551,
+            "lon": 13.2940258
+          },
+          {
+            "lat": 52.4455401,
+            "lon": 13.2939939
+          },
+          {
+            "lat": 52.4455767,
+            "lon": 13.2939553
+          },
+          {
+            "lat": 52.4456302,
+            "lon": 13.2938987
+          }
+        ]
+      },
+      {
+        "osm_id": 4766609,
+        "name": "Habelschwerdter Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|none|none|none",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4456302,
+            "lon": 13.2938987
+          },
+          {
+            "lat": 52.4456757,
+            "lon": 13.2938505
+          },
+          {
+            "lat": 52.4457585,
+            "lon": 13.2937629
+          },
+          {
+            "lat": 52.4458357,
+            "lon": 13.2936813
+          }
+        ]
+      },
+      {
+        "osm_id": 4766610,
+        "name": "Drakestraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|none",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4457718,
+            "lon": 13.2935075
+          },
+          {
+            "lat": 52.4456961,
+            "lon": 13.2935908
+          },
+          {
+            "lat": 52.4456353,
+            "lon": 13.2936578
+          },
+          {
+            "lat": 52.4456125,
+            "lon": 13.2936829
+          },
+          {
+            "lat": 52.4455691,
+            "lon": 13.2937306
+          }
+        ]
+      },
+      {
+        "osm_id": 14851818,
+        "name": "Unter den Eichen",
+        "highway": "primary_link",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4468362,
+            "lon": 13.2964476
+          },
+          {
+            "lat": 52.4467267,
+            "lon": 13.2961198
+          },
+          {
+            "lat": 52.4466888,
+            "lon": 13.2960165
+          },
+          {
+            "lat": 52.446532,
+            "lon": 13.295603
+          },
+          {
+            "lat": 52.4463353,
+            "lon": 13.2950684
+          }
+        ]
+      },
+      {
+        "osm_id": 14851819,
+        "name": "Unter den Eichen",
+        "highway": "primary_link",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4456302,
+            "lon": 13.2938987
+          },
+          {
+            "lat": 52.4456727,
+            "lon": 13.2940145
+          },
+          {
+            "lat": 52.4456841,
+            "lon": 13.2940455
+          }
+        ]
+      },
+      {
+        "osm_id": 14851929,
+        "name": "Unter den Eichen",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4455691,
+            "lon": 13.2937306
+          },
+          {
+            "lat": 52.4456302,
+            "lon": 13.2938987
+          }
+        ]
+      },
+      {
+        "osm_id": 14851931,
+        "name": "Unter den Eichen",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4458357,
+            "lon": 13.2936813
+          },
+          {
+            "lat": 52.4457718,
+            "lon": 13.2935075
+          }
+        ]
+      },
+      {
+        "osm_id": 25199874,
+        "name": "Habelschwerdter Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|none|none",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4458924,
+            "lon": 13.2933749
+          },
+          {
+            "lat": 52.4458597,
+            "lon": 13.2934109
+          },
+          {
+            "lat": 52.4458193,
+            "lon": 13.2934553
+          },
+          {
+            "lat": 52.4457718,
+            "lon": 13.2935075
+          }
+        ]
+      },
+      {
+        "osm_id": 25199877,
+        "name": "Unter den Eichen",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4446428,
+            "lon": 13.2909937
+          },
+          {
+            "lat": 52.4447553,
+            "lon": 13.2912836
+          },
+          {
+            "lat": 52.445565,
+            "lon": 13.2934806
+          }
+        ]
+      },
+      {
+        "osm_id": 29047669,
+        "name": "Unter den Eichen",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4467871,
+            "lon": 13.2965392
+          },
+          {
+            "lat": 52.4467552,
+            "lon": 13.2964527
+          },
+          {
+            "lat": 52.4466205,
+            "lon": 13.296087
+          },
+          {
+            "lat": 52.4458219,
+            "lon": 13.293928
+          }
+        ]
+      },
+      {
+        "osm_id": 29047671,
+        "name": "Unter den Eichen",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4456344,
+            "lon": 13.2934111
+          },
+          {
+            "lat": 52.4448251,
+            "lon": 13.2912156
+          },
+          {
+            "lat": 52.4446381,
+            "lon": 13.2907075
+          }
+        ]
+      },
+      {
+        "osm_id": 148670263,
+        "name": "Habelschwerdter Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4464516,
+            "lon": 13.2930131
+          },
+          {
+            "lat": 52.4463593,
+            "lon": 13.2928592
+          }
+        ]
+      },
+      {
+        "osm_id": 148670264,
+        "name": "Habelschwerdter Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|none|right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4459463,
+            "lon": 13.2935643
+          },
+          {
+            "lat": 52.4461087,
+            "lon": 13.293389
+          },
+          {
+            "lat": 52.446168,
+            "lon": 13.2933251
+          },
+          {
+            "lat": 52.4463526,
+            "lon": 13.2931259
+          },
+          {
+            "lat": 52.4464516,
+            "lon": 13.2930131
+          }
+        ]
+      },
+      {
+        "osm_id": 148670270,
+        "name": "Unter den Eichen",
+        "highway": "primary_link",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4454801,
+            "lon": 13.2927157
+          },
+          {
+            "lat": 52.4452109,
+            "lon": 13.2919852
+          },
+          {
+            "lat": 52.4451614,
+            "lon": 13.2918515
+          },
+          {
+            "lat": 52.445104,
+            "lon": 13.2917237
+          },
+          {
+            "lat": 52.444892,
+            "lon": 13.2911477
+          },
+          {
+            "lat": 52.4446956,
+            "lon": 13.2906464
+          }
+        ]
+      },
+      {
+        "osm_id": 148671116,
+        "name": "Unter den Eichen",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4457546,
+            "lon": 13.2939948
+          },
+          {
+            "lat": 52.4465502,
+            "lon": 13.2961561
+          },
+          {
+            "lat": 52.4467125,
+            "lon": 13.2966064
+          }
+        ]
+      },
+      {
+        "osm_id": 202500050,
+        "name": "Unter den Eichen",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "4",
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4460205,
+            "lon": 13.2952132
+          },
+          {
+            "lat": 52.4460372,
+            "lon": 13.2952577
+          },
+          {
+            "lat": 52.4464725,
+            "lon": 13.2964386
+          },
+          {
+            "lat": 52.4464922,
+            "lon": 13.2964917
+          },
+          {
+            "lat": 52.4474319,
+            "lon": 13.2990237
+          },
+          {
+            "lat": 52.4474486,
+            "lon": 13.299069
+          }
+        ]
+      },
+      {
+        "osm_id": 243461330,
+        "name": "Unter den Eichen",
+        "highway": "primary_link",
+        "maxspeed": "50",
+        "lanes": "1",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4458395,
+            "lon": 13.2944678
+          },
+          {
+            "lat": 52.4460608,
+            "lon": 13.2950691
+          },
+          {
+            "lat": 52.4460897,
+            "lon": 13.2951474
+          },
+          {
+            "lat": 52.4461068,
+            "lon": 13.295194
+          },
+          {
+            "lat": 52.4464618,
+            "lon": 13.2961553
+          },
+          {
+            "lat": 52.4465589,
+            "lon": 13.2964277
+          },
+          {
+            "lat": 52.4466585,
+            "lon": 13.2967068
+          }
+        ]
+      },
+      {
+        "osm_id": 381471276,
+        "name": "Unter den Eichen/Drakestraße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4454192,
+            "lon": 13.2938109
+          },
+          {
+            "lat": 52.4453254,
+            "lon": 13.2939125
+          }
+        ]
+      },
+      {
+        "osm_id": 381471277,
+        "name": "Unter den Eichen/Drakestraße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4455861,
+            "lon": 13.2928581
+          },
+          {
+            "lat": 52.445678,
+            "lon": 13.2931117
+          }
+        ]
+      },
+      {
+        "osm_id": 381471278,
+        "name": "Unter den Eichen/Drakestraße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4450934,
+            "lon": 13.2926259
+          },
+          {
+            "lat": 52.4451717,
+            "lon": 13.2928376
+          }
+        ]
+      },
+      {
+        "osm_id": 381471279,
+        "name": "Unter den Eichen/Drakestraße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4461563,
+            "lon": 13.2934429
+          },
+          {
+            "lat": 52.4460579,
+            "lon": 13.2935448
+          }
+        ]
+      },
+      {
+        "osm_id": 405884014,
+        "name": "Unter den Eichen",
+        "highway": "primary_link",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.445027,
+            "lon": 13.2922617
+          },
+          {
+            "lat": 52.4450542,
+            "lon": 13.2923354
+          },
+          {
+            "lat": 52.4451974,
+            "lon": 13.2927238
+          },
+          {
+            "lat": 52.4455042,
+            "lon": 13.2935555
+          }
+        ]
+      },
+      {
+        "osm_id": 541438279,
+        "name": "Unter den Eichen",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "4",
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4457528,
+            "lon": 13.2942322
+          },
+          {
+            "lat": 52.4457701,
+            "lon": 13.2945352
+          }
+        ]
+      },
+      {
+        "osm_id": 578127956,
+        "name": "Unter den Eichen/Drakestraße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4455131,
+            "lon": 13.2941403
+          },
+          {
+            "lat": 52.4454488,
+            "lon": 13.2942098
+          },
+          {
+            "lat": 52.4454316,
+            "lon": 13.2942284
+          }
+        ]
+      },
+      {
+        "osm_id": 978625118,
+        "name": "Habelschwerdter Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "1",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4464516,
+            "lon": 13.2930131
+          },
+          {
+            "lat": 52.4465895,
+            "lon": 13.292854
+          }
+        ]
+      },
+      {
+        "osm_id": 978625119,
+        "name": "Habelschwerdter Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "1",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.446505,
+            "lon": 13.292729
+          },
+          {
+            "lat": 52.4463593,
+            "lon": 13.2928592
+          }
+        ]
+      },
+      {
+        "osm_id": 1136651866,
+        "name": "Habelschwerdter Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|none|right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4458357,
+            "lon": 13.2936813
+          },
+          {
+            "lat": 52.4458848,
+            "lon": 13.2936294
+          },
+          {
+            "lat": 52.4459275,
+            "lon": 13.2935842
+          },
+          {
+            "lat": 52.4459463,
+            "lon": 13.2935643
+          }
+        ]
+      }
+    ],
+    "traffic_signals_nearby": "yes",
+    "notes": [
+      "OSM turn:lanes tags were kept as evidence only; the report does not explicitly describe a left-turn maneuver for car_1."
+    ],
+    "geocoded": {
+      "display_name": "Unter den Eichen/Drakestraße, Habelschwerdter Allee, Dahlem, Steglitz-Zehlendorf, Berlin, 14195, Deutschland",
+      "lat": 52.4461071,
+      "lon": 13.2934939,
+      "osm_type": "way",
+      "osm_id": 381471279
+    },
+    "lane_count_evidence": {
+      "policy": "For police-report approaches, use OSM lanes only from way segments whose name matches the 'from' road and whose geometry moves toward the 'toward' road. Nearby road segments are kept as evidence but are not averaged.",
+      "primary": {
+        "approach": {
+          "from": "Unter den Eichen",
+          "toward": "Drakestraße"
+        },
+        "from_names": [
+          "Unter den Eichen"
+        ],
+        "toward_names": [
+          "Drakestraße"
+        ],
+        "candidate_count": 20,
+        "target_count": 8,
+        "considered_segments": [
+          {
+            "osm_id": 4484278,
+            "name": "Unter den Eichen",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 0.540946,
+            "heading_deg": 31.0,
+            "progress_toward_target_m": 1.8,
+            "end_distance_to_target_m": 15.2,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 4484279,
+            "name": "Unter den Eichen",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -2.607847,
+            "heading_deg": -149.4,
+            "progress_toward_target_m": 4.7,
+            "end_distance_to_target_m": 16.5,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 14851818,
+            "name": "Unter den Eichen",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -2.607304,
+            "heading_deg": -149.4,
+            "progress_toward_target_m": 106.4,
+            "end_distance_to_target_m": 107.8,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 14851819,
+            "name": "Unter den Eichen",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -2.602519,
+            "heading_deg": -149.1,
+            "progress_toward_target_m": -11.6,
+            "end_distance_to_target_m": 11.6,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 14851929,
+            "name": "Unter den Eichen",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 0.534632,
+            "heading_deg": 30.6,
+            "progress_toward_target_m": 0.0,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 14851931,
+            "name": "Unter den Eichen",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -2.60192,
+            "heading_deg": -149.1,
+            "progress_toward_target_m": 13.7,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 25199877,
+            "name": "Unter den Eichen",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 0.543444,
+            "heading_deg": 31.1,
+            "progress_toward_target_m": 104.5,
+            "end_distance_to_target_m": 17.0,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 29047669,
+            "name": "Unter den Eichen",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -2.599551,
+            "heading_deg": -148.9,
+            "progress_toward_target_m": 193.9,
+            "end_distance_to_target_m": 21.3,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 29047671,
+            "name": "Unter den Eichen",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 0.540678,
+            "heading_deg": 31.0,
+            "progress_toward_target_m": -123.0,
+            "end_distance_to_target_m": 139.6,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 148670270,
+            "name": "Unter den Eichen",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 0.55328,
+            "heading_deg": 31.7,
+            "progress_toward_target_m": -126.1,
+            "end_distance_to_target_m": 141.3,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 148671116,
+            "name": "Unter den Eichen",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -2.602969,
+            "heading_deg": -149.1,
+            "progress_toward_target_m": -198.3,
+            "end_distance_to_target_m": 213.5,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 202500050,
+            "name": "Unter den Eichen",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "4",
+            "parsed_count": null,
+            "heading_rad": -2.598664,
+            "heading_deg": -148.9,
+            "progress_toward_target_m": -305.1,
+            "end_distance_to_target_m": 397.0,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 243461330,
+            "name": "Unter den Eichen",
+            "lanes_tag": "1",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 1,
+            "heading_rad": -2.604168,
+            "heading_deg": -149.2,
+            "progress_toward_target_m": -172.9,
+            "end_distance_to_target_m": 215.3,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 381471276,
+            "name": "Unter den Eichen/Drakestraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": -0.984045,
+            "heading_deg": -56.4,
+            "progress_toward_target_m": 0.0,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 381471277,
+            "name": "Unter den Eichen/Drakestraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 0.533313,
+            "heading_deg": 30.6,
+            "progress_toward_target_m": 0.0,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 381471278,
+            "name": "Unter den Eichen/Drakestraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 0.542298,
+            "heading_deg": 31.1,
+            "progress_toward_target_m": 0.0,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 381471279,
+            "name": "Unter den Eichen/Drakestraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": -1.004582,
+            "heading_deg": -57.6,
+            "progress_toward_target_m": 0.0,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 405884014,
+            "name": "Unter den Eichen",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 0.541071,
+            "heading_deg": 31.0,
+            "progress_toward_target_m": 11.9,
+            "end_distance_to_target_m": 13.9,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 541438279,
+            "name": "Unter den Eichen",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "4",
+            "parsed_count": null,
+            "heading_rad": -3.048841,
+            "heading_deg": -174.7,
+            "progress_toward_target_m": -12.7,
+            "end_distance_to_target_m": 39.1,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 578127956,
+            "name": "Unter den Eichen/Drakestraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": -0.984972,
+            "heading_deg": -56.4,
+            "progress_toward_target_m": 0.0,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": false
+          }
+        ],
+        "selected_segments": [
+          {
+            "osm_id": 14851931,
+            "name": "Unter den Eichen",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -2.60192,
+            "heading_deg": -149.1,
+            "progress_toward_target_m": 13.7,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 405884014,
+            "name": "Unter den Eichen",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 0.541071,
+            "heading_deg": 31.0,
+            "progress_toward_target_m": 11.9,
+            "end_distance_to_target_m": 13.9,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 4484278,
+            "name": "Unter den Eichen",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 0.540946,
+            "heading_deg": 31.0,
+            "progress_toward_target_m": 1.8,
+            "end_distance_to_target_m": 15.2,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 4484279,
+            "name": "Unter den Eichen",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -2.607847,
+            "heading_deg": -149.4,
+            "progress_toward_target_m": 4.7,
+            "end_distance_to_target_m": 16.5,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 25199877,
+            "name": "Unter den Eichen",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 0.543444,
+            "heading_deg": 31.1,
+            "progress_toward_target_m": 104.5,
+            "end_distance_to_target_m": 17.0,
+            "moves_toward_target": true
+          }
+        ],
+        "used_count": 2,
+        "used_heading_rad": -2.60192,
+        "used_heading_deg": -149.1,
+        "status": "used_directional_osm_way_match"
+      },
+      "secondary": {
+        "approach": {
+          "from": "Drakestraße",
+          "toward": "Unter den Eichen"
+        },
+        "from_names": [
+          "Drakestraße"
+        ],
+        "toward_names": [
+          "Unter den Eichen"
+        ],
+        "candidate_count": 8,
+        "target_count": 20,
+        "considered_segments": [
+          {
+            "osm_id": 4724992,
+            "name": "Drakestraße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 2.213013,
+            "heading_deg": 126.8,
+            "progress_toward_target_m": -27.0,
+            "end_distance_to_target_m": 33.3,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 4724993,
+            "name": "Drakestraße",
+            "lanes_tag": "4",
+            "turn_lanes": "left|none|none|none",
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 4,
+            "heading_rad": 2.081111,
+            "heading_deg": 119.2,
+            "progress_toward_target_m": 53.2,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 4766610,
+            "name": "Drakestraße",
+            "lanes_tag": "3",
+            "turn_lanes": "left|through|none",
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": -0.976642,
+            "heading_deg": -56.0,
+            "progress_toward_target_m": 0.0,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 381471276,
+            "name": "Unter den Eichen/Drakestraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": -0.984045,
+            "heading_deg": -56.4,
+            "progress_toward_target_m": 0.0,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 381471277,
+            "name": "Unter den Eichen/Drakestraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 0.533313,
+            "heading_deg": 30.6,
+            "progress_toward_target_m": 0.0,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 381471278,
+            "name": "Unter den Eichen/Drakestraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 0.542298,
+            "heading_deg": 31.1,
+            "progress_toward_target_m": 0.0,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 381471279,
+            "name": "Unter den Eichen/Drakestraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": -1.004582,
+            "heading_deg": -57.6,
+            "progress_toward_target_m": 0.0,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 578127956,
+            "name": "Unter den Eichen/Drakestraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": -0.984972,
+            "heading_deg": -56.4,
+            "progress_toward_target_m": 0.0,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": false
+          }
+        ],
+        "selected_segments": [
+          {
+            "osm_id": 4724993,
+            "name": "Drakestraße",
+            "lanes_tag": "4",
+            "turn_lanes": "left|none|none|none",
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 4,
+            "heading_rad": 2.081111,
+            "heading_deg": 119.2,
+            "progress_toward_target_m": 53.2,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": true
+          }
+        ],
+        "used_count": 4,
+        "used_heading_rad": 2.081111,
+        "used_heading_deg": 119.2,
+        "status": "used_directional_osm_way_match"
+      }
+    },
+    "lane_count_overrides_applied": {
+      "secondary_road_lanes": {
+        "value": 4,
+        "source": "manual_map_review",
+        "reason": "Manual review of the OSM/imagery screenshot confirms that the report-relevant Drakestraße approach is a broad four-lane approach. The Pkw is placed on the leftmost of these lanes.",
+        "overrode": "osm_directional_way_match"
+      },
+      "secondary_forward_lanes": {
+        "value": 2,
+        "source": "manual_map_review",
+        "reason": "The report places the Pkw on the left Fahrstreifen of Drakestraße in the direction of Unter den Eichen, so the generated approach needs two lanes in the Pkw travel direction.",
+        "overrode": "osm_directional_way_match"
+      },
+      "secondary_opposite_lanes": {
+        "value": 2,
+        "source": "manual_map_review",
+        "reason": "The map screenshot shows the remaining Drakestraße lanes as the opposite-direction side of the same street; they are kept as visual road-topology context.",
+        "overrode": "osm_directional_way_match"
+      }
+    },
+    "heading_overrides_applied": {
+      "primary_heading_rad": {
+        "value": 0.541071,
+        "source": "manual_map_review",
+        "reason": "The screenshot shows the cyclist on the Unter den Eichen Nebenfahrbahn travelling along the side roadway direction. Nearby OSM segments contain both directions of the divided road, so the side-road heading is selected manually from map review.",
+        "overrode": "osm_directional_way_heading"
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "rightmost_motor_lane",
+      "source": "explicit_from_report",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

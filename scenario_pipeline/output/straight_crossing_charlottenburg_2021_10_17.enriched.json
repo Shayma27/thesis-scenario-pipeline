@@ -1,0 +1,1373 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "straight_crossing_charlottenburg_2021_10_17",
+    "date": "2021-10-17",
+    "time": "05:15",
+    "raw_text": "Eine Radfahrerin befuhr eine Straße in Charlottenburg vom Luisenplatz in Richtung Kaiser-Friedrich-Straße und fuhr in eine Kreuzung ein. Dabei kam es zur Kollision mit einem Pkw, der von der Otto-Suhr-Allee in Richtung Spandauer Damm unterwegs war."
+  },
+  "classification": {
+    "scenario_type": "straight_crossing_conflict",
+    "confidence": 0.86
+  },
+  "location": {
+    "city": "Berlin",
+    "district": "Charlottenburg",
+    "primary_road": "Luisenplatz to Kaiser-Friedrich-Straße approach",
+    "secondary_road": "Otto-Suhr-Allee to Spandauer Damm approach",
+    "osm_query": "Luisenplatz, Charlottenburg, Berlin, Germany",
+    "osm_query_candidates": [
+      "Otto-Suhr-Allee, Charlottenburg, Berlin, Germany",
+      "Kaiser-Friedrich-Straße, Charlottenburg, Berlin, Germany",
+      "Spandauer Damm, Charlottenburg, Berlin, Germany"
+    ],
+    "osm_roads": [
+      "Kaiser-Friedrich-Straße",
+      "Otto-Suhr-Allee",
+      "Spandauer Damm"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "from Luisenplatz toward Kaiser-Friedrich-Straße",
+      "from Otto-Suhr-Allee toward Spandauer Damm"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "yes",
+    "bike_facility_type": "separated_cycle_track",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "enter_intersection_go_straight",
+      "initial_direction": "toward Kaiser-Friedrich-Straße",
+      "traffic_rule_status": "unknown"
+    },
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight_through_intersection",
+      "initial_direction": "toward Spandauer Damm",
+      "traffic_rule_status": "unknown"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "intersection_crossing_paths",
+    "collision_happened": true,
+    "collision_description": "Cyclist enters the intersection and collides with a passenger car travelling through the crossing approach.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "road_geometry": "crossing",
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "junction_type": "intersection",
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "separated_cycle_track",
+      "primary_bike_facility_position": "right",
+      "primary_road_lanes": 4,
+      "secondary_road_lanes": 4,
+      "primary_heading_rad": -1.452966,
+      "secondary_heading_rad": 2.659639
+    },
+    "openscenario": {
+      "simulation_duration_s": 9,
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -5,
+          "initial_s_m": 27.75,
+          "initial_speed_mps": 6.0
+        },
+        "car_1": {
+          "vehicle_category": "car",
+          "initial_road_id": 1,
+          "initial_lane_id": -1,
+          "initial_s_m": 12.25,
+          "initial_speed_mps": 9.03
+        }
+      },
+      "conflict": {
+        "conflict_world_x_m": -1.75,
+        "conflict_world_y_m": 1.75,
+        "conflict_time_s": 4.0,
+        "trigger_time_s": 1.0
+      },
+      "cyclist_lateral_position": "right"
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "traffic_light_present",
+      "value_used": "unknown",
+      "source": "explicit_missing",
+      "reason": "The report does not mention traffic lights or signal phases."
+    },
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "separated_cycle_track",
+      "source": "osm_tag",
+      "reason": "OSM cycleway tags indicate separated_cycle_track."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 6.0,
+      "source": "default_assumption",
+      "reason": "Cyclist speed was not provided in the report."
+    },
+    {
+      "parameter": "car_1.initial_speed_mps",
+      "value_used": 9.03,
+      "source": "osm_derived_assumption",
+      "reason": "OSM maxspeed=50.0 km/h was found near the location; the simulation uses 65% of the limit as an intersection approach speed."
+    },
+    {
+      "parameter": "initial_positions",
+      "value_used": "cyclist road 0 lane -1 s=27.75m, car road 1 lane -1 s=12.25m",
+      "source": "default_assumption",
+      "reason": "Exact starting positions are not in the report; they are chosen so both actors reach the intersection conflict point at t=4s."
+    },
+    {
+      "parameter": "intersection_geometry",
+      "value_used": "two straight roads crossing at right angle",
+      "source": "default_assumption",
+      "reason": "The exact junction geometry is not given; a minimal crossing abstraction is used for the first runnable simulation."
+    },
+    {
+      "parameter": "intersection_lane_counts",
+      "value_used": "primary=4, secondary=4",
+      "source": "osm_directional_way_match",
+      "reason": "OpenDRIVE lane counts were derived from OSM way segments that match each report approach direction."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -5,
+      "source": "derived_from_cyclist_lateral_position",
+      "reason": "Cyclist OpenSCENARIO lane id follows the chosen lateral-position policy so the initial teleport matches the generated trajectory."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "right",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    }
+  ],
+  "osm_context": {
+    "query": "Luisenplatz, Charlottenburg, Berlin, Germany",
+    "queries_tried": [
+      "Luisenplatz, Charlottenburg, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 4421115,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5196587,
+            "lon": 13.2986676
+          },
+          {
+            "lat": 52.5196462,
+            "lon": 13.2984503
+          }
+        ]
+      },
+      {
+        "osm_id": 4446694,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "14",
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5197098,
+            "lon": 13.2996776
+          },
+          {
+            "lat": 52.5197046,
+            "lon": 13.2994926
+          }
+        ]
+      },
+      {
+        "osm_id": 4446695,
+        "name": "Luisenplatz",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "12",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5195077,
+            "lon": 13.2997097
+          },
+          {
+            "lat": 52.5197098,
+            "lon": 13.2996776
+          }
+        ]
+      },
+      {
+        "osm_id": 4446696,
+        "name": "Kaiser-Friedrich-Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "9",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5197046,
+            "lon": 13.2994926
+          },
+          {
+            "lat": 52.5195435,
+            "lon": 13.2995282
+          }
+        ]
+      },
+      {
+        "osm_id": 4446697,
+        "name": "Luisenplatz",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5206289,
+            "lon": 13.2995409
+          },
+          {
+            "lat": 52.5206983,
+            "lon": 13.2995411
+          },
+          {
+            "lat": 52.5207603,
+            "lon": 13.2995477
+          },
+          {
+            "lat": 52.5208488,
+            "lon": 13.2995734
+          },
+          {
+            "lat": 52.5208746,
+            "lon": 13.2995885
+          }
+        ]
+      },
+      {
+        "osm_id": 265637901,
+        "name": "Luisenplatz",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|none",
+        "oneway": "yes",
+        "width": "8",
+        "lane_markings": "yes",
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.520777,
+            "lon": 13.2993955
+          },
+          {
+            "lat": 52.5206945,
+            "lon": 13.2993739
+          },
+          {
+            "lat": 52.5205349,
+            "lon": 13.2993637
+          }
+        ]
+      },
+      {
+        "osm_id": 302429255,
+        "name": "Luisenplatz",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through;right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5213681,
+            "lon": 13.2997982
+          },
+          {
+            "lat": 52.5213088,
+            "lon": 13.2996951
+          },
+          {
+            "lat": 52.5208489,
+            "lon": 13.2994219
+          }
+        ]
+      },
+      {
+        "osm_id": 302429259,
+        "name": "Luisenplatz",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|left|through|none",
+        "oneway": "yes",
+        "width": "12.3",
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5198454,
+            "lon": 13.2994654
+          },
+          {
+            "lat": 52.5198303,
+            "lon": 13.2994683
+          },
+          {
+            "lat": 52.5198065,
+            "lon": 13.2994729
+          },
+          {
+            "lat": 52.5197611,
+            "lon": 13.2994817
+          },
+          {
+            "lat": 52.5197046,
+            "lon": 13.2994926
+          }
+        ]
+      },
+      {
+        "osm_id": 302429293,
+        "name": "Otto-Suhr-Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|through|right",
+        "oneway": "yes",
+        "width": "12.7",
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5193445,
+            "lon": 13.3007893
+          },
+          {
+            "lat": 52.5193864,
+            "lon": 13.3006677
+          },
+          {
+            "lat": 52.519509,
+            "lon": 13.3003114
+          },
+          {
+            "lat": 52.5196321,
+            "lon": 13.29992
+          }
+        ]
+      },
+      {
+        "osm_id": 393238759,
+        "name": "Luisenplatz/Schloss Charlottenburg",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5197488,
+            "lon": 13.2989059
+          },
+          {
+            "lat": 52.5197392,
+            "lon": 13.2987555
+          },
+          {
+            "lat": 52.519728,
+            "lon": 13.2985821
+          }
+        ]
+      },
+      {
+        "osm_id": 393238761,
+        "name": "Luisenplatz/Schloss Charlottenburg",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5201579,
+            "lon": 13.2996701
+          },
+          {
+            "lat": 52.5199893,
+            "lon": 13.2996944
+          }
+        ]
+      },
+      {
+        "osm_id": 1101185238,
+        "name": "Luisenplatz",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "12",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5197098,
+            "lon": 13.2996776
+          },
+          {
+            "lat": 52.5197653,
+            "lon": 13.2996675
+          },
+          {
+            "lat": 52.5198184,
+            "lon": 13.2996578
+          },
+          {
+            "lat": 52.5198555,
+            "lon": 13.299651
+          }
+        ]
+      },
+      {
+        "osm_id": 1101185240,
+        "name": "Luisenplatz",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|left|through|none",
+        "oneway": "yes",
+        "width": "12.3",
+        "lane_markings": "yes",
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5203489,
+            "lon": 13.2993711
+          },
+          {
+            "lat": 52.5198454,
+            "lon": 13.2994654
+          }
+        ]
+      },
+      {
+        "osm_id": 1101185241,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5197046,
+            "lon": 13.2994926
+          },
+          {
+            "lat": 52.5196977,
+            "lon": 13.299367
+          },
+          {
+            "lat": 52.519692,
+            "lon": 13.2992634
+          }
+        ]
+      },
+      {
+        "osm_id": 1101185246,
+        "name": "Otto-Suhr-Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|through|right",
+        "oneway": "yes",
+        "width": "14",
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5196321,
+            "lon": 13.29992
+          },
+          {
+            "lat": 52.5196519,
+            "lon": 13.2998576
+          },
+          {
+            "lat": 52.5196844,
+            "lon": 13.2997566
+          },
+          {
+            "lat": 52.5197098,
+            "lon": 13.2996776
+          }
+        ]
+      },
+      {
+        "osm_id": 1131961055,
+        "name": "Luisenplatz",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "9",
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5202509,
+            "lon": 13.2995846
+          },
+          {
+            "lat": 52.5203575,
+            "lon": 13.2995664
+          },
+          {
+            "lat": 52.5205319,
+            "lon": 13.2995495
+          },
+          {
+            "lat": 52.5206289,
+            "lon": 13.2995409
+          }
+        ]
+      },
+      {
+        "osm_id": 1131961056,
+        "name": "Luisenplatz",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5211049,
+            "lon": 13.2997231
+          },
+          {
+            "lat": 52.5212802,
+            "lon": 13.2998254
+          },
+          {
+            "lat": 52.5213681,
+            "lon": 13.2997982
+          }
+        ]
+      },
+      {
+        "osm_id": 1131961057,
+        "name": "Luisenplatz",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5208746,
+            "lon": 13.2995885
+          },
+          {
+            "lat": 52.5211049,
+            "lon": 13.2997231
+          }
+        ]
+      },
+      {
+        "osm_id": 1392196849,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "share_busway",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:traffic_sign": "none",
+          "cycleway:right:width": "4.2"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5196888,
+            "lon": 13.2992122
+          },
+          {
+            "lat": 52.5196737,
+            "lon": 13.2989276
+          },
+          {
+            "lat": 52.519669,
+            "lon": 13.2988464
+          },
+          {
+            "lat": 52.5196587,
+            "lon": 13.2986676
+          }
+        ]
+      },
+      {
+        "osm_id": 1392196852,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "share_busway",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:traffic_sign": "none",
+          "cycleway:right:width": "4.7"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.519692,
+            "lon": 13.2992634
+          },
+          {
+            "lat": 52.5196888,
+            "lon": 13.2992122
+          }
+        ]
+      },
+      {
+        "osm_id": 1414685065,
+        "name": "Luisenplatz",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "9",
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5198555,
+            "lon": 13.299651
+          },
+          {
+            "lat": 52.5201551,
+            "lon": 13.299601
+          },
+          {
+            "lat": 52.5202509,
+            "lon": 13.2995846
+          }
+        ]
+      },
+      {
+        "osm_id": 1511914088,
+        "name": "Luisenplatz",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|none",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5208489,
+            "lon": 13.2994219
+          },
+          {
+            "lat": 52.520777,
+            "lon": 13.2993955
+          }
+        ]
+      },
+      {
+        "osm_id": 1511914089,
+        "name": "Luisenplatz",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|none",
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": "yes",
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5205349,
+            "lon": 13.2993637
+          },
+          {
+            "lat": 52.5203489,
+            "lon": 13.2993711
+          }
+        ]
+      }
+    ],
+    "traffic_signals_nearby": "yes",
+    "notes": [
+      "OSM turn:lanes tags were kept as evidence only; the report does not explicitly describe a left-turn maneuver for car_1."
+    ],
+    "geocoded": {
+      "display_name": "Luisenplatz, Mierendorffkiez, Charlottenburg, Charlottenburg-Wilmersdorf, Berlin, 10585, Deutschland",
+      "lat": 52.520813,
+      "lon": 13.2994087,
+      "osm_type": "way",
+      "osm_id": 1511914088
+    },
+    "bike_facility": {
+      "type": "separated_cycle_track",
+      "position": "right",
+      "source": "osm_tag",
+      "osm_evidence": {
+        "bike_facility_type": "separated_cycle_track",
+        "position": "right",
+        "tags": {
+          "cycleway:right": "separate"
+        }
+      }
+    },
+    "lane_count_evidence": {
+      "policy": "For police-report approaches, use OSM lanes only from way segments whose name matches the 'from' road and whose geometry moves toward the 'toward' road. Nearby road segments are kept as evidence but are not averaged.",
+      "primary": {
+        "approach": {
+          "from": "Luisenplatz",
+          "toward": "Kaiser-Friedrich-Straße"
+        },
+        "from_names": [
+          "Luisenplatz"
+        ],
+        "toward_names": [
+          "Kaiser-Friedrich-Straße"
+        ],
+        "candidate_count": 15,
+        "target_count": 1,
+        "considered_segments": [
+          {
+            "osm_id": 4446695,
+            "name": "Luisenplatz",
+            "lanes_tag": "3",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "12",
+            "parsed_count": 3,
+            "heading_rad": 1.667821,
+            "heading_deg": 95.6,
+            "progress_toward_target_m": 0.4,
+            "end_distance_to_target_m": 12.5,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 4446697,
+            "name": "Luisenplatz",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -1.688956,
+            "heading_deg": -96.8,
+            "progress_toward_target_m": -27.3,
+            "end_distance_to_target_m": 129.5,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 265637901,
+            "name": "Luisenplatz",
+            "lanes_tag": "3",
+            "turn_lanes": "left|through|none",
+            "oneway": "yes",
+            "width": "8",
+            "parsed_count": 3,
+            "heading_rad": -1.651111,
+            "heading_deg": -94.6,
+            "progress_toward_target_m": 26.5,
+            "end_distance_to_target_m": 92.2,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 302429255,
+            "name": "Luisenplatz",
+            "lanes_tag": "2",
+            "turn_lanes": "left|through;right",
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -1.988742,
+            "heading_deg": -113.9,
+            "progress_toward_target_m": 58.5,
+            "end_distance_to_target_m": 126.6,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 302429259,
+            "name": "Luisenplatz",
+            "lanes_tag": "4",
+            "turn_lanes": "left|left|through|none",
+            "oneway": "yes",
+            "width": "12.3",
+            "parsed_count": 4,
+            "heading_rad": -1.452966,
+            "heading_deg": -83.2,
+            "progress_toward_target_m": 15.7,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 393238759,
+            "name": "Luisenplatz/Schloss Charlottenburg",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 0.104447,
+            "heading_deg": 6.0,
+            "progress_toward_target_m": -21.7,
+            "end_distance_to_target_m": 61.7,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 393238761,
+            "name": "Luisenplatz/Schloss Charlottenburg",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": -1.482706,
+            "heading_deg": -85.0,
+            "progress_toward_target_m": 17.2,
+            "end_distance_to_target_m": 34.3,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1101185238,
+            "name": "Luisenplatz",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "12",
+            "parsed_count": 2,
+            "heading_rad": -1.459386,
+            "heading_deg": -83.6,
+            "progress_toward_target_m": -7.3,
+            "end_distance_to_target_m": 19.8,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 1101185240,
+            "name": "Luisenplatz",
+            "lanes_tag": "4",
+            "turn_lanes": "left|left|through|none",
+            "oneway": "yes",
+            "width": "12.3",
+            "parsed_count": 4,
+            "heading_rad": -1.45653,
+            "heading_deg": -83.5,
+            "progress_toward_target_m": 56.0,
+            "end_distance_to_target_m": 15.7,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1131961055,
+            "name": "Luisenplatz",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "9",
+            "parsed_count": 2,
+            "heading_rad": -1.500073,
+            "heading_deg": -85.9,
+            "progress_toward_target_m": -41.5,
+            "end_distance_to_target_m": 102.2,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 1131961056,
+            "name": "Luisenplatz",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -1.743888,
+            "heading_deg": -99.9,
+            "progress_toward_target_m": -29.5,
+            "end_distance_to_target_m": 185.0,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 1131961057,
+            "name": "Luisenplatz",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -1.914698,
+            "heading_deg": -109.7,
+            "progress_toward_target_m": -26.1,
+            "end_distance_to_target_m": 155.6,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 1414685065,
+            "name": "Luisenplatz",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "9",
+            "parsed_count": 2,
+            "heading_rad": -1.468253,
+            "heading_deg": -84.1,
+            "progress_toward_target_m": -40.9,
+            "end_distance_to_target_m": 60.7,
+            "moves_toward_target": false
+          },
+          {
+            "osm_id": 1511914088,
+            "name": "Luisenplatz",
+            "lanes_tag": "3",
+            "turn_lanes": "left|through|none",
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": -1.792105,
+            "heading_deg": -102.7,
+            "progress_toward_target_m": 7.9,
+            "end_distance_to_target_m": 118.7,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1511914089,
+            "name": "Luisenplatz",
+            "lanes_tag": "3",
+            "turn_lanes": "left|through|none",
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 3,
+            "heading_rad": -1.546422,
+            "heading_deg": -88.6,
+            "progress_toward_target_m": 20.5,
+            "end_distance_to_target_m": 71.7,
+            "moves_toward_target": true
+          }
+        ],
+        "selected_segments": [
+          {
+            "osm_id": 302429259,
+            "name": "Luisenplatz",
+            "lanes_tag": "4",
+            "turn_lanes": "left|left|through|none",
+            "oneway": "yes",
+            "width": "12.3",
+            "parsed_count": 4,
+            "heading_rad": -1.452966,
+            "heading_deg": -83.2,
+            "progress_toward_target_m": 15.7,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1101185240,
+            "name": "Luisenplatz",
+            "lanes_tag": "4",
+            "turn_lanes": "left|left|through|none",
+            "oneway": "yes",
+            "width": "12.3",
+            "parsed_count": 4,
+            "heading_rad": -1.45653,
+            "heading_deg": -83.5,
+            "progress_toward_target_m": 56.0,
+            "end_distance_to_target_m": 15.7,
+            "moves_toward_target": true
+          }
+        ],
+        "used_count": 4,
+        "used_heading_rad": -1.452966,
+        "used_heading_deg": -83.2,
+        "status": "used_directional_osm_way_match"
+      },
+      "secondary": {
+        "approach": {
+          "from": "Otto-Suhr-Allee",
+          "toward": "Spandauer Damm"
+        },
+        "from_names": [
+          "Otto-Suhr-Allee"
+        ],
+        "toward_names": [
+          "Spandauer Damm"
+        ],
+        "candidate_count": 2,
+        "target_count": 5,
+        "considered_segments": [
+          {
+            "osm_id": 302429293,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "4",
+            "turn_lanes": "left|through|through|right",
+            "oneway": "yes",
+            "width": "12.7",
+            "parsed_count": 4,
+            "heading_rad": 2.646539,
+            "heading_deg": 151.6,
+            "progress_toward_target_m": 66.9,
+            "end_distance_to_target_m": 18.5,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1101185246,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "4",
+            "turn_lanes": "left|through|through|right",
+            "oneway": "yes",
+            "width": "14",
+            "parsed_count": 4,
+            "heading_rad": 2.659639,
+            "heading_deg": 152.4,
+            "progress_toward_target_m": 18.5,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": true
+          }
+        ],
+        "selected_segments": [
+          {
+            "osm_id": 1101185246,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "4",
+            "turn_lanes": "left|through|through|right",
+            "oneway": "yes",
+            "width": "14",
+            "parsed_count": 4,
+            "heading_rad": 2.659639,
+            "heading_deg": 152.4,
+            "progress_toward_target_m": 18.5,
+            "end_distance_to_target_m": 0.0,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 302429293,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "4",
+            "turn_lanes": "left|through|through|right",
+            "oneway": "yes",
+            "width": "12.7",
+            "parsed_count": 4,
+            "heading_rad": 2.646539,
+            "heading_deg": 151.6,
+            "progress_toward_target_m": 66.9,
+            "end_distance_to_target_m": 18.5,
+            "moves_toward_target": true
+          }
+        ],
+        "used_count": 4,
+        "used_heading_rad": 2.659639,
+        "used_heading_deg": 152.4,
+        "status": "used_directional_osm_way_match"
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "right",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

@@ -1,0 +1,4997 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-28T12:55:29Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 268244370,
+      "lat": 52.5089413,
+      "lon": 13.5614472,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 268244550,
+      "lat": 52.5086334,
+      "lon": 13.5618747,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1512567344,
+      "lat": 52.508372,
+      "lon": 13.5614756,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3606478073,
+      "lat": 52.5086261,
+      "lon": 13.5610783,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11359157000,
+      "lat": 52.5083934,
+      "lon": 13.5615856,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11359157002,
+      "lat": 52.5085529,
+      "lon": 13.5610951,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11359406751,
+      "lat": 52.5089293,
+      "lon": 13.5613243,
+      "tags": {
+        "button_operated": "yes",
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11359406753,
+      "lat": 52.5087041,
+      "lon": 13.5618537,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "way",
+      "id": 26411050,
+      "bounds": {
+        "minlat": 52.5071483,
+        "minlon": 13.561287,
+        "maxlat": 52.5085889,
+        "maxlon": 13.5614845
+      },
+      "geometry": [
+        {
+          "lat": 52.5085889,
+          "lon": 13.5613322
+        },
+        {
+          "lat": 52.5085204,
+          "lon": 13.5613115
+        },
+        {
+          "lat": 52.5084474,
+          "lon": 13.5612961
+        },
+        {
+          "lat": 52.5083474,
+          "lon": 13.561287
+        },
+        {
+          "lat": 52.5082154,
+          "lon": 13.5613013
+        },
+        {
+          "lat": 52.5073693,
+          "lon": 13.5614446
+        },
+        {
+          "lat": 52.5073339,
+          "lon": 13.5614505
+        },
+        {
+          "lat": 52.5072737,
+          "lon": 13.5614615
+        },
+        {
+          "lat": 52.5071483,
+          "lon": 13.5614845
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Köpenick",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Köpenicker Straße",
+        "name:etymology:wikidata": "Q521521",
+        "name:etymology:wikipedia": "de:Berlin-Köpenick",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12683",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "turn:lanes": "through|through|right",
+        "wikidata": "Q75103242",
+        "wikimedia_commons": "Category:Köpenicker Straße (Berlin-Biesdorf)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 28818784,
+      "bounds": {
+        "minlat": 52.5086841,
+        "minlon": 13.5534318,
+        "maxlat": 52.5090089,
+        "maxlon": 13.5593541
+      },
+      "geometry": [
+        {
+          "lat": 52.5090089,
+          "lon": 13.5534318
+        },
+        {
+          "lat": 52.5089723,
+          "lon": 13.5539046
+        },
+        {
+          "lat": 52.5089363,
+          "lon": 13.5544993
+        },
+        {
+          "lat": 52.5088401,
+          "lon": 13.5560383
+        },
+        {
+          "lat": 52.5088352,
+          "lon": 13.5561155
+        },
+        {
+          "lat": 52.5088024,
+          "lon": 13.5566655
+        },
+        {
+          "lat": 52.5087552,
+          "lon": 13.5575081
+        },
+        {
+          "lat": 52.5087336,
+          "lon": 13.5579268
+        },
+        {
+          "lat": 52.5086983,
+          "lon": 13.5586174
+        },
+        {
+          "lat": 52.5086921,
+          "lon": 13.5587331
+        },
+        {
+          "lat": 52.5086841,
+          "lon": 13.5593541
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "sign",
+        "name": "Alt-Biesdorf",
+        "name:etymology:wikidata": "Q432891",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12683",
+        "ref": "B 1;B 5",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "intermediate",
+        "source:maxspeed": "sign",
+        "surface": "concrete",
+        "wikidata": "Q432891"
+      }
+    },
+    {
+      "type": "way",
+      "id": 28818787,
+      "bounds": {
+        "minlat": 52.5085553,
+        "minlon": 13.5615209,
+        "maxlat": 52.5087013,
+        "maxlon": 13.5615835
+      },
+      "geometry": [
+        {
+          "lat": 52.5085553,
+          "lon": 13.5615209
+        },
+        {
+          "lat": 52.5087013,
+          "lon": 13.5615835
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Blumberger Damm",
+        "name:etymology:wikidata": "Q82430",
+        "old_name": "Otto-Buchwitz-Straße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12683",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "concrete",
+        "turn:lanes": "left|left|none|none",
+        "wikidata": "Q886160",
+        "wikipedia": "de:Blumberger Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30898957,
+      "bounds": {
+        "minlat": 52.5071598,
+        "minlon": 13.5614697,
+        "maxlat": 52.5085553,
+        "maxlon": 13.5616532
+      },
+      "geometry": [
+        {
+          "lat": 52.5071598,
+          "lon": 13.5616532
+        },
+        {
+          "lat": 52.5072857,
+          "lon": 13.5616258
+        },
+        {
+          "lat": 52.5073447,
+          "lon": 13.5616135
+        },
+        {
+          "lat": 52.5080455,
+          "lon": 13.5614955
+        },
+        {
+          "lat": 52.508193,
+          "lon": 13.5614697
+        },
+        {
+          "lat": 52.508372,
+          "lon": 13.5614756
+        },
+        {
+          "lat": 52.5084308,
+          "lon": 13.5614901
+        },
+        {
+          "lat": 52.5084932,
+          "lon": 13.5615026
+        },
+        {
+          "lat": 52.5085553,
+          "lon": 13.5615209
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Köpenicker Straße",
+        "name:etymology:wikidata": "Q521521",
+        "name:etymology:wikipedia": "de:Berlin-Köpenick",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12683",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|through|through;right",
+        "wikidata": "Q75103242",
+        "wikimedia_commons": "Category:Köpenicker Straße (Berlin-Biesdorf)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 34932781,
+      "bounds": {
+        "minlat": 52.5084166,
+        "minlon": 13.5585678,
+        "maxlat": 52.5085835,
+        "maxlon": 13.5586025
+      },
+      "geometry": [
+        {
+          "lat": 52.5084166,
+          "lon": 13.5585678
+        },
+        {
+          "lat": 52.5085835,
+          "lon": 13.5586025
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "service",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 34932782,
+      "bounds": {
+        "minlat": 52.5085339,
+        "minlon": 13.5593335,
+        "maxlat": 52.5086841,
+        "maxlon": 13.5593541
+      },
+      "geometry": [
+        {
+          "lat": 52.5086841,
+          "lon": 13.5593541
+        },
+        {
+          "lat": 52.5085689,
+          "lon": 13.5593371
+        },
+        {
+          "lat": 52.5085339,
+          "lon": 13.5593335
+        }
+      ],
+      "tags": {
+        "cutting": "yes",
+        "highway": "service",
+        "service": "driveway",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 43866237,
+      "bounds": {
+        "minlat": 52.509314,
+        "minlon": 13.5587371,
+        "maxlat": 52.5100565,
+        "maxlon": 13.5594687
+      },
+      "geometry": [
+        {
+          "lat": 52.5100565,
+          "lon": 13.5592258
+        },
+        {
+          "lat": 52.5099199,
+          "lon": 13.5594047
+        },
+        {
+          "lat": 52.5098477,
+          "lon": 13.5594582
+        },
+        {
+          "lat": 52.5097826,
+          "lon": 13.5594687
+        },
+        {
+          "lat": 52.5096405,
+          "lon": 13.5594401
+        },
+        {
+          "lat": 52.5095679,
+          "lon": 13.5593988
+        },
+        {
+          "lat": 52.5094737,
+          "lon": 13.5592888
+        },
+        {
+          "lat": 52.5094063,
+          "lon": 13.5591342
+        },
+        {
+          "lat": 52.5093628,
+          "lon": 13.5589645
+        },
+        {
+          "lat": 52.509314,
+          "lon": 13.5587371
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "dog": "leashed",
+        "highway": "footway",
+        "lit": "no",
+        "smoothness": "intermediate",
+        "surface": "fine_gravel",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 58898573,
+      "bounds": {
+        "minlat": 52.509109,
+        "minlon": 13.5596957,
+        "maxlat": 52.5097566,
+        "maxlon": 13.5610354
+      },
+      "geometry": [
+        {
+          "lat": 52.5097566,
+          "lon": 13.5610354
+        },
+        {
+          "lat": 52.5095568,
+          "lon": 13.5609593
+        },
+        {
+          "lat": 52.5093405,
+          "lon": 13.5607794
+        },
+        {
+          "lat": 52.5091457,
+          "lon": 13.5605361
+        },
+        {
+          "lat": 52.509109,
+          "lon": 13.5603159
+        },
+        {
+          "lat": 52.5091399,
+          "lon": 13.5600895
+        },
+        {
+          "lat": 52.5092337,
+          "lon": 13.5596957
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "dog": "leashed",
+        "highway": "footway",
+        "lit": "no",
+        "smoothness": "intermediate",
+        "surface": "fine_gravel",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 75870070,
+      "bounds": {
+        "minlat": 52.5097261,
+        "minlon": 13.5585924,
+        "maxlat": 52.5100894,
+        "maxlon": 13.5594687
+      },
+      "geometry": [
+        {
+          "lat": 52.5100894,
+          "lon": 13.5585924
+        },
+        {
+          "lat": 52.509993,
+          "lon": 13.5586116
+        },
+        {
+          "lat": 52.5098788,
+          "lon": 13.5586656
+        },
+        {
+          "lat": 52.5097973,
+          "lon": 13.5587642
+        },
+        {
+          "lat": 52.5097458,
+          "lon": 13.5588765
+        },
+        {
+          "lat": 52.5097261,
+          "lon": 13.5590227
+        },
+        {
+          "lat": 52.5097308,
+          "lon": 13.5591743
+        },
+        {
+          "lat": 52.5097542,
+          "lon": 13.5593286
+        },
+        {
+          "lat": 52.5097826,
+          "lon": 13.5594687
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "dog": "leashed",
+        "highway": "footway",
+        "lit": "no",
+        "smoothness": "bad",
+        "surface": "fine_gravel",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 75870072,
+      "bounds": {
+        "minlat": 52.5097566,
+        "minlon": 13.5599734,
+        "maxlat": 52.5100728,
+        "maxlon": 13.5610354
+      },
+      "geometry": [
+        {
+          "lat": 52.5100728,
+          "lon": 13.5599734
+        },
+        {
+          "lat": 52.5100007,
+          "lon": 13.5602705
+        },
+        {
+          "lat": 52.5098958,
+          "lon": 13.5606685
+        },
+        {
+          "lat": 52.5097566,
+          "lon": 13.5610354
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "dog": "leashed",
+        "highway": "footway",
+        "lit": "no",
+        "smoothness": "intermediate",
+        "surface": "fine_gravel",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 81546236,
+      "bounds": {
+        "minlat": 52.507935,
+        "minlon": 13.5616184,
+        "maxlat": 52.5085351,
+        "maxlon": 13.5634853
+      },
+      "geometry": [
+        {
+          "lat": 52.5085351,
+          "lon": 13.5616184
+        },
+        {
+          "lat": 52.5085062,
+          "lon": 13.5617587
+        },
+        {
+          "lat": 52.5084741,
+          "lon": 13.5619048
+        },
+        {
+          "lat": 52.5084058,
+          "lon": 13.5621632
+        },
+        {
+          "lat": 52.5083288,
+          "lon": 13.5623929
+        },
+        {
+          "lat": 52.5080284,
+          "lon": 13.5632261
+        },
+        {
+          "lat": 52.507935,
+          "lon": 13.5634853
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Alt-Biesdorf",
+        "name:etymology:wikidata": "Q432891",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12683",
+        "ref": "B 1;B 5",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:maxspeed": "sign",
+        "surface": "concrete",
+        "wikidata": "Q432891"
+      }
+    },
+    {
+      "type": "way",
+      "id": 84960593,
+      "bounds": {
+        "minlat": 52.5085889,
+        "minlon": 13.5613322,
+        "maxlat": 52.5087371,
+        "maxlon": 13.5613809
+      },
+      "geometry": [
+        {
+          "lat": 52.5087371,
+          "lon": 13.5613809
+        },
+        {
+          "lat": 52.5085889,
+          "lon": 13.5613322
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Köpenick",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Köpenicker Straße",
+        "name:etymology:wikidata": "Q521521",
+        "name:etymology:wikipedia": "de:Berlin-Köpenick",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12683",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "concrete",
+        "turn:lanes": "left|through|through",
+        "wikidata": "Q75103242",
+        "wikimedia_commons": "Category:Köpenicker Straße (Berlin-Biesdorf)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 84960598,
+      "bounds": {
+        "minlat": 52.5088073,
+        "minlon": 13.5582083,
+        "maxlat": 52.5089371,
+        "maxlon": 13.5599407
+      },
+      "geometry": [
+        {
+          "lat": 52.5088073,
+          "lon": 13.5599407
+        },
+        {
+          "lat": 52.5088096,
+          "lon": 13.5597122
+        },
+        {
+          "lat": 52.5088175,
+          "lon": 13.5595447
+        },
+        {
+          "lat": 52.5088403,
+          "lon": 13.5592249
+        },
+        {
+          "lat": 52.5088501,
+          "lon": 13.5591249
+        },
+        {
+          "lat": 52.5088893,
+          "lon": 13.5586785
+        },
+        {
+          "lat": 52.5088931,
+          "lon": 13.5586443
+        },
+        {
+          "lat": 52.5089371,
+          "lon": 13.5582083
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Alt-Biesdorf",
+        "name:etymology:wikidata": "Q432891",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12683",
+        "ref": "B 1;B 5",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q432891"
+      }
+    },
+    {
+      "type": "way",
+      "id": 137932256,
+      "bounds": {
+        "minlat": 52.508997,
+        "minlon": 13.562084,
+        "maxlat": 52.5090458,
+        "maxlon": 13.5620957
+      },
+      "geometry": [
+        {
+          "lat": 52.5090458,
+          "lon": 13.5620957
+        },
+        {
+          "lat": 52.508997,
+          "lon": 13.562084
+        }
+      ],
+      "tags": {
+        "covered": "yes",
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "down",
+        "lit": "yes",
+        "ramp": "no",
+        "surface": "concrete",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 137932259,
+      "bounds": {
+        "minlat": 52.50889,
+        "minlon": 13.5618,
+        "maxlat": 52.5089115,
+        "maxlon": 13.5620275
+      },
+      "geometry": [
+        {
+          "lat": 52.50889,
+          "lon": 13.5620275
+        },
+        {
+          "lat": 52.5089115,
+          "lon": 13.5618
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 137932261,
+      "bounds": {
+        "minlat": 52.5087257,
+        "minlon": 13.5621832,
+        "maxlat": 52.5087388,
+        "maxlon": 13.5621968
+      },
+      "geometry": [
+        {
+          "lat": 52.5087388,
+          "lon": 13.5621968
+        },
+        {
+          "lat": 52.5087257,
+          "lon": 13.5621832
+        }
+      ],
+      "tags": {
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "down",
+        "lit": "yes",
+        "ramp": "no",
+        "step_count": "4",
+        "surface": "concrete",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 137932262,
+      "bounds": {
+        "minlat": 52.5087732,
+        "minlon": 13.562232,
+        "maxlat": 52.5087776,
+        "maxlon": 13.5622376
+      },
+      "geometry": [
+        {
+          "lat": 52.5087776,
+          "lon": 13.5622376
+        },
+        {
+          "lat": 52.5087732,
+          "lon": 13.562232
+        }
+      ],
+      "tags": {
+        "covered": "yes",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 137932264,
+      "bounds": {
+        "minlat": 52.5090458,
+        "minlon": 13.5620957,
+        "maxlat": 52.5090676,
+        "maxlon": 13.562101
+      },
+      "geometry": [
+        {
+          "lat": 52.5090676,
+          "lon": 13.562101
+        },
+        {
+          "lat": 52.5090458,
+          "lon": 13.5620957
+        }
+      ],
+      "tags": {
+        "covered": "yes",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 137932266,
+      "bounds": {
+        "minlat": 52.5086778,
+        "minlon": 13.5621366,
+        "maxlat": 52.5087257,
+        "maxlon": 13.5621832
+      },
+      "geometry": [
+        {
+          "lat": 52.5087257,
+          "lon": 13.5621832
+        },
+        {
+          "lat": 52.5086778,
+          "lon": 13.5621366
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 137932267,
+      "bounds": {
+        "minlat": 52.5093553,
+        "minlon": 13.561904,
+        "maxlat": 52.5093625,
+        "maxlon": 13.5619894
+      },
+      "geometry": [
+        {
+          "lat": 52.5093553,
+          "lon": 13.5619894
+        },
+        {
+          "lat": 52.5093625,
+          "lon": 13.561904
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 137932269,
+      "bounds": {
+        "minlat": 52.5087388,
+        "minlon": 13.5621968,
+        "maxlat": 52.5087732,
+        "maxlon": 13.562232
+      },
+      "geometry": [
+        {
+          "lat": 52.5087732,
+          "lon": 13.562232
+        },
+        {
+          "lat": 52.5087388,
+          "lon": 13.5621968
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 137932275,
+      "bounds": {
+        "minlat": 52.5090676,
+        "minlon": 13.562101,
+        "maxlat": 52.5091149,
+        "maxlon": 13.5621124
+      },
+      "geometry": [
+        {
+          "lat": 52.5091149,
+          "lon": 13.5621124
+        },
+        {
+          "lat": 52.5090676,
+          "lon": 13.562101
+        }
+      ],
+      "tags": {
+        "covered": "yes",
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "down",
+        "lit": "yes",
+        "ramp": "no",
+        "surface": "concrete",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 137932279,
+      "bounds": {
+        "minlat": 52.5088867,
+        "minlon": 13.5620275,
+        "maxlat": 52.508997,
+        "maxlon": 13.562084
+      },
+      "geometry": [
+        {
+          "lat": 52.508997,
+          "lon": 13.562084
+        },
+        {
+          "lat": 52.5088867,
+          "lon": 13.5620519
+        },
+        {
+          "lat": 52.50889,
+          "lon": 13.5620275
+        }
+      ],
+      "tags": {
+        "covered": "yes",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 137932280,
+      "bounds": {
+        "minlat": 52.5091149,
+        "minlon": 13.5621124,
+        "maxlat": 52.5099827,
+        "maxlon": 13.5623205
+      },
+      "geometry": [
+        {
+          "lat": 52.5099827,
+          "lon": 13.5623205
+        },
+        {
+          "lat": 52.5093378,
+          "lon": 13.5621661
+        },
+        {
+          "lat": 52.5091149,
+          "lon": 13.5621124
+        }
+      ],
+      "tags": {
+        "covered": "yes",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 137932281,
+      "bounds": {
+        "minlat": 52.5085349,
+        "minlon": 13.5620454,
+        "maxlat": 52.5088867,
+        "maxlon": 13.5628249
+      },
+      "geometry": [
+        {
+          "lat": 52.5085349,
+          "lon": 13.5628182
+        },
+        {
+          "lat": 52.508542,
+          "lon": 13.5628249
+        },
+        {
+          "lat": 52.5087776,
+          "lon": 13.5622376
+        },
+        {
+          "lat": 52.5088593,
+          "lon": 13.5620454
+        },
+        {
+          "lat": 52.5088867,
+          "lon": 13.5620519
+        }
+      ],
+      "tags": {
+        "covered": "yes",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 137971646,
+      "bounds": {
+        "minlat": 52.5093524,
+        "minlon": 13.5619894,
+        "maxlat": 52.5093553,
+        "maxlon": 13.5620184
+      },
+      "geometry": [
+        {
+          "lat": 52.5093524,
+          "lon": 13.5620184
+        },
+        {
+          "lat": 52.5093553,
+          "lon": 13.5619894
+        }
+      ],
+      "tags": {
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "down",
+        "lit": "yes",
+        "ramp": "no",
+        "surface": "concrete",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 192497985,
+      "bounds": {
+        "minlat": 52.5085553,
+        "minlon": 13.5613322,
+        "maxlat": 52.5085889,
+        "maxlon": 13.5615209
+      },
+      "geometry": [
+        {
+          "lat": 52.5085889,
+          "lon": 13.5613322
+        },
+        {
+          "lat": 52.5085553,
+          "lon": 13.5615209
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Alt-Biesdorf",
+        "name:etymology:wikidata": "Q432891",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12683",
+        "ref": "B 1;B 5",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:maxspeed": "sign",
+        "surface": "concrete",
+        "turn:lanes": "left|left|through|through",
+        "wikidata": "Q432891"
+      }
+    },
+    {
+      "type": "way",
+      "id": 192497989,
+      "bounds": {
+        "minlat": 52.5087013,
+        "minlon": 13.5613809,
+        "maxlat": 52.5087371,
+        "maxlon": 13.5615835
+      },
+      "geometry": [
+        {
+          "lat": 52.5087013,
+          "lon": 13.5615835
+        },
+        {
+          "lat": 52.5087371,
+          "lon": 13.5613809
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Alt-Biesdorf",
+        "name:etymology:wikidata": "Q432891",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12683",
+        "ref": "B 1;B 5",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "concrete",
+        "turn:lanes": "left|through|through",
+        "wikidata": "Q432891"
+      }
+    },
+    {
+      "type": "way",
+      "id": 192497993,
+      "bounds": {
+        "minlat": 52.5086165,
+        "minlon": 13.5593541,
+        "maxlat": 52.5086923,
+        "maxlon": 13.5611443
+      },
+      "geometry": [
+        {
+          "lat": 52.5086841,
+          "lon": 13.5593541
+        },
+        {
+          "lat": 52.5086854,
+          "lon": 13.5594088
+        },
+        {
+          "lat": 52.5086875,
+          "lon": 13.5597316
+        },
+        {
+          "lat": 52.5086923,
+          "lon": 13.5599371
+        },
+        {
+          "lat": 52.5086871,
+          "lon": 13.5605605
+        },
+        {
+          "lat": 52.5086673,
+          "lon": 13.5607989
+        },
+        {
+          "lat": 52.5086261,
+          "lon": 13.5610783
+        },
+        {
+          "lat": 52.5086165,
+          "lon": 13.5611443
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination:colour:lanes": ";white;white|;white;white|white;white|white;white|",
+        "destination:lanes": "Hellersdorf;Kaulsdorf Nord;Unfallkrankenhaus Berlin|Hellersdorf;Kaulsdorf Nord;Unfallkrankenhaus Berlin|Mahlsdorf;Kaulsdorf-Süd|Mahlsdorf;Kaulsdorf-Süd|Köpenick",
+        "destination:ref:lanes": "||B 1;B 5|B 1;B 5|",
+        "destination:ref:to:lanes": "||A 10|A 10|",
+        "destination:symbol:lanes": ";;hospital|;;hospital|||",
+        "destination:symbol:to:lanes": "||motorway|motorway|",
+        "destination:to:lanes": "||Frankfurt (Oder)|Frankfurt (Oder)|",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "sign",
+        "name": "Alt-Biesdorf",
+        "name:etymology:wikidata": "Q432891",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12683",
+        "ref": "B 1;B 5",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:maxspeed": "sign",
+        "surface": "concrete",
+        "turn:lanes": "left|left|through|through|right",
+        "wikidata": "Q432891"
+      }
+    },
+    {
+      "type": "way",
+      "id": 192497994,
+      "bounds": {
+        "minlat": 52.5080538,
+        "minlon": 13.5615835,
+        "maxlat": 52.5087013,
+        "maxlon": 13.5635951
+      },
+      "geometry": [
+        {
+          "lat": 52.5080538,
+          "lon": 13.5635951
+        },
+        {
+          "lat": 52.5084409,
+          "lon": 13.5625373
+        },
+        {
+          "lat": 52.5085177,
+          "lon": 13.5622937
+        },
+        {
+          "lat": 52.5086334,
+          "lon": 13.5618747
+        },
+        {
+          "lat": 52.5086506,
+          "lon": 13.5617988
+        },
+        {
+          "lat": 52.5086812,
+          "lon": 13.5616697
+        },
+        {
+          "lat": 52.5087013,
+          "lon": 13.5615835
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lane_markings": "yes",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Alt-Biesdorf",
+        "name:etymology:wikidata": "Q432891",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12683",
+        "ref": "B 1;B 5",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:maxspeed": "sign",
+        "surface": "concrete",
+        "turn:lanes": "left|through|through|right",
+        "wikidata": "Q432891"
+      }
+    },
+    {
+      "type": "way",
+      "id": 192497996,
+      "bounds": {
+        "minlat": 52.5087371,
+        "minlon": 13.5613809,
+        "maxlat": 52.5099557,
+        "maxlon": 13.5617146
+      },
+      "geometry": [
+        {
+          "lat": 52.5099557,
+          "lon": 13.5617146
+        },
+        {
+          "lat": 52.5089413,
+          "lon": 13.5614472
+        },
+        {
+          "lat": 52.5089186,
+          "lon": 13.5614399
+        },
+        {
+          "lat": 52.5088977,
+          "lon": 13.5614333
+        },
+        {
+          "lat": 52.5087847,
+          "lon": 13.5613963
+        },
+        {
+          "lat": 52.5087371,
+          "lon": 13.5613809
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Blumberger Damm",
+        "name:etymology:wikidata": "Q82430",
+        "old_name": "Otto-Buchwitz-Straße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12683",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "concrete",
+        "turn:lanes": "left|through|through|right|right",
+        "wikidata": "Q886160",
+        "wikipedia": "de:Blumberger Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 192497997,
+      "bounds": {
+        "minlat": 52.5089235,
+        "minlon": 13.5616673,
+        "maxlat": 52.5115957,
+        "maxlon": 13.5623347
+      },
+      "geometry": [
+        {
+          "lat": 52.5089235,
+          "lon": 13.5616673
+        },
+        {
+          "lat": 52.5093771,
+          "lon": 13.5617685
+        },
+        {
+          "lat": 52.5101332,
+          "lon": 13.5619729
+        },
+        {
+          "lat": 52.510732,
+          "lon": 13.5621434
+        },
+        {
+          "lat": 52.5111855,
+          "lon": 13.5622461
+        },
+        {
+          "lat": 52.5112441,
+          "lon": 13.5622584
+        },
+        {
+          "lat": 52.5112816,
+          "lon": 13.5622681
+        },
+        {
+          "lat": 52.5114668,
+          "lon": 13.5623077
+        },
+        {
+          "lat": 52.5115957,
+          "lon": 13.5623347
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Blumberger Damm",
+        "name:etymology:wikidata": "Q82430",
+        "old_name": "Otto-Buchwitz-Straße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12683",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "concrete",
+        "wikidata": "Q886160",
+        "wikipedia": "de:Blumberger Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 334889782,
+      "bounds": {
+        "minlat": 52.509314,
+        "minlon": 13.5580324,
+        "maxlat": 52.509583,
+        "maxlon": 13.5587371
+      },
+      "geometry": [
+        {
+          "lat": 52.509314,
+          "lon": 13.5587371
+        },
+        {
+          "lat": 52.509382,
+          "lon": 13.5584477
+        },
+        {
+          "lat": 52.509504,
+          "lon": 13.5581511
+        },
+        {
+          "lat": 52.509583,
+          "lon": 13.5580324
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "dog": "leashed",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "intermediate",
+        "surface": "fine_gravel",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 344599546,
+      "bounds": {
+        "minlat": 52.5088643,
+        "minlon": 13.5586395,
+        "maxlat": 52.5089388,
+        "maxlon": 13.558652
+      },
+      "geometry": [
+        {
+          "lat": 52.5088643,
+          "lon": 13.5586395
+        },
+        {
+          "lat": 52.5088931,
+          "lon": 13.5586443
+        },
+        {
+          "lat": 52.5089388,
+          "lon": 13.558652
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 390191670,
+      "bounds": {
+        "minlat": 52.5086417,
+        "minlon": 13.5595562,
+        "maxlat": 52.5086447,
+        "maxlon": 13.5597472
+      },
+      "geometry": [
+        {
+          "lat": 52.5086447,
+          "lon": 13.5597472
+        },
+        {
+          "lat": 52.5086432,
+          "lon": 13.5596637
+        },
+        {
+          "lat": 52.5086417,
+          "lon": 13.5595562
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Alt-Biesdorf",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "wheelchair": "limited"
+      }
+    },
+    {
+      "type": "way",
+      "id": 390191671,
+      "bounds": {
+        "minlat": 52.5089239,
+        "minlon": 13.558652,
+        "maxlat": 52.5089388,
+        "maxlon": 13.5588228
+      },
+      "geometry": [
+        {
+          "lat": 52.5089388,
+          "lon": 13.558652
+        },
+        {
+          "lat": 52.5089239,
+          "lon": 13.5588228
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "check_date:tactile_paving": "2021-08-27",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Alt-Biesdorf",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 405843129,
+      "bounds": {
+        "minlat": 52.5080455,
+        "minlon": 13.5614955,
+        "maxlat": 52.5080572,
+        "maxlon": 13.5616683
+      },
+      "geometry": [
+        {
+          "lat": 52.5080455,
+          "lon": 13.5614955
+        },
+        {
+          "lat": 52.5080528,
+          "lon": 13.5616034
+        },
+        {
+          "lat": 52.5080549,
+          "lon": 13.561635
+        },
+        {
+          "lat": 52.5080572,
+          "lon": 13.5616683
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "service": "driveway",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 477329687,
+      "bounds": {
+        "minlat": 52.5085835,
+        "minlon": 13.5586025,
+        "maxlat": 52.5086983,
+        "maxlon": 13.5586174
+      },
+      "geometry": [
+        {
+          "lat": 52.5085835,
+          "lon": 13.5586025
+        },
+        {
+          "lat": 52.5086088,
+          "lon": 13.5586048
+        },
+        {
+          "lat": 52.5086983,
+          "lon": 13.5586174
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "service": "driveway",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 705554669,
+      "bounds": {
+        "minlat": 52.5080668,
+        "minlon": 13.5618104,
+        "maxlat": 52.508167,
+        "maxlon": 13.5622743
+      },
+      "geometry": [
+        {
+          "lat": 52.5080668,
+          "lon": 13.5618104
+        },
+        {
+          "lat": 52.5080888,
+          "lon": 13.5620839
+        },
+        {
+          "lat": 52.508167,
+          "lon": 13.5622743
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "service",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 865716512,
+      "bounds": {
+        "minlat": 52.5089205,
+        "minlon": 13.5549084,
+        "maxlat": 52.509331,
+        "maxlon": 13.5591409
+      },
+      "geometry": [
+        {
+          "lat": 52.5089205,
+          "lon": 13.5591409
+        },
+        {
+          "lat": 52.508927,
+          "lon": 13.5590728
+        },
+        {
+          "lat": 52.5089667,
+          "lon": 13.5586576
+        },
+        {
+          "lat": 52.5089845,
+          "lon": 13.5584674
+        },
+        {
+          "lat": 52.5091862,
+          "lon": 13.5564939
+        },
+        {
+          "lat": 52.5091899,
+          "lon": 13.5564586
+        },
+        {
+          "lat": 52.5092235,
+          "lon": 13.5561182
+        },
+        {
+          "lat": 52.5092253,
+          "lon": 13.5560997
+        },
+        {
+          "lat": 52.5092794,
+          "lon": 13.55555
+        },
+        {
+          "lat": 52.5092863,
+          "lon": 13.5554802
+        },
+        {
+          "lat": 52.5093055,
+          "lon": 13.555285
+        },
+        {
+          "lat": 52.5093196,
+          "lon": 13.5551422
+        },
+        {
+          "lat": 52.509331,
+          "lon": 13.5549084
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "smoothness": "intermediate",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 865716515,
+      "bounds": {
+        "minlat": 52.5088515,
+        "minlon": 13.5610158,
+        "maxlat": 52.5090494,
+        "maxlon": 13.5613072
+      },
+      "geometry": [
+        {
+          "lat": 52.5090494,
+          "lon": 13.5613072
+        },
+        {
+          "lat": 52.5088515,
+          "lon": 13.5610158
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 865948252,
+      "bounds": {
+        "minlat": 52.5085704,
+        "minlon": 13.5538354,
+        "maxlat": 52.5089263,
+        "maxlon": 13.5592694
+      },
+      "geometry": [
+        {
+          "lat": 52.5089263,
+          "lon": 13.5538354
+        },
+        {
+          "lat": 52.5088982,
+          "lon": 13.554144
+        },
+        {
+          "lat": 52.5088797,
+          "lon": 13.5544986
+        },
+        {
+          "lat": 52.5087878,
+          "lon": 13.5560281
+        },
+        {
+          "lat": 52.508694,
+          "lon": 13.5574305
+        },
+        {
+          "lat": 52.5086892,
+          "lon": 13.5574968
+        },
+        {
+          "lat": 52.5086722,
+          "lon": 13.5577113
+        },
+        {
+          "lat": 52.5086594,
+          "lon": 13.5579139
+        },
+        {
+          "lat": 52.5086088,
+          "lon": 13.5586048
+        },
+        {
+          "lat": 52.5085931,
+          "lon": 13.5588224
+        },
+        {
+          "lat": 52.5085751,
+          "lon": 13.5590591
+        },
+        {
+          "lat": 52.5085704,
+          "lon": 13.5592694
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "check_date:surface": "2023-11-19",
+        "cycleway:surface": "concrete",
+        "foot": "designated",
+        "footway:surface": "concrete",
+        "highway": "path",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "oneway:bicycle": "yes",
+        "segregated": "yes",
+        "surface": "concrete",
+        "traffic_sign": "DE:240"
+      }
+    },
+    {
+      "type": "way",
+      "id": 882602721,
+      "bounds": {
+        "minlat": 52.5088651,
+        "minlon": 13.5617893,
+        "maxlat": 52.5112728,
+        "maxlon": 13.56237
+      },
+      "geometry": [
+        {
+          "lat": 52.5088651,
+          "lon": 13.5617893
+        },
+        {
+          "lat": 52.5089115,
+          "lon": 13.5618
+        },
+        {
+          "lat": 52.5093625,
+          "lon": 13.561904
+        },
+        {
+          "lat": 52.5096227,
+          "lon": 13.5619803
+        },
+        {
+          "lat": 52.5098754,
+          "lon": 13.5620485
+        },
+        {
+          "lat": 52.5100614,
+          "lon": 13.5620731
+        },
+        {
+          "lat": 52.5101216,
+          "lon": 13.5620897
+        },
+        {
+          "lat": 52.5101922,
+          "lon": 13.5621241
+        },
+        {
+          "lat": 52.510435,
+          "lon": 13.5621932
+        },
+        {
+          "lat": 52.5107241,
+          "lon": 13.5622644
+        },
+        {
+          "lat": 52.5108565,
+          "lon": 13.5622971
+        },
+        {
+          "lat": 52.5111103,
+          "lon": 13.5623614
+        },
+        {
+          "lat": 52.5111331,
+          "lon": 13.5623462
+        },
+        {
+          "lat": 52.5112728,
+          "lon": 13.56237
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Blumberger Damm",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 882602722,
+      "bounds": {
+        "minlat": 52.5085351,
+        "minlon": 13.5615209,
+        "maxlat": 52.5085553,
+        "maxlon": 13.5616184
+      },
+      "geometry": [
+        {
+          "lat": 52.5085553,
+          "lon": 13.5615209
+        },
+        {
+          "lat": 52.5085351,
+          "lon": 13.5616184
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Alt-Biesdorf",
+        "name:etymology:wikidata": "Q432891",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12683",
+        "ref": "B 1;B 5",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:maxspeed": "sign",
+        "surface": "concrete",
+        "wikidata": "Q432891"
+      }
+    },
+    {
+      "type": "way",
+      "id": 887545045,
+      "bounds": {
+        "minlat": 52.5088501,
+        "minlon": 13.5591249,
+        "maxlat": 52.5089323,
+        "maxlon": 13.5591436
+      },
+      "geometry": [
+        {
+          "lat": 52.5088501,
+          "lon": 13.5591249
+        },
+        {
+          "lat": 52.5089205,
+          "lon": 13.5591409
+        },
+        {
+          "lat": 52.5089323,
+          "lon": 13.5591436
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "service": "driveway",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 887545046,
+      "bounds": {
+        "minlat": 52.5090076,
+        "minlon": 13.5590896,
+        "maxlat": 52.509012,
+        "maxlon": 13.5591594
+      },
+      "geometry": [
+        {
+          "lat": 52.5090076,
+          "lon": 13.5591594
+        },
+        {
+          "lat": 52.509012,
+          "lon": 13.5590896
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "up",
+        "ramp": "no",
+        "step_count": "8",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 887545047,
+      "bounds": {
+        "minlat": 52.508927,
+        "minlon": 13.5590728,
+        "maxlat": 52.5089389,
+        "maxlon": 13.5590751
+      },
+      "geometry": [
+        {
+          "lat": 52.508927,
+          "lon": 13.5590728
+        },
+        {
+          "lat": 52.5089389,
+          "lon": 13.5590751
+        }
+      ],
+      "tags": {
+        "handrail": "no",
+        "highway": "steps",
+        "incline": "up",
+        "lit": "yes",
+        "ramp": "no",
+        "step_count": "2",
+        "surface": "sett",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 887545048,
+      "bounds": {
+        "minlat": 52.5089873,
+        "minlon": 13.5589729,
+        "maxlat": 52.5089949,
+        "maxlon": 13.5590847
+      },
+      "geometry": [
+        {
+          "lat": 52.5089873,
+          "lon": 13.5590847
+        },
+        {
+          "lat": 52.5089949,
+          "lon": 13.5589729
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "footway",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 887640425,
+      "bounds": {
+        "minlat": 52.5089323,
+        "minlon": 13.5591436,
+        "maxlat": 52.5090076,
+        "maxlon": 13.5591594
+      },
+      "geometry": [
+        {
+          "lat": 52.5089323,
+          "lon": 13.5591436
+        },
+        {
+          "lat": 52.5090076,
+          "lon": 13.5591594
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "service",
+        "service": "driveway",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 892200801,
+      "bounds": {
+        "minlat": 52.5088864,
+        "minlon": 13.5613033,
+        "maxlat": 52.5089097,
+        "maxlon": 13.5615572
+      },
+      "geometry": [
+        {
+          "lat": 52.5088864,
+          "lon": 13.5615572
+        },
+        {
+          "lat": 52.5088977,
+          "lon": 13.5614333
+        },
+        {
+          "lat": 52.5088981,
+          "lon": 13.5614301
+        },
+        {
+          "lat": 52.5089083,
+          "lon": 13.5613184
+        },
+        {
+          "lat": 52.5089097,
+          "lon": 13.5613033
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "surface": "concrete",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 892200802,
+      "bounds": {
+        "minlat": 52.5084205,
+        "minlon": 13.5614001,
+        "maxlat": 52.5084385,
+        "maxlon": 13.5616096
+      },
+      "geometry": [
+        {
+          "lat": 52.5084385,
+          "lon": 13.5614001
+        },
+        {
+          "lat": 52.5084308,
+          "lon": 13.5614901
+        },
+        {
+          "lat": 52.5084222,
+          "lon": 13.5615908
+        },
+        {
+          "lat": 52.5084205,
+          "lon": 13.5616096
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 892200803,
+      "bounds": {
+        "minlat": 52.508533,
+        "minlon": 13.5612281,
+        "maxlat": 52.5089293,
+        "maxlon": 13.5613243
+      },
+      "geometry": [
+        {
+          "lat": 52.5089293,
+          "lon": 13.5613243
+        },
+        {
+          "lat": 52.5089083,
+          "lon": 13.5613184
+        },
+        {
+          "lat": 52.5088005,
+          "lon": 13.5612917
+        },
+        {
+          "lat": 52.5087487,
+          "lon": 13.5612788
+        },
+        {
+          "lat": 52.5086029,
+          "lon": 13.5612369
+        },
+        {
+          "lat": 52.508533,
+          "lon": 13.5612281
+        }
+      ],
+      "tags": {
+        "button_operated": "yes",
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "cycleway": "crossing",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Köpenicker Straße",
+        "lit": "yes",
+        "marking:both": "dashed_line",
+        "oneway": "yes",
+        "source:width": "infra3D",
+        "surface": "concrete",
+        "surface:colour": "none",
+        "traffic_sign": "none",
+        "width": "1.4"
+      }
+    },
+    {
+      "type": "way",
+      "id": 892200804,
+      "bounds": {
+        "minlat": 52.5084588,
+        "minlon": 13.5610951,
+        "maxlat": 52.5085529,
+        "maxlon": 13.5617772
+      },
+      "geometry": [
+        {
+          "lat": 52.5085529,
+          "lon": 13.5610951
+        },
+        {
+          "lat": 52.5085453,
+          "lon": 13.5611468
+        },
+        {
+          "lat": 52.508533,
+          "lon": 13.5612281
+        },
+        {
+          "lat": 52.5085204,
+          "lon": 13.5613115
+        },
+        {
+          "lat": 52.5084932,
+          "lon": 13.5615026
+        },
+        {
+          "lat": 52.5084787,
+          "lon": 13.5616043
+        },
+        {
+          "lat": 52.5084624,
+          "lon": 13.5617457
+        },
+        {
+          "lat": 52.5084588,
+          "lon": 13.5617772
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "cycleway": "crossing",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "marking:both": "dashed_line",
+        "oneway": "yes",
+        "source:width": "infra3D",
+        "surface": "asphalt",
+        "surface:colour": "none",
+        "traffic_sign": "237",
+        "width": "1.4"
+      }
+    },
+    {
+      "type": "way",
+      "id": 892200805,
+      "bounds": {
+        "minlat": 52.508535,
+        "minlon": 13.5611448,
+        "maxlat": 52.5087052,
+        "maxlon": 13.5611779
+      },
+      "geometry": [
+        {
+          "lat": 52.5087052,
+          "lon": 13.5611779
+        },
+        {
+          "lat": 52.5086141,
+          "lon": 13.5611604
+        },
+        {
+          "lat": 52.5085453,
+          "lon": 13.5611468
+        },
+        {
+          "lat": 52.508535,
+          "lon": 13.5611448
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "concrete",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 899200911,
+      "bounds": {
+        "minlat": 52.507276,
+        "minlon": 13.5617772,
+        "maxlat": 52.5084588,
+        "maxlon": 13.565223
+      },
+      "geometry": [
+        {
+          "lat": 52.5084588,
+          "lon": 13.5617772
+        },
+        {
+          "lat": 52.5084232,
+          "lon": 13.5619296
+        },
+        {
+          "lat": 52.5083931,
+          "lon": 13.5620438
+        },
+        {
+          "lat": 52.5083678,
+          "lon": 13.5621297
+        },
+        {
+          "lat": 52.5083467,
+          "lon": 13.5621905
+        },
+        {
+          "lat": 52.5081645,
+          "lon": 13.5626865
+        },
+        {
+          "lat": 52.5079816,
+          "lon": 13.5631796
+        },
+        {
+          "lat": 52.5077705,
+          "lon": 13.5637445
+        },
+        {
+          "lat": 52.5076468,
+          "lon": 13.5640888
+        },
+        {
+          "lat": 52.5076109,
+          "lon": 13.5641898
+        },
+        {
+          "lat": 52.5075747,
+          "lon": 13.564295
+        },
+        {
+          "lat": 52.5075108,
+          "lon": 13.5644803
+        },
+        {
+          "lat": 52.5074132,
+          "lon": 13.5647724
+        },
+        {
+          "lat": 52.507276,
+          "lon": 13.565223
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "oneway": "yes",
+        "surface": "paving_stones",
+        "traffic_sign": "DE:237"
+      }
+    },
+    {
+      "type": "way",
+      "id": 899200912,
+      "bounds": {
+        "minlat": 52.5072137,
+        "minlon": 13.5617366,
+        "maxlat": 52.5084308,
+        "maxlon": 13.5653045
+      },
+      "geometry": [
+        {
+          "lat": 52.5084308,
+          "lon": 13.5617366
+        },
+        {
+          "lat": 52.5084121,
+          "lon": 13.5618636
+        },
+        {
+          "lat": 52.5083817,
+          "lon": 13.5619875
+        },
+        {
+          "lat": 52.5083564,
+          "lon": 13.562078
+        },
+        {
+          "lat": 52.5083322,
+          "lon": 13.5621581
+        },
+        {
+          "lat": 52.5082993,
+          "lon": 13.562252
+        },
+        {
+          "lat": 52.5082697,
+          "lon": 13.5623299
+        },
+        {
+          "lat": 52.5081121,
+          "lon": 13.5627563
+        },
+        {
+          "lat": 52.5080663,
+          "lon": 13.5628215
+        },
+        {
+          "lat": 52.5079452,
+          "lon": 13.5631438
+        },
+        {
+          "lat": 52.5077387,
+          "lon": 13.5637
+        },
+        {
+          "lat": 52.5076768,
+          "lon": 13.5639401
+        },
+        {
+          "lat": 52.507627,
+          "lon": 13.5640745
+        },
+        {
+          "lat": 52.5075945,
+          "lon": 13.5641385
+        },
+        {
+          "lat": 52.5075479,
+          "lon": 13.5642688
+        },
+        {
+          "lat": 52.5073848,
+          "lon": 13.5647454
+        },
+        {
+          "lat": 52.5072335,
+          "lon": 13.5652399
+        },
+        {
+          "lat": 52.5072137,
+          "lon": 13.5653045
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 899241931,
+      "bounds": {
+        "minlat": 52.5081425,
+        "minlon": 13.5617793,
+        "maxlat": 52.5088651,
+        "maxlon": 13.5635943
+      },
+      "geometry": [
+        {
+          "lat": 52.5081425,
+          "lon": 13.5635943
+        },
+        {
+          "lat": 52.5082574,
+          "lon": 13.5633427
+        },
+        {
+          "lat": 52.5083766,
+          "lon": 13.5630559
+        },
+        {
+          "lat": 52.5084826,
+          "lon": 13.5627634
+        },
+        {
+          "lat": 52.5085912,
+          "lon": 13.5624505
+        },
+        {
+          "lat": 52.5086778,
+          "lon": 13.5621366
+        },
+        {
+          "lat": 52.5087449,
+          "lon": 13.5618243
+        },
+        {
+          "lat": 52.5087539,
+          "lon": 13.5618049
+        },
+        {
+          "lat": 52.5088264,
+          "lon": 13.5617793
+        },
+        {
+          "lat": 52.5088651,
+          "lon": 13.5617893
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 899241936,
+      "bounds": {
+        "minlat": 52.5087041,
+        "minlon": 13.561157,
+        "maxlat": 52.5088208,
+        "maxlon": 13.5618537
+      },
+      "geometry": [
+        {
+          "lat": 52.5087041,
+          "lon": 13.5618537
+        },
+        {
+          "lat": 52.5087117,
+          "lon": 13.5618154
+        },
+        {
+          "lat": 52.5087331,
+          "lon": 13.5616863
+        },
+        {
+          "lat": 52.5087481,
+          "lon": 13.5616004
+        },
+        {
+          "lat": 52.5087847,
+          "lon": 13.5613963
+        },
+        {
+          "lat": 52.5088005,
+          "lon": 13.5612917
+        },
+        {
+          "lat": 52.5088153,
+          "lon": 13.5611949
+        },
+        {
+          "lat": 52.5088208,
+          "lon": 13.561157
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "cycleway": "crossing",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "marking:both": "dashed_line",
+        "oneway": "yes",
+        "source:width": "infra3D",
+        "surface": "concrete",
+        "surface:colour": "none",
+        "traffic_sign": "237",
+        "width": "1.4"
+      }
+    },
+    {
+      "type": "way",
+      "id": 964337445,
+      "bounds": {
+        "minlat": 52.5085351,
+        "minlon": 13.5616184,
+        "maxlat": 52.5088939,
+        "maxlon": 13.5617338
+      },
+      "geometry": [
+        {
+          "lat": 52.5085351,
+          "lon": 13.5616184
+        },
+        {
+          "lat": 52.5085889,
+          "lon": 13.5616373
+        },
+        {
+          "lat": 52.5086812,
+          "lon": 13.5616697
+        },
+        {
+          "lat": 52.5087331,
+          "lon": 13.5616863
+        },
+        {
+          "lat": 52.5087822,
+          "lon": 13.5617051
+        },
+        {
+          "lat": 52.5088707,
+          "lon": 13.5617282
+        },
+        {
+          "lat": 52.5088939,
+          "lon": 13.5617338
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "cycleway": "crossing",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Blumberger Damm",
+        "lit": "yes",
+        "marking:both": "dashed_line",
+        "oneway": "yes",
+        "source:width": "infra3D",
+        "surface": "concrete",
+        "surface:colour": "none",
+        "traffic_sign": "none",
+        "width": "1.4"
+      }
+    },
+    {
+      "type": "way",
+      "id": 964337446,
+      "bounds": {
+        "minlat": 52.5085692,
+        "minlon": 13.5617767,
+        "maxlat": 52.5087207,
+        "maxlon": 13.5618178
+      },
+      "geometry": [
+        {
+          "lat": 52.5085692,
+          "lon": 13.5617767
+        },
+        {
+          "lat": 52.5086506,
+          "lon": 13.5617988
+        },
+        {
+          "lat": 52.5087117,
+          "lon": 13.5618154
+        },
+        {
+          "lat": 52.5087207,
+          "lon": 13.5618178
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "lit": "yes",
+        "surface": "concrete",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 964337447,
+      "bounds": {
+        "minlat": 52.5084787,
+        "minlon": 13.5616043,
+        "maxlat": 52.5085351,
+        "maxlon": 13.5616184
+      },
+      "geometry": [
+        {
+          "lat": 52.5084787,
+          "lon": 13.5616043
+        },
+        {
+          "lat": 52.5085351,
+          "lon": 13.5616184
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "cycleway": "crossing",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Köpenicker Straße",
+        "lit": "yes",
+        "marking:both": "dashed_line",
+        "oneway": "yes",
+        "source:width": "infra3D",
+        "surface": "concrete",
+        "surface:colour": "none",
+        "traffic_sign": "none",
+        "width": "1.4"
+      }
+    },
+    {
+      "type": "way",
+      "id": 965959901,
+      "bounds": {
+        "minlat": 52.5088667,
+        "minlon": 13.5612028,
+        "maxlat": 52.5105361,
+        "maxlon": 13.5617586
+      },
+      "geometry": [
+        {
+          "lat": 52.5105361,
+          "lon": 13.5617586
+        },
+        {
+          "lat": 52.5103907,
+          "lon": 13.5616795
+        },
+        {
+          "lat": 52.5098548,
+          "lon": 13.5615334
+        },
+        {
+          "lat": 52.5093042,
+          "lon": 13.5613832
+        },
+        {
+          "lat": 52.5090494,
+          "lon": 13.5613072
+        },
+        {
+          "lat": 52.5089618,
+          "lon": 13.5612898
+        },
+        {
+          "lat": 52.5089137,
+          "lon": 13.5612597
+        },
+        {
+          "lat": 52.5088996,
+          "lon": 13.561238
+        },
+        {
+          "lat": 52.5088667,
+          "lon": 13.5612028
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Blumberger Damm",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 970802605,
+      "bounds": {
+        "minlat": 52.5072992,
+        "minlon": 13.5611408,
+        "maxlat": 52.5085163,
+        "maxlon": 13.5613034
+      },
+      "geometry": [
+        {
+          "lat": 52.5085163,
+          "lon": 13.5611408
+        },
+        {
+          "lat": 52.5084572,
+          "lon": 13.5611819
+        },
+        {
+          "lat": 52.5083196,
+          "lon": 13.5611552
+        },
+        {
+          "lat": 52.5081666,
+          "lon": 13.5611567
+        },
+        {
+          "lat": 52.5078348,
+          "lon": 13.5612167
+        },
+        {
+          "lat": 52.5073653,
+          "lon": 13.5613034
+        },
+        {
+          "lat": 52.507323,
+          "lon": 13.561286
+        },
+        {
+          "lat": 52.5072992,
+          "lon": 13.5612477
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Köpenicker Straße",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 970802606,
+      "bounds": {
+        "minlat": 52.5073488,
+        "minlon": 13.5611806,
+        "maxlat": 52.5084287,
+        "maxlon": 13.5613498
+      },
+      "geometry": [
+        {
+          "lat": 52.5084287,
+          "lon": 13.5612147
+        },
+        {
+          "lat": 52.50837,
+          "lon": 13.5612105
+        },
+        {
+          "lat": 52.508325,
+          "lon": 13.5611838
+        },
+        {
+          "lat": 52.50819,
+          "lon": 13.5611806
+        },
+        {
+          "lat": 52.5075519,
+          "lon": 13.5612935
+        },
+        {
+          "lat": 52.5074872,
+          "lon": 13.5613265
+        },
+        {
+          "lat": 52.5073488,
+          "lon": 13.5613498
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Köpenicker Straße",
+        "lit": "yes",
+        "oneway": "yes",
+        "separation:left": "tree_row;kerb",
+        "separation:right": "no",
+        "source:width": "infra3D",
+        "surface": "paving_stones",
+        "surface:colour": "red",
+        "traffic_mode:right": "foot",
+        "traffic_sign": "DE:237",
+        "width": "1.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 970802611,
+      "bounds": {
+        "minlat": 52.5072164,
+        "minlon": 13.5597252,
+        "maxlat": 52.5079399,
+        "maxlon": 13.5606332
+      },
+      "geometry": [
+        {
+          "lat": 52.5072164,
+          "lon": 13.5597252
+        },
+        {
+          "lat": 52.5073051,
+          "lon": 13.5597322
+        },
+        {
+          "lat": 52.5073236,
+          "lon": 13.5597343
+        },
+        {
+          "lat": 52.5073342,
+          "lon": 13.5597355
+        },
+        {
+          "lat": 52.5074029,
+          "lon": 13.5597405
+        },
+        {
+          "lat": 52.5073833,
+          "lon": 13.5605717
+        },
+        {
+          "lat": 52.507425,
+          "lon": 13.5606332
+        },
+        {
+          "lat": 52.5079399,
+          "lon": 13.5605454
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "driveway",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 979536748,
+      "bounds": {
+        "minlat": 52.5080572,
+        "minlon": 13.5616683,
+        "maxlat": 52.5080668,
+        "maxlon": 13.5618104
+      },
+      "geometry": [
+        {
+          "lat": 52.5080572,
+          "lon": 13.5616683
+        },
+        {
+          "lat": 52.5080668,
+          "lon": 13.5618104
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "driveway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 979537467,
+      "bounds": {
+        "minlat": 52.5089389,
+        "minlon": 13.5590751,
+        "maxlat": 52.5089615,
+        "maxlon": 13.5590796
+      },
+      "geometry": [
+        {
+          "lat": 52.5089389,
+          "lon": 13.5590751
+        },
+        {
+          "lat": 52.5089615,
+          "lon": 13.5590796
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "handrail": "no",
+        "highway": "steps",
+        "incline": "up",
+        "ramp": "no",
+        "step_count": "3",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 979537468,
+      "bounds": {
+        "minlat": 52.5089615,
+        "minlon": 13.5590796,
+        "maxlat": 52.5091073,
+        "maxlon": 13.5591044
+      },
+      "geometry": [
+        {
+          "lat": 52.5089615,
+          "lon": 13.5590796
+        },
+        {
+          "lat": 52.5089873,
+          "lon": 13.5590847
+        },
+        {
+          "lat": 52.509012,
+          "lon": 13.5590896
+        },
+        {
+          "lat": 52.5091073,
+          "lon": 13.5591044
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "footway",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 979537776,
+      "bounds": {
+        "minlat": 52.5089949,
+        "minlon": 13.5589729,
+        "maxlat": 52.5090222,
+        "maxlon": 13.558975
+      },
+      "geometry": [
+        {
+          "lat": 52.5089949,
+          "lon": 13.5589729
+        },
+        {
+          "lat": 52.5090222,
+          "lon": 13.558975
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "handrail": "yes",
+        "highway": "steps",
+        "incline": "up",
+        "ramp": "no",
+        "step_count": "8",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1015724093,
+      "bounds": {
+        "minlat": 52.5085933,
+        "minlon": 13.5594088,
+        "maxlat": 52.5086854,
+        "maxlon": 13.5594108
+      },
+      "geometry": [
+        {
+          "lat": 52.5086854,
+          "lon": 13.5594088
+        },
+        {
+          "lat": 52.5086304,
+          "lon": 13.55941
+        },
+        {
+          "lat": 52.5085933,
+          "lon": 13.5594108
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "service": "driveway",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1015724096,
+      "bounds": {
+        "minlat": 52.5085529,
+        "minlon": 13.56045,
+        "maxlat": 52.5086232,
+        "maxlon": 13.5610951
+      },
+      "geometry": [
+        {
+          "lat": 52.5086232,
+          "lon": 13.56045
+        },
+        {
+          "lat": 52.5086063,
+          "lon": 13.5605603
+        },
+        {
+          "lat": 52.5085529,
+          "lon": 13.5610951
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "oneway": "yes",
+        "surface": "paving_stones",
+        "traffic_sign": "DE:237"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1015724097,
+      "bounds": {
+        "minlat": 52.5086116,
+        "minlon": 13.5600538,
+        "maxlat": 52.5086335,
+        "maxlon": 13.56045
+      },
+      "geometry": [
+        {
+          "lat": 52.5086116,
+          "lon": 13.5600538
+        },
+        {
+          "lat": 52.508632,
+          "lon": 13.5602356
+        },
+        {
+          "lat": 52.5086335,
+          "lon": 13.5603428
+        },
+        {
+          "lat": 52.5086232,
+          "lon": 13.56045
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "oneway:bicycle": "yes",
+        "segregated": "no",
+        "surface": "concrete",
+        "traffic_sign": "DE:240"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1097660830,
+      "bounds": {
+        "minlat": 52.5097566,
+        "minlon": 13.5610262,
+        "maxlat": 52.5115844,
+        "maxlon": 13.5614342
+      },
+      "geometry": [
+        {
+          "lat": 52.5115844,
+          "lon": 13.5614342
+        },
+        {
+          "lat": 52.5113976,
+          "lon": 13.5613535
+        },
+        {
+          "lat": 52.5113265,
+          "lon": 13.5613228
+        },
+        {
+          "lat": 52.5109448,
+          "lon": 13.561158
+        },
+        {
+          "lat": 52.5106518,
+          "lon": 13.5610262
+        },
+        {
+          "lat": 52.5097566,
+          "lon": 13.5610354
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "dog": "leashed",
+        "highway": "footway",
+        "lit": "no",
+        "smoothness": "bad",
+        "surface": "fine_gravel",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1097663008,
+      "bounds": {
+        "minlat": 52.5092337,
+        "minlon": 13.5587371,
+        "maxlat": 52.509314,
+        "maxlon": 13.5596957
+      },
+      "geometry": [
+        {
+          "lat": 52.5092337,
+          "lon": 13.5596957
+        },
+        {
+          "lat": 52.509314,
+          "lon": 13.5587371
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "dog": "leashed",
+        "highway": "footway",
+        "lit": "no",
+        "smoothness": "bad",
+        "surface": "fine_gravel",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1097664274,
+      "bounds": {
+        "minlat": 52.5088515,
+        "minlon": 13.5591409,
+        "maxlat": 52.5089205,
+        "maxlon": 13.5612028
+      },
+      "geometry": [
+        {
+          "lat": 52.5088667,
+          "lon": 13.5612028
+        },
+        {
+          "lat": 52.5088531,
+          "lon": 13.5611595
+        },
+        {
+          "lat": 52.5088515,
+          "lon": 13.5610158
+        },
+        {
+          "lat": 52.5088574,
+          "lon": 13.5608477
+        },
+        {
+          "lat": 52.5088762,
+          "lon": 13.5605114
+        },
+        {
+          "lat": 52.5088805,
+          "lon": 13.5596262
+        },
+        {
+          "lat": 52.5089077,
+          "lon": 13.5592757
+        },
+        {
+          "lat": 52.5089205,
+          "lon": 13.5591409
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1098705476,
+      "bounds": {
+        "minlat": 52.5087371,
+        "minlon": 13.5611521,
+        "maxlat": 52.5087622,
+        "maxlon": 13.5613809
+      },
+      "geometry": [
+        {
+          "lat": 52.5087371,
+          "lon": 13.5613809
+        },
+        {
+          "lat": 52.5087487,
+          "lon": 13.5612788
+        },
+        {
+          "lat": 52.5087592,
+          "lon": 13.5611862
+        },
+        {
+          "lat": 52.5087622,
+          "lon": 13.5611521
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Alt-Biesdorf",
+        "name:etymology:wikidata": "Q432891",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12683",
+        "ref": "B 1;B 5",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "concrete",
+        "wikidata": "Q432891"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1133755519,
+      "bounds": {
+        "minlat": 52.5087013,
+        "minlon": 13.5615835,
+        "maxlat": 52.5089235,
+        "maxlon": 13.5616673
+      },
+      "geometry": [
+        {
+          "lat": 52.5087013,
+          "lon": 13.5615835
+        },
+        {
+          "lat": 52.5087481,
+          "lon": 13.5616004
+        },
+        {
+          "lat": 52.5088778,
+          "lon": 13.5616506
+        },
+        {
+          "lat": 52.5089235,
+          "lon": 13.5616673
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Hellersdorf",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Blumberger Damm",
+        "name:etymology:wikidata": "Q82430",
+        "old_name": "Otto-Buchwitz-Straße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12683",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "concrete",
+        "wikidata": "Q886160",
+        "wikipedia": "de:Blumberger Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1133755520,
+      "bounds": {
+        "minlat": 52.508788,
+        "minlon": 13.5599407,
+        "maxlat": 52.5088073,
+        "maxlon": 13.5608066
+      },
+      "geometry": [
+        {
+          "lat": 52.508788,
+          "lon": 13.5608066
+        },
+        {
+          "lat": 52.5088037,
+          "lon": 13.56054
+        },
+        {
+          "lat": 52.5088073,
+          "lon": 13.5599407
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Alt-Biesdorf",
+        "name:etymology:wikidata": "Q432891",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12683",
+        "ref": "B 1;B 5",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "concrete",
+        "wikidata": "Q432891"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1133755521,
+      "bounds": {
+        "minlat": 52.5085889,
+        "minlon": 13.5611443,
+        "maxlat": 52.5086165,
+        "maxlon": 13.5613322
+      },
+      "geometry": [
+        {
+          "lat": 52.5086165,
+          "lon": 13.5611443
+        },
+        {
+          "lat": 52.5086141,
+          "lon": 13.5611604
+        },
+        {
+          "lat": 52.5086029,
+          "lon": 13.5612369
+        },
+        {
+          "lat": 52.5085889,
+          "lon": 13.5613322
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination:colour:lanes": ";white;white|;white;white|white;white|white;white|",
+        "destination:lanes": "Hellersdorf;Kaulsdorf Nord;Unfallkrankenhaus Berlin|Hellersdorf;Kaulsdorf Nord;Unfallkrankenhaus Berlin|Mahlsdorf;Kaulsdorf-Süd|Mahlsdorf;Kaulsdorf-Süd|Köpenick",
+        "destination:ref:lanes": "||B 1;B 5|B 1;B 5|",
+        "destination:ref:to:lanes": "||A 10|A 10|",
+        "destination:symbol:lanes": ";;hospital|;;hospital|||",
+        "destination:symbol:to:lanes": "||motorway|motorway|",
+        "destination:to:lanes": "||Frankfurt (Oder)|Frankfurt (Oder)|",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "sign",
+        "name": "Alt-Biesdorf",
+        "name:etymology:wikidata": "Q432891",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12683",
+        "ref": "B 1;B 5",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:maxspeed": "sign",
+        "surface": "concrete",
+        "turn:lanes": "left|left|through|through|right",
+        "wikidata": "Q432891"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1208123329,
+      "bounds": {
+        "minlat": 52.5089097,
+        "minlon": 13.5612597,
+        "maxlat": 52.5089137,
+        "maxlon": 13.5613033
+      },
+      "geometry": [
+        {
+          "lat": 52.5089097,
+          "lon": 13.5613033
+        },
+        {
+          "lat": 52.5089137,
+          "lon": 13.5612597
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1208123330,
+      "bounds": {
+        "minlat": 52.508869,
+        "minlon": 13.5615988,
+        "maxlat": 52.5088826,
+        "maxlon": 13.5617469
+      },
+      "geometry": [
+        {
+          "lat": 52.508869,
+          "lon": 13.5617469
+        },
+        {
+          "lat": 52.5088707,
+          "lon": 13.5617282
+        },
+        {
+          "lat": 52.5088778,
+          "lon": 13.5616506
+        },
+        {
+          "lat": 52.5088826,
+          "lon": 13.5615988
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1208123331,
+      "bounds": {
+        "minlat": 52.5088826,
+        "minlon": 13.5615572,
+        "maxlat": 52.5088864,
+        "maxlon": 13.5615988
+      },
+      "geometry": [
+        {
+          "lat": 52.5088826,
+          "lon": 13.5615988
+        },
+        {
+          "lat": 52.5088864,
+          "lon": 13.5615572
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1208123332,
+      "bounds": {
+        "minlat": 52.5087207,
+        "minlon": 13.5618178,
+        "maxlat": 52.5087449,
+        "maxlon": 13.5618243
+      },
+      "geometry": [
+        {
+          "lat": 52.5087207,
+          "lon": 13.5618178
+        },
+        {
+          "lat": 52.5087449,
+          "lon": 13.5618243
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1208123333,
+      "bounds": {
+        "minlat": 52.5084543,
+        "minlon": 13.5617433,
+        "maxlat": 52.5085414,
+        "maxlon": 13.5617691
+      },
+      "geometry": [
+        {
+          "lat": 52.5084543,
+          "lon": 13.5617433
+        },
+        {
+          "lat": 52.5084624,
+          "lon": 13.5617457
+        },
+        {
+          "lat": 52.5085062,
+          "lon": 13.5617587
+        },
+        {
+          "lat": 52.5085414,
+          "lon": 13.5617691
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "lit": "yes",
+        "surface": "concrete",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1208123334,
+      "bounds": {
+        "minlat": 52.5085414,
+        "minlon": 13.5617691,
+        "maxlat": 52.5085692,
+        "maxlon": 13.5617767
+      },
+      "geometry": [
+        {
+          "lat": 52.5085414,
+          "lon": 13.5617691
+        },
+        {
+          "lat": 52.5085692,
+          "lon": 13.5617767
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1208123335,
+      "bounds": {
+        "minlat": 52.5084422,
+        "minlon": 13.5612076,
+        "maxlat": 52.508455,
+        "maxlon": 13.5613569
+      },
+      "geometry": [
+        {
+          "lat": 52.508455,
+          "lon": 13.5612076
+        },
+        {
+          "lat": 52.5084542,
+          "lon": 13.5612165
+        },
+        {
+          "lat": 52.5084474,
+          "lon": 13.5612961
+        },
+        {
+          "lat": 52.5084422,
+          "lon": 13.5613569
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1208123336,
+      "bounds": {
+        "minlat": 52.5084385,
+        "minlon": 13.5613569,
+        "maxlat": 52.5084422,
+        "maxlon": 13.5614001
+      },
+      "geometry": [
+        {
+          "lat": 52.5084422,
+          "lon": 13.5613569
+        },
+        {
+          "lat": 52.5084385,
+          "lon": 13.5614001
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1208123337,
+      "bounds": {
+        "minlat": 52.508455,
+        "minlon": 13.5611819,
+        "maxlat": 52.5084572,
+        "maxlon": 13.5612076
+      },
+      "geometry": [
+        {
+          "lat": 52.5084572,
+          "lon": 13.5611819
+        },
+        {
+          "lat": 52.508455,
+          "lon": 13.5612076
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1208123338,
+      "bounds": {
+        "minlat": 52.5088329,
+        "minlon": 13.5611976,
+        "maxlat": 52.5088667,
+        "maxlon": 13.5612028
+      },
+      "geometry": [
+        {
+          "lat": 52.5088667,
+          "lon": 13.5612028
+        },
+        {
+          "lat": 52.5088329,
+          "lon": 13.5611976
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1208123339,
+      "bounds": {
+        "minlat": 52.5087277,
+        "minlon": 13.5611813,
+        "maxlat": 52.5088329,
+        "maxlon": 13.5611976
+      },
+      "geometry": [
+        {
+          "lat": 52.5088329,
+          "lon": 13.5611976
+        },
+        {
+          "lat": 52.5088153,
+          "lon": 13.5611949
+        },
+        {
+          "lat": 52.5087592,
+          "lon": 13.5611862
+        },
+        {
+          "lat": 52.5087277,
+          "lon": 13.5611813
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "concrete",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1208123340,
+      "bounds": {
+        "minlat": 52.5087052,
+        "minlon": 13.5611779,
+        "maxlat": 52.5087277,
+        "maxlon": 13.5611813
+      },
+      "geometry": [
+        {
+          "lat": 52.5087277,
+          "lon": 13.5611813
+        },
+        {
+          "lat": 52.5087052,
+          "lon": 13.5611779
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1224885887,
+      "bounds": {
+        "minlat": 52.5073751,
+        "minlon": 13.5615923,
+        "maxlat": 52.5081178,
+        "maxlon": 13.5617105
+      },
+      "geometry": [
+        {
+          "lat": 52.5073751,
+          "lon": 13.5617012
+        },
+        {
+          "lat": 52.5074098,
+          "lon": 13.5616972
+        },
+        {
+          "lat": 52.5074536,
+          "lon": 13.5617105
+        },
+        {
+          "lat": 52.5075997,
+          "lon": 13.5616837
+        },
+        {
+          "lat": 52.5080331,
+          "lon": 13.5616081
+        },
+        {
+          "lat": 52.5080528,
+          "lon": 13.5616034
+        },
+        {
+          "lat": 52.5081178,
+          "lon": 13.5615923
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Köpenicker Straße",
+        "lit": "yes",
+        "oneway": "yes",
+        "separation:left": "tree_row;kerb",
+        "separation:right": "no",
+        "smoothness": "good",
+        "source:width": "infra3D",
+        "surface": "paving_stones",
+        "surface:colour": "red",
+        "traffic_mode:right": "foot",
+        "traffic_sign": "DE:237",
+        "width": "1.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1224885893,
+      "bounds": {
+        "minlat": 52.5055943,
+        "minlon": 13.5615968,
+        "maxlat": 52.5084543,
+        "maxlon": 13.5619649
+      },
+      "geometry": [
+        {
+          "lat": 52.5055943,
+          "lon": 13.5619339
+        },
+        {
+          "lat": 52.5056896,
+          "lon": 13.5619649
+        },
+        {
+          "lat": 52.5057582,
+          "lon": 13.5619617
+        },
+        {
+          "lat": 52.5059422,
+          "lon": 13.5619581
+        },
+        {
+          "lat": 52.5059938,
+          "lon": 13.5619571
+        },
+        {
+          "lat": 52.5060621,
+          "lon": 13.5619238
+        },
+        {
+          "lat": 52.5064022,
+          "lon": 13.5619046
+        },
+        {
+          "lat": 52.5064945,
+          "lon": 13.5618939
+        },
+        {
+          "lat": 52.5065459,
+          "lon": 13.5618904
+        },
+        {
+          "lat": 52.5066617,
+          "lon": 13.5618746
+        },
+        {
+          "lat": 52.5067375,
+          "lon": 13.5618638
+        },
+        {
+          "lat": 52.5068633,
+          "lon": 13.5618424
+        },
+        {
+          "lat": 52.5070476,
+          "lon": 13.56181
+        },
+        {
+          "lat": 52.5073541,
+          "lon": 13.561756
+        },
+        {
+          "lat": 52.5076029,
+          "lon": 13.5617122
+        },
+        {
+          "lat": 52.5080549,
+          "lon": 13.561635
+        },
+        {
+          "lat": 52.5080729,
+          "lon": 13.5616319
+        },
+        {
+          "lat": 52.5081297,
+          "lon": 13.5616223
+        },
+        {
+          "lat": 52.5081719,
+          "lon": 13.5616003
+        },
+        {
+          "lat": 52.5082488,
+          "lon": 13.5615968
+        },
+        {
+          "lat": 52.5083384,
+          "lon": 13.5616018
+        },
+        {
+          "lat": 52.5083825,
+          "lon": 13.5616118
+        },
+        {
+          "lat": 52.5084163,
+          "lon": 13.5616621
+        },
+        {
+          "lat": 52.5084308,
+          "lon": 13.5617366
+        },
+        {
+          "lat": 52.5084543,
+          "lon": 13.5617433
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1224887436,
+      "bounds": {
+        "minlat": 52.5083934,
+        "minlon": 13.5615856,
+        "maxlat": 52.5084787,
+        "maxlon": 13.5616043
+      },
+      "geometry": [
+        {
+          "lat": 52.5083934,
+          "lon": 13.5615856
+        },
+        {
+          "lat": 52.5084222,
+          "lon": 13.5615908
+        },
+        {
+          "lat": 52.5084787,
+          "lon": 13.5616043
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "cycleway": "crossing",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Köpenicker Straße",
+        "lit": "yes",
+        "marking:both": "dashed_line",
+        "oneway": "yes",
+        "source:width": "infra3D",
+        "surface": "asphalt",
+        "surface:colour": "none",
+        "traffic_sign": "none",
+        "width": "1.4"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1224887437,
+      "bounds": {
+        "minlat": 52.5084163,
+        "minlon": 13.5616096,
+        "maxlat": 52.5084205,
+        "maxlon": 13.5616621
+      },
+      "geometry": [
+        {
+          "lat": 52.5084205,
+          "lon": 13.5616096
+        },
+        {
+          "lat": 52.5084163,
+          "lon": 13.5616621
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1224922731,
+      "bounds": {
+        "minlat": 52.5084287,
+        "minlon": 13.5612147,
+        "maxlat": 52.508533,
+        "maxlon": 13.5612281
+      },
+      "geometry": [
+        {
+          "lat": 52.508533,
+          "lon": 13.5612281
+        },
+        {
+          "lat": 52.5084542,
+          "lon": 13.5612165
+        },
+        {
+          "lat": 52.5084287,
+          "lon": 13.5612147
+        }
+      ],
+      "tags": {
+        "button_operated": "yes",
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "dashes",
+        "cycleway": "crossing",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Köpenicker Straße",
+        "lit": "yes",
+        "marking:both": "dashed_line",
+        "oneway": "yes",
+        "source:width": "infra3D",
+        "surface": "asphalt",
+        "surface:colour": "none",
+        "traffic_sign": "none",
+        "width": "1.4"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1224924138,
+      "bounds": {
+        "minlat": 52.5089293,
+        "minlon": 13.5613243,
+        "maxlat": 52.5106088,
+        "maxlon": 13.5618996
+      },
+      "geometry": [
+        {
+          "lat": 52.5106088,
+          "lon": 13.5618996
+        },
+        {
+          "lat": 52.5105188,
+          "lon": 13.5617774
+        },
+        {
+          "lat": 52.5104143,
+          "lon": 13.5617312
+        },
+        {
+          "lat": 52.5103112,
+          "lon": 13.561703
+        },
+        {
+          "lat": 52.5089293,
+          "lon": 13.5613243
+        }
+      ],
+      "tags": {
+        "buffer:both": "no",
+        "cycleway": "lane",
+        "cycleway:lane": "exclusive",
+        "highway": "cycleway",
+        "is_sidepath": "no",
+        "lit": "yes",
+        "marking:left": "solid_line",
+        "marking:right": "no",
+        "oneway": "yes",
+        "source:width": "infra3D",
+        "surface": "concrete",
+        "surface:colour": "none",
+        "traffic_mode:right": "foot",
+        "traffic_sign": "237",
+        "width": "2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1224924139,
+      "bounds": {
+        "minlat": 52.5081418,
+        "minlon": 13.5618537,
+        "maxlat": 52.5087041,
+        "maxlon": 13.5634901
+      },
+      "geometry": [
+        {
+          "lat": 52.5081418,
+          "lon": 13.5634901
+        },
+        {
+          "lat": 52.5081586,
+          "lon": 13.5634506
+        },
+        {
+          "lat": 52.5082212,
+          "lon": 13.5633611
+        },
+        {
+          "lat": 52.5082976,
+          "lon": 13.5631934
+        },
+        {
+          "lat": 52.5084014,
+          "lon": 13.5629276
+        },
+        {
+          "lat": 52.5084885,
+          "lon": 13.562681
+        },
+        {
+          "lat": 52.5085635,
+          "lon": 13.5624603
+        },
+        {
+          "lat": 52.5086154,
+          "lon": 13.5622848
+        },
+        {
+          "lat": 52.5086572,
+          "lon": 13.5621197
+        },
+        {
+          "lat": 52.5086603,
+          "lon": 13.5620511
+        },
+        {
+          "lat": 52.5087041,
+          "lon": 13.5618537
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "oneway": "yes",
+        "surface": "paving_stones",
+        "traffic_sign": "DE:237"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1224924625,
+      "bounds": {
+        "minlat": 52.5088193,
+        "minlon": 13.5609051,
+        "maxlat": 52.5088259,
+        "maxlon": 13.561157
+      },
+      "geometry": [
+        {
+          "lat": 52.5088208,
+          "lon": 13.561157
+        },
+        {
+          "lat": 52.5088193,
+          "lon": 13.56103
+        },
+        {
+          "lat": 52.5088259,
+          "lon": 13.5609051
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "oneway": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1224924626,
+      "bounds": {
+        "minlat": 52.508788,
+        "minlon": 13.5608066,
+        "maxlat": 52.5088259,
+        "maxlon": 13.5609051
+      },
+      "geometry": [
+        {
+          "lat": 52.5088259,
+          "lon": 13.5609051
+        },
+        {
+          "lat": 52.508788,
+          "lon": 13.5608066
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "lit": "yes",
+        "oneway": "yes",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1224924627,
+      "bounds": {
+        "minlat": 52.5087622,
+        "minlon": 13.5608066,
+        "maxlat": 52.508788,
+        "maxlon": 13.5611521
+      },
+      "geometry": [
+        {
+          "lat": 52.5087622,
+          "lon": 13.5611521
+        },
+        {
+          "lat": 52.508779,
+          "lon": 13.5609605
+        },
+        {
+          "lat": 52.508788,
+          "lon": 13.5608066
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Alt-Biesdorf",
+        "name:etymology:wikidata": "Q432891",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12683",
+        "ref": "B 1;B 5",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "concrete",
+        "wikidata": "Q432891"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1225273986,
+      "bounds": {
+        "minlat": 52.5088651,
+        "minlon": 13.5617469,
+        "maxlat": 52.508869,
+        "maxlon": 13.5617893
+      },
+      "geometry": [
+        {
+          "lat": 52.5088651,
+          "lon": 13.5617893
+        },
+        {
+          "lat": 52.508869,
+          "lon": 13.5617469
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1225273987,
+      "bounds": {
+        "minlat": 52.5088939,
+        "minlon": 13.5617338,
+        "maxlat": 52.5100222,
+        "maxlon": 13.5620064
+      },
+      "geometry": [
+        {
+          "lat": 52.5088939,
+          "lon": 13.5617338
+        },
+        {
+          "lat": 52.5089413,
+          "lon": 13.5617453
+        },
+        {
+          "lat": 52.5090063,
+          "lon": 13.5617681
+        },
+        {
+          "lat": 52.5090515,
+          "lon": 13.561792
+        },
+        {
+          "lat": 52.5094398,
+          "lon": 13.5618946
+        },
+        {
+          "lat": 52.5098547,
+          "lon": 13.5620037
+        },
+        {
+          "lat": 52.5099362,
+          "lon": 13.5619799
+        },
+        {
+          "lat": 52.5100222,
+          "lon": 13.5620064
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Blumberger Damm",
+        "lit": "yes",
+        "oneway": "yes",
+        "separation:left": "greenery;kerb",
+        "separation:right": "no",
+        "source:width": "infra3D",
+        "surface": "paving_stones",
+        "surface:colour": "red",
+        "traffic_mode:right": "foot",
+        "traffic_sign": "none",
+        "width": "1.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1225273989,
+      "bounds": {
+        "minlat": 52.5085163,
+        "minlon": 13.5611408,
+        "maxlat": 52.508535,
+        "maxlon": 13.5611448
+      },
+      "geometry": [
+        {
+          "lat": 52.508535,
+          "lon": 13.5611448
+        },
+        {
+          "lat": 52.5085163,
+          "lon": 13.5611408
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1225273990,
+      "bounds": {
+        "minlat": 52.5085163,
+        "minlon": 13.56045,
+        "maxlat": 52.5086232,
+        "maxlon": 13.5611408
+      },
+      "geometry": [
+        {
+          "lat": 52.5086232,
+          "lon": 13.56045
+        },
+        {
+          "lat": 52.5085893,
+          "lon": 13.5605063
+        },
+        {
+          "lat": 52.5085274,
+          "lon": 13.5610823
+        },
+        {
+          "lat": 52.5085163,
+          "lon": 13.5611408
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1225291927,
+      "bounds": {
+        "minlat": 52.5085689,
+        "minlon": 13.5596633,
+        "maxlat": 52.5085808,
+        "maxlon": 13.5596634
+      },
+      "geometry": [
+        {
+          "lat": 52.5085689,
+          "lon": 13.5596633
+        },
+        {
+          "lat": 52.5085808,
+          "lon": 13.5596634
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1225291928,
+      "bounds": {
+        "minlat": 52.5086211,
+        "minlon": 13.5596632,
+        "maxlat": 52.5086325,
+        "maxlon": 13.5596636
+      },
+      "geometry": [
+        {
+          "lat": 52.5086325,
+          "lon": 13.5596632
+        },
+        {
+          "lat": 52.5086211,
+          "lon": 13.5596636
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1225291929,
+      "bounds": {
+        "minlat": 52.5086304,
+        "minlon": 13.55941,
+        "maxlat": 52.5086447,
+        "maxlon": 13.5597472
+      },
+      "geometry": [
+        {
+          "lat": 52.5086447,
+          "lon": 13.5597472
+        },
+        {
+          "lat": 52.5086333,
+          "lon": 13.5597472
+        },
+        {
+          "lat": 52.5086325,
+          "lon": 13.5596632
+        },
+        {
+          "lat": 52.5086304,
+          "lon": 13.55941
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1225291930,
+      "bounds": {
+        "minlat": 52.5085808,
+        "minlon": 13.5596634,
+        "maxlat": 52.5086211,
+        "maxlon": 13.5596636
+      },
+      "geometry": [
+        {
+          "lat": 52.5086211,
+          "lon": 13.5596636
+        },
+        {
+          "lat": 52.5085808,
+          "lon": 13.5596634
+        }
+      ],
+      "tags": {
+        "handrail": "no",
+        "highway": "steps",
+        "incline": "down",
+        "lit": "yes",
+        "ramp": "no",
+        "step_count": "4",
+        "surface": "concrete",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1225291934,
+      "bounds": {
+        "minlat": 52.5087379,
+        "minlon": 13.5586227,
+        "maxlat": 52.5088643,
+        "maxlon": 13.5586395
+      },
+      "geometry": [
+        {
+          "lat": 52.5087379,
+          "lon": 13.5586227
+        },
+        {
+          "lat": 52.5088643,
+          "lon": 13.5586395
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1225291935,
+      "bounds": {
+        "minlat": 52.5086983,
+        "minlon": 13.5586174,
+        "maxlat": 52.5087379,
+        "maxlon": 13.5586227
+      },
+      "geometry": [
+        {
+          "lat": 52.5086983,
+          "lon": 13.5586174
+        },
+        {
+          "lat": 52.5087379,
+          "lon": 13.5586227
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1225291936,
+      "bounds": {
+        "minlat": 52.5089388,
+        "minlon": 13.558652,
+        "maxlat": 52.5089667,
+        "maxlon": 13.5586576
+      },
+      "geometry": [
+        {
+          "lat": 52.5089667,
+          "lon": 13.5586576
+        },
+        {
+          "lat": 52.5089388,
+          "lon": 13.558652
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1225293959,
+      "bounds": {
+        "minlat": 52.5085681,
+        "minlon": 13.5593859,
+        "maxlat": 52.5086116,
+        "maxlon": 13.5600538
+      },
+      "geometry": [
+        {
+          "lat": 52.5085684,
+          "lon": 13.5593859
+        },
+        {
+          "lat": 52.5085681,
+          "lon": 13.5594114
+        },
+        {
+          "lat": 52.5085689,
+          "lon": 13.5596633
+        },
+        {
+          "lat": 52.5085831,
+          "lon": 13.5599071
+        },
+        {
+          "lat": 52.5086116,
+          "lon": 13.5600538
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "cycleway:surface": "paving_stones",
+        "foot": "designated",
+        "footway:surface": "paving_stones",
+        "highway": "path",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "oneway:bicycle": "yes",
+        "segregated": "yes",
+        "surface": "paving_stones",
+        "traffic_sign": "DE:240"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1225293960,
+      "bounds": {
+        "minlat": 52.5085171,
+        "minlon": 13.5594108,
+        "maxlat": 52.5085933,
+        "maxlon": 13.5594173
+      },
+      "geometry": [
+        {
+          "lat": 52.5085933,
+          "lon": 13.5594108
+        },
+        {
+          "lat": 52.5085681,
+          "lon": 13.5594114
+        },
+        {
+          "lat": 52.5085171,
+          "lon": 13.5594173
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "service": "driveway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1225293979,
+      "bounds": {
+        "minlat": 52.5080129,
+        "minlon": 13.5592596,
+        "maxlat": 52.5085339,
+        "maxlon": 13.5593335
+      },
+      "geometry": [
+        {
+          "lat": 52.5085339,
+          "lon": 13.5593335
+        },
+        {
+          "lat": 52.5080129,
+          "lon": 13.5592596
+        }
+      ],
+      "tags": {
+        "cutting": "yes",
+        "highway": "service",
+        "service": "driveway",
+        "surface": "concrete:lanes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1225293980,
+      "bounds": {
+        "minlat": 52.5085684,
+        "minlon": 13.5592694,
+        "maxlat": 52.5085704,
+        "maxlon": 13.5593859
+      },
+      "geometry": [
+        {
+          "lat": 52.5085704,
+          "lon": 13.5592694
+        },
+        {
+          "lat": 52.5085689,
+          "lon": 13.5593371
+        },
+        {
+          "lat": 52.5085684,
+          "lon": 13.5593859
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "cycleway:surface": "concrete",
+        "foot": "designated",
+        "footway:surface": "concrete",
+        "highway": "path",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Alt-Biesdorf",
+        "lit": "yes",
+        "oneway:bicycle": "yes",
+        "segregated": "yes",
+        "surface": "concrete",
+        "traffic_sign": "DE:240"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1432255469,
+      "bounds": {
+        "minlat": 52.5081178,
+        "minlon": 13.5615637,
+        "maxlat": 52.5083934,
+        "maxlon": 13.5615923
+      },
+      "geometry": [
+        {
+          "lat": 52.5081178,
+          "lon": 13.5615923
+        },
+        {
+          "lat": 52.5081701,
+          "lon": 13.5615665
+        },
+        {
+          "lat": 52.5082547,
+          "lon": 13.5615637
+        },
+        {
+          "lat": 52.5082956,
+          "lon": 13.5615675
+        },
+        {
+          "lat": 52.5083365,
+          "lon": 13.5615712
+        },
+        {
+          "lat": 52.5083934,
+          "lon": 13.5615856
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Köpenicker Straße",
+        "lit": "yes",
+        "oneway": "yes",
+        "separation:left": "kerb",
+        "separation:right": "no",
+        "smoothness": "good",
+        "source:width": "infra3D",
+        "surface": "paving_stones",
+        "surface:colour": "red",
+        "traffic_mode:right": "foot",
+        "traffic_sign": "DE:237",
+        "width": "1.5"
+      }
+    }
+  ]
+}

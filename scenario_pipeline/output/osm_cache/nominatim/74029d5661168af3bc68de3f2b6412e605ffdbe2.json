@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 145695454,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 383776457,
+    "lat": "52.5001407",
+    "lon": "13.4651040",
+    "category": "highway",
+    "type": "platform",
+    "place_rank": 30,
+    "importance": 8.875486381318407e-05,
+    "addresstype": "highway",
+    "name": "Markgrafendamm",
+    "display_name": "Markgrafendamm, Persiusstraße, Laskerkiez, Rudolfkiez, Friedrichshain, Friedrichshain-Kreuzberg, Berlin, 10245, Deutschland",
+    "boundingbox": [
+      "52.5001026",
+      "52.5001788",
+      "13.4649675",
+      "13.4652405"
+    ]
+  }
+]

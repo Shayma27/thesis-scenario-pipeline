@@ -1,0 +1,1418 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-28T12:53:27Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 22965784,
+      "bounds": {
+        "minlat": 52.5985469,
+        "minlon": 13.3835318,
+        "maxlat": 52.5994518,
+        "maxlon": 13.3843767
+      },
+      "geometry": [
+        {
+          "lat": 52.5985469,
+          "lon": 13.3835318
+        },
+        {
+          "lat": 52.5987608,
+          "lon": 13.3837312
+        },
+        {
+          "lat": 52.5989509,
+          "lon": 13.3838676
+        },
+        {
+          "lat": 52.5992786,
+          "lon": 13.3841389
+        },
+        {
+          "lat": 52.5993907,
+          "lon": 13.3842858
+        },
+        {
+          "lat": 52.5994518,
+          "lon": 13.3843767
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "maxspeed": "20",
+        "name": "Kräuterweg",
+        "name:etymology:wikidata": "Q190903",
+        "old_name": "Hauptweg",
+        "parking:both": "no",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "vehicle": "destination",
+        "zone:maxspeed": "DE:20"
+      }
+    },
+    {
+      "type": "way",
+      "id": 33889835,
+      "bounds": {
+        "minlat": 52.5971295,
+        "minlon": 13.3826035,
+        "maxlat": 52.5981026,
+        "maxlon": 13.3837434
+      },
+      "geometry": [
+        {
+          "lat": 52.5971295,
+          "lon": 13.3826035
+        },
+        {
+          "lat": 52.5972633,
+          "lon": 13.3827832
+        },
+        {
+          "lat": 52.5981026,
+          "lon": 13.3837434
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Straße 140",
+        "parking:both": "no",
+        "postal_code": "13158",
+        "sidewalk": "left",
+        "smoothness": "good",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 34015275,
+      "bounds": {
+        "minlat": 52.5984384,
+        "minlon": 13.384143,
+        "maxlat": 52.5989267,
+        "maxlon": 13.3853087
+      },
+      "geometry": [
+        {
+          "lat": 52.5984384,
+          "lon": 13.3853087
+        },
+        {
+          "lat": 52.5989267,
+          "lon": 13.384143
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lanes": "1",
+        "maxspeed:advisory": "10",
+        "name": "Straße 142",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "13158",
+        "smoothness": "bad",
+        "surface": "gravel"
+      }
+    },
+    {
+      "type": "way",
+      "id": 35150156,
+      "bounds": {
+        "minlat": 52.598196,
+        "minlon": 13.3834832,
+        "maxlat": 52.5992703,
+        "maxlon": 13.3844594
+      },
+      "geometry": [
+        {
+          "lat": 52.5992703,
+          "lon": 13.3844594
+        },
+        {
+          "lat": 52.5989267,
+          "lon": 13.384143
+        },
+        {
+          "lat": 52.598911,
+          "lon": 13.3841271
+        },
+        {
+          "lat": 52.5982343,
+          "lon": 13.3835177
+        },
+        {
+          "lat": 52.598196,
+          "lon": 13.3834832
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lanes": "1",
+        "maxspeed:advisory": "10",
+        "name": "Straße 141",
+        "parking:both": "no",
+        "postal_code": "13158",
+        "smoothness": "bad",
+        "surface": "gravel"
+      }
+    },
+    {
+      "type": "way",
+      "id": 37549794,
+      "bounds": {
+        "minlat": 52.5989509,
+        "minlon": 13.3812527,
+        "maxlat": 52.5999669,
+        "maxlon": 13.3838676
+      },
+      "geometry": [
+        {
+          "lat": 52.5999669,
+          "lon": 13.3812527
+        },
+        {
+          "lat": 52.599477,
+          "lon": 13.3824893
+        },
+        {
+          "lat": 52.5993699,
+          "lon": 13.3827798
+        },
+        {
+          "lat": 52.5991764,
+          "lon": 13.3832793
+        },
+        {
+          "lat": 52.5989827,
+          "lon": 13.3837873
+        },
+        {
+          "lat": 52.5989509,
+          "lon": 13.3838676
+        }
+      ],
+      "tags": {
+        "access": "permissive",
+        "cycleway:both": "no",
+        "highway": "service",
+        "name": "Wachtelweg",
+        "name:etymology:wikidata": "Q28358",
+        "name:etymology:wikipedia": "de:Wachtel (Art)",
+        "operator:type": "private",
+        "tracktype": "grade2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 37549796,
+      "bounds": {
+        "minlat": 52.5989219,
+        "minlon": 13.3819263,
+        "maxlat": 52.6016608,
+        "maxlon": 13.3829525
+      },
+      "geometry": [
+        {
+          "lat": 52.5989219,
+          "lon": 13.3819263
+        },
+        {
+          "lat": 52.5991874,
+          "lon": 13.3822092
+        },
+        {
+          "lat": 52.599477,
+          "lon": 13.3824893
+        },
+        {
+          "lat": 52.5998888,
+          "lon": 13.3824623
+        },
+        {
+          "lat": 52.6000396,
+          "lon": 13.3824508
+        },
+        {
+          "lat": 52.600447,
+          "lon": 13.382404
+        },
+        {
+          "lat": 52.6006075,
+          "lon": 13.3823941
+        },
+        {
+          "lat": 52.6007666,
+          "lon": 13.3823661
+        },
+        {
+          "lat": 52.6009342,
+          "lon": 13.3824789
+        },
+        {
+          "lat": 52.6011938,
+          "lon": 13.3826494
+        },
+        {
+          "lat": 52.6013448,
+          "lon": 13.3827494
+        },
+        {
+          "lat": 52.6016608,
+          "lon": 13.3829525
+        }
+      ],
+      "tags": {
+        "access": "permissive",
+        "cycleway:both": "no",
+        "highway": "service",
+        "name": "Kissingenweg",
+        "name:etymology:wikidata": "Q488346",
+        "name:etymology:wikipedia": "de:Bad Kissingen",
+        "operator:type": "private",
+        "tracktype": "grade2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 37549810,
+      "bounds": {
+        "minlat": 52.5993699,
+        "minlon": 13.3827798,
+        "maxlat": 52.5998106,
+        "maxlon": 13.3832215
+      },
+      "geometry": [
+        {
+          "lat": 52.5998106,
+          "lon": 13.3832215
+        },
+        {
+          "lat": 52.5993699,
+          "lon": 13.3827798
+        }
+      ],
+      "tags": {
+        "access": "permissive",
+        "cycleway:both": "no",
+        "highway": "service",
+        "name": "Bachstelzenweg",
+        "name:etymology:wikidata": "Q25399",
+        "name:etymology:wikipedia": "de:Bachstelze",
+        "operator:type": "private",
+        "tracktype": "grade2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 37549811,
+      "bounds": {
+        "minlat": 52.5991764,
+        "minlon": 13.3832793,
+        "maxlat": 52.5995679,
+        "maxlon": 13.3836935
+      },
+      "geometry": [
+        {
+          "lat": 52.5995679,
+          "lon": 13.3836935
+        },
+        {
+          "lat": 52.5991764,
+          "lon": 13.3832793
+        }
+      ],
+      "tags": {
+        "access": "permissive",
+        "cycleway:both": "no",
+        "highway": "service",
+        "name": "Amselweg",
+        "name:etymology:wikidata": "Q25234",
+        "name:etymology:wikipedia": "de:Amsel",
+        "operator:type": "private",
+        "tracktype": "grade2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 37549814,
+      "bounds": {
+        "minlat": 52.5986555,
+        "minlon": 13.3817204,
+        "maxlat": 52.5993758,
+        "maxlon": 13.3832768
+      },
+      "geometry": [
+        {
+          "lat": 52.5986555,
+          "lon": 13.3832768
+        },
+        {
+          "lat": 52.5988063,
+          "lon": 13.3829186
+        },
+        {
+          "lat": 52.5988799,
+          "lon": 13.3829911
+        },
+        {
+          "lat": 52.5991874,
+          "lon": 13.3822092
+        },
+        {
+          "lat": 52.5993758,
+          "lon": 13.3817204
+        }
+      ],
+      "tags": {
+        "access": "permissive",
+        "cycleway:both": "no",
+        "highway": "service",
+        "name": "Zeisigweg",
+        "name:etymology:wikidata": "Q5261336",
+        "name:etymology:wikipedia": "de:Zeisige",
+        "operator:type": "private",
+        "tracktype": "grade2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 39645147,
+      "bounds": {
+        "minlat": 52.5981316,
+        "minlon": 13.3803997,
+        "maxlat": 52.5985928,
+        "maxlon": 13.3815822
+      },
+      "geometry": [
+        {
+          "lat": 52.5985537,
+          "lon": 13.3803997
+        },
+        {
+          "lat": 52.5985928,
+          "lon": 13.3804464
+        },
+        {
+          "lat": 52.5981592,
+          "lon": 13.3815141
+        },
+        {
+          "lat": 52.5981316,
+          "lon": 13.3815822
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "operator:type": "private",
+        "smoothness": "bad",
+        "surface": "fine_gravel"
+      }
+    },
+    {
+      "type": "way",
+      "id": 52356880,
+      "bounds": {
+        "minlat": 52.5974824,
+        "minlon": 13.3845743,
+        "maxlat": 52.5977679,
+        "maxlon": 13.3847903
+      },
+      "geometry": [
+        {
+          "lat": 52.5974824,
+          "lon": 13.3847903
+        },
+        {
+          "lat": 52.5977679,
+          "lon": 13.3845743
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "track",
+        "tracktype": "grade2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 52357468,
+      "bounds": {
+        "minlat": 52.5974958,
+        "minlon": 13.3821202,
+        "maxlat": 52.5976738,
+        "maxlon": 13.3822454
+      },
+      "geometry": [
+        {
+          "lat": 52.5976738,
+          "lon": 13.3821202
+        },
+        {
+          "lat": 52.5975945,
+          "lon": 13.3821622
+        },
+        {
+          "lat": 52.5975186,
+          "lon": 13.3822127
+        },
+        {
+          "lat": 52.5974958,
+          "lon": 13.3822454
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "cycleway:both": "no",
+        "highway": "service",
+        "service": "driveway",
+        "tracktype": "grade3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 52357470,
+      "bounds": {
+        "minlat": 52.5976366,
+        "minlon": 13.3812999,
+        "maxlat": 52.5978583,
+        "maxlon": 13.3818628
+      },
+      "geometry": [
+        {
+          "lat": 52.5978583,
+          "lon": 13.3812999
+        },
+        {
+          "lat": 52.5976366,
+          "lon": 13.3818628
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "service": "driveway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 85267853,
+      "bounds": {
+        "minlat": 52.5984582,
+        "minlon": 13.3833067,
+        "maxlat": 52.5984941,
+        "maxlon": 13.3833531
+      },
+      "geometry": [
+        {
+          "lat": 52.5984582,
+          "lon": 13.3833531
+        },
+        {
+          "lat": 52.5984941,
+          "lon": 13.3833067
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "surface": "dirt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 145671825,
+      "bounds": {
+        "minlat": 52.597278,
+        "minlon": 13.3806842,
+        "maxlat": 52.598149,
+        "maxlon": 13.3816004
+      },
+      "geometry": [
+        {
+          "lat": 52.597278,
+          "lon": 13.3806842
+        },
+        {
+          "lat": 52.5974698,
+          "lon": 13.3808856
+        },
+        {
+          "lat": 52.5975762,
+          "lon": 13.3810038
+        },
+        {
+          "lat": 52.597789,
+          "lon": 13.3812241
+        },
+        {
+          "lat": 52.5978583,
+          "lon": 13.3812999
+        },
+        {
+          "lat": 52.5981316,
+          "lon": 13.3815822
+        },
+        {
+          "lat": 52.598149,
+          "lon": 13.3816004
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Nesselweg",
+        "name:etymology:wikidata": "Q156332",
+        "oneway": "no",
+        "parking:both": "no",
+        "postal_code": "13158",
+        "sidewalk": "both",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "bad",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 145671835,
+      "bounds": {
+        "minlat": 52.5975819,
+        "minlon": 13.3839099,
+        "maxlat": 52.5980355,
+        "maxlon": 13.3850159
+      },
+      "geometry": [
+        {
+          "lat": 52.5980355,
+          "lon": 13.3839099
+        },
+        {
+          "lat": 52.5977679,
+          "lon": 13.3845743
+        },
+        {
+          "lat": 52.5977261,
+          "lon": 13.3846782
+        },
+        {
+          "lat": 52.5975819,
+          "lon": 13.3850159
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "parking:both:staggered": "yes",
+        "postal_code": "13158",
+        "sidewalk": "right",
+        "sidewalk:right:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 396906431,
+      "bounds": {
+        "minlat": 52.5985769,
+        "minlon": 13.3823259,
+        "maxlat": 52.5986179,
+        "maxlon": 13.3824323
+      },
+      "geometry": [
+        {
+          "lat": 52.5985769,
+          "lon": 13.3824323
+        },
+        {
+          "lat": 52.5986179,
+          "lon": 13.3823259
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date": "2016-02-08",
+        "check_date:tactile_paving": "2021-09-01",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Kräuterweg",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 396906432,
+      "bounds": {
+        "minlat": 52.5984401,
+        "minlon": 13.3828741,
+        "maxlat": 52.5984941,
+        "maxlon": 13.3830003
+      },
+      "geometry": [
+        {
+          "lat": 52.5984941,
+          "lon": 13.3828741
+        },
+        {
+          "lat": 52.5984401,
+          "lon": 13.3830003
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date": "2016-02-08",
+        "check_date:tactile_paving": "2021-09-01",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Kräuterweg",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 852610281,
+      "bounds": {
+        "minlat": 52.5972633,
+        "minlon": 13.3822454,
+        "maxlat": 52.5974958,
+        "maxlon": 13.3827832
+      },
+      "geometry": [
+        {
+          "lat": 52.5974958,
+          "lon": 13.3822454
+        },
+        {
+          "lat": 52.5974729,
+          "lon": 13.3822781
+        },
+        {
+          "lat": 52.597422,
+          "lon": 13.382406
+        },
+        {
+          "lat": 52.5972811,
+          "lon": 13.3827417
+        },
+        {
+          "lat": 52.5972633,
+          "lon": 13.3827832
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "service": "driveway",
+        "tracktype": "grade3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 918802992,
+      "bounds": {
+        "minlat": 52.597789,
+        "minlon": 13.3800757,
+        "maxlat": 52.5982508,
+        "maxlon": 13.3812241
+      },
+      "geometry": [
+        {
+          "lat": 52.597789,
+          "lon": 13.3812241
+        },
+        {
+          "lat": 52.5978229,
+          "lon": 13.3811398
+        },
+        {
+          "lat": 52.5979604,
+          "lon": 13.3807978
+        },
+        {
+          "lat": 52.5982508,
+          "lon": 13.3800757
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "no",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Steinkleeweg",
+        "operator:type": "private",
+        "parking:both": "no",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1105815307,
+      "bounds": {
+        "minlat": 52.5983345,
+        "minlon": 13.3826932,
+        "maxlat": 52.5985156,
+        "maxlon": 13.3831302
+      },
+      "geometry": [
+        {
+          "lat": 52.5985156,
+          "lon": 13.3826932
+        },
+        {
+          "lat": 52.5984543,
+          "lon": 13.3828412
+        },
+        {
+          "lat": 52.5983345,
+          "lon": 13.3831302
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "sidewalk:left:surface": "paving_stones",
+        "sidewalk:right": "yes",
+        "sidewalk:right:surface": "sand",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1105815308,
+      "bounds": {
+        "minlat": 52.5981681,
+        "minlon": 13.3834832,
+        "maxlat": 52.598196,
+        "maxlon": 13.3835608
+      },
+      "geometry": [
+        {
+          "lat": 52.598196,
+          "lon": 13.3834832
+        },
+        {
+          "lat": 52.5981681,
+          "lon": 13.3835608
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13158",
+        "sidewalk:both:surface": "paving_stones",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "yes",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1328517129,
+      "bounds": {
+        "minlat": 52.5972621,
+        "minlon": 13.3805438,
+        "maxlat": 52.5981592,
+        "maxlon": 13.3815141
+      },
+      "geometry": [
+        {
+          "lat": 52.5972621,
+          "lon": 13.3805438
+        },
+        {
+          "lat": 52.5973544,
+          "lon": 13.3806446
+        },
+        {
+          "lat": 52.5975011,
+          "lon": 13.3808048
+        },
+        {
+          "lat": 52.5978229,
+          "lon": 13.3811398
+        },
+        {
+          "lat": 52.5981592,
+          "lon": 13.3815141
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1370488132,
+      "bounds": {
+        "minlat": 52.5975979,
+        "minlon": 13.3832559,
+        "maxlat": 52.5983425,
+        "maxlon": 13.3850567
+      },
+      "geometry": [
+        {
+          "lat": 52.5975979,
+          "lon": 13.3850567
+        },
+        {
+          "lat": 52.5982343,
+          "lon": 13.3835177
+        },
+        {
+          "lat": 52.5983425,
+          "lon": 13.3832559
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1370488133,
+      "bounds": {
+        "minlat": 52.5983425,
+        "minlon": 13.3831289,
+        "maxlat": 52.5983967,
+        "maxlon": 13.3832559
+      },
+      "geometry": [
+        {
+          "lat": 52.5983425,
+          "lon": 13.3832559
+        },
+        {
+          "lat": 52.5983693,
+          "lon": 13.383193
+        },
+        {
+          "lat": 52.5983967,
+          "lon": 13.3831289
+        }
+      ],
+      "tags": {
+        "crossing": "unmarked",
+        "crossing:markings": "no",
+        "footway": "crossing",
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1370488134,
+      "bounds": {
+        "minlat": 52.5983967,
+        "minlon": 13.3788429,
+        "maxlat": 52.6003183,
+        "maxlon": 13.3831289
+      },
+      "geometry": [
+        {
+          "lat": 52.5983967,
+          "lon": 13.3831289
+        },
+        {
+          "lat": 52.5989014,
+          "lon": 13.3819082
+        },
+        {
+          "lat": 52.6000335,
+          "lon": 13.3790779
+        },
+        {
+          "lat": 52.6000545,
+          "lon": 13.3790337
+        },
+        {
+          "lat": 52.6000859,
+          "lon": 13.3790039
+        },
+        {
+          "lat": 52.6002535,
+          "lon": 13.3788729
+        },
+        {
+          "lat": 52.6003183,
+          "lon": 13.3788429
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429030570,
+      "bounds": {
+        "minlat": 52.598149,
+        "minlon": 13.3816004,
+        "maxlat": 52.5987203,
+        "maxlon": 13.3821954
+      },
+      "geometry": [
+        {
+          "lat": 52.598149,
+          "lon": 13.3816004
+        },
+        {
+          "lat": 52.5987203,
+          "lon": 13.3821954
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Nesselweg",
+        "name:etymology:wikidata": "Q156332",
+        "oneway": "no",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "parking:left": "shoulder",
+        "parking:left:informal": "yes",
+        "parking:right": "lane",
+        "postal_code": "13158",
+        "sidewalk": "both",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "bad",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429033308,
+      "bounds": {
+        "minlat": 52.5981026,
+        "minlon": 13.3835608,
+        "maxlat": 52.5981681,
+        "maxlon": 13.3837434
+      },
+      "geometry": [
+        {
+          "lat": 52.5981681,
+          "lon": 13.3835608
+        },
+        {
+          "lat": 52.5981026,
+          "lon": 13.3837434
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "separate",
+        "postal_code": "13158",
+        "sidewalk:both:surface": "paving_stones",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "yes",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429033310,
+      "bounds": {
+        "minlat": 52.598196,
+        "minlon": 13.3833714,
+        "maxlat": 52.5982399,
+        "maxlon": 13.3834832
+      },
+      "geometry": [
+        {
+          "lat": 52.5982399,
+          "lon": 13.3833714
+        },
+        {
+          "lat": 52.598196,
+          "lon": 13.3834832
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "sidewalk:left:surface": "paving_stones",
+        "sidewalk:right": "yes",
+        "sidewalk:right:surface": "sand",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429033311,
+      "bounds": {
+        "minlat": 52.5982399,
+        "minlon": 13.3831302,
+        "maxlat": 52.5983345,
+        "maxlon": 13.3833714
+      },
+      "geometry": [
+        {
+          "lat": 52.5983345,
+          "lon": 13.3831302
+        },
+        {
+          "lat": 52.5982399,
+          "lon": 13.3833714
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "sidewalk:left:surface": "paving_stones",
+        "sidewalk:right": "yes",
+        "sidewalk:right:surface": "sand",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429033313,
+      "bounds": {
+        "minlat": 52.5985156,
+        "minlon": 13.3826362,
+        "maxlat": 52.5985393,
+        "maxlon": 13.3826932
+      },
+      "geometry": [
+        {
+          "lat": 52.5985393,
+          "lon": 13.3826362
+        },
+        {
+          "lat": 52.5985156,
+          "lon": 13.3826932
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:both": "no",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "sidewalk:left:surface": "paving_stones",
+        "sidewalk:right": "yes",
+        "sidewalk:right:surface": "sand",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429033314,
+      "bounds": {
+        "minlat": 52.5985393,
+        "minlon": 13.3821954,
+        "maxlat": 52.5987203,
+        "maxlon": 13.3826362
+      },
+      "geometry": [
+        {
+          "lat": 52.5987203,
+          "lon": 13.3821954
+        },
+        {
+          "lat": 52.5986145,
+          "lon": 13.3824547
+        },
+        {
+          "lat": 52.5985393,
+          "lon": 13.3826362
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "sidewalk:left:surface": "paving_stones",
+        "sidewalk:right": "yes",
+        "sidewalk:right:surface": "sand",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429037314,
+      "bounds": {
+        "minlat": 52.5987203,
+        "minlon": 13.3811671,
+        "maxlat": 52.5991416,
+        "maxlon": 13.3821954
+      },
+      "geometry": [
+        {
+          "lat": 52.5991416,
+          "lon": 13.3811671
+        },
+        {
+          "lat": 52.5988526,
+          "lon": 13.3818649
+        },
+        {
+          "lat": 52.5987203,
+          "lon": 13.3821954
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "sidewalk:left:surface": "paving_stones",
+        "sidewalk:right": "yes",
+        "sidewalk:right:surface": "sand",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429038207,
+      "bounds": {
+        "minlat": 52.5988526,
+        "minlon": 13.3818649,
+        "maxlat": 52.5989219,
+        "maxlon": 13.3819263
+      },
+      "geometry": [
+        {
+          "lat": 52.5988526,
+          "lon": 13.3818649
+        },
+        {
+          "lat": 52.5989014,
+          "lon": 13.3819082
+        },
+        {
+          "lat": 52.5989219,
+          "lon": 13.3819263
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "name": "Kissingenweg",
+        "name:etymology:wikidata": "Q488346",
+        "name:etymology:wikipedia": "de:Bad Kissingen",
+        "tracktype": "grade2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429038608,
+      "bounds": {
+        "minlat": 52.5983345,
+        "minlon": 13.3831302,
+        "maxlat": 52.5985469,
+        "maxlon": 13.3835318
+      },
+      "geometry": [
+        {
+          "lat": 52.5983345,
+          "lon": 13.3831302
+        },
+        {
+          "lat": 52.5983693,
+          "lon": 13.383193
+        },
+        {
+          "lat": 52.5984582,
+          "lon": 13.3833531
+        },
+        {
+          "lat": 52.5985469,
+          "lon": 13.3835318
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "maxspeed": "20",
+        "name": "Kräuterweg",
+        "name:etymology:wikidata": "Q190903",
+        "old_name": "Hauptweg",
+        "parking:both": "shoulder",
+        "parking:both:fee": "no",
+        "parking:both:informal": "yes",
+        "parking:both:orientation": "parallel",
+        "parking:note": "can be either one sided on lane or both sides but half on shoulder and not paved",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "vehicle": "destination",
+        "zone:maxspeed": "DE:20"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1497888052,
+      "bounds": {
+        "minlat": 52.5980355,
+        "minlon": 13.3837434,
+        "maxlat": 52.5981026,
+        "maxlon": 13.3839099
+      },
+      "geometry": [
+        {
+          "lat": 52.5981026,
+          "lon": 13.3837434
+        },
+        {
+          "lat": 52.5980355,
+          "lon": 13.3839099
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "parking:left": "lane",
+        "parking:right": "shoulder",
+        "parking:right:informal": "yes",
+        "postal_code": "13158",
+        "sidewalk": "right",
+        "sidewalk:right:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    }
+  ]
+}

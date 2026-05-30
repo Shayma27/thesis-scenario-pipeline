@@ -1,0 +1,390 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "priority_mueggelhort_0800",
+    "date": "2025-11-03",
+    "time": "08:00",
+    "raw_text": "Eine Pkw fahrende Person fuhr auf der Straße zum Müggelhort nach Süden zum Müggelheimer Damm. Dort bog sie nach rechts nach Köpenick ab, ohne die Vorfahrtregelung durch Z.205 zu beachten. Sie übersah beim Abbiegen eine Rad fahrenden Person, die auf dem gemeinsamen Geh- und Radweg des Müggelheimer Damm vorfahrtberechtigt war. Datum: Mo, 03.11.2025 Uhrzeit: 08:00 Uhr"
+  },
+  "classification": {
+    "scenario_type": "priority_violation_conflict",
+    "confidence": 0.9
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Müggelheimer Damm",
+    "secondary_road": "Straße zum Müggelhort",
+    "osm_query": "Müggelheimer Damm / Straße zum Müggelhort, Berlin, Germany",
+    "osm_roads": [
+      "Müggelheimer Damm",
+      "Straße zum Müggelhort"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "south"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "no",
+    "bike_facility_type": "shared_foot_cycle_path",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "turn_right",
+      "initial_direction": "south",
+      "traffic_rule_status": "violated_priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across_shared_foot_cycle_path",
+    "collision_happened": true,
+    "collision_description": "A car turned right into a cyclist on a shared foot and cycle path.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line",
+      "primary_has_bike_facility": false
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -2,
+          "initial_s_m": 10.0,
+          "initial_speed_mps": 4.5
+        },
+        "car_1": {
+          "vehicle_category": "car",
+          "initial_road_id": 0,
+          "initial_lane_id": -1,
+          "initial_s_m": 25.0,
+          "initial_speed_mps": 4.0
+        }
+      },
+      "cyclist_lateral_position": "both",
+      "conflict": {
+        "conflict_s_m": 50.0,
+        "trigger_time_s": 1.0
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "both",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    },
+    {
+      "parameter": "cyclist_1.vehicle_category",
+      "value_used": "bicycle",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -2,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_s_m",
+      "value_used": 10.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 4.5,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.vehicle_category",
+      "value_used": "car",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_lane_id",
+      "value_used": -1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_s_m",
+      "value_used": 25.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_speed_mps",
+      "value_used": 4.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'priority_violation_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    }
+  ],
+  "osm_context": {
+    "query": "Müggelheimer Damm, Berlin, Germany",
+    "queries_tried": [
+      "Müggelheimer Damm / Straße zum Müggelhort, Berlin, Germany",
+      "Müggelheimer Damm Straße zum Müggelhort, Berlin, Germany",
+      "Müggelheimer Damm, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 10699438,
+        "name": "Müggelheimer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "through|through;right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4399309,
+            "lon": 13.5889414
+          },
+          {
+            "lat": 52.4402826,
+            "lon": 13.5880164
+          },
+          {
+            "lat": 52.4403723,
+            "lon": 13.5877828
+          },
+          {
+            "lat": 52.4403993,
+            "lon": 13.5877181
+          },
+          {
+            "lat": 52.440431,
+            "lon": 13.5876369
+          }
+        ]
+      },
+      {
+        "osm_id": 26708288,
+        "name": "Müggelheimer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "none|merge_to_left",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "no",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4406005,
+            "lon": 13.5867677
+          },
+          {
+            "lat": 52.4405137,
+            "lon": 13.586887
+          },
+          {
+            "lat": 52.4403822,
+            "lon": 13.5871726
+          },
+          {
+            "lat": 52.4403681,
+            "lon": 13.587261
+          }
+        ]
+      },
+      {
+        "osm_id": 238053685,
+        "name": "Müggelheimer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "1",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "no",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4403681,
+            "lon": 13.587261
+          },
+          {
+            "lat": 52.4403183,
+            "lon": 13.5877138
+          },
+          {
+            "lat": 52.440292,
+            "lon": 13.587841
+          },
+          {
+            "lat": 52.4402485,
+            "lon": 13.5879768
+          },
+          {
+            "lat": 52.4399644,
+            "lon": 13.5887182
+          },
+          {
+            "lat": 52.4399309,
+            "lon": 13.5889414
+          }
+        ]
+      },
+      {
+        "osm_id": 414498858,
+        "name": "Müggelheimer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4399309,
+            "lon": 13.5889414
+          },
+          {
+            "lat": 52.4391005,
+            "lon": 13.5911025
+          }
+        ]
+      },
+      {
+        "osm_id": 1089408498,
+        "name": "Müggelheimer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "through|through;right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.440431,
+            "lon": 13.5876369
+          },
+          {
+            "lat": 52.4405448,
+            "lon": 13.5873452
+          },
+          {
+            "lat": 52.4407028,
+            "lon": 13.5869958
+          },
+          {
+            "lat": 52.4407337,
+            "lon": 13.5869398
+          }
+        ]
+      }
+    ],
+    "traffic_signals_nearby": "yes",
+    "notes": [],
+    "geocoded": {
+      "display_name": "Müggelheimer Damm, Kietzer Feld, Köpenick, Treptow-Köpenick, Berlin, 12557, Deutschland",
+      "lat": 52.4401792,
+      "lon": 13.5882884,
+      "osm_type": "way",
+      "osm_id": 10699438
+    },
+    "cyclist_lateral_position": {
+      "value": "both",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

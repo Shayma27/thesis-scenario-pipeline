@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 144596196,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 1127595983,
+    "lat": "52.5172378",
+    "lon": "13.4044017",
+    "category": "highway",
+    "type": "residential",
+    "place_rank": 26,
+    "importance": 0.2861574737770128,
+    "addresstype": "road",
+    "name": "Rathausstraße",
+    "display_name": "Rathausstraße, Nikolaiviertel, Spandauer Vorstadt, Mitte, Berlin, 10178, Deutschland",
+    "boundingbox": [
+      "52.5171978",
+      "52.5172778",
+      "13.4043066",
+      "13.4044968"
+    ]
+  }
+]

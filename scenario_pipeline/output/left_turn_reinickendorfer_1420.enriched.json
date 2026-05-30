@@ -1,0 +1,371 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "left_turn_reinickendorfer_1420",
+    "date": "2022-09-14",
+    "time": "14:20",
+    "raw_text": "Ein Pkw befuhr die Reinickendorfer Straße und wollte links in die Pankstraße abbiegen. Ein Radfahrer überfuhr eine rote Ampel, wodurch es zum Zusammenstoß kam. Datum: 14.09.2022 Uhrzeit: 14:20 Uhr"
+  },
+  "classification": {
+    "scenario_type": "left_turn_conflict",
+    "confidence": 0.8
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Reinickendorfer Straße",
+    "secondary_road": "Pankstraße",
+    "osm_query": "Reinickendorfer Straße / Pankstraße, Berlin, Germany",
+    "osm_roads": [
+      "Reinickendorfer Straße",
+      "Pankstraße"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "unknown"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "yes",
+    "bike_facility_type": "unknown",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "turn_left",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "violated_priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "left_turn_across_red_light",
+    "collision_happened": true,
+    "collision_description": "A car turning left collided with a cyclist who ran a red light.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line",
+      "primary_has_bike_facility": false
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -1,
+          "initial_s_m": 10.0,
+          "initial_speed_mps": 4.5
+        },
+        "car_1": {
+          "vehicle_category": "car",
+          "initial_road_id": 0,
+          "initial_lane_id": -1,
+          "initial_s_m": 30.0,
+          "initial_speed_mps": 4.0
+        }
+      },
+      "cyclist_lateral_position": "both",
+      "conflict": {
+        "conflict_s_m": 50.0,
+        "trigger_time_s": 1.0
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "both",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    },
+    {
+      "parameter": "cyclist_1.vehicle_category",
+      "value_used": "bicycle",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_s_m",
+      "value_used": 10.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 4.5,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.vehicle_category",
+      "value_used": "car",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_lane_id",
+      "value_used": -1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_s_m",
+      "value_used": 30.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_speed_mps",
+      "value_used": 4.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'left_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    }
+  ],
+  "osm_context": {
+    "query": "Reinickendorfer Straße, Berlin, Germany",
+    "queries_tried": [
+      "Reinickendorfer Straße / Pankstraße, Berlin, Germany",
+      "Reinickendorfer Straße Pankstraße, Berlin, Germany",
+      "Reinickendorfer Straße, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 4596985,
+        "name": "Reinickendorfer Straße",
+        "highway": "living_street",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5401049,
+            "lon": 13.3709663
+          },
+          {
+            "lat": 52.5401511,
+            "lon": 13.3709521
+          },
+          {
+            "lat": 52.5401708,
+            "lon": 13.370946
+          },
+          {
+            "lat": 52.5402189,
+            "lon": 13.3709093
+          },
+          {
+            "lat": 52.5406496,
+            "lon": 13.3702569
+          },
+          {
+            "lat": 52.5406698,
+            "lon": 13.3702333
+          },
+          {
+            "lat": 52.5406909,
+            "lon": 13.3702152
+          },
+          {
+            "lat": 52.5407139,
+            "lon": 13.370203
+          },
+          {
+            "lat": 52.5408836,
+            "lon": 13.3701515
+          },
+          {
+            "lat": 52.5410029,
+            "lon": 13.3701143
+          },
+          {
+            "lat": 52.5411213,
+            "lon": 13.3700783
+          },
+          {
+            "lat": 52.5411233,
+            "lon": 13.3700777
+          },
+          {
+            "lat": 52.5411554,
+            "lon": 13.3700682
+          },
+          {
+            "lat": 52.5413614,
+            "lon": 13.3700062
+          },
+          {
+            "lat": 52.5413967,
+            "lon": 13.3699924
+          },
+          {
+            "lat": 52.5414258,
+            "lon": 13.3699748
+          },
+          {
+            "lat": 52.5414459,
+            "lon": 13.3699512
+          },
+          {
+            "lat": 52.5415302,
+            "lon": 13.3698168
+          }
+        ]
+      },
+      {
+        "osm_id": 394681618,
+        "name": "U Reinickendorfer Straße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5407067,
+            "lon": 13.368903
+          },
+          {
+            "lat": 52.5407625,
+            "lon": 13.368808
+          }
+        ]
+      },
+      {
+        "osm_id": 394681619,
+        "name": "U Reinickendorfer Straße/Sellerstraße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5396579,
+            "lon": 13.3705641
+          },
+          {
+            "lat": 52.5396032,
+            "lon": 13.3706656
+          }
+        ]
+      },
+      {
+        "osm_id": 394681620,
+        "name": "U Reinickendorfer Straße/Sellerstraße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5397381,
+            "lon": 13.370986
+          },
+          {
+            "lat": 52.5398363,
+            "lon": 13.3708419
+          }
+        ]
+      }
+    ],
+    "traffic_signals_nearby": "yes",
+    "notes": [
+      "No parseable maxspeed tag found near the geocoded location."
+    ],
+    "geocoded": {
+      "display_name": "Reinickendorfer Straße, Müllerstraße, Antonkiez, Wedding, Mitte, Berlin, 13347, Deutschland",
+      "lat": 52.5400429,
+      "lon": 13.3702888,
+      "osm_type": "node",
+      "osm_id": 5198810677
+    },
+    "cyclist_lateral_position": {
+      "value": "both",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    }
+  }
+}

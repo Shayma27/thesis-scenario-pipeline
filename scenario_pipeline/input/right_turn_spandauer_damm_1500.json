@@ -1,0 +1,72 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "right_turn_spandauer_damm_1500",
+    "date": "2022-09-17",
+    "time": "15:00",
+    "raw_text": "Eine Radfahrerin befuhr den Spandauer Damm in Richtung Otto-Suhr-Allee. Ein in derselben Richtung fahrender Pkw bog nach rechts in die Sophie-Charlotten-Straße ab, wobei es zur Kollision kam. Datum: 17.09.2022 Uhrzeit: 15:00 Uhr"
+  },
+  "classification": {
+    "scenario_type": "right_turn_conflict",
+    "confidence": 1.0
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Spandauer Damm",
+    "secondary_road": "Sophie-Charlotten-Straße",
+    "osm_query": "Spandauer Damm / Sophie-Charlotten-Straße, Berlin, Germany",
+    "osm_roads": [
+      "Spandauer Damm",
+      "Sophie-Charlotten-Straße"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "Otto-Suhr-Allee"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": null,
+    "bike_facility_type": null,
+    "parking_present": null,
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "turn_right",
+      "initial_direction": "east",
+      "traffic_rule_status": "unknown"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "east",
+      "traffic_rule_status": "unknown"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across_cyclist_path",
+    "collision_happened": true,
+    "collision_description": "A car turned right into the path of a cyclist, resulting in a collision.",
+    "severity_text": "unknown"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line"
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {}
+    }
+  },
+  "missing_parameters": []
+}

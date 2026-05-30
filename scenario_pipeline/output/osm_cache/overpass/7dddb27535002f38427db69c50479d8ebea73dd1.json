@@ -1,0 +1,4961 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-28T12:53:27Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 35110809,
+      "lat": 52.4405337,
+      "lon": 13.4346758,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 35110810,
+      "lat": 52.4402264,
+      "lon": 13.4349075,
+      "tags": {
+        "highway": "traffic_signals",
+        "mapillary": "975555909923470",
+        "removed:highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1518864798,
+      "lat": 52.4403775,
+      "lon": 13.4351275,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals:direction": "backward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11112368215,
+      "lat": 52.4402931,
+      "lon": 13.4346045,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11379949203,
+      "lat": 52.4404437,
+      "lon": 13.4350911,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12047153706,
+      "lat": 52.4402413,
+      "lon": 13.4349953,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4662878,
+      "bounds": {
+        "minlat": 52.4393194,
+        "minlon": 13.4348963,
+        "maxlat": 52.4403726,
+        "maxlon": 13.4349767
+      },
+      "geometry": [
+        {
+          "lat": 52.4393194,
+          "lon": 13.4349767
+        },
+        {
+          "lat": 52.439393,
+          "lon": 13.4349711
+        },
+        {
+          "lat": 52.4400863,
+          "lon": 13.4349182
+        },
+        {
+          "lat": 52.4402264,
+          "lon": 13.4349075
+        },
+        {
+          "lat": 52.4402662,
+          "lon": 13.4349044
+        },
+        {
+          "lat": 52.4403024,
+          "lon": 13.4349017
+        },
+        {
+          "lat": 52.4403726,
+          "lon": 13.4348963
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Buckower Damm",
+        "name:etymology:wikidata": "Q644410",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "yes",
+        "postal_code": "12359",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 23451020,
+      "bounds": {
+        "minlat": 52.4402965,
+        "minlon": 13.4358797,
+        "maxlat": 52.442794,
+        "maxlon": 13.438489
+      },
+      "geometry": [
+        {
+          "lat": 52.4402965,
+          "lon": 13.4358797
+        },
+        {
+          "lat": 52.4403099,
+          "lon": 13.435904
+        },
+        {
+          "lat": 52.4403173,
+          "lon": 13.4359173
+        },
+        {
+          "lat": 52.4403749,
+          "lon": 13.4360452
+        },
+        {
+          "lat": 52.4405884,
+          "lon": 13.4363618
+        },
+        {
+          "lat": 52.4407019,
+          "lon": 13.4365004
+        },
+        {
+          "lat": 52.4408069,
+          "lon": 13.436593
+        },
+        {
+          "lat": 52.4409722,
+          "lon": 13.4366853
+        },
+        {
+          "lat": 52.4412738,
+          "lon": 13.4368454
+        },
+        {
+          "lat": 52.4414497,
+          "lon": 13.4370305
+        },
+        {
+          "lat": 52.4421084,
+          "lon": 13.4376555
+        },
+        {
+          "lat": 52.442373,
+          "lon": 13.4379599
+        },
+        {
+          "lat": 52.4426801,
+          "lon": 13.4383404
+        },
+        {
+          "lat": 52.442794,
+          "lon": 13.438489
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "is_sidepath": "no",
+        "lit": "no",
+        "oneway": "no",
+        "postal_code": "12359",
+        "segregated": "no",
+        "smoothness": "good",
+        "source:width": "Luftbild 2025",
+        "surface": "paving_stones",
+        "traffic_sign": "DE:240",
+        "width": "3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 23451078,
+      "bounds": {
+        "minlat": 52.4414497,
+        "minlon": 13.4348989,
+        "maxlat": 52.4416166,
+        "maxlon": 13.4370305
+      },
+      "geometry": [
+        {
+          "lat": 52.4414497,
+          "lon": 13.4370305
+        },
+        {
+          "lat": 52.4414904,
+          "lon": 13.4367858
+        },
+        {
+          "lat": 52.4415351,
+          "lon": 13.4365752
+        },
+        {
+          "lat": 52.4415731,
+          "lon": 13.4363305
+        },
+        {
+          "lat": 52.4415965,
+          "lon": 13.4361391
+        },
+        {
+          "lat": 52.4416145,
+          "lon": 13.4358746
+        },
+        {
+          "lat": 52.4416166,
+          "lon": 13.4356304
+        },
+        {
+          "lat": 52.4416076,
+          "lon": 13.4353721
+        },
+        {
+          "lat": 52.441569,
+          "lon": 13.4348989
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "is_sidepath": "no",
+        "lit": "no",
+        "oneway": "no",
+        "segregated": "no",
+        "smoothness": "good",
+        "source:width": "Luftbild 2025",
+        "surface": "paving_stones",
+        "width": "3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 30140696,
+      "bounds": {
+        "minlat": 52.4406774,
+        "minlon": 13.4346441,
+        "maxlat": 52.44101,
+        "maxlon": 13.4346662
+      },
+      "geometry": [
+        {
+          "lat": 52.44101,
+          "lon": 13.4346441
+        },
+        {
+          "lat": 52.4406774,
+          "lon": 13.4346662
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Buckower Damm",
+        "name:etymology:wikidata": "Q644410",
+        "note": "1-185 ungerade, 20-170 gerade: Britz; 187-331 ungerade, 176-332 gerade: Buckow",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12349",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|through|none"
+      }
+    },
+    {
+      "type": "way",
+      "id": 49133920,
+      "bounds": {
+        "minlat": 52.4398016,
+        "minlon": 13.4337071,
+        "maxlat": 52.4398299,
+        "maxlon": 13.4347316
+      },
+      "geometry": [
+        {
+          "lat": 52.4398299,
+          "lon": 13.4347316
+        },
+        {
+          "lat": 52.4398266,
+          "lon": 13.434611
+        },
+        {
+          "lat": 52.439826,
+          "lon": 13.4345906
+        },
+        {
+          "lat": 52.4398217,
+          "lon": 13.4344353
+        },
+        {
+          "lat": 52.439815,
+          "lon": 13.4341906
+        },
+        {
+          "lat": 52.4398082,
+          "lon": 13.4339468
+        },
+        {
+          "lat": 52.4398016,
+          "lon": 13.4337071
+        }
+      ],
+      "tags": {
+        "access": "customers",
+        "covered": "no",
+        "highway": "service",
+        "lit": "yes",
+        "service": "driveway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 49133921,
+      "bounds": {
+        "minlat": 52.4393508,
+        "minlon": 13.4337071,
+        "maxlat": 52.4398016,
+        "maxlon": 13.4340932
+      },
+      "geometry": [
+        {
+          "lat": 52.4398016,
+          "lon": 13.4337071
+        },
+        {
+          "lat": 52.4394922,
+          "lon": 13.4339722
+        },
+        {
+          "lat": 52.4393508,
+          "lon": 13.4340932
+        }
+      ],
+      "tags": {
+        "access": "customers",
+        "covered": "no",
+        "highway": "service",
+        "lit": "yes",
+        "service": "driveway",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 138515672,
+      "bounds": {
+        "minlat": 52.4410841,
+        "minlon": 13.4342926,
+        "maxlat": 52.4426581,
+        "maxlon": 13.4348186
+      },
+      "geometry": [
+        {
+          "lat": 52.4410841,
+          "lon": 13.4348186
+        },
+        {
+          "lat": 52.4412093,
+          "lon": 13.4348015
+        },
+        {
+          "lat": 52.4414337,
+          "lon": 13.4347527
+        },
+        {
+          "lat": 52.4415545,
+          "lon": 13.434722
+        },
+        {
+          "lat": 52.4416118,
+          "lon": 13.434701
+        },
+        {
+          "lat": 52.4418329,
+          "lon": 13.43462
+        },
+        {
+          "lat": 52.4422209,
+          "lon": 13.4344661
+        },
+        {
+          "lat": 52.4426581,
+          "lon": 13.4342926
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "share_busway",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:traffic_sign": "DE:245,1022-10",
+        "cycleway:right:width": "2.7",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Buckower Damm",
+        "name:etymology:wikidata": "Q644410",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_stopping @ (Mo-Fr 06:00-09:00; Sa 09:00-14:00)",
+        "parking:right:restriction:reason:conditional": "bus_lane @ (Mo-Fr 06:00-09:00; Sa 09:00-14:00)",
+        "postal_code": "12349",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:width": "Luftbild 2024",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 138515673,
+      "bounds": {
+        "minlat": 52.44101,
+        "minlon": 13.4346441,
+        "maxlat": 52.4410137,
+        "maxlon": 13.4348263
+      },
+      "geometry": [
+        {
+          "lat": 52.44101,
+          "lon": 13.4346441
+        },
+        {
+          "lat": 52.4410137,
+          "lon": 13.4348263
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "secondary_link",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed:type": "DE:urban",
+        "name": "Buckower Damm",
+        "name:etymology:wikidata": "Q644410",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "sidewalk": "no",
+        "smoothness": "intermediate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 138515674,
+      "bounds": {
+        "minlat": 52.440369,
+        "minlon": 13.4346867,
+        "maxlat": 52.4403726,
+        "maxlon": 13.4348963
+      },
+      "geometry": [
+        {
+          "lat": 52.4403726,
+          "lon": 13.4348963
+        },
+        {
+          "lat": 52.440369,
+          "lon": 13.4346867
+        }
+      ],
+      "tags": {
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Buckower Damm",
+        "name:etymology:wikidata": "Q644410",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "12349",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 203618068,
+      "bounds": {
+        "minlat": 52.4412694,
+        "minlon": 13.4347527,
+        "maxlat": 52.4414477,
+        "maxlon": 13.4358914
+      },
+      "geometry": [
+        {
+          "lat": 52.4414337,
+          "lon": 13.4347527
+        },
+        {
+          "lat": 52.4414365,
+          "lon": 13.4348554
+        },
+        {
+          "lat": 52.4414376,
+          "lon": 13.4348961
+        },
+        {
+          "lat": 52.4414477,
+          "lon": 13.4352714
+        },
+        {
+          "lat": 52.4414106,
+          "lon": 13.4358914
+        },
+        {
+          "lat": 52.4412694,
+          "lon": 13.4358731
+        }
+      ],
+      "tags": {
+        "access": "delivery",
+        "emergency": "designated",
+        "highway": "service",
+        "maxspeed": "10",
+        "service": "driveway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 203618069,
+      "bounds": {
+        "minlat": 52.440517,
+        "minlon": 13.435267,
+        "maxlat": 52.4412503,
+        "maxlon": 13.4361076
+      },
+      "geometry": [
+        {
+          "lat": 52.4412503,
+          "lon": 13.4354873
+        },
+        {
+          "lat": 52.440903,
+          "lon": 13.4353888
+        },
+        {
+          "lat": 52.4405713,
+          "lon": 13.435267
+        },
+        {
+          "lat": 52.440517,
+          "lon": 13.435507
+        },
+        {
+          "lat": 52.4405969,
+          "lon": 13.4355647
+        },
+        {
+          "lat": 52.4406473,
+          "lon": 13.4356696
+        },
+        {
+          "lat": 52.4406786,
+          "lon": 13.4357026
+        },
+        {
+          "lat": 52.4407009,
+          "lon": 13.435726
+        },
+        {
+          "lat": 52.4407655,
+          "lon": 13.4357575
+        },
+        {
+          "lat": 52.440788,
+          "lon": 13.4357685
+        },
+        {
+          "lat": 52.4408623,
+          "lon": 13.4358047
+        },
+        {
+          "lat": 52.4409655,
+          "lon": 13.435823
+        },
+        {
+          "lat": 52.4410142,
+          "lon": 13.4358532
+        },
+        {
+          "lat": 52.4410366,
+          "lon": 13.4359149
+        },
+        {
+          "lat": 52.4410422,
+          "lon": 13.4359739
+        },
+        {
+          "lat": 52.4410326,
+          "lon": 13.4360342
+        },
+        {
+          "lat": 52.4410102,
+          "lon": 13.4360853
+        },
+        {
+          "lat": 52.4409775,
+          "lon": 13.4361076
+        },
+        {
+          "lat": 52.4409327,
+          "lon": 13.4361011
+        },
+        {
+          "lat": 52.4408983,
+          "lon": 13.4360801
+        },
+        {
+          "lat": 52.4408504,
+          "lon": 13.4359922
+        },
+        {
+          "lat": 52.440794,
+          "lon": 13.4358985
+        },
+        {
+          "lat": 52.4407344,
+          "lon": 13.4357994
+        },
+        {
+          "lat": 52.4406786,
+          "lon": 13.4357026
+        }
+      ],
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 203618070,
+      "bounds": {
+        "minlat": 52.4408975,
+        "minlon": 13.4351539,
+        "maxlat": 52.440903,
+        "maxlon": 13.4353888
+      },
+      "geometry": [
+        {
+          "lat": 52.4408975,
+          "lon": 13.4351539
+        },
+        {
+          "lat": 52.440903,
+          "lon": 13.4353888
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "no",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 203618071,
+      "bounds": {
+        "minlat": 52.440788,
+        "minlon": 13.4356321,
+        "maxlat": 52.4408037,
+        "maxlon": 13.4357685
+      },
+      "geometry": [
+        {
+          "lat": 52.4408037,
+          "lon": 13.4356321
+        },
+        {
+          "lat": 52.440788,
+          "lon": 13.4357685
+        }
+      ],
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 203618074,
+      "bounds": {
+        "minlat": 52.4406334,
+        "minlon": 13.4351371,
+        "maxlat": 52.4411014,
+        "maxlon": 13.4351775
+      },
+      "geometry": [
+        {
+          "lat": 52.4411014,
+          "lon": 13.4351464
+        },
+        {
+          "lat": 52.4410761,
+          "lon": 13.4351371
+        },
+        {
+          "lat": 52.4408975,
+          "lon": 13.4351539
+        },
+        {
+          "lat": 52.4406334,
+          "lon": 13.4351775
+        }
+      ],
+      "tags": {
+        "delivery": "no",
+        "highway": "service",
+        "maxspeed": "10",
+        "service": "driveway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 203618075,
+      "bounds": {
+        "minlat": 52.440794,
+        "minlon": 13.4358259,
+        "maxlat": 52.4411598,
+        "maxlon": 13.4359781
+      },
+      "geometry": [
+        {
+          "lat": 52.4411598,
+          "lon": 13.4358315
+        },
+        {
+          "lat": 52.4411073,
+          "lon": 13.4358259
+        },
+        {
+          "lat": 52.4411065,
+          "lon": 13.4359781
+        },
+        {
+          "lat": 52.4410422,
+          "lon": 13.4359739
+        },
+        {
+          "lat": 52.4409656,
+          "lon": 13.4359686
+        },
+        {
+          "lat": 52.4408608,
+          "lon": 13.4358952
+        },
+        {
+          "lat": 52.4408249,
+          "lon": 13.4358912
+        },
+        {
+          "lat": 52.440794,
+          "lon": 13.4358985
+        }
+      ],
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 205756201,
+      "bounds": {
+        "minlat": 52.4397202,
+        "minlon": 13.4346867,
+        "maxlat": 52.440369,
+        "maxlon": 13.4347408
+      },
+      "geometry": [
+        {
+          "lat": 52.440369,
+          "lon": 13.4346867
+        },
+        {
+          "lat": 52.4402958,
+          "lon": 13.4346928
+        },
+        {
+          "lat": 52.440259,
+          "lon": 13.4346959
+        },
+        {
+          "lat": 52.4398299,
+          "lon": 13.4347316
+        },
+        {
+          "lat": 52.4397202,
+          "lon": 13.4347408
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Buckower Damm",
+        "name:etymology:wikidata": "Q644410",
+        "note": "1-185 ungerade, 20-170 gerade: Britz; 187-331 ungerade, 176-332 gerade: Buckow",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12349",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 270663507,
+      "bounds": {
+        "minlat": 52.4413331,
+        "minlon": 13.4330884,
+        "maxlat": 52.4421288,
+        "maxlon": 13.4340905
+      },
+      "geometry": [
+        {
+          "lat": 52.4414769,
+          "lon": 13.4340905
+        },
+        {
+          "lat": 52.4413331,
+          "lon": 13.433366
+        },
+        {
+          "lat": 52.4420127,
+          "lon": 13.4330884
+        },
+        {
+          "lat": 52.4421288,
+          "lon": 13.4338293
+        },
+        {
+          "lat": 52.4414769,
+          "lon": 13.4340905
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "maxspeed": "10",
+        "service": "driveway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 379895556,
+      "bounds": {
+        "minlat": 52.4383869,
+        "minlon": 13.4312264,
+        "maxlat": 52.4406329,
+        "maxlon": 13.4335514
+      },
+      "geometry": [
+        {
+          "lat": 52.4406183,
+          "lon": 13.4321842
+        },
+        {
+          "lat": 52.4401322,
+          "lon": 13.4318467
+        },
+        {
+          "lat": 52.4398426,
+          "lon": 13.4316434
+        },
+        {
+          "lat": 52.439362,
+          "lon": 13.4313141
+        },
+        {
+          "lat": 52.4392948,
+          "lon": 13.431275
+        },
+        {
+          "lat": 52.4392145,
+          "lon": 13.4312481
+        },
+        {
+          "lat": 52.4391401,
+          "lon": 13.4312311
+        },
+        {
+          "lat": 52.4390301,
+          "lon": 13.4312264
+        },
+        {
+          "lat": 52.438941,
+          "lon": 13.4312485
+        },
+        {
+          "lat": 52.4388501,
+          "lon": 13.431292
+        },
+        {
+          "lat": 52.4387668,
+          "lon": 13.431348
+        },
+        {
+          "lat": 52.4386834,
+          "lon": 13.4314246
+        },
+        {
+          "lat": 52.4386118,
+          "lon": 13.4315187
+        },
+        {
+          "lat": 52.4385401,
+          "lon": 13.4316324
+        },
+        {
+          "lat": 52.4384909,
+          "lon": 13.431737
+        },
+        {
+          "lat": 52.4384536,
+          "lon": 13.4318482
+        },
+        {
+          "lat": 52.4384307,
+          "lon": 13.4319237
+        },
+        {
+          "lat": 52.4384084,
+          "lon": 13.4320384
+        },
+        {
+          "lat": 52.4383991,
+          "lon": 13.4321346
+        },
+        {
+          "lat": 52.4383935,
+          "lon": 13.4321928
+        },
+        {
+          "lat": 52.4383869,
+          "lon": 13.4323486
+        },
+        {
+          "lat": 52.4383944,
+          "lon": 13.4324998
+        },
+        {
+          "lat": 52.4384096,
+          "lon": 13.4325929
+        },
+        {
+          "lat": 52.438431,
+          "lon": 13.4327107
+        },
+        {
+          "lat": 52.4384513,
+          "lon": 13.4328093
+        },
+        {
+          "lat": 52.4384903,
+          "lon": 13.4329381
+        },
+        {
+          "lat": 52.4385369,
+          "lon": 13.4330549
+        },
+        {
+          "lat": 52.438589,
+          "lon": 13.4331567
+        },
+        {
+          "lat": 52.4386477,
+          "lon": 13.4332556
+        },
+        {
+          "lat": 52.4386948,
+          "lon": 13.4333219
+        },
+        {
+          "lat": 52.4387344,
+          "lon": 13.4333652
+        },
+        {
+          "lat": 52.4387818,
+          "lon": 13.4334095
+        },
+        {
+          "lat": 52.4388445,
+          "lon": 13.4334621
+        },
+        {
+          "lat": 52.4389231,
+          "lon": 13.4335058
+        },
+        {
+          "lat": 52.4389856,
+          "lon": 13.4335301
+        },
+        {
+          "lat": 52.4390261,
+          "lon": 13.4335405
+        },
+        {
+          "lat": 52.4391047,
+          "lon": 13.4335514
+        },
+        {
+          "lat": 52.4391768,
+          "lon": 13.4335473
+        },
+        {
+          "lat": 52.4392451,
+          "lon": 13.433535
+        },
+        {
+          "lat": 52.4393039,
+          "lon": 13.4335123
+        },
+        {
+          "lat": 52.4393734,
+          "lon": 13.4334785
+        },
+        {
+          "lat": 52.4394508,
+          "lon": 13.4334238
+        },
+        {
+          "lat": 52.4395456,
+          "lon": 13.4333437
+        },
+        {
+          "lat": 52.4399015,
+          "lon": 13.4330508
+        },
+        {
+          "lat": 52.4403253,
+          "lon": 13.432702
+        },
+        {
+          "lat": 52.4406329,
+          "lon": 13.4324489
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Neumarkplan",
+        "name:etymology:wikidata": "Q819411",
+        "note": "Britz",
+        "oneway": "yes",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "parking:left": "lane",
+        "parking:right": "half_on_kerb",
+        "postal_code": "12349",
+        "sidewalk": "both",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete:plates",
+        "traffic_sign": "DE:250,1020-30,1022-10;274.1",
+        "vehicle": "destination",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 383987236,
+      "bounds": {
+        "minlat": 52.4399694,
+        "minlon": 13.4358742,
+        "maxlat": 52.4401168,
+        "maxlon": 13.4361233
+      },
+      "geometry": [
+        {
+          "lat": 52.4399694,
+          "lon": 13.4361233
+        },
+        {
+          "lat": 52.4400222,
+          "lon": 13.4360337
+        },
+        {
+          "lat": 52.4401168,
+          "lon": 13.4358742
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Buckower Damm/Gutschmidtstraße",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 383987237,
+      "bounds": {
+        "minlat": 52.4405889,
+        "minlon": 13.4345601,
+        "maxlat": 52.4407579,
+        "maxlon": 13.4345742
+      },
+      "geometry": [
+        {
+          "lat": 52.4405889,
+          "lon": 13.4345742
+        },
+        {
+          "lat": 52.4407579,
+          "lon": 13.4345601
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:shelter": "2024-11-29",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Buckower Damm/Gutschmidtstraße",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 383987238,
+      "bounds": {
+        "minlat": 52.4406756,
+        "minlon": 13.4349359,
+        "maxlat": 52.4408197,
+        "maxlon": 13.4349466
+      },
+      "geometry": [
+        {
+          "lat": 52.4408197,
+          "lon": 13.4349359
+        },
+        {
+          "lat": 52.4406756,
+          "lon": 13.4349466
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Buckower Damm/Gutschmidtstraße",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 387222727,
+      "bounds": {
+        "minlat": 52.4398804,
+        "minlon": 13.4325102,
+        "maxlat": 52.4403253,
+        "maxlon": 13.4330508
+      },
+      "geometry": [
+        {
+          "lat": 52.4403253,
+          "lon": 13.432702
+        },
+        {
+          "lat": 52.44031,
+          "lon": 13.4326411
+        },
+        {
+          "lat": 52.4403052,
+          "lon": 13.4326218
+        },
+        {
+          "lat": 52.4402755,
+          "lon": 13.4325126
+        },
+        {
+          "lat": 52.4402567,
+          "lon": 13.4325102
+        },
+        {
+          "lat": 52.4400117,
+          "lon": 13.4327106
+        },
+        {
+          "lat": 52.4399041,
+          "lon": 13.4328019
+        },
+        {
+          "lat": 52.4398804,
+          "lon": 13.4329732
+        },
+        {
+          "lat": 52.4398845,
+          "lon": 13.4329882
+        },
+        {
+          "lat": 52.4399015,
+          "lon": 13.4330508
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 387231673,
+      "bounds": {
+        "minlat": 52.439275,
+        "minlon": 13.4341906,
+        "maxlat": 52.439815,
+        "maxlon": 13.4342358
+      },
+      "geometry": [
+        {
+          "lat": 52.439815,
+          "lon": 13.4341906
+        },
+        {
+          "lat": 52.439275,
+          "lon": 13.4342358
+        }
+      ],
+      "tags": {
+        "access": "customers",
+        "covered": "no",
+        "highway": "service",
+        "lit": "yes",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 387231675,
+      "bounds": {
+        "minlat": 52.4392807,
+        "minlon": 13.4344353,
+        "maxlat": 52.4398217,
+        "maxlon": 13.4344757
+      },
+      "geometry": [
+        {
+          "lat": 52.4398217,
+          "lon": 13.4344353
+        },
+        {
+          "lat": 52.4392807,
+          "lon": 13.4344757
+        }
+      ],
+      "tags": {
+        "access": "customers",
+        "covered": "no",
+        "highway": "service",
+        "lit": "yes",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 438238614,
+      "bounds": {
+        "minlat": 52.44101,
+        "minlon": 13.4345419,
+        "maxlat": 52.441481,
+        "maxlon": 13.4346441
+      },
+      "geometry": [
+        {
+          "lat": 52.441481,
+          "lon": 13.4345419
+        },
+        {
+          "lat": 52.4414225,
+          "lon": 13.4345604
+        },
+        {
+          "lat": 52.4410834,
+          "lon": 13.4346346
+        },
+        {
+          "lat": 52.44101,
+          "lon": 13.4346441
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Buckower Damm",
+        "name:etymology:wikidata": "Q644410",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12349",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 438238616,
+      "bounds": {
+        "minlat": 52.4403209,
+        "minlon": 13.4348963,
+        "maxlat": 52.4403775,
+        "maxlon": 13.4356098
+      },
+      "geometry": [
+        {
+          "lat": 52.4403726,
+          "lon": 13.4348963
+        },
+        {
+          "lat": 52.4403742,
+          "lon": 13.4349851
+        },
+        {
+          "lat": 52.4403759,
+          "lon": 13.4350563
+        },
+        {
+          "lat": 52.4403775,
+          "lon": 13.4351275
+        },
+        {
+          "lat": 52.4403764,
+          "lon": 13.4352309
+        },
+        {
+          "lat": 52.4403711,
+          "lon": 13.4353268
+        },
+        {
+          "lat": 52.4403583,
+          "lon": 13.4354374
+        },
+        {
+          "lat": 52.4403346,
+          "lon": 13.4355531
+        },
+        {
+          "lat": 52.4403209,
+          "lon": 13.4356098
+        }
+      ],
+      "tags": {
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "4",
+        "lanes:backward": "2",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Gutschmidtstraße",
+        "name:etymology:wikidata": "Q84975742",
+        "note": "Übergeordnete Straße, Stufe III",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12359",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes:backward": "left|right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 446137818,
+      "bounds": {
+        "minlat": 52.4403458,
+        "minlon": 13.4365753,
+        "maxlat": 52.4408067,
+        "maxlon": 13.4367162
+      },
+      "geometry": [
+        {
+          "lat": 52.4408067,
+          "lon": 13.4367162
+        },
+        {
+          "lat": 52.4405412,
+          "lon": 13.4365815
+        },
+        {
+          "lat": 52.4403458,
+          "lon": 13.4365753
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 446137862,
+      "bounds": {
+        "minlat": 52.440254,
+        "minlon": 13.4360452,
+        "maxlat": 52.4403749,
+        "maxlon": 13.437081
+      },
+      "geometry": [
+        {
+          "lat": 52.4403749,
+          "lon": 13.4360452
+        },
+        {
+          "lat": 52.4403571,
+          "lon": 13.4361518
+        },
+        {
+          "lat": 52.4403458,
+          "lon": 13.4365753
+        },
+        {
+          "lat": 52.4402762,
+          "lon": 13.4369879
+        },
+        {
+          "lat": 52.440254,
+          "lon": 13.437081
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 446137879,
+      "bounds": {
+        "minlat": 52.4403554,
+        "minlon": 13.436593,
+        "maxlat": 52.4408152,
+        "maxlon": 13.4371906
+      },
+      "geometry": [
+        {
+          "lat": 52.4408069,
+          "lon": 13.436593
+        },
+        {
+          "lat": 52.4408067,
+          "lon": 13.4367162
+        },
+        {
+          "lat": 52.4408152,
+          "lon": 13.437013
+        },
+        {
+          "lat": 52.4407982,
+          "lon": 13.4370674
+        },
+        {
+          "lat": 52.4407755,
+          "lon": 13.4371055
+        },
+        {
+          "lat": 52.4407219,
+          "lon": 13.4371045
+        },
+        {
+          "lat": 52.4404557,
+          "lon": 13.4370995
+        },
+        {
+          "lat": 52.4403554,
+          "lon": 13.4371906
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 514301242,
+      "bounds": {
+        "minlat": 52.4394922,
+        "minlon": 13.4339468,
+        "maxlat": 52.4398082,
+        "maxlon": 13.4339722
+      },
+      "geometry": [
+        {
+          "lat": 52.4398082,
+          "lon": 13.4339468
+        },
+        {
+          "lat": 52.4394922,
+          "lon": 13.4339722
+        }
+      ],
+      "tags": {
+        "access": "customers",
+        "covered": "no",
+        "highway": "service",
+        "lit": "yes",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 673018975,
+      "bounds": {
+        "minlat": 52.4402564,
+        "minlon": 13.4346185,
+        "maxlat": 52.440261,
+        "maxlon": 13.4347533
+      },
+      "geometry": [
+        {
+          "lat": 52.4402564,
+          "lon": 13.4346185
+        },
+        {
+          "lat": 52.440259,
+          "lon": 13.4346959
+        },
+        {
+          "lat": 52.440261,
+          "lon": 13.4347533
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 673018976,
+      "bounds": {
+        "minlat": 52.4404901,
+        "minlon": 13.4346011,
+        "maxlat": 52.4404955,
+        "maxlon": 13.4347796
+      },
+      "geometry": [
+        {
+          "lat": 52.4404901,
+          "lon": 13.4346011
+        },
+        {
+          "lat": 52.4404925,
+          "lon": 13.4346785
+        },
+        {
+          "lat": 52.4404955,
+          "lon": 13.4347796
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 914934771,
+      "bounds": {
+        "minlat": 52.4409949,
+        "minlon": 13.4332674,
+        "maxlat": 52.4414587,
+        "maxlon": 13.4343136
+      },
+      "geometry": [
+        {
+          "lat": 52.4414587,
+          "lon": 13.4343136
+        },
+        {
+          "lat": 52.4413866,
+          "lon": 13.4341622
+        },
+        {
+          "lat": 52.4411573,
+          "lon": 13.4334155
+        },
+        {
+          "lat": 52.4409949,
+          "lon": 13.4332674
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 914934772,
+      "bounds": {
+        "minlat": 52.4411948,
+        "minlon": 13.4341622,
+        "maxlat": 52.4413866,
+        "maxlon": 13.4342827
+      },
+      "geometry": [
+        {
+          "lat": 52.4413866,
+          "lon": 13.4341622
+        },
+        {
+          "lat": 52.4411948,
+          "lon": 13.4342827
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 941900313,
+      "bounds": {
+        "minlat": 52.4397742,
+        "minlon": 13.4351572,
+        "maxlat": 52.440308,
+        "maxlon": 13.4364625
+      },
+      "geometry": [
+        {
+          "lat": 52.440308,
+          "lon": 13.4351572
+        },
+        {
+          "lat": 52.4403079,
+          "lon": 13.4351898
+        },
+        {
+          "lat": 52.4403078,
+          "lon": 13.4351958
+        },
+        {
+          "lat": 52.4403074,
+          "lon": 13.4352168
+        },
+        {
+          "lat": 52.440302,
+          "lon": 13.4353041
+        },
+        {
+          "lat": 52.4402953,
+          "lon": 13.4353633
+        },
+        {
+          "lat": 52.4402858,
+          "lon": 13.4354295
+        },
+        {
+          "lat": 52.4402699,
+          "lon": 13.4355004
+        },
+        {
+          "lat": 52.4402459,
+          "lon": 13.4355897
+        },
+        {
+          "lat": 52.4402164,
+          "lon": 13.435675
+        },
+        {
+          "lat": 52.4401852,
+          "lon": 13.4357439
+        },
+        {
+          "lat": 52.4401428,
+          "lon": 13.4358135
+        },
+        {
+          "lat": 52.4400157,
+          "lon": 13.436023
+        },
+        {
+          "lat": 52.4399602,
+          "lon": 13.4361143
+        },
+        {
+          "lat": 52.439932,
+          "lon": 13.4361644
+        },
+        {
+          "lat": 52.4398655,
+          "lon": 13.4362824
+        },
+        {
+          "lat": 52.4398168,
+          "lon": 13.4363735
+        },
+        {
+          "lat": 52.4397742,
+          "lon": 13.4364625
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "tertiary",
+        "is_sidepath:of:name": "Gutschmidtstraße",
+        "lit": "yes",
+        "oneway": "yes",
+        "separation:left": "no",
+        "smoothness": "good",
+        "source:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "traffic_sign": "none",
+        "width": "1.1"
+      }
+    },
+    {
+      "type": "way",
+      "id": 971256604,
+      "bounds": {
+        "minlat": 52.4398016,
+        "minlon": 13.4336147,
+        "maxlat": 52.4401744,
+        "maxlon": 13.4337071
+      },
+      "geometry": [
+        {
+          "lat": 52.4398016,
+          "lon": 13.4337071
+        },
+        {
+          "lat": 52.4398673,
+          "lon": 13.4336451
+        },
+        {
+          "lat": 52.4401744,
+          "lon": 13.4336147
+        }
+      ],
+      "tags": {
+        "access": "destination",
+        "highway": "service",
+        "lit": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 971256607,
+      "bounds": {
+        "minlat": 52.4398217,
+        "minlon": 13.4343871,
+        "maxlat": 52.4404128,
+        "maxlon": 13.4344353
+      },
+      "geometry": [
+        {
+          "lat": 52.4404128,
+          "lon": 13.4343871
+        },
+        {
+          "lat": 52.4398217,
+          "lon": 13.4344353
+        }
+      ],
+      "tags": {
+        "access": "customers",
+        "covered": "no",
+        "highway": "service",
+        "lit": "yes",
+        "service": "parking_aisle",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 971947794,
+      "bounds": {
+        "minlat": 52.44054,
+        "minlon": 13.4339113,
+        "maxlat": 52.4410736,
+        "maxlon": 13.4344532
+      },
+      "geometry": [
+        {
+          "lat": 52.4410736,
+          "lon": 13.4344532
+        },
+        {
+          "lat": 52.4410533,
+          "lon": 13.4343593
+        },
+        {
+          "lat": 52.4405807,
+          "lon": 13.4343995
+        },
+        {
+          "lat": 52.4405702,
+          "lon": 13.4343865
+        },
+        {
+          "lat": 52.4405649,
+          "lon": 13.4343718
+        },
+        {
+          "lat": 52.44054,
+          "lon": 13.4339113
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "service",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 971947795,
+      "bounds": {
+        "minlat": 52.4408956,
+        "minlon": 13.4337757,
+        "maxlat": 52.4410533,
+        "maxlon": 13.4343593
+      },
+      "geometry": [
+        {
+          "lat": 52.4410533,
+          "lon": 13.4343593
+        },
+        {
+          "lat": 52.44103,
+          "lon": 13.4342362
+        },
+        {
+          "lat": 52.4409335,
+          "lon": 13.4339021
+        },
+        {
+          "lat": 52.4408956,
+          "lon": 13.4337757
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "service",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1094527075,
+      "bounds": {
+        "minlat": 52.4400863,
+        "minlon": 13.4349182,
+        "maxlat": 52.4403711,
+        "maxlon": 13.4353268
+      },
+      "geometry": [
+        {
+          "lat": 52.4403711,
+          "lon": 13.4353268
+        },
+        {
+          "lat": 52.4403121,
+          "lon": 13.4353074
+        },
+        {
+          "lat": 52.440302,
+          "lon": 13.4353041
+        },
+        {
+          "lat": 52.4402833,
+          "lon": 13.4352979
+        },
+        {
+          "lat": 52.4401205,
+          "lon": 13.4352443
+        },
+        {
+          "lat": 52.440096,
+          "lon": 13.4351875
+        },
+        {
+          "lat": 52.4400926,
+          "lon": 13.4350958
+        },
+        {
+          "lat": 52.440091,
+          "lon": 13.435051
+        },
+        {
+          "lat": 52.4400899,
+          "lon": 13.4350198
+        },
+        {
+          "lat": 52.4400885,
+          "lon": 13.4349817
+        },
+        {
+          "lat": 52.4400863,
+          "lon": 13.4349182
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "emergency": "designated",
+        "highway": "service",
+        "service": "driveway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1094527076,
+      "bounds": {
+        "minlat": 52.4400306,
+        "minlon": 13.4355699,
+        "maxlat": 52.4402756,
+        "maxlon": 13.4357341
+      },
+      "geometry": [
+        {
+          "lat": 52.4400306,
+          "lon": 13.4355699
+        },
+        {
+          "lat": 52.4402002,
+          "lon": 13.4356588
+        },
+        {
+          "lat": 52.4402164,
+          "lon": 13.435675
+        },
+        {
+          "lat": 52.440226,
+          "lon": 13.4356846
+        },
+        {
+          "lat": 52.4402756,
+          "lon": 13.4357341
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "driveway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1094527077,
+      "bounds": {
+        "minlat": 52.4400052,
+        "minlon": 13.4360057,
+        "maxlat": 52.4400222,
+        "maxlon": 13.4360337
+      },
+      "geometry": [
+        {
+          "lat": 52.4400222,
+          "lon": 13.4360337
+        },
+        {
+          "lat": 52.4400157,
+          "lon": 13.436023
+        },
+        {
+          "lat": 52.4400052,
+          "lon": 13.4360057
+        }
+      ],
+      "tags": {
+        "footway": "link",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1094527078,
+      "bounds": {
+        "minlat": 52.4398542,
+        "minlon": 13.4360407,
+        "maxlat": 52.4399848,
+        "maxlon": 13.4362484
+      },
+      "geometry": [
+        {
+          "lat": 52.4398542,
+          "lon": 13.4360407
+        },
+        {
+          "lat": 52.4399227,
+          "lon": 13.4361496
+        },
+        {
+          "lat": 52.439932,
+          "lon": 13.4361644
+        },
+        {
+          "lat": 52.4399848,
+          "lon": 13.4362484
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "driveway",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1094527079,
+      "bounds": {
+        "minlat": 52.4394928,
+        "minlon": 13.4350614,
+        "maxlat": 52.4402862,
+        "maxlon": 13.4370764
+      },
+      "geometry": [
+        {
+          "lat": 52.4402862,
+          "lon": 13.4350614
+        },
+        {
+          "lat": 52.4402833,
+          "lon": 13.4352979
+        },
+        {
+          "lat": 52.4402625,
+          "lon": 13.4354463
+        },
+        {
+          "lat": 52.4402328,
+          "lon": 13.4355632
+        },
+        {
+          "lat": 52.4402002,
+          "lon": 13.4356588
+        },
+        {
+          "lat": 52.4401514,
+          "lon": 13.4357506
+        },
+        {
+          "lat": 52.4400052,
+          "lon": 13.4360057
+        },
+        {
+          "lat": 52.4399227,
+          "lon": 13.4361496
+        },
+        {
+          "lat": 52.4398051,
+          "lon": 13.4363547
+        },
+        {
+          "lat": 52.4397447,
+          "lon": 13.4364888
+        },
+        {
+          "lat": 52.4396382,
+          "lon": 13.4367094
+        },
+        {
+          "lat": 52.439512,
+          "lon": 13.4370099
+        },
+        {
+          "lat": 52.4394928,
+          "lon": 13.4370764
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "tertiary",
+        "is_sidepath:of:name": "Gutschmidtstraße",
+        "lit": "yes",
+        "separation:left": "no",
+        "surface": "paving_stones",
+        "traffic_mode:left": "bicycle"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1154531475,
+      "bounds": {
+        "minlat": 52.4414587,
+        "minlon": 13.4343136,
+        "maxlat": 52.441481,
+        "maxlon": 13.4345419
+      },
+      "geometry": [
+        {
+          "lat": 52.441481,
+          "lon": 13.4345419
+        },
+        {
+          "lat": 52.4414676,
+          "lon": 13.4344194
+        },
+        {
+          "lat": 52.4414648,
+          "lon": 13.4343932
+        },
+        {
+          "lat": 52.4414587,
+          "lon": 13.4343136
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1154531482,
+      "bounds": {
+        "minlat": 52.4405713,
+        "minlon": 13.4351775,
+        "maxlat": 52.4406334,
+        "maxlon": 13.435267
+      },
+      "geometry": [
+        {
+          "lat": 52.4406334,
+          "lon": 13.4351775
+        },
+        {
+          "lat": 52.4405954,
+          "lon": 13.4352036
+        },
+        {
+          "lat": 52.4405713,
+          "lon": 13.435267
+        }
+      ],
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1154531484,
+      "bounds": {
+        "minlat": 52.4407344,
+        "minlon": 13.4357575,
+        "maxlat": 52.4407655,
+        "maxlon": 13.4357994
+      },
+      "geometry": [
+        {
+          "lat": 52.4407344,
+          "lon": 13.4357994
+        },
+        {
+          "lat": 52.4407655,
+          "lon": 13.4357575
+        }
+      ],
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1154531485,
+      "bounds": {
+        "minlat": 52.4412093,
+        "minlon": 13.4348015,
+        "maxlat": 52.4412282,
+        "maxlon": 13.43532
+      },
+      "geometry": [
+        {
+          "lat": 52.4412093,
+          "lon": 13.4348015
+        },
+        {
+          "lat": 52.4412128,
+          "lon": 13.4349099
+        },
+        {
+          "lat": 52.4412141,
+          "lon": 13.4349505
+        },
+        {
+          "lat": 52.4412147,
+          "lon": 13.4349689
+        },
+        {
+          "lat": 52.441222,
+          "lon": 13.4351978
+        },
+        {
+          "lat": 52.4412282,
+          "lon": 13.43532
+        }
+      ],
+      "tags": {
+        "delivery": "no",
+        "highway": "service",
+        "maxspeed": "10",
+        "service": "driveway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1154531486,
+      "bounds": {
+        "minlat": 52.4411014,
+        "minlon": 13.4351464,
+        "maxlat": 52.441222,
+        "maxlon": 13.4352483
+      },
+      "geometry": [
+        {
+          "lat": 52.441222,
+          "lon": 13.4351978
+        },
+        {
+          "lat": 52.44121,
+          "lon": 13.4352339
+        },
+        {
+          "lat": 52.4411875,
+          "lon": 13.4352483
+        },
+        {
+          "lat": 52.4411644,
+          "lon": 13.4352389
+        },
+        {
+          "lat": 52.441137,
+          "lon": 13.435204
+        },
+        {
+          "lat": 52.4411014,
+          "lon": 13.4351464
+        }
+      ],
+      "tags": {
+        "delivery": "no",
+        "highway": "service",
+        "maxspeed": "10",
+        "service": "driveway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1195838001,
+      "bounds": {
+        "minlat": 52.4393064,
+        "minlon": 13.4333315,
+        "maxlat": 52.4439417,
+        "maxlon": 13.4346336
+      },
+      "geometry": [
+        {
+          "lat": 52.4393064,
+          "lon": 13.4346336
+        },
+        {
+          "lat": 52.4393841,
+          "lon": 13.434628
+        },
+        {
+          "lat": 52.4394309,
+          "lon": 13.4346246
+        },
+        {
+          "lat": 52.4396617,
+          "lon": 13.4346064
+        },
+        {
+          "lat": 52.439826,
+          "lon": 13.4345906
+        },
+        {
+          "lat": 52.4398513,
+          "lon": 13.4345882
+        },
+        {
+          "lat": 52.4400528,
+          "lon": 13.4345699
+        },
+        {
+          "lat": 52.440254,
+          "lon": 13.434548
+        },
+        {
+          "lat": 52.4404524,
+          "lon": 13.4345316
+        },
+        {
+          "lat": 52.4404879,
+          "lon": 13.4345285
+        },
+        {
+          "lat": 52.4405881,
+          "lon": 13.4345387
+        },
+        {
+          "lat": 52.4406627,
+          "lon": 13.4345289
+        },
+        {
+          "lat": 52.4406925,
+          "lon": 13.4345104
+        },
+        {
+          "lat": 52.440839,
+          "lon": 13.4345023
+        },
+        {
+          "lat": 52.4410761,
+          "lon": 13.4344751
+        },
+        {
+          "lat": 52.4411492,
+          "lon": 13.4344671
+        },
+        {
+          "lat": 52.4412206,
+          "lon": 13.4344528
+        },
+        {
+          "lat": 52.4413277,
+          "lon": 13.4344268
+        },
+        {
+          "lat": 52.4414648,
+          "lon": 13.4343932
+        },
+        {
+          "lat": 52.4415673,
+          "lon": 13.4343604
+        },
+        {
+          "lat": 52.4417553,
+          "lon": 13.4342914
+        },
+        {
+          "lat": 52.4418902,
+          "lon": 13.4342316
+        },
+        {
+          "lat": 52.4420472,
+          "lon": 13.4341652
+        },
+        {
+          "lat": 52.4422305,
+          "lon": 13.4340832
+        },
+        {
+          "lat": 52.4424312,
+          "lon": 13.4339999
+        },
+        {
+          "lat": 52.4426057,
+          "lon": 13.4339257
+        },
+        {
+          "lat": 52.4427271,
+          "lon": 13.4338737
+        },
+        {
+          "lat": 52.4427493,
+          "lon": 13.4338644
+        },
+        {
+          "lat": 52.4429603,
+          "lon": 13.4337761
+        },
+        {
+          "lat": 52.4431531,
+          "lon": 13.4336954
+        },
+        {
+          "lat": 52.4433078,
+          "lon": 13.4336303
+        },
+        {
+          "lat": 52.4434855,
+          "lon": 13.4335522
+        },
+        {
+          "lat": 52.4435408,
+          "lon": 13.4335296
+        },
+        {
+          "lat": 52.4436895,
+          "lon": 13.4334689
+        },
+        {
+          "lat": 52.4438036,
+          "lon": 13.4334234
+        },
+        {
+          "lat": 52.4438607,
+          "lon": 13.4334026
+        },
+        {
+          "lat": 52.4438785,
+          "lon": 13.4333953
+        },
+        {
+          "lat": 52.443902,
+          "lon": 13.433368
+        },
+        {
+          "lat": 52.4439162,
+          "lon": 13.4333367
+        },
+        {
+          "lat": 52.4439417,
+          "lon": 13.4333315
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1195838003,
+      "bounds": {
+        "minlat": 52.4404128,
+        "minlon": 13.4343841,
+        "maxlat": 52.4404524,
+        "maxlon": 13.4345316
+      },
+      "geometry": [
+        {
+          "lat": 52.4404524,
+          "lon": 13.4345316
+        },
+        {
+          "lat": 52.4404486,
+          "lon": 13.4343841
+        },
+        {
+          "lat": 52.4404128,
+          "lon": 13.4343871
+        }
+      ],
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1195838012,
+      "bounds": {
+        "minlat": 52.4402636,
+        "minlon": 13.4348297,
+        "maxlat": 52.4402697,
+        "maxlon": 13.4350069
+      },
+      "geometry": [
+        {
+          "lat": 52.4402636,
+          "lon": 13.4348297
+        },
+        {
+          "lat": 52.4402662,
+          "lon": 13.4349044
+        },
+        {
+          "lat": 52.4402678,
+          "lon": 13.434994
+        },
+        {
+          "lat": 52.4402697,
+          "lon": 13.4350069
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1195838013,
+      "bounds": {
+        "minlat": 52.440261,
+        "minlon": 13.4347533,
+        "maxlat": 52.4402636,
+        "maxlon": 13.4348297
+      },
+      "geometry": [
+        {
+          "lat": 52.440261,
+          "lon": 13.4347533
+        },
+        {
+          "lat": 52.4402636,
+          "lon": 13.4348297
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1195838014,
+      "bounds": {
+        "minlat": 52.4404812,
+        "minlon": 13.4340534,
+        "maxlat": 52.4436185,
+        "maxlon": 13.4350514
+      },
+      "geometry": [
+        {
+          "lat": 52.4404812,
+          "lon": 13.4350514
+        },
+        {
+          "lat": 52.44049,
+          "lon": 13.4350327
+        },
+        {
+          "lat": 52.4405029,
+          "lon": 13.4350242
+        },
+        {
+          "lat": 52.4405158,
+          "lon": 13.4350191
+        },
+        {
+          "lat": 52.4405329,
+          "lon": 13.4350166
+        },
+        {
+          "lat": 52.4408219,
+          "lon": 13.4349933
+        },
+        {
+          "lat": 52.4410515,
+          "lon": 13.4349748
+        },
+        {
+          "lat": 52.4412141,
+          "lon": 13.4349505
+        },
+        {
+          "lat": 52.4414376,
+          "lon": 13.4348961
+        },
+        {
+          "lat": 52.4415658,
+          "lon": 13.4348598
+        },
+        {
+          "lat": 52.4417875,
+          "lon": 13.4347779
+        },
+        {
+          "lat": 52.441853,
+          "lon": 13.434752
+        },
+        {
+          "lat": 52.442241,
+          "lon": 13.4345984
+        },
+        {
+          "lat": 52.4428524,
+          "lon": 13.4343565
+        },
+        {
+          "lat": 52.4430386,
+          "lon": 13.4342931
+        },
+        {
+          "lat": 52.4430646,
+          "lon": 13.4342843
+        },
+        {
+          "lat": 52.443226,
+          "lon": 13.4342194
+        },
+        {
+          "lat": 52.4432875,
+          "lon": 13.4341947
+        },
+        {
+          "lat": 52.4434157,
+          "lon": 13.4341432
+        },
+        {
+          "lat": 52.4436185,
+          "lon": 13.4340534
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "source:width": "ARCore",
+        "surface": "paving_stones",
+        "width": "2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1195838015,
+      "bounds": {
+        "minlat": 52.4404964,
+        "minlon": 13.434809,
+        "maxlat": 52.4405016,
+        "maxlon": 13.4349826
+      },
+      "geometry": [
+        {
+          "lat": 52.4404964,
+          "lon": 13.434809
+        },
+        {
+          "lat": 52.4404986,
+          "lon": 13.4348825
+        },
+        {
+          "lat": 52.4405013,
+          "lon": 13.4349724
+        },
+        {
+          "lat": 52.4405016,
+          "lon": 13.4349826
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1195838016,
+      "bounds": {
+        "minlat": 52.4404955,
+        "minlon": 13.4347796,
+        "maxlat": 52.4404964,
+        "maxlon": 13.434809
+      },
+      "geometry": [
+        {
+          "lat": 52.4404955,
+          "lon": 13.4347796
+        },
+        {
+          "lat": 52.4404964,
+          "lon": 13.434809
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1195873056,
+      "bounds": {
+        "minlat": 52.4405287,
+        "minlon": 13.4336896,
+        "maxlat": 52.4444567,
+        "maxlon": 13.4349765
+      },
+      "geometry": [
+        {
+          "lat": 52.4405287,
+          "lon": 13.4349715
+        },
+        {
+          "lat": 52.4405709,
+          "lon": 13.4349765
+        },
+        {
+          "lat": 52.4406719,
+          "lon": 13.4349686
+        },
+        {
+          "lat": 52.4408205,
+          "lon": 13.4349555
+        },
+        {
+          "lat": 52.4410187,
+          "lon": 13.4349381
+        },
+        {
+          "lat": 52.4412128,
+          "lon": 13.4349099
+        },
+        {
+          "lat": 52.4412814,
+          "lon": 13.4348999
+        },
+        {
+          "lat": 52.4414365,
+          "lon": 13.4348554
+        },
+        {
+          "lat": 52.4415236,
+          "lon": 13.4348303
+        },
+        {
+          "lat": 52.4415622,
+          "lon": 13.4348159
+        },
+        {
+          "lat": 52.4417932,
+          "lon": 13.4347293
+        },
+        {
+          "lat": 52.4418464,
+          "lon": 13.4347086
+        },
+        {
+          "lat": 52.442082,
+          "lon": 13.434617
+        },
+        {
+          "lat": 52.4422354,
+          "lon": 13.4345612
+        },
+        {
+          "lat": 52.4423475,
+          "lon": 13.4345205
+        },
+        {
+          "lat": 52.4426554,
+          "lon": 13.4343948
+        },
+        {
+          "lat": 52.4428468,
+          "lon": 13.4343208
+        },
+        {
+          "lat": 52.4429633,
+          "lon": 13.4342758
+        },
+        {
+          "lat": 52.4430249,
+          "lon": 13.4342521
+        },
+        {
+          "lat": 52.4432166,
+          "lon": 13.4341782
+        },
+        {
+          "lat": 52.4432773,
+          "lon": 13.4341548
+        },
+        {
+          "lat": 52.4433013,
+          "lon": 13.4341456
+        },
+        {
+          "lat": 52.4434011,
+          "lon": 13.4341053
+        },
+        {
+          "lat": 52.4435353,
+          "lon": 13.4340513
+        },
+        {
+          "lat": 52.4436145,
+          "lon": 13.4340224
+        },
+        {
+          "lat": 52.4436788,
+          "lon": 13.433999
+        },
+        {
+          "lat": 52.4438802,
+          "lon": 13.4339255
+        },
+        {
+          "lat": 52.444099,
+          "lon": 13.4338449
+        },
+        {
+          "lat": 52.444156,
+          "lon": 13.433821
+        },
+        {
+          "lat": 52.4442641,
+          "lon": 13.4337824
+        },
+        {
+          "lat": 52.4443513,
+          "lon": 13.4337506
+        },
+        {
+          "lat": 52.444377,
+          "lon": 13.4337393
+        },
+        {
+          "lat": 52.4444122,
+          "lon": 13.4337238
+        },
+        {
+          "lat": 52.4444567,
+          "lon": 13.4336896
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "lit": "yes",
+        "mapillary": "6491474690960860",
+        "oneway": "yes",
+        "smoothness": "intermediate",
+        "source:width": "ARCore;7,5 Pfastersteine a 20cm",
+        "surface": "paving_stones",
+        "surface:colour": "red",
+        "traffic_mode:right": "foot",
+        "traffic_sign": "none",
+        "width": "1.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1195873057,
+      "bounds": {
+        "minlat": 52.4402935,
+        "minlon": 13.4346179,
+        "maxlat": 52.4403056,
+        "maxlon": 13.4349903
+      },
+      "geometry": [
+        {
+          "lat": 52.4402935,
+          "lon": 13.4346179
+        },
+        {
+          "lat": 52.4402958,
+          "lon": 13.4346928
+        },
+        {
+          "lat": 52.4403024,
+          "lon": 13.4349017
+        },
+        {
+          "lat": 52.4403056,
+          "lon": 13.4349903
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "cycleway": "crossing",
+        "highway": "cycleway",
+        "lit": "yes",
+        "oneway": "yes",
+        "source:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "width": "1.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1195873058,
+      "bounds": {
+        "minlat": 52.4390771,
+        "minlon": 13.4351066,
+        "maxlat": 52.4404502,
+        "maxlon": 13.4385251
+      },
+      "geometry": [
+        {
+          "lat": 52.4390771,
+          "lon": 13.4385251
+        },
+        {
+          "lat": 52.4391088,
+          "lon": 13.4384469
+        },
+        {
+          "lat": 52.439157,
+          "lon": 13.4383353
+        },
+        {
+          "lat": 52.4392492,
+          "lon": 13.4381004
+        },
+        {
+          "lat": 52.4394619,
+          "lon": 13.4375586
+        },
+        {
+          "lat": 52.4395372,
+          "lon": 13.4373697
+        },
+        {
+          "lat": 52.4395899,
+          "lon": 13.4372432
+        },
+        {
+          "lat": 52.4396595,
+          "lon": 13.437076
+        },
+        {
+          "lat": 52.4397547,
+          "lon": 13.4368656
+        },
+        {
+          "lat": 52.4398075,
+          "lon": 13.4367485
+        },
+        {
+          "lat": 52.4398529,
+          "lon": 13.4366652
+        },
+        {
+          "lat": 52.4399352,
+          "lon": 13.4365056
+        },
+        {
+          "lat": 52.4400949,
+          "lon": 13.4362243
+        },
+        {
+          "lat": 52.4402285,
+          "lon": 13.4359994
+        },
+        {
+          "lat": 52.4402965,
+          "lon": 13.4358797
+        },
+        {
+          "lat": 52.4403111,
+          "lon": 13.4358515
+        },
+        {
+          "lat": 52.440345,
+          "lon": 13.4357767
+        },
+        {
+          "lat": 52.4403723,
+          "lon": 13.4357038
+        },
+        {
+          "lat": 52.440396,
+          "lon": 13.4356234
+        },
+        {
+          "lat": 52.4404163,
+          "lon": 13.4355353
+        },
+        {
+          "lat": 52.4404323,
+          "lon": 13.4354447
+        },
+        {
+          "lat": 52.4404428,
+          "lon": 13.4353504
+        },
+        {
+          "lat": 52.4404492,
+          "lon": 13.4352349
+        },
+        {
+          "lat": 52.4404502,
+          "lon": 13.4351492
+        },
+        {
+          "lat": 52.4404453,
+          "lon": 13.4351066
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "tertiary",
+        "is_sidepath:of:name": "Gutschmidtstraße",
+        "lit": "yes",
+        "oneway": "yes",
+        "smoothness": "good",
+        "source:width": "Luftbild 2025",
+        "surface": "paving_stones",
+        "traffic_sign": "none",
+        "width": "1.1"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1197740294,
+      "bounds": {
+        "minlat": 52.4404879,
+        "minlon": 13.4345285,
+        "maxlat": 52.4404901,
+        "maxlon": 13.4346011
+      },
+      "geometry": [
+        {
+          "lat": 52.4404879,
+          "lon": 13.4345285
+        },
+        {
+          "lat": 52.4404887,
+          "lon": 13.4345566
+        },
+        {
+          "lat": 52.4404901,
+          "lon": 13.4346011
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1197740295,
+      "bounds": {
+        "minlat": 52.4405016,
+        "minlon": 13.4349826,
+        "maxlat": 52.4405029,
+        "maxlon": 13.4350242
+      },
+      "geometry": [
+        {
+          "lat": 52.4405016,
+          "lon": 13.4349826
+        },
+        {
+          "lat": 52.4405029,
+          "lon": 13.4350242
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1197740296,
+      "bounds": {
+        "minlat": 52.4403022,
+        "minlon": 13.435052,
+        "maxlat": 52.4404492,
+        "maxlon": 13.4350606
+      },
+      "geometry": [
+        {
+          "lat": 52.4403022,
+          "lon": 13.4350606
+        },
+        {
+          "lat": 52.4403081,
+          "lon": 13.4350602
+        },
+        {
+          "lat": 52.4403759,
+          "lon": 13.4350563
+        },
+        {
+          "lat": 52.4404423,
+          "lon": 13.4350524
+        },
+        {
+          "lat": 52.4404492,
+          "lon": 13.435052
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1197740297,
+      "bounds": {
+        "minlat": 52.4404492,
+        "minlon": 13.4350514,
+        "maxlat": 52.4404812,
+        "maxlon": 13.435052
+      },
+      "geometry": [
+        {
+          "lat": 52.4404492,
+          "lon": 13.435052
+        },
+        {
+          "lat": 52.4404812,
+          "lon": 13.4350514
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1197740298,
+      "bounds": {
+        "minlat": 52.4404325,
+        "minlon": 13.4345615,
+        "maxlat": 52.440434,
+        "maxlon": 13.4346075
+      },
+      "geometry": [
+        {
+          "lat": 52.440434,
+          "lon": 13.4346075
+        },
+        {
+          "lat": 52.4404325,
+          "lon": 13.4345615
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "tertiary",
+        "is_sidepath:of:name": "Gutschmidtstraße",
+        "lit": "yes",
+        "oneway": "yes",
+        "smoothness": "good",
+        "source:width": "Luftbild 2025",
+        "surface": "paving_stones",
+        "traffic_sign": "none",
+        "width": "1.1"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1197740299,
+      "bounds": {
+        "minlat": 52.440434,
+        "minlon": 13.4346075,
+        "maxlat": 52.4404453,
+        "maxlon": 13.4351066
+      },
+      "geometry": [
+        {
+          "lat": 52.4404453,
+          "lon": 13.4351066
+        },
+        {
+          "lat": 52.4404437,
+          "lon": 13.4350911
+        },
+        {
+          "lat": 52.4404423,
+          "lon": 13.4350524
+        },
+        {
+          "lat": 52.4404403,
+          "lon": 13.4349782
+        },
+        {
+          "lat": 52.4404388,
+          "lon": 13.4348891
+        },
+        {
+          "lat": 52.4404352,
+          "lon": 13.4346823
+        },
+        {
+          "lat": 52.440434,
+          "lon": 13.4346075
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "cycleway": "crossing",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "tertiary",
+        "is_sidepath:of:name": "Gutschmidtstraße",
+        "lit": "yes",
+        "oneway": "yes",
+        "smoothness": "excellent",
+        "source:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "traffic_sign": "none",
+        "width": "1.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1197740300,
+      "bounds": {
+        "minlat": 52.4402413,
+        "minlon": 13.4349715,
+        "maxlat": 52.4405287,
+        "maxlon": 13.4349953
+      },
+      "geometry": [
+        {
+          "lat": 52.4402413,
+          "lon": 13.4349953
+        },
+        {
+          "lat": 52.4402423,
+          "lon": 13.4349953
+        },
+        {
+          "lat": 52.4402678,
+          "lon": 13.434994
+        },
+        {
+          "lat": 52.4403056,
+          "lon": 13.4349903
+        },
+        {
+          "lat": 52.4403742,
+          "lon": 13.4349851
+        },
+        {
+          "lat": 52.4404403,
+          "lon": 13.4349782
+        },
+        {
+          "lat": 52.4405013,
+          "lon": 13.4349724
+        },
+        {
+          "lat": 52.4405287,
+          "lon": 13.4349715
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "cycleway": "crossing",
+        "highway": "cycleway",
+        "lit": "yes",
+        "marking:both": "dashed_line",
+        "oneway": "yes",
+        "source:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "surface:colour": "none",
+        "traffic_sign": "none",
+        "width": "1.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1197740301,
+      "bounds": {
+        "minlat": 52.4403056,
+        "minlon": 13.4349903,
+        "maxlat": 52.4403081,
+        "maxlon": 13.4351572
+      },
+      "geometry": [
+        {
+          "lat": 52.4403056,
+          "lon": 13.4349903
+        },
+        {
+          "lat": 52.4403081,
+          "lon": 13.4350602
+        },
+        {
+          "lat": 52.4403081,
+          "lon": 13.4351133
+        },
+        {
+          "lat": 52.440308,
+          "lon": 13.4351572
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "cycleway": "crossing",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "tertiary",
+        "is_sidepath:of:name": "Gutschmidtstraße",
+        "lit": "yes",
+        "oneway": "yes",
+        "source:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "width": "1.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1197740302,
+      "bounds": {
+        "minlat": 52.4402921,
+        "minlon": 13.4345737,
+        "maxlat": 52.4402935,
+        "maxlon": 13.4346179
+      },
+      "geometry": [
+        {
+          "lat": 52.4402921,
+          "lon": 13.4345737
+        },
+        {
+          "lat": 52.4402931,
+          "lon": 13.4346045
+        },
+        {
+          "lat": 52.4402935,
+          "lon": 13.4346179
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "tertiary",
+        "is_sidepath:of:name": "Gutschmidtstraße",
+        "lit": "yes",
+        "oneway": "yes",
+        "smoothness": "good",
+        "source:width": "Luftbild 2025",
+        "surface": "paving_stones",
+        "traffic_sign": "none",
+        "width": "1.1"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1197740303,
+      "bounds": {
+        "minlat": 52.440254,
+        "minlon": 13.434548,
+        "maxlat": 52.4402564,
+        "maxlon": 13.4346185
+      },
+      "geometry": [
+        {
+          "lat": 52.440254,
+          "lon": 13.434548
+        },
+        {
+          "lat": 52.440255,
+          "lon": 13.4345764
+        },
+        {
+          "lat": 52.4402564,
+          "lon": 13.4346185
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1197740304,
+      "bounds": {
+        "minlat": 52.4402697,
+        "minlon": 13.4350069,
+        "maxlat": 52.4402713,
+        "maxlon": 13.4350546
+      },
+      "geometry": [
+        {
+          "lat": 52.4402697,
+          "lon": 13.4350069
+        },
+        {
+          "lat": 52.4402713,
+          "lon": 13.4350546
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1197740305,
+      "bounds": {
+        "minlat": 52.4393426,
+        "minlon": 13.4350404,
+        "maxlat": 52.4403022,
+        "maxlon": 13.4351196
+      },
+      "geometry": [
+        {
+          "lat": 52.4393426,
+          "lon": 13.4351196
+        },
+        {
+          "lat": 52.4393966,
+          "lon": 13.4351147
+        },
+        {
+          "lat": 52.4396195,
+          "lon": 13.4350946
+        },
+        {
+          "lat": 52.440091,
+          "lon": 13.435051
+        },
+        {
+          "lat": 52.4402098,
+          "lon": 13.4350404
+        },
+        {
+          "lat": 52.4402713,
+          "lon": 13.4350546
+        },
+        {
+          "lat": 52.4402862,
+          "lon": 13.4350614
+        },
+        {
+          "lat": 52.4403022,
+          "lon": 13.4350606
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1197740323,
+      "bounds": {
+        "minlat": 52.4362023,
+        "minlon": 13.4339376,
+        "maxlat": 52.4426604,
+        "maxlon": 13.4348592
+      },
+      "geometry": [
+        {
+          "lat": 52.4426604,
+          "lon": 13.4339376
+        },
+        {
+          "lat": 52.4422359,
+          "lon": 13.4341159
+        },
+        {
+          "lat": 52.4417042,
+          "lon": 13.4343445
+        },
+        {
+          "lat": 52.4414676,
+          "lon": 13.4344194
+        },
+        {
+          "lat": 52.4412485,
+          "lon": 13.4344781
+        },
+        {
+          "lat": 52.4410766,
+          "lon": 13.4345054
+        },
+        {
+          "lat": 52.440864,
+          "lon": 13.4345275
+        },
+        {
+          "lat": 52.4405883,
+          "lon": 13.4345499
+        },
+        {
+          "lat": 52.4404887,
+          "lon": 13.4345566
+        },
+        {
+          "lat": 52.4404325,
+          "lon": 13.4345615
+        },
+        {
+          "lat": 52.4402921,
+          "lon": 13.4345737
+        },
+        {
+          "lat": 52.440255,
+          "lon": 13.4345764
+        },
+        {
+          "lat": 52.4398266,
+          "lon": 13.434611
+        },
+        {
+          "lat": 52.4393848,
+          "lon": 13.4346518
+        },
+        {
+          "lat": 52.4392851,
+          "lon": 13.4346601
+        },
+        {
+          "lat": 52.439225,
+          "lon": 13.4346652
+        },
+        {
+          "lat": 52.4391115,
+          "lon": 13.4346746
+        },
+        {
+          "lat": 52.438584,
+          "lon": 13.4347107
+        },
+        {
+          "lat": 52.4383508,
+          "lon": 13.4347266
+        },
+        {
+          "lat": 52.4378759,
+          "lon": 13.4347591
+        },
+        {
+          "lat": 52.4373826,
+          "lon": 13.4347928
+        },
+        {
+          "lat": 52.4369286,
+          "lon": 13.4348239
+        },
+        {
+          "lat": 52.4362023,
+          "lon": 13.4348592
+        }
+      ],
+      "tags": {
+        "buffer:left": "2.2",
+        "check_date": "2025-07-15",
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "tertiary",
+        "is_sidepath:of:name": "Buckower Damm",
+        "lit": "yes",
+        "mapillary": "697525446424773",
+        "oneway": "yes",
+        "separation:left": "kerb",
+        "separation:right": "no",
+        "smoothness": "good",
+        "source:width": "7,5 Verbundsteine à 20cm",
+        "surface": "paving_stones",
+        "traffic_mode:right": "foot",
+        "traffic_sign": "none",
+        "width": "1.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1227201475,
+      "bounds": {
+        "minlat": 52.4371716,
+        "minlon": 13.4350514,
+        "maxlat": 52.4404812,
+        "maxlon": 13.4440659
+      },
+      "geometry": [
+        {
+          "lat": 52.4371716,
+          "lon": 13.4440659
+        },
+        {
+          "lat": 52.4372303,
+          "lon": 13.4437373
+        },
+        {
+          "lat": 52.4373087,
+          "lon": 13.4433765
+        },
+        {
+          "lat": 52.4373996,
+          "lon": 13.4430213
+        },
+        {
+          "lat": 52.437491,
+          "lon": 13.4427027
+        },
+        {
+          "lat": 52.4375573,
+          "lon": 13.4424943
+        },
+        {
+          "lat": 52.4376503,
+          "lon": 13.4422018
+        },
+        {
+          "lat": 52.4378751,
+          "lon": 13.441639
+        },
+        {
+          "lat": 52.4380888,
+          "lon": 13.4411041
+        },
+        {
+          "lat": 52.4384311,
+          "lon": 13.4402479
+        },
+        {
+          "lat": 52.4384564,
+          "lon": 13.4401832
+        },
+        {
+          "lat": 52.4386907,
+          "lon": 13.4395943
+        },
+        {
+          "lat": 52.439099,
+          "lon": 13.4385478
+        },
+        {
+          "lat": 52.4394213,
+          "lon": 13.437732
+        },
+        {
+          "lat": 52.4396126,
+          "lon": 13.4372551
+        },
+        {
+          "lat": 52.4398092,
+          "lon": 13.436797
+        },
+        {
+          "lat": 52.4398706,
+          "lon": 13.4366835
+        },
+        {
+          "lat": 52.4402035,
+          "lon": 13.4360853
+        },
+        {
+          "lat": 52.4403099,
+          "lon": 13.435904
+        },
+        {
+          "lat": 52.4403258,
+          "lon": 13.4358769
+        },
+        {
+          "lat": 52.4403901,
+          "lon": 13.4357128
+        },
+        {
+          "lat": 52.4404374,
+          "lon": 13.4355296
+        },
+        {
+          "lat": 52.4404623,
+          "lon": 13.4353435
+        },
+        {
+          "lat": 52.4404682,
+          "lon": 13.4352398
+        },
+        {
+          "lat": 52.4404708,
+          "lon": 13.4351753
+        },
+        {
+          "lat": 52.4404708,
+          "lon": 13.435132
+        },
+        {
+          "lat": 52.4404708,
+          "lon": 13.4351014
+        },
+        {
+          "lat": 52.4404724,
+          "lon": 13.4350853
+        },
+        {
+          "lat": 52.4404755,
+          "lon": 13.43507
+        },
+        {
+          "lat": 52.4404812,
+          "lon": 13.4350514
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1227201476,
+      "bounds": {
+        "minlat": 52.4415545,
+        "minlon": 13.434722,
+        "maxlat": 52.441569,
+        "maxlon": 13.4348989
+      },
+      "geometry": [
+        {
+          "lat": 52.441569,
+          "lon": 13.4348989
+        },
+        {
+          "lat": 52.4415658,
+          "lon": 13.4348598
+        },
+        {
+          "lat": 52.4415622,
+          "lon": 13.4348159
+        },
+        {
+          "lat": 52.4415545,
+          "lon": 13.434722
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "service": "driveway",
+        "smoothness": "good",
+        "surface": "paving_stones",
+        "width": "3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1293722539,
+      "bounds": {
+        "minlat": 52.4385615,
+        "minlon": 13.4303506,
+        "maxlat": 52.4428657,
+        "maxlon": 13.4336185
+      },
+      "geometry": [
+        {
+          "lat": 52.4385615,
+          "lon": 13.433205
+        },
+        {
+          "lat": 52.438604,
+          "lon": 13.4332802
+        },
+        {
+          "lat": 52.4386678,
+          "lon": 13.4333681
+        },
+        {
+          "lat": 52.4387166,
+          "lon": 13.4334175
+        },
+        {
+          "lat": 52.4387546,
+          "lon": 13.433456
+        },
+        {
+          "lat": 52.4388337,
+          "lon": 13.4335209
+        },
+        {
+          "lat": 52.4389128,
+          "lon": 13.4335691
+        },
+        {
+          "lat": 52.4389741,
+          "lon": 13.4335936
+        },
+        {
+          "lat": 52.4390142,
+          "lon": 13.4336088
+        },
+        {
+          "lat": 52.4390732,
+          "lon": 13.4336136
+        },
+        {
+          "lat": 52.4391468,
+          "lon": 13.4336185
+        },
+        {
+          "lat": 52.4392185,
+          "lon": 13.4336055
+        },
+        {
+          "lat": 52.4392991,
+          "lon": 13.4335842
+        },
+        {
+          "lat": 52.4393737,
+          "lon": 13.4335467
+        },
+        {
+          "lat": 52.4394394,
+          "lon": 13.4335026
+        },
+        {
+          "lat": 52.4414983,
+          "lon": 13.4318163
+        },
+        {
+          "lat": 52.44197,
+          "lon": 13.4313902
+        },
+        {
+          "lat": 52.4420466,
+          "lon": 13.4313054
+        },
+        {
+          "lat": 52.4428657,
+          "lon": 13.4303506
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1293722548,
+      "bounds": {
+        "minlat": 52.4384259,
+        "minlon": 13.4312911,
+        "maxlat": 52.4406267,
+        "maxlon": 13.433484
+      },
+      "geometry": [
+        {
+          "lat": 52.4406202,
+          "lon": 13.4322616
+        },
+        {
+          "lat": 52.4406267,
+          "lon": 13.4323829
+        },
+        {
+          "lat": 52.44031,
+          "lon": 13.4326411
+        },
+        {
+          "lat": 52.4398845,
+          "lon": 13.4329882
+        },
+        {
+          "lat": 52.4398057,
+          "lon": 13.4330524
+        },
+        {
+          "lat": 52.4393555,
+          "lon": 13.4334195
+        },
+        {
+          "lat": 52.4393357,
+          "lon": 13.4334294
+        },
+        {
+          "lat": 52.4392853,
+          "lon": 13.4334548
+        },
+        {
+          "lat": 52.4391898,
+          "lon": 13.4334809
+        },
+        {
+          "lat": 52.4391065,
+          "lon": 13.433484
+        },
+        {
+          "lat": 52.4390419,
+          "lon": 13.4334763
+        },
+        {
+          "lat": 52.4389782,
+          "lon": 13.4334594
+        },
+        {
+          "lat": 52.438908,
+          "lon": 13.4334256
+        },
+        {
+          "lat": 52.438862,
+          "lon": 13.4333961
+        },
+        {
+          "lat": 52.4388481,
+          "lon": 13.4333872
+        },
+        {
+          "lat": 52.4387695,
+          "lon": 13.4333166
+        },
+        {
+          "lat": 52.4387039,
+          "lon": 13.4332429
+        },
+        {
+          "lat": 52.4386851,
+          "lon": 13.4332158
+        },
+        {
+          "lat": 52.4386515,
+          "lon": 13.4331676
+        },
+        {
+          "lat": 52.4385916,
+          "lon": 13.4330617
+        },
+        {
+          "lat": 52.4385223,
+          "lon": 13.4328912
+        },
+        {
+          "lat": 52.4384774,
+          "lon": 13.4327407
+        },
+        {
+          "lat": 52.4384502,
+          "lon": 13.4326148
+        },
+        {
+          "lat": 52.4384467,
+          "lon": 13.4325836
+        },
+        {
+          "lat": 52.4384334,
+          "lon": 13.4324658
+        },
+        {
+          "lat": 52.4384259,
+          "lon": 13.4323138
+        },
+        {
+          "lat": 52.4384324,
+          "lon": 13.4321986
+        },
+        {
+          "lat": 52.4384465,
+          "lon": 13.4320742
+        },
+        {
+          "lat": 52.4384689,
+          "lon": 13.4319591
+        },
+        {
+          "lat": 52.4384929,
+          "lon": 13.4318792
+        },
+        {
+          "lat": 52.4385251,
+          "lon": 13.4317809
+        },
+        {
+          "lat": 52.4385719,
+          "lon": 13.4316811
+        },
+        {
+          "lat": 52.4386215,
+          "lon": 13.4315936
+        },
+        {
+          "lat": 52.4386786,
+          "lon": 13.4315153
+        },
+        {
+          "lat": 52.4387358,
+          "lon": 13.4314523
+        },
+        {
+          "lat": 52.4388041,
+          "lon": 13.4313955
+        },
+        {
+          "lat": 52.4388762,
+          "lon": 13.4313494
+        },
+        {
+          "lat": 52.438966,
+          "lon": 13.4313141
+        },
+        {
+          "lat": 52.4390381,
+          "lon": 13.4312957
+        },
+        {
+          "lat": 52.4391121,
+          "lon": 13.4312911
+        },
+        {
+          "lat": 52.4391355,
+          "lon": 13.4312962
+        },
+        {
+          "lat": 52.4391954,
+          "lon": 13.4313095
+        },
+        {
+          "lat": 52.4392797,
+          "lon": 13.4313402
+        },
+        {
+          "lat": 52.4393602,
+          "lon": 13.4313878
+        },
+        {
+          "lat": 52.4394613,
+          "lon": 13.4314569
+        },
+        {
+          "lat": 52.4396981,
+          "lon": 13.4316214
+        },
+        {
+          "lat": 52.4398261,
+          "lon": 13.4317103
+        },
+        {
+          "lat": 52.4406202,
+          "lon": 13.4322616
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1300389737,
+      "bounds": {
+        "minlat": 52.440369,
+        "minlon": 13.4346662,
+        "maxlat": 52.4406774,
+        "maxlon": 13.4346867
+      },
+      "geometry": [
+        {
+          "lat": 52.4406774,
+          "lon": 13.4346662
+        },
+        {
+          "lat": 52.4406553,
+          "lon": 13.4346677
+        },
+        {
+          "lat": 52.4405337,
+          "lon": 13.4346758
+        },
+        {
+          "lat": 52.4404925,
+          "lon": 13.4346785
+        },
+        {
+          "lat": 52.4404352,
+          "lon": 13.4346823
+        },
+        {
+          "lat": 52.440369,
+          "lon": 13.4346867
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Buckower Damm",
+        "name:etymology:wikidata": "Q644410",
+        "note": "1-185 ungerade, 20-170 gerade: Britz; 187-331 ungerade, 176-332 gerade: Buckow",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12349",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|through|none"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1300389738,
+      "bounds": {
+        "minlat": 52.4405881,
+        "minlon": 13.4345387,
+        "maxlat": 52.4405889,
+        "maxlon": 13.4345742
+      },
+      "geometry": [
+        {
+          "lat": 52.4405889,
+          "lon": 13.4345742
+        },
+        {
+          "lat": 52.4405883,
+          "lon": 13.4345499
+        },
+        {
+          "lat": 52.4405881,
+          "lon": 13.4345387
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1300404587,
+      "bounds": {
+        "minlat": 52.4414587,
+        "minlon": 13.4340905,
+        "maxlat": 52.4414769,
+        "maxlon": 13.4343136
+      },
+      "geometry": [
+        {
+          "lat": 52.4414587,
+          "lon": 13.4343136
+        },
+        {
+          "lat": 52.4414769,
+          "lon": 13.4340905
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "maxspeed": "10",
+        "service": "driveway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1300404588,
+      "bounds": {
+        "minlat": 52.4410736,
+        "minlon": 13.4344532,
+        "maxlat": 52.4410834,
+        "maxlon": 13.4346346
+      },
+      "geometry": [
+        {
+          "lat": 52.4410834,
+          "lon": 13.4346346
+        },
+        {
+          "lat": 52.4410766,
+          "lon": 13.4345054
+        },
+        {
+          "lat": 52.4410761,
+          "lon": 13.4344751
+        },
+        {
+          "lat": 52.4410736,
+          "lon": 13.4344532
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "driveway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1300651165,
+      "bounds": {
+        "minlat": 52.4282962,
+        "minlon": 13.4349953,
+        "maxlat": 52.4402413,
+        "maxlon": 13.4354427
+      },
+      "geometry": [
+        {
+          "lat": 52.4282962,
+          "lon": 13.4352148
+        },
+        {
+          "lat": 52.4283495,
+          "lon": 13.4352116
+        },
+        {
+          "lat": 52.4287176,
+          "lon": 13.4352029
+        },
+        {
+          "lat": 52.4287822,
+          "lon": 13.4352012
+        },
+        {
+          "lat": 52.4299281,
+          "lon": 13.4351547
+        },
+        {
+          "lat": 52.4300997,
+          "lon": 13.4351552
+        },
+        {
+          "lat": 52.4302509,
+          "lon": 13.435161
+        },
+        {
+          "lat": 52.4303303,
+          "lon": 13.4351686
+        },
+        {
+          "lat": 52.4306166,
+          "lon": 13.4351959
+        },
+        {
+          "lat": 52.4307207,
+          "lon": 13.4352044
+        },
+        {
+          "lat": 52.4314962,
+          "lon": 13.4352777
+        },
+        {
+          "lat": 52.4319885,
+          "lon": 13.4353303
+        },
+        {
+          "lat": 52.4321057,
+          "lon": 13.4353392
+        },
+        {
+          "lat": 52.4321744,
+          "lon": 13.4353487
+        },
+        {
+          "lat": 52.4322655,
+          "lon": 13.4353579
+        },
+        {
+          "lat": 52.4324856,
+          "lon": 13.4353861
+        },
+        {
+          "lat": 52.4331093,
+          "lon": 13.4354367
+        },
+        {
+          "lat": 52.4332677,
+          "lon": 13.4354426
+        },
+        {
+          "lat": 52.4334989,
+          "lon": 13.4354427
+        },
+        {
+          "lat": 52.433802,
+          "lon": 13.4354293
+        },
+        {
+          "lat": 52.4342159,
+          "lon": 13.4354023
+        },
+        {
+          "lat": 52.4346412,
+          "lon": 13.435375
+        },
+        {
+          "lat": 52.4348423,
+          "lon": 13.4353641
+        },
+        {
+          "lat": 52.4353164,
+          "lon": 13.4353347
+        },
+        {
+          "lat": 52.435387,
+          "lon": 13.4353309
+        },
+        {
+          "lat": 52.4360211,
+          "lon": 13.4352968
+        },
+        {
+          "lat": 52.4360718,
+          "lon": 13.4352929
+        },
+        {
+          "lat": 52.4361568,
+          "lon": 13.4352872
+        },
+        {
+          "lat": 52.4365016,
+          "lon": 13.4352639
+        },
+        {
+          "lat": 52.4370894,
+          "lon": 13.4352287
+        },
+        {
+          "lat": 52.4378351,
+          "lon": 13.4351841
+        },
+        {
+          "lat": 52.4383583,
+          "lon": 13.4351579
+        },
+        {
+          "lat": 52.4385937,
+          "lon": 13.4351433
+        },
+        {
+          "lat": 52.4387611,
+          "lon": 13.4351331
+        },
+        {
+          "lat": 52.4391553,
+          "lon": 13.4351072
+        },
+        {
+          "lat": 52.4391756,
+          "lon": 13.4350871
+        },
+        {
+          "lat": 52.4392367,
+          "lon": 13.4350834
+        },
+        {
+          "lat": 52.4393211,
+          "lon": 13.4350776
+        },
+        {
+          "lat": 52.4393955,
+          "lon": 13.4350712
+        },
+        {
+          "lat": 52.4394063,
+          "lon": 13.4350701
+        },
+        {
+          "lat": 52.4394365,
+          "lon": 13.4350672
+        },
+        {
+          "lat": 52.4394582,
+          "lon": 13.4350799
+        },
+        {
+          "lat": 52.4400899,
+          "lon": 13.4350198
+        },
+        {
+          "lat": 52.4402026,
+          "lon": 13.4350124
+        },
+        {
+          "lat": 52.4402153,
+          "lon": 13.4349981
+        },
+        {
+          "lat": 52.4402413,
+          "lon": 13.4349953
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "tertiary",
+        "is_sidepath:of:name": "Buckower Damm",
+        "lit": "yes",
+        "oneway": "yes",
+        "source:width": "ARCore;15x Pfastersteine 10cm",
+        "surface": "paving_stones",
+        "surface:colour": "red",
+        "traffic_mode:right": "foot",
+        "traffic_sign": "none",
+        "width": "1.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1300710015,
+      "bounds": {
+        "minlat": 52.4408197,
+        "minlon": 13.4349359,
+        "maxlat": 52.4408219,
+        "maxlon": 13.4349933
+      },
+      "geometry": [
+        {
+          "lat": 52.4408197,
+          "lon": 13.4349359
+        },
+        {
+          "lat": 52.4408205,
+          "lon": 13.4349555
+        },
+        {
+          "lat": 52.4408219,
+          "lon": 13.4349933
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1300710017,
+      "bounds": {
+        "minlat": 52.4412282,
+        "minlon": 13.43532,
+        "maxlat": 52.4412503,
+        "maxlon": 13.4354873
+      },
+      "geometry": [
+        {
+          "lat": 52.4412282,
+          "lon": 13.43532
+        },
+        {
+          "lat": 52.4412503,
+          "lon": 13.4354873
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1300710020,
+      "bounds": {
+        "minlat": 52.4418329,
+        "minlon": 13.43462,
+        "maxlat": 52.4418655,
+        "maxlon": 13.4348336
+      },
+      "geometry": [
+        {
+          "lat": 52.4418655,
+          "lon": 13.4348336
+        },
+        {
+          "lat": 52.441853,
+          "lon": 13.434752
+        },
+        {
+          "lat": 52.4418464,
+          "lon": 13.4347086
+        },
+        {
+          "lat": 52.4418329,
+          "lon": 13.43462
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1370680774,
+      "bounds": {
+        "minlat": 52.4403726,
+        "minlon": 13.4348186,
+        "maxlat": 52.4410841,
+        "maxlon": 13.4348963
+      },
+      "geometry": [
+        {
+          "lat": 52.4403726,
+          "lon": 13.4348963
+        },
+        {
+          "lat": 52.4404388,
+          "lon": 13.4348891
+        },
+        {
+          "lat": 52.4404986,
+          "lon": 13.4348825
+        },
+        {
+          "lat": 52.4405465,
+          "lon": 13.4348773
+        },
+        {
+          "lat": 52.4408088,
+          "lon": 13.4348487
+        },
+        {
+          "lat": 52.4410137,
+          "lon": 13.4348263
+        },
+        {
+          "lat": 52.4410841,
+          "lon": 13.4348186
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "share_busway",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:traffic_sign": "DE:245,1022-10",
+        "cycleway:right:width": "2.7",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Buckower Damm",
+        "name:etymology:wikidata": "Q644410",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_stopping @ (Mo-Fr 06:00-09:00; Sa 09:00-14:00)",
+        "parking:right:restriction:reason:conditional": "bus_lane @ (Mo-Fr 06:00-09:00; Sa 09:00-14:00)",
+        "postal_code": "12349",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:width": "Luftbild 2024",
+        "source:traffic_sign:mapillary": "2953986654890817",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1435897601,
+      "bounds": {
+        "minlat": 52.439791,
+        "minlon": 13.4359121,
+        "maxlat": 52.4401847,
+        "maxlon": 13.436601
+      },
+      "geometry": [
+        {
+          "lat": 52.4401847,
+          "lon": 13.4359121
+        },
+        {
+          "lat": 52.4400227,
+          "lon": 13.4361806
+        },
+        {
+          "lat": 52.4399848,
+          "lon": 13.4362484
+        },
+        {
+          "lat": 52.4398686,
+          "lon": 13.4364565
+        },
+        {
+          "lat": 52.439791,
+          "lon": 13.436601
+        }
+      ],
+      "tags": {
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Gutschmidtstraße",
+        "name:etymology:wikidata": "Q84975742",
+        "note": "Übergeordnete Straße, Stufe III",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:left:restriction:conditional": "no_stopping @ (Mo-Fr 06:00-09:00)",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12359",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1435897602,
+      "bounds": {
+        "minlat": 52.4401847,
+        "minlon": 13.4356098,
+        "maxlat": 52.4403209,
+        "maxlon": 13.4359121
+      },
+      "geometry": [
+        {
+          "lat": 52.4403209,
+          "lon": 13.4356098
+        },
+        {
+          "lat": 52.4402756,
+          "lon": 13.4357341
+        },
+        {
+          "lat": 52.4401847,
+          "lon": 13.4359121
+        }
+      ],
+      "tags": {
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "4",
+        "lanes:backward": "2",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Gutschmidtstraße",
+        "name:etymology:wikidata": "Q84975742",
+        "note": "Übergeordnete Straße, Stufe III",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:left:restriction:conditional": "no_stopping @ (Mo-Fr 06:00-09:00)",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12359",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes:backward": "left;right|right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1436166101,
+      "bounds": {
+        "minlat": 52.4418654,
+        "minlon": 13.4337099,
+        "maxlat": 52.4434747,
+        "maxlon": 13.4343961
+      },
+      "geometry": [
+        {
+          "lat": 52.4434747,
+          "lon": 13.4337099
+        },
+        {
+          "lat": 52.4433755,
+          "lon": 13.4337526
+        },
+        {
+          "lat": 52.4427998,
+          "lon": 13.4340059
+        },
+        {
+          "lat": 52.4422551,
+          "lon": 13.4342334
+        },
+        {
+          "lat": 52.4418654,
+          "lon": 13.4343961
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Buckower Damm",
+        "name:etymology:wikidata": "Q644410",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_stopping @ (Mo-Fr 14:00-19:00)",
+        "postal_code": "12349",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1442158070,
+      "bounds": {
+        "minlat": 52.4393134,
+        "minlon": 13.4347408,
+        "maxlat": 52.4397202,
+        "maxlon": 13.4347747
+      },
+      "geometry": [
+        {
+          "lat": 52.4397202,
+          "lon": 13.4347408
+        },
+        {
+          "lat": 52.4393879,
+          "lon": 13.4347685
+        },
+        {
+          "lat": 52.4393134,
+          "lon": 13.4347747
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Buckower Damm",
+        "name:etymology:wikidata": "Q644410",
+        "note": "1-185 ungerade, 20-170 gerade: Britz; 187-331 ungerade, 176-332 gerade: Buckow",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12349",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1479656363,
+      "bounds": {
+        "minlat": 52.441481,
+        "minlon": 13.4343961,
+        "maxlat": 52.4418654,
+        "maxlon": 13.4345419
+      },
+      "geometry": [
+        {
+          "lat": 52.4418654,
+          "lon": 13.4343961
+        },
+        {
+          "lat": 52.441481,
+          "lon": 13.4345419
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Buckower Damm",
+        "name:etymology:wikidata": "Q644410",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12349",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    }
+  ]
+}
