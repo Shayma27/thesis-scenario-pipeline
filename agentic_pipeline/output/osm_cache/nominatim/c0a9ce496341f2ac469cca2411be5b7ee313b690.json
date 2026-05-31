@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 144633385,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "relation",
+    "osm_id": 6876977,
+    "lat": "52.5295601",
+    "lon": "13.4546575",
+    "category": "railway",
+    "type": "platform",
+    "place_rank": 30,
+    "importance": 8.875486381318407e-05,
+    "addresstype": "railway",
+    "name": "Landsberger Allee",
+    "display_name": "Landsberger Allee, Storkower Straße, Blumenviertel, Prenzlauer Berg, Pankow, Berlin, 10407, Deutschland",
+    "boundingbox": [
+      "52.5288727",
+      "52.5302476",
+      "13.4539621",
+      "13.4554671"
+    ]
+  }
+]

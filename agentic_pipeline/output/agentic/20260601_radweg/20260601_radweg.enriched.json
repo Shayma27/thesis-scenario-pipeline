@@ -1,0 +1,609 @@
+{
+  "schema_version": "0.1",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "20260601_radweg",
+    "date": null,
+    "time": null,
+    "raw_text": "Verkehrsunfall auf der Landsberger Allee Ecke Storkower Straße in Berlin. Ein Lkw bog rechts ab und erfasste dabei eine Radfahrerin, die auf dem Radweg parallel zur Fahrbahn fuhr. Die Radfahrerin wurde schwer verletzt."
+  },
+  "classification": {
+    "scenario_type": "right_turn_conflict",
+    "confidence": 1.0
+  },
+  "location": {
+    "city": "Berlin",
+    "primary_road": "Landsberger Allee",
+    "secondary_road": "Storkower Straße",
+    "osm_query": "Landsberger Allee / Storkower Straße, Berlin, Germany",
+    "osm_roads": [
+      "Landsberger Allee",
+      "Storkower Straße"
+    ],
+    "house_number_reference": null,
+    "location_type": "intersection",
+    "direction_references": [
+      "unknown"
+    ]
+  },
+  "road_context": {
+    "traffic_light_present": "yes",
+    "bike_facility_type": "separated_cycle_track",
+    "parking_present": "unknown",
+    "number_of_lanes_mentioned": "unknown"
+  },
+  "participants": [
+    {
+      "id": "truck_1",
+      "class": "motor_vehicle",
+      "type": "truck",
+      "maneuver": "turn_right",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "violated_priority"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "unknown",
+      "traffic_rule_status": "priority"
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across_cycle_track",
+    "collision_happened": true,
+    "collision_description": "A truck turned right and hit a cyclist riding on a separated cycle track.",
+    "severity_text": "serious"
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "road_length_m": 100,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 2.0,
+      "road_geometry": "line",
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "separated_cycle_track",
+      "primary_bike_facility_position": "right",
+      "motor_lane_count": 3
+    },
+    "openscenario": {
+      "simulation_duration_s": 10,
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -4,
+          "initial_s_m": 10.0,
+          "initial_speed_mps": 4.5
+        },
+        "truck_1": {
+          "vehicle_category": "truck",
+          "initial_road_id": 0,
+          "initial_lane_id": -3,
+          "initial_s_m": 30.0,
+          "initial_speed_mps": 3.0
+        }
+      },
+      "cyclist_lateral_position": "right",
+      "conflict": {
+        "conflict_s_m": 50.0,
+        "trigger_time_s": 1.0
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "separated_cycle_track",
+      "source": "explicit_from_report",
+      "reason": "The report explicitly describes the cycling infrastructure."
+    },
+    {
+      "parameter": "motor_lane_count",
+      "value_used": 3,
+      "source": "osm_tag",
+      "reason": "OpenDRIVE motor-lane count was derived from nearby OSM lanes tags."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "right",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    },
+    {
+      "parameter": "cyclist_1.vehicle_category",
+      "value_used": "bicycle",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -4,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_s_m",
+      "value_used": 10.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 4.5,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.vehicle_category",
+      "value_used": "truck",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.initial_lane_id",
+      "value_used": -3,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.initial_s_m",
+      "value_used": 30.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "truck_1.initial_speed_mps",
+      "value_used": 3.0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'right_turn_conflict': derived from participant type and maneuver; not specified in report or OSM."
+    }
+  ],
+  "osm_context": {
+    "query": "Landsberger Allee / Storkower Straße, Berlin, Germany",
+    "queries_tried": [
+      "Landsberger Allee / Storkower Straße, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 28247402,
+        "name": "Landsberger Allee",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5284114,
+            "lon": 13.4547771
+          },
+          {
+            "lat": 52.5283796,
+            "lon": 13.4546625
+          },
+          {
+            "lat": 52.5281948,
+            "lon": 13.4541752
+          },
+          {
+            "lat": 52.5281746,
+            "lon": 13.4541218
+          },
+          {
+            "lat": 52.5280786,
+            "lon": 13.4538187
+          },
+          {
+            "lat": 52.5279877,
+            "lon": 13.4534387
+          },
+          {
+            "lat": 52.5278749,
+            "lon": 13.4529349
+          }
+        ]
+      },
+      {
+        "osm_id": 28312386,
+        "name": "Landsberger Allee Brücke",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5287044,
+            "lon": 13.45605
+          },
+          {
+            "lat": 52.5287004,
+            "lon": 13.4560317
+          },
+          {
+            "lat": 52.5284993,
+            "lon": 13.4550945
+          },
+          {
+            "lat": 52.528471,
+            "lon": 13.454992
+          }
+        ]
+      },
+      {
+        "osm_id": 281675489,
+        "name": "Storkower Straße",
+        "highway": "service",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5305459,
+            "lon": 13.4551406
+          },
+          {
+            "lat": 52.5305695,
+            "lon": 13.455205
+          },
+          {
+            "lat": 52.5306907,
+            "lon": 13.4555511
+          },
+          {
+            "lat": 52.5307177,
+            "lon": 13.4556283
+          },
+          {
+            "lat": 52.5307263,
+            "lon": 13.4556534
+          },
+          {
+            "lat": 52.5307542,
+            "lon": 13.4557239
+          },
+          {
+            "lat": 52.5308045,
+            "lon": 13.455851
+          }
+        ]
+      },
+      {
+        "osm_id": 390476289,
+        "name": "S Landsberger Allee",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5299391,
+            "lon": 13.4565149
+          },
+          {
+            "lat": 52.5300431,
+            "lon": 13.4564117
+          }
+        ]
+      },
+      {
+        "osm_id": 420112515,
+        "name": "Storkower Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "5",
+        "lanes_forward": "3",
+        "lanes_backward": "2",
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:both": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5303895,
+            "lon": 13.4562414
+          },
+          {
+            "lat": 52.530175,
+            "lon": 13.4564656
+          },
+          {
+            "lat": 52.5300069,
+            "lon": 13.4566411
+          },
+          {
+            "lat": 52.529928,
+            "lon": 13.4567235
+          },
+          {
+            "lat": 52.5298665,
+            "lon": 13.4567878
+          },
+          {
+            "lat": 52.5297984,
+            "lon": 13.4568549
+          }
+        ]
+      },
+      {
+        "osm_id": 1457567462,
+        "name": "Storkower Straße",
+        "highway": "service",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5305459,
+            "lon": 13.4551406
+          },
+          {
+            "lat": 52.5306017,
+            "lon": 13.4550833
+          },
+          {
+            "lat": 52.5314234,
+            "lon": 13.4542408
+          },
+          {
+            "lat": 52.5315647,
+            "lon": 13.4541014
+          }
+        ]
+      },
+      {
+        "osm_id": 1457567469,
+        "name": "Storkower Straße",
+        "highway": "service",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5303353,
+            "lon": 13.4544959
+          },
+          {
+            "lat": 52.5303492,
+            "lon": 13.4545963
+          },
+          {
+            "lat": 52.5305163,
+            "lon": 13.4550569
+          },
+          {
+            "lat": 52.5305459,
+            "lon": 13.4551406
+          }
+        ]
+      },
+      {
+        "osm_id": 1487237219,
+        "name": "Landsberger Allee",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.528471,
+            "lon": 13.454992
+          },
+          {
+            "lat": 52.5284114,
+            "lon": 13.4547771
+          }
+        ]
+      },
+      {
+        "osm_id": 1487237220,
+        "name": "Landsberger Allee",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5287159,
+            "lon": 13.4561067
+          },
+          {
+            "lat": 52.5287044,
+            "lon": 13.45605
+          }
+        ]
+      },
+      {
+        "osm_id": 1487237221,
+        "name": "Landsberger Allee",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5288039,
+            "lon": 13.4565404
+          },
+          {
+            "lat": 52.5287159,
+            "lon": 13.4561067
+          }
+        ]
+      }
+    ],
+    "traffic_signals_nearby": "yes",
+    "notes": [],
+    "geocoded": {
+      "display_name": "Landsberger Allee, Storkower Straße, Blumenviertel, Prenzlauer Berg, Pankow, Berlin, 10407, Deutschland",
+      "lat": 52.5295601,
+      "lon": 13.4546575,
+      "osm_type": "relation",
+      "osm_id": 6876977
+    },
+    "bike_facility": {
+      "type": "separated_cycle_track",
+      "position": "right",
+      "source": "explicit_from_report",
+      "osm_evidence": {
+        "bike_facility_type": "separated_cycle_track",
+        "position": "right",
+        "tags": {
+          "cycleway:right": "separate"
+        }
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "right",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

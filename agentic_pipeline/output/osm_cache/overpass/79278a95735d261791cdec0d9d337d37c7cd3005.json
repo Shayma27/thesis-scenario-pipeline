@@ -1,0 +1,3499 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-05-31T22:11:09Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 5041613520,
+      "lat": 52.4474775,
+      "lon": 13.5934931,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5041613621,
+      "lat": 52.4472472,
+      "lon": 13.5938585,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "way",
+      "id": 10275148,
+      "bounds": {
+        "minlat": 52.4458243,
+        "minlon": 13.5936593,
+        "maxlat": 52.44718,
+        "maxlon": 13.5938563
+      },
+      "geometry": [
+        {
+          "lat": 52.4458243,
+          "lon": 13.5936593
+        },
+        {
+          "lat": 52.4459631,
+          "lon": 13.5937528
+        },
+        {
+          "lat": 52.4461546,
+          "lon": 13.5937913
+        },
+        {
+          "lat": 52.4463452,
+          "lon": 13.5938292
+        },
+        {
+          "lat": 52.44718,
+          "lon": 13.5938563
+        }
+      ],
+      "tags": {
+        "access:lanes": "yes|yes|no",
+        "bicycle": "use_sidepath",
+        "bus:lanes": "yes|yes|designated",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 09:00-20:00)",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25016355,
+      "bounds": {
+        "minlat": 52.4450623,
+        "minlon": 13.5936176,
+        "maxlat": 52.4458243,
+        "maxlon": 13.5936593
+      },
+      "geometry": [
+        {
+          "lat": 52.4458243,
+          "lon": 13.5936593
+        },
+        {
+          "lat": 52.4456041,
+          "lon": 13.5936472
+        },
+        {
+          "lat": 52.4455743,
+          "lon": 13.5936455
+        },
+        {
+          "lat": 52.4455226,
+          "lon": 13.5936427
+        },
+        {
+          "lat": 52.4453705,
+          "lon": 13.5936343
+        },
+        {
+          "lat": 52.4450748,
+          "lon": 13.5936183
+        },
+        {
+          "lat": 52.4450623,
+          "lon": 13.5936176
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 09:00-20:00)",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "parking:both": "no",
+        "parking:both:restriction": "no_parking",
+        "postal_code": "12559",
+        "sidewalk": "both",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25815241,
+      "bounds": {
+        "minlat": 52.4461412,
+        "minlon": 13.5945263,
+        "maxlat": 52.4461998,
+        "maxlon": 13.5958293
+      },
+      "geometry": [
+        {
+          "lat": 52.4461567,
+          "lon": 13.5945263
+        },
+        {
+          "lat": 52.4461516,
+          "lon": 13.5951986
+        },
+        {
+          "lat": 52.4461412,
+          "lon": 13.5957624
+        },
+        {
+          "lat": 52.4461998,
+          "lon": 13.5958293
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "postal_code": "12559",
+        "service": "driveway",
+        "sidewalk": "right",
+        "vehicle": "destination",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25815244,
+      "bounds": {
+        "minlat": 52.445751,
+        "minlon": 13.5944822,
+        "maxlat": 52.445944,
+        "maxlon": 13.5976872
+      },
+      "geometry": [
+        {
+          "lat": 52.4458104,
+          "lon": 13.5944822
+        },
+        {
+          "lat": 52.4457773,
+          "lon": 13.5945674
+        },
+        {
+          "lat": 52.4457761,
+          "lon": 13.5946135
+        },
+        {
+          "lat": 52.4457555,
+          "lon": 13.5954083
+        },
+        {
+          "lat": 52.4457514,
+          "lon": 13.5957523
+        },
+        {
+          "lat": 52.445751,
+          "lon": 13.5959747
+        },
+        {
+          "lat": 52.445765,
+          "lon": 13.5966038
+        },
+        {
+          "lat": 52.4457771,
+          "lon": 13.5968242
+        },
+        {
+          "lat": 52.4458269,
+          "lon": 13.5972063
+        },
+        {
+          "lat": 52.4458553,
+          "lon": 13.5974138
+        },
+        {
+          "lat": 52.4458932,
+          "lon": 13.5976029
+        },
+        {
+          "lat": 52.445944,
+          "lon": 13.5976872
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "parking:both": "no",
+        "smoothness": "very_bad",
+        "surface": "gravel",
+        "tracktype": "grade2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25815595,
+      "bounds": {
+        "minlat": 52.4460822,
+        "minlon": 13.5918241,
+        "maxlat": 52.4463981,
+        "maxlon": 13.5924875
+      },
+      "geometry": [
+        {
+          "lat": 52.4463819,
+          "lon": 13.5924875
+        },
+        {
+          "lat": 52.4461209,
+          "lon": 13.59247
+        },
+        {
+          "lat": 52.4460963,
+          "lon": 13.5922335
+        },
+        {
+          "lat": 52.4460973,
+          "lon": 13.5919716
+        },
+        {
+          "lat": 52.4460822,
+          "lon": 13.5918979
+        },
+        {
+          "lat": 52.4460849,
+          "lon": 13.5918241
+        },
+        {
+          "lat": 52.4463208,
+          "lon": 13.5918352
+        },
+        {
+          "lat": 52.4463981,
+          "lon": 13.5918833
+        },
+        {
+          "lat": 52.4463967,
+          "lon": 13.5919512
+        },
+        {
+          "lat": 52.4463819,
+          "lon": 13.5924875
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "service",
+        "oneway": "yes",
+        "operator:type": "private",
+        "service": "driveway",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25815671,
+      "bounds": {
+        "minlat": 52.4454977,
+        "minlon": 13.58836,
+        "maxlat": 52.4467555,
+        "maxlon": 13.5924371
+      },
+      "geometry": [
+        {
+          "lat": 52.4467555,
+          "lon": 13.5924371
+        },
+        {
+          "lat": 52.44675,
+          "lon": 13.5918472
+        },
+        {
+          "lat": 52.4465225,
+          "lon": 13.5912948
+        },
+        {
+          "lat": 52.4462626,
+          "lon": 13.590706
+        },
+        {
+          "lat": 52.4459362,
+          "lon": 13.589958
+        },
+        {
+          "lat": 52.4456481,
+          "lon": 13.5893153
+        },
+        {
+          "lat": 52.4455198,
+          "lon": 13.5890184
+        },
+        {
+          "lat": 52.4454977,
+          "lon": 13.5885471
+        },
+        {
+          "lat": 52.4455003,
+          "lon": 13.588455
+        },
+        {
+          "lat": 52.4455047,
+          "lon": 13.588448
+        },
+        {
+          "lat": 52.4455599,
+          "lon": 13.58836
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "maxspeed": "10",
+        "name": "Wendenschloßstraße",
+        "name:etymology:wikidata": "Q1362915",
+        "operator:type": "private",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:markings": "yes",
+        "parking:left:orientation": "parallel",
+        "parking:right": "street_side",
+        "parking:right:access": "private",
+        "parking:right:markings": "yes",
+        "parking:right:orientation": "perpendicular",
+        "postal_code": "12559",
+        "smoothness": "intermediate",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25815754,
+      "bounds": {
+        "minlat": 52.4474774,
+        "minlon": 13.5928797,
+        "maxlat": 52.4476871,
+        "maxlon": 13.5929823
+      },
+      "geometry": [
+        {
+          "lat": 52.4474774,
+          "lon": 13.5929823
+        },
+        {
+          "lat": 52.4475791,
+          "lon": 13.5929428
+        },
+        {
+          "lat": 52.4476871,
+          "lon": 13.5928797
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 32204596,
+      "bounds": {
+        "minlat": 52.4463475,
+        "minlon": 13.5936705,
+        "maxlat": 52.447001,
+        "maxlon": 13.5936991
+      },
+      "geometry": [
+        {
+          "lat": 52.447001,
+          "lon": 13.5936991
+        },
+        {
+          "lat": 52.4464798,
+          "lon": 13.5936731
+        },
+        {
+          "lat": 52.4463475,
+          "lon": 13.5936705
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 09:00-20:00)",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "12559",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 39761535,
+      "bounds": {
+        "minlat": 52.4467006,
+        "minlon": 13.5924371,
+        "maxlat": 52.4467555,
+        "maxlon": 13.5929298
+      },
+      "geometry": [
+        {
+          "lat": 52.4467006,
+          "lon": 13.5929298
+        },
+        {
+          "lat": 52.446709,
+          "lon": 13.5924885
+        },
+        {
+          "lat": 52.4467555,
+          "lon": 13.5924371
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 39968007,
+      "bounds": {
+        "minlat": 52.4463562,
+        "minlon": 13.5924587,
+        "maxlat": 52.4473032,
+        "maxlon": 13.5929465
+      },
+      "geometry": [
+        {
+          "lat": 52.4473032,
+          "lon": 13.5924587
+        },
+        {
+          "lat": 52.447269,
+          "lon": 13.5924982
+        },
+        {
+          "lat": 52.4472196,
+          "lon": 13.5925555
+        },
+        {
+          "lat": 52.4471687,
+          "lon": 13.5926195
+        },
+        {
+          "lat": 52.4471684,
+          "lon": 13.5926883
+        },
+        {
+          "lat": 52.4471672,
+          "lon": 13.5929465
+        },
+        {
+          "lat": 52.447011,
+          "lon": 13.5929409
+        },
+        {
+          "lat": 52.4467587,
+          "lon": 13.5929319
+        },
+        {
+          "lat": 52.4467116,
+          "lon": 13.5929302
+        },
+        {
+          "lat": 52.4467006,
+          "lon": 13.5929298
+        },
+        {
+          "lat": 52.4464155,
+          "lon": 13.5929187
+        },
+        {
+          "lat": 52.4463562,
+          "lon": 13.5929154
+        }
+      ],
+      "tags": {
+        "access": "customers",
+        "highway": "service",
+        "lit": "yes",
+        "service": "parking_aisle",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 39968506,
+      "bounds": {
+        "minlat": 52.4471643,
+        "minlon": 13.5933803,
+        "maxlat": 52.4472883,
+        "maxlon": 13.5935704
+      },
+      "geometry": [
+        {
+          "lat": 52.4472883,
+          "lon": 13.5935704
+        },
+        {
+          "lat": 52.4471872,
+          "lon": 13.5934637
+        },
+        {
+          "lat": 52.4471643,
+          "lon": 13.5933803
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 40606644,
+      "bounds": {
+        "minlat": 52.4466182,
+        "minlon": 13.5916778,
+        "maxlat": 52.4468739,
+        "maxlon": 13.5918781
+      },
+      "geometry": [
+        {
+          "lat": 52.4466182,
+          "lon": 13.5917946
+        },
+        {
+          "lat": 52.4466938,
+          "lon": 13.5918781
+        },
+        {
+          "lat": 52.44675,
+          "lon": 13.5918472
+        },
+        {
+          "lat": 52.4468739,
+          "lon": 13.5916778
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 40606645,
+      "bounds": {
+        "minlat": 52.4465263,
+        "minlon": 13.5917946,
+        "maxlat": 52.4466182,
+        "maxlon": 13.5918897
+      },
+      "geometry": [
+        {
+          "lat": 52.4465263,
+          "lon": 13.5918897
+        },
+        {
+          "lat": 52.4466001,
+          "lon": 13.591813
+        },
+        {
+          "lat": 52.4466182,
+          "lon": 13.5917946
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "footway",
+        "tunnel": "building_passage"
+      }
+    },
+    {
+      "type": "way",
+      "id": 42064993,
+      "bounds": {
+        "minlat": 52.4454586,
+        "minlon": 13.5881017,
+        "maxlat": 52.4474774,
+        "maxlon": 13.5929823
+      },
+      "geometry": [
+        {
+          "lat": 52.4454586,
+          "lon": 13.5881017
+        },
+        {
+          "lat": 52.4455599,
+          "lon": 13.58836
+        },
+        {
+          "lat": 52.4456452,
+          "lon": 13.5885599
+        },
+        {
+          "lat": 52.4457418,
+          "lon": 13.5887873
+        },
+        {
+          "lat": 52.4458415,
+          "lon": 13.5890222
+        },
+        {
+          "lat": 52.4458457,
+          "lon": 13.5890322
+        },
+        {
+          "lat": 52.445939,
+          "lon": 13.5892518
+        },
+        {
+          "lat": 52.4460206,
+          "lon": 13.5894442
+        },
+        {
+          "lat": 52.4461359,
+          "lon": 13.5897157
+        },
+        {
+          "lat": 52.446233,
+          "lon": 13.5899497
+        },
+        {
+          "lat": 52.4464616,
+          "lon": 13.5904774
+        },
+        {
+          "lat": 52.4464721,
+          "lon": 13.5905022
+        },
+        {
+          "lat": 52.4465945,
+          "lon": 13.5907898
+        },
+        {
+          "lat": 52.4467129,
+          "lon": 13.5910679
+        },
+        {
+          "lat": 52.4467672,
+          "lon": 13.5911955
+        },
+        {
+          "lat": 52.4468544,
+          "lon": 13.5914003
+        },
+        {
+          "lat": 52.4470723,
+          "lon": 13.5919124
+        },
+        {
+          "lat": 52.447115,
+          "lon": 13.5920128
+        },
+        {
+          "lat": 52.4471846,
+          "lon": 13.5921763
+        },
+        {
+          "lat": 52.4472132,
+          "lon": 13.5922434
+        },
+        {
+          "lat": 52.4473032,
+          "lon": 13.5924587
+        },
+        {
+          "lat": 52.4473666,
+          "lon": 13.5926112
+        },
+        {
+          "lat": 52.4474432,
+          "lon": 13.5927957
+        },
+        {
+          "lat": 52.4474774,
+          "lon": 13.5929823
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "maxspeed:type": "DE:urban",
+        "name": "Wendenschloßstraße",
+        "name:etymology:wikidata": "Q1362915",
+        "parking:both": "separate",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 43791300,
+      "bounds": {
+        "minlat": 52.4474779,
+        "minlon": 13.5936945,
+        "maxlat": 52.4474802,
+        "maxlon": 13.5938781
+      },
+      "geometry": [
+        {
+          "lat": 52.4474779,
+          "lon": 13.5936945
+        },
+        {
+          "lat": 52.4474802,
+          "lon": 13.5938781
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Wendenschloßstraße",
+        "name:etymology:wikidata": "Q1362915",
+        "oneway": "no",
+        "parking:both": "no",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 44450617,
+      "bounds": {
+        "minlat": 52.4460413,
+        "minlon": 13.5912409,
+        "maxlat": 52.4460551,
+        "maxlon": 13.591825
+      },
+      "geometry": [
+        {
+          "lat": 52.4460413,
+          "lon": 13.591825
+        },
+        {
+          "lat": 52.4460551,
+          "lon": 13.5912409
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 46504500,
+      "bounds": {
+        "minlat": 52.4465225,
+        "minlon": 13.5910679,
+        "maxlat": 52.4467129,
+        "maxlon": 13.5912948
+      },
+      "geometry": [
+        {
+          "lat": 52.4467129,
+          "lon": 13.5910679
+        },
+        {
+          "lat": 52.4466899,
+          "lon": 13.5910946
+        },
+        {
+          "lat": 52.4466851,
+          "lon": 13.5911001
+        },
+        {
+          "lat": 52.446646,
+          "lon": 13.5911448
+        },
+        {
+          "lat": 52.4465225,
+          "lon": 13.5912948
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 46504502,
+      "bounds": {
+        "minlat": 52.4448779,
+        "minlon": 13.5865802,
+        "maxlat": 52.4473751,
+        "maxlon": 13.593573
+      },
+      "geometry": [
+        {
+          "lat": 52.4448779,
+          "lon": 13.5865802
+        },
+        {
+          "lat": 52.4449085,
+          "lon": 13.5867635
+        },
+        {
+          "lat": 52.4450239,
+          "lon": 13.587102
+        },
+        {
+          "lat": 52.445064,
+          "lon": 13.5870741
+        },
+        {
+          "lat": 52.4451519,
+          "lon": 13.5873447
+        },
+        {
+          "lat": 52.4452103,
+          "lon": 13.5875247
+        },
+        {
+          "lat": 52.445362,
+          "lon": 13.5879758
+        },
+        {
+          "lat": 52.4453967,
+          "lon": 13.5881651
+        },
+        {
+          "lat": 52.4454448,
+          "lon": 13.5882911
+        },
+        {
+          "lat": 52.4455047,
+          "lon": 13.588448
+        },
+        {
+          "lat": 52.4456693,
+          "lon": 13.5888614
+        },
+        {
+          "lat": 52.4457704,
+          "lon": 13.5891154
+        },
+        {
+          "lat": 52.4457877,
+          "lon": 13.5891589
+        },
+        {
+          "lat": 52.4460659,
+          "lon": 13.5898001
+        },
+        {
+          "lat": 52.4463876,
+          "lon": 13.5905494
+        },
+        {
+          "lat": 52.4463922,
+          "lon": 13.5905599
+        },
+        {
+          "lat": 52.446646,
+          "lon": 13.5911448
+        },
+        {
+          "lat": 52.4468739,
+          "lon": 13.5916778
+        },
+        {
+          "lat": 52.4471498,
+          "lon": 13.5923175
+        },
+        {
+          "lat": 52.4472107,
+          "lon": 13.5923783
+        },
+        {
+          "lat": 52.447269,
+          "lon": 13.5924982
+        },
+        {
+          "lat": 52.4473172,
+          "lon": 13.5926111
+        },
+        {
+          "lat": 52.4473392,
+          "lon": 13.5926782
+        },
+        {
+          "lat": 52.4473751,
+          "lon": 13.5928436
+        },
+        {
+          "lat": 52.4473683,
+          "lon": 13.593573
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 148738460,
+      "bounds": {
+        "minlat": 52.445959,
+        "minlon": 13.5945177,
+        "maxlat": 52.4476906,
+        "maxlon": 13.5946094
+      },
+      "geometry": [
+        {
+          "lat": 52.445959,
+          "lon": 13.5945177
+        },
+        {
+          "lat": 52.4460465,
+          "lon": 13.5945215
+        },
+        {
+          "lat": 52.4461567,
+          "lon": 13.5945263
+        },
+        {
+          "lat": 52.4471824,
+          "lon": 13.594582
+        },
+        {
+          "lat": 52.4476606,
+          "lon": 13.594608
+        },
+        {
+          "lat": 52.4476906,
+          "lon": 13.5946094
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "operator:type": "private",
+        "parking:left": "lane",
+        "parking:left:orientation": "parallel",
+        "parking:right": "separate",
+        "postal_code": "12559",
+        "service": "driveway",
+        "sidewalk": "left",
+        "vehicle": "destination",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 154319950,
+      "bounds": {
+        "minlat": 52.4461516,
+        "minlon": 13.5951986,
+        "maxlat": 52.4471318,
+        "maxlon": 13.59526
+      },
+      "geometry": [
+        {
+          "lat": 52.4471318,
+          "lon": 13.59526
+        },
+        {
+          "lat": 52.4463204,
+          "lon": 13.5952092
+        },
+        {
+          "lat": 52.4461516,
+          "lon": 13.5951986
+        }
+      ],
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 233408395,
+      "bounds": {
+        "minlat": 52.4459807,
+        "minlon": 13.5912119,
+        "maxlat": 52.4463981,
+        "maxlon": 13.5918833
+      },
+      "geometry": [
+        {
+          "lat": 52.4459807,
+          "lon": 13.5912119
+        },
+        {
+          "lat": 52.4460233,
+          "lon": 13.5912219
+        },
+        {
+          "lat": 52.4460551,
+          "lon": 13.5912409
+        },
+        {
+          "lat": 52.4461133,
+          "lon": 13.5912945
+        },
+        {
+          "lat": 52.4463981,
+          "lon": 13.5918833
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 233670786,
+      "bounds": {
+        "minlat": 52.4450994,
+        "minlon": 13.5925997,
+        "maxlat": 52.4454084,
+        "maxlon": 13.5926322
+      },
+      "geometry": [
+        {
+          "lat": 52.4454084,
+          "lon": 13.5926322
+        },
+        {
+          "lat": 52.4451441,
+          "lon": 13.5926039
+        },
+        {
+          "lat": 52.4450994,
+          "lon": 13.5925997
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:left": "separate",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "smoothness": "intermediate",
+        "surface": "concrete",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 233670789,
+      "bounds": {
+        "minlat": 52.4460208,
+        "minlon": 13.5926872,
+        "maxlat": 52.4463582,
+        "maxlon": 13.592716
+      },
+      "geometry": [
+        {
+          "lat": 52.4463582,
+          "lon": 13.592716
+        },
+        {
+          "lat": 52.4460208,
+          "lon": 13.5926872
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "separate",
+        "postal_code": "12559",
+        "smoothness": "intermediate",
+        "surface": "concrete",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 272111656,
+      "bounds": {
+        "minlat": 52.4474432,
+        "minlon": 13.5926828,
+        "maxlat": 52.447566,
+        "maxlon": 13.5927957
+      },
+      "geometry": [
+        {
+          "lat": 52.4474432,
+          "lon": 13.5927957
+        },
+        {
+          "lat": 52.447534,
+          "lon": 13.5927196
+        },
+        {
+          "lat": 52.447566,
+          "lon": 13.5926828
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "service": "driveway",
+        "surface": "concrete:lanes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 317683531,
+      "bounds": {
+        "minlat": 52.4474767,
+        "minlon": 13.593123,
+        "maxlat": 52.4474775,
+        "maxlon": 13.5935029
+      },
+      "geometry": [
+        {
+          "lat": 52.4474772,
+          "lon": 13.593123
+        },
+        {
+          "lat": 52.4474767,
+          "lon": 13.593408
+        },
+        {
+          "lat": 52.4474775,
+          "lon": 13.5934931
+        },
+        {
+          "lat": 52.447477,
+          "lon": 13.5935029
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:lane": "advisory",
+        "cycleway:smoothness": "excellent",
+        "cycleway:surface": "asphalt",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Wendenschloßstraße",
+        "name:etymology:wikidata": "Q1362915",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 326242368,
+      "bounds": {
+        "minlat": 52.444434,
+        "minlon": 13.5850205,
+        "maxlat": 52.4476379,
+        "maxlon": 13.593584
+      },
+      "geometry": [
+        {
+          "lat": 52.4476379,
+          "lon": 13.593584
+        },
+        {
+          "lat": 52.4476329,
+          "lon": 13.5935301
+        },
+        {
+          "lat": 52.4475791,
+          "lon": 13.5929428
+        },
+        {
+          "lat": 52.447534,
+          "lon": 13.5927196
+        },
+        {
+          "lat": 52.4475018,
+          "lon": 13.5925907
+        },
+        {
+          "lat": 52.4474641,
+          "lon": 13.5925028
+        },
+        {
+          "lat": 52.4472761,
+          "lon": 13.5920649
+        },
+        {
+          "lat": 52.4472067,
+          "lon": 13.5919032
+        },
+        {
+          "lat": 52.4471641,
+          "lon": 13.5918041
+        },
+        {
+          "lat": 52.4469448,
+          "lon": 13.5912933
+        },
+        {
+          "lat": 52.446856,
+          "lon": 13.5910866
+        },
+        {
+          "lat": 52.4466844,
+          "lon": 13.5906871
+        },
+        {
+          "lat": 52.4465472,
+          "lon": 13.5904136
+        },
+        {
+          "lat": 52.4463302,
+          "lon": 13.5899072
+        },
+        {
+          "lat": 52.4463354,
+          "lon": 13.5898379
+        },
+        {
+          "lat": 52.4461136,
+          "lon": 13.589333
+        },
+        {
+          "lat": 52.4460356,
+          "lon": 13.5891428
+        },
+        {
+          "lat": 52.4459308,
+          "lon": 13.5889153
+        },
+        {
+          "lat": 52.4458918,
+          "lon": 13.5888305
+        },
+        {
+          "lat": 52.4458338,
+          "lon": 13.588688
+        },
+        {
+          "lat": 52.4457539,
+          "lon": 13.5884921
+        },
+        {
+          "lat": 52.4457375,
+          "lon": 13.5884518
+        },
+        {
+          "lat": 52.4457265,
+          "lon": 13.5884248
+        },
+        {
+          "lat": 52.4455558,
+          "lon": 13.5880058
+        },
+        {
+          "lat": 52.4455264,
+          "lon": 13.5879265
+        },
+        {
+          "lat": 52.4453989,
+          "lon": 13.5875474
+        },
+        {
+          "lat": 52.445174,
+          "lon": 13.5868821
+        },
+        {
+          "lat": 52.4450248,
+          "lon": 13.5864115
+        },
+        {
+          "lat": 52.4449353,
+          "lon": 13.5861359
+        },
+        {
+          "lat": 52.4447832,
+          "lon": 13.5856678
+        },
+        {
+          "lat": 52.4446759,
+          "lon": 13.5853513
+        },
+        {
+          "lat": 52.4445254,
+          "lon": 13.5851988
+        },
+        {
+          "lat": 52.444434,
+          "lon": 13.5850205
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 389190886,
+      "bounds": {
+        "minlat": 52.4460173,
+        "minlon": 13.5938729,
+        "maxlat": 52.4461508,
+        "maxlon": 13.5938771
+      },
+      "geometry": [
+        {
+          "lat": 52.4461508,
+          "lon": 13.5938771
+        },
+        {
+          "lat": 52.4460535,
+          "lon": 13.5938743
+        },
+        {
+          "lat": 52.4460173,
+          "lon": 13.5938729
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße/Wendenschloßstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "surface": "paving_stones",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 389190887,
+      "bounds": {
+        "minlat": 52.4464802,
+        "minlon": 13.5935692,
+        "maxlat": 52.4466173,
+        "maxlon": 13.5935752
+      },
+      "geometry": [
+        {
+          "lat": 52.4464802,
+          "lon": 13.5935692
+        },
+        {
+          "lat": 52.4466173,
+          "lon": 13.5935752
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2022-05-14",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße/Wendenschloßstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 444197514,
+      "bounds": {
+        "minlat": 52.4458243,
+        "minlon": 13.5936593,
+        "maxlat": 52.4463475,
+        "maxlon": 13.5936705
+      },
+      "geometry": [
+        {
+          "lat": 52.4463475,
+          "lon": 13.5936705
+        },
+        {
+          "lat": 52.4459813,
+          "lon": 13.5936627
+        },
+        {
+          "lat": 52.4458243,
+          "lon": 13.5936593
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 09:00-20:00)",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "12559",
+        "sidewalk": "right",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "merge_to_right|",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 516456559,
+      "bounds": {
+        "minlat": 52.4467587,
+        "minlon": 13.5926729,
+        "maxlat": 52.4471684,
+        "maxlon": 13.5929319
+      },
+      "geometry": [
+        {
+          "lat": 52.4467587,
+          "lon": 13.5929319
+        },
+        {
+          "lat": 52.4467619,
+          "lon": 13.5926729
+        },
+        {
+          "lat": 52.4471684,
+          "lon": 13.5926883
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "service": "parking_aisle",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 516456560,
+      "bounds": {
+        "minlat": 52.4470091,
+        "minlon": 13.5929409,
+        "maxlat": 52.4471672,
+        "maxlon": 13.5933803
+      },
+      "geometry": [
+        {
+          "lat": 52.4471672,
+          "lon": 13.5929465
+        },
+        {
+          "lat": 52.4471643,
+          "lon": 13.5933803
+        },
+        {
+          "lat": 52.4470418,
+          "lon": 13.5933763
+        },
+        {
+          "lat": 52.4470091,
+          "lon": 13.5933752
+        },
+        {
+          "lat": 52.447011,
+          "lon": 13.5929409
+        }
+      ],
+      "tags": {
+        "access": "customers",
+        "highway": "service",
+        "lit": "yes",
+        "service": "parking_aisle",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 621248911,
+      "bounds": {
+        "minlat": 52.4463507,
+        "minlon": 13.5933837,
+        "maxlat": 52.446555,
+        "maxlon": 13.5933908
+      },
+      "geometry": [
+        {
+          "lat": 52.4463507,
+          "lon": 13.5933837
+        },
+        {
+          "lat": 52.446555,
+          "lon": 13.5933908
+        }
+      ],
+      "tags": {
+        "access": "delivery",
+        "highway": "service",
+        "lit": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 621248912,
+      "bounds": {
+        "minlat": 52.4466451,
+        "minlon": 13.5933752,
+        "maxlat": 52.4470091,
+        "maxlon": 13.5933993
+      },
+      "geometry": [
+        {
+          "lat": 52.4470091,
+          "lon": 13.5933752
+        },
+        {
+          "lat": 52.4469799,
+          "lon": 13.5933993
+        },
+        {
+          "lat": 52.4466451,
+          "lon": 13.5933922
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "service"
+      }
+    },
+    {
+      "type": "way",
+      "id": 875747511,
+      "bounds": {
+        "minlat": 52.4458173,
+        "minlon": 13.5936593,
+        "maxlat": 52.4458243,
+        "maxlon": 13.5940716
+      },
+      "geometry": [
+        {
+          "lat": 52.4458243,
+          "lon": 13.5936593
+        },
+        {
+          "lat": 52.4458212,
+          "lon": 13.5938416
+        },
+        {
+          "lat": 52.4458204,
+          "lon": 13.593891
+        },
+        {
+          "lat": 52.4458185,
+          "lon": 13.5939968
+        },
+        {
+          "lat": 52.4458173,
+          "lon": 13.5940716
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "no",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q2215542",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 888849464,
+      "bounds": {
+        "minlat": 52.4474779,
+        "minlon": 13.5936841,
+        "maxlat": 52.4476472,
+        "maxlon": 13.5936945
+      },
+      "geometry": [
+        {
+          "lat": 52.4476472,
+          "lon": 13.5936841
+        },
+        {
+          "lat": 52.4475367,
+          "lon": 13.5936909
+        },
+        {
+          "lat": 52.4474779,
+          "lon": 13.5936945
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "through|through|right",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 957191937,
+      "bounds": {
+        "minlat": 52.4474802,
+        "minlon": 13.5938781,
+        "maxlat": 52.447665,
+        "maxlon": 13.5938945
+      },
+      "geometry": [
+        {
+          "lat": 52.4474802,
+          "lon": 13.5938781
+        },
+        {
+          "lat": 52.4475368,
+          "lon": 13.5938915
+        },
+        {
+          "lat": 52.447665,
+          "lon": 13.5938945
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "disused:access:lanes": "yes|no",
+        "disused:bus:lanes": "yes|designated",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 988214144,
+      "bounds": {
+        "minlat": 52.4463475,
+        "minlon": 13.592716,
+        "maxlat": 52.4463582,
+        "maxlon": 13.5936705
+      },
+      "geometry": [
+        {
+          "lat": 52.4463475,
+          "lon": 13.5936705
+        },
+        {
+          "lat": 52.4463489,
+          "lon": 13.5935602
+        },
+        {
+          "lat": 52.4463495,
+          "lon": 13.5935171
+        },
+        {
+          "lat": 52.4463502,
+          "lon": 13.5934709
+        },
+        {
+          "lat": 52.4463507,
+          "lon": 13.5933837
+        },
+        {
+          "lat": 52.4463562,
+          "lon": 13.5929154
+        },
+        {
+          "lat": 52.4463582,
+          "lon": 13.592716
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk": "both",
+        "smoothness": "intermediate",
+        "surface": "concrete",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 988235233,
+      "bounds": {
+        "minlat": 52.4460208,
+        "minlon": 13.591825,
+        "maxlat": 52.4460413,
+        "maxlon": 13.5926872
+      },
+      "geometry": [
+        {
+          "lat": 52.4460413,
+          "lon": 13.591825
+        },
+        {
+          "lat": 52.4460254,
+          "lon": 13.5925307
+        },
+        {
+          "lat": 52.4460208,
+          "lon": 13.5926872
+        }
+      ],
+      "tags": {
+        "access": "destination",
+        "highway": "service",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "postal_code": "12559",
+        "service": "driveway",
+        "surface": "paved",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1029292841,
+      "bounds": {
+        "minlat": 52.4455212,
+        "minlon": 13.5936427,
+        "maxlat": 52.4455226,
+        "maxlon": 13.5937502
+      },
+      "geometry": [
+        {
+          "lat": 52.4455212,
+          "lon": 13.5937502
+        },
+        {
+          "lat": 52.4455226,
+          "lon": 13.5936427
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1029292842,
+      "bounds": {
+        "minlat": 52.4460465,
+        "minlon": 13.5939883,
+        "maxlat": 52.4460523,
+        "maxlon": 13.5945215
+      },
+      "geometry": [
+        {
+          "lat": 52.4460523,
+          "lon": 13.5939883
+        },
+        {
+          "lat": 52.4460477,
+          "lon": 13.5944095
+        },
+        {
+          "lat": 52.4460465,
+          "lon": 13.5945215
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "no",
+        "smoothness": "intermediate",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1029292843,
+      "bounds": {
+        "minlat": 52.4460523,
+        "minlon": 13.5938743,
+        "maxlat": 52.4460535,
+        "maxlon": 13.5939883
+      },
+      "geometry": [
+        {
+          "lat": 52.4460523,
+          "lon": 13.5939883
+        },
+        {
+          "lat": 52.4460535,
+          "lon": 13.5938743
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "intermediate",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1029512322,
+      "bounds": {
+        "minlat": 52.4461508,
+        "minlon": 13.5938771,
+        "maxlat": 52.4462846,
+        "maxlon": 13.5939952
+      },
+      "geometry": [
+        {
+          "lat": 52.4461508,
+          "lon": 13.5938771
+        },
+        {
+          "lat": 52.4462846,
+          "lon": 13.5939003
+        },
+        {
+          "lat": 52.4462834,
+          "lon": 13.5939952
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1029512323,
+      "bounds": {
+        "minlat": 52.4459472,
+        "minlon": 13.5939816,
+        "maxlat": 52.447674,
+        "maxlon": 13.594039
+      },
+      "geometry": [
+        {
+          "lat": 52.4459472,
+          "lon": 13.5939816
+        },
+        {
+          "lat": 52.4460523,
+          "lon": 13.5939883
+        },
+        {
+          "lat": 52.4462834,
+          "lon": 13.5939952
+        },
+        {
+          "lat": 52.4472816,
+          "lon": 13.5940366
+        },
+        {
+          "lat": 52.4474463,
+          "lon": 13.5940376
+        },
+        {
+          "lat": 52.4475352,
+          "lon": 13.5940382
+        },
+        {
+          "lat": 52.447674,
+          "lon": 13.594039
+        }
+      ],
+      "tags": {
+        "bicycle": "designated",
+        "cycleway:surface": "asphalt",
+        "foot": "designated",
+        "footway:surface": "paving_stones",
+        "highway": "path",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Salvador-Allende-Straße",
+        "lit": "yes",
+        "oneway:bicycle": "yes",
+        "segregated": "yes",
+        "sidewalk:surface": "paving_stones",
+        "smoothness": "intermediate",
+        "traffic_sign": "DE:237"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1029512324,
+      "bounds": {
+        "minlat": 52.4472816,
+        "minlon": 13.5935704,
+        "maxlat": 52.4472883,
+        "maxlon": 13.5940366
+      },
+      "geometry": [
+        {
+          "lat": 52.4472883,
+          "lon": 13.5935704
+        },
+        {
+          "lat": 52.4472882,
+          "lon": 13.5936301
+        },
+        {
+          "lat": 52.447287,
+          "lon": 13.5937022
+        },
+        {
+          "lat": 52.4472838,
+          "lon": 13.5938596
+        },
+        {
+          "lat": 52.4472816,
+          "lon": 13.5940366
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "yes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1029512326,
+      "bounds": {
+        "minlat": 52.4458738,
+        "minlon": 13.5939999,
+        "maxlat": 52.4460477,
+        "maxlon": 13.5944097
+      },
+      "geometry": [
+        {
+          "lat": 52.4458763,
+          "lon": 13.5939999
+        },
+        {
+          "lat": 52.4458738,
+          "lon": 13.59408
+        },
+        {
+          "lat": 52.4458758,
+          "lon": 13.5941224
+        },
+        {
+          "lat": 52.4458859,
+          "lon": 13.594149
+        },
+        {
+          "lat": 52.4459052,
+          "lon": 13.5941757
+        },
+        {
+          "lat": 52.4459286,
+          "lon": 13.5942073
+        },
+        {
+          "lat": 52.4459488,
+          "lon": 13.5942389
+        },
+        {
+          "lat": 52.44596,
+          "lon": 13.5942722
+        },
+        {
+          "lat": 52.445962,
+          "lon": 13.5943289
+        },
+        {
+          "lat": 52.4459673,
+          "lon": 13.5943891
+        },
+        {
+          "lat": 52.4459926,
+          "lon": 13.5944097
+        },
+        {
+          "lat": 52.4460477,
+          "lon": 13.5944095
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "no",
+        "surface": "compacted"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1046054966,
+      "bounds": {
+        "minlat": 52.4458212,
+        "minlon": 13.5938416,
+        "maxlat": 52.4459472,
+        "maxlon": 13.5939816
+      },
+      "geometry": [
+        {
+          "lat": 52.4458212,
+          "lon": 13.5938416
+        },
+        {
+          "lat": 52.4458639,
+          "lon": 13.5938875
+        },
+        {
+          "lat": 52.4459472,
+          "lon": 13.5939816
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Salvador-Allende-Straße",
+        "lit": "yes",
+        "oneway": "yes",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "traffic_sign": "DE:237"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1046054967,
+      "bounds": {
+        "minlat": 52.4458185,
+        "minlon": 13.5939816,
+        "maxlat": 52.4459472,
+        "maxlon": 13.5939999
+      },
+      "geometry": [
+        {
+          "lat": 52.4458185,
+          "lon": 13.5939968
+        },
+        {
+          "lat": 52.4458687,
+          "lon": 13.5939997
+        },
+        {
+          "lat": 52.4458763,
+          "lon": 13.5939999
+        },
+        {
+          "lat": 52.4459472,
+          "lon": 13.5939816
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "secondary",
+        "is_sidepath:of:name": "Salvador-Allende-Straße",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1112682246,
+      "bounds": {
+        "minlat": 52.447477,
+        "minlon": 13.5935029,
+        "maxlat": 52.4475368,
+        "maxlon": 13.5940382
+      },
+      "geometry": [
+        {
+          "lat": 52.4475352,
+          "lon": 13.5940382
+        },
+        {
+          "lat": 52.4475356,
+          "lon": 13.59396
+        },
+        {
+          "lat": 52.4475368,
+          "lon": 13.5938915
+        },
+        {
+          "lat": 52.4475367,
+          "lon": 13.5936909
+        },
+        {
+          "lat": 52.4475359,
+          "lon": 13.5936094
+        },
+        {
+          "lat": 52.4475041,
+          "lon": 13.5935519
+        },
+        {
+          "lat": 52.447477,
+          "lon": 13.5935029
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "cycleway": "crossing",
+        "highway": "cycleway",
+        "lit": "yes",
+        "oneway": "yes",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1112682247,
+      "bounds": {
+        "minlat": 52.4474005,
+        "minlon": 13.5935029,
+        "maxlat": 52.447477,
+        "maxlon": 13.5938729
+      },
+      "geometry": [
+        {
+          "lat": 52.447477,
+          "lon": 13.5935029
+        },
+        {
+          "lat": 52.4474418,
+          "lon": 13.5935619
+        },
+        {
+          "lat": 52.4474005,
+          "lon": 13.5936309
+        },
+        {
+          "lat": 52.4474061,
+          "lon": 13.593693
+        },
+        {
+          "lat": 52.4474254,
+          "lon": 13.5938729
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "cycleway": "crossing",
+        "highway": "cycleway",
+        "lit": "yes",
+        "oneway": "yes",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1112682248,
+      "bounds": {
+        "minlat": 52.447477,
+        "minlon": 13.5935029,
+        "maxlat": 52.4474779,
+        "maxlon": 13.5936945
+      },
+      "geometry": [
+        {
+          "lat": 52.447477,
+          "lon": 13.5935029
+        },
+        {
+          "lat": 52.4474771,
+          "lon": 13.5935214
+        },
+        {
+          "lat": 52.4474772,
+          "lon": 13.5935565
+        },
+        {
+          "lat": 52.4474775,
+          "lon": 13.5936199
+        },
+        {
+          "lat": 52.4474779,
+          "lon": 13.5936945
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Wendenschloßstraße",
+        "name:etymology:wikidata": "Q1362915",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1114959696,
+      "bounds": {
+        "minlat": 52.4473683,
+        "minlon": 13.5935301,
+        "maxlat": 52.4476329,
+        "maxlon": 13.593573
+      },
+      "geometry": [
+        {
+          "lat": 52.4476329,
+          "lon": 13.5935301
+        },
+        {
+          "lat": 52.4475041,
+          "lon": 13.5935519
+        },
+        {
+          "lat": 52.4474772,
+          "lon": 13.5935565
+        },
+        {
+          "lat": 52.4474418,
+          "lon": 13.5935619
+        },
+        {
+          "lat": 52.4473683,
+          "lon": 13.593573
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1114959697,
+      "bounds": {
+        "minlat": 52.4463495,
+        "minlon": 13.5934841,
+        "maxlat": 52.4473683,
+        "maxlon": 13.593573
+      },
+      "geometry": [
+        {
+          "lat": 52.4473683,
+          "lon": 13.593573
+        },
+        {
+          "lat": 52.4472883,
+          "lon": 13.5935704
+        },
+        {
+          "lat": 52.4470424,
+          "lon": 13.593568
+        },
+        {
+          "lat": 52.4468289,
+          "lon": 13.5935687
+        },
+        {
+          "lat": 52.4465884,
+          "lon": 13.5934854
+        },
+        {
+          "lat": 52.4464052,
+          "lon": 13.5934841
+        },
+        {
+          "lat": 52.4463495,
+          "lon": 13.5935171
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1114959698,
+      "bounds": {
+        "minlat": 52.4454448,
+        "minlon": 13.5882911,
+        "maxlat": 52.446709,
+        "maxlon": 13.5924885
+      },
+      "geometry": [
+        {
+          "lat": 52.4454448,
+          "lon": 13.5882911
+        },
+        {
+          "lat": 52.4454504,
+          "lon": 13.5889591
+        },
+        {
+          "lat": 52.4454567,
+          "lon": 13.5890545
+        },
+        {
+          "lat": 52.4464315,
+          "lon": 13.5912383
+        },
+        {
+          "lat": 52.4466736,
+          "lon": 13.5917879
+        },
+        {
+          "lat": 52.4466938,
+          "lon": 13.5918781
+        },
+        {
+          "lat": 52.446709,
+          "lon": 13.5924885
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1114959699,
+      "bounds": {
+        "minlat": 52.4471846,
+        "minlon": 13.5920492,
+        "maxlat": 52.44729,
+        "maxlon": 13.5921763
+      },
+      "geometry": [
+        {
+          "lat": 52.44729,
+          "lon": 13.5920492
+        },
+        {
+          "lat": 52.4472761,
+          "lon": 13.5920649
+        },
+        {
+          "lat": 52.4471846,
+          "lon": 13.5921763
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1114959700,
+      "bounds": {
+        "minlat": 52.4470415,
+        "minlon": 13.5933763,
+        "maxlat": 52.4470424,
+        "maxlon": 13.593568
+      },
+      "geometry": [
+        {
+          "lat": 52.4470418,
+          "lon": 13.5933763
+        },
+        {
+          "lat": 52.4470415,
+          "lon": 13.5934619
+        },
+        {
+          "lat": 52.4470424,
+          "lon": 13.593568
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1114997739,
+      "bounds": {
+        "minlat": 52.4472882,
+        "minlon": 13.593584,
+        "maxlat": 52.4476379,
+        "maxlon": 13.5936309
+      },
+      "geometry": [
+        {
+          "lat": 52.4476379,
+          "lon": 13.593584
+        },
+        {
+          "lat": 52.4475359,
+          "lon": 13.5936094
+        },
+        {
+          "lat": 52.4474775,
+          "lon": 13.5936199
+        },
+        {
+          "lat": 52.4474005,
+          "lon": 13.5936309
+        },
+        {
+          "lat": 52.4472882,
+          "lon": 13.5936301
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "cycleway": "crossing",
+        "highway": "cycleway",
+        "lit": "yes",
+        "oneway": "yes",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1114997740,
+      "bounds": {
+        "minlat": 52.446723,
+        "minlon": 13.5935717,
+        "maxlat": 52.4472882,
+        "maxlon": 13.5936313
+      },
+      "geometry": [
+        {
+          "lat": 52.4472882,
+          "lon": 13.5936301
+        },
+        {
+          "lat": 52.4472109,
+          "lon": 13.5936313
+        },
+        {
+          "lat": 52.4471947,
+          "lon": 13.5936262
+        },
+        {
+          "lat": 52.4471576,
+          "lon": 13.5935996
+        },
+        {
+          "lat": 52.4468228,
+          "lon": 13.5936008
+        },
+        {
+          "lat": 52.446723,
+          "lon": 13.5935717
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "lit": "yes",
+        "oneway": "yes",
+        "smoothness": "intermediate",
+        "surface": "paving_stones",
+        "traffic_sign": "none"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1114997741,
+      "bounds": {
+        "minlat": 52.4463489,
+        "minlon": 13.5935247,
+        "maxlat": 52.446723,
+        "maxlon": 13.5935717
+      },
+      "geometry": [
+        {
+          "lat": 52.446723,
+          "lon": 13.5935717
+        },
+        {
+          "lat": 52.4465892,
+          "lon": 13.5935247
+        },
+        {
+          "lat": 52.4464075,
+          "lon": 13.593526
+        },
+        {
+          "lat": 52.4463489,
+          "lon": 13.5935602
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "lit": "yes",
+        "oneway": "yes",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "traffic_sign": "none"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1114997742,
+      "bounds": {
+        "minlat": 52.447287,
+        "minlon": 13.593693,
+        "maxlat": 52.4474779,
+        "maxlon": 13.5937022
+      },
+      "geometry": [
+        {
+          "lat": 52.4474779,
+          "lon": 13.5936945
+        },
+        {
+          "lat": 52.4474061,
+          "lon": 13.593693
+        },
+        {
+          "lat": 52.447287,
+          "lon": 13.5937022
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "12559",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1114997743,
+      "bounds": {
+        "minlat": 52.4463452,
+        "minlon": 13.5936705,
+        "maxlat": 52.4463475,
+        "maxlon": 13.5938292
+      },
+      "geometry": [
+        {
+          "lat": 52.4463452,
+          "lon": 13.5938292
+        },
+        {
+          "lat": 52.4463475,
+          "lon": 13.5936705
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "postal_code": "12559",
+        "sidewalk:both": "no",
+        "smoothness": "good",
+        "surface": "concrete",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1114997744,
+      "bounds": {
+        "minlat": 52.4455743,
+        "minlon": 13.5934625,
+        "maxlat": 52.4455743,
+        "maxlon": 13.5936455
+      },
+      "geometry": [
+        {
+          "lat": 52.4455743,
+          "lon": 13.5934625
+        },
+        {
+          "lat": 52.4455743,
+          "lon": 13.5936455
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1115933906,
+      "bounds": {
+        "minlat": 52.4458104,
+        "minlon": 13.5944822,
+        "maxlat": 52.445959,
+        "maxlon": 13.5945177
+      },
+      "geometry": [
+        {
+          "lat": 52.4458104,
+          "lon": 13.5944822
+        },
+        {
+          "lat": 52.4458571,
+          "lon": 13.5945132
+        },
+        {
+          "lat": 52.4458911,
+          "lon": 13.5945147
+        },
+        {
+          "lat": 52.445959,
+          "lon": 13.5945177
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "postal_code": "12559",
+        "service": "driveway",
+        "vehicle": "destination",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1115933907,
+      "bounds": {
+        "minlat": 52.4471788,
+        "minlon": 13.594582,
+        "maxlat": 52.4471824,
+        "maxlon": 13.594898
+      },
+      "geometry": [
+        {
+          "lat": 52.4471824,
+          "lon": 13.594582
+        },
+        {
+          "lat": 52.4471788,
+          "lon": 13.594898
+        }
+      ],
+      "tags": {
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1115951024,
+      "bounds": {
+        "minlat": 52.4474772,
+        "minlon": 13.5929823,
+        "maxlat": 52.4474774,
+        "maxlon": 13.593123
+      },
+      "geometry": [
+        {
+          "lat": 52.4474774,
+          "lon": 13.5929823
+        },
+        {
+          "lat": 52.4474772,
+          "lon": 13.593123
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Wendenschloßstraße",
+        "name:etymology:wikidata": "Q1362915",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1115951026,
+      "bounds": {
+        "minlat": 52.4473666,
+        "minlon": 13.5924692,
+        "maxlat": 52.447491,
+        "maxlon": 13.5926112
+      },
+      "geometry": [
+        {
+          "lat": 52.447491,
+          "lon": 13.5924692
+        },
+        {
+          "lat": 52.4474641,
+          "lon": 13.5925028
+        },
+        {
+          "lat": 52.4473666,
+          "lon": 13.5926112
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1115951029,
+      "bounds": {
+        "minlat": 52.4467555,
+        "minlon": 13.5922434,
+        "maxlat": 52.4472132,
+        "maxlon": 13.5924407
+      },
+      "geometry": [
+        {
+          "lat": 52.4472132,
+          "lon": 13.5922434
+        },
+        {
+          "lat": 52.4471498,
+          "lon": 13.5923175
+        },
+        {
+          "lat": 52.4470436,
+          "lon": 13.5924407
+        },
+        {
+          "lat": 52.4467555,
+          "lon": 13.5924371
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Wendenschloßstraße",
+        "name:etymology:wikidata": "Q1362915",
+        "operator:type": "private",
+        "parking:left": "lane",
+        "parking:left:markings": "yes",
+        "parking:left:orientation": "parallel",
+        "parking:right": "street_side",
+        "parking:right:access": "private",
+        "parking:right:markings": "yes",
+        "parking:right:orientation": "perpendicular",
+        "postal_code": "12559",
+        "sidewalk": "left",
+        "sidewalk:left:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1115951031,
+      "bounds": {
+        "minlat": 52.447115,
+        "minlon": 13.59189,
+        "maxlat": 52.4472176,
+        "maxlon": 13.5920128
+      },
+      "geometry": [
+        {
+          "lat": 52.4472176,
+          "lon": 13.59189
+        },
+        {
+          "lat": 52.4472067,
+          "lon": 13.5919032
+        },
+        {
+          "lat": 52.447115,
+          "lon": 13.5920128
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1115951034,
+      "bounds": {
+        "minlat": 52.4470723,
+        "minlon": 13.5917913,
+        "maxlat": 52.4471742,
+        "maxlon": 13.5919124
+      },
+      "geometry": [
+        {
+          "lat": 52.4471742,
+          "lon": 13.5917913
+        },
+        {
+          "lat": 52.4471641,
+          "lon": 13.5918041
+        },
+        {
+          "lat": 52.4470723,
+          "lon": 13.5919124
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1115951035,
+      "bounds": {
+        "minlat": 52.4468544,
+        "minlon": 13.591282,
+        "maxlat": 52.4469541,
+        "maxlon": 13.5914003
+      },
+      "geometry": [
+        {
+          "lat": 52.4469541,
+          "lon": 13.591282
+        },
+        {
+          "lat": 52.4469448,
+          "lon": 13.5912933
+        },
+        {
+          "lat": 52.4468544,
+          "lon": 13.5914003
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126460939,
+      "bounds": {
+        "minlat": 52.4474254,
+        "minlon": 13.5938729,
+        "maxlat": 52.4474463,
+        "maxlon": 13.5940376
+      },
+      "geometry": [
+        {
+          "lat": 52.4474254,
+          "lon": 13.5938729
+        },
+        {
+          "lat": 52.4474463,
+          "lon": 13.5940376
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "cycleway": "crossing",
+        "highway": "cycleway",
+        "lit": "yes",
+        "oneway": "yes",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tactile_paving": "no",
+        "traffic_sign": "DE:237"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126502087,
+      "bounds": {
+        "minlat": 52.4459813,
+        "minlon": 13.5934812,
+        "maxlat": 52.445982,
+        "maxlon": 13.5936627
+      },
+      "geometry": [
+        {
+          "lat": 52.445982,
+          "lon": 13.5934812
+        },
+        {
+          "lat": 52.4459813,
+          "lon": 13.5936627
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "service": "parking_aisle",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126502089,
+      "bounds": {
+        "minlat": 52.4457644,
+        "minlon": 13.5940679,
+        "maxlat": 52.4458173,
+        "maxlon": 13.5940716
+      },
+      "geometry": [
+        {
+          "lat": 52.4457644,
+          "lon": 13.5940679
+        },
+        {
+          "lat": 52.4458173,
+          "lon": 13.5940716
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126502090,
+      "bounds": {
+        "minlat": 52.4457555,
+        "minlon": 13.5943279,
+        "maxlat": 52.4458129,
+        "maxlon": 13.5943334
+      },
+      "geometry": [
+        {
+          "lat": 52.4457555,
+          "lon": 13.5943279
+        },
+        {
+          "lat": 52.4458129,
+          "lon": 13.5943334
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126502091,
+      "bounds": {
+        "minlat": 52.4457451,
+        "minlon": 13.5946115,
+        "maxlat": 52.4457761,
+        "maxlon": 13.5946135
+      },
+      "geometry": [
+        {
+          "lat": 52.4457451,
+          "lon": 13.5946115
+        },
+        {
+          "lat": 52.4457761,
+          "lon": 13.5946135
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126837483,
+      "bounds": {
+        "minlat": 52.4456041,
+        "minlon": 13.5935002,
+        "maxlat": 52.4456059,
+        "maxlon": 13.5936472
+      },
+      "geometry": [
+        {
+          "lat": 52.4456059,
+          "lon": 13.5935002
+        },
+        {
+          "lat": 52.4456041,
+          "lon": 13.5936472
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "service": "parking_aisle",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1184930036,
+      "bounds": {
+        "minlat": 52.4463582,
+        "minlon": 13.5924875,
+        "maxlat": 52.4463819,
+        "maxlon": 13.592716
+      },
+      "geometry": [
+        {
+          "lat": 52.4463582,
+          "lon": 13.592716
+        },
+        {
+          "lat": 52.4463774,
+          "lon": 13.5926167
+        },
+        {
+          "lat": 52.4463819,
+          "lon": 13.5924875
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "service",
+        "operator:type": "private",
+        "service": "driveway",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1184930043,
+      "bounds": {
+        "minlat": 52.4451188,
+        "minlon": 13.5919117,
+        "maxlat": 52.4454084,
+        "maxlon": 13.5926322
+      },
+      "geometry": [
+        {
+          "lat": 52.4451188,
+          "lon": 13.5919117
+        },
+        {
+          "lat": 52.4451655,
+          "lon": 13.5919274
+        },
+        {
+          "lat": 52.4453999,
+          "lon": 13.5925369
+        },
+        {
+          "lat": 52.4454084,
+          "lon": 13.5926322
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "highway": "path",
+        "informal": "yes",
+        "lit": "no",
+        "surface": "dirt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1197847578,
+      "bounds": {
+        "minlat": 52.44718,
+        "minlon": 13.5938563,
+        "maxlat": 52.4474802,
+        "maxlon": 13.5938781
+      },
+      "geometry": [
+        {
+          "lat": 52.44718,
+          "lon": 13.5938563
+        },
+        {
+          "lat": 52.4472472,
+          "lon": 13.5938585
+        },
+        {
+          "lat": 52.4472838,
+          "lon": 13.5938596
+        },
+        {
+          "lat": 52.4474254,
+          "lon": 13.5938729
+        },
+        {
+          "lat": 52.4474802,
+          "lon": 13.5938781
+        }
+      ],
+      "tags": {
+        "access:lanes": "yes|yes|no",
+        "bicycle": "use_sidepath",
+        "bus:lanes": "yes|yes|designated",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1197847579,
+      "bounds": {
+        "minlat": 52.447001,
+        "minlon": 13.5936991,
+        "maxlat": 52.447287,
+        "maxlon": 13.5937022
+      },
+      "geometry": [
+        {
+          "lat": 52.447287,
+          "lon": 13.5937022
+        },
+        {
+          "lat": 52.447001,
+          "lon": 13.5936991
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "12559",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1239077048,
+      "bounds": {
+        "minlat": 52.4463967,
+        "minlon": 13.5918897,
+        "maxlat": 52.4465263,
+        "maxlon": 13.5919527
+      },
+      "geometry": [
+        {
+          "lat": 52.4463967,
+          "lon": 13.5919512
+        },
+        {
+          "lat": 52.4464369,
+          "lon": 13.5919527
+        },
+        {
+          "lat": 52.4465263,
+          "lon": 13.5918897
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1430910752,
+      "bounds": {
+        "minlat": 52.4454084,
+        "minlon": 13.5926322,
+        "maxlat": 52.4460208,
+        "maxlon": 13.5926872
+      },
+      "geometry": [
+        {
+          "lat": 52.4460208,
+          "lon": 13.5926872
+        },
+        {
+          "lat": 52.4454084,
+          "lon": 13.5926322
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:both": "lane",
+        "parking:both:access": "yes",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12559",
+        "smoothness": "intermediate",
+        "surface": "concrete",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1516194659,
+      "bounds": {
+        "minlat": 52.4458104,
+        "minlon": 13.5940716,
+        "maxlat": 52.4458173,
+        "maxlon": 13.5944822
+      },
+      "geometry": [
+        {
+          "lat": 52.4458173,
+          "lon": 13.5940716
+        },
+        {
+          "lat": 52.4458129,
+          "lon": 13.5943334
+        },
+        {
+          "lat": 52.4458104,
+          "lon": 13.5944822
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "no",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "operator:type": "private",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "source:maxspeed": "DE:zone30",
+        "source:operator:type": "ALKIS Berlin",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q2215542",
+        "zone:maxspeed": "DE:30"
+      }
+    }
+  ]
+}
