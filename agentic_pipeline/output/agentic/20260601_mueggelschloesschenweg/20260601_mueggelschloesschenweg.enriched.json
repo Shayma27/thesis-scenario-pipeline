@@ -53,7 +53,7 @@
   "conflict": {
     "conflict_mechanism": "right_turn_across_separated_cycle_track",
     "collision_happened": true,
-    "collision_description": "The truck turned right and completely ran over the cyclist who was riding straight on the separated cycle track.",
+    "collision_description": "The truck turned right and collided with the cyclist who was riding straight on a separated cycle track.",
     "severity_text": "serious"
   },
   "generated_simulation_parameters": {

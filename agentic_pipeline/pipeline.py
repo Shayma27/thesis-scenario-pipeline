@@ -6,12 +6,14 @@ Groq llama-3.3-70b-versatile with function calling autonomously sequences
 OpenDRIVE + OpenSCENARIO simulation files.
 
 Entry point: run.py (at scenario_pipeline/ root).
-Public API:  run_agent(report_text, scenario_id, human_in_loop=True)
+Public API:  run_agent(report_text, scenario_id)
+             run_feedback_iteration(state, report_text, user_feedback)
 """
 
 from __future__ import annotations
 
 import json
+import re
 import sys
 import textwrap
 from datetime import datetime, timezone
@@ -156,7 +158,7 @@ TOOLS = [
 ]
 
 
-# ── System prompt ─────────────────────────────────────────────────────────────
+# ── System prompts ────────────────────────────────────────────────────────────
 
 SYSTEM_PROMPT = """\
 You are an autonomous scenario generation agent for autonomous driving safety research at TU Berlin.
@@ -185,6 +187,40 @@ STOP after 3 retries even if still invalid — explain what failed and why.
 Be concise between tool calls. One or two sentences of reasoning is enough.
 """
 
+FEEDBACK_SYSTEM_PROMPT = """\
+You are reviewing a generated OpenSCENARIO simulation against the original police report.
+The user has watched the simulation and reported an issue with how it looks.
+Your task: adjust the simulation parameters to fix the reported problem.
+
+You will receive:
+1. The original German police report
+2. The current simulation parameters (JSON)
+3. The user's feedback describing what looks wrong
+
+Output ONLY a valid JSON object with the parameters to change. Use this structure:
+{
+  "opendrive": { ... opendrive parameter overrides ... },
+  "openscenario": {
+    "actors": {
+      "<actor_id>": { ... actor parameter overrides ... }
+    },
+    "simulation_duration_s": <optional>
+  }
+}
+
+Only include parameters that need to change. Do not wrap in markdown code blocks.
+
+Common parameters you can adjust:
+- opendrive.road_length_m: length of the road in meters (default 100)
+- opendrive.junction_offset_m: distance from road start to the junction
+- openscenario.actors.<id>.initial_s_m: actor starting position along road (meters from start)
+- openscenario.actors.<id>.initial_speed_mps: actor initial speed in m/s
+- openscenario.actors.<id>.initial_lane_id: lane number (-1=rightmost driving lane, -2=next)
+- openscenario.simulation_duration_s: total simulation time in seconds
+
+Be concise and precise. Only change what the user's feedback indicates is wrong.
+"""
+
 
 # ── Agent state ───────────────────────────────────────────────────────────────
 
@@ -206,7 +242,7 @@ class AgentState:
         })
 
 
-# ── Human-in-the-loop helpers ─────────────────────────────────────────────────
+# ── Display helpers ───────────────────────────────────────────────────────────
 
 def _show_extraction_summary(data: dict) -> None:
     cls = data.get("classification", {})
@@ -229,15 +265,6 @@ def _show_extraction_summary(data: dict) -> None:
     print(f"  │  Collision  {col}  ·  severity: {conflict.get('severity_text')}")
     print(f"  │  Bike infra {road.get('bike_facility_type')}  ·  traffic light: {road.get('traffic_light_present')}")
     print(f"  └{'─' * (W - 2)}")
-
-
-def _confirm(prompt: str = "Continue?") -> bool:
-    """Return True to continue, False to abort."""
-    try:
-        answer = input(f"\n  {prompt}  [Enter = yes  /  n = abort]:  ").strip().lower()
-        return answer not in ("n", "no", "abort", "q", "quit")
-    except (EOFError, KeyboardInterrupt):
-        return False
 
 
 # ── Tool implementations ──────────────────────────────────────────────────────
@@ -454,12 +481,128 @@ def _dispatch(state: AgentState, name: str, args: dict) -> dict:
     return {"error": f"Unknown tool: {name}"}
 
 
+# ── Feedback loop helpers ──────────────────────────────────────────────────────
+
+def _extract_json(text: str) -> dict | None:
+    """Extract first JSON object from LLM response text."""
+    text = text.strip()
+    try:
+        obj = json.loads(text)
+        if isinstance(obj, dict):
+            return obj
+    except json.JSONDecodeError:
+        pass
+    m = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", text, re.DOTALL)
+    if m:
+        try:
+            obj = json.loads(m.group(1))
+            if isinstance(obj, dict):
+                return obj
+        except json.JSONDecodeError:
+            pass
+    start = text.find("{")
+    if start != -1:
+        depth = 0
+        for i, ch in enumerate(text[start:], start):
+            if ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth == 0:
+                    try:
+                        obj = json.loads(text[start : i + 1])
+                        if isinstance(obj, dict):
+                            return obj
+                    except json.JSONDecodeError:
+                        break
+    return None
+
+
+def _deep_merge(base: dict, overrides: dict) -> dict:
+    """Recursively merge overrides into base, preserving unmodified keys."""
+    result = dict(base)
+    for k, v in overrides.items():
+        if k in result and isinstance(result[k], dict) and isinstance(v, dict):
+            result[k] = _deep_merge(result[k], v)
+        else:
+            result[k] = v
+    return result
+
+
+def run_feedback_iteration(state: AgentState, report_text: str, user_feedback: str) -> dict:
+    """
+    Call the Groq LLM with user feedback to get adjusted parameters,
+    then regenerate and validate the scenario.
+    Returns {success, xosc_path, xodr_path, overrides_applied, error}.
+    """
+    client = Groq()
+
+    params_json = json.dumps(
+        state.data.get("generated_simulation_parameters", {}),
+        indent=2,
+        ensure_ascii=False,
+    )
+
+    print(f"\n  ┌─ Feedback LLM call {'─' * (W - 22)}")
+    print(f"  │  Feedback: {user_feedback[:80]}")
+
+    messages = [
+        {"role": "system", "content": FEEDBACK_SYSTEM_PROMPT},
+        {
+            "role": "user",
+            "content": (
+                f"Original police report:\n{report_text}\n\n"
+                f"Current simulation parameters:\n{params_json}\n\n"
+                f"User feedback after watching simulation:\n{user_feedback}\n\n"
+                "Output ONLY the JSON parameter_overrides to fix the issue."
+            ),
+        },
+    ]
+
+    response = client.chat.completions.create(
+        model=MODEL,
+        messages=messages,
+        temperature=0.0,
+        max_tokens=1024,
+    )
+
+    content = response.choices[0].message.content or ""
+    print(f"  │  LLM response: {content[:200].strip()}")
+
+    overrides = _extract_json(content)
+    if overrides is None:
+        print(f"  └─ ✗ Could not parse JSON from LLM response")
+        return {"success": False, "error": f"LLM did not return valid JSON: {content[:300]}"}
+
+    print(f"  │  Parsed overrides: {json.dumps(overrides, ensure_ascii=False)[:200]}")
+    print(f"  └{'─' * (W - 2)}")
+
+    # Deep-merge overrides into state data so actor sub-keys are preserved
+    sim = state.data.get("generated_simulation_parameters", {})
+    state.data["generated_simulation_parameters"] = _deep_merge(sim, overrides)
+
+    gen_result = _tool_generate_scenario(state)
+    if not gen_result.get("success"):
+        return {"success": False, "error": gen_result.get("error")}
+
+    val_result = _tool_validate_and_fix(state)
+
+    return {
+        "success": True,
+        "valid": val_result.get("valid"),
+        "xosc_path": str(state.xosc_path),
+        "xodr_path": str(state.xodr_path),
+        "overrides_applied": overrides,
+        "validation_errors": val_result.get("errors", []),
+    }
+
+
 # ── Agent loop ─────────────────────────────────────────────────────────────────
 
-def run_agent(report_text: str, scenario_id: str, human_in_loop: bool = True) -> dict:
+def run_agent(report_text: str, scenario_id: str) -> dict:
     """
-    Run the full agentic pipeline on one police report.
-    Returns a result dict: {scenario_id, valid, iterations, retries, xodr_path, xosc_path}.
+    Run the full agentic pipeline on one police report — no human interruption.
+    Returns a result dict including the AgentState under key 'state'.
     """
     client = Groq()
     state = AgentState(scenario_id)
@@ -484,7 +627,6 @@ def run_agent(report_text: str, scenario_id: str, human_in_loop: bool = True) ->
 
     iteration = 0
     final_valid = False
-    user_aborted = False
     final_summary: str | None = None
 
     while iteration < MAX_ITERATIONS:
@@ -531,13 +673,9 @@ def run_agent(report_text: str, scenario_id: str, human_in_loop: bool = True) ->
                 tool_result = {"error": f"Tool error: {exc}"}
                 print(f"  ✗ {exc}")
 
-            # ── Human-in-the-loop checkpoint after extraction ──────────────
-            if fn_name == "extract_scenario" and human_in_loop and state.data:
+            # Show extraction summary automatically (no human confirmation)
+            if fn_name == "extract_scenario" and state.data:
                 _show_extraction_summary(state.data)
-                if not _confirm("Does this extraction look correct?"):
-                    print("\n  Aborted. Fix your report text and run again.\n")
-                    user_aborted = True
-                    break
 
             result_preview = json.dumps(tool_result, ensure_ascii=False)
             if len(result_preview) > 500:
@@ -557,9 +695,6 @@ def run_agent(report_text: str, scenario_id: str, human_in_loop: bool = True) ->
                 "tool_call_id": tc.id,
                 "content": json.dumps(tool_result, ensure_ascii=False),
             })
-
-        if user_aborted:
-            break
 
         if final_valid:
             summary_resp = client.chat.completions.create(
@@ -585,7 +720,6 @@ def run_agent(report_text: str, scenario_id: str, human_in_loop: bool = True) ->
             {
                 "scenario_id": scenario_id,
                 "valid": final_valid,
-                "user_aborted": user_aborted,
                 "iterations": iteration,
                 "retries": state.retry_count,
                 "final_summary": final_summary,
@@ -599,9 +733,7 @@ def run_agent(report_text: str, scenario_id: str, human_in_loop: bool = True) ->
 
     # ── Final status ───────────────────────────────────────────────────────
     print(f"\n{'═' * W}")
-    if user_aborted:
-        print(f"  ABORTED by user")
-    elif final_valid:
+    if final_valid:
         print(f"  ✓ VALID  —  {scenario_id}")
         print(f"{'─' * W}")
         print(f"  XODR  {state.xodr_path}")
@@ -615,7 +747,6 @@ def run_agent(report_text: str, scenario_id: str, human_in_loop: bool = True) ->
     return {
         "scenario_id": scenario_id,
         "valid": final_valid,
-        "user_aborted": user_aborted,
         "iterations": iteration,
         "retries": state.retry_count,
         "xodr_path": str(state.xodr_path) if state.xodr_path else None,
@@ -624,4 +755,5 @@ def run_agent(report_text: str, scenario_id: str, human_in_loop: bool = True) ->
             state.data.get("classification", {}).get("scenario_type")
             if state.data else None
         ),
+        "state": state,
     }

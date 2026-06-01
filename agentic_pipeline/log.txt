@@ -4,17 +4,17 @@ esmini GIT BRANCH: tags/v3.0.4^0
 esmini BUILD VERSION: 6144
 [] [info] Loaded config file: /home/chimo/tools/esmini/esmini-demo/config.yml (/home/chimo/tools/esmini/esmini-demo/bin/../config.yml)
 [] [info] Loaded /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/20260601_mueggelschloesschenweg/20260601_mueggelschloesschenweg.xosc
-[2026-06-01 00:15:38]
+[2026-06-01 09:47:03]
 [] [info] Player options: --osc /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/20260601_mueggelschloesschenweg/20260601_mueggelschloesschenweg.xosc --camera_mode orbit --fixed_timestep 0.05 --ground_plane auto --info_text 1 --logfile_path log.txt --log_level info --text_scale 1.0 --traj_filter 0.1 
 [] [info] Run simulation decoupled from realtime, with fixed timestep: 0.05
-[] [info] Generated seed 1715396307
+[] [info] Generated seed 1944737538
 [] [info] Loading /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/20260601_mueggelschloesschenweg/20260601_mueggelschloesschenweg.xosc (v1.3)
 [] [info] 0 variables
 [] [info] Loaded OpenDRIVE: /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/20260601_mueggelschloesschenweg/20260601_mueggelschloesschenweg.xodr
 [] [info] Add and deactivate new object "truck_1" (id 0)
 [] [info] Add and deactivate new object "cyclist_1" (id 1)
 [] [info] 0 parameters
-[0.000] [info] Window created at 917,1662 with size 800,600
+[0.000] [info] Window created at 409,1648 with size 800,600
 [0.000] [info] Generating a simplistic 3D model of the road network
 [0.000] [info] Name: truck_1
 [0.000] [info] Name: cyclist_1
