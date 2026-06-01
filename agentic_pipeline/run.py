@@ -120,42 +120,53 @@ def main() -> None:
     xosc = Path(result["xosc_path"])
     state = result["state"]
 
-    # ── esmini + feedback loop ─────────────────────────────────────────────
-    for iteration in range(MAX_FEEDBACK_ITERATIONS + 1):
-        _launch_esmini(xosc)
+    # ── esmini + review menu ───────────────────────────────────────────────
+    feedback_count = 0
+    _launch_esmini(xosc)
 
+    while True:
         print()
         print(f"  {'─' * (W - 2)}")
+        print("  [r]  Rewatch the simulation")
+        print("  [f]  Give feedback to improve it")
+        print("  [ok] Confirm — this matches the report")
+        print(f"  {'─' * (W - 2)}")
         try:
-            feedback = input(
-                "  Does the simulation match the report?\n"
-                "  Press Enter if correct, or describe what is wrong: "
-            ).strip()
+            choice = input("  > ").strip().lower()
         except (EOFError, KeyboardInterrupt):
-            feedback = ""
+            choice = "ok"
 
-        if not feedback:
-            # User confirmed — done
+        if choice == "ok":
             break
 
-        if iteration >= MAX_FEEDBACK_ITERATIONS:
-            print(f"\n  Max feedback iterations ({MAX_FEEDBACK_ITERATIONS}) reached. Saving current version.")
-            break
-
-        print(f"\n  Applying feedback [{iteration + 1}/{MAX_FEEDBACK_ITERATIONS}]...")
-        fb_result = run_feedback_iteration(state, report_text, feedback)
-
-        if not fb_result.get("success"):
-            print(f"  ✗ Feedback error: {fb_result.get('error')}")
-            print("  Retrying esmini with unchanged scenario...")
+        if choice == "r":
+            _launch_esmini(xosc)
             continue
 
-        xosc = Path(fb_result["xosc_path"])
-        valid_tag = "✓ valid" if fb_result.get("valid") else "⚠ validation errors"
-        print(f"  Regenerated ({valid_tag}): {xosc.name}")
-        if fb_result.get("validation_errors"):
-            for e in fb_result["validation_errors"]:
-                print(f"    ✗  {e}")
+        if choice == "f":
+            if feedback_count >= MAX_FEEDBACK_ITERATIONS:
+                print(f"\n  Max feedback iterations ({MAX_FEEDBACK_ITERATIONS}) reached. Saving current version.")
+                break
+            try:
+                feedback = input("  Describe what is wrong: ").strip()
+            except (EOFError, KeyboardInterrupt):
+                feedback = ""
+            if not feedback:
+                continue
+            feedback_count += 1
+            print(f"\n  Applying feedback [{feedback_count}/{MAX_FEEDBACK_ITERATIONS}]...")
+            fb_result = run_feedback_iteration(state, report_text, feedback)
+            if not fb_result.get("success"):
+                print(f"  ✗ Feedback error: {fb_result.get('error')}")
+            else:
+                xosc = Path(fb_result["xosc_path"])
+                valid_tag = "✓ valid" if fb_result.get("valid") else "⚠ validation errors"
+                print(f"  Regenerated ({valid_tag}): {xosc.name}")
+                if fb_result.get("validation_errors"):
+                    for e in fb_result["validation_errors"]:
+                        print(f"    ✗  {e}")
+            _launch_esmini(xosc)
+            continue
 
     # ── Final summary ──────────────────────────────────────────────────────
     print()
