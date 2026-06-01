@@ -38,7 +38,7 @@
       "class": "motor_vehicle",
       "type": "truck",
       "maneuver": "turn_right",
-      "initial_direction": "unknown",
+      "initial_direction": "north",
       "traffic_rule_status": "priority"
     },
     {
@@ -53,7 +53,7 @@
   "conflict": {
     "conflict_mechanism": "right_turn_across_separated_cycle_track",
     "collision_happened": true,
-    "collision_description": "The truck turned right and collided with the cyclist who was riding straight on a separated cycle track.",
+    "collision_description": "The truck driver turned right and collided with the cyclist who was riding straight on the separated cycle track.",
     "severity_text": "serious"
   },
   "generated_simulation_parameters": {
@@ -73,14 +73,14 @@
           "vehicle_category": "bicycle",
           "initial_road_id": 0,
           "initial_lane_id": -2,
-          "initial_s_m": 10.0,
+          "initial_s_m": 50.0,
           "initial_speed_mps": 4.5
         },
         "truck_1": {
           "vehicle_category": "truck",
           "initial_road_id": 0,
           "initial_lane_id": -1,
-          "initial_s_m": 30.0,
+          "initial_s_m": 10.0,
           "initial_speed_mps": 3.0
         }
       },
