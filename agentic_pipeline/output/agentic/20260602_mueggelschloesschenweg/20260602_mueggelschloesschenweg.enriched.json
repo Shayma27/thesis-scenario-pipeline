@@ -2,7 +2,7 @@
   "schema_version": "0.1",
   "source": {
     "dataset": "Berlin Police Reports",
-    "source_id": "20260601_mueggelschloesschenweg",
+    "source_id": "20260602_mueggelschloesschenweg",
     "date": "2023-07-17",
     "time": "10:38",
     "raw_text": "Datum: Mo, 17.07.2023 Uhrzeit: 10:38 Uhr Der Fahrer wartete in dem von ihm geführten LKW auf der Fahrbahn der Salvador-Allende-Str. vor der Rotlicht abstrahlenden LSA. Als die LSA für seine Richtung grünes Licht abstrahlte, bog er nach rechts in den Müggelschlößchenweg ab und erfasste die neben ihm in gleicher Richtung geradeaus fahrende Radfahrerin. Sie befuhr den von der Fahrbahn baulich getrennten Radweg der Salvador-Allende-Str. in nördliche Richtung. Die LSA für Radfahrende strahlte grünes Wechsellicht ab. Die Radfahrerin und das Fahrrad wurden durch den rechts abbiegenden LKW vollständig überrollt."
@@ -53,7 +53,7 @@
   "conflict": {
     "conflict_mechanism": "right_turn_across_separated_cycle_track",
     "collision_happened": true,
-    "collision_description": "The truck turned right and completely ran over the cyclist who was riding straight in the same direction on a separated cycle track.",
+    "collision_description": "The truck turned right and completely overran the cyclist who was riding straight on the separated cycle track.",
     "severity_text": "serious"
   },
   "generated_simulation_parameters": {
@@ -73,15 +73,15 @@
           "vehicle_category": "bicycle",
           "initial_road_id": 0,
           "initial_lane_id": -2,
-          "initial_s_m": 10.0,
-          "initial_speed_mps": 1.5
+          "initial_s_m": 70.0,
+          "initial_speed_mps": 4.5
         },
         "truck_1": {
           "vehicle_category": "truck",
           "initial_road_id": 0,
           "initial_lane_id": -1,
           "initial_s_m": 30.0,
-          "initial_speed_mps": 1.0
+          "initial_speed_mps": 3.0
         }
       },
       "cyclist_lateral_position": "right",
