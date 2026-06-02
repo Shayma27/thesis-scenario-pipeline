@@ -4,10 +4,10 @@ esmini GIT BRANCH: tags/v3.0.4^0
 esmini BUILD VERSION: 6144
 [] [info] Loaded config file: /home/chimo/tools/esmini/esmini-demo/config.yml (/home/chimo/tools/esmini/esmini-demo/bin/../config.yml)
 [] [info] Loaded /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/20260602_mueggelschloesschenweg/20260602_mueggelschloesschenweg.xosc
-[2026-06-02 13:49:39]
+[2026-06-02 13:54:58]
 [] [info] Player options: --osc /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/20260602_mueggelschloesschenweg/20260602_mueggelschloesschenweg.xosc --camera_mode orbit --fixed_timestep 0.05 --ground_plane auto --info_text 1 --logfile_path log.txt --log_level info --text_scale 1.0 --traj_filter 0.1 
 [] [info] Run simulation decoupled from realtime, with fixed timestep: 0.05
-[] [info] Generated seed 902337247
+[] [info] Generated seed 1676269933
 [] [info] Loading /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/20260602_mueggelschloesschenweg/20260602_mueggelschloesschenweg.xosc (v1.3)
 [] [info] 0 variables
 [] [info] Loaded OpenDRIVE: /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/20260602_mueggelschloesschenweg/20260602_mueggelschloesschenweg.xodr
@@ -26,7 +26,7 @@ esmini BUILD VERSION: 6144
 [0.000] [info] Init cyclist_1 TeleportAction initState -> startTransition -> runningState
 [0.000] [info] Starting teleport Action
 [0.000] [info] cyclist_1 New position:
-[0.000] [info] Pos(70.00, -4.50, 0.00) Rot(0.00, 0.00, 0.00) roadId 0 laneId -2 s 70.00 offset 0.00 t -4.50
+[0.000] [info] Pos(10.00, -4.50, 0.00) Rot(0.00, 0.00, 0.00) roadId 0 laneId -2 s 10.00 offset 0.00 t -4.50
 [0.000] [info] Init cyclist_1 LongitudinalAction initState -> startTransition -> runningState
 [0.000] [info] storyBoard initState -> startTransition -> runningState
 [0.000] [info] story_act_maneuvuergroup_MotorVehicleManeuverManeuver initState -> startTransition -> runningState
