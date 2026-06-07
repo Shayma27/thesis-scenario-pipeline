@@ -86,7 +86,6 @@ def _launch_esmini(xosc_path: Path) -> None:
         ESMINI_BIN,
         "--osc", str(xosc_path),
         "--window", "60", "60", "800", "600",
-        "--fixed_timestep", "0.05",
     ]
     env = os.environ.copy()
     env["LIBGL_ALWAYS_SOFTWARE"] = "1"
