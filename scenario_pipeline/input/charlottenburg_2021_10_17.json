@@ -38,7 +38,14 @@
     "traffic_light_present": "unknown",
     "bike_facility_type": "unknown",
     "parking_present": "unknown",
-    "number_of_lanes_mentioned": "unknown"
+    "number_of_lanes_mentioned": "unknown",
+    "heading_overrides": {
+      "secondary_heading_rad": {
+        "value": 3.141593,
+        "source": "manual_map_review",
+        "reason": "OSM segment heading (152.4 deg) reflects the Luisenplatz roundabout curve and makes the crossing appear at 124 deg instead of ~90 deg. Otto-Suhr-Allee / Spandauer Damm runs E-W; the car approaches from the east going west, so pi (180 deg) gives a roughly perpendicular crossing with the primary at -83.2 deg."
+      }
+    }
   },
   "participants": [
     {

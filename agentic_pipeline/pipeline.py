@@ -188,14 +188,18 @@ Be concise between tool calls. One or two sentences of reasoning is enough.
 """
 
 FEEDBACK_SYSTEM_PROMPT = """\
-You are reviewing a generated OpenSCENARIO simulation against the original police report.
-The user has watched the simulation and reported an issue with how it looks.
-Your task: adjust the simulation parameters to fix the reported problem.
+You are reviewing a generated simulation against the original police report.
+The user has watched the simulation and reported an issue.
+Your task: adjust simulation parameters to fix the reported problem.
 
 You will receive:
 1. The original German police report
 2. The current simulation parameters (JSON)
 3. The user's feedback describing what looks wrong
+
+IMPORTANT: Both the .xodr (road network) and .xosc (scenario script) are ALWAYS
+regenerated together on every feedback iteration. This means you can freely fix
+geometry parameters — the road will be fully rebuilt from scratch with your changes.
 
 Output ONLY a valid JSON object with the parameters to change. Use this structure:
 {
@@ -204,19 +208,41 @@ Output ONLY a valid JSON object with the parameters to change. Use this structur
     "actors": {
       "<actor_id>": { ... actor parameter overrides ... }
     },
+    "conflict": { ... conflict parameter overrides ... },
     "simulation_duration_s": <optional>
   }
 }
 
 Only include parameters that need to change. Do not wrap in markdown code blocks.
 
-Common parameters you can adjust:
-- opendrive.road_length_m: length of the road in meters (default 100)
-- opendrive.junction_offset_m: distance from road start to the junction
-- openscenario.actors.<id>.initial_s_m: actor starting position along road (meters from start)
-- openscenario.actors.<id>.initial_speed_mps: actor initial speed in m/s
-- openscenario.actors.<id>.initial_lane_id: lane number (-1=rightmost driving lane, -2=next)
+━━━ GEOMETRY PARAMETERS (affect .xodr road regeneration) ━━━
+- opendrive.primary_road_lanes: number of driving lanes (integer, e.g. 1, 2, 3)
+- opendrive.motor_lane_width_m: width of each driving lane in meters (e.g. 3.5)
+- opendrive.road_length_m: total road length in meters (default 100)
+- opendrive.primary_has_bike_facility: whether a bike lane/track exists (true/false)
+- opendrive.primary_bike_facility_position: which side the bike facility is on ("right", "left", "both")
+- opendrive.primary_bike_facility_type: type of bike facility ("separated_cycle_track", "bike_lane", "shared_lane", "none")
+- opendrive.bike_lane_width_m: width of the bike lane/track in meters (e.g. 1.5, 2.0)
+
+━━━ ACTOR PARAMETERS (affect .xosc scenario script) ━━━
+- openscenario.actors.truck_1.initial_speed_mps: truck initial speed in m/s
+- openscenario.actors.cyclist_1.initial_speed_mps: cyclist initial speed in m/s
+- openscenario.actors.truck_1.initial_s_m: truck starting position along road in meters
+- openscenario.actors.cyclist_1.initial_s_m: cyclist starting position along road in meters
+- openscenario.actors.truck_1.initial_lane_id: truck lane (-1=rightmost driving lane, -2=next lane)
+- openscenario.actors.cyclist_1.initial_lane_id: cyclist lane (-2=bike lane if present, -1=driving lane)
+
+━━━ CONFLICT / TIMING PARAMETERS ━━━
+- openscenario.conflict.conflict_s_m: road position (meters) where the conflict occurs
 - openscenario.simulation_duration_s: total simulation time in seconds
+
+━━━ EXAMPLE FEEDBACK → PARAMETER MAPPINGS ━━━
+"die Fahrradspur fehlt"              → primary_has_bike_facility: true
+"der Radweg ist auf der falschen Seite" → primary_bike_facility_position: "left" or "right"
+"zu wenig Spuren"                    → primary_road_lanes: 2 or 3
+"der Radweg ist baulich getrennt"    → primary_bike_facility_type: "separated_cycle_track"
+"der LKW ist zu schnell"             → truck_1.initial_speed_mps: lower value
+"der Fahrrad startet zu weit weg"    → cyclist_1.initial_s_m: higher value
 
 Be concise and precise. Only change what the user's feedback indicates is wrong.
 """
