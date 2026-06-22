@@ -258,6 +258,14 @@ def _apply_osm_context(data, context):
     if road_context.get("traffic_light_present") in {None, "unknown"}:
         road_context["traffic_light_present"] = context["traffic_signals_nearby"]
 
+    geocoded = context.get("geocoded", {})
+    if geocoded.get("lat") is not None and geocoded.get("lon") is not None:
+        opendrive_params = data.setdefault("generated_simulation_parameters", {}).setdefault(
+            "opendrive", {}
+        )
+        opendrive_params["intersection_lat"] = geocoded["lat"]
+        opendrive_params["intersection_lon"] = geocoded["lon"]
+
     _apply_bike_facility_context(data, context)
     _apply_lane_context(data, context)
     _apply_lane_guided_maneuver_context(data, context)
@@ -353,7 +361,8 @@ def _apply_lane_context(data, context):
             reason=_lane_count_reason(primary_evidence, secondary_evidence, context),
         )
     else:
-        lane_count = _best_lane_count(roads, data.get("location", {}).get("primary_road"))
+        primary_road_name = data.get("location", {}).get("primary_road")
+        lane_count = _best_lane_count(roads, primary_road_name)
         if lane_count:
             params["motor_lane_count"] = lane_count
             _apply_turning_vehicle_lane_id(data, lane_count)
@@ -364,6 +373,32 @@ def _apply_lane_context(data, context):
                 source="osm_tag",
                 reason="OpenDRIVE motor-lane count was derived from nearby OSM lanes tags.",
             )
+        heading = _best_road_heading(roads, primary_road_name)
+        if heading is not None:
+            params["primary_heading_rad"] = heading
+            _upsert_missing_parameter(
+                data,
+                parameter="primary_heading_rad",
+                value_used=round(heading, 6),
+                source="osm_way_geometry",
+                reason="Primary road heading derived from OSM way geometry.",
+            )
+
+        secondary_road_name = data.get("location", {}).get("secondary_road")
+        if secondary_road_name:
+            sec_heading = _best_road_heading(roads, secondary_road_name)
+            if sec_heading is not None:
+                params["secondary_heading_rad"] = sec_heading
+                _upsert_missing_parameter(
+                    data,
+                    parameter="secondary_heading_rad",
+                    value_used=round(sec_heading, 6),
+                    source="osm_way_geometry",
+                    reason="Secondary road heading derived from OSM way geometry.",
+                )
+            sec_lanes = _best_lane_count(roads, secondary_road_name)
+            if sec_lanes:
+                params["secondary_road_lanes"] = sec_lanes
 
 
 def _apply_bike_facility_context(data, context):
@@ -627,6 +662,17 @@ def _cycleway_tags(tags):
         for key, value in tags.items()
         if key == "cycleway" or key.startswith("cycleway:")
     }
+
+
+def _best_road_heading(roads, preferred_name=None):
+    names = _names_from_location_field(preferred_name)
+    matched = [road for road in roads if not names or _name_matches(road.get("name"), names)]
+    candidates = matched or roads
+    for road in candidates:
+        heading = _road_heading_rad(road)
+        if heading is not None:
+            return heading
+    return None
 
 
 def _best_lane_count(roads, preferred_name=None):

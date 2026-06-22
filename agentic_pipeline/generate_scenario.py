@@ -471,6 +471,14 @@ def generate_openscenario(data, output_path, xodr_filename):
         xosc.AbsoluteSpeedAction(float(cyclist_actor["initial_speed_mps"]), transition),
     )
 
+    road_length_m = float(odr_params.get("road_length_m", 100))
+    primary_heading = float(odr_params.get("primary_heading_rad", 0))
+    secondary_heading = float(
+        odr_params.get("secondary_heading_rad", primary_heading - math.pi / 2)
+    )
+    # Turn angle relative to primary road (negative = rightward)
+    turn_rel = _normalize_angle(secondary_heading - primary_heading)
+
     motor_start_s, motor_y = _world_position_from_lane_s(motor_actor, odr_params)
     cyclist_start_s, cyclist_y = _world_position_from_lane_s(cyclist_actor, odr_params)
     motor_speed_mps = float(motor_actor["initial_speed_mps"])
@@ -502,10 +510,10 @@ def generate_openscenario(data, output_path, xodr_filename):
         motor_points = [
             (0, motor_start_s, motor_y, 0),
             (motor_turn_start_time_s, motor_approach_s, motor_y, 0),
-            (conflict_time_s - 1.2, impact_x - 4.2, motor_y - 0.3, -0.25),
-            (conflict_time_s - 0.5, impact_x - 1.2, impact_y + 0.4, -1.1),
-            (conflict_time_s, impact_x, impact_y, -math.pi / 2),
-            (duration_s, impact_x, impact_y, -math.pi / 2),
+            (conflict_time_s - 1.2, impact_x - 4.2, motor_y - 0.3, turn_rel * 0.159),
+            (conflict_time_s - 0.5, impact_x - 1.2, impact_y + 0.4, turn_rel * 0.700),
+            (conflict_time_s, impact_x, impact_y, turn_rel),
+            (duration_s, impact_x, impact_y, turn_rel),
         ]
 
     cyclist_points = [
@@ -514,6 +522,16 @@ def generate_openscenario(data, output_path, xodr_filename):
         (conflict_time_s, impact_x, impact_y, 0),
         (duration_s, impact_x, impact_y, 0),
     ]
+
+    def _to_world(points):
+        result = []
+        for t, s, lat, hdg in points:
+            wx, wy = _world_from_road_s_t(road_length_m, primary_heading, s, lat)
+            result.append((t, wx, wy, primary_heading + hdg))
+        return result
+
+    motor_points = _to_world(motor_points)
+    cyclist_points = _to_world(cyclist_points)
 
     storyboard = xosc.StoryBoard(
         init,

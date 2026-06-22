@@ -15,6 +15,17 @@ def _road_params(data):
     return data.get("generated_simulation_parameters", {}).get("opendrive", {})
 
 
+def _geo_reference(params):
+    lat = params.get("intersection_lat")
+    lon = params.get("intersection_lon")
+    if lat is None or lon is None:
+        return None
+    return (
+        f"+proj=tmerc +lat_0={lat} +lon_0={lon} "
+        "+k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m"
+    )
+
+
 def _make_lane_section(motor_lane_width_m, bike_lane_width_m):
     """Map JSON lane-width defaults to driving, biking, and sidewalk lanes."""
     center_mark = xodr.RoadMark(xodr.RoadMarkType.solid, 0.15)
@@ -199,7 +210,7 @@ def _generate_crossing_opendrive(data, output_path):
     secondary_name = data.get("location", {}).get("secondary_road") or "SecondaryRoad"
     road_layout = data.get("road_context", {}).get("road_layout")
 
-    odr = xodr.OpenDrive(data["source"]["source_id"])
+    odr = xodr.OpenDrive(data["source"]["source_id"], geo_reference=_geo_reference(params))
 
     # Road 0: primary/report cyclist approach.
     # The heading can come from OSM or from a manual map-review override.
@@ -308,10 +319,12 @@ def generate_opendrive(data, output_path):
     bike_facility_position = params.get("primary_bike_facility_position", "rightmost")
 
     road_name = data.get("location", {}).get("primary_road") or "PrimaryRoad"
-    odr = xodr.OpenDrive(data["source"]["source_id"])
+    odr = xodr.OpenDrive(data["source"]["source_id"], geo_reference=_geo_reference(params))
 
-    # road_length_m and road_geometry=line map to a single OpenDRIVE Line geometry.
-    planview = xodr.PlanView(0, 0, 0)
+    heading = float(params.get("primary_heading_rad", 0))
+    start_x = -math.cos(heading) * road_length_m / 2
+    start_y = -math.sin(heading) * road_length_m / 2
+    planview = xodr.PlanView(start_x, start_y, heading)
     planview.add_geometry(xodr.Line(road_length_m))
 
     road = xodr.Road(
@@ -325,12 +338,31 @@ def generate_opendrive(data, output_path):
         ),
         name=road_name,
     )
+    odr.add_road(road)
+
+    secondary_name = data.get("location", {}).get("secondary_road")
+    if secondary_name:
+        sec_heading = float(
+            params.get("secondary_heading_rad", heading - math.pi / 2)
+        )
+        sec_lanes = int(params.get("secondary_road_lanes", 1))
+        sec_start_x, sec_start_y = _centered_start(road_length_m, sec_heading)
+        odr.add_road(
+            _make_line_road(
+                1,
+                secondary_name,
+                sec_start_x,
+                sec_start_y,
+                sec_heading,
+                road_length_m,
+                _make_multi_lane_section(motor_lane_width_m, sec_lanes),
+            )
+        )
 
     # parking_access_s_m marks where the truck crosses the bike lane. For this
     # first esmini test we keep the parking access out of OpenDRIVE objects and
     # express it through the OpenSCENARIO truck trajectory instead.
     _ = parking_access_s_m
 
-    odr.add_road(road)
     odr.adjust_roads_and_lanes()
     odr.write_xml(str(output_path))
