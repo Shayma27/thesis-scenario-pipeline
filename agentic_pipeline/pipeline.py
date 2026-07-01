@@ -23,10 +23,12 @@ PROJECT_DIR = Path(__file__).resolve().parent
 
 from groq import Groq
 
+import shutil
+
 from extract_scenario import extract_scenario as _extract_scenario
 from osm_enrichment import enrich_with_osm as _enrich_with_osm
 from complete_parameters import complete_parameters as _complete_parameters
-from generate_road import generate_opendrive as _generate_opendrive
+from template_selector import select_template as _select_template
 from generate_scenario import generate_openscenario as _generate_openscenario
 from validate_outputs import validate_generated_files as _validate_outputs
 
@@ -115,7 +117,7 @@ TOOLS = [
         "function": {
             "name": "generate_scenario",
             "description": (
-                "Generate the OpenDRIVE (.xodr) road network and OpenSCENARIO (.xosc) "
+                "Select the correct .xodr road template and generate the OpenSCENARIO (.xosc) "
                 "script from the current scenario data. Returns file paths and success status. "
                 "Call after complete_parameters. On retry after validation failure, pass "
                 "parameter_overrides as a JSON string to fix specific errors."
@@ -197,9 +199,10 @@ You will receive:
 2. The current simulation parameters (JSON)
 3. The user's feedback describing what looks wrong
 
-IMPORTANT: Both the .xodr (road network) and .xosc (scenario script) are ALWAYS
-regenerated together on every feedback iteration. This means you can freely fix
-geometry parameters — the road will be fully rebuilt from scratch with your changes.
+IMPORTANT: The .xosc (scenario script) is regenerated on every feedback iteration.
+The .xodr road network is a pre-validated template selected by scenario type — it is
+NOT regenerated. Geometry parameters below affect actor world-coordinate calculations
+(trajectory positions) in the .xosc, not the underlying road template.
 
 Output ONLY a valid JSON object with the parameters to change. Use this structure:
 {
@@ -215,7 +218,7 @@ Output ONLY a valid JSON object with the parameters to change. Use this structur
 
 Only include parameters that need to change. Do not wrap in markdown code blocks.
 
-━━━ GEOMETRY PARAMETERS (affect .xodr road regeneration) ━━━
+━━━ GEOMETRY PARAMETERS (affect actor trajectory positions in .xosc) ━━━
 - opendrive.primary_road_lanes: number of driving lanes (integer, e.g. 1, 2, 3)
 - opendrive.motor_lane_width_m: width of each driving lane in meters (e.g. 3.5)
 - opendrive.road_length_m: total road length in meters (default 100)
@@ -396,7 +399,7 @@ def _tool_complete_parameters(state: AgentState) -> dict:
 
 
 def _tool_generate_scenario(state: AgentState, parameter_overrides: str | None = None) -> dict:
-    print("  → Generating OpenDRIVE + OpenSCENARIO files...")
+    print("  → Selecting template and generating OpenSCENARIO...")
     if state.data is None:
         return {"success": False, "error": "extract_scenario must be called first"}
 
@@ -413,21 +416,28 @@ def _tool_generate_scenario(state: AgentState, parameter_overrides: str | None =
 
     state.output_dir.mkdir(parents=True, exist_ok=True)
     sid = state.data["source"]["source_id"]
-    xodr_path = state.output_dir / f"{sid}.xodr"
     xosc_path = state.output_dir / f"{sid}.xosc"
     enriched_path = state.output_dir / f"{sid}.enriched.json"
 
+    scenario_type = state.data.get("classification", {}).get("scenario_type", "")
+    template_src = _select_template(scenario_type)
+    xodr_path = state.output_dir / template_src.name
+    shutil.copy2(template_src, xodr_path)
+
     try:
-        _generate_opendrive(state.data, xodr_path)
-        _generate_openscenario(state.data, xosc_path, xodr_filename=xodr_path.name)
+        _generate_openscenario(state.data, xosc_path, xodr_filename=template_src.name)
         enriched_path.write_text(
             json.dumps(state.data, indent=2, ensure_ascii=False), encoding="utf-8"
         )
         state.xodr_path = xodr_path
         state.xosc_path = xosc_path
-        state.record("generate_scenario", {"xodr": str(xodr_path), "xosc": str(xosc_path)})
-        print(f"  ✓ Generated:  {xodr_path.name}")
-        print(f"               {xosc_path.name}")
+        state.record("generate_scenario", {
+            "template": str(template_src),
+            "xodr": str(xodr_path),
+            "xosc": str(xosc_path),
+        })
+        print(f"  ✓ Template:   {template_src.name}  →  {xodr_path.name}")
+        print(f"  ✓ Generated:  {xosc_path.name}")
         return {
             "success": True,
             "xodr_path": str(xodr_path),
