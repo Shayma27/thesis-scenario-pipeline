@@ -420,12 +420,14 @@ def _tool_generate_scenario(state: AgentState, parameter_overrides: str | None =
     enriched_path = state.output_dir / f"{sid}.enriched.json"
 
     scenario_type = state.data.get("classification", {}).get("scenario_type", "")
-    template_src = _select_template(scenario_type)
-    xodr_path = state.output_dir / template_src.name
+    template_rel = _select_template(scenario_type)
+    template_src = Path(__file__).resolve().parent / template_rel
+    xodr_filename = Path(template_rel).name
+    xodr_path = state.output_dir / xodr_filename
     shutil.copy2(template_src, xodr_path)
 
     try:
-        _generate_openscenario(state.data, xosc_path, xodr_filename=template_src.name)
+        _generate_openscenario(state.data, xosc_path, xodr_filename=xodr_filename)
         enriched_path.write_text(
             json.dumps(state.data, indent=2, ensure_ascii=False), encoding="utf-8"
         )
@@ -436,7 +438,7 @@ def _tool_generate_scenario(state: AgentState, parameter_overrides: str | None =
             "xodr": str(xodr_path),
             "xosc": str(xosc_path),
         })
-        print(f"  ✓ Template:   {template_src.name}  →  {xodr_path.name}")
+        print(f"  ✓ Template:   {xodr_filename}  →  {xodr_path.name}")
         print(f"  ✓ Generated:  {xosc_path.name}")
         return {
             "success": True,

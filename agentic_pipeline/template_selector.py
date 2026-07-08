@@ -4,22 +4,27 @@ from pathlib import Path
 
 _TEMPLATE_DIR = Path(__file__).resolve().parent / "templates"
 
-TEMPLATE_MAP: dict[str, str] = {
-    "right_turn_conflict":         "intersection_4way.xodr",
-    "left_turn_conflict":          "intersection_4way.xodr",
-    "straight_crossing_conflict":  "intersection_4way.xodr",
-    "priority_violation_conflict": "tjunction.xodr",
-    "lane_change_conflict":        "straight_road.xodr",
-    "rear_end_conflict":           "straight_road.xodr",
+TEMPLATE_MAP: dict[str, str | None] = {
+    "right_turn_conflict":         "templates/intersection_4way.xodr",
+    "left_turn_conflict":          "templates/intersection_4way.xodr",
+    "straight_crossing_conflict":  "templates/intersection_4way.xodr",
+    "priority_violation_conflict": "templates/intersection_4way.xodr",
+    "lane_change_conflict":        "templates/straight_road.xodr",
+    "dooring":                     None,
+    "unknown":                     "templates/intersection_4way.xodr",
 }
 
-_FALLBACK = "intersection_4way.xodr"
 
+def select_template(scenario_type: str) -> str:
+    """Return the relative path to the .xodr template for *scenario_type*.
 
-def select_template(scenario_type: str) -> Path:
-    """Return the absolute path to the .xodr template for *scenario_type*.
-
-    Falls back to the 4-way intersection template for unknown types.
+    Raises ValueError for scenario types excluded by design (e.g. dooring).
+    Falls back to intersection_4way.xodr for unknown types.
     """
-    filename = TEMPLATE_MAP.get(scenario_type, _FALLBACK)
-    return _TEMPLATE_DIR / filename
+    template = TEMPLATE_MAP.get(scenario_type, "templates/intersection_4way.xodr")
+    if template is None:
+        raise ValueError(
+            f"Scenario type '{scenario_type}' excluded by design "
+            "(dooring not supported in esmini)."
+        )
+    return template
