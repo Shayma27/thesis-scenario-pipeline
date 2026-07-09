@@ -17,10 +17,9 @@ import re
 import sys
 from pathlib import Path
 
-from groq import Groq
+from llm_client import get_client, MODEL
 
 # ── Configuration ─────────────────────────────────────────────────────────────
-MODEL = "llama-3.3-70b-versatile"
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 INPUT_DIR = PROJECT_DIR / "input"
 
@@ -139,7 +138,7 @@ def extract_scenario(report_text: str, scenario_id: str) -> dict:
     Calls the LLM to extract structured scenario information from a German
     police report. Returns a dict in the format expected by main.py.
     """
-    client = Groq()  # reads GROQ_API_KEY from environment
+    client = get_client()
 
     response = client.chat.completions.create(
         model=MODEL,

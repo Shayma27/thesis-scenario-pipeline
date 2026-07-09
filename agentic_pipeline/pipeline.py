@@ -1,7 +1,7 @@
 """
 Agentic Scenario Pipeline — core logic.
 
-Groq llama-3.3-70b-versatile with function calling autonomously sequences
+A vLLM-served Llama 3.1 8B Instruct model with function calling autonomously sequences
 5 tools to convert a German Berlin police accident report into validated
 OpenDRIVE + OpenSCENARIO simulation files.
 
@@ -21,7 +21,7 @@ from pathlib import Path
 
 PROJECT_DIR = Path(__file__).resolve().parent
 
-from groq import Groq
+from llm_client import get_client, MODEL, message_to_dict
 
 import shutil
 
@@ -33,7 +33,6 @@ from generate_scenario import generate_openscenario as _generate_openscenario
 from validate_outputs import validate_generated_files as _validate_outputs
 
 
-MODEL = "llama-3.3-70b-versatile"
 OUTPUT_BASE = PROJECT_DIR / "output" / "agentic"
 OSM_CACHE_DIR = PROJECT_DIR / "output" / "osm_cache"
 MAX_ITERATIONS = 25
@@ -299,7 +298,7 @@ def _show_extraction_summary(data: dict) -> None:
 # ── Tool implementations ──────────────────────────────────────────────────────
 
 def _tool_extract_scenario(state: AgentState, report_text: str, scenario_id: str) -> dict:
-    print("  → Calling Groq LLM (llama-3.3-70b) for extraction...")
+    print(f"  → Calling LLM ({MODEL}) for extraction...")
     extracted = _extract_scenario(report_text, scenario_id)
     state.data = extracted
     stype = extracted["classification"]["scenario_type"]
@@ -569,11 +568,11 @@ def _deep_merge(base: dict, overrides: dict) -> dict:
 
 def run_feedback_iteration(state: AgentState, report_text: str, user_feedback: str) -> dict:
     """
-    Call the Groq LLM with user feedback to get adjusted parameters,
+    Call the LLM with user feedback to get adjusted parameters,
     then regenerate and validate the scenario.
     Returns {success, xosc_path, xodr_path, overrides_applied, error}.
     """
-    client = Groq()
+    client = get_client()
 
     params_json = json.dumps(
         state.data.get("generated_simulation_parameters", {}),
@@ -642,7 +641,7 @@ def run_agent(report_text: str, scenario_id: str) -> dict:
     Run the full agentic pipeline on one police report — no human interruption.
     Returns a result dict including the AgentState under key 'state'.
     """
-    client = Groq()
+    client = get_client()
     state = AgentState(scenario_id)
 
     print(f"\n{'═' * W}")
@@ -689,7 +688,7 @@ def run_agent(report_text: str, scenario_id: str) -> dict:
             messages.append({"role": "assistant", "content": msg.content or ""})
             break
 
-        messages.append(msg)
+        messages.append(message_to_dict(msg))
 
         for tc in msg.tool_calls:
             fn_name = tc.function.name
