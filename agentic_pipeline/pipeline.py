@@ -677,7 +677,7 @@ def run_agent(report_text: str, scenario_id: str) -> dict:
             tools=TOOLS,
             tool_choice="auto",
             temperature=0.0,
-            max_tokens=2048,
+            max_tokens=768,
         )
         msg = response.choices[0].message
 
