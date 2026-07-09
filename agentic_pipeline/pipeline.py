@@ -682,7 +682,40 @@ def run_agent(report_text: str, scenario_id: str) -> dict:
         msg = response.choices[0].message
 
         if not getattr(msg, "tool_calls", None) and msg.content:
-            maybe_call = _extract_json(msg.content)
+            raw_content = msg.content
+            try:
+                maybe_call = json.loads(raw_content)
+                if not isinstance(maybe_call, dict):
+                    maybe_call = None
+            except Exception:
+                maybe_call = None
+
+            if maybe_call is None:
+                maybe_call = _extract_json(raw_content)
+
+            if not isinstance(maybe_call, dict):
+                if "extract_scenario" in raw_content:
+                    maybe_call = {
+                        "name": "extract_scenario",
+                        "parameters": {
+                            "report_text": report_text.strip(),
+                            "scenario_id": scenario_id,
+                        },
+                    }
+                elif "query_osm" in raw_content:
+                    maybe_call = {
+                        "name": "query_osm",
+                        "parameters": {
+                            "osm_query": (state.data.get("location") or {}).get("osm_query", "") if state.data else "",
+                        },
+                    }
+                elif "complete_parameters" in raw_content:
+                    maybe_call = {"name": "complete_parameters", "parameters": {}}
+                elif "generate_scenario" in raw_content:
+                    maybe_call = {"name": "generate_scenario", "parameters": {}}
+                elif "validate_and_fix" in raw_content:
+                    maybe_call = {"name": "validate_and_fix", "parameters": {}}
+
             if isinstance(maybe_call, dict) and maybe_call.get("name"):
                 fn_name = maybe_call.get("name")
                 fn_args = maybe_call.get("parameters", maybe_call.get("arguments", {}))
