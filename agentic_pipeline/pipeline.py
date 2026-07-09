@@ -18,6 +18,7 @@ import sys
 import textwrap
 from datetime import datetime, timezone
 from pathlib import Path
+from types import SimpleNamespace
 
 PROJECT_DIR = Path(__file__).resolve().parent
 
@@ -679,6 +680,35 @@ def run_agent(report_text: str, scenario_id: str) -> dict:
             max_tokens=2048,
         )
         msg = response.choices[0].message
+
+        if not getattr(msg, "tool_calls", None) and msg.content:
+            maybe_call = _extract_json(msg.content)
+            if isinstance(maybe_call, dict) and maybe_call.get("name"):
+                fn_name = maybe_call.get("name")
+                fn_args = maybe_call.get("parameters", maybe_call.get("arguments", {}))
+
+                if isinstance(fn_args, str):
+                    try:
+                        fn_args = json.loads(fn_args)
+                    except Exception:
+                        fn_args = {}
+
+                if not isinstance(fn_args, dict):
+                    fn_args = {}
+
+                fake_tool_calls = [
+                    SimpleNamespace(
+                        id=f"manual_tool_call_{iteration}",
+                        type="function",
+                        function=SimpleNamespace(
+                            name=fn_name,
+                            arguments=json.dumps(fn_args, ensure_ascii=False),
+                        ),
+                    )
+                ]
+
+                object.__setattr__(msg, "tool_calls", fake_tool_calls)
+                object.__setattr__(msg, "content", None)
 
         if msg.content:
             print(f"  Agent: {textwrap.fill(msg.content.strip(), W - 10, subsequent_indent='          ')}")
