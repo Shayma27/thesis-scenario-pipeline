@@ -1,9 +1,34 @@
 import math
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from scenariogeneration import xosc
 
 from defaults import DEFAULT_CYCLIST_LATERAL_POSITION, DEFAULT_SIMULATION_DURATION_S
+
+_TEMPLATE_DIR = Path(__file__).resolve().parent / "templates"
+_JUNCTION_XODR_NAME = "intersection_4way.xodr"
+
+# Connector-road map for templates/intersection_4way.xodr's <junction id="4">.
+# Verified directly against that file's <road>/<junction> elements (arc
+# curvature sign + lane-link count distinguish turn_right/turn_left/go_straight
+# per entry road). The entry-road-1 side does NOT mirror entry-road-0's
+# connector numbering — road 5 is turn_left (positive curvature, 2 lane
+# links, exits to road 0), road 6 is turn_right (negative curvature, 4 lane
+# links, exits to road 2), road 7 is go_straight (near-zero curvature, 2 lane
+# links, exits to road 3).
+_JUNCTION_CONNECTORS = {
+    0: {"turn_right": 8, "go_straight": 9, "turn_left": 10},
+    1: {"turn_right": 6, "go_straight": 7, "turn_left": 5},
+}
+_JUNCTION_EXIT_ROAD = {8: 1, 9: 2, 10: 3, 6: 2, 7: 3, 5: 0}
+# Whether each connector's successor link attaches to the exit road's own
+# s=0 ("start") or s=length ("end") point — read directly from each
+# connector <road>'s <link><successor contactPoint=...>. "end" means travel
+# continues with s *decreasing* on the exit road.
+_JUNCTION_EXIT_CONTACT = {8: "start", 9: "end", 10: "end", 6: "end", 7: "end", 5: "start"}
+
+_xodr_road_geometry_cache: dict[tuple[str, str], list[dict]] = {}
 
 
 def _osc_params(data):
@@ -179,6 +204,219 @@ def _world_from_road_s_t(length_m, heading_rad, s_m, t_m):
     )
 
 
+def _junction_template_path():
+    return _TEMPLATE_DIR / _JUNCTION_XODR_NAME
+
+
+def _is_junction_template(xodr_filename):
+    return Path(xodr_filename).name == _JUNCTION_XODR_NAME
+
+
+def _maneuver_kind(raw_maneuver):
+    """Normalize a report/participant 'maneuver' string to a connector key."""
+    text = (raw_maneuver or "").lower()
+    if "turn_left" in text:
+        return "turn_left"
+    if "turn_right" in text:
+        return "turn_right"
+    return "go_straight"
+
+
+def _parse_xodr_road_geometry(xodr_path, road_id):
+    """Read <road id=road_id>'s <planView> geometry blocks (line/arc/paramPoly3)."""
+    key = (str(xodr_path), str(road_id))
+    cached = _xodr_road_geometry_cache.get(key)
+    if cached is not None:
+        return cached
+
+    tree = ET.parse(xodr_path)
+    road_el = next(
+        (r for r in tree.getroot().findall("road") if r.get("id") == str(road_id)),
+        None,
+    )
+    if road_el is None:
+        raise ValueError(f"Road id={road_id!r} not found in {xodr_path}")
+
+    segments = []
+    for geom in road_el.find("planView").findall("geometry"):
+        base = {
+            "s0": float(geom.get("s")),
+            "x0": float(geom.get("x")),
+            "y0": float(geom.get("y")),
+            "hdg0": float(geom.get("hdg")),
+            "length": float(geom.get("length")),
+        }
+        arc = geom.find("arc")
+        poly3 = geom.find("paramPoly3")
+        if arc is not None:
+            base["kind"] = "arc"
+            base["curvature"] = float(arc.get("curvature"))
+        elif poly3 is not None:
+            base["kind"] = "paramPoly3"
+            for coeff in ("aU", "bU", "cU", "dU", "aV", "bV", "cV", "dV"):
+                base[coeff] = float(poly3.get(coeff))
+        else:
+            base["kind"] = "line"
+        segments.append(base)
+
+    segments.sort(key=lambda seg: seg["s0"])
+    _xodr_road_geometry_cache[key] = segments
+    return segments
+
+
+def _evaluate_geometry_segment(seg, local_s):
+    x0, y0, hdg0, kind = seg["x0"], seg["y0"], seg["hdg0"], seg["kind"]
+
+    if kind == "arc" and abs(seg["curvature"]) > 1e-12:
+        k = seg["curvature"]
+        heading = hdg0 + k * local_s
+        x = x0 + (math.sin(heading) - math.sin(hdg0)) / k
+        y = y0 - (math.cos(heading) - math.cos(hdg0)) / k
+        return x, y, heading
+
+    if kind == "paramPoly3":
+        p = local_s
+        u = seg["aU"] + seg["bU"] * p + seg["cU"] * p**2 + seg["dU"] * p**3
+        v = seg["aV"] + seg["bV"] * p + seg["cV"] * p**2 + seg["dV"] * p**3
+        du = seg["bU"] + 2 * seg["cU"] * p + 3 * seg["dU"] * p**2
+        dv = seg["bV"] + 2 * seg["cV"] * p + 3 * seg["dV"] * p**2
+        heading = hdg0 + math.atan2(dv, du) if (du or dv) else hdg0
+        x = x0 + u * math.cos(hdg0) - v * math.sin(hdg0)
+        y = y0 + u * math.sin(hdg0) + v * math.cos(hdg0)
+        return x, y, heading
+
+    # kind == "line", or an arc with ~zero curvature (degenerates to a line)
+    x = x0 + math.cos(hdg0) * local_s
+    y = y0 + math.sin(hdg0) * local_s
+    return x, y, hdg0
+
+
+def _road_total_length(segments):
+    last = segments[-1]
+    return last["s0"] + last["length"]
+
+
+def _road_point(segments, s):
+    s = max(0.0, min(s, _road_total_length(segments)))
+    for seg in segments:
+        if seg["s0"] <= s <= seg["s0"] + seg["length"] + 1e-9:
+            return _evaluate_geometry_segment(seg, s - seg["s0"])
+    last = segments[-1]
+    return _evaluate_geometry_segment(last, last["length"])
+
+
+def _road_world_point(segments, s, t_m):
+    x, y, heading = _road_point(segments, s)
+    nx, ny = _road_normal(heading)
+    return x + nx * t_m, y + ny * t_m, heading
+
+
+def _junction_maneuver_samples(
+    entry_road_id, maneuver_kind, t_offset_m, approach_margin_m=30.0, sample_step_m=0.5
+):
+    """Sample real WorldPosition points (path_distance_m, x, y, heading) for a
+    vehicle approaching entry_road_id and executing maneuver_kind through
+    templates/intersection_4way.xodr's junction id="4", using the actual
+    connector road geometry (not an invented s/t formula).
+
+    Returns (samples, junction_entry_distance_m, junction_exit_distance_m).
+    """
+    xodr_path = _junction_template_path()
+    connector_id = _JUNCTION_CONNECTORS[entry_road_id][maneuver_kind]
+    exit_road_id = _JUNCTION_EXIT_ROAD[connector_id]
+    exit_contact = _JUNCTION_EXIT_CONTACT[connector_id]
+
+    entry_segs = _parse_xodr_road_geometry(xodr_path, entry_road_id)
+    connector_segs = _parse_xodr_road_geometry(xodr_path, connector_id)
+    exit_segs = _parse_xodr_road_geometry(xodr_path, exit_road_id)
+
+    entry_length = _road_total_length(entry_segs)
+    connector_length = _road_total_length(connector_segs)
+    approach_m = min(approach_margin_m, entry_length)
+
+    samples = []
+
+    # Entry road: travel *toward* the junction, i.e. s decreasing to 0 (the
+    # junction boundary), since these entry roads' predecessor is the
+    # junction at their own s=0.
+    n_entry = max(2, int(approach_m / sample_step_m))
+    for i in range(n_entry + 1):
+        frac = i / n_entry
+        s = approach_m * (1 - frac)
+        x, y, heading = _road_world_point(entry_segs, s, t_offset_m)
+        samples.append((approach_m * frac, x, y, heading))
+
+    # If the requested approach margin exceeds the entry road's real modeled
+    # length, extend linearly backward along its own start heading (these
+    # entry roads are near-straight in this template, so this is a faithful
+    # continuation, not fabricated curvature).
+    if approach_margin_m > entry_length:
+        extra_m = approach_margin_m - entry_length
+        base_x, base_y, base_heading = samples[0][1], samples[0][2], samples[0][3]
+        samples = [(d + extra_m, x, y, h) for d, x, y, h in samples]
+        n_extra = max(2, int(extra_m / sample_step_m))
+        extension = []
+        for i in range(n_extra):
+            back_dist = extra_m * (1 - i / n_extra)
+            x = base_x - math.cos(base_heading) * back_dist
+            y = base_y - math.sin(base_heading) * back_dist
+            extension.append((extra_m - back_dist, x, y, base_heading))
+        samples = extension + samples
+
+    # The entry road's own reference-line endpoint (s=0) and the connector's
+    # actual start point are a few OpenDRIVE lanes apart in this template
+    # (the reference line vs. the specific lane's connection point) — shift
+    # the whole entry-road tail so it meets the connector with no jump.
+    entry_end_x, entry_end_y, _ = _road_world_point(entry_segs, 0.0, t_offset_m)
+    conn_start_x, conn_start_y, _ = _road_world_point(connector_segs, 0.0, t_offset_m)
+    dx, dy = conn_start_x - entry_end_x, conn_start_y - entry_end_y
+    samples = [(d, x + dx, y + dy, h) for d, x, y, h in samples]
+
+    junction_entry_distance = samples[-1][0]
+
+    # Connector: real junction geometry, s increasing 0 -> connector_length.
+    n_conn = max(4, int(connector_length / sample_step_m))
+    for i in range(1, n_conn + 1):
+        s = connector_length * i / n_conn
+        x, y, heading = _road_world_point(connector_segs, s, t_offset_m)
+        samples.append((junction_entry_distance + s, x, y, heading))
+
+    junction_exit_distance = samples[-1][0]
+
+    # A short stretch of the exit road so trajectories can extend past impact.
+    # Direction depends on which end of the exit road the connector attaches
+    # to (contactPoint "start" -> s increasing; "end" -> s decreasing).
+    exit_length = _road_total_length(exit_segs)
+    exit_m = min(10.0, exit_length)
+    n_exit = max(2, int(exit_m / sample_step_m))
+    conn_end_x, conn_end_y, _ = _road_world_point(connector_segs, connector_length, t_offset_m)
+    exit_anchor_s = 0.0 if exit_contact == "start" else exit_length
+    exit_anchor_x, exit_anchor_y, _ = _road_world_point(exit_segs, exit_anchor_s, t_offset_m)
+    edx, edy = conn_end_x - exit_anchor_x, conn_end_y - exit_anchor_y
+    direction = 1.0 if exit_contact == "start" else -1.0
+    for i in range(1, n_exit + 1):
+        s = exit_anchor_s + direction * exit_m * i / n_exit
+        x, y, heading = _road_world_point(exit_segs, s, t_offset_m)
+        if exit_contact == "end":
+            heading = _normalize_angle(heading + math.pi)
+        samples.append((junction_exit_distance + exit_m * i / n_exit, x + edx, y + edy, heading))
+
+    return samples, junction_entry_distance, junction_exit_distance
+
+
+def _path_point_at_distance(samples, distance_m):
+    distance_m = max(samples[0][0], min(distance_m, samples[-1][0]))
+    for (d0, x0, y0, h0), (d1, x1, y1, h1) in zip(samples, samples[1:]):
+        if d0 <= distance_m <= d1:
+            if d1 == d0:
+                return x0, y0, h0
+            frac = (distance_m - d0) / (d1 - d0)
+            x = x0 + (x1 - x0) * frac
+            y = y0 + (y1 - y0) * frac
+            return x, y, _interpolate_heading(h0, h1, frac)
+    return samples[-1][1], samples[-1][2], samples[-1][3]
+
+
 def _line_intersection(point_a, heading_a, point_b, heading_b):
     dx_a = math.cos(heading_a)
     dy_a = math.sin(heading_a)
@@ -294,80 +532,135 @@ def _generate_straight_crossing_openscenario(data, output_path, xodr_filename):
     car_offset = -float(odr_params.get("motor_lane_width_m", 3.5)) * (
         abs(int(car_actor["initial_lane_id"])) - 0.5
     )
-    cyclist_start = _world_from_road_s_t(
-        road_length_m,
-        primary_heading,
-        float(cyclist_actor["initial_s_m"]),
-        cyclist_offset,
-    )
-    car_start = _world_from_road_s_t(
-        road_length_m,
-        secondary_heading,
-        float(car_actor["initial_s_m"]),
-        car_offset,
-    )
-    cyclist_lane_origin = _world_from_road_s_t(
-        road_length_m,
-        primary_heading,
-        road_length_m / 2,
-        cyclist_offset,
-    )
-    car_lane_origin = _world_from_road_s_t(
-        road_length_m,
-        secondary_heading,
-        road_length_m / 2,
-        car_offset,
-    )
-    impact_x, impact_y = _line_intersection(
-        cyclist_lane_origin,
-        primary_heading,
-        car_lane_origin,
-        secondary_heading,
-    )
-
-    cyclist_pre_x = impact_x - math.cos(primary_heading) * 1.8
-    cyclist_pre_y = impact_y - math.sin(primary_heading) * 1.8
-    car_pre_x = impact_x - math.cos(secondary_heading) * 2.5
-    car_pre_y = impact_y - math.sin(secondary_heading) * 2.5
     car_path = osc_params.get("car_path")
 
-    # Both paths are timed to meet at the same conflict point. After impact,
-    # the positions are held so the collision is visible instead of a pass-through.
-    cyclist_points = [
-        (0, cyclist_start[0], cyclist_start[1], primary_heading),
-        (impact_time_s - 0.3, cyclist_pre_x, cyclist_pre_y, primary_heading),
-        (impact_time_s, impact_x, impact_y, primary_heading),
-        (duration_s, impact_x, impact_y, primary_heading),
-    ]
-    if car_path == "turn_left_from_secondary_to_primary":
-        nominal_left_exit = _normalize_angle(secondary_heading + math.pi / 2)
-        exit_heading = _closest_heading(
-            nominal_left_exit,
-            [primary_heading, _normalize_angle(primary_heading + math.pi)],
+    if _is_junction_template(xodr_filename):
+        # Build trajectories from intersection_4way.xodr's real junction
+        # connector-road geometry instead of a synthetic s/t formula and
+        # line-intersection. The choreography (times, distance-before-impact)
+        # is preserved from the original design; only the spatial mapping
+        # changes. "Impact" is placed at the midpoint of each vehicle's own
+        # connector road (see generate_openscenario for the same convention).
+        cyclist_d0 = road_length_m / 2 - float(cyclist_actor["initial_s_m"])
+        car_d0 = road_length_m / 2 - float(car_actor["initial_s_m"])
+        car_maneuver = (
+            "turn_left" if car_path == "turn_left_from_secondary_to_primary" else "go_straight"
         )
-        car_turn_entry_x = impact_x - math.cos(secondary_heading) * 6.0
-        car_turn_entry_y = impact_y - math.sin(secondary_heading) * 6.0
-        car_turn_pre_x = impact_x - math.cos(exit_heading) * 2.5
-        car_turn_pre_y = impact_y - math.sin(exit_heading) * 2.5
-        car_points = [
-            (0, car_start[0], car_start[1], secondary_heading),
-            (impact_time_s - 1.0, car_turn_entry_x, car_turn_entry_y, secondary_heading),
-            (
-                impact_time_s - 0.3,
-                car_turn_pre_x,
-                car_turn_pre_y,
-                _interpolate_heading(secondary_heading, exit_heading, 0.65),
-            ),
-            (impact_time_s, impact_x, impact_y, exit_heading),
-            (duration_s, impact_x, impact_y, exit_heading),
+
+        cyclist_samples, cyc_j_start, cyc_j_end = _junction_maneuver_samples(
+            0, "go_straight", cyclist_offset, approach_margin_m=max(30.0, cyclist_d0 + 5)
+        )
+        cyclist_impact_dist = cyc_j_start + 0.5 * (cyc_j_end - cyc_j_start)
+
+        def _cyclist_at(dist_before_impact):
+            return _path_point_at_distance(
+                cyclist_samples, cyclist_impact_dist - dist_before_impact
+            )
+
+        cyclist_points = [
+            (0, *_cyclist_at(cyclist_d0)),
+            (impact_time_s - 0.3, *_cyclist_at(1.8)),
+            (impact_time_s, *_cyclist_at(0.0)),
+            (duration_s, *_cyclist_at(0.0)),
         ]
+
+        car_samples, car_j_start, car_j_end = _junction_maneuver_samples(
+            1, car_maneuver, car_offset, approach_margin_m=max(30.0, car_d0 + 5)
+        )
+        car_impact_dist = car_j_start + 0.5 * (car_j_end - car_j_start)
+
+        def _car_at(dist_before_impact):
+            return _path_point_at_distance(car_samples, car_impact_dist - dist_before_impact)
+
+        if car_path == "turn_left_from_secondary_to_primary":
+            car_points = [
+                (0, *_car_at(car_d0)),
+                (impact_time_s - 1.0, *_car_at(6.0)),
+                (impact_time_s - 0.3, *_car_at(2.5)),
+                (impact_time_s, *_car_at(0.0)),
+                (duration_s, *_car_at(0.0)),
+            ]
+        else:
+            car_points = [
+                (0, *_car_at(car_d0)),
+                (impact_time_s - 0.3, *_car_at(2.5)),
+                (impact_time_s, *_car_at(0.0)),
+                (duration_s, *_car_at(0.0)),
+            ]
     else:
-        car_points = [
-            (0, car_start[0], car_start[1], secondary_heading),
-            (impact_time_s - 0.3, car_pre_x, car_pre_y, secondary_heading),
-            (impact_time_s, impact_x, impact_y, secondary_heading),
-            (duration_s, impact_x, impact_y, secondary_heading),
+        cyclist_start = _world_from_road_s_t(
+            road_length_m,
+            primary_heading,
+            float(cyclist_actor["initial_s_m"]),
+            cyclist_offset,
+        )
+        car_start = _world_from_road_s_t(
+            road_length_m,
+            secondary_heading,
+            float(car_actor["initial_s_m"]),
+            car_offset,
+        )
+        cyclist_lane_origin = _world_from_road_s_t(
+            road_length_m,
+            primary_heading,
+            road_length_m / 2,
+            cyclist_offset,
+        )
+        car_lane_origin = _world_from_road_s_t(
+            road_length_m,
+            secondary_heading,
+            road_length_m / 2,
+            car_offset,
+        )
+        impact_x, impact_y = _line_intersection(
+            cyclist_lane_origin,
+            primary_heading,
+            car_lane_origin,
+            secondary_heading,
+        )
+
+        cyclist_pre_x = impact_x - math.cos(primary_heading) * 1.8
+        cyclist_pre_y = impact_y - math.sin(primary_heading) * 1.8
+        car_pre_x = impact_x - math.cos(secondary_heading) * 2.5
+        car_pre_y = impact_y - math.sin(secondary_heading) * 2.5
+
+        # Both paths are timed to meet at the same conflict point. After impact,
+        # the positions are held so the collision is visible instead of a pass-through.
+        cyclist_points = [
+            (0, cyclist_start[0], cyclist_start[1], primary_heading),
+            (impact_time_s - 0.3, cyclist_pre_x, cyclist_pre_y, primary_heading),
+            (impact_time_s, impact_x, impact_y, primary_heading),
+            (duration_s, impact_x, impact_y, primary_heading),
         ]
+        if car_path == "turn_left_from_secondary_to_primary":
+            nominal_left_exit = _normalize_angle(secondary_heading + math.pi / 2)
+            exit_heading = _closest_heading(
+                nominal_left_exit,
+                [primary_heading, _normalize_angle(primary_heading + math.pi)],
+            )
+            car_turn_entry_x = impact_x - math.cos(secondary_heading) * 6.0
+            car_turn_entry_y = impact_y - math.sin(secondary_heading) * 6.0
+            car_turn_pre_x = impact_x - math.cos(exit_heading) * 2.5
+            car_turn_pre_y = impact_y - math.sin(exit_heading) * 2.5
+            car_points = [
+                (0, car_start[0], car_start[1], secondary_heading),
+                (impact_time_s - 1.0, car_turn_entry_x, car_turn_entry_y, secondary_heading),
+                (
+                    impact_time_s - 0.3,
+                    car_turn_pre_x,
+                    car_turn_pre_y,
+                    _interpolate_heading(secondary_heading, exit_heading, 0.65),
+                ),
+                (impact_time_s, impact_x, impact_y, exit_heading),
+                (duration_s, impact_x, impact_y, exit_heading),
+            ]
+        else:
+            car_points = [
+                (0, car_start[0], car_start[1], secondary_heading),
+                (impact_time_s - 0.3, car_pre_x, car_pre_y, secondary_heading),
+                (impact_time_s, impact_x, impact_y, secondary_heading),
+                (duration_s, impact_x, impact_y, secondary_heading),
+            ]
 
     storyboard = xosc.StoryBoard(
         init,
@@ -493,45 +786,109 @@ def generate_openscenario(data, output_path, xodr_filename):
     impact_x = conflict_s_m
     impact_y = cyclist_y
 
-    # Parked motor vehicle (dooring) or motor already past conflict: static trajectory.
-    # All other types: right-turn approach to the conflict point so the collision is
-    # visible in esmini regardless of the exact scenario sub-type.
-    if motor_speed_mps <= 0 or motor_start_s >= conflict_s_m - 5:
-        motor_points = [
-            (0, motor_start_s, motor_y, 0),
-            (duration_s, motor_start_s, motor_y, 0),
-        ]
-    else:
-        motor_turn_start_time_s = max(1.0, conflict_time_s - turn_duration_s)
-        motor_approach_s = min(
-            conflict_s_m - 8.0,
-            motor_start_s + motor_speed_mps * motor_turn_start_time_s,
+    if _is_junction_template(xodr_filename):
+        # Build trajectories from intersection_4way.xodr's real junction
+        # connector-road geometry instead of a synthetic s/t formula. The
+        # choreography (times, and distance-before-impact at each waypoint)
+        # is preserved from the original design; only the spatial mapping
+        # changes. "Impact" is placed at the midpoint of each vehicle's own
+        # connector road — finding the exact geometric crossing of the two
+        # real connector polylines is a further refinement, out of scope here.
+        motor_maneuver = _maneuver_kind(motor_info.get("maneuver"))
+
+        cyclist_samples, cyc_j_start, cyc_j_end = _junction_maneuver_samples(
+            0, "go_straight", cyclist_y,
+            approach_margin_m=max(30.0, impact_x - cyclist_start_s + 5),
         )
-        motor_points = [
-            (0, motor_start_s, motor_y, 0),
-            (motor_turn_start_time_s, motor_approach_s, motor_y, 0),
-            (conflict_time_s - 1.2, impact_x - 4.2, motor_y - 0.3, turn_rel * 0.159),
-            (conflict_time_s - 0.5, impact_x - 1.2, impact_y + 0.4, turn_rel * 0.700),
-            (conflict_time_s, impact_x, impact_y, turn_rel),
-            (duration_s, impact_x, impact_y, turn_rel),
+        cyclist_impact_dist = cyc_j_start + 0.5 * (cyc_j_end - cyc_j_start)
+
+        def _cyclist_at(dist_before_impact):
+            return _path_point_at_distance(
+                cyclist_samples, cyclist_impact_dist - dist_before_impact
+            )
+
+        cyclist_points = [
+            (0, *_cyclist_at(impact_x - cyclist_start_s)),
+            (conflict_time_s - 0.2, *_cyclist_at(1.0)),
+            (conflict_time_s, *_cyclist_at(0.0)),
+            (duration_s, *_cyclist_at(0.0)),
         ]
 
-    cyclist_points = [
-        (0, cyclist_start_s, cyclist_y, 0),
-        (conflict_time_s - 0.2, impact_x - 1.0, cyclist_y, 0),
-        (conflict_time_s, impact_x, impact_y, 0),
-        (duration_s, impact_x, impact_y, 0),
-    ]
+        # Parked motor vehicle (dooring) or motor already past conflict: static trajectory.
+        if motor_speed_mps <= 0 or motor_start_s >= conflict_s_m - 5:
+            motor_samples, motor_j_start, _ = _junction_maneuver_samples(
+                0, "go_straight", motor_y,
+                approach_margin_m=max(30.0, impact_x - motor_start_s + 5),
+            )
+            point = _path_point_at_distance(
+                motor_samples, motor_j_start - (impact_x - motor_start_s)
+            )
+            motor_points = [(0, *point), (duration_s, *point)]
+        else:
+            motor_samples, motor_j_start, motor_j_end = _junction_maneuver_samples(
+                0, motor_maneuver, motor_y,
+                approach_margin_m=max(30.0, impact_x - motor_start_s + 5),
+            )
+            motor_impact_dist = motor_j_start + 0.5 * (motor_j_end - motor_j_start)
 
-    def _to_world(points):
-        result = []
-        for t, s, lat, hdg in points:
-            wx, wy = _world_from_road_s_t(road_length_m, primary_heading, s, lat)
-            result.append((t, wx, wy, primary_heading + hdg))
-        return result
+            def _motor_at(dist_before_impact):
+                return _path_point_at_distance(
+                    motor_samples, motor_impact_dist - dist_before_impact
+                )
 
-    motor_points = _to_world(motor_points)
-    cyclist_points = _to_world(cyclist_points)
+            motor_turn_start_time_s = max(1.0, conflict_time_s - turn_duration_s)
+            motor_approach_dist = impact_x - min(
+                conflict_s_m - 8.0,
+                motor_start_s + motor_speed_mps * motor_turn_start_time_s,
+            )
+            motor_points = [
+                (0, *_motor_at(impact_x - motor_start_s)),
+                (motor_turn_start_time_s, *_motor_at(motor_approach_dist)),
+                (conflict_time_s - 1.2, *_motor_at(4.2)),
+                (conflict_time_s - 0.5, *_motor_at(1.2)),
+                (conflict_time_s, *_motor_at(0.0)),
+                (duration_s, *_motor_at(0.0)),
+            ]
+    else:
+        # Parked motor vehicle (dooring) or motor already past conflict: static trajectory.
+        # All other types: right-turn approach to the conflict point so the collision is
+        # visible in esmini regardless of the exact scenario sub-type.
+        if motor_speed_mps <= 0 or motor_start_s >= conflict_s_m - 5:
+            motor_points = [
+                (0, motor_start_s, motor_y, 0),
+                (duration_s, motor_start_s, motor_y, 0),
+            ]
+        else:
+            motor_turn_start_time_s = max(1.0, conflict_time_s - turn_duration_s)
+            motor_approach_s = min(
+                conflict_s_m - 8.0,
+                motor_start_s + motor_speed_mps * motor_turn_start_time_s,
+            )
+            motor_points = [
+                (0, motor_start_s, motor_y, 0),
+                (motor_turn_start_time_s, motor_approach_s, motor_y, 0),
+                (conflict_time_s - 1.2, impact_x - 4.2, motor_y - 0.3, turn_rel * 0.159),
+                (conflict_time_s - 0.5, impact_x - 1.2, impact_y + 0.4, turn_rel * 0.700),
+                (conflict_time_s, impact_x, impact_y, turn_rel),
+                (duration_s, impact_x, impact_y, turn_rel),
+            ]
+
+        cyclist_points = [
+            (0, cyclist_start_s, cyclist_y, 0),
+            (conflict_time_s - 0.2, impact_x - 1.0, cyclist_y, 0),
+            (conflict_time_s, impact_x, impact_y, 0),
+            (duration_s, impact_x, impact_y, 0),
+        ]
+
+        def _to_world(points):
+            result = []
+            for t, s, lat, hdg in points:
+                wx, wy = _world_from_road_s_t(road_length_m, primary_heading, s, lat)
+                result.append((t, wx, wy, primary_heading + hdg))
+            return result
+
+        motor_points = _to_world(motor_points)
+        cyclist_points = _to_world(cyclist_points)
 
     storyboard = xosc.StoryBoard(
         init,
