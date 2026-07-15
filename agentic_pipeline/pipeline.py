@@ -337,13 +337,18 @@ def _tool_query_osm(state: AgentState, osm_query: str) -> dict:
 
     ctx = enriched.get("osm_context", {})
     status = ctx.get("enrichment_status", "unknown")
-    state.record("query_osm", {"status": status, "query": osm_query})
+    notes = ctx.get("notes", [])
+    state.record("query_osm", {"status": status, "query": osm_query, "notes": notes})
     print(f"  ✓ OSM status: {status}")
+    for note in notes:
+        print(f"  ⚠ OSM enrichment note: {note}")
 
     result: dict = {
         "enrichment_status": status,
         "traffic_signals_nearby": ctx.get("traffic_signals_nearby"),
     }
+    if notes:
+        result["notes"] = notes
     if "geocoded" in ctx:
         result["geocoded_location"] = ctx["geocoded"].get("display_name", "")
     if "bike_facility" in ctx:

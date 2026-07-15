@@ -34,6 +34,16 @@ BIKE_FACILITY_TYPES = {
 }
 
 
+class RoadHeadingNotFoundError(ValueError):
+    """Raised when _best_road_heading cannot match the requested road name.
+
+    Callers must not treat this as "no heading available" and substitute an
+    unrelated road's heading — that produces silently wrong geometry (e.g. a
+    turning scenario's secondary road heading collapsing to the primary
+    road's heading, which zeroes out the computed turn angle downstream).
+    """
+
+
 def enrich_with_osm(data, cache_dir):
     """Return a copy of data enriched with nearby OSM road tags."""
     enriched = copy.deepcopy(data)
@@ -373,7 +383,18 @@ def _apply_lane_context(data, context):
                 source="osm_tag",
                 reason="OpenDRIVE motor-lane count was derived from nearby OSM lanes tags.",
             )
-        heading = _best_road_heading(roads, primary_road_name)
+        try:
+            heading = _best_road_heading(roads, primary_road_name)
+        except RoadHeadingNotFoundError as exc:
+            heading = None
+            context["notes"].append(f"primary_heading_rad: {exc}")
+            _upsert_missing_parameter(
+                data,
+                parameter="primary_heading_rad",
+                value_used=None,
+                source="not_found",
+                reason=str(exc),
+            )
         if heading is not None:
             params["primary_heading_rad"] = heading
             _upsert_missing_parameter(
@@ -386,7 +407,18 @@ def _apply_lane_context(data, context):
 
         secondary_road_name = data.get("location", {}).get("secondary_road")
         if secondary_road_name:
-            sec_heading = _best_road_heading(roads, secondary_road_name)
+            try:
+                sec_heading = _best_road_heading(roads, secondary_road_name)
+            except RoadHeadingNotFoundError as exc:
+                sec_heading = None
+                context["notes"].append(f"secondary_heading_rad: {exc}")
+                _upsert_missing_parameter(
+                    data,
+                    parameter="secondary_heading_rad",
+                    value_used=None,
+                    source="not_found",
+                    reason=str(exc),
+                )
             if sec_heading is not None:
                 params["secondary_heading_rad"] = sec_heading
                 _upsert_missing_parameter(
@@ -666,8 +698,24 @@ def _cycleway_tags(tags):
 
 def _best_road_heading(roads, preferred_name=None):
     names = _names_from_location_field(preferred_name)
-    matched = [road for road in roads if not names or _name_matches(road.get("name"), names)]
-    candidates = matched or roads
+    if not names:
+        candidates = roads
+    else:
+        matched = [road for road in roads if _name_matches(road.get("name"), names)]
+        if not matched:
+            if not roads:
+                reason = "Overpass returned no nearby roads to search."
+            else:
+                seen = sorted({road.get("name") for road in roads if road.get("name")})
+                reason = (
+                    f"none of the {len(roads)} nearby OSM roads matched; "
+                    f"names seen nearby: {seen}"
+                )
+            raise RoadHeadingNotFoundError(
+                f"No road matching {names!r} (requested as {preferred_name!r}) "
+                f"found in Overpass results: {reason}"
+            )
+        candidates = matched
     for road in candidates:
         heading = _road_heading_rad(road)
         if heading is not None:
