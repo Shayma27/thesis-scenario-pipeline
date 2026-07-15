@@ -99,7 +99,7 @@ def enrich_with_osm(data, cache_dir):
         context["traffic_signals_nearby"] = "yes" if traffic_signals else "no"
         context["enrichment_status"] = "ok"
 
-        _apply_osm_context(enriched, context)
+        _apply_osm_context(enriched, context, cache_dir)
     except (HTTPError, URLError, TimeoutError, OSError, ValueError) as exc:
         context["enrichment_status"] = "error"
         context["notes"].append(f"OSM enrichment failed: {exc}")
@@ -157,13 +157,31 @@ def _overpass_nearby_roads(lat, lon, radius_m, cache_dir):
 );
 out tags center geom;
 """
+    return _run_overpass_query(query, cache_dir)
+
+
+def _overpass_named_ways(name, lat, lon, radius_m, cache_dir):
+    """Fetch OSM ways whose name matches `name` (substring, case-insensitive)
+    within radius_m of (lat, lon). Filtering by name server-side keeps the
+    result set small even at a large radius, unlike _overpass_nearby_roads'
+    unfiltered "every highway nearby" query.
+    """
+    escaped = re.sub(r'(["\\])', r"\\\1", str(name))
+    query = f"""
+[out:json][timeout:30];
+way["highway"]["name"~"{escaped}",i](around:{radius_m},{lat},{lon});
+out tags geom;
+"""
+    return _run_overpass_query(query, cache_dir)
+
+
+def _run_overpass_query(query, cache_dir, retries=2):
     cache_key = _cache_key(query)
     cache_path = cache_dir / "overpass" / f"{cache_key}.json"
     if cache_path.exists():
         return json.loads(cache_path.read_text(encoding="utf-8"))
 
     cache_path.parent.mkdir(parents=True, exist_ok=True)
-    time.sleep(1.0)
     body = urlencode({"data": query}).encode("utf-8")
     request = Request(
         OVERPASS_URL,
@@ -173,8 +191,18 @@ out tags center geom;
             "Content-Type": "application/x-www-form-urlencoded",
         },
     )
-    with urlopen(request, timeout=30) as response:
-        payload = json.loads(response.read().decode("utf-8"))
+    # The public Overpass instance intermittently returns 504s under load,
+    # unrelated to query correctness — retry a couple of times before giving up.
+    for attempt in range(retries + 1):
+        time.sleep(1.0)
+        try:
+            with urlopen(request, timeout=30) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+            break
+        except HTTPError as exc:
+            if exc.code not in (504, 503) or attempt == retries:
+                raise
+            time.sleep(3.0 * (attempt + 1))
     cache_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
     return payload
 
@@ -263,7 +291,7 @@ def _select_relevant_roads(data, roads):
     return selected[:30]
 
 
-def _apply_osm_context(data, context):
+def _apply_osm_context(data, context, cache_dir):
     road_context = data.setdefault("road_context", {})
     if road_context.get("traffic_light_present") in {None, "unknown"}:
         road_context["traffic_light_present"] = context["traffic_signals_nearby"]
@@ -277,7 +305,7 @@ def _apply_osm_context(data, context):
         opendrive_params["intersection_lon"] = geocoded["lon"]
 
     _apply_bike_facility_context(data, context)
-    _apply_lane_context(data, context)
+    _apply_lane_context(data, context, cache_dir)
     _apply_lane_guided_maneuver_context(data, context)
     _apply_cyclist_position_policy(data, context)
 
@@ -311,12 +339,13 @@ def _apply_osm_context(data, context):
         )
 
 
-def _apply_lane_context(data, context):
+def _apply_lane_context(data, context, cache_dir):
     params = data.setdefault("generated_simulation_parameters", {}).setdefault(
         "opendrive", {}
     )
     scenario_type = data.get("classification", {}).get("scenario_type")
     roads = context.get("matched_roads", [])
+    geocoded = context.get("geocoded")
 
     if scenario_type == "straight_crossing_conflict":
         location = data.get("location", {})
@@ -372,6 +401,7 @@ def _apply_lane_context(data, context):
         )
     else:
         primary_road_name = data.get("location", {}).get("primary_road")
+        secondary_road_name = data.get("location", {}).get("secondary_road")
         lane_count = _best_lane_count(roads, primary_road_name)
         if lane_count:
             params["motor_lane_count"] = lane_count
@@ -384,7 +414,9 @@ def _apply_lane_context(data, context):
                 reason="OpenDRIVE motor-lane count was derived from nearby OSM lanes tags.",
             )
         try:
-            heading = _best_road_heading(roads, primary_road_name)
+            heading = _resolve_road_heading(
+                roads, primary_road_name, secondary_road_name, geocoded, cache_dir
+            )
         except RoadHeadingNotFoundError as exc:
             heading = None
             context["notes"].append(f"primary_heading_rad: {exc}")
@@ -405,10 +437,11 @@ def _apply_lane_context(data, context):
                 reason="Primary road heading derived from OSM way geometry.",
             )
 
-        secondary_road_name = data.get("location", {}).get("secondary_road")
         if secondary_road_name:
             try:
-                sec_heading = _best_road_heading(roads, secondary_road_name)
+                sec_heading = _resolve_road_heading(
+                    roads, secondary_road_name, primary_road_name, geocoded, cache_dir
+                )
             except RoadHeadingNotFoundError as exc:
                 sec_heading = None
                 context["notes"].append(f"secondary_heading_rad: {exc}")
@@ -721,6 +754,104 @@ def _best_road_heading(roads, preferred_name=None):
         if heading is not None:
             return heading
     return None
+
+
+# Radius for the intersection-point fallback below. Deliberately much larger
+# than DEFAULT_RADIUS_M: unlike _overpass_nearby_roads (unfiltered "every
+# highway nearby"), this query filters by name server-side, so the result
+# set stays small even over a wide area — needed because a long street can
+# have its OSM way split into segments far from where the *other* road's
+# geocoded point happens to land (e.g. Sophie-Charlotten-Straße is 6
+# separate segments spread across neighborhoods).
+INTERSECTION_SEARCH_RADIUS_M = 5000
+
+
+def _local_heading_rad(geometry, index, window=2):
+    """Heading of `geometry` (a list of {lat, lon} points) near `index`,
+    using a small window instead of the whole way's endpoints — the whole
+    way's start/end heading can be a poor estimate of the direction *at* a
+    specific intersection point if the road curves elsewhere.
+    """
+    lo = max(0, index - window)
+    hi = min(len(geometry) - 1, index + window)
+    if lo == hi:
+        return None
+    lat_a, lon_a = float(geometry[lo]["lat"]), float(geometry[lo]["lon"])
+    lat_b, lon_b = float(geometry[hi]["lat"]), float(geometry[hi]["lon"])
+    avg_lat_rad = math.radians((lat_a + lat_b) / 2)
+    dx = (lon_b - lon_a) * 111_320 * math.cos(avg_lat_rad)
+    dy = (lat_b - lat_a) * 110_540
+    if dx == 0 and dy == 0:
+        return None
+    return math.atan2(dy, dx)
+
+
+def _shared_geometry_point(roads_a, roads_b, precision=6):
+    """Find a geometry point shared by a road in roads_a and a road in
+    roads_b (i.e. the OSM node where the two named streets actually meet),
+    by comparing rounded coordinates. Returns (road_b, index_in_road_b) or
+    (None, None) if the two sets of ways never touch.
+    """
+    points_a = {
+        (round(float(pt["lat"]), precision), round(float(pt["lon"]), precision))
+        for road in roads_a
+        for pt in road.get("geometry", [])
+    }
+    for road in roads_b:
+        geometry = road.get("geometry", [])
+        for index, pt in enumerate(geometry):
+            key = (round(float(pt["lat"]), precision), round(float(pt["lon"]), precision))
+            if key in points_a:
+                return road, index
+    return None, None
+
+
+def _intersection_heading(name_a, name_b, lat, lon, cache_dir, radius_m=INTERSECTION_SEARCH_RADIUS_M):
+    """Find the OSM node where a way named name_a and a way named name_b
+    actually intersect near (lat, lon), and return name_b's heading right at
+    that node — regardless of which of possibly many same-named segments of
+    name_b it turns out to be. Returns None if no shared point is found
+    (either a genuine data gap, or the two roads' OSM ways don't share a
+    node near this location) rather than guessing.
+    """
+    try:
+        payload_a = _overpass_named_ways(name_a, lat, lon, radius_m, cache_dir)
+        payload_b = _overpass_named_ways(name_b, lat, lon, radius_m, cache_dir)
+    except (HTTPError, URLError, TimeoutError, OSError, ValueError):
+        return None
+
+    roads_a, _ = _extract_road_context(payload_a)
+    roads_b, _ = _extract_road_context(payload_b)
+    if not roads_a or not roads_b:
+        return None
+
+    road_b, index = _shared_geometry_point(roads_a, roads_b)
+    if road_b is None:
+        return None
+    return _local_heading_rad(road_b.get("geometry", []), index)
+
+
+def _resolve_road_heading(roads, road_name, other_road_name, geocoded, cache_dir):
+    """_best_road_heading(), falling back to an intersection-point lookup
+    against other_road_name when the plain nearby-roads search can't match
+    road_name (e.g. it's outside the initial search radius or a different
+    same-named segment). Still raises RoadHeadingNotFoundError — with a
+    message covering both attempts — if neither resolves it.
+    """
+    try:
+        return _best_road_heading(roads, road_name)
+    except RoadHeadingNotFoundError as exc:
+        lat, lon = (geocoded or {}).get("lat"), (geocoded or {}).get("lon")
+        if not other_road_name or lat is None or lon is None:
+            raise
+        heading = _intersection_heading(road_name, other_road_name, float(lat), float(lon), cache_dir)
+        if heading is None:
+            raise RoadHeadingNotFoundError(
+                f"{exc} Additionally, no shared OSM node between "
+                f"{road_name!r} and {other_road_name!r} was found within "
+                f"{INTERSECTION_SEARCH_RADIUS_M}m of the geocoded location."
+            ) from exc
+        return heading
 
 
 def _best_lane_count(roads, preferred_name=None):
@@ -1271,7 +1402,19 @@ def _name_matches(name, wanted_names):
 
 
 def _normalize_name(name):
-    return re.sub(r"\s+", " ", str(name).casefold().strip())
+    """Casefold a street name for comparison, normalizing spelling variants
+    that are not meaningful differences: ß/ss, and the "Str"/"Str." ->
+    "Straße" abbreviation (the only street-type abbreviation observed across
+    manual_classification_reference.md's report texts — "Allee"/"Damm"/"Weg"
+    already appear unabbreviated there and must not be altered).
+    """
+    text = re.sub(r"\s+", " ", str(name).casefold().strip())
+    text = text.replace("ß", "ss")
+    text = text.replace(".", "")
+    # "str" abbreviates "strasse" only when it ends a word (not, e.g., the
+    # "str" inside "streifen" or the "str" that already starts "strasse").
+    text = re.sub(r"str(?![a-zäöü])", "strasse", text)
+    return text
 
 
 def _first_present(tags, *keys):
