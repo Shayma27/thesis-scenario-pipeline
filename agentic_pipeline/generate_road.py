@@ -26,6 +26,24 @@ def _geo_reference(params):
     )
 
 
+def _make_minimal_lane_section(bike=False):
+    """Single driving lane (+ optional bike lane) for junction connecting roads."""
+    lane_mark = xodr.RoadMark(xodr.RoadMarkType.solid, 0.10)
+    center_lane = xodr.Lane(a=0)
+    center_lane.add_roadmark(xodr.RoadMark(xodr.RoadMarkType.solid, 0.12))
+    lane_section = xodr.LaneSection(0, center_lane)
+    driving = xodr.Lane(lane_type=xodr.LaneType.driving, a=3.5)
+    driving.add_roadmark(lane_mark)
+    lane_section.add_right_lane(driving)
+    if bike:
+        bike_lane = xodr.Lane(lane_type=xodr.LaneType.biking, a=2.0)
+        bike_lane.add_roadmark(lane_mark)
+        lane_section.add_right_lane(bike_lane)
+    lanes = xodr.Lanes()
+    lanes.add_lanesection(lane_section)
+    return lanes
+
+
 def _make_lane_section(motor_lane_width_m, bike_lane_width_m):
     """Map JSON lane-width defaults to driving, biking, and sidewalk lanes."""
     center_mark = xodr.RoadMark(xodr.RoadMarkType.solid, 0.15)
@@ -319,45 +337,81 @@ def generate_opendrive(data, output_path):
     bike_facility_position = params.get("primary_bike_facility_position", "rightmost")
 
     road_name = data.get("location", {}).get("primary_road") or "PrimaryRoad"
+    secondary_name = data.get("location", {}).get("secondary_road")
     odr = xodr.OpenDrive(data["source"]["source_id"], geo_reference=_geo_reference(params))
 
     heading = float(params.get("primary_heading_rad", 0))
-    start_x = -math.cos(heading) * road_length_m / 2
-    start_y = -math.sin(heading) * road_length_m / 2
-    planview = xodr.PlanView(start_x, start_y, heading)
-    planview.add_geometry(xodr.Line(road_length_m))
-
-    road = xodr.Road(
-        0,
-        planview,
-        _make_multi_lane_section(
-            motor_lane_width_m,
-            motor_lane_count,
-            bike_lane_width_m,
-            bike_facility_position,
-        ),
-        name=road_name,
+    approach_length = road_length_m / 2
+    approach_start_x = -math.cos(heading) * road_length_m / 2
+    approach_start_y = -math.sin(heading) * road_length_m / 2
+    primary_lanes = _make_multi_lane_section(
+        motor_lane_width_m, motor_lane_count, bike_lane_width_m, bike_facility_position
     )
-    odr.add_road(road)
 
-    secondary_name = data.get("location", {}).get("secondary_road")
+    # Road 0: primary approach (actors start here, ends at junction)
+    pv0 = xodr.PlanView(approach_start_x, approach_start_y, heading)
+    pv0.add_geometry(xodr.Line(approach_length))
+    road_0 = xodr.Road(0, pv0, primary_lanes, name=road_name)
+
     if secondary_name:
         sec_heading = float(
             params.get("secondary_heading_rad", heading - math.pi / 2)
         )
         sec_lanes = int(params.get("secondary_road_lanes", 1))
-        sec_start_x, sec_start_y = _centered_start(road_length_m, sec_heading)
-        odr.add_road(
-            _make_line_road(
-                1,
-                secondary_name,
-                sec_start_x,
-                sec_start_y,
-                sec_heading,
-                road_length_m,
-                _make_multi_lane_section(motor_lane_width_m, sec_lanes),
-            )
-        )
+        turn_rel = sec_heading - heading
+        # Normalize to (-π, π]
+        while turn_rel > math.pi:
+            turn_rel -= 2 * math.pi
+        while turn_rel <= -math.pi:
+            turn_rel += 2 * math.pi
+
+        road_0.add_successor(xodr.ElementType.junction, 1)
+        odr.add_road(road_0)
+
+        # Road 1: primary continuation past junction (cyclist goes straight)
+        pv1 = xodr.PlanView(0, 0, heading)
+        pv1.add_geometry(xodr.Line(approach_length))
+        road_1 = xodr.Road(1, pv1, primary_lanes, name=road_name)
+        road_1.add_predecessor(xodr.ElementType.junction, 1)
+        odr.add_road(road_1)
+
+        # Road 2: secondary stub from junction (truck turns onto this)
+        pv2 = xodr.PlanView(0, 0, sec_heading)
+        pv2.add_geometry(xodr.Line(approach_length))
+        road_2 = xodr.Road(2, pv2, _make_multi_lane_section(motor_lane_width_m, sec_lanes), name=secondary_name)
+        road_2.add_predecessor(xodr.ElementType.junction, 1)
+        odr.add_road(road_2)
+
+        # Road 3: connecting road — right turn arc (road 0 → road 2)
+        arc_radius = 5.0
+        curvature = turn_rel / (abs(turn_rel) * arc_radius)
+        pv3 = xodr.PlanView()
+        pv3.add_geometry(xodr.Arc(curvature, angle=abs(turn_rel)))
+        road_3 = xodr.Road(3, pv3, _make_minimal_lane_section(), road_type=1)
+        road_3.add_predecessor(xodr.ElementType.road, 0, xodr.ContactPoint.end)
+        road_3.add_successor(xodr.ElementType.road, 2, xodr.ContactPoint.start)
+        odr.add_road(road_3)
+
+        # Road 4: connecting road — straight through (road 0 → road 1)
+        pv4 = xodr.PlanView()
+        pv4.add_geometry(xodr.Line(1.0))
+        road_4 = xodr.Road(4, pv4, _make_minimal_lane_section(bike=True), road_type=1)
+        road_4.add_predecessor(xodr.ElementType.road, 0, xodr.ContactPoint.end)
+        road_4.add_successor(xodr.ElementType.road, 1, xodr.ContactPoint.start)
+        odr.add_road(road_4)
+
+        # Junction 1: right-turn connection + straight-through connection
+        junction = xodr.Junction("Intersection", 1)
+        conn_right = xodr.Connection(0, 3, xodr.ContactPoint.start)
+        conn_right.add_lanelink(-1, -1)
+        junction.add_connection(conn_right)
+        conn_through = xodr.Connection(0, 4, xodr.ContactPoint.start)
+        conn_through.add_lanelink(-1, -1)
+        conn_through.add_lanelink(-2, -2)
+        junction.add_connection(conn_through)
+        odr.add_junction(junction)
+    else:
+        odr.add_road(road_0)
 
     # parking_access_s_m marks where the truck crosses the bike lane. For this
     # first esmini test we keep the parking access out of OpenDRIVE objects and

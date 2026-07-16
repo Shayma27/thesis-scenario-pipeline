@@ -1,0 +1,4280 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-07-15T21:51:22Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 10275148,
+      "bounds": {
+        "minlat": 52.4458243,
+        "minlon": 13.5936593,
+        "maxlat": 52.44718,
+        "maxlon": 13.5938563
+      },
+      "geometry": [
+        {
+          "lat": 52.4458243,
+          "lon": 13.5936593
+        },
+        {
+          "lat": 52.4459631,
+          "lon": 13.5937528
+        },
+        {
+          "lat": 52.4461546,
+          "lon": 13.5937913
+        },
+        {
+          "lat": 52.4463452,
+          "lon": 13.5938292
+        },
+        {
+          "lat": 52.44718,
+          "lon": 13.5938563
+        }
+      ],
+      "tags": {
+        "access:lanes": "yes|yes|no",
+        "bicycle": "use_sidepath",
+        "bus:lanes": "yes|yes|designated",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 09:00-20:00)",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25016355,
+      "bounds": {
+        "minlat": 52.4450623,
+        "minlon": 13.5936176,
+        "maxlat": 52.4458243,
+        "maxlon": 13.5936593
+      },
+      "geometry": [
+        {
+          "lat": 52.4458243,
+          "lon": 13.5936593
+        },
+        {
+          "lat": 52.4456041,
+          "lon": 13.5936472
+        },
+        {
+          "lat": 52.4455743,
+          "lon": 13.5936455
+        },
+        {
+          "lat": 52.4455226,
+          "lon": 13.5936427
+        },
+        {
+          "lat": 52.4453705,
+          "lon": 13.5936343
+        },
+        {
+          "lat": 52.4450748,
+          "lon": 13.5936183
+        },
+        {
+          "lat": 52.4450623,
+          "lon": 13.5936176
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 09:00-20:00)",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "parking:both": "no",
+        "parking:both:restriction": "no_parking",
+        "postal_code": "12559",
+        "sidewalk": "both",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25269241,
+      "bounds": {
+        "minlat": 52.4501656,
+        "minlon": 13.5933895,
+        "maxlat": 52.4507558,
+        "maxlon": 13.5935099
+      },
+      "geometry": [
+        {
+          "lat": 52.4501656,
+          "lon": 13.5935099
+        },
+        {
+          "lat": 52.4504597,
+          "lon": 13.5934416
+        },
+        {
+          "lat": 52.4507558,
+          "lon": 13.5933895
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25278317,
+      "bounds": {
+        "minlat": 52.4489566,
+        "minlon": 13.5959411,
+        "maxlat": 52.4491119,
+        "maxlon": 13.5982972
+      },
+      "geometry": [
+        {
+          "lat": 52.4489788,
+          "lon": 13.5982972
+        },
+        {
+          "lat": 52.4490027,
+          "lon": 13.5979089
+        },
+        {
+          "lat": 52.4490532,
+          "lon": 13.5974925
+        },
+        {
+          "lat": 52.4490945,
+          "lon": 13.5971476
+        },
+        {
+          "lat": 52.4490987,
+          "lon": 13.5971124
+        },
+        {
+          "lat": 52.4491119,
+          "lon": 13.5963328
+        },
+        {
+          "lat": 52.4489855,
+          "lon": 13.5960876
+        },
+        {
+          "lat": 52.4489566,
+          "lon": 13.5959411
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "service",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "postal_code": "12559",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25815241,
+      "bounds": {
+        "minlat": 52.4461412,
+        "minlon": 13.5945263,
+        "maxlat": 52.4461998,
+        "maxlon": 13.5958293
+      },
+      "geometry": [
+        {
+          "lat": 52.4461567,
+          "lon": 13.5945263
+        },
+        {
+          "lat": 52.4461516,
+          "lon": 13.5951986
+        },
+        {
+          "lat": 52.4461412,
+          "lon": 13.5957624
+        },
+        {
+          "lat": 52.4461998,
+          "lon": 13.5958293
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "postal_code": "12559",
+        "service": "driveway",
+        "sidewalk": "right",
+        "vehicle": "destination",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25815392,
+      "bounds": {
+        "minlat": 52.4450993,
+        "minlon": 13.591269,
+        "maxlat": 52.4451352,
+        "maxlon": 13.5925291
+      },
+      "geometry": [
+        {
+          "lat": 52.4451014,
+          "lon": 13.5925291
+        },
+        {
+          "lat": 52.4451188,
+          "lon": 13.5919117
+        },
+        {
+          "lat": 52.4451352,
+          "lon": 13.5913288
+        },
+        {
+          "lat": 52.4450993,
+          "lon": 13.591269
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "12559",
+        "sidewalk": "left",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q2215542",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25815410,
+      "bounds": {
+        "minlat": 52.4427511,
+        "minlon": 13.5902029,
+        "maxlat": 52.4447446,
+        "maxlon": 13.5926322
+      },
+      "geometry": [
+        {
+          "lat": 52.4428982,
+          "lon": 13.5902029
+        },
+        {
+          "lat": 52.4428924,
+          "lon": 13.5903382
+        },
+        {
+          "lat": 52.4428823,
+          "lon": 13.590382
+        },
+        {
+          "lat": 52.4428547,
+          "lon": 13.5905012
+        },
+        {
+          "lat": 52.4428463,
+          "lon": 13.5907694
+        },
+        {
+          "lat": 52.4428373,
+          "lon": 13.5910763
+        },
+        {
+          "lat": 52.4428273,
+          "lon": 13.5914136
+        },
+        {
+          "lat": 52.4428218,
+          "lon": 13.5916006
+        },
+        {
+          "lat": 52.4427599,
+          "lon": 13.5919533
+        },
+        {
+          "lat": 52.4427526,
+          "lon": 13.5922379
+        },
+        {
+          "lat": 52.4427511,
+          "lon": 13.5923431
+        },
+        {
+          "lat": 52.4427549,
+          "lon": 13.5924394
+        },
+        {
+          "lat": 52.4427824,
+          "lon": 13.5924782
+        },
+        {
+          "lat": 52.4431473,
+          "lon": 13.5925023
+        },
+        {
+          "lat": 52.4432354,
+          "lon": 13.5925065
+        },
+        {
+          "lat": 52.4433806,
+          "lon": 13.5925144
+        },
+        {
+          "lat": 52.4434707,
+          "lon": 13.5924596
+        },
+        {
+          "lat": 52.4435997,
+          "lon": 13.5924642
+        },
+        {
+          "lat": 52.443861,
+          "lon": 13.5924737
+        },
+        {
+          "lat": 52.4439779,
+          "lon": 13.5924779
+        },
+        {
+          "lat": 52.4441609,
+          "lon": 13.5925232
+        },
+        {
+          "lat": 52.4442651,
+          "lon": 13.5925941
+        },
+        {
+          "lat": 52.4443852,
+          "lon": 13.5926059
+        },
+        {
+          "lat": 52.4446538,
+          "lon": 13.5926322
+        },
+        {
+          "lat": 52.4447446,
+          "lon": 13.5926154
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "maxspeed": "10",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:left": "no",
+        "parking:right": "no",
+        "postal_code": "12559",
+        "surface": "paving_stones",
+        "vehicle": "destination",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25815414,
+      "bounds": {
+        "minlat": 52.4439779,
+        "minlon": 13.5916363,
+        "maxlat": 52.4439961,
+        "maxlon": 13.5924779
+      },
+      "geometry": [
+        {
+          "lat": 52.4439961,
+          "lon": 13.5916363
+        },
+        {
+          "lat": 52.443993,
+          "lon": 13.5918412
+        },
+        {
+          "lat": 52.4439839,
+          "lon": 13.5922344
+        },
+        {
+          "lat": 52.4439805,
+          "lon": 13.5923436
+        },
+        {
+          "lat": 52.4439779,
+          "lon": 13.5924779
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "maxspeed": "10",
+        "name": "Salvador-Allende-Straße",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "surface": "asphalt",
+        "vehicle": "destination"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25815428,
+      "bounds": {
+        "minlat": 52.4440137,
+        "minlon": 13.5911668,
+        "maxlat": 52.4450993,
+        "maxlon": 13.591269
+      },
+      "geometry": [
+        {
+          "lat": 52.4450993,
+          "lon": 13.591269
+        },
+        {
+          "lat": 52.445067,
+          "lon": 13.5912522
+        },
+        {
+          "lat": 52.4449043,
+          "lon": 13.5912386
+        },
+        {
+          "lat": 52.444862,
+          "lon": 13.5912343
+        },
+        {
+          "lat": 52.4445502,
+          "lon": 13.5912098
+        },
+        {
+          "lat": 52.4442022,
+          "lon": 13.5911822
+        },
+        {
+          "lat": 52.4440137,
+          "lon": 13.5911668
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "12559",
+        "sidewalk": "left",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q2215542",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25816281,
+      "bounds": {
+        "minlat": 52.4399009,
+        "minlon": 13.5935051,
+        "maxlat": 52.4403294,
+        "maxlon": 13.5935401
+      },
+      "geometry": [
+        {
+          "lat": 52.4399009,
+          "lon": 13.5935051
+        },
+        {
+          "lat": 52.4399379,
+          "lon": 13.5935083
+        },
+        {
+          "lat": 52.4400045,
+          "lon": 13.5935137
+        },
+        {
+          "lat": 52.4402238,
+          "lon": 13.5935315
+        },
+        {
+          "lat": 52.4403044,
+          "lon": 13.5935381
+        },
+        {
+          "lat": 52.4403294,
+          "lon": 13.5935401
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "operator:type": "public",
+        "parking:left": "no",
+        "parking:left:restriction": "no_stopping",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25816289,
+      "bounds": {
+        "minlat": 52.4405277,
+        "minlon": 13.5932216,
+        "maxlat": 52.4405367,
+        "maxlon": 13.5935562
+      },
+      "geometry": [
+        {
+          "lat": 52.4405277,
+          "lon": 13.5935562
+        },
+        {
+          "lat": 52.4405367,
+          "lon": 13.5932216
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 31012747,
+      "bounds": {
+        "minlat": 52.4507007,
+        "minlon": 13.5931243,
+        "maxlat": 52.4514418,
+        "maxlon": 13.5932094
+      },
+      "geometry": [
+        {
+          "lat": 52.4514418,
+          "lon": 13.5931243
+        },
+        {
+          "lat": 52.4510069,
+          "lon": 13.5931743
+        },
+        {
+          "lat": 52.4507007,
+          "lon": 13.5932094
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Müggelheim",
+        "destination:colour": "white",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 31012748,
+      "bounds": {
+        "minlat": 52.4515883,
+        "minlon": 13.5933255,
+        "maxlat": 52.4520619,
+        "maxlon": 13.5933647
+      },
+      "geometry": [
+        {
+          "lat": 52.4515883,
+          "lon": 13.5933255
+        },
+        {
+          "lat": 52.4517059,
+          "lon": 13.5933373
+        },
+        {
+          "lat": 52.4517344,
+          "lon": 13.5933402
+        },
+        {
+          "lat": 52.4520619,
+          "lon": 13.5933647
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination:colour:lanes": "|;white|;white",
+        "destination:lanes": "Hellersdorf|Erkner;Friedrichshagen|Erkner;Friedrichshagen",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe II",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12555",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 31012749,
+      "bounds": {
+        "minlat": 52.4393458,
+        "minlon": 13.592737,
+        "maxlat": 52.4413117,
+        "maxlon": 13.593327
+      },
+      "geometry": [
+        {
+          "lat": 52.4413117,
+          "lon": 13.593327
+        },
+        {
+          "lat": 52.4411907,
+          "lon": 13.5933117
+        },
+        {
+          "lat": 52.4411565,
+          "lon": 13.593307
+        },
+        {
+          "lat": 52.4409019,
+          "lon": 13.5932629
+        },
+        {
+          "lat": 52.4406468,
+          "lon": 13.5932341
+        },
+        {
+          "lat": 52.4405367,
+          "lon": 13.5932216
+        },
+        {
+          "lat": 52.4403139,
+          "lon": 13.5931452
+        },
+        {
+          "lat": 52.4399462,
+          "lon": 13.5930037
+        },
+        {
+          "lat": 52.4393458,
+          "lon": 13.592737
+        }
+      ],
+      "tags": {
+        "cycleway:both": "track",
+        "cycleway:left:traffic_sign": "none",
+        "cycleway:right:bicycle": "designated",
+        "cycleway:right:segregated": "no",
+        "cycleway:right:traffic_sign": "DE:240",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12559",
+        "sidewalk:left": "yes",
+        "sidewalk:left:surface": "concrete:plates",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 32204596,
+      "bounds": {
+        "minlat": 52.4463475,
+        "minlon": 13.5936705,
+        "maxlat": 52.447001,
+        "maxlon": 13.5936991
+      },
+      "geometry": [
+        {
+          "lat": 52.447001,
+          "lon": 13.5936991
+        },
+        {
+          "lat": 52.4464798,
+          "lon": 13.5936731
+        },
+        {
+          "lat": 52.4463475,
+          "lon": 13.5936705
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 09:00-20:00)",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "12559",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 32204598,
+      "bounds": {
+        "minlat": 52.447665,
+        "minlon": 13.5938703,
+        "maxlat": 52.4481474,
+        "maxlon": 13.5938945
+      },
+      "geometry": [
+        {
+          "lat": 52.447665,
+          "lon": 13.5938945
+        },
+        {
+          "lat": 52.4478414,
+          "lon": 13.5938925
+        },
+        {
+          "lat": 52.4480113,
+          "lon": 13.5938848
+        },
+        {
+          "lat": 52.4481474,
+          "lon": 13.5938703
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 37842697,
+      "bounds": {
+        "minlat": 52.4504153,
+        "minlon": 13.5935711,
+        "maxlat": 52.4514068,
+        "maxlon": 13.5936567
+      },
+      "geometry": [
+        {
+          "lat": 52.4514068,
+          "lon": 13.5936108
+        },
+        {
+          "lat": 52.4512191,
+          "lon": 13.5935919
+        },
+        {
+          "lat": 52.4510574,
+          "lon": 13.5935771
+        },
+        {
+          "lat": 52.4509208,
+          "lon": 13.5935711
+        },
+        {
+          "lat": 52.4507751,
+          "lon": 13.5935858
+        },
+        {
+          "lat": 52.4507294,
+          "lon": 13.5935904
+        },
+        {
+          "lat": 52.4506731,
+          "lon": 13.5936023
+        },
+        {
+          "lat": 52.4504677,
+          "lon": 13.5936456
+        },
+        {
+          "lat": 52.4504316,
+          "lon": 13.5936533
+        },
+        {
+          "lat": 52.4504153,
+          "lon": 13.5936567
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "lit": "yes",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "operator:type": "public",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "sidewalk:both": "no",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "traffic_sign": "DE:250,1020-30",
+        "vehicle": "destination"
+      }
+    },
+    {
+      "type": "way",
+      "id": 37850032,
+      "bounds": {
+        "minlat": 52.4413117,
+        "minlon": 13.593327,
+        "maxlat": 52.4444232,
+        "maxlon": 13.5935917
+      },
+      "geometry": [
+        {
+          "lat": 52.4444232,
+          "lon": 13.5935917
+        },
+        {
+          "lat": 52.4441661,
+          "lon": 13.5935713
+        },
+        {
+          "lat": 52.4441021,
+          "lon": 13.593567
+        },
+        {
+          "lat": 52.4439842,
+          "lon": 13.5935561
+        },
+        {
+          "lat": 52.4438956,
+          "lon": 13.5935479
+        },
+        {
+          "lat": 52.4435536,
+          "lon": 13.5935219
+        },
+        {
+          "lat": 52.4434888,
+          "lon": 13.593517
+        },
+        {
+          "lat": 52.4427031,
+          "lon": 13.5934515
+        },
+        {
+          "lat": 52.4426945,
+          "lon": 13.5934508
+        },
+        {
+          "lat": 52.4425243,
+          "lon": 13.5934394
+        },
+        {
+          "lat": 52.4424291,
+          "lon": 13.5934318
+        },
+        {
+          "lat": 52.4421766,
+          "lon": 13.5934064
+        },
+        {
+          "lat": 52.4416448,
+          "lon": 13.593353
+        },
+        {
+          "lat": 52.4414414,
+          "lon": 13.5933389
+        },
+        {
+          "lat": 52.4414052,
+          "lon": 13.5933364
+        },
+        {
+          "lat": 52.4413117,
+          "lon": 13.593327
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12559",
+        "sidewalk": "both",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 37850405,
+      "bounds": {
+        "minlat": 52.4444232,
+        "minlon": 13.5935917,
+        "maxlat": 52.4450623,
+        "maxlon": 13.5936176
+      },
+      "geometry": [
+        {
+          "lat": 52.4450623,
+          "lon": 13.5936176
+        },
+        {
+          "lat": 52.4448842,
+          "lon": 13.5936104
+        },
+        {
+          "lat": 52.4448297,
+          "lon": 13.5936082
+        },
+        {
+          "lat": 52.4447743,
+          "lon": 13.5936059
+        },
+        {
+          "lat": 52.4444232,
+          "lon": 13.5935917
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "parking:both": "no",
+        "parking:left:restriction": "no_parking",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12559",
+        "sidewalk": "both",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 46829110,
+      "bounds": {
+        "minlat": 52.4478062,
+        "minlon": 13.5945506,
+        "maxlat": 52.4485986,
+        "maxlon": 13.5974604
+      },
+      "geometry": [
+        {
+          "lat": 52.448581,
+          "lon": 13.5959108
+        },
+        {
+          "lat": 52.448589,
+          "lon": 13.5954516
+        },
+        {
+          "lat": 52.4485927,
+          "lon": 13.59524
+        },
+        {
+          "lat": 52.4485986,
+          "lon": 13.5949037
+        },
+        {
+          "lat": 52.4484605,
+          "lon": 13.5946613
+        },
+        {
+          "lat": 52.4483894,
+          "lon": 13.5945684
+        },
+        {
+          "lat": 52.4479099,
+          "lon": 13.5945529
+        },
+        {
+          "lat": 52.4478389,
+          "lon": 13.5945506
+        },
+        {
+          "lat": 52.4478373,
+          "lon": 13.5948745
+        },
+        {
+          "lat": 52.447827,
+          "lon": 13.5958888
+        },
+        {
+          "lat": 52.4478185,
+          "lon": 13.5962093
+        },
+        {
+          "lat": 52.4478062,
+          "lon": 13.5973276
+        },
+        {
+          "lat": 52.4478623,
+          "lon": 13.597344
+        },
+        {
+          "lat": 52.4478748,
+          "lon": 13.5973444
+        },
+        {
+          "lat": 52.4480494,
+          "lon": 13.59735
+        },
+        {
+          "lat": 52.4481538,
+          "lon": 13.5974477
+        },
+        {
+          "lat": 52.4482481,
+          "lon": 13.5974604
+        },
+        {
+          "lat": 52.4483727,
+          "lon": 13.5973043
+        },
+        {
+          "lat": 52.4484783,
+          "lon": 13.5973018
+        },
+        {
+          "lat": 52.4485638,
+          "lon": 13.5972997
+        },
+        {
+          "lat": 52.4485704,
+          "lon": 13.5968326
+        },
+        {
+          "lat": 52.4485711,
+          "lon": 13.5967472
+        },
+        {
+          "lat": 52.4485755,
+          "lon": 13.5962387
+        },
+        {
+          "lat": 52.448581,
+          "lon": 13.5959108
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "cycleway:both": "no",
+        "highway": "service",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "postal_code": "12559",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "vehicle": "destination",
+        "wikidata": "Q2215542",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 57899181,
+      "bounds": {
+        "minlat": 52.4439184,
+        "minlon": 13.5918323,
+        "maxlat": 52.4440723,
+        "maxlon": 13.591848
+      },
+      "geometry": [
+        {
+          "lat": 52.4440723,
+          "lon": 13.591848
+        },
+        {
+          "lat": 52.443993,
+          "lon": 13.5918412
+        },
+        {
+          "lat": 52.4439184,
+          "lon": 13.5918323
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "maxspeed": "10",
+        "name": "Salvador-Allende-Straße",
+        "postal_code": "12559",
+        "service": "parking_aisle",
+        "surface": "asphalt",
+        "vehicle": "destination"
+      }
+    },
+    {
+      "type": "way",
+      "id": 59966138,
+      "bounds": {
+        "minlat": 52.4432042,
+        "minlon": 13.5917624,
+        "maxlat": 52.4439184,
+        "maxlon": 13.5918323
+      },
+      "geometry": [
+        {
+          "lat": 52.4439184,
+          "lon": 13.5918323
+        },
+        {
+          "lat": 52.4432042,
+          "lon": 13.5917624
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "service",
+        "maxspeed": "10",
+        "name": "Salvador-Allende-Straße",
+        "parking:both": "street_side",
+        "parking:both:access": "private",
+        "parking:both:orientation": "perpendicular",
+        "postal_code": "12559",
+        "service": "parking_aisle",
+        "surface": "asphalt",
+        "vehicle": "destination"
+      }
+    },
+    {
+      "type": "way",
+      "id": 148614181,
+      "bounds": {
+        "minlat": 52.4528389,
+        "minlon": 13.5931933,
+        "maxlat": 52.4531793,
+        "maxlon": 13.5932491
+      },
+      "geometry": [
+        {
+          "lat": 52.4531793,
+          "lon": 13.5932491
+        },
+        {
+          "lat": 52.452993,
+          "lon": 13.5932165
+        },
+        {
+          "lat": 52.452881,
+          "lon": 13.5931997
+        },
+        {
+          "lat": 52.4528389,
+          "lon": 13.5931933
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Lichtenberg;Müggelheim",
+        "destination:colour": ";white",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe II",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12555",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 148738460,
+      "bounds": {
+        "minlat": 52.445959,
+        "minlon": 13.5945177,
+        "maxlat": 52.4476906,
+        "maxlon": 13.5946094
+      },
+      "geometry": [
+        {
+          "lat": 52.445959,
+          "lon": 13.5945177
+        },
+        {
+          "lat": 52.4460465,
+          "lon": 13.5945215
+        },
+        {
+          "lat": 52.4461567,
+          "lon": 13.5945263
+        },
+        {
+          "lat": 52.4471824,
+          "lon": 13.594582
+        },
+        {
+          "lat": 52.4476606,
+          "lon": 13.594608
+        },
+        {
+          "lat": 52.4476906,
+          "lon": 13.5946094
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "operator:type": "private",
+        "parking:left": "lane",
+        "parking:left:orientation": "parallel",
+        "parking:right": "separate",
+        "postal_code": "12559",
+        "service": "driveway",
+        "sidewalk": "left",
+        "vehicle": "destination",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 176031316,
+      "bounds": {
+        "minlat": 52.448568,
+        "minlon": 13.5935428,
+        "maxlat": 52.4489725,
+        "maxlon": 13.5936197
+      },
+      "geometry": [
+        {
+          "lat": 52.4489725,
+          "lon": 13.5935428
+        },
+        {
+          "lat": 52.448568,
+          "lon": 13.5936197
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "segregated": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 221957517,
+      "bounds": {
+        "minlat": 52.4440723,
+        "minlon": 13.591848,
+        "maxlat": 52.4447437,
+        "maxlon": 13.5918744
+      },
+      "geometry": [
+        {
+          "lat": 52.4447437,
+          "lon": 13.5918744
+        },
+        {
+          "lat": 52.4440723,
+          "lon": 13.591848
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "service",
+        "maxspeed": "10",
+        "name": "Salvador-Allende-Straße",
+        "parking:both": "street_side",
+        "parking:both:access": "private",
+        "parking:both:orientation": "perpendicular",
+        "postal_code": "12559",
+        "service": "parking_aisle",
+        "surface": "asphalt",
+        "vehicle": "destination"
+      }
+    },
+    {
+      "type": "way",
+      "id": 233670786,
+      "bounds": {
+        "minlat": 52.4450994,
+        "minlon": 13.5925997,
+        "maxlat": 52.4454084,
+        "maxlon": 13.5926322
+      },
+      "geometry": [
+        {
+          "lat": 52.4454084,
+          "lon": 13.5926322
+        },
+        {
+          "lat": 52.4451441,
+          "lon": 13.5926039
+        },
+        {
+          "lat": 52.4450994,
+          "lon": 13.5925997
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:left": "separate",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "smoothness": "intermediate",
+        "surface": "concrete",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 233670789,
+      "bounds": {
+        "minlat": 52.4460208,
+        "minlon": 13.5926872,
+        "maxlat": 52.4463582,
+        "maxlon": 13.592716
+      },
+      "geometry": [
+        {
+          "lat": 52.4463582,
+          "lon": 13.592716
+        },
+        {
+          "lat": 52.4460208,
+          "lon": 13.5926872
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "separate",
+        "postal_code": "12559",
+        "smoothness": "intermediate",
+        "surface": "concrete",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 262624794,
+      "bounds": {
+        "minlat": 52.4501579,
+        "minlon": 13.5932094,
+        "maxlat": 52.4507007,
+        "maxlon": 13.5933051
+      },
+      "geometry": [
+        {
+          "lat": 52.4507007,
+          "lon": 13.5932094
+        },
+        {
+          "lat": 52.4503233,
+          "lon": 13.5932733
+        },
+        {
+          "lat": 52.4501579,
+          "lon": 13.5933051
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 262624800,
+      "bounds": {
+        "minlat": 52.4476472,
+        "minlon": 13.5936197,
+        "maxlat": 52.448568,
+        "maxlon": 13.5936841
+      },
+      "geometry": [
+        {
+          "lat": 52.448568,
+          "lon": 13.5936197
+        },
+        {
+          "lat": 52.4483148,
+          "lon": 13.5936466
+        },
+        {
+          "lat": 52.4481414,
+          "lon": 13.5936651
+        },
+        {
+          "lat": 52.4480551,
+          "lon": 13.5936723
+        },
+        {
+          "lat": 52.4479565,
+          "lon": 13.5936803
+        },
+        {
+          "lat": 52.4478404,
+          "lon": 13.5936808
+        },
+        {
+          "lat": 52.4476861,
+          "lon": 13.5936815
+        },
+        {
+          "lat": 52.4476472,
+          "lon": 13.5936841
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "turn:lanes": "through|through|right",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 272111641,
+      "bounds": {
+        "minlat": 52.4529422,
+        "minlon": 13.5932491,
+        "maxlat": 52.4531793,
+        "maxlon": 13.5933852
+      },
+      "geometry": [
+        {
+          "lat": 52.4529422,
+          "lon": 13.5933852
+        },
+        {
+          "lat": 52.4531793,
+          "lon": 13.5932491
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Hellersdorf",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe II",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12555",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 272111644,
+      "bounds": {
+        "minlat": 52.4507558,
+        "minlon": 13.5933253,
+        "maxlat": 52.4515883,
+        "maxlon": 13.5933895
+      },
+      "geometry": [
+        {
+          "lat": 52.4507558,
+          "lon": 13.5933895
+        },
+        {
+          "lat": 52.4510077,
+          "lon": 13.5933599
+        },
+        {
+          "lat": 52.4513275,
+          "lon": 13.5933264
+        },
+        {
+          "lat": 52.4514064,
+          "lon": 13.5933266
+        },
+        {
+          "lat": 52.4514432,
+          "lon": 13.5933253
+        },
+        {
+          "lat": 52.451477,
+          "lon": 13.5933253
+        },
+        {
+          "lat": 52.4515883,
+          "lon": 13.5933255
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through"
+      }
+    },
+    {
+      "type": "way",
+      "id": 283006420,
+      "bounds": {
+        "minlat": 52.4515891,
+        "minlon": 13.5931121,
+        "maxlat": 52.4525611,
+        "maxlon": 13.5931773
+      },
+      "geometry": [
+        {
+          "lat": 52.4525611,
+          "lon": 13.5931773
+        },
+        {
+          "lat": 52.4523217,
+          "lon": 13.5931659
+        },
+        {
+          "lat": 52.4517753,
+          "lon": 13.5931258
+        },
+        {
+          "lat": 52.4517403,
+          "lon": 13.5931232
+        },
+        {
+          "lat": 52.4517108,
+          "lon": 13.5931211
+        },
+        {
+          "lat": 52.4515891,
+          "lon": 13.5931121
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe II",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "through|through|right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 353720496,
+      "bounds": {
+        "minlat": 52.4481474,
+        "minlon": 13.5937436,
+        "maxlat": 52.448985,
+        "maxlon": 13.5938703
+      },
+      "geometry": [
+        {
+          "lat": 52.4481474,
+          "lon": 13.5938703
+        },
+        {
+          "lat": 52.4487468,
+          "lon": 13.5937836
+        },
+        {
+          "lat": 52.448821,
+          "lon": 13.5937713
+        },
+        {
+          "lat": 52.4488977,
+          "lon": 13.5937586
+        },
+        {
+          "lat": 52.448985,
+          "lon": 13.5937436
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 389190886,
+      "bounds": {
+        "minlat": 52.4460173,
+        "minlon": 13.5938729,
+        "maxlat": 52.4461508,
+        "maxlon": 13.5938771
+      },
+      "geometry": [
+        {
+          "lat": 52.4461508,
+          "lon": 13.5938771
+        },
+        {
+          "lat": 52.4460535,
+          "lon": 13.5938743
+        },
+        {
+          "lat": 52.4460173,
+          "lon": 13.5938729
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße/Wendenschloßstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "surface": "paving_stones",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 389190887,
+      "bounds": {
+        "minlat": 52.4464802,
+        "minlon": 13.5935692,
+        "maxlat": 52.4466173,
+        "maxlon": 13.5935752
+      },
+      "geometry": [
+        {
+          "lat": 52.4464802,
+          "lon": 13.5935692
+        },
+        {
+          "lat": 52.4466173,
+          "lon": 13.5935752
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2022-05-14",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße/Wendenschloßstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 431551344,
+      "bounds": {
+        "minlat": 52.4387875,
+        "minlon": 13.5924826,
+        "maxlat": 52.4393458,
+        "maxlon": 13.592737
+      },
+      "geometry": [
+        {
+          "lat": 52.4393458,
+          "lon": 13.592737
+        },
+        {
+          "lat": 52.4391779,
+          "lon": 13.592662
+        },
+        {
+          "lat": 52.4390425,
+          "lon": 13.5926015
+        },
+        {
+          "lat": 52.4388644,
+          "lon": 13.5925219
+        },
+        {
+          "lat": 52.4388353,
+          "lon": 13.5925077
+        },
+        {
+          "lat": 52.4387875,
+          "lon": 13.5924826
+        }
+      ],
+      "tags": {
+        "cycleway:both": "track",
+        "cycleway:left:traffic_sign": "none",
+        "cycleway:right:bicycle": "designated",
+        "cycleway:right:segregated": "no",
+        "cycleway:right:traffic_sign": "DE:240",
+        "destination:backward": "Erkner;Friedrichshagen",
+        "destination:colour:backward": ";white",
+        "destination:colour:forward": ";white;",
+        "destination:forward": "Gosen;Müggelheim;Treptow",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lanes:backward": "1",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12559",
+        "sidewalk:left": "yes",
+        "sidewalk:left:surface": "paving_stones",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes:forward": "left|through;right",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 444197514,
+      "bounds": {
+        "minlat": 52.4458243,
+        "minlon": 13.5936593,
+        "maxlat": 52.4463475,
+        "maxlon": 13.5936705
+      },
+      "geometry": [
+        {
+          "lat": 52.4463475,
+          "lon": 13.5936705
+        },
+        {
+          "lat": 52.4459813,
+          "lon": 13.5936627
+        },
+        {
+          "lat": 52.4458243,
+          "lon": 13.5936593
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 09:00-20:00)",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "12559",
+        "sidewalk": "right",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "merge_to_right|",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 516456556,
+      "bounds": {
+        "minlat": 52.4442022,
+        "minlon": 13.5902897,
+        "maxlat": 52.4442298,
+        "maxlon": 13.5911822
+      },
+      "geometry": [
+        {
+          "lat": 52.4442022,
+          "lon": 13.5911822
+        },
+        {
+          "lat": 52.4442298,
+          "lon": 13.5902897
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "maxspeed": "30",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "sidewalk": "right",
+        "surface": "concrete",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 711025384,
+      "bounds": {
+        "minlat": 52.4514418,
+        "minlon": 13.5931121,
+        "maxlat": 52.4515891,
+        "maxlon": 13.5931243
+      },
+      "geometry": [
+        {
+          "lat": 52.4515891,
+          "lon": 13.5931121
+        },
+        {
+          "lat": 52.4514743,
+          "lon": 13.5931216
+        },
+        {
+          "lat": 52.4514418,
+          "lon": 13.5931243
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Müggelheim",
+        "destination:colour": "white",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 785281153,
+      "bounds": {
+        "minlat": 52.4484708,
+        "minlon": 13.5940552,
+        "maxlat": 52.4488602,
+        "maxlon": 13.5940654
+      },
+      "geometry": [
+        {
+          "lat": 52.4488602,
+          "lon": 13.5940654
+        },
+        {
+          "lat": 52.4485926,
+          "lon": 13.5940584
+        },
+        {
+          "lat": 52.4484708,
+          "lon": 13.5940552
+        }
+      ],
+      "tags": {
+        "destination:backward": "Ordnungsamt",
+        "destination:colour:backward": "white",
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "operator:type": "public",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "12559",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 846657383,
+      "bounds": {
+        "minlat": 52.448904,
+        "minlon": 13.5945289,
+        "maxlat": 52.4489329,
+        "maxlon": 13.5947299
+      },
+      "geometry": [
+        {
+          "lat": 52.4489329,
+          "lon": 13.5947299
+        },
+        {
+          "lat": 52.4489313,
+          "lon": 13.5946276
+        },
+        {
+          "lat": 52.448904,
+          "lon": 13.5945289
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 852412216,
+      "bounds": {
+        "minlat": 52.4489293,
+        "minlon": 13.5947299,
+        "maxlat": 52.4489566,
+        "maxlon": 13.5959411
+      },
+      "geometry": [
+        {
+          "lat": 52.4489566,
+          "lon": 13.5959411
+        },
+        {
+          "lat": 52.4489293,
+          "lon": 13.5958024
+        },
+        {
+          "lat": 52.4489308,
+          "lon": 13.5953424
+        },
+        {
+          "lat": 52.4489329,
+          "lon": 13.5947299
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "foot": "yes",
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "postal_code": "12559",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 875747511,
+      "bounds": {
+        "minlat": 52.4458173,
+        "minlon": 13.5936593,
+        "maxlat": 52.4458243,
+        "maxlon": 13.5940716
+      },
+      "geometry": [
+        {
+          "lat": 52.4458243,
+          "lon": 13.5936593
+        },
+        {
+          "lat": 52.4458212,
+          "lon": 13.5938416
+        },
+        {
+          "lat": 52.4458204,
+          "lon": 13.593891
+        },
+        {
+          "lat": 52.4458185,
+          "lon": 13.5939968
+        },
+        {
+          "lat": 52.4458173,
+          "lon": 13.5940716
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "no",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q2215542",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 888849464,
+      "bounds": {
+        "minlat": 52.4474779,
+        "minlon": 13.5936841,
+        "maxlat": 52.4476472,
+        "maxlon": 13.5936945
+      },
+      "geometry": [
+        {
+          "lat": 52.4476472,
+          "lon": 13.5936841
+        },
+        {
+          "lat": 52.4475367,
+          "lon": 13.5936909
+        },
+        {
+          "lat": 52.4474779,
+          "lon": 13.5936945
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "through|through|right",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 937863410,
+      "bounds": {
+        "minlat": 52.4522145,
+        "minlon": 13.5937386,
+        "maxlat": 52.4525188,
+        "maxlon": 13.5947912
+      },
+      "geometry": [
+        {
+          "lat": 52.4522145,
+          "lon": 13.5937386
+        },
+        {
+          "lat": 52.4522265,
+          "lon": 13.5938193
+        },
+        {
+          "lat": 52.4522216,
+          "lon": 13.5941066
+        },
+        {
+          "lat": 52.4522324,
+          "lon": 13.5941367
+        },
+        {
+          "lat": 52.4522629,
+          "lon": 13.5941754
+        },
+        {
+          "lat": 52.4523004,
+          "lon": 13.5941917
+        },
+        {
+          "lat": 52.4523622,
+          "lon": 13.5942281
+        },
+        {
+          "lat": 52.4523971,
+          "lon": 13.5942581
+        },
+        {
+          "lat": 52.4524254,
+          "lon": 13.5943096
+        },
+        {
+          "lat": 52.4524431,
+          "lon": 13.5943691
+        },
+        {
+          "lat": 52.4525034,
+          "lon": 13.5946146
+        },
+        {
+          "lat": 52.452514,
+          "lon": 13.5946576
+        },
+        {
+          "lat": 52.4525188,
+          "lon": 13.5947849
+        },
+        {
+          "lat": 52.4524977,
+          "lon": 13.5947912
+        }
+      ],
+      "tags": {
+        "description": "Privatstraße",
+        "emergency": "designated",
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "parking:both": "separate",
+        "service": "driveway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 937863412,
+      "bounds": {
+        "minlat": 52.4521272,
+        "minlon": 13.5936193,
+        "maxlat": 52.4522145,
+        "maxlon": 13.5937386
+      },
+      "geometry": [
+        {
+          "lat": 52.4521272,
+          "lon": 13.5936193
+        },
+        {
+          "lat": 52.4521847,
+          "lon": 13.5936857
+        },
+        {
+          "lat": 52.4522145,
+          "lon": 13.5937386
+        }
+      ],
+      "tags": {
+        "emergency": "designated",
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 957191937,
+      "bounds": {
+        "minlat": 52.4474802,
+        "minlon": 13.5938781,
+        "maxlat": 52.447665,
+        "maxlon": 13.5938945
+      },
+      "geometry": [
+        {
+          "lat": 52.4474802,
+          "lon": 13.5938781
+        },
+        {
+          "lat": 52.4475368,
+          "lon": 13.5938915
+        },
+        {
+          "lat": 52.447665,
+          "lon": 13.5938945
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "disused:access:lanes": "yes|no",
+        "disused:bus:lanes": "yes|designated",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 988214144,
+      "bounds": {
+        "minlat": 52.4463475,
+        "minlon": 13.592716,
+        "maxlat": 52.4463582,
+        "maxlon": 13.5936705
+      },
+      "geometry": [
+        {
+          "lat": 52.4463475,
+          "lon": 13.5936705
+        },
+        {
+          "lat": 52.4463489,
+          "lon": 13.5935602
+        },
+        {
+          "lat": 52.4463495,
+          "lon": 13.5935171
+        },
+        {
+          "lat": 52.4463502,
+          "lon": 13.5934709
+        },
+        {
+          "lat": 52.4463507,
+          "lon": 13.5933837
+        },
+        {
+          "lat": 52.4463562,
+          "lon": 13.5929154
+        },
+        {
+          "lat": 52.4463582,
+          "lon": 13.592716
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk": "both",
+        "smoothness": "intermediate",
+        "surface": "concrete",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 988235233,
+      "bounds": {
+        "minlat": 52.4460208,
+        "minlon": 13.591825,
+        "maxlat": 52.4460413,
+        "maxlon": 13.5926872
+      },
+      "geometry": [
+        {
+          "lat": 52.4460413,
+          "lon": 13.591825
+        },
+        {
+          "lat": 52.4460254,
+          "lon": 13.5925307
+        },
+        {
+          "lat": 52.4460208,
+          "lon": 13.5926872
+        }
+      ],
+      "tags": {
+        "access": "destination",
+        "highway": "service",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "postal_code": "12559",
+        "service": "driveway",
+        "surface": "paved",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1029216556,
+      "bounds": {
+        "minlat": 52.4388112,
+        "minlon": 13.5934212,
+        "maxlat": 52.4390705,
+        "maxlon": 13.593438
+      },
+      "geometry": [
+        {
+          "lat": 52.4388112,
+          "lon": 13.5934212
+        },
+        {
+          "lat": 52.4390705,
+          "lon": 13.593438
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "operator:type": "public",
+        "parking:left": "on_kerb",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "perpendicular",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "smoothness": "bad",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1067161462,
+      "bounds": {
+        "minlat": 52.4385868,
+        "minlon": 13.5924002,
+        "maxlat": 52.4387875,
+        "maxlon": 13.5924826
+      },
+      "geometry": [
+        {
+          "lat": 52.4387875,
+          "lon": 13.5924826
+        },
+        {
+          "lat": 52.4387328,
+          "lon": 13.5924577
+        },
+        {
+          "lat": 52.4386945,
+          "lon": 13.592442
+        },
+        {
+          "lat": 52.4385868,
+          "lon": 13.5924002
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:both": "separate",
+        "destination:backward": "Erkner;Friedrichshagen",
+        "destination:colour:backward": ";white",
+        "destination:colour:forward": ";white;",
+        "destination:forward": "Gosen;Müggelheim;Treptow",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lanes:backward": "1",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes:forward": "left|through;right",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1074988437,
+      "bounds": {
+        "minlat": 52.452103,
+        "minlon": 13.5933705,
+        "maxlat": 52.4521393,
+        "maxlon": 13.59366
+      },
+      "geometry": [
+        {
+          "lat": 52.4521393,
+          "lon": 13.5933705
+        },
+        {
+          "lat": 52.4521352,
+          "lon": 13.5935027
+        },
+        {
+          "lat": 52.4521334,
+          "lon": 13.5935576
+        },
+        {
+          "lat": 52.4521272,
+          "lon": 13.5936193
+        },
+        {
+          "lat": 52.4521164,
+          "lon": 13.5936449
+        },
+        {
+          "lat": 52.452103,
+          "lon": 13.59366
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:both": "separate",
+        "sidewalk:both": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1114997742,
+      "bounds": {
+        "minlat": 52.447287,
+        "minlon": 13.593693,
+        "maxlat": 52.4474779,
+        "maxlon": 13.5937022
+      },
+      "geometry": [
+        {
+          "lat": 52.4474779,
+          "lon": 13.5936945
+        },
+        {
+          "lat": 52.4474061,
+          "lon": 13.593693
+        },
+        {
+          "lat": 52.447287,
+          "lon": 13.5937022
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "12559",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1114997743,
+      "bounds": {
+        "minlat": 52.4463452,
+        "minlon": 13.5936705,
+        "maxlat": 52.4463475,
+        "maxlon": 13.5938292
+      },
+      "geometry": [
+        {
+          "lat": 52.4463452,
+          "lon": 13.5938292
+        },
+        {
+          "lat": 52.4463475,
+          "lon": 13.5936705
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "postal_code": "12559",
+        "sidewalk:both": "no",
+        "smoothness": "good",
+        "surface": "concrete",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1115924667,
+      "bounds": {
+        "minlat": 52.4478389,
+        "minlon": 13.5940338,
+        "maxlat": 52.4478413,
+        "maxlon": 13.5945506
+      },
+      "geometry": [
+        {
+          "lat": 52.4478413,
+          "lon": 13.5940338
+        },
+        {
+          "lat": 52.4478408,
+          "lon": 13.5940596
+        },
+        {
+          "lat": 52.4478389,
+          "lon": 13.5945506
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "cycleway:both": "no",
+        "highway": "service",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "postal_code": "12559",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "vehicle": "destination",
+        "wikidata": "Q2215542",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1115924668,
+      "bounds": {
+        "minlat": 52.4478413,
+        "minlon": 13.5938925,
+        "maxlat": 52.4478414,
+        "maxlon": 13.5940338
+      },
+      "geometry": [
+        {
+          "lat": 52.4478414,
+          "lon": 13.5938925
+        },
+        {
+          "lat": 52.4478413,
+          "lon": 13.5939702
+        },
+        {
+          "lat": 52.4478413,
+          "lon": 13.5940338
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "postal_code": "12559",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q2215542",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1115933906,
+      "bounds": {
+        "minlat": 52.4458104,
+        "minlon": 13.5944822,
+        "maxlat": 52.445959,
+        "maxlon": 13.5945177
+      },
+      "geometry": [
+        {
+          "lat": 52.4458104,
+          "lon": 13.5944822
+        },
+        {
+          "lat": 52.4458571,
+          "lon": 13.5945132
+        },
+        {
+          "lat": 52.4458911,
+          "lon": 13.5945147
+        },
+        {
+          "lat": 52.445959,
+          "lon": 13.5945177
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "postal_code": "12559",
+        "service": "driveway",
+        "vehicle": "destination",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126911527,
+      "bounds": {
+        "minlat": 52.4481414,
+        "minlon": 13.5936651,
+        "maxlat": 52.4481501,
+        "maxlon": 13.5940444
+      },
+      "geometry": [
+        {
+          "lat": 52.4481501,
+          "lon": 13.5940444
+        },
+        {
+          "lat": 52.4481499,
+          "lon": 13.5939625
+        },
+        {
+          "lat": 52.4481474,
+          "lon": 13.5938703
+        },
+        {
+          "lat": 52.4481414,
+          "lon": 13.5936651
+        }
+      ],
+      "tags": {
+        "destination:backward": "Ordnungsamt",
+        "destination:colour:backward": "white",
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "operator:type": "public",
+        "postal_code": "12559",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1154990634,
+      "bounds": {
+        "minlat": 52.4450623,
+        "minlon": 13.5929486,
+        "maxlat": 52.4450896,
+        "maxlon": 13.5936176
+      },
+      "geometry": [
+        {
+          "lat": 52.4450623,
+          "lon": 13.5936176
+        },
+        {
+          "lat": 52.4450711,
+          "lon": 13.5934639
+        },
+        {
+          "lat": 52.4450809,
+          "lon": 13.5932485
+        },
+        {
+          "lat": 52.4450855,
+          "lon": 13.5931464
+        },
+        {
+          "lat": 52.4450896,
+          "lon": 13.5929486
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:left": "no",
+        "parking:right": "shoulder",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "sidewalk": "both",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q2215542",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1154990641,
+      "bounds": {
+        "minlat": 52.4439961,
+        "minlon": 13.5911668,
+        "maxlat": 52.4440137,
+        "maxlon": 13.5916363
+      },
+      "geometry": [
+        {
+          "lat": 52.4440137,
+          "lon": 13.5911668
+        },
+        {
+          "lat": 52.4440108,
+          "lon": 13.5912456
+        },
+        {
+          "lat": 52.4440001,
+          "lon": 13.5915304
+        },
+        {
+          "lat": 52.4439977,
+          "lon": 13.5915942
+        },
+        {
+          "lat": 52.4439961,
+          "lon": 13.5916363
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Salvador-Allende-Straße",
+        "operator:type": "public",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1155000864,
+      "bounds": {
+        "minlat": 52.4425386,
+        "minlon": 13.5901773,
+        "maxlat": 52.4435824,
+        "maxlon": 13.5902487
+      },
+      "geometry": [
+        {
+          "lat": 52.4435824,
+          "lon": 13.5902487
+        },
+        {
+          "lat": 52.4431664,
+          "lon": 13.5902247
+        },
+        {
+          "lat": 52.4428982,
+          "lon": 13.5902029
+        },
+        {
+          "lat": 52.4426947,
+          "lon": 13.5901884
+        },
+        {
+          "lat": 52.4426304,
+          "lon": 13.5901838
+        },
+        {
+          "lat": 52.4425865,
+          "lon": 13.5901807
+        },
+        {
+          "lat": 52.4425386,
+          "lon": 13.5901773
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "sidewalk": "both",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q2215542",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1173875714,
+      "bounds": {
+        "minlat": 52.452473,
+        "minlon": 13.5933793,
+        "maxlat": 52.4528368,
+        "maxlon": 13.5933876
+      },
+      "geometry": [
+        {
+          "lat": 52.452473,
+          "lon": 13.5933793
+        },
+        {
+          "lat": 52.4527973,
+          "lon": 13.5933867
+        },
+        {
+          "lat": 52.4528368,
+          "lon": 13.5933876
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination:colour:lanes": "|;white|;white",
+        "destination:lanes": "Hellersdorf|Erkner;Friedrichshagen|Erkner;Friedrichshagen",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe II",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12555",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "through|right|right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1197847578,
+      "bounds": {
+        "minlat": 52.44718,
+        "minlon": 13.5938563,
+        "maxlat": 52.4474802,
+        "maxlon": 13.5938781
+      },
+      "geometry": [
+        {
+          "lat": 52.44718,
+          "lon": 13.5938563
+        },
+        {
+          "lat": 52.4472472,
+          "lon": 13.5938585
+        },
+        {
+          "lat": 52.4472838,
+          "lon": 13.5938596
+        },
+        {
+          "lat": 52.4474254,
+          "lon": 13.5938729
+        },
+        {
+          "lat": 52.4474802,
+          "lon": 13.5938781
+        }
+      ],
+      "tags": {
+        "access:lanes": "yes|yes|no",
+        "bicycle": "use_sidepath",
+        "bus:lanes": "yes|yes|designated",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1197847579,
+      "bounds": {
+        "minlat": 52.447001,
+        "minlon": 13.5936991,
+        "maxlat": 52.447287,
+        "maxlon": 13.5937022
+      },
+      "geometry": [
+        {
+          "lat": 52.447287,
+          "lon": 13.5937022
+        },
+        {
+          "lat": 52.447001,
+          "lon": 13.5936991
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe III",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "12559",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1314328854,
+      "bounds": {
+        "minlat": 52.4520619,
+        "minlon": 13.5933647,
+        "maxlat": 52.452473,
+        "maxlon": 13.5933793
+      },
+      "geometry": [
+        {
+          "lat": 52.4520619,
+          "lon": 13.5933647
+        },
+        {
+          "lat": 52.4521393,
+          "lon": 13.5933705
+        },
+        {
+          "lat": 52.4522762,
+          "lon": 13.5933748
+        },
+        {
+          "lat": 52.452473,
+          "lon": 13.5933793
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination:colour:lanes": "|;white|;white",
+        "destination:lanes": "Hellersdorf|Erkner;Friedrichshagen|Erkner;Friedrichshagen",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe II",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12555",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1425053215,
+      "bounds": {
+        "minlat": 52.4528368,
+        "minlon": 13.5933852,
+        "maxlat": 52.4529422,
+        "maxlon": 13.5933876
+      },
+      "geometry": [
+        {
+          "lat": 52.4528368,
+          "lon": 13.5933876
+        },
+        {
+          "lat": 52.4528773,
+          "lon": 13.5933867
+        },
+        {
+          "lat": 52.4529422,
+          "lon": 13.5933852
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination:colour:lanes": "|;white|;white",
+        "destination:lanes": "Hellersdorf|Erkner;Friedrichshagen|Erkner;Friedrichshagen",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe II",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12555",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "through|right|right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1425053216,
+      "bounds": {
+        "minlat": 52.4525611,
+        "minlon": 13.5931773,
+        "maxlat": 52.4528389,
+        "maxlon": 13.5931933
+      },
+      "geometry": [
+        {
+          "lat": 52.4528389,
+          "lon": 13.5931933
+        },
+        {
+          "lat": 52.4525611,
+          "lon": 13.5931773
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Lichtenberg;Müggelheim",
+        "destination:colour": ";white",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "note": "Übergeordnete Straße, Stufe II",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "12555",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1430719884,
+      "bounds": {
+        "minlat": 52.4518752,
+        "minlon": 13.5936519,
+        "maxlat": 52.452103,
+        "maxlon": 13.59366
+      },
+      "geometry": [
+        {
+          "lat": 52.452103,
+          "lon": 13.59366
+        },
+        {
+          "lat": 52.4518752,
+          "lon": 13.5936519
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "sidewalk:both": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1430719885,
+      "bounds": {
+        "minlat": 52.4514068,
+        "minlon": 13.5936108,
+        "maxlat": 52.4518752,
+        "maxlon": 13.5936519
+      },
+      "geometry": [
+        {
+          "lat": 52.4518752,
+          "lon": 13.5936519
+        },
+        {
+          "lat": 52.4518287,
+          "lon": 13.5936503
+        },
+        {
+          "lat": 52.4516174,
+          "lon": 13.5936305
+        },
+        {
+          "lat": 52.4515423,
+          "lon": 13.5936235
+        },
+        {
+          "lat": 52.4514249,
+          "lon": 13.5936125
+        },
+        {
+          "lat": 52.4514068,
+          "lon": 13.5936108
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed:type": "DE:urban",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "sidewalk:both": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1430910752,
+      "bounds": {
+        "minlat": 52.4454084,
+        "minlon": 13.5926322,
+        "maxlat": 52.4460208,
+        "maxlon": 13.5926872
+      },
+      "geometry": [
+        {
+          "lat": 52.4460208,
+          "lon": 13.5926872
+        },
+        {
+          "lat": 52.4454084,
+          "lon": 13.5926322
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:both": "lane",
+        "parking:both:access": "yes",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12559",
+        "smoothness": "intermediate",
+        "surface": "concrete",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1431007684,
+      "bounds": {
+        "minlat": 52.4435824,
+        "minlon": 13.5902487,
+        "maxlat": 52.4440384,
+        "maxlon": 13.5902751
+      },
+      "geometry": [
+        {
+          "lat": 52.4440384,
+          "lon": 13.5902751
+        },
+        {
+          "lat": 52.4435824,
+          "lon": 13.5902487
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "perpendicular",
+        "postal_code": "12559",
+        "sidewalk": "both",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q2215542",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1431007685,
+      "bounds": {
+        "minlat": 52.4440384,
+        "minlon": 13.5902751,
+        "maxlat": 52.4442298,
+        "maxlon": 13.5902897
+      },
+      "geometry": [
+        {
+          "lat": 52.4442298,
+          "lon": 13.5902897
+        },
+        {
+          "lat": 52.4440384,
+          "lon": 13.5902751
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "maxspeed": "30",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "perpendicular",
+        "postal_code": "12559",
+        "sidewalk": "right",
+        "surface": "concrete",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1431007686,
+      "bounds": {
+        "minlat": 52.4440137,
+        "minlon": 13.5902751,
+        "maxlat": 52.4440384,
+        "maxlon": 13.5911668
+      },
+      "geometry": [
+        {
+          "lat": 52.4440137,
+          "lon": 13.5911668
+        },
+        {
+          "lat": 52.4440308,
+          "lon": 13.59055
+        },
+        {
+          "lat": 52.4440384,
+          "lon": 13.5902751
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "12559",
+        "sidewalk": "left",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q2215542",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1431009033,
+      "bounds": {
+        "minlat": 52.4450896,
+        "minlon": 13.5925291,
+        "maxlat": 52.4451014,
+        "maxlon": 13.5929486
+      },
+      "geometry": [
+        {
+          "lat": 52.4450896,
+          "lon": 13.5929486
+        },
+        {
+          "lat": 52.4450904,
+          "lon": 13.5929202
+        },
+        {
+          "lat": 52.4450994,
+          "lon": 13.5925997
+        },
+        {
+          "lat": 52.4451014,
+          "lon": 13.5925291
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "12559",
+        "sidewalk": "both",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q2215542",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1433980212,
+      "bounds": {
+        "minlat": 52.4410461,
+        "minlon": 13.5935982,
+        "maxlat": 52.4411717,
+        "maxlon": 13.5936076
+      },
+      "geometry": [
+        {
+          "lat": 52.4410461,
+          "lon": 13.5935982
+        },
+        {
+          "lat": 52.4411717,
+          "lon": 13.5936076
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "operator:type": "public",
+        "parking:left": "separate",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:maxstay:conditional": "2 hours @ (07:00-18:00)",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1433980213,
+      "bounds": {
+        "minlat": 52.440857,
+        "minlon": 13.5935829,
+        "maxlat": 52.4410461,
+        "maxlon": 13.5935982
+      },
+      "geometry": [
+        {
+          "lat": 52.440857,
+          "lon": 13.5935829
+        },
+        {
+          "lat": 52.4410461,
+          "lon": 13.5935982
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "operator:type": "public",
+        "parking:left": "on_kerb",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:maxstay:conditional": "2 hours @ (07:00-18:00)",
+        "parking:left:orientation": "perpendicular",
+        "parking:left:surface": "unpaved",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:maxstay:conditional": "2 hours @ (07:00-18:00)",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1433980214,
+      "bounds": {
+        "minlat": 52.4407174,
+        "minlon": 13.5935716,
+        "maxlat": 52.440857,
+        "maxlon": 13.5935829
+      },
+      "geometry": [
+        {
+          "lat": 52.4407174,
+          "lon": 13.5935716
+        },
+        {
+          "lat": 52.440857,
+          "lon": 13.5935829
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "operator:type": "public",
+        "parking:left": "separate",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:maxstay:conditional": "2 hours @ (07:00-18:00)",
+        "parking:left:orientation": "perpendicular",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_parking @ (Mo-Fr 08:00-16:00)",
+        "postal_code": "12559",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1433980216,
+      "bounds": {
+        "minlat": 52.4404712,
+        "minlon": 13.5935516,
+        "maxlat": 52.440568,
+        "maxlon": 13.5935594
+      },
+      "geometry": [
+        {
+          "lat": 52.4404712,
+          "lon": 13.5935516
+        },
+        {
+          "lat": 52.4405277,
+          "lon": 13.5935562
+        },
+        {
+          "lat": 52.440568,
+          "lon": 13.5935594
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "operator:type": "public",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12559",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1433980217,
+      "bounds": {
+        "minlat": 52.4403934,
+        "minlon": 13.5935453,
+        "maxlat": 52.4404712,
+        "maxlon": 13.5935516
+      },
+      "geometry": [
+        {
+          "lat": 52.4403934,
+          "lon": 13.5935453
+        },
+        {
+          "lat": 52.4404712,
+          "lon": 13.5935516
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "operator:type": "public",
+        "parking:left": "on_kerb",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "perpendicular",
+        "parking:left:surface": "unpaved",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12559",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1433980218,
+      "bounds": {
+        "minlat": 52.4403294,
+        "minlon": 13.5935401,
+        "maxlat": 52.4403934,
+        "maxlon": 13.5935453
+      },
+      "geometry": [
+        {
+          "lat": 52.4403294,
+          "lon": 13.5935401
+        },
+        {
+          "lat": 52.4403934,
+          "lon": 13.5935453
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "operator:type": "public",
+        "parking:left": "on_kerb",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "perpendicular",
+        "parking:left:surface": "unpaved",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1433980219,
+      "bounds": {
+        "minlat": 52.440568,
+        "minlon": 13.5935594,
+        "maxlat": 52.4407174,
+        "maxlon": 13.5935716
+      },
+      "geometry": [
+        {
+          "lat": 52.440568,
+          "lon": 13.5935594
+        },
+        {
+          "lat": 52.4405934,
+          "lon": 13.5935615
+        },
+        {
+          "lat": 52.4407128,
+          "lon": 13.5935712
+        },
+        {
+          "lat": 52.4407174,
+          "lon": 13.5935716
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "operator:type": "public",
+        "parking:left": "on_kerb",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:maxstay:conditional": "2 hours @ (07:00-18:00)",
+        "parking:left:orientation": "perpendicular",
+        "parking:right": "separate",
+        "postal_code": "12559",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1433980220,
+      "bounds": {
+        "minlat": 52.4392889,
+        "minlon": 13.5934534,
+        "maxlat": 52.4399009,
+        "maxlon": 13.5935051
+      },
+      "geometry": [
+        {
+          "lat": 52.4392889,
+          "lon": 13.5934534
+        },
+        {
+          "lat": 52.4393089,
+          "lon": 13.5934546
+        },
+        {
+          "lat": 52.4399009,
+          "lon": 13.5935051
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "operator:type": "public",
+        "parking:left": "on_kerb",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "perpendicular",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1433980221,
+      "bounds": {
+        "minlat": 52.4390705,
+        "minlon": 13.593438,
+        "maxlat": 52.4391721,
+        "maxlon": 13.5934463
+      },
+      "geometry": [
+        {
+          "lat": 52.4390705,
+          "lon": 13.593438
+        },
+        {
+          "lat": 52.4391721,
+          "lon": 13.5934463
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "operator:type": "public",
+        "parking:left": "on_kerb",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "perpendicular",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1433980222,
+      "bounds": {
+        "minlat": 52.4391721,
+        "minlon": 13.5934463,
+        "maxlat": 52.4392889,
+        "maxlon": 13.5934534
+      },
+      "geometry": [
+        {
+          "lat": 52.4391721,
+          "lon": 13.5934463
+        },
+        {
+          "lat": 52.4391822,
+          "lon": 13.5934471
+        },
+        {
+          "lat": 52.4392889,
+          "lon": 13.5934534
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "operator:type": "public",
+        "parking:left": "on_kerb",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "perpendicular",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12559",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1434142865,
+      "bounds": {
+        "minlat": 52.4489003,
+        "minlon": 13.5941525,
+        "maxlat": 52.448904,
+        "maxlon": 13.5945289
+      },
+      "geometry": [
+        {
+          "lat": 52.448904,
+          "lon": 13.5945289
+        },
+        {
+          "lat": 52.4489003,
+          "lon": 13.5941525
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "operator:type": "public",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "perpendicular",
+        "parking:right": "no",
+        "postal_code": "12559",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1434142866,
+      "bounds": {
+        "minlat": 52.4488602,
+        "minlon": 13.5940654,
+        "maxlat": 52.4489003,
+        "maxlon": 13.5941525
+      },
+      "geometry": [
+        {
+          "lat": 52.4489003,
+          "lon": 13.5941525
+        },
+        {
+          "lat": 52.4488602,
+          "lon": 13.5940654
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "operator:type": "public",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1434142867,
+      "bounds": {
+        "minlat": 52.4481501,
+        "minlon": 13.5940444,
+        "maxlat": 52.4484708,
+        "maxlon": 13.5940552
+      },
+      "geometry": [
+        {
+          "lat": 52.4484708,
+          "lon": 13.5940552
+        },
+        {
+          "lat": 52.4481501,
+          "lon": 13.5940444
+        }
+      ],
+      "tags": {
+        "destination:backward": "Ordnungsamt",
+        "destination:colour:backward": "white",
+        "highway": "service",
+        "lit": "yes",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "operator:type": "public",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "postal_code": "12559",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q2215542"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1516194659,
+      "bounds": {
+        "minlat": 52.4458104,
+        "minlon": 13.5940716,
+        "maxlat": 52.4458173,
+        "maxlon": 13.5944822
+      },
+      "geometry": [
+        {
+          "lat": 52.4458173,
+          "lon": 13.5940716
+        },
+        {
+          "lat": 52.4458129,
+          "lon": 13.5943334
+        },
+        {
+          "lat": 52.4458104,
+          "lon": 13.5944822
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "no",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Salvador-Allende-Straße",
+        "name:etymology:wikidata": "Q440",
+        "operator:type": "private",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "source:maxspeed": "DE:zone30",
+        "source:operator:type": "ALKIS Berlin",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q2215542",
+        "zone:maxspeed": "DE:30"
+      }
+    }
+  ]
+}

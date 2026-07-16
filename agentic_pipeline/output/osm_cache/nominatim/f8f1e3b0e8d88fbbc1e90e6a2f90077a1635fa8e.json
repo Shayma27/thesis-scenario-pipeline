@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 145316141,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 384136088,
+    "lat": "52.4849626",
+    "lon": "13.4596073",
+    "category": "highway",
+    "type": "tertiary",
+    "place_rank": 26,
+    "importance": 0.05342208819714653,
+    "addresstype": "road",
+    "name": "Kiefholzstraße",
+    "display_name": "Kiefholzstraße, Plänterwald, Treptow-Köpenick, Berlin, 12435, Deutschland",
+    "boundingbox": [
+      "52.4846827",
+      "52.4852426",
+      "13.4591887",
+      "13.4600260"
+    ]
+  }
+]

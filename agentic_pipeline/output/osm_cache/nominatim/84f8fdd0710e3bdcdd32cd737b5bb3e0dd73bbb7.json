@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 145455836,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 300062060,
+    "lat": "52.5247616",
+    "lon": "13.4213796",
+    "category": "highway",
+    "type": "primary",
+    "place_rank": 26,
+    "importance": 0.26244239079806453,
+    "addresstype": "road",
+    "name": "Mollstraße",
+    "display_name": "Mollstraße, Mitte, Berlin, 10249, Deutschland",
+    "boundingbox": [
+      "52.5246797",
+      "52.5248435",
+      "13.4211738",
+      "13.4215854"
+    ]
+  }
+]

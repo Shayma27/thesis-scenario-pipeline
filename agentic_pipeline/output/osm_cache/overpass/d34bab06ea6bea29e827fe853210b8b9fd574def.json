@@ -1,0 +1,2220 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-07-15T21:51:22Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 4543924,
+      "bounds": {
+        "minlat": 52.5456163,
+        "minlon": 13.3708615,
+        "maxlat": 52.5457471,
+        "maxlon": 13.3710643
+      },
+      "geometry": [
+        {
+          "lat": 52.5456163,
+          "lon": 13.3708615
+        },
+        {
+          "lat": 52.5456543,
+          "lon": 13.3709149
+        },
+        {
+          "lat": 52.5457471,
+          "lon": 13.3710643
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4543925,
+      "bounds": {
+        "minlat": 52.5506246,
+        "minlon": 13.3786268,
+        "maxlat": 52.5518725,
+        "maxlon": 13.3806162
+      },
+      "geometry": [
+        {
+          "lat": 52.5518725,
+          "lon": 13.3806162
+        },
+        {
+          "lat": 52.5517884,
+          "lon": 13.3804819
+        },
+        {
+          "lat": 52.5515274,
+          "lon": 13.3800659
+        },
+        {
+          "lat": 52.5513632,
+          "lon": 13.3798042
+        },
+        {
+          "lat": 52.5509689,
+          "lon": 13.3791757
+        },
+        {
+          "lat": 52.5507292,
+          "lon": 13.3787935
+        },
+        {
+          "lat": 52.5506246,
+          "lon": 13.3786268
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 24700556,
+      "bounds": {
+        "minlat": 52.5455611,
+        "minlon": 13.3705826,
+        "maxlat": 52.5460493,
+        "maxlon": 13.3712506
+      },
+      "geometry": [
+        {
+          "lat": 52.5460493,
+          "lon": 13.3712506
+        },
+        {
+          "lat": 52.5457866,
+          "lon": 13.3708175
+        },
+        {
+          "lat": 52.5457381,
+          "lon": 13.3707413
+        },
+        {
+          "lat": 52.5456878,
+          "lon": 13.3706778
+        },
+        {
+          "lat": 52.5456103,
+          "lon": 13.3706113
+        },
+        {
+          "lat": 52.5455692,
+          "lon": 13.3705873
+        },
+        {
+          "lat": 52.5455611,
+          "lon": 13.3705826
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 24700558,
+      "bounds": {
+        "minlat": 52.547271,
+        "minlon": 13.3735275,
+        "maxlat": 52.5474539,
+        "maxlon": 13.3738219
+      },
+      "geometry": [
+        {
+          "lat": 52.547271,
+          "lon": 13.3735275
+        },
+        {
+          "lat": 52.5473401,
+          "lon": 13.3736381
+        },
+        {
+          "lat": 52.5474049,
+          "lon": 13.3737427
+        },
+        {
+          "lat": 52.5474539,
+          "lon": 13.3738219
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25500556,
+      "bounds": {
+        "minlat": 52.5465392,
+        "minlon": 13.3723285,
+        "maxlat": 52.5466428,
+        "maxlon": 13.3724961
+      },
+      "geometry": [
+        {
+          "lat": 52.5465392,
+          "lon": 13.3723285
+        },
+        {
+          "lat": 52.5466428,
+          "lon": 13.3724961
+        }
+      ],
+      "tags": {
+        "bridge": "yes",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "layer": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "maxweight:signed": "no",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25500605,
+      "bounds": {
+        "minlat": 52.5466225,
+        "minlon": 13.3721862,
+        "maxlat": 52.546727,
+        "maxlon": 13.3723523
+      },
+      "geometry": [
+        {
+          "lat": 52.546727,
+          "lon": 13.3723523
+        },
+        {
+          "lat": 52.5466225,
+          "lon": 13.3721862
+        }
+      ],
+      "tags": {
+        "bridge": "yes",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "layer": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "maxweight:signed": "no",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 381497908,
+      "bounds": {
+        "minlat": 52.54792,
+        "minlon": 13.3742643,
+        "maxlat": 52.5487801,
+        "maxlon": 13.375679
+      },
+      "geometry": [
+        {
+          "lat": 52.5487801,
+          "lon": 13.375679
+        },
+        {
+          "lat": 52.5483797,
+          "lon": 13.3750284
+        },
+        {
+          "lat": 52.5483414,
+          "lon": 13.3749657
+        },
+        {
+          "lat": 52.548152,
+          "lon": 13.374657
+        },
+        {
+          "lat": 52.54792,
+          "lon": 13.3742643
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 381497910,
+      "bounds": {
+        "minlat": 52.5474049,
+        "minlon": 13.3735914,
+        "maxlat": 52.5474985,
+        "maxlon": 13.3737427
+      },
+      "geometry": [
+        {
+          "lat": 52.5474985,
+          "lon": 13.3735914
+        },
+        {
+          "lat": 52.5474049,
+          "lon": 13.3737427
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "parking:both": "no",
+        "shoulder": "no",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 381497911,
+      "bounds": {
+        "minlat": 52.5454748,
+        "minlon": 13.3705595,
+        "maxlat": 52.5455131,
+        "maxlon": 13.3707583
+      },
+      "geometry": [
+        {
+          "lat": 52.5455131,
+          "lon": 13.3705595
+        },
+        {
+          "lat": 52.5454748,
+          "lon": 13.3707583
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 381497912,
+      "bounds": {
+        "minlat": 52.5460891,
+        "minlon": 13.3714611,
+        "maxlat": 52.546177,
+        "maxlon": 13.3716084
+      },
+      "geometry": [
+        {
+          "lat": 52.546177,
+          "lon": 13.3714611
+        },
+        {
+          "lat": 52.5460891,
+          "lon": 13.3716084
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "parking:both": "no",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 381497915,
+      "bounds": {
+        "minlat": 52.5476959,
+        "minlon": 13.374054,
+        "maxlat": 52.5477934,
+        "maxlon": 13.3742064
+      },
+      "geometry": [
+        {
+          "lat": 52.5477934,
+          "lon": 13.374054
+        },
+        {
+          "lat": 52.5476959,
+          "lon": 13.3742064
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "parking:both": "no",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 381497916,
+      "bounds": {
+        "minlat": 52.5490931,
+        "minlon": 13.3761721,
+        "maxlat": 52.5493326,
+        "maxlon": 13.3765434
+      },
+      "geometry": [
+        {
+          "lat": 52.5493326,
+          "lon": 13.3765434
+        },
+        {
+          "lat": 52.5492378,
+          "lon": 13.3763982
+        },
+        {
+          "lat": 52.5492068,
+          "lon": 13.3763506
+        },
+        {
+          "lat": 52.5491497,
+          "lon": 13.3762613
+        },
+        {
+          "lat": 52.5490931,
+          "lon": 13.3761721
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "left|none|none",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 381497917,
+      "bounds": {
+        "minlat": 52.5463289,
+        "minlon": 13.3719941,
+        "maxlat": 52.5465392,
+        "maxlon": 13.3723285
+      },
+      "geometry": [
+        {
+          "lat": 52.5463289,
+          "lon": 13.3719941
+        },
+        {
+          "lat": 52.5464189,
+          "lon": 13.3721362
+        },
+        {
+          "lat": 52.5465184,
+          "lon": 13.3722932
+        },
+        {
+          "lat": 52.5465392,
+          "lon": 13.3723285
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 381497919,
+      "bounds": {
+        "minlat": 52.5502745,
+        "minlon": 13.3783517,
+        "maxlat": 52.5504805,
+        "maxlon": 13.3786787
+      },
+      "geometry": [
+        {
+          "lat": 52.5502745,
+          "lon": 13.3783517
+        },
+        {
+          "lat": 52.5502952,
+          "lon": 13.3783846
+        },
+        {
+          "lat": 52.5503609,
+          "lon": 13.3784889
+        },
+        {
+          "lat": 52.5504619,
+          "lon": 13.3786491
+        },
+        {
+          "lat": 52.5504805,
+          "lon": 13.3786787
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 390222695,
+      "bounds": {
+        "minlat": 52.5525147,
+        "minlon": 13.3819915,
+        "maxlat": 52.5525944,
+        "maxlon": 13.3820665
+      },
+      "geometry": [
+        {
+          "lat": 52.5525944,
+          "lon": 13.3820665
+        },
+        {
+          "lat": 52.5525147,
+          "lon": 13.3819915
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2021-09-11",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "U Pankstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 390222696,
+      "bounds": {
+        "minlat": 52.5520362,
+        "minlon": 13.3822681,
+        "maxlat": 52.5520851,
+        "maxlon": 13.382377
+      },
+      "geometry": [
+        {
+          "lat": 52.5520851,
+          "lon": 13.3822681
+        },
+        {
+          "lat": 52.5520362,
+          "lon": 13.382377
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "U Pankstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "surface": "paving_stones",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 390222697,
+      "bounds": {
+        "minlat": 52.5519612,
+        "minlon": 13.3817722,
+        "maxlat": 52.552001,
+        "maxlon": 13.3818712
+      },
+      "geometry": [
+        {
+          "lat": 52.5519612,
+          "lon": 13.3818712
+        },
+        {
+          "lat": 52.552001,
+          "lon": 13.3817722
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "check_date:shelter": "2022-10-13",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "U Pankstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 390222698,
+      "bounds": {
+        "minlat": 52.5526541,
+        "minlon": 13.3816922,
+        "maxlat": 52.5527743,
+        "maxlon": 13.3818176
+      },
+      "geometry": [
+        {
+          "lat": 52.5526541,
+          "lon": 13.3816922
+        },
+        {
+          "lat": 52.5527743,
+          "lon": 13.3818176
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2021-09-11",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "U Pankstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 428997692,
+      "bounds": {
+        "minlat": 52.545262,
+        "minlon": 13.3706465,
+        "maxlat": 52.5454748,
+        "maxlon": 13.3707583
+      },
+      "geometry": [
+        {
+          "lat": 52.545262,
+          "lon": 13.3706465
+        },
+        {
+          "lat": 52.5453372,
+          "lon": 13.3706859
+        },
+        {
+          "lat": 52.5453808,
+          "lon": 13.3707088
+        },
+        {
+          "lat": 52.5454047,
+          "lon": 13.3707213
+        },
+        {
+          "lat": 52.5454748,
+          "lon": 13.3707583
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Pankow",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 428997693,
+      "bounds": {
+        "minlat": 52.5452987,
+        "minlon": 13.3704572,
+        "maxlat": 52.5455131,
+        "maxlon": 13.3705595
+      },
+      "geometry": [
+        {
+          "lat": 52.5455131,
+          "lon": 13.3705595
+        },
+        {
+          "lat": 52.5454731,
+          "lon": 13.3705393
+        },
+        {
+          "lat": 52.5454405,
+          "lon": 13.3705246
+        },
+        {
+          "lat": 52.5454156,
+          "lon": 13.3705128
+        },
+        {
+          "lat": 52.5452987,
+          "lon": 13.3704572
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 909333692,
+      "bounds": {
+        "minlat": 52.5466029,
+        "minlon": 13.3721521,
+        "maxlat": 52.5466225,
+        "maxlon": 13.3721862
+      },
+      "geometry": [
+        {
+          "lat": 52.5466225,
+          "lon": 13.3721862
+        },
+        {
+          "lat": 52.5466029,
+          "lon": 13.3721521
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:orientation": "parallel",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1102621825,
+      "bounds": {
+        "minlat": 52.5460493,
+        "minlon": 13.3712506,
+        "maxlat": 52.5466029,
+        "maxlon": 13.3721521
+      },
+      "geometry": [
+        {
+          "lat": 52.5466029,
+          "lon": 13.3721521
+        },
+        {
+          "lat": 52.5462639,
+          "lon": 13.3716022
+        },
+        {
+          "lat": 52.546177,
+          "lon": 13.3714611
+        },
+        {
+          "lat": 52.5461581,
+          "lon": 13.3714319
+        },
+        {
+          "lat": 52.546122,
+          "lon": 13.3713705
+        },
+        {
+          "lat": 52.5461006,
+          "lon": 13.3713352
+        },
+        {
+          "lat": 52.5460493,
+          "lon": 13.3712506
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1102622173,
+      "bounds": {
+        "minlat": 52.5458064,
+        "minlon": 13.3711621,
+        "maxlat": 52.5463289,
+        "maxlon": 13.3719941
+      },
+      "geometry": [
+        {
+          "lat": 52.5458064,
+          "lon": 13.3711621
+        },
+        {
+          "lat": 52.5458533,
+          "lon": 13.3712331
+        },
+        {
+          "lat": 52.5460117,
+          "lon": 13.371485
+        },
+        {
+          "lat": 52.5460718,
+          "lon": 13.3715808
+        },
+        {
+          "lat": 52.5460891,
+          "lon": 13.3716084
+        },
+        {
+          "lat": 52.546175,
+          "lon": 13.3717465
+        },
+        {
+          "lat": 52.5463289,
+          "lon": 13.3719941
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126979836,
+      "bounds": {
+        "minlat": 52.5491158,
+        "minlon": 13.3764981,
+        "maxlat": 52.5492876,
+        "maxlon": 13.3767838
+      },
+      "geometry": [
+        {
+          "lat": 52.5491158,
+          "lon": 13.3764981
+        },
+        {
+          "lat": 52.5492876,
+          "lon": 13.3767838
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126979928,
+      "bounds": {
+        "minlat": 52.5492876,
+        "minlon": 13.3767838,
+        "maxlat": 52.5495961,
+        "maxlon": 13.3772762
+      },
+      "geometry": [
+        {
+          "lat": 52.5492876,
+          "lon": 13.3767838
+        },
+        {
+          "lat": 52.5494554,
+          "lon": 13.3770511
+        },
+        {
+          "lat": 52.5495214,
+          "lon": 13.3771561
+        },
+        {
+          "lat": 52.5495961,
+          "lon": 13.3772762
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126981946,
+      "bounds": {
+        "minlat": 52.5518823,
+        "minlon": 13.3809045,
+        "maxlat": 52.5521997,
+        "maxlon": 13.3814151
+      },
+      "geometry": [
+        {
+          "lat": 52.5518823,
+          "lon": 13.3809045
+        },
+        {
+          "lat": 52.5520533,
+          "lon": 13.381176
+        },
+        {
+          "lat": 52.5521074,
+          "lon": 13.3812618
+        },
+        {
+          "lat": 52.5521338,
+          "lon": 13.3813031
+        },
+        {
+          "lat": 52.5521997,
+          "lon": 13.3814151
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1133400408,
+      "bounds": {
+        "minlat": 52.5482913,
+        "minlon": 13.3751658,
+        "maxlat": 52.5491158,
+        "maxlon": 13.3764981
+      },
+      "geometry": [
+        {
+          "lat": 52.5482913,
+          "lon": 13.3751658
+        },
+        {
+          "lat": 52.5486938,
+          "lon": 13.3758091
+        },
+        {
+          "lat": 52.5488529,
+          "lon": 13.3760747
+        },
+        {
+          "lat": 52.549081,
+          "lon": 13.3764433
+        },
+        {
+          "lat": 52.5491158,
+          "lon": 13.3764981
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1133400409,
+      "bounds": {
+        "minlat": 52.5474539,
+        "minlon": 13.3738219,
+        "maxlat": 52.5476382,
+        "maxlon": 13.3741148
+      },
+      "geometry": [
+        {
+          "lat": 52.5474539,
+          "lon": 13.3738219
+        },
+        {
+          "lat": 52.5474812,
+          "lon": 13.3738661
+        },
+        {
+          "lat": 52.5475498,
+          "lon": 13.3739736
+        },
+        {
+          "lat": 52.5476222,
+          "lon": 13.3740876
+        },
+        {
+          "lat": 52.5476382,
+          "lon": 13.3741148
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1133400410,
+      "bounds": {
+        "minlat": 52.5475521,
+        "minlon": 13.3736776,
+        "maxlat": 52.5477358,
+        "maxlon": 13.3739604
+      },
+      "geometry": [
+        {
+          "lat": 52.5477358,
+          "lon": 13.3739604
+        },
+        {
+          "lat": 52.5477169,
+          "lon": 13.3739298
+        },
+        {
+          "lat": 52.5476449,
+          "lon": 13.3738204
+        },
+        {
+          "lat": 52.5475733,
+          "lon": 13.3737116
+        },
+        {
+          "lat": 52.5475521,
+          "lon": 13.3736776
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1133400411,
+      "bounds": {
+        "minlat": 52.546727,
+        "minlon": 13.3723523,
+        "maxlat": 52.5475521,
+        "maxlon": 13.3736776
+      },
+      "geometry": [
+        {
+          "lat": 52.5475521,
+          "lon": 13.3736776
+        },
+        {
+          "lat": 52.5474985,
+          "lon": 13.3735914
+        },
+        {
+          "lat": 52.5473546,
+          "lon": 13.3733601
+        },
+        {
+          "lat": 52.5472824,
+          "lon": 13.3732442
+        },
+        {
+          "lat": 52.5472551,
+          "lon": 13.3732003
+        },
+        {
+          "lat": 52.5470144,
+          "lon": 13.3728138
+        },
+        {
+          "lat": 52.546727,
+          "lon": 13.3723523
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1133400808,
+      "bounds": {
+        "minlat": 52.5495961,
+        "minlon": 13.3772762,
+        "maxlat": 52.5502745,
+        "maxlon": 13.3783517
+      },
+      "geometry": [
+        {
+          "lat": 52.5495961,
+          "lon": 13.3772762
+        },
+        {
+          "lat": 52.5502144,
+          "lon": 13.3782563
+        },
+        {
+          "lat": 52.5502745,
+          "lon": 13.3783517
+        }
+      ],
+      "tags": {
+        "check_date:smoothness": "2023-05-20",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1133400822,
+      "bounds": {
+        "minlat": 52.5504805,
+        "minlon": 13.3786787,
+        "maxlat": 52.551542,
+        "maxlon": 13.3803642
+      },
+      "geometry": [
+        {
+          "lat": 52.5504805,
+          "lon": 13.3786787
+        },
+        {
+          "lat": 52.5505389,
+          "lon": 13.3787714
+        },
+        {
+          "lat": 52.5509467,
+          "lon": 13.3794189
+        },
+        {
+          "lat": 52.551123,
+          "lon": 13.3796989
+        },
+        {
+          "lat": 52.5512827,
+          "lon": 13.3799528
+        },
+        {
+          "lat": 52.551542,
+          "lon": 13.3803642
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1173907810,
+      "bounds": {
+        "minlat": 52.5500149,
+        "minlon": 13.37764,
+        "maxlat": 52.5505555,
+        "maxlon": 13.3785154
+      },
+      "geometry": [
+        {
+          "lat": 52.5505555,
+          "lon": 13.3785154
+        },
+        {
+          "lat": 52.5505479,
+          "lon": 13.3785032
+        },
+        {
+          "lat": 52.5504864,
+          "lon": 13.378404
+        },
+        {
+          "lat": 52.5503826,
+          "lon": 13.3782366
+        },
+        {
+          "lat": 52.5503007,
+          "lon": 13.3781045
+        },
+        {
+          "lat": 52.5501538,
+          "lon": 13.3778678
+        },
+        {
+          "lat": 52.5500149,
+          "lon": 13.37764
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1189946621,
+      "bounds": {
+        "minlat": 52.5455131,
+        "minlon": 13.3705595,
+        "maxlat": 52.5455611,
+        "maxlon": 13.3705826
+      },
+      "geometry": [
+        {
+          "lat": 52.5455611,
+          "lon": 13.3705826
+        },
+        {
+          "lat": 52.5455131,
+          "lon": 13.3705595
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "note": "wegen Baustelle tempörär auf eine Auto-Spur verengt",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1191566236,
+      "bounds": {
+        "minlat": 52.5454748,
+        "minlon": 13.3707583,
+        "maxlat": 52.5456163,
+        "maxlon": 13.3708615
+      },
+      "geometry": [
+        {
+          "lat": 52.5454748,
+          "lon": 13.3707583
+        },
+        {
+          "lat": 52.5455509,
+          "lon": 13.3707974
+        },
+        {
+          "lat": 52.5456163,
+          "lon": 13.3708615
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1396836375,
+      "bounds": {
+        "minlat": 52.5477358,
+        "minlon": 13.3739604,
+        "maxlat": 52.54792,
+        "maxlon": 13.3742643
+      },
+      "geometry": [
+        {
+          "lat": 52.54792,
+          "lon": 13.3742643
+        },
+        {
+          "lat": 52.5478501,
+          "lon": 13.374146
+        },
+        {
+          "lat": 52.5477934,
+          "lon": 13.374054
+        },
+        {
+          "lat": 52.5477358,
+          "lon": 13.3739604
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1396836377,
+      "bounds": {
+        "minlat": 52.5487801,
+        "minlon": 13.375679,
+        "maxlat": 52.5489696,
+        "maxlon": 13.3759776
+      },
+      "geometry": [
+        {
+          "lat": 52.5489696,
+          "lon": 13.3759776
+        },
+        {
+          "lat": 52.5487801,
+          "lon": 13.375679
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "left|none|none",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1396836378,
+      "bounds": {
+        "minlat": 52.5489696,
+        "minlon": 13.3759776,
+        "maxlat": 52.5490931,
+        "maxlon": 13.3761721
+      },
+      "geometry": [
+        {
+          "lat": 52.5490931,
+          "lon": 13.3761721
+        },
+        {
+          "lat": 52.5489696,
+          "lon": 13.3759776
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-17:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_parking @ (Mo-Fr 07:00-17:00)",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "left|none|none",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1396836379,
+      "bounds": {
+        "minlat": 52.5493326,
+        "minlon": 13.3765434,
+        "maxlat": 52.5500149,
+        "maxlon": 13.37764
+      },
+      "geometry": [
+        {
+          "lat": 52.5500149,
+          "lon": 13.37764
+        },
+        {
+          "lat": 52.5493326,
+          "lon": 13.3765434
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1396836380,
+      "bounds": {
+        "minlat": 52.5505555,
+        "minlon": 13.3785154,
+        "maxlat": 52.5506246,
+        "maxlon": 13.3786268
+      },
+      "geometry": [
+        {
+          "lat": 52.5506246,
+          "lon": 13.3786268
+        },
+        {
+          "lat": 52.5505555,
+          "lon": 13.3785154
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1396836384,
+      "bounds": {
+        "minlat": 52.5518725,
+        "minlon": 13.3806162,
+        "maxlat": 52.5522702,
+        "maxlon": 13.3812484
+      },
+      "geometry": [
+        {
+          "lat": 52.5522702,
+          "lon": 13.3812484
+        },
+        {
+          "lat": 52.5521997,
+          "lon": 13.3811386
+        },
+        {
+          "lat": 52.5518725,
+          "lon": 13.3806162
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1396836385,
+      "bounds": {
+        "minlat": 52.551542,
+        "minlon": 13.3803642,
+        "maxlat": 52.5518823,
+        "maxlon": 13.3809045
+      },
+      "geometry": [
+        {
+          "lat": 52.551542,
+          "lon": 13.3803642
+        },
+        {
+          "lat": 52.5518823,
+          "lon": 13.3809045
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1396836386,
+      "bounds": {
+        "minlat": 52.5481514,
+        "minlon": 13.3749413,
+        "maxlat": 52.5482913,
+        "maxlon": 13.3751658
+      },
+      "geometry": [
+        {
+          "lat": 52.5481514,
+          "lon": 13.3749413
+        },
+        {
+          "lat": 52.5482554,
+          "lon": 13.3751084
+        },
+        {
+          "lat": 52.5482913,
+          "lon": 13.3751658
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1396836387,
+      "bounds": {
+        "minlat": 52.5476382,
+        "minlon": 13.3741148,
+        "maxlat": 52.5481514,
+        "maxlon": 13.3749413
+      },
+      "geometry": [
+        {
+          "lat": 52.5476382,
+          "lon": 13.3741148
+        },
+        {
+          "lat": 52.5476959,
+          "lon": 13.3742064
+        },
+        {
+          "lat": 52.5477632,
+          "lon": 13.374315
+        },
+        {
+          "lat": 52.5481514,
+          "lon": 13.3749413
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1396836388,
+      "bounds": {
+        "minlat": 52.5466428,
+        "minlon": 13.3724961,
+        "maxlat": 52.547271,
+        "maxlon": 13.3735275
+      },
+      "geometry": [
+        {
+          "lat": 52.5466428,
+          "lon": 13.3724961
+        },
+        {
+          "lat": 52.5468286,
+          "lon": 13.3728009
+        },
+        {
+          "lat": 52.547271,
+          "lon": 13.3735275
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1396836393,
+      "bounds": {
+        "minlat": 52.5457471,
+        "minlon": 13.3710643,
+        "maxlat": 52.5458064,
+        "maxlon": 13.3711621
+      },
+      "geometry": [
+        {
+          "lat": 52.5457471,
+          "lon": 13.3710643
+        },
+        {
+          "lat": 52.5458064,
+          "lon": 13.3711621
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Pankstraße",
+        "name:etymology:wikidata": "Q564361",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13357",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q66321775"
+      }
+    }
+  ]
+}

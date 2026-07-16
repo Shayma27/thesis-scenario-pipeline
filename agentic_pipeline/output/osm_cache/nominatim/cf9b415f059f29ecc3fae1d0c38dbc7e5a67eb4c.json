@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 145827693,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 169076546,
+    "lat": "52.4329831",
+    "lon": "13.6070581",
+    "category": "highway",
+    "type": "secondary",
+    "place_rank": 26,
+    "importance": 0.05342208819714653,
+    "addresstype": "road",
+    "name": "Müggelheimer Damm",
+    "display_name": "Müggelheimer Damm, Salvador-Allende-Viertel II, Köpenick, Treptow-Köpenick, Berlin, 12557, Deutschland",
+    "boundingbox": [
+      "52.4295921",
+      "52.4363181",
+      "13.5983686",
+      "13.6157244"
+    ]
+  }
+]

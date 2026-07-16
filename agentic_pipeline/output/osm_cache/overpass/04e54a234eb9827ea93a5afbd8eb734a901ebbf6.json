@@ -1,0 +1,4393 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-07-15T22:00:29Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 4686083,
+      "bounds": {
+        "minlat": 52.4927241,
+        "minlon": 13.4470558,
+        "maxlat": 52.4931409,
+        "maxlon": 13.4481566
+      },
+      "geometry": [
+        {
+          "lat": 52.4931409,
+          "lon": 13.4470558
+        },
+        {
+          "lat": 52.4929976,
+          "lon": 13.4474588
+        },
+        {
+          "lat": 52.492848,
+          "lon": 13.4478794
+        },
+        {
+          "lat": 52.4927241,
+          "lon": 13.4481566
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "lane",
+        "parking:both:access": "yes",
+        "parking:both:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right:orientation": "diagonal",
+        "postal_code": "12435",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "bad",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4859913,
+      "bounds": {
+        "minlat": 52.4678022,
+        "minlon": 13.4805218,
+        "maxlat": 52.4702227,
+        "maxlon": 13.4839452
+      },
+      "geometry": [
+        {
+          "lat": 52.4702227,
+          "lon": 13.4805218
+        },
+        {
+          "lat": 52.4700848,
+          "lon": 13.4807167
+        },
+        {
+          "lat": 52.4698729,
+          "lon": 13.4810166
+        },
+        {
+          "lat": 52.4696267,
+          "lon": 13.4813648
+        },
+        {
+          "lat": 52.46951,
+          "lon": 13.4815298
+        },
+        {
+          "lat": 52.4693603,
+          "lon": 13.4817415
+        },
+        {
+          "lat": 52.4689238,
+          "lon": 13.4823589
+        },
+        {
+          "lat": 52.468598,
+          "lon": 13.4828197
+        },
+        {
+          "lat": 52.4683279,
+          "lon": 13.4832017
+        },
+        {
+          "lat": 52.4680676,
+          "lon": 13.4835698
+        },
+        {
+          "lat": 52.4678885,
+          "lon": 13.4838238
+        },
+        {
+          "lat": 52.4678022,
+          "lon": 13.4839452
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "parking:both:reason": "narrow",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:width": "Messung aus Luftbild",
+        "surface": "asphalt",
+        "width": "10.0"
+      }
+    },
+    {
+      "type": "way",
+      "id": 19402906,
+      "bounds": {
+        "minlat": 52.467214,
+        "minlon": 13.4801921,
+        "maxlat": 52.4700412,
+        "maxlon": 13.4842351
+      },
+      "geometry": [
+        {
+          "lat": 52.4700412,
+          "lon": 13.4801921
+        },
+        {
+          "lat": 52.4699211,
+          "lon": 13.4803676
+        },
+        {
+          "lat": 52.4698164,
+          "lon": 13.4805208
+        },
+        {
+          "lat": 52.4695983,
+          "lon": 13.4808293
+        },
+        {
+          "lat": 52.4692522,
+          "lon": 13.4813309
+        },
+        {
+          "lat": 52.4689741,
+          "lon": 13.4817267
+        },
+        {
+          "lat": 52.4689038,
+          "lon": 13.4818276
+        },
+        {
+          "lat": 52.4687499,
+          "lon": 13.4820489
+        },
+        {
+          "lat": 52.4684283,
+          "lon": 13.4825111
+        },
+        {
+          "lat": 52.4684028,
+          "lon": 13.4825478
+        },
+        {
+          "lat": 52.4680268,
+          "lon": 13.4830883
+        },
+        {
+          "lat": 52.4678483,
+          "lon": 13.4833448
+        },
+        {
+          "lat": 52.4676444,
+          "lon": 13.483635
+        },
+        {
+          "lat": 52.4674204,
+          "lon": 13.4839542
+        },
+        {
+          "lat": 52.467214,
+          "lon": 13.4842351
+        }
+      ],
+      "tags": {
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q1740919",
+        "name:etymology:wikipedia": "de:Kiefernwald",
+        "parking:left": "no",
+        "parking:left:reason": "narrow",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12437",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:width": "ARCore",
+        "surface": "asphalt",
+        "width": "6"
+      }
+    },
+    {
+      "type": "way",
+      "id": 19402908,
+      "bounds": {
+        "minlat": 52.4686538,
+        "minlon": 13.4791099,
+        "maxlat": 52.4695983,
+        "maxlon": 13.4808293
+      },
+      "geometry": [
+        {
+          "lat": 52.4695983,
+          "lon": 13.4808293
+        },
+        {
+          "lat": 52.4695623,
+          "lon": 13.4807637
+        },
+        {
+          "lat": 52.4693853,
+          "lon": 13.4804409
+        },
+        {
+          "lat": 52.4690843,
+          "lon": 13.4798913
+        },
+        {
+          "lat": 52.4687263,
+          "lon": 13.4792415
+        },
+        {
+          "lat": 52.4686538,
+          "lon": 13.4791099
+        }
+      ],
+      "tags": {
+        "access": "destination",
+        "foot": "yes",
+        "highway": "service",
+        "lit": "yes",
+        "name": "Kiefholzstraße",
+        "postal_code": "12437",
+        "service": "alley"
+      }
+    },
+    {
+      "type": "way",
+      "id": 19402912,
+      "bounds": {
+        "minlat": 52.4678923,
+        "minlon": 13.4802282,
+        "maxlat": 52.4689741,
+        "maxlon": 13.4817267
+      },
+      "geometry": [
+        {
+          "lat": 52.4678923,
+          "lon": 13.4802282
+        },
+        {
+          "lat": 52.4684027,
+          "lon": 13.4811443
+        },
+        {
+          "lat": 52.4685581,
+          "lon": 13.4809275
+        },
+        {
+          "lat": 52.4689386,
+          "lon": 13.4816585
+        },
+        {
+          "lat": 52.4689741,
+          "lon": 13.4817267
+        }
+      ],
+      "tags": {
+        "access": "destination",
+        "foot": "yes",
+        "highway": "service",
+        "name": "Kiefholzstraße",
+        "postal_code": "12437",
+        "service": "alley"
+      }
+    },
+    {
+      "type": "way",
+      "id": 19402914,
+      "bounds": {
+        "minlat": 52.4673097,
+        "minlon": 13.4810187,
+        "maxlat": 52.4684028,
+        "maxlon": 13.4825478
+      },
+      "geometry": [
+        {
+          "lat": 52.4673097,
+          "lon": 13.4810187
+        },
+        {
+          "lat": 52.4677648,
+          "lon": 13.4818874
+        },
+        {
+          "lat": 52.4678989,
+          "lon": 13.4818585
+        },
+        {
+          "lat": 52.467953,
+          "lon": 13.4818086
+        },
+        {
+          "lat": 52.4680147,
+          "lon": 13.4818023
+        },
+        {
+          "lat": 52.4681949,
+          "lon": 13.4821487
+        },
+        {
+          "lat": 52.4683668,
+          "lon": 13.4824788
+        },
+        {
+          "lat": 52.4684028,
+          "lon": 13.4825478
+        }
+      ],
+      "tags": {
+        "access": "destination",
+        "foot": "yes",
+        "highway": "service",
+        "lit": "yes",
+        "name": "Kiefholzstraße",
+        "postal_code": "12437",
+        "service": "alley"
+      }
+    },
+    {
+      "type": "way",
+      "id": 23859440,
+      "bounds": {
+        "minlat": 52.4751352,
+        "minlon": 13.4714891,
+        "maxlat": 52.4765623,
+        "maxlon": 13.4735275
+      },
+      "geometry": [
+        {
+          "lat": 52.4765623,
+          "lon": 13.4714891
+        },
+        {
+          "lat": 52.4762949,
+          "lon": 13.4718618
+        },
+        {
+          "lat": 52.4757808,
+          "lon": 13.4726044
+        },
+        {
+          "lat": 52.4756592,
+          "lon": 13.4727801
+        },
+        {
+          "lat": 52.4756113,
+          "lon": 13.4728494
+        },
+        {
+          "lat": 52.4755274,
+          "lon": 13.4729681
+        },
+        {
+          "lat": 52.4751352,
+          "lon": 13.4735275
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:buffer:right": "0.75",
+        "cycleway:both:lane": "exclusive",
+        "cycleway:both:marking:left": "double_solid_line",
+        "cycleway:both:marking:right": "solid_line",
+        "cycleway:both:separation:right": "kerb",
+        "cycleway:both:traffic_sign": "DE:237",
+        "cycleway:both:width": "1.5",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "parking:right:reason": "narrow",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "source:traffic_sign:mapillary": "551600170577857",
+        "source:width": "Messung aus Luftbild",
+        "surface": "asphalt",
+        "width": "11.0"
+      }
+    },
+    {
+      "type": "way",
+      "id": 23859441,
+      "bounds": {
+        "minlat": 52.4803253,
+        "minlon": 13.4641413,
+        "maxlat": 52.4818051,
+        "maxlon": 13.4662321
+      },
+      "geometry": [
+        {
+          "lat": 52.4818051,
+          "lon": 13.4641413
+        },
+        {
+          "lat": 52.4817549,
+          "lon": 13.4642124
+        },
+        {
+          "lat": 52.4815829,
+          "lon": 13.4644555
+        },
+        {
+          "lat": 52.4812599,
+          "lon": 13.4649118
+        },
+        {
+          "lat": 52.4807224,
+          "lon": 13.4656755
+        },
+        {
+          "lat": 52.4804067,
+          "lon": 13.4661237
+        },
+        {
+          "lat": 52.4803253,
+          "lon": 13.4662321
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:buffer:right": "0.75",
+        "cycleway:both:lane": "exclusive",
+        "cycleway:both:marking:left": "double_solid_line",
+        "cycleway:both:marking:right": "solid_line",
+        "cycleway:both:separation:right": "kerb",
+        "cycleway:both:traffic_sign": "DE:237",
+        "cycleway:both:width": "1.5",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "separate",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "source:traffic_sign:mapillary": "551600170577857",
+        "source:width": "Messung aus Luftbild",
+        "surface": "asphalt",
+        "width": "11.0"
+      }
+    },
+    {
+      "type": "way",
+      "id": 24314524,
+      "bounds": {
+        "minlat": 52.4586939,
+        "minlon": 13.4944824,
+        "maxlat": 52.4603433,
+        "maxlon": 13.4966893
+      },
+      "geometry": [
+        {
+          "lat": 52.4603433,
+          "lon": 13.4944824
+        },
+        {
+          "lat": 52.46009,
+          "lon": 13.4948164
+        },
+        {
+          "lat": 52.4586939,
+          "lon": 13.4966893
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:lane": "exclusive",
+        "cycleway:both:marking:left": "solid_line",
+        "cycleway:both:separation:right": "greenery",
+        "cycleway:both:traffic_sign": "DE:237",
+        "cycleway:left:width": "1.4",
+        "cycleway:right:width": "1.3",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:cycleway:left:traffic_sign:mapillary": "712837271182629",
+        "source:cycleway:left:width": "Luftbild 2025",
+        "source:cycleway:right:traffic_sign:mapillary": "1475294790159328",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "width": "11.7"
+      }
+    },
+    {
+      "type": "way",
+      "id": 24879223,
+      "bounds": {
+        "minlat": 52.4623569,
+        "minlon": 13.4910521,
+        "maxlat": 52.4627637,
+        "maxlon": 13.4916405
+      },
+      "geometry": [
+        {
+          "lat": 52.4627637,
+          "lon": 13.4910521
+        },
+        {
+          "lat": 52.4623569,
+          "lon": 13.4916405
+        }
+      ],
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Kiefholzbrücke",
+        "cycleway:both": "lane",
+        "cycleway:both:buffer:width": "0.30",
+        "cycleway:both:lane": "exclusive",
+        "cycleway:both:surface": "asphalt",
+        "cycleway:both:traffic_sign": "DE:237",
+        "cycleway:both:width": "1.5",
+        "highway": "tertiary",
+        "lanes": "2",
+        "layer": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxweight:signed": "no",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "source:cycleway:both:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "source:cycleway:left:traffic_sign:mapillary": "824567992933443",
+        "source:cycleway:right:traffic_sign:mapillary": "1668984783806044",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 26175240,
+      "bounds": {
+        "minlat": 52.466711,
+        "minlon": 13.4817959,
+        "maxlat": 52.4678483,
+        "maxlon": 13.4833448
+      },
+      "geometry": [
+        {
+          "lat": 52.4678483,
+          "lon": 13.4833448
+        },
+        {
+          "lat": 52.4678112,
+          "lon": 13.4832759
+        },
+        {
+          "lat": 52.4676368,
+          "lon": 13.4829521
+        },
+        {
+          "lat": 52.4674445,
+          "lon": 13.4826064
+        },
+        {
+          "lat": 52.4673298,
+          "lon": 13.482664
+        },
+        {
+          "lat": 52.467268,
+          "lon": 13.4827153
+        },
+        {
+          "lat": 52.4672053,
+          "lon": 13.4827102
+        },
+        {
+          "lat": 52.4668812,
+          "lon": 13.4821107
+        },
+        {
+          "lat": 52.466711,
+          "lon": 13.4817959
+        }
+      ],
+      "tags": {
+        "access": "destination",
+        "foot": "yes",
+        "highway": "service",
+        "lit": "yes",
+        "name": "Kiefholzstraße",
+        "postal_code": "12437",
+        "service": "alley",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 33361700,
+      "bounds": {
+        "minlat": 52.4632761,
+        "minlon": 13.491433,
+        "maxlat": 52.4639902,
+        "maxlon": 13.4920735
+      },
+      "geometry": [
+        {
+          "lat": 52.4632761,
+          "lon": 13.491433
+        },
+        {
+          "lat": 52.4638878,
+          "lon": 13.4920735
+        },
+        {
+          "lat": 52.4639902,
+          "lon": 13.4918994
+        }
+      ],
+      "tags": {
+        "access": "permissive",
+        "highway": "service",
+        "name": "Kiefholzstraße",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 69992969,
+      "bounds": {
+        "minlat": 52.4893432,
+        "minlon": 13.4528429,
+        "maxlat": 52.4897346,
+        "maxlon": 13.4534003
+      },
+      "geometry": [
+        {
+          "lat": 52.4897346,
+          "lon": 13.4528429
+        },
+        {
+          "lat": 52.4896478,
+          "lon": 13.452966
+        },
+        {
+          "lat": 52.4895291,
+          "lon": 13.4531326
+        },
+        {
+          "lat": 52.4893543,
+          "lon": 13.4533843
+        },
+        {
+          "lat": 52.4893432,
+          "lon": 13.4534003
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:zone:30",
+        "surface": "asphalt",
+        "width": "9.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 136981055,
+      "bounds": {
+        "minlat": 52.4890535,
+        "minlon": 13.4535978,
+        "maxlat": 52.4892176,
+        "maxlon": 13.4538316
+      },
+      "geometry": [
+        {
+          "lat": 52.4892176,
+          "lon": 13.4535978
+        },
+        {
+          "lat": 52.4891807,
+          "lon": 13.4536491
+        },
+        {
+          "lat": 52.4890647,
+          "lon": 13.4538157
+        },
+        {
+          "lat": 52.4890535,
+          "lon": 13.4538316
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "separate",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 306410005,
+      "bounds": {
+        "minlat": 52.4719754,
+        "minlon": 13.4754481,
+        "maxlat": 52.4737878,
+        "maxlon": 13.4780127
+      },
+      "geometry": [
+        {
+          "lat": 52.4737878,
+          "lon": 13.4754481
+        },
+        {
+          "lat": 52.4736982,
+          "lon": 13.4755773
+        },
+        {
+          "lat": 52.4734776,
+          "lon": 13.4758871
+        },
+        {
+          "lat": 52.4732297,
+          "lon": 13.4762378
+        },
+        {
+          "lat": 52.4726659,
+          "lon": 13.4770356
+        },
+        {
+          "lat": 52.4726163,
+          "lon": 13.4771059
+        },
+        {
+          "lat": 52.4723945,
+          "lon": 13.4774197
+        },
+        {
+          "lat": 52.472362,
+          "lon": 13.4774657
+        },
+        {
+          "lat": 52.4721727,
+          "lon": 13.4777335
+        },
+        {
+          "lat": 52.4719754,
+          "lon": 13.4780127
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "parking:right:reason": "narrow",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 330786038,
+      "bounds": {
+        "minlat": 52.4664682,
+        "minlon": 13.4849719,
+        "maxlat": 52.4670552,
+        "maxlon": 13.4858043
+      },
+      "geometry": [
+        {
+          "lat": 52.4670552,
+          "lon": 13.4849719
+        },
+        {
+          "lat": 52.4669533,
+          "lon": 13.4851165
+        },
+        {
+          "lat": 52.4668566,
+          "lon": 13.4852536
+        },
+        {
+          "lat": 52.4668111,
+          "lon": 13.4853181
+        },
+        {
+          "lat": 52.466655,
+          "lon": 13.4855395
+        },
+        {
+          "lat": 52.466514,
+          "lon": 13.4857393
+        },
+        {
+          "lat": 52.4664682,
+          "lon": 13.4858043
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:left": "separate",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:width": "Messung aus Luftbild",
+        "surface": "asphalt",
+        "width": "10.0"
+      }
+    },
+    {
+      "type": "way",
+      "id": 384136087,
+      "bounds": {
+        "minlat": 52.4857007,
+        "minlon": 13.4583476,
+        "maxlat": 52.4858409,
+        "maxlon": 13.4585446
+      },
+      "geometry": [
+        {
+          "lat": 52.4858409,
+          "lon": 13.4583476
+        },
+        {
+          "lat": 52.4857626,
+          "lon": 13.4584576
+        },
+        {
+          "lat": 52.4857007,
+          "lon": 13.4585446
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:buffer:right": "0.60",
+        "cycleway:both:lane": "exclusive",
+        "cycleway:both:marking:left": "double_solid_line",
+        "cycleway:both:marking:right": "solid_line",
+        "cycleway:both:separation:right": "kerb",
+        "cycleway:both:traffic_sign": "DE:237",
+        "cycleway:both:width": "1.65",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "4",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-18:00)",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "parking:both:reason": "cycleway",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "width": "12"
+      }
+    },
+    {
+      "type": "way",
+      "id": 384136088,
+      "bounds": {
+        "minlat": 52.4846827,
+        "minlon": 13.4591887,
+        "maxlat": 52.4852426,
+        "maxlon": 13.460026
+      },
+      "geometry": [
+        {
+          "lat": 52.4852426,
+          "lon": 13.4591887
+        },
+        {
+          "lat": 52.48476,
+          "lon": 13.4599104
+        },
+        {
+          "lat": 52.4846827,
+          "lon": 13.460026
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:buffer:right": "0.60",
+        "cycleway:both:lane": "exclusive",
+        "cycleway:both:marking:left": "double_solid_line",
+        "cycleway:both:marking:right": "solid_line",
+        "cycleway:both:separation:right": "kerb",
+        "cycleway:both:traffic_sign": "DE:237",
+        "cycleway:both:width": "1.65",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "parking:both:reason": "cycleway",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "width": "12"
+      }
+    },
+    {
+      "type": "way",
+      "id": 389252197,
+      "bounds": {
+        "minlat": 52.4649597,
+        "minlon": 13.4861888,
+        "maxlat": 52.4650838,
+        "maxlon": 13.486339
+      },
+      "geometry": [
+        {
+          "lat": 52.4649597,
+          "lon": 13.4861888
+        },
+        {
+          "lat": 52.4649833,
+          "lon": 13.4862174
+        },
+        {
+          "lat": 52.4650838,
+          "lon": 13.486339
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2022-09-26",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Kiefholzstraße/Baumschulenstraße",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 389252198,
+      "bounds": {
+        "minlat": 52.4662434,
+        "minlon": 13.4858742,
+        "maxlat": 52.4663344,
+        "maxlon": 13.486001
+      },
+      "geometry": [
+        {
+          "lat": 52.4662434,
+          "lon": 13.486001
+        },
+        {
+          "lat": 52.4663344,
+          "lon": 13.4858742
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2021-04-11",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Kiefholzstraße/Baumschulenstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 389252199,
+      "bounds": {
+        "minlat": 52.46533,
+        "minlon": 13.4874394,
+        "maxlat": 52.4654087,
+        "maxlon": 13.4875564
+      },
+      "geometry": [
+        {
+          "lat": 52.4654087,
+          "lon": 13.4874394
+        },
+        {
+          "lat": 52.46533,
+          "lon": 13.4875564
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Kiefholzstraße/Baumschulenstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 389252200,
+      "bounds": {
+        "minlat": 52.4657984,
+        "minlon": 13.4874451,
+        "maxlat": 52.4658774,
+        "maxlon": 13.48754
+      },
+      "geometry": [
+        {
+          "lat": 52.4658774,
+          "lon": 13.48754
+        },
+        {
+          "lat": 52.4657984,
+          "lon": 13.4874451
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2023-12-25",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Kiefholzstraße/Baumschulenstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 398886933,
+      "bounds": {
+        "minlat": 52.4885579,
+        "minlon": 13.4533589,
+        "maxlat": 52.4886817,
+        "maxlon": 13.4535227
+      },
+      "geometry": [
+        {
+          "lat": 52.4885579,
+          "lon": 13.4533589
+        },
+        {
+          "lat": 52.4886817,
+          "lon": 13.4535227
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2025-07-18",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Elsenstraße/Kiefholzstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 398886934,
+      "bounds": {
+        "minlat": 52.4882639,
+        "minlon": 13.4531985,
+        "maxlat": 52.4883635,
+        "maxlon": 13.4533299
+      },
+      "geometry": [
+        {
+          "lat": 52.4883635,
+          "lon": 13.4533299
+        },
+        {
+          "lat": 52.4882639,
+          "lon": 13.4531985
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2021-01-16",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Elsenstraße/Kiefholzstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 407015999,
+      "bounds": {
+        "minlat": 52.4583171,
+        "minlon": 13.4966893,
+        "maxlat": 52.4586939,
+        "maxlon": 13.4971935
+      },
+      "geometry": [
+        {
+          "lat": 52.4586939,
+          "lon": 13.4966893
+        },
+        {
+          "lat": 52.4583171,
+          "lon": 13.4971935
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:buffer:both": "no",
+        "cycleway:both:lane": "advisory",
+        "cycleway:both:marking:left": "dashed_line",
+        "cycleway:both:separation:right": "greenery",
+        "cycleway:left:traffic_sign": "none",
+        "cycleway:left:width": "1.4",
+        "cycleway:right:traffic_sign": "DE:237",
+        "cycleway:right:width": "1.3",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lanes:backward": "1",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:cycleway:left:width": "Luftbild 2025",
+        "source:cycleway:right:traffic_sign:mapillary": "1475294790159328",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "turn:lanes:forward": "left|through;right",
+        "width": "11.7"
+      }
+    },
+    {
+      "type": "way",
+      "id": 454034987,
+      "bounds": {
+        "minlat": 52.4842168,
+        "minlon": 13.460026,
+        "maxlat": 52.4846827,
+        "maxlon": 13.4607122
+      },
+      "geometry": [
+        {
+          "lat": 52.4846827,
+          "lon": 13.460026
+        },
+        {
+          "lat": 52.4842168,
+          "lon": 13.4607122
+        }
+      ],
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Mathilde-Rathenau-Brücke",
+        "cycleway:both": "lane",
+        "cycleway:both:buffer:right": "0.60",
+        "cycleway:both:lane": "exclusive",
+        "cycleway:both:marking:left": "double_solid_line",
+        "cycleway:both:marking:right": "solid_line",
+        "cycleway:both:separation:right": "kerb",
+        "cycleway:both:traffic_sign": "DE:237",
+        "cycleway:both:width": "1.65",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "layer": "1",
+        "maxweight:signed": "no",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "parking:both:reason": "cycleway",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "start_date": "2018-11",
+        "surface": "asphalt",
+        "width": "12"
+      }
+    },
+    {
+      "type": "way",
+      "id": 603760087,
+      "bounds": {
+        "minlat": 52.4837267,
+        "minlon": 13.4607122,
+        "maxlat": 52.4842168,
+        "maxlon": 13.4614155
+      },
+      "geometry": [
+        {
+          "lat": 52.4837267,
+          "lon": 13.4614155
+        },
+        {
+          "lat": 52.4839736,
+          "lon": 13.4610682
+        },
+        {
+          "lat": 52.4840602,
+          "lon": 13.4609463
+        },
+        {
+          "lat": 52.4842168,
+          "lon": 13.4607122
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:buffer:right": "0.60",
+        "cycleway:both:lane": "exclusive",
+        "cycleway:both:marking:left": "double_solid_line",
+        "cycleway:both:marking:right": "solid_line",
+        "cycleway:both:separation:right": "kerb",
+        "cycleway:both:traffic_sign": "DE:237",
+        "cycleway:both:width": "1.65",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "parking:both:reason": "cycleway",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "width": "12"
+      }
+    },
+    {
+      "type": "way",
+      "id": 828776986,
+      "bounds": {
+        "minlat": 52.4852921,
+        "minlon": 13.4590834,
+        "maxlat": 52.4853175,
+        "maxlon": 13.4591192
+      },
+      "geometry": [
+        {
+          "lat": 52.4853175,
+          "lon": 13.4590834
+        },
+        {
+          "lat": 52.4852921,
+          "lon": 13.4591192
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:buffer:right": "0.60",
+        "cycleway:both:lane": "exclusive",
+        "cycleway:both:marking:left": "double_solid_line",
+        "cycleway:both:marking:right": "solid_line",
+        "cycleway:both:separation:right": "kerb",
+        "cycleway:both:traffic_sign": "DE:237",
+        "cycleway:both:width": "1.65",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "5.5",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "parking:both:reason": "cycleway",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "width": "12"
+      }
+    },
+    {
+      "type": "way",
+      "id": 828776987,
+      "bounds": {
+        "minlat": 52.4852426,
+        "minlon": 13.4591192,
+        "maxlat": 52.4852921,
+        "maxlon": 13.4591887
+      },
+      "geometry": [
+        {
+          "lat": 52.4852921,
+          "lon": 13.4591192
+        },
+        {
+          "lat": 52.4852426,
+          "lon": 13.4591887
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:buffer:right": "0.60",
+        "cycleway:both:lane": "exclusive",
+        "cycleway:both:marking:left": "double_solid_line",
+        "cycleway:both:marking:right": "solid_line",
+        "cycleway:both:separation:right": "kerb",
+        "cycleway:both:traffic_sign": "DE:237",
+        "cycleway:both:width": "1.65",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "parking:both:reason": "cycleway",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "width": "12"
+      }
+    },
+    {
+      "type": "way",
+      "id": 837376160,
+      "bounds": {
+        "minlat": 52.4715647,
+        "minlon": 13.4780127,
+        "maxlat": 52.4719754,
+        "maxlon": 13.4786009
+      },
+      "geometry": [
+        {
+          "lat": 52.4719754,
+          "lon": 13.4780127
+        },
+        {
+          "lat": 52.4716714,
+          "lon": 13.4784427
+        },
+        {
+          "lat": 52.4716201,
+          "lon": 13.4785149
+        },
+        {
+          "lat": 52.4715942,
+          "lon": 13.4785552
+        },
+        {
+          "lat": 52.4715647,
+          "lon": 13.4786009
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:both": "no",
+        "parking:both:reason": "narrow",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 837376161,
+      "bounds": {
+        "minlat": 52.4737878,
+        "minlon": 13.4742659,
+        "maxlat": 52.4746175,
+        "maxlon": 13.4754481
+      },
+      "geometry": [
+        {
+          "lat": 52.4746175,
+          "lon": 13.4742659
+        },
+        {
+          "lat": 52.4744263,
+          "lon": 13.4745364
+        },
+        {
+          "lat": 52.4737878,
+          "lon": 13.4754481
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "parking:right:reason": "narrow",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 837376162,
+      "bounds": {
+        "minlat": 52.4746175,
+        "minlon": 13.4737533,
+        "maxlat": 52.4749769,
+        "maxlon": 13.4742659
+      },
+      "geometry": [
+        {
+          "lat": 52.4749769,
+          "lon": 13.4737533
+        },
+        {
+          "lat": 52.4749435,
+          "lon": 13.4738009
+        },
+        {
+          "lat": 52.4749,
+          "lon": 13.473863
+        },
+        {
+          "lat": 52.4748549,
+          "lon": 13.4739273
+        },
+        {
+          "lat": 52.4746175,
+          "lon": 13.4742659
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:both": "no",
+        "parking:both:reason": "narrow",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 852542870,
+      "bounds": {
+        "minlat": 52.4924977,
+        "minlon": 13.4483399,
+        "maxlat": 52.4926408,
+        "maxlon": 13.4486418
+      },
+      "geometry": [
+        {
+          "lat": 52.4926408,
+          "lon": 13.4483399
+        },
+        {
+          "lat": 52.492544,
+          "lon": 13.4485441
+        },
+        {
+          "lat": 52.4924977,
+          "lon": 13.4486418
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:left": "shoulder",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "perpendicular",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12435",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "bad",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 852542871,
+      "bounds": {
+        "minlat": 52.4919447,
+        "minlon": 13.4486418,
+        "maxlat": 52.4924977,
+        "maxlon": 13.4497438
+      },
+      "geometry": [
+        {
+          "lat": 52.4924977,
+          "lon": 13.4486418
+        },
+        {
+          "lat": 52.4923285,
+          "lon": 13.448999
+        },
+        {
+          "lat": 52.4922239,
+          "lon": 13.4492196
+        },
+        {
+          "lat": 52.4920737,
+          "lon": 13.4495366
+        },
+        {
+          "lat": 52.4920367,
+          "lon": 13.4496146
+        },
+        {
+          "lat": 52.4919447,
+          "lon": 13.4497438
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both:access": "yes",
+        "parking:both:fee": "no",
+        "parking:left": "shoulder",
+        "parking:left:orientation": "perpendicular",
+        "parking:right": "lane",
+        "parking:right:orientation": "diagonal",
+        "postal_code": "12435",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "bad",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 852542872,
+      "bounds": {
+        "minlat": 52.4917846,
+        "minlon": 13.4497438,
+        "maxlat": 52.4919447,
+        "maxlon": 13.4499685
+      },
+      "geometry": [
+        {
+          "lat": 52.4919447,
+          "lon": 13.4497438
+        },
+        {
+          "lat": 52.4918926,
+          "lon": 13.4498169
+        },
+        {
+          "lat": 52.4917846,
+          "lon": 13.4499685
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:left": "shoulder",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "perpendicular",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12435",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "bad",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 852542873,
+      "bounds": {
+        "minlat": 52.493661,
+        "minlon": 13.4454093,
+        "maxlat": 52.4937034,
+        "maxlon": 13.445533
+      },
+      "geometry": [
+        {
+          "lat": 52.4937034,
+          "lon": 13.4454093
+        },
+        {
+          "lat": 52.493667,
+          "lon": 13.4455155
+        },
+        {
+          "lat": 52.493661,
+          "lon": 13.445533
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "parking:both:reason": "crossing",
+        "postal_code": "12435",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "bad",
+        "surface": "sett",
+        "width": "11"
+      }
+    },
+    {
+      "type": "way",
+      "id": 852542889,
+      "bounds": {
+        "minlat": 52.4914543,
+        "minlon": 13.4503198,
+        "maxlat": 52.4915306,
+        "maxlon": 13.4504164
+      },
+      "geometry": [
+        {
+          "lat": 52.4915306,
+          "lon": 13.4503198
+        },
+        {
+          "lat": 52.4915133,
+          "lon": 13.4503437
+        },
+        {
+          "lat": 52.4914543,
+          "lon": 13.4504164
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "postal_code": "12435",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "bad",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 857752725,
+      "bounds": {
+        "minlat": 52.4858409,
+        "minlon": 13.4546763,
+        "maxlat": 52.4884531,
+        "maxlon": 13.4583476
+      },
+      "geometry": [
+        {
+          "lat": 52.4884531,
+          "lon": 13.4546763
+        },
+        {
+          "lat": 52.4884048,
+          "lon": 13.4547439
+        },
+        {
+          "lat": 52.4883027,
+          "lon": 13.4548879
+        },
+        {
+          "lat": 52.4879825,
+          "lon": 13.4553411
+        },
+        {
+          "lat": 52.4874502,
+          "lon": 13.4560882
+        },
+        {
+          "lat": 52.4872847,
+          "lon": 13.456324
+        },
+        {
+          "lat": 52.4872044,
+          "lon": 13.4564376
+        },
+        {
+          "lat": 52.4871261,
+          "lon": 13.4565482
+        },
+        {
+          "lat": 52.4870939,
+          "lon": 13.4565935
+        },
+        {
+          "lat": 52.4870303,
+          "lon": 13.4566828
+        },
+        {
+          "lat": 52.4869734,
+          "lon": 13.4567639
+        },
+        {
+          "lat": 52.4868083,
+          "lon": 13.4569926
+        },
+        {
+          "lat": 52.4866832,
+          "lon": 13.457171
+        },
+        {
+          "lat": 52.4866751,
+          "lon": 13.4571825
+        },
+        {
+          "lat": 52.4864659,
+          "lon": 13.4574803
+        },
+        {
+          "lat": 52.486318,
+          "lon": 13.4576894
+        },
+        {
+          "lat": 52.4861574,
+          "lon": 13.4579166
+        },
+        {
+          "lat": 52.4861106,
+          "lon": 13.457982
+        },
+        {
+          "lat": 52.4859754,
+          "lon": 13.4581615
+        },
+        {
+          "lat": 52.4859611,
+          "lon": 13.4581805
+        },
+        {
+          "lat": 52.4859047,
+          "lon": 13.458259
+        },
+        {
+          "lat": 52.4858409,
+          "lon": 13.4583476
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:lane": "exclusive",
+        "cycleway:both:marking:left": "double_solid_line",
+        "cycleway:both:separation:right": "kerb",
+        "cycleway:both:traffic_sign": "DE:237",
+        "cycleway:left:width": "1.4",
+        "cycleway:right:buffer:right": "0.5",
+        "cycleway:right:marking:right": "solid_line",
+        "cycleway:right:width": "1",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-18:00)",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:both": "separate",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:left:width": "Luftbild 2025",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "source:maxspeed": "sign",
+        "surface": "asphalt",
+        "traffic_sign": "DE:136-10;274-30,1042-33[Mo-Fr 07:00-18:00]",
+        "width": "10"
+      }
+    },
+    {
+      "type": "way",
+      "id": 863348519,
+      "bounds": {
+        "minlat": 52.4655822,
+        "minlon": 13.4864713,
+        "maxlat": 52.465999,
+        "maxlon": 13.4870636
+      },
+      "geometry": [
+        {
+          "lat": 52.465999,
+          "lon": 13.4864713
+        },
+        {
+          "lat": 52.4659558,
+          "lon": 13.4865327
+        },
+        {
+          "lat": 52.4657409,
+          "lon": 13.4868383
+        },
+        {
+          "lat": 52.46567,
+          "lon": 13.4869389
+        },
+        {
+          "lat": 52.4656436,
+          "lon": 13.4869764
+        },
+        {
+          "lat": 52.4655822,
+          "lon": 13.4870636
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "parking:right:reason": "turn_lane",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:width": "Messung aus Luftbild mittels JOSM measurement-Plugin. Pixelauflösung 0.20 [m]",
+        "surface": "asphalt",
+        "width": "10.8"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1051828652,
+      "bounds": {
+        "minlat": 52.4713107,
+        "minlon": 13.4786009,
+        "maxlat": 52.4715647,
+        "maxlon": 13.4789815
+      },
+      "geometry": [
+        {
+          "lat": 52.4715647,
+          "lon": 13.4786009
+        },
+        {
+          "lat": 52.4713225,
+          "lon": 13.4789638
+        },
+        {
+          "lat": 52.4713107,
+          "lon": 13.4789815
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "parking:both:reason": "narrow",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1120408015,
+      "bounds": {
+        "minlat": 52.4903243,
+        "minlon": 13.4505362,
+        "maxlat": 52.4913691,
+        "maxlon": 13.4520067
+      },
+      "geometry": [
+        {
+          "lat": 52.4913691,
+          "lon": 13.4505362
+        },
+        {
+          "lat": 52.4911625,
+          "lon": 13.4508271
+        },
+        {
+          "lat": 52.4908823,
+          "lon": 13.4512215
+        },
+        {
+          "lat": 52.4908061,
+          "lon": 13.4513251
+        },
+        {
+          "lat": 52.4906126,
+          "lon": 13.4515958
+        },
+        {
+          "lat": 52.4903243,
+          "lon": 13.4520067
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "lane",
+        "parking:both:access": "yes",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:zone:30",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1122589166,
+      "bounds": {
+        "minlat": 52.4637912,
+        "minlon": 13.4888588,
+        "maxlat": 52.4643135,
+        "maxlon": 13.4895979
+      },
+      "geometry": [
+        {
+          "lat": 52.4643135,
+          "lon": 13.4888588
+        },
+        {
+          "lat": 52.464272,
+          "lon": 13.4889175
+        },
+        {
+          "lat": 52.4642372,
+          "lon": 13.4889668
+        },
+        {
+          "lat": 52.4641158,
+          "lon": 13.4891386
+        },
+        {
+          "lat": 52.4638694,
+          "lon": 13.4894873
+        },
+        {
+          "lat": 52.4637912,
+          "lon": 13.4895979
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "mapillary": "1062935835111653",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:width": "Messung aus Luftbild mittels JOSM measurement-Plugin. Pixelauflösung 0.20 [m]",
+        "surface": "asphalt",
+        "width": "10.8"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1122589168,
+      "bounds": {
+        "minlat": 52.4627637,
+        "minlon": 13.4898331,
+        "maxlat": 52.463625,
+        "maxlon": 13.4910521
+      },
+      "geometry": [
+        {
+          "lat": 52.463625,
+          "lon": 13.4898331
+        },
+        {
+          "lat": 52.4635902,
+          "lon": 13.4898825
+        },
+        {
+          "lat": 52.4630491,
+          "lon": 13.4906483
+        },
+        {
+          "lat": 52.4627637,
+          "lon": 13.4910521
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:width": "Messung aus Luftbild mittels JOSM measurement-Plugin. Pixelauflösung 0.20 [m]",
+        "surface": "asphalt",
+        "width": "10.8"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1129427790,
+      "bounds": {
+        "minlat": 52.4931409,
+        "minlon": 13.446468,
+        "maxlat": 52.4933425,
+        "maxlon": 13.4470558
+      },
+      "geometry": [
+        {
+          "lat": 52.4933425,
+          "lon": 13.446468
+        },
+        {
+          "lat": 52.4931699,
+          "lon": 13.4469742
+        },
+        {
+          "lat": 52.4931409,
+          "lon": 13.4470558
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:left": "no",
+        "parking:left:restriction": "no_parking",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "diagonal",
+        "postal_code": "12435",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "bad",
+        "surface": "sett",
+        "width": "10.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1129427793,
+      "bounds": {
+        "minlat": 52.4916033,
+        "minlon": 13.4499685,
+        "maxlat": 52.4917846,
+        "maxlon": 13.4502196
+      },
+      "geometry": [
+        {
+          "lat": 52.4917846,
+          "lon": 13.4499685
+        },
+        {
+          "lat": 52.4916033,
+          "lon": 13.4502196
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "lane",
+        "parking:both:access": "yes",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12435",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "bad",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1169045892,
+      "bounds": {
+        "minlat": 52.4603433,
+        "minlon": 13.4941217,
+        "maxlat": 52.4606097,
+        "maxlon": 13.4944824
+      },
+      "geometry": [
+        {
+          "lat": 52.4606097,
+          "lon": 13.4941217
+        },
+        {
+          "lat": 52.4604488,
+          "lon": 13.4943413
+        },
+        {
+          "lat": 52.4603433,
+          "lon": 13.4944824
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:buffer:both": "no",
+        "cycleway:both:separation:right": "kerb",
+        "cycleway:left:lane": "exclusive",
+        "cycleway:left:marking:left": "solid_line",
+        "cycleway:left:traffic_sign": "DE:237",
+        "cycleway:left:width": "1.3",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:marking:left": "dashed_line",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "1.2",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "sidewalk:left:surface": "paving_stones",
+        "sidewalk:right:surface": "pebblestone",
+        "smoothness": "good",
+        "source:cycleway:left:traffic_sign:mapillary": "712837271182629",
+        "source:cycleway:left:width": "Luftbild 2025",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "width": "11.7"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1169045893,
+      "bounds": {
+        "minlat": 52.4607008,
+        "minlon": 13.4916405,
+        "maxlat": 52.4623569,
+        "maxlon": 13.4939958
+      },
+      "geometry": [
+        {
+          "lat": 52.4623569,
+          "lon": 13.4916405
+        },
+        {
+          "lat": 52.461021,
+          "lon": 13.4935725
+        },
+        {
+          "lat": 52.4607008,
+          "lon": 13.4939958
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:buffer:both": "no",
+        "cycleway:both:lane": "advisory",
+        "cycleway:both:marking:left": "dashed_line",
+        "cycleway:both:separation:right": "kerb",
+        "cycleway:both:surface:colour": "no",
+        "cycleway:both:traffic_sign": "none",
+        "cycleway:both:width": "1.2",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "width": "8"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1169809154,
+      "bounds": {
+        "minlat": 52.4818051,
+        "minlon": 13.4614155,
+        "maxlat": 52.4837267,
+        "maxlon": 13.4641413
+      },
+      "geometry": [
+        {
+          "lat": 52.4837267,
+          "lon": 13.4614155
+        },
+        {
+          "lat": 52.4832024,
+          "lon": 13.4621609
+        },
+        {
+          "lat": 52.4826733,
+          "lon": 13.4629108
+        },
+        {
+          "lat": 52.482111,
+          "lon": 13.4637077
+        },
+        {
+          "lat": 52.4818726,
+          "lon": 13.4640457
+        },
+        {
+          "lat": 52.4818051,
+          "lon": 13.4641413
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:buffer:right": "0.75",
+        "cycleway:both:lane": "exclusive",
+        "cycleway:both:marking:left": "dashed_line",
+        "cycleway:both:marking:right": "dashed_line",
+        "cycleway:both:separation:right": "kerb",
+        "cycleway:both:traffic_sign": "DE:237",
+        "cycleway:both:width": "1.5",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "mapillary": "8511994932229828",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "separate",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:width": "Messung aus Luftbild mittels JOSM measurement-Plugin.",
+        "source:traffic_sign:mapillary": "551600170577857",
+        "source:width": "Messung aus Luftbild mittels JOSM measurement-Plugin.",
+        "surface": "asphalt",
+        "width": "11.0"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1193078451,
+      "bounds": {
+        "minlat": 52.4887055,
+        "minlon": 13.4539858,
+        "maxlat": 52.4889441,
+        "maxlon": 13.4543215
+      },
+      "geometry": [
+        {
+          "lat": 52.4889441,
+          "lon": 13.4539858
+        },
+        {
+          "lat": 52.4888677,
+          "lon": 13.4540936
+        },
+        {
+          "lat": 52.488812,
+          "lon": 13.4541724
+        },
+        {
+          "lat": 52.4887055,
+          "lon": 13.4543215
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:lane": "exclusive",
+        "cycleway:both:marking:left": "double_solid_line",
+        "cycleway:both:separation:right": "kerb",
+        "cycleway:both:traffic_sign": "DE:237",
+        "cycleway:left:width": "1.4",
+        "cycleway:right:buffer:right": "0.5",
+        "cycleway:right:marking:right": "solid_line",
+        "cycleway:right:width": "1",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:left:width": "Luftbild 2025",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "source:maxspeed": "sign",
+        "surface": "asphalt",
+        "width": "10"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1210529694,
+      "bounds": {
+        "minlat": 52.4632176,
+        "minlon": 13.4909588,
+        "maxlat": 52.4632761,
+        "maxlon": 13.491433
+      },
+      "geometry": [
+        {
+          "lat": 52.4632176,
+          "lon": 13.4909588
+        },
+        {
+          "lat": 52.4632761,
+          "lon": 13.491433
+        }
+      ],
+      "tags": {
+        "access": "permissive",
+        "highway": "service",
+        "name": "Kiefholzstraße",
+        "parking:right": "separate",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1212039895,
+      "bounds": {
+        "minlat": 52.4853175,
+        "minlon": 13.4585446,
+        "maxlat": 52.4857007,
+        "maxlon": 13.4590834
+      },
+      "geometry": [
+        {
+          "lat": 52.4857007,
+          "lon": 13.4585446
+        },
+        {
+          "lat": 52.4853175,
+          "lon": 13.4590834
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:buffer:right": "0.60",
+        "cycleway:both:lane": "exclusive",
+        "cycleway:both:marking:left": "double_solid_line",
+        "cycleway:both:marking:right": "solid_line",
+        "cycleway:both:separation:right": "kerb",
+        "cycleway:both:traffic_sign": "DE:237",
+        "cycleway:both:width": "1.65",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "4",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "parking:both:reason": "cycleway",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "width": "12"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1218621160,
+      "bounds": {
+        "minlat": 52.4712133,
+        "minlon": 13.4789815,
+        "maxlat": 52.4713107,
+        "maxlon": 13.4791198
+      },
+      "geometry": [
+        {
+          "lat": 52.4713107,
+          "lon": 13.4789815
+        },
+        {
+          "lat": 52.4712133,
+          "lon": 13.4791198
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "parking:both:reason": "narrow",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1218621163,
+      "bounds": {
+        "minlat": 52.4710957,
+        "minlon": 13.4791198,
+        "maxlat": 52.4712133,
+        "maxlon": 13.479287
+      },
+      "geometry": [
+        {
+          "lat": 52.4712133,
+          "lon": 13.4791198
+        },
+        {
+          "lat": 52.4711975,
+          "lon": 13.4791422
+        },
+        {
+          "lat": 52.4710957,
+          "lon": 13.479287
+        }
+      ],
+      "tags": {
+        "covered": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "parking:both:reason": "narrow",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1246308989,
+      "bounds": {
+        "minlat": 52.4670552,
+        "minlon": 13.4845907,
+        "maxlat": 52.4673244,
+        "maxlon": 13.4849719
+      },
+      "geometry": [
+        {
+          "lat": 52.4673244,
+          "lon": 13.4845907
+        },
+        {
+          "lat": 52.4672756,
+          "lon": 13.4846595
+        },
+        {
+          "lat": 52.4670552,
+          "lon": 13.4849719
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:width": "Messung aus Luftbild",
+        "surface": "asphalt",
+        "width": "10.0"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1246308991,
+      "bounds": {
+        "minlat": 52.4673244,
+        "minlon": 13.4839452,
+        "maxlat": 52.4678022,
+        "maxlon": 13.4845907
+      },
+      "geometry": [
+        {
+          "lat": 52.4678022,
+          "lon": 13.4839452
+        },
+        {
+          "lat": 52.4676113,
+          "lon": 13.4841871
+        },
+        {
+          "lat": 52.4674545,
+          "lon": 13.4844116
+        },
+        {
+          "lat": 52.4674162,
+          "lon": 13.4844646
+        },
+        {
+          "lat": 52.4673683,
+          "lon": 13.4845288
+        },
+        {
+          "lat": 52.4673244,
+          "lon": 13.4845907
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 06:00-18:00)",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:width": "Messung aus Luftbild",
+        "surface": "asphalt",
+        "width": "10.0"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1246322245,
+      "bounds": {
+        "minlat": 52.4653063,
+        "minlon": 13.4870636,
+        "maxlat": 52.4655822,
+        "maxlon": 13.4874542
+      },
+      "geometry": [
+        {
+          "lat": 52.4655822,
+          "lon": 13.4870636
+        },
+        {
+          "lat": 52.465519,
+          "lon": 13.487153
+        },
+        {
+          "lat": 52.4654971,
+          "lon": 13.487184
+        },
+        {
+          "lat": 52.4654588,
+          "lon": 13.4872383
+        },
+        {
+          "lat": 52.4653661,
+          "lon": 13.4873695
+        },
+        {
+          "lat": 52.4653063,
+          "lon": 13.4874542
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "excellent",
+        "source:width": "Messung aus Luftbild mittels JOSM measurement-Plugin. Pixelauflösung 0.20 [m]",
+        "surface": "asphalt",
+        "width": "10.8"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1246813183,
+      "bounds": {
+        "minlat": 52.46717,
+        "minlon": 13.4842351,
+        "maxlat": 52.467214,
+        "maxlon": 13.4842961
+      },
+      "geometry": [
+        {
+          "lat": 52.467214,
+          "lon": 13.4842351
+        },
+        {
+          "lat": 52.4672046,
+          "lon": 13.4842481
+        },
+        {
+          "lat": 52.46717,
+          "lon": 13.4842961
+        }
+      ],
+      "tags": {
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q1740919",
+        "name:etymology:wikipedia": "de:Kiefernwald",
+        "oneway": "no",
+        "parking:both": "no",
+        "postal_code": "12437",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "width": "4"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1247000669,
+      "bounds": {
+        "minlat": 52.4581881,
+        "minlon": 13.4971935,
+        "maxlat": 52.4583171,
+        "maxlon": 13.4973788
+      },
+      "geometry": [
+        {
+          "lat": 52.4583171,
+          "lon": 13.4971935
+        },
+        {
+          "lat": 52.4582821,
+          "lon": 13.4972403
+        },
+        {
+          "lat": 52.4582359,
+          "lon": 13.4973083
+        },
+        {
+          "lat": 52.4581881,
+          "lon": 13.4973788
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:buffer:both": "no",
+        "cycleway:both:lane": "advisory",
+        "cycleway:both:marking:both": "dashed_line",
+        "cycleway:both:width": "1",
+        "cycleway:left:traffic_sign": "none",
+        "cycleway:right:traffic_sign": "DE:237",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lanes": "3",
+        "lanes:backward": "1",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:cycleway:both:width": "infra3D",
+        "source:cycleway:right:traffic_sign:mapillary": "1475294790159328",
+        "surface": "asphalt",
+        "width": "11.7"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1307925199,
+      "bounds": {
+        "minlat": 52.4749769,
+        "minlon": 13.4735275,
+        "maxlat": 52.4751352,
+        "maxlon": 13.4737533
+      },
+      "geometry": [
+        {
+          "lat": 52.4751352,
+          "lon": 13.4735275
+        },
+        {
+          "lat": 52.47508,
+          "lon": 13.4736062
+        },
+        {
+          "lat": 52.4750533,
+          "lon": 13.4736442
+        },
+        {
+          "lat": 52.4750078,
+          "lon": 13.4737092
+        },
+        {
+          "lat": 52.4749769,
+          "lon": 13.4737533
+        }
+      ],
+      "tags": {
+        "cycleway:both:buffer:right": "0.75",
+        "cycleway:both:marking:left": "double_solid_line",
+        "cycleway:both:marking:right": "solid_line",
+        "cycleway:both:separation:right": "kerb",
+        "cycleway:both:traffic_sign": "DE:237",
+        "cycleway:both:width": "1.5",
+        "cycleway:left": "lane",
+        "cycleway:left:lane": "exclusive",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "parking:right:reason": "narrow",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "width": "12"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1424054935,
+      "bounds": {
+        "minlat": 52.4767524,
+        "minlon": 13.4662321,
+        "maxlat": 52.4803253,
+        "maxlon": 13.471222
+      },
+      "geometry": [
+        {
+          "lat": 52.4803253,
+          "lon": 13.4662321
+        },
+        {
+          "lat": 52.4793952,
+          "lon": 13.4675388
+        },
+        {
+          "lat": 52.4788611,
+          "lon": 13.4682863
+        },
+        {
+          "lat": 52.4787738,
+          "lon": 13.4684155
+        },
+        {
+          "lat": 52.4775244,
+          "lon": 13.4701235
+        },
+        {
+          "lat": 52.4774825,
+          "lon": 13.4701841
+        },
+        {
+          "lat": 52.4767524,
+          "lon": 13.471222
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:buffer:right": "0.75",
+        "cycleway:both:lane": "exclusive",
+        "cycleway:both:marking:left": "double_solid_line",
+        "cycleway:both:marking:right": "solid_line",
+        "cycleway:both:separation:right": "kerb",
+        "cycleway:both:traffic_sign": "DE:237",
+        "cycleway:both:width": "1.5",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "separate",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "source:traffic_sign:mapillary": "551600170577857",
+        "source:width": "Messung aus Luftbild",
+        "surface": "asphalt",
+        "width": "11.0"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1424058087,
+      "bounds": {
+        "minlat": 52.4702227,
+        "minlon": 13.479287,
+        "maxlat": 52.4710957,
+        "maxlon": 13.4805218
+      },
+      "geometry": [
+        {
+          "lat": 52.4710957,
+          "lon": 13.479287
+        },
+        {
+          "lat": 52.4709678,
+          "lon": 13.4794679
+        },
+        {
+          "lat": 52.4709147,
+          "lon": 13.4795429
+        },
+        {
+          "lat": 52.4703766,
+          "lon": 13.4803041
+        },
+        {
+          "lat": 52.4702227,
+          "lon": 13.4805218
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "parking:both:reason": "narrow",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:width": "Messung aus Luftbild",
+        "surface": "asphalt",
+        "width": "10.0"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1424444951,
+      "bounds": {
+        "minlat": 52.4606097,
+        "minlon": 13.4939958,
+        "maxlat": 52.4607008,
+        "maxlon": 13.4941217
+      },
+      "geometry": [
+        {
+          "lat": 52.4607008,
+          "lon": 13.4939958
+        },
+        {
+          "lat": 52.4606097,
+          "lon": 13.4941217
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:buffer:both": "no",
+        "cycleway:both:lane": "advisory",
+        "cycleway:both:marking:left": "dashed_line",
+        "cycleway:both:separation:right": "kerb",
+        "cycleway:both:width": "1.2",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "width": "8"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1447387769,
+      "bounds": {
+        "minlat": 52.465999,
+        "minlon": 13.4862107,
+        "maxlat": 52.4661822,
+        "maxlon": 13.4864713
+      },
+      "geometry": [
+        {
+          "lat": 52.4661822,
+          "lon": 13.4862107
+        },
+        {
+          "lat": 52.465999,
+          "lon": 13.4864713
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:left": "separate",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_stopping @ (Mo-Fr 07:00-09:00, 14:00-19:00)",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:width": "Messung aus Luftbild mittels JOSM measurement-Plugin. Pixelauflösung 0.20 [m]",
+        "surface": "asphalt",
+        "width": "10.8"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1447387788,
+      "bounds": {
+        "minlat": 52.4661822,
+        "minlon": 13.4858043,
+        "maxlat": 52.4664682,
+        "maxlon": 13.4862107
+      },
+      "geometry": [
+        {
+          "lat": 52.4664682,
+          "lon": 13.4858043
+        },
+        {
+          "lat": 52.4664328,
+          "lon": 13.4858544
+        },
+        {
+          "lat": 52.4662923,
+          "lon": 13.4860543
+        },
+        {
+          "lat": 52.4662038,
+          "lon": 13.48618
+        },
+        {
+          "lat": 52.4661822,
+          "lon": 13.4862107
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:width": "Messung aus Luftbild mittels JOSM measurement-Plugin. Pixelauflösung 0.20 [m]",
+        "surface": "asphalt",
+        "width": "10.8"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1447387789,
+      "bounds": {
+        "minlat": 52.4649782,
+        "minlon": 13.4874542,
+        "maxlat": 52.4653063,
+        "maxlon": 13.4879186
+      },
+      "geometry": [
+        {
+          "lat": 52.4653063,
+          "lon": 13.4874542
+        },
+        {
+          "lat": 52.4652296,
+          "lon": 13.4875628
+        },
+        {
+          "lat": 52.4649782,
+          "lon": 13.4879186
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "12437",
+        "sidewalk": "separate",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "excellent",
+        "source:width": "Messung aus Luftbild mittels JOSM measurement-Plugin. Pixelauflösung 0.20 [m]",
+        "surface": "asphalt",
+        "width": "10.8"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1447387791,
+      "bounds": {
+        "minlat": 52.4645075,
+        "minlon": 13.4881905,
+        "maxlat": 52.4647861,
+        "maxlon": 13.4885849
+      },
+      "geometry": [
+        {
+          "lat": 52.4647861,
+          "lon": 13.4881905
+        },
+        {
+          "lat": 52.4645075,
+          "lon": 13.4885849
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:left": "separate",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12437",
+        "sidewalk": "separate",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "excellent",
+        "source:width": "Messung aus Luftbild mittels JOSM measurement-Plugin. Pixelauflösung 0.20 [m]",
+        "surface": "asphalt",
+        "width": "10.8"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1447387792,
+      "bounds": {
+        "minlat": 52.4647861,
+        "minlon": 13.4879186,
+        "maxlat": 52.4649782,
+        "maxlon": 13.4881905
+      },
+      "geometry": [
+        {
+          "lat": 52.4649782,
+          "lon": 13.4879186
+        },
+        {
+          "lat": 52.4648852,
+          "lon": 13.4880502
+        },
+        {
+          "lat": 52.4647861,
+          "lon": 13.4881905
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "postal_code": "12437",
+        "sidewalk": "separate",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "excellent",
+        "source:width": "Messung aus Luftbild mittels JOSM measurement-Plugin. Pixelauflösung 0.20 [m]",
+        "surface": "asphalt",
+        "width": "10.8"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1447387804,
+      "bounds": {
+        "minlat": 52.4643621,
+        "minlon": 13.4885849,
+        "maxlat": 52.4645075,
+        "maxlon": 13.4887907
+      },
+      "geometry": [
+        {
+          "lat": 52.4645075,
+          "lon": 13.4885849
+        },
+        {
+          "lat": 52.4643621,
+          "lon": 13.4887907
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12437",
+        "sidewalk": "separate",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "excellent",
+        "source:width": "Messung aus Luftbild mittels JOSM measurement-Plugin. Pixelauflösung 0.20 [m]",
+        "surface": "asphalt",
+        "width": "10.8"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1447387805,
+      "bounds": {
+        "minlat": 52.4643135,
+        "minlon": 13.4887907,
+        "maxlat": 52.4643621,
+        "maxlon": 13.4888588
+      },
+      "geometry": [
+        {
+          "lat": 52.4643621,
+          "lon": 13.4887907
+        },
+        {
+          "lat": 52.4643497,
+          "lon": 13.4888081
+        },
+        {
+          "lat": 52.4643135,
+          "lon": 13.4888588
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "postal_code": "12437",
+        "sidewalk": "separate",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "excellent",
+        "source:width": "Messung aus Luftbild mittels JOSM measurement-Plugin. Pixelauflösung 0.20 [m]",
+        "surface": "asphalt",
+        "width": "10.8"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1447387806,
+      "bounds": {
+        "minlat": 52.463625,
+        "minlon": 13.4895979,
+        "maxlat": 52.4637912,
+        "maxlon": 13.4898331
+      },
+      "geometry": [
+        {
+          "lat": 52.4637912,
+          "lon": 13.4895979
+        },
+        {
+          "lat": 52.463625,
+          "lon": 13.4898331
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "mapillary": "1062935835111653",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:left": "no",
+        "parking:left:restriction": "no_stopping",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:width": "Messung aus Luftbild mittels JOSM measurement-Plugin. Pixelauflösung 0.20 [m]",
+        "surface": "asphalt",
+        "width": "10.8"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1453739735,
+      "bounds": {
+        "minlat": 52.4766872,
+        "minlon": 13.471222,
+        "maxlat": 52.4767524,
+        "maxlon": 13.4713889
+      },
+      "geometry": [
+        {
+          "lat": 52.4766872,
+          "lon": 13.4713889
+        },
+        {
+          "lat": 52.4767323,
+          "lon": 13.4713253
+        },
+        {
+          "lat": 52.4767524,
+          "lon": 13.471222
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:buffer:right": "0.75",
+        "cycleway:right:lane": "exclusive",
+        "cycleway:right:marking:left": "double_solid_line",
+        "cycleway:right:marking:right": "solid_line",
+        "cycleway:right:separation:right": "kerb",
+        "cycleway:right:traffic_sign": "DE:237",
+        "cycleway:right:width": "1.5",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "traffic_island",
+        "parking:right:reason": "cycleway",
+        "postal_code": "12435",
+        "sidewalk:left": "traffic_island",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "source:traffic_sign:mapillary": "551600170577857",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1453739736,
+      "bounds": {
+        "minlat": 52.4765623,
+        "minlon": 13.4713072,
+        "maxlat": 52.476644,
+        "maxlon": 13.4714891
+      },
+      "geometry": [
+        {
+          "lat": 52.476644,
+          "lon": 13.4713072
+        },
+        {
+          "lat": 52.4765993,
+          "lon": 13.4713703
+        },
+        {
+          "lat": 52.4765623,
+          "lon": 13.4714891
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:buffer:right": "0.75",
+        "cycleway:right:lane": "exclusive",
+        "cycleway:right:marking:left": "double_solid_line",
+        "cycleway:right:marking:right": "solid_line",
+        "cycleway:right:separation:right": "kerb",
+        "cycleway:right:traffic_sign": "DE:237",
+        "cycleway:right:width": "1.5",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "traffic_island",
+        "parking:right:reason": "cycleway",
+        "postal_code": "12437",
+        "sidewalk:left": "traffic_island",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "source:traffic_sign:mapillary": "551600170577857",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1453739737,
+      "bounds": {
+        "minlat": 52.476644,
+        "minlon": 13.471222,
+        "maxlat": 52.4767524,
+        "maxlon": 13.4713072
+      },
+      "geometry": [
+        {
+          "lat": 52.4767524,
+          "lon": 13.471222
+        },
+        {
+          "lat": 52.4766893,
+          "lon": 13.4712433
+        },
+        {
+          "lat": 52.476644,
+          "lon": 13.4713072
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:buffer:right": "0.75",
+        "cycleway:right:lane": "exclusive",
+        "cycleway:right:marking:left": "double_solid_line",
+        "cycleway:right:marking:right": "solid_line",
+        "cycleway:right:separation:right": "kerb",
+        "cycleway:right:traffic_sign": "DE:237",
+        "cycleway:right:width": "1.5",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "traffic_island",
+        "parking:right": "separate",
+        "postal_code": "12435",
+        "sidewalk:left": "traffic_island",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "source:traffic_sign:mapillary": "551600170577857",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1453739738,
+      "bounds": {
+        "minlat": 52.4765623,
+        "minlon": 13.4713889,
+        "maxlat": 52.4766872,
+        "maxlon": 13.4714891
+      },
+      "geometry": [
+        {
+          "lat": 52.4765623,
+          "lon": 13.4714891
+        },
+        {
+          "lat": 52.4766423,
+          "lon": 13.4714523
+        },
+        {
+          "lat": 52.4766872,
+          "lon": 13.4713889
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:buffer:right": "0.75",
+        "cycleway:right:lane": "exclusive",
+        "cycleway:right:marking:left": "double_solid_line",
+        "cycleway:right:marking:right": "solid_line",
+        "cycleway:right:separation:right": "kerb",
+        "cycleway:right:traffic_sign": "DE:237",
+        "cycleway:right:width": "1.5",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "traffic_island",
+        "parking:right:reason": "cycleway",
+        "postal_code": "12437",
+        "sidewalk:left": "traffic_island",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "source:traffic_sign:mapillary": "551600170577857",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1455853743,
+      "bounds": {
+        "minlat": 52.4913691,
+        "minlon": 13.4504164,
+        "maxlat": 52.4914543,
+        "maxlon": 13.4505362
+      },
+      "geometry": [
+        {
+          "lat": 52.4914543,
+          "lon": 13.4504164
+        },
+        {
+          "lat": 52.491386,
+          "lon": 13.4505125
+        },
+        {
+          "lat": 52.4913691,
+          "lon": 13.4505362
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:zone:30",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1455853744,
+      "bounds": {
+        "minlat": 52.4915306,
+        "minlon": 13.4502196,
+        "maxlat": 52.4916033,
+        "maxlon": 13.4503198
+      },
+      "geometry": [
+        {
+          "lat": 52.4916033,
+          "lon": 13.4502196
+        },
+        {
+          "lat": 52.4915306,
+          "lon": 13.4503198
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "lane",
+        "parking:both:access": "yes",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "parking:left:restriction:conditional": "no_stopping @ (Mo-Fr 07:00-17:00)",
+        "parking:right:restriction:conditional": "no_stopping @ (Mo-Fr 07:00-09:00)",
+        "postal_code": "12435",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "bad",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1455951759,
+      "bounds": {
+        "minlat": 52.4933425,
+        "minlon": 13.445533,
+        "maxlat": 52.493661,
+        "maxlon": 13.446468
+      },
+      "geometry": [
+        {
+          "lat": 52.493661,
+          "lon": 13.445533
+        },
+        {
+          "lat": 52.4933658,
+          "lon": 13.4463948
+        },
+        {
+          "lat": 52.4933425,
+          "lon": 13.446468
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "lane",
+        "parking:both:access": "yes",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12435",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "bad",
+        "surface": "sett",
+        "width": "10.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1455953208,
+      "bounds": {
+        "minlat": 52.4926408,
+        "minlon": 13.4482856,
+        "maxlat": 52.4926665,
+        "maxlon": 13.4483399
+      },
+      "geometry": [
+        {
+          "lat": 52.4926665,
+          "lon": 13.4482856
+        },
+        {
+          "lat": 52.4926408,
+          "lon": 13.4483399
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:left": "shoulder",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "perpendicular",
+        "parking:right": "no",
+        "postal_code": "12435",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "bad",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1455953209,
+      "bounds": {
+        "minlat": 52.4926665,
+        "minlon": 13.4481798,
+        "maxlat": 52.4927138,
+        "maxlon": 13.4482856
+      },
+      "geometry": [
+        {
+          "lat": 52.4927138,
+          "lon": 13.4481798
+        },
+        {
+          "lat": 52.4926665,
+          "lon": 13.4482856
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:left": "shoulder",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "perpendicular",
+        "parking:right": "no",
+        "postal_code": "12435",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "bad",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1455953211,
+      "bounds": {
+        "minlat": 52.4927138,
+        "minlon": 13.4481566,
+        "maxlat": 52.4927241,
+        "maxlon": 13.4481798
+      },
+      "geometry": [
+        {
+          "lat": 52.4927241,
+          "lon": 13.4481566
+        },
+        {
+          "lat": 52.4927138,
+          "lon": 13.4481798
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "postal_code": "12435",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "bad",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1455958921,
+      "bounds": {
+        "minlat": 52.4884531,
+        "minlon": 13.4543215,
+        "maxlat": 52.4887055,
+        "maxlon": 13.4546763
+      },
+      "geometry": [
+        {
+          "lat": 52.4887055,
+          "lon": 13.4543215
+        },
+        {
+          "lat": 52.4885243,
+          "lon": 13.4545754
+        },
+        {
+          "lat": 52.4884531,
+          "lon": 13.4546763
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:lane": "exclusive",
+        "cycleway:both:marking:left": "double_solid_line",
+        "cycleway:both:separation:right": "kerb",
+        "cycleway:both:traffic_sign": "DE:237",
+        "cycleway:left:width": "1.4",
+        "cycleway:right:buffer:right": "0.5",
+        "cycleway:right:marking:right": "solid_line",
+        "cycleway:right:width": "1",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:both": "separate",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:left:width": "Luftbild 2025",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "source:maxspeed": "sign",
+        "surface": "asphalt",
+        "width": "10"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1455958922,
+      "bounds": {
+        "minlat": 52.4889441,
+        "minlon": 13.4538316,
+        "maxlat": 52.4890535,
+        "maxlon": 13.4539858
+      },
+      "geometry": [
+        {
+          "lat": 52.4890535,
+          "lon": 13.4538316
+        },
+        {
+          "lat": 52.4890189,
+          "lon": 13.4538804
+        },
+        {
+          "lat": 52.4889441,
+          "lon": 13.4539858
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "no",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1455958923,
+      "bounds": {
+        "minlat": 52.4892176,
+        "minlon": 13.4534822,
+        "maxlat": 52.4892863,
+        "maxlon": 13.4535978
+      },
+      "geometry": [
+        {
+          "lat": 52.4892863,
+          "lon": 13.4534822
+        },
+        {
+          "lat": 52.4892176,
+          "lon": 13.4535978
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1455958924,
+      "bounds": {
+        "minlat": 52.4892863,
+        "minlon": 13.4534003,
+        "maxlat": 52.4893432,
+        "maxlon": 13.4534822
+      },
+      "geometry": [
+        {
+          "lat": 52.4893432,
+          "lon": 13.4534003
+        },
+        {
+          "lat": 52.4892863,
+          "lon": 13.4534822
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:zone:30",
+        "surface": "asphalt",
+        "width": "9.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1455958926,
+      "bounds": {
+        "minlat": 52.4897346,
+        "minlon": 13.4525285,
+        "maxlat": 52.4899565,
+        "maxlon": 13.4528429
+      },
+      "geometry": [
+        {
+          "lat": 52.4899565,
+          "lon": 13.4525285
+        },
+        {
+          "lat": 52.4899325,
+          "lon": 13.4525625
+        },
+        {
+          "lat": 52.4897346,
+          "lon": 13.4528429
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "street_side",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:zone:30",
+        "surface": "asphalt",
+        "width": "9.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1455958927,
+      "bounds": {
+        "minlat": 52.4899565,
+        "minlon": 13.4521542,
+        "maxlat": 52.4902205,
+        "maxlon": 13.4525285
+      },
+      "geometry": [
+        {
+          "lat": 52.4902205,
+          "lon": 13.4521542
+        },
+        {
+          "lat": 52.4900087,
+          "lon": 13.4524545
+        },
+        {
+          "lat": 52.4899565,
+          "lon": 13.4525285
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:zone:30",
+        "surface": "asphalt",
+        "width": "9.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1456027688,
+      "bounds": {
+        "minlat": 52.4902205,
+        "minlon": 13.4520886,
+        "maxlat": 52.4902668,
+        "maxlon": 13.4521542
+      },
+      "geometry": [
+        {
+          "lat": 52.4902668,
+          "lon": 13.4520886
+        },
+        {
+          "lat": 52.4902205,
+          "lon": 13.4521542
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:zone:30",
+        "surface": "asphalt",
+        "width": "9.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1456027689,
+      "bounds": {
+        "minlat": 52.4902668,
+        "minlon": 13.4520067,
+        "maxlat": 52.4903243,
+        "maxlon": 13.4520886
+      },
+      "geometry": [
+        {
+          "lat": 52.4903243,
+          "lon": 13.4520067
+        },
+        {
+          "lat": 52.4902668,
+          "lon": 13.4520886
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Kiefholzstraße",
+        "name:etymology:wikidata": "Q12024",
+        "name:etymology:wikipedia": "de:Kiefern",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "12435",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:zone:30",
+        "surface": "asphalt"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1359 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-07-15T21:48:17Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 10781127,
+      "bounds": {
+        "minlat": 52.4414407,
+        "minlon": 13.5957166,
+        "maxlat": 52.4415903,
+        "maxlon": 13.5980769
+      },
+      "geometry": [
+        {
+          "lat": 52.4415903,
+          "lon": 13.5980769
+        },
+        {
+          "lat": 52.4415018,
+          "lon": 13.5966788
+        },
+        {
+          "lat": 52.4414407,
+          "lon": 13.5957166
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Müggelschlößchenweg",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12559",
+        "shoulder": "no",
+        "sidewalk:both": "separate",
+        "smoothness": "intermediate",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 22875765,
+      "bounds": {
+        "minlat": 52.4415903,
+        "minlon": 13.5980769,
+        "maxlat": 52.4416977,
+        "maxlon": 13.6000174
+      },
+      "geometry": [
+        {
+          "lat": 52.4415903,
+          "lon": 13.5980769
+        },
+        {
+          "lat": 52.4415917,
+          "lon": 13.5981217
+        },
+        {
+          "lat": 52.44165,
+          "lon": 13.5991973
+        },
+        {
+          "lat": 52.4416668,
+          "lon": 13.5994819
+        },
+        {
+          "lat": 52.4416886,
+          "lon": 13.5998512
+        },
+        {
+          "lat": 52.4416977,
+          "lon": 13.6000174
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Müggelschlößchenweg",
+        "parking:both": "no",
+        "parking:left:restriction": "no_stopping",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274[50]"
+      }
+    },
+    {
+      "type": "way",
+      "id": 22946308,
+      "bounds": {
+        "minlat": 52.4419711,
+        "minlon": 13.6043182,
+        "maxlat": 52.4422593,
+        "maxlon": 13.6086663
+      },
+      "geometry": [
+        {
+          "lat": 52.4419711,
+          "lon": 13.6043182
+        },
+        {
+          "lat": 52.4419924,
+          "lon": 13.6045259
+        },
+        {
+          "lat": 52.4420978,
+          "lon": 13.6061319
+        },
+        {
+          "lat": 52.4422593,
+          "lon": 13.6086663
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "no",
+        "motor_vehicle": "destination",
+        "name": "Müggelschlößchenweg",
+        "parking:both": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "traffic_sign": "DE:260,1020-30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 31012750,
+      "bounds": {
+        "minlat": 52.4419311,
+        "minlon": 13.6037456,
+        "maxlat": 52.4419646,
+        "maxlon": 13.6042191
+      },
+      "geometry": [
+        {
+          "lat": 52.4419311,
+          "lon": 13.6037456
+        },
+        {
+          "lat": 52.4419646,
+          "lon": 13.6042191
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Müggelschlößchenweg",
+        "parking:both": "no",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 31090971,
+      "bounds": {
+        "minlat": 52.4431587,
+        "minlon": 13.6220847,
+        "maxlat": 52.4431766,
+        "maxlon": 13.6224012
+      },
+      "geometry": [
+        {
+          "lat": 52.4431587,
+          "lon": 13.6220847
+        },
+        {
+          "lat": 52.4431766,
+          "lon": 13.6224012
+        }
+      ],
+      "tags": {
+        "hazard": "cyclists",
+        "highway": "service",
+        "lit": "no",
+        "motor_vehicle": "destination",
+        "name": "Müggelschlößchenweg",
+        "parking:both": "separate",
+        "smoothness": "excellent",
+        "source:traffic_sign:mapillary": "757814029084442",
+        "source:width": "Messung aus Luftbild mittels JOSM measurement-Plugin.]",
+        "surface": "asphalt",
+        "traffic_sign": "DE:260,1020-30",
+        "traffic_sign:backward": "DE:138-10",
+        "width": "3.9"
+      }
+    },
+    {
+      "type": "way",
+      "id": 37480139,
+      "bounds": {
+        "minlat": 52.4417525,
+        "minlon": 13.6022548,
+        "maxlat": 52.4417845,
+        "maxlon": 13.6037635
+      },
+      "geometry": [
+        {
+          "lat": 52.4417845,
+          "lon": 13.6022548
+        },
+        {
+          "lat": 52.4417698,
+          "lon": 13.602441
+        },
+        {
+          "lat": 52.4417607,
+          "lon": 13.6030063
+        },
+        {
+          "lat": 52.4417575,
+          "lon": 13.6031992
+        },
+        {
+          "lat": 52.4417541,
+          "lon": 13.6035255
+        },
+        {
+          "lat": 52.4417548,
+          "lon": 13.6036095
+        },
+        {
+          "lat": 52.4417525,
+          "lon": 13.6037635
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "lit": "yes",
+        "maxspeed": "10",
+        "name": "Müggelschlößchenweg",
+        "smoothness": "intermediate",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 37480386,
+      "bounds": {
+        "minlat": 52.4407486,
+        "minlon": 13.6009584,
+        "maxlat": 52.4407551,
+        "maxlon": 13.6016095
+      },
+      "geometry": [
+        {
+          "lat": 52.4407486,
+          "lon": 13.6016095
+        },
+        {
+          "lat": 52.4407526,
+          "lon": 13.6012029
+        },
+        {
+          "lat": 52.4407551,
+          "lon": 13.6009584
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Müggelschlößchenweg",
+        "parking:both": "separate",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 37849942,
+      "bounds": {
+        "minlat": 52.4428891,
+        "minlon": 13.6184441,
+        "maxlat": 52.4431587,
+        "maxlon": 13.6220847
+      },
+      "geometry": [
+        {
+          "lat": 52.4428891,
+          "lon": 13.6184441
+        },
+        {
+          "lat": 52.4429105,
+          "lon": 13.6187785
+        },
+        {
+          "lat": 52.4429829,
+          "lon": 13.6199425
+        },
+        {
+          "lat": 52.4430225,
+          "lon": 13.6205333
+        },
+        {
+          "lat": 52.443144,
+          "lon": 13.6219155
+        },
+        {
+          "lat": 52.4431587,
+          "lon": 13.6220847
+        }
+      ],
+      "tags": {
+        "hazard": "yes",
+        "highway": "service",
+        "lit": "no",
+        "motor_vehicle": "destination",
+        "name": "Müggelschlößchenweg",
+        "note:traffic_sign:backward": "Straßenschäden",
+        "overtaking": "no",
+        "parking:both": "separate",
+        "smoothness": "excellent",
+        "source:traffic_sign:mapillary": "757814029084442",
+        "source:width": "Messung aus Luftbild mittels JOSM measurement-Plugin.]",
+        "surface": "asphalt",
+        "traffic_sign": "DE:260,1020-30",
+        "traffic_sign:backward": "DE:138-10;DE:101",
+        "vehicle": "destination",
+        "width": "3.9"
+      }
+    },
+    {
+      "type": "way",
+      "id": 54048879,
+      "bounds": {
+        "minlat": 52.44183,
+        "minlon": 13.6022434,
+        "maxlat": 52.4418898,
+        "maxlon": 13.6031197
+      },
+      "geometry": [
+        {
+          "lat": 52.44183,
+          "lon": 13.6022434
+        },
+        {
+          "lat": 52.4418823,
+          "lon": 13.6030099
+        },
+        {
+          "lat": 52.4418898,
+          "lon": 13.6031197
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Müggelschlößchenweg",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 185867070,
+      "bounds": {
+        "minlat": 52.441857,
+        "minlon": 13.6032125,
+        "maxlat": 52.4418791,
+        "maxlon": 13.6035489
+      },
+      "geometry": [
+        {
+          "lat": 52.441857,
+          "lon": 13.6032125
+        },
+        {
+          "lat": 52.4418791,
+          "lon": 13.6035489
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "no",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Müggelschlößchenweg",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "surface": "paving_stones",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 284270656,
+      "bounds": {
+        "minlat": 52.4411354,
+        "minlon": 13.6016238,
+        "maxlat": 52.4416244,
+        "maxlon": 13.6019879
+      },
+      "geometry": [
+        {
+          "lat": 52.4411354,
+          "lon": 13.6016238
+        },
+        {
+          "lat": 52.441302,
+          "lon": 13.6016296
+        },
+        {
+          "lat": 52.441363,
+          "lon": 13.6016569
+        },
+        {
+          "lat": 52.4414179,
+          "lon": 13.6016929
+        },
+        {
+          "lat": 52.441482,
+          "lon": 13.6017611
+        },
+        {
+          "lat": 52.4415401,
+          "lon": 13.601846
+        },
+        {
+          "lat": 52.4416244,
+          "lon": 13.6019879
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Müggelschlößchenweg",
+        "parking:left": "separate",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "sidewalk": "right",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 328846995,
+      "bounds": {
+        "minlat": 52.44192,
+        "minlon": 13.6035634,
+        "maxlat": 52.4419311,
+        "maxlon": 13.6037456
+      },
+      "geometry": [
+        {
+          "lat": 52.44192,
+          "lon": 13.6035634
+        },
+        {
+          "lat": 52.4419311,
+          "lon": 13.6037456
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Müggelschlößchenweg",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "separate",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 389190883,
+      "bounds": {
+        "minlat": 52.4419242,
+        "minlon": 13.6029534,
+        "maxlat": 52.4419454,
+        "maxlon": 13.6032872
+      },
+      "geometry": [
+        {
+          "lat": 52.4419242,
+          "lon": 13.6029534
+        },
+        {
+          "lat": 52.4419454,
+          "lon": 13.6032872
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Müggelschlößchenweg",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "surface": "paving_stones",
+        "tactile_paving": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 444197513,
+      "bounds": {
+        "minlat": 52.4413117,
+        "minlon": 13.593327,
+        "maxlat": 52.4413324,
+        "maxlon": 13.5937068
+      },
+      "geometry": [
+        {
+          "lat": 52.4413324,
+          "lon": 13.5937068
+        },
+        {
+          "lat": 52.4413274,
+          "lon": 13.5936019
+        },
+        {
+          "lat": 52.4413264,
+          "lon": 13.5935837
+        },
+        {
+          "lat": 52.4413236,
+          "lon": 13.5935356
+        },
+        {
+          "lat": 52.4413117,
+          "lon": 13.593327
+        }
+      ],
+      "tags": {
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "3",
+        "lanes:backward": "1",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Müggelschlößchenweg",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "intermediate",
+        "surface": "concrete",
+        "turn:lanes:forward": "left|through;right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 458921219,
+      "bounds": {
+        "minlat": 52.4419172,
+        "minlon": 13.6035227,
+        "maxlat": 52.44192,
+        "maxlon": 13.6035634
+      },
+      "geometry": [
+        {
+          "lat": 52.4419172,
+          "lon": 13.6035227
+        },
+        {
+          "lat": 52.44192,
+          "lon": 13.6035634
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Müggelschlößchenweg",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:both:surface": "paving_stones",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "separate",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 458921220,
+      "bounds": {
+        "minlat": 52.441908,
+        "minlon": 13.6033869,
+        "maxlat": 52.4419172,
+        "maxlon": 13.6035227
+      },
+      "geometry": [
+        {
+          "lat": 52.441908,
+          "lon": 13.6033869
+        },
+        {
+          "lat": 52.4419172,
+          "lon": 13.6035227
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Müggelschlößchenweg",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:both:surface": "paving_stones",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 605887302,
+      "bounds": {
+        "minlat": 52.4419142,
+        "minlon": 13.6039255,
+        "maxlat": 52.4419364,
+        "maxlon": 13.6043058
+      },
+      "geometry": [
+        {
+          "lat": 52.4419142,
+          "lon": 13.6039255
+        },
+        {
+          "lat": 52.4419364,
+          "lon": 13.6043058
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "no",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Müggelschlößchenweg",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 605887303,
+      "bounds": {
+        "minlat": 52.4420038,
+        "minlon": 13.6035657,
+        "maxlat": 52.442121,
+        "maxlon": 13.6038799
+      },
+      "geometry": [
+        {
+          "lat": 52.442121,
+          "lon": 13.6038799
+        },
+        {
+          "lat": 52.442076,
+          "lon": 13.6037591
+        },
+        {
+          "lat": 52.4420038,
+          "lon": 13.6035657
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "no",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Müggelschlößchenweg",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "surface": "concrete",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 605887304,
+      "bounds": {
+        "minlat": 52.4418898,
+        "minlon": 13.6031197,
+        "maxlat": 52.441908,
+        "maxlon": 13.6033869
+      },
+      "geometry": [
+        {
+          "lat": 52.4418898,
+          "lon": 13.6031197
+        },
+        {
+          "lat": 52.4419013,
+          "lon": 13.6032885
+        },
+        {
+          "lat": 52.441908,
+          "lon": 13.6033869
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Müggelschlößchenweg",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:both:surface": "paving_stones",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 605887305,
+      "bounds": {
+        "minlat": 52.4419646,
+        "minlon": 13.6042191,
+        "maxlat": 52.4419711,
+        "maxlon": 13.6043182
+      },
+      "geometry": [
+        {
+          "lat": 52.4419646,
+          "lon": 13.6042191
+        },
+        {
+          "lat": 52.4419711,
+          "lon": 13.6043182
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Müggelschlößchenweg",
+        "parking:both": "no",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 631278828,
+      "bounds": {
+        "minlat": 52.4422593,
+        "minlon": 13.6086663,
+        "maxlat": 52.4428891,
+        "maxlon": 13.6184441
+      },
+      "geometry": [
+        {
+          "lat": 52.4422593,
+          "lon": 13.6086663
+        },
+        {
+          "lat": 52.4426442,
+          "lon": 13.6145801
+        },
+        {
+          "lat": 52.4428891,
+          "lon": 13.6184441
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "no",
+        "motor_vehicle": "destination",
+        "name": "Müggelschlößchenweg",
+        "parking:both": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "traffic_sign": "DE:260,1020-30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1173020933,
+      "bounds": {
+        "minlat": 52.4416977,
+        "minlon": 13.6000174,
+        "maxlat": 52.44183,
+        "maxlon": 13.6022434
+      },
+      "geometry": [
+        {
+          "lat": 52.4416977,
+          "lon": 13.6000174
+        },
+        {
+          "lat": 52.4417063,
+          "lon": 13.6001469
+        },
+        {
+          "lat": 52.4417526,
+          "lon": 13.6009455
+        },
+        {
+          "lat": 52.4417813,
+          "lon": 13.6014192
+        },
+        {
+          "lat": 52.4418202,
+          "lon": 13.6020905
+        },
+        {
+          "lat": 52.44183,
+          "lon": 13.6022434
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Müggelschlößchenweg",
+        "parking:both": "no",
+        "parking:left:restriction": "no_stopping",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274[50]"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1205672214,
+      "bounds": {
+        "minlat": 52.4404709,
+        "minlon": 13.6009534,
+        "maxlat": 52.4407551,
+        "maxlon": 13.601596
+      },
+      "geometry": [
+        {
+          "lat": 52.4407551,
+          "lon": 13.6009584
+        },
+        {
+          "lat": 52.440611,
+          "lon": 13.6009558
+        },
+        {
+          "lat": 52.4404752,
+          "lon": 13.6009534
+        },
+        {
+          "lat": 52.4404741,
+          "lon": 13.6011153
+        },
+        {
+          "lat": 52.4404709,
+          "lon": 13.601596
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Müggelschlößchenweg",
+        "parking:both": "separate",
+        "sidewalk": "right",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1433980210,
+      "bounds": {
+        "minlat": 52.4413635,
+        "minlon": 13.5943576,
+        "maxlat": 52.4413862,
+        "maxlon": 13.5947965
+      },
+      "geometry": [
+        {
+          "lat": 52.4413862,
+          "lon": 13.5947965
+        },
+        {
+          "lat": 52.441381,
+          "lon": 13.5947079
+        },
+        {
+          "lat": 52.4413635,
+          "lon": 13.5943576
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Müggelschlößchenweg",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12559",
+        "shoulder": "no",
+        "sidewalk:both": "separate",
+        "smoothness": "intermediate",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1433980211,
+      "bounds": {
+        "minlat": 52.4413324,
+        "minlon": 13.5937068,
+        "maxlat": 52.4413635,
+        "maxlon": 13.5943576
+      },
+      "geometry": [
+        {
+          "lat": 52.4413635,
+          "lon": 13.5943576
+        },
+        {
+          "lat": 52.4413324,
+          "lon": 13.5937068
+        }
+      ],
+      "tags": {
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "3",
+        "lanes:backward": "1",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Müggelschlößchenweg",
+        "parking:left": "street_side",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "intermediate",
+        "surface": "concrete",
+        "turn:lanes:forward": "left|through;right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1433981276,
+      "bounds": {
+        "minlat": 52.4413862,
+        "minlon": 13.5947965,
+        "maxlat": 52.4414407,
+        "maxlon": 13.5957166
+      },
+      "geometry": [
+        {
+          "lat": 52.4414407,
+          "lon": 13.5957166
+        },
+        {
+          "lat": 52.4413956,
+          "lon": 13.5949553
+        },
+        {
+          "lat": 52.4413862,
+          "lon": 13.5947965
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Müggelschlößchenweg",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12559",
+        "shoulder": "no",
+        "sidewalk:both": "separate",
+        "smoothness": "intermediate",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1433984679,
+      "bounds": {
+        "minlat": 52.4404709,
+        "minlon": 13.601596,
+        "maxlat": 52.4408084,
+        "maxlon": 13.6016123
+      },
+      "geometry": [
+        {
+          "lat": 52.4404709,
+          "lon": 13.601596
+        },
+        {
+          "lat": 52.4406099,
+          "lon": 13.6016012
+        },
+        {
+          "lat": 52.440651,
+          "lon": 13.6016011
+        },
+        {
+          "lat": 52.4407486,
+          "lon": 13.6016095
+        },
+        {
+          "lat": 52.4408084,
+          "lon": 13.6016123
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Müggelschlößchenweg",
+        "parking:left": "separate",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "sidewalk": "right",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1433984685,
+      "bounds": {
+        "minlat": 52.4416244,
+        "minlon": 13.6019879,
+        "maxlat": 52.4416709,
+        "maxlon": 13.6020661
+      },
+      "geometry": [
+        {
+          "lat": 52.4416244,
+          "lon": 13.6019879
+        },
+        {
+          "lat": 52.4416709,
+          "lon": 13.6020661
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Müggelschlößchenweg",
+        "parking:left": "separate",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_stopping @ (Mo-Fr 07:00-18:00)",
+        "sidewalk": "right",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1433984686,
+      "bounds": {
+        "minlat": 52.4417537,
+        "minlon": 13.6022036,
+        "maxlat": 52.44183,
+        "maxlon": 13.6022548
+      },
+      "geometry": [
+        {
+          "lat": 52.4417537,
+          "lon": 13.6022036
+        },
+        {
+          "lat": 52.4417845,
+          "lon": 13.6022548
+        },
+        {
+          "lat": 52.4418072,
+          "lon": 13.6022491
+        },
+        {
+          "lat": 52.44183,
+          "lon": 13.6022434
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Müggelschlößchenweg",
+        "parking:both": "no",
+        "sidewalk": "right",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1474182587,
+      "bounds": {
+        "minlat": 52.4408787,
+        "minlon": 13.6016148,
+        "maxlat": 52.4411354,
+        "maxlon": 13.6016238
+      },
+      "geometry": [
+        {
+          "lat": 52.4408787,
+          "lon": 13.6016148
+        },
+        {
+          "lat": 52.4411354,
+          "lon": 13.6016238
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Müggelschlößchenweg",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:left:orientation": "diagonal",
+        "parking:right:orientation": "parallel",
+        "sidewalk": "right",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1474182588,
+      "bounds": {
+        "minlat": 52.4408084,
+        "minlon": 13.6016123,
+        "maxlat": 52.4408787,
+        "maxlon": 13.6016148
+      },
+      "geometry": [
+        {
+          "lat": 52.4408084,
+          "lon": 13.6016123
+        },
+        {
+          "lat": 52.4408787,
+          "lon": 13.6016148
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Müggelschlößchenweg",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:access": "yes",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "sidewalk": "right",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1476806182,
+      "bounds": {
+        "minlat": 52.4416709,
+        "minlon": 13.6020661,
+        "maxlat": 52.4417537,
+        "maxlon": 13.6022036
+      },
+      "geometry": [
+        {
+          "lat": 52.4416709,
+          "lon": 13.6020661
+        },
+        {
+          "lat": 52.4417537,
+          "lon": 13.6022036
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Müggelschlößchenweg",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_stopping @ (Mo-Fr 07:00-18:00)",
+        "sidewalk": "right",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    }
+  ]
+}

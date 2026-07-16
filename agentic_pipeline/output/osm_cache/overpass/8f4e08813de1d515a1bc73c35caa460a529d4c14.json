@@ -1,0 +1,3248 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-07-15T22:04:28Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 4597208,
+      "bounds": {
+        "minlat": 52.5271368,
+        "minlon": 13.3869818,
+        "maxlat": 52.5271678,
+        "maxlon": 13.3872279
+      },
+      "geometry": [
+        {
+          "lat": 52.5271368,
+          "lon": 13.3869818
+        },
+        {
+          "lat": 52.5271494,
+          "lon": 13.3870814
+        },
+        {
+          "lat": 52.5271548,
+          "lon": 13.387125
+        },
+        {
+          "lat": 52.5271678,
+          "lon": 13.3872279
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "no",
+        "lanes": "5",
+        "lanes:backward": "2",
+        "lanes:both_ways": "1",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Torstraße",
+        "parking:both": "no",
+        "postal_code": "10115",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes:backward": "through|merge_to_left",
+        "turn:lanes:both_ways": "left",
+        "turn:lanes:forward": "through|through"
+      }
+    },
+    {
+      "type": "way",
+      "id": 24242440,
+      "bounds": {
+        "minlat": 52.5295907,
+        "minlon": 13.4007918,
+        "maxlat": 52.5296118,
+        "maxlon": 13.401337
+      },
+      "geometry": [
+        {
+          "lat": 52.5296118,
+          "lon": 13.4007918
+        },
+        {
+          "lat": 52.5295987,
+          "lon": 13.4008964
+        },
+        {
+          "lat": 52.5295907,
+          "lon": 13.4010124
+        },
+        {
+          "lat": 52.5295928,
+          "lon": 13.4010762
+        },
+        {
+          "lat": 52.5296054,
+          "lon": 13.401337
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through;right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 36689634,
+      "bounds": {
+        "minlat": 52.5294287,
+        "minlon": 13.3975646,
+        "maxlat": 52.5294766,
+        "maxlon": 13.3984462
+      },
+      "geometry": [
+        {
+          "lat": 52.5294287,
+          "lon": 13.3975646
+        },
+        {
+          "lat": 52.5294369,
+          "lon": 13.3977137
+        },
+        {
+          "lat": 52.5294403,
+          "lon": 13.397776
+        },
+        {
+          "lat": 52.5294766,
+          "lon": 13.3984462
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "5",
+        "lanes:backward": "3",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "10119",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes:backward": "left|none|none"
+      }
+    },
+    {
+      "type": "way",
+      "id": 73310501,
+      "bounds": {
+        "minlat": 52.528803,
+        "minlon": 13.3949456,
+        "maxlat": 52.5292693,
+        "maxlon": 13.3968635
+      },
+      "geometry": [
+        {
+          "lat": 52.528803,
+          "lon": 13.3949456
+        },
+        {
+          "lat": 52.5289955,
+          "lon": 13.3957236
+        },
+        {
+          "lat": 52.529059,
+          "lon": 13.3959985
+        },
+        {
+          "lat": 52.5291313,
+          "lon": 13.3962957
+        },
+        {
+          "lat": 52.5292693,
+          "lon": 13.3968635
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:both": "lane",
+        "parking:both:fee": "yes",
+        "parking:both:fee:conditional": "no @ (00:00-09:00)",
+        "parking:both:orientation": "parallel",
+        "parking:both:zone": "29;38",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 73310502,
+      "bounds": {
+        "minlat": 52.5282318,
+        "minlon": 13.3924198,
+        "maxlat": 52.5283739,
+        "maxlon": 13.3931132
+      },
+      "geometry": [
+        {
+          "lat": 52.5282318,
+          "lon": 13.3924198
+        },
+        {
+          "lat": 52.5282381,
+          "lon": 13.3924506
+        },
+        {
+          "lat": 52.5282784,
+          "lon": 13.3926464
+        },
+        {
+          "lat": 52.5282918,
+          "lon": 13.3927123
+        },
+        {
+          "lat": 52.5283739,
+          "lon": 13.3931132
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "5",
+        "lanes:backward": "3",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes:backward": "left|none|none"
+      }
+    },
+    {
+      "type": "way",
+      "id": 102983787,
+      "bounds": {
+        "minlat": 52.5287526,
+        "minlon": 13.4095107,
+        "maxlat": 52.5288445,
+        "maxlon": 13.4100022
+      },
+      "geometry": [
+        {
+          "lat": 52.5287526,
+          "lon": 13.4100022
+        },
+        {
+          "lat": 52.5288044,
+          "lon": 13.4097001
+        },
+        {
+          "lat": 52.5288445,
+          "lon": 13.4095107
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through"
+      }
+    },
+    {
+      "type": "way",
+      "id": 153689810,
+      "bounds": {
+        "minlat": 52.527177,
+        "minlon": 13.4154836,
+        "maxlat": 52.52728,
+        "maxlon": 13.4156817
+      },
+      "geometry": [
+        {
+          "lat": 52.527177,
+          "lon": 13.4156817
+        },
+        {
+          "lat": 52.5272674,
+          "lon": 13.4155104
+        },
+        {
+          "lat": 52.52728,
+          "lon": 13.4154836
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 169717722,
+      "bounds": {
+        "minlat": 52.5296118,
+        "minlon": 13.4007918,
+        "maxlat": 52.5297587,
+        "maxlon": 13.4013006
+      },
+      "geometry": [
+        {
+          "lat": 52.5297587,
+          "lon": 13.4013006
+        },
+        {
+          "lat": 52.529712,
+          "lon": 13.4011098
+        },
+        {
+          "lat": 52.5296865,
+          "lon": 13.401017
+        },
+        {
+          "lat": 52.5296756,
+          "lon": 13.4009645
+        },
+        {
+          "lat": 52.5296465,
+          "lon": 13.4008735
+        },
+        {
+          "lat": 52.5296118,
+          "lon": 13.4007918
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 169717723,
+      "bounds": {
+        "minlat": 52.5271678,
+        "minlon": 13.3872279,
+        "maxlat": 52.5274079,
+        "maxlon": 13.3884627
+      },
+      "geometry": [
+        {
+          "lat": 52.5271678,
+          "lon": 13.3872279
+        },
+        {
+          "lat": 52.527197,
+          "lon": 13.3873769
+        },
+        {
+          "lat": 52.5272091,
+          "lon": 13.38744
+        },
+        {
+          "lat": 52.5273478,
+          "lon": 13.3881534
+        },
+        {
+          "lat": 52.5273663,
+          "lon": 13.3882522
+        },
+        {
+          "lat": 52.5274079,
+          "lon": 13.3884627
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "5",
+        "lanes:backward": "3",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes:backward": "left|through|through;right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 309300321,
+      "bounds": {
+        "minlat": 52.527049,
+        "minlon": 13.4143203,
+        "maxlat": 52.5275065,
+        "maxlon": 13.4152016
+      },
+      "geometry": [
+        {
+          "lat": 52.5275065,
+          "lon": 13.4143203
+        },
+        {
+          "lat": 52.5273028,
+          "lon": 13.4147724
+        },
+        {
+          "lat": 52.5272458,
+          "lon": 13.4148717
+        },
+        {
+          "lat": 52.527049,
+          "lon": 13.4152016
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "priority_road": "designated",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|through|through|through;right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 312651884,
+      "bounds": {
+        "minlat": 52.5295967,
+        "minlon": 13.4031818,
+        "maxlat": 52.5298823,
+        "maxlon": 13.4054099
+      },
+      "geometry": [
+        {
+          "lat": 52.5295967,
+          "lon": 13.4054099
+        },
+        {
+          "lat": 52.529778,
+          "lon": 13.4043516
+        },
+        {
+          "lat": 52.5298584,
+          "lon": 13.4038119
+        },
+        {
+          "lat": 52.529859,
+          "lon": 13.4038028
+        },
+        {
+          "lat": 52.5298732,
+          "lon": 13.4035987
+        },
+        {
+          "lat": 52.5298737,
+          "lon": 13.403584
+        },
+        {
+          "lat": 52.5298823,
+          "lon": 13.4033134
+        },
+        {
+          "lat": 52.5298818,
+          "lon": 13.4031818
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (00:00-09:00)",
+        "parking:right:markings": "yes",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "29;41",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 312651885,
+      "bounds": {
+        "minlat": 52.5283957,
+        "minlon": 13.3932193,
+        "maxlat": 52.5284725,
+        "maxlon": 13.3935803
+      },
+      "geometry": [
+        {
+          "lat": 52.5283957,
+          "lon": 13.3932193
+        },
+        {
+          "lat": 52.528458,
+          "lon": 13.393512
+        },
+        {
+          "lat": 52.5284725,
+          "lon": 13.3935803
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:left": "lane",
+        "parking:left:fee": "yes",
+        "parking:left:fee:conditional": "no @ (Mo-Fr 00:00-11:00; Sa-Su 00:00-09:00)",
+        "parking:left:orientation": "parallel",
+        "parking:left:restriction:conditional": "loading_only @ (Mo-Fr 07:00-11:00)",
+        "parking:left:zone": "29;38",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 312651886,
+      "bounds": {
+        "minlat": 52.5297587,
+        "minlon": 13.4013006,
+        "maxlat": 52.5298522,
+        "maxlon": 13.4024623
+      },
+      "geometry": [
+        {
+          "lat": 52.5298522,
+          "lon": 13.4024623
+        },
+        {
+          "lat": 52.5298233,
+          "lon": 13.4018563
+        },
+        {
+          "lat": 52.5298195,
+          "lon": 13.4017656
+        },
+        {
+          "lat": 52.5298166,
+          "lon": 13.4017012
+        },
+        {
+          "lat": 52.5297995,
+          "lon": 13.4015266
+        },
+        {
+          "lat": 52.5297816,
+          "lon": 13.4014277
+        },
+        {
+          "lat": 52.5297785,
+          "lon": 13.4014106
+        },
+        {
+          "lat": 52.5297701,
+          "lon": 13.4013639
+        },
+        {
+          "lat": 52.5297587,
+          "lon": 13.4013006
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left;through|through|right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 312651887,
+      "bounds": {
+        "minlat": 52.5280907,
+        "minlon": 13.3917171,
+        "maxlat": 52.5282318,
+        "maxlon": 13.3924198
+      },
+      "geometry": [
+        {
+          "lat": 52.5280907,
+          "lon": 13.3917171
+        },
+        {
+          "lat": 52.5281878,
+          "lon": 13.3922013
+        },
+        {
+          "lat": 52.5282029,
+          "lon": 13.3922733
+        },
+        {
+          "lat": 52.5282058,
+          "lon": 13.3922837
+        },
+        {
+          "lat": 52.5282179,
+          "lon": 13.3923515
+        },
+        {
+          "lat": 52.5282318,
+          "lon": 13.3924198
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:both": "no",
+        "parking:left:restriction": "no_stopping",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 312654701,
+      "bounds": {
+        "minlat": 52.5293757,
+        "minlon": 13.4052034,
+        "maxlat": 52.5294492,
+        "maxlon": 13.4056379
+      },
+      "geometry": [
+        {
+          "lat": 52.5294492,
+          "lon": 13.4052034
+        },
+        {
+          "lat": 52.5294231,
+          "lon": 13.40535
+        },
+        {
+          "lat": 52.5294051,
+          "lon": 13.4054562
+        },
+        {
+          "lat": 52.5293972,
+          "lon": 13.4055058
+        },
+        {
+          "lat": 52.5293901,
+          "lon": 13.4055503
+        },
+        {
+          "lat": 52.529382,
+          "lon": 13.4056019
+        },
+        {
+          "lat": 52.5293757,
+          "lon": 13.4056379
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 312654702,
+      "bounds": {
+        "minlat": 52.5287067,
+        "minlon": 13.4079752,
+        "maxlat": 52.5289758,
+        "maxlon": 13.4094033
+      },
+      "geometry": [
+        {
+          "lat": 52.5289758,
+          "lon": 13.4079752
+        },
+        {
+          "lat": 52.5287611,
+          "lon": 13.4091377
+        },
+        {
+          "lat": 52.5287483,
+          "lon": 13.4092003
+        },
+        {
+          "lat": 52.5287067,
+          "lon": 13.4094033
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through;right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 312654704,
+      "bounds": {
+        "minlat": 52.5286433,
+        "minlon": 13.4100022,
+        "maxlat": 52.5287526,
+        "maxlon": 13.4106998
+      },
+      "geometry": [
+        {
+          "lat": 52.5286433,
+          "lon": 13.4106998
+        },
+        {
+          "lat": 52.528713,
+          "lon": 13.4102559
+        },
+        {
+          "lat": 52.5287244,
+          "lon": 13.4101838
+        },
+        {
+          "lat": 52.5287526,
+          "lon": 13.4100022
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "through|through;right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 312654705,
+      "bounds": {
+        "minlat": 52.5285905,
+        "minlon": 13.4094033,
+        "maxlat": 52.5287067,
+        "maxlon": 13.4099673
+      },
+      "geometry": [
+        {
+          "lat": 52.5287067,
+          "lon": 13.4094033
+        },
+        {
+          "lat": 52.5286931,
+          "lon": 13.4094694
+        },
+        {
+          "lat": 52.5286778,
+          "lon": 13.4095445
+        },
+        {
+          "lat": 52.528642,
+          "lon": 13.4097194
+        },
+        {
+          "lat": 52.5286058,
+          "lon": 13.4098965
+        },
+        {
+          "lat": 52.5285905,
+          "lon": 13.4099673
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "cycleway:right:marking:both": "dashed_line",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "none",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "1.5",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "turn:lanes": "through|through;right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 312654706,
+      "bounds": {
+        "minlat": 52.5282007,
+        "minlon": 13.4101382,
+        "maxlat": 52.5285535,
+        "maxlon": 13.4118516
+      },
+      "geometry": [
+        {
+          "lat": 52.5285535,
+          "lon": 13.4101382
+        },
+        {
+          "lat": 52.5285148,
+          "lon": 13.4103171
+        },
+        {
+          "lat": 52.5285053,
+          "lon": 13.4103608
+        },
+        {
+          "lat": 52.5284003,
+          "lon": 13.4110037
+        },
+        {
+          "lat": 52.5283699,
+          "lon": 13.4111705
+        },
+        {
+          "lat": 52.5283481,
+          "lon": 13.4112904
+        },
+        {
+          "lat": 52.5283264,
+          "lon": 13.4113888
+        },
+        {
+          "lat": 52.5282487,
+          "lon": 13.411679
+        },
+        {
+          "lat": 52.5282007,
+          "lon": 13.4118516
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "name:ja": "トーア通り",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 319339413,
+      "bounds": {
+        "minlat": 52.5274406,
+        "minlon": 13.4126051,
+        "maxlat": 52.5281467,
+        "maxlon": 13.415099
+      },
+      "geometry": [
+        {
+          "lat": 52.5274406,
+          "lon": 13.415099
+        },
+        {
+          "lat": 52.5275319,
+          "lon": 13.4147836
+        },
+        {
+          "lat": 52.5276576,
+          "lon": 13.4143536
+        },
+        {
+          "lat": 52.5276651,
+          "lon": 13.4143278
+        },
+        {
+          "lat": 52.5277158,
+          "lon": 13.4141497
+        },
+        {
+          "lat": 52.5277193,
+          "lon": 13.4141373
+        },
+        {
+          "lat": 52.5279575,
+          "lon": 13.4132812
+        },
+        {
+          "lat": 52.5280305,
+          "lon": 13.4130189
+        },
+        {
+          "lat": 52.5281337,
+          "lon": 13.4126482
+        },
+        {
+          "lat": 52.5281467,
+          "lon": 13.4126051
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "name:ja": "トーア通り",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (00:00-09:00)",
+        "parking:right:markings": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "29;42",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 319339414,
+      "bounds": {
+        "minlat": 52.527401,
+        "minlon": 13.415099,
+        "maxlat": 52.5274406,
+        "maxlon": 13.4152174
+      },
+      "geometry": [
+        {
+          "lat": 52.527401,
+          "lon": 13.4152174
+        },
+        {
+          "lat": 52.5274406,
+          "lon": 13.415099
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (00:00-09:00)",
+        "parking:right:markings": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "29;42",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "none|none|merge_to_left"
+      }
+    },
+    {
+      "type": "way",
+      "id": 320894149,
+      "bounds": {
+        "minlat": 52.5295327,
+        "minlon": 13.3994238,
+        "maxlat": 52.5295514,
+        "maxlon": 13.3997543
+      },
+      "geometry": [
+        {
+          "lat": 52.5295327,
+          "lon": 13.3994238
+        },
+        {
+          "lat": 52.5295365,
+          "lon": 13.399492
+        },
+        {
+          "lat": 52.5295386,
+          "lon": 13.3995281
+        },
+        {
+          "lat": 52.5295514,
+          "lon": 13.3997543
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lanes:backward": "2",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:both": "lane",
+        "parking:both:fee": "yes",
+        "parking:both:fee:conditional": "no @ (00:00-09:00)",
+        "parking:both:orientation": "parallel",
+        "parking:both:zone": "29;38",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 414976603,
+      "bounds": {
+        "minlat": 52.5285535,
+        "minlon": 13.4099673,
+        "maxlat": 52.5285905,
+        "maxlon": 13.4101382
+      },
+      "geometry": [
+        {
+          "lat": 52.5285905,
+          "lon": 13.4099673
+        },
+        {
+          "lat": 52.5285535,
+          "lon": 13.4101382
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:marking:both": "dashed_line",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "none",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "1.5",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "turn:lanes": "through|through;right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 441788215,
+      "bounds": {
+        "minlat": 52.5274079,
+        "minlon": 13.3884627,
+        "maxlat": 52.5274387,
+        "maxlon": 13.3886121
+      },
+      "geometry": [
+        {
+          "lat": 52.5274079,
+          "lon": 13.3884627
+        },
+        {
+          "lat": 52.5274387,
+          "lon": 13.3886121
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lanes:backward": "2",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 740848375,
+      "bounds": {
+        "minlat": 52.5295771,
+        "minlon": 13.4002309,
+        "maxlat": 52.5296118,
+        "maxlon": 13.4007918
+      },
+      "geometry": [
+        {
+          "lat": 52.5295771,
+          "lon": 13.4002309
+        },
+        {
+          "lat": 52.5296118,
+          "lon": 13.4007918
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "5",
+        "lanes:backward": "2",
+        "lanes:forward": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:left": "no",
+        "parking:left:restriction": "no_stopping",
+        "parking:right": "lane",
+        "parking:right:access": "no",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:taxi": "designated",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes:forward": "left|through|through;right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101404274,
+      "bounds": {
+        "minlat": 52.5269217,
+        "minlon": 13.4152016,
+        "maxlat": 52.527049,
+        "maxlon": 13.4154048
+      },
+      "geometry": [
+        {
+          "lat": 52.527049,
+          "lon": 13.4152016
+        },
+        {
+          "lat": 52.5270226,
+          "lon": 13.4152446
+        },
+        {
+          "lat": 52.5269217,
+          "lon": 13.4154048
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "priority_road": "designated",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|through|through|through;right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101404275,
+      "bounds": {
+        "minlat": 52.52728,
+        "minlon": 13.4152174,
+        "maxlat": 52.527401,
+        "maxlon": 13.4154836
+      },
+      "geometry": [
+        {
+          "lat": 52.52728,
+          "lon": 13.4154836
+        },
+        {
+          "lat": 52.5273687,
+          "lon": 13.4152935
+        },
+        {
+          "lat": 52.527401,
+          "lon": 13.4152174
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (00:00-09:00)",
+        "parking:right:markings": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction": "loading_only",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101404342,
+      "bounds": {
+        "minlat": 52.5288445,
+        "minlon": 13.4092432,
+        "maxlat": 52.5289014,
+        "maxlon": 13.4095107
+      },
+      "geometry": [
+        {
+          "lat": 52.5288445,
+          "lon": 13.4095107
+        },
+        {
+          "lat": 52.528894,
+          "lon": 13.4092797
+        },
+        {
+          "lat": 52.5289014,
+          "lon": 13.4092432
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:marking:both": "dashed_line",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "none",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "1.5",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101404966,
+      "bounds": {
+        "minlat": 52.529618,
+        "minlon": 13.401541,
+        "maxlat": 52.529647,
+        "maxlon": 13.4019946
+      },
+      "geometry": [
+        {
+          "lat": 52.529618,
+          "lon": 13.401541
+        },
+        {
+          "lat": 52.5296315,
+          "lon": 13.4017362
+        },
+        {
+          "lat": 52.529647,
+          "lon": 13.4019946
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1102154066,
+      "bounds": {
+        "minlat": 52.5275489,
+        "minlon": 13.3891474,
+        "maxlat": 52.5277742,
+        "maxlon": 13.3901926
+      },
+      "geometry": [
+        {
+          "lat": 52.5275489,
+          "lon": 13.3891474
+        },
+        {
+          "lat": 52.5276555,
+          "lon": 13.3896437
+        },
+        {
+          "lat": 52.5276678,
+          "lon": 13.3897028
+        },
+        {
+          "lat": 52.5276837,
+          "lon": 13.3897748
+        },
+        {
+          "lat": 52.5277742,
+          "lon": 13.3901926
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1102154067,
+      "bounds": {
+        "minlat": 52.5277742,
+        "minlon": 13.3901926,
+        "maxlat": 52.5278395,
+        "maxlon": 13.3905043
+      },
+      "geometry": [
+        {
+          "lat": 52.5277742,
+          "lon": 13.3901926
+        },
+        {
+          "lat": 52.5278046,
+          "lon": 13.3903377
+        },
+        {
+          "lat": 52.5278395,
+          "lon": 13.3905043
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:left": "lane",
+        "parking:left:fee": "yes",
+        "parking:left:fee:conditional": "no @ (Mo-Fr 00:00-18:00; Sa-Su 00:00-09:00)",
+        "parking:left:markings": "yes",
+        "parking:left:orientation": "parallel",
+        "parking:left:restriction:conditional": "loading_only @ (Mo-Fr 09:00-18:00)",
+        "parking:left:zone": "29;38",
+        "parking:right": "no",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1105526086,
+      "bounds": {
+        "minlat": 52.5283373,
+        "minlon": 13.4106998,
+        "maxlat": 52.5286433,
+        "maxlon": 13.4120173
+      },
+      "geometry": [
+        {
+          "lat": 52.5283373,
+          "lon": 13.4120173
+        },
+        {
+          "lat": 52.5283991,
+          "lon": 13.4118153
+        },
+        {
+          "lat": 52.5284104,
+          "lon": 13.4117753
+        },
+        {
+          "lat": 52.5284497,
+          "lon": 13.4116359
+        },
+        {
+          "lat": 52.5285069,
+          "lon": 13.4114184
+        },
+        {
+          "lat": 52.5285496,
+          "lon": 13.4112335
+        },
+        {
+          "lat": 52.5286433,
+          "lon": 13.4106998
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "name:ja": "トーア通り",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction": "no_stopping",
+        "parking:right:restriction:conditional": "loading_only @ (Mo-So 09:00-15:00; Mo-So 18:00-06:00)",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1105526087,
+      "bounds": {
+        "minlat": 52.5275931,
+        "minlon": 13.4118516,
+        "maxlat": 52.5282007,
+        "maxlon": 13.414056
+      },
+      "geometry": [
+        {
+          "lat": 52.5282007,
+          "lon": 13.4118516
+        },
+        {
+          "lat": 52.528101,
+          "lon": 13.4122147
+        },
+        {
+          "lat": 52.5275931,
+          "lon": 13.414056
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "name:ja": "トーア通り",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "on_kerb",
+        "parking:right:fee": "no",
+        "parking:right:markings": "yes",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction": "loading_only",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126747525,
+      "bounds": {
+        "minlat": 52.5289014,
+        "minlon": 13.4090296,
+        "maxlat": 52.5289463,
+        "maxlon": 13.4092432
+      },
+      "geometry": [
+        {
+          "lat": 52.5289014,
+          "lon": 13.4092432
+        },
+        {
+          "lat": 52.5289463,
+          "lon": 13.4090296
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:marking:both": "dashed_line",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "none",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "1.5",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1401748055,
+      "bounds": {
+        "minlat": 52.5281467,
+        "minlon": 13.4120173,
+        "maxlat": 52.5283373,
+        "maxlon": 13.4126051
+      },
+      "geometry": [
+        {
+          "lat": 52.5281467,
+          "lon": 13.4126051
+        },
+        {
+          "lat": 52.5282275,
+          "lon": 13.4123383
+        },
+        {
+          "lat": 52.5283022,
+          "lon": 13.4121196
+        },
+        {
+          "lat": 52.5283373,
+          "lon": 13.4120173
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "name:ja": "トーア通り",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Sa 00:00-14:00; Su 00:00-09:00)",
+        "parking:right:markings": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction": "loading_only",
+        "parking:right:zone": "29;42",
+        "postal_code": "10119",
+        "restriction:conditional": "loading_only @ (Mo-Fr 06:00-14:00; Sa 06:00-14:00)",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1401748062,
+      "bounds": {
+        "minlat": 52.5275065,
+        "minlon": 13.414056,
+        "maxlat": 52.5275931,
+        "maxlon": 13.4143203
+      },
+      "geometry": [
+        {
+          "lat": 52.5275931,
+          "lon": 13.414056
+        },
+        {
+          "lat": 52.5275365,
+          "lon": 13.4142363
+        },
+        {
+          "lat": 52.5275065,
+          "lon": 13.4143203
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "name:ja": "トーア通り",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822149,
+      "bounds": {
+        "minlat": 52.5274387,
+        "minlon": 13.3886121,
+        "maxlat": 52.5274764,
+        "maxlon": 13.3887951
+      },
+      "geometry": [
+        {
+          "lat": 52.5274387,
+          "lon": 13.3886121
+        },
+        {
+          "lat": 52.5274764,
+          "lon": 13.3887951
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lanes:backward": "2",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:left": "lane",
+        "parking:left:fee": "yes",
+        "parking:left:fee:conditional": "no @ (Mo-Fr 00:00-18:00; Sa-Su 00:00-09:00)",
+        "parking:left:markings": "yes",
+        "parking:left:orientation": "parallel",
+        "parking:left:restriction:conditional": "loading_only @ (Mo-Fr 09:00-18:00)",
+        "parking:left:zone": "29;38",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822150,
+      "bounds": {
+        "minlat": 52.5278534,
+        "minlon": 13.3905704,
+        "maxlat": 52.5280203,
+        "maxlon": 13.391366
+      },
+      "geometry": [
+        {
+          "lat": 52.5278534,
+          "lon": 13.3905704
+        },
+        {
+          "lat": 52.5280203,
+          "lon": 13.391366
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:both": "lane",
+        "parking:both:fee": "yes",
+        "parking:both:fee:conditional": "no @ (00:00-09:00)",
+        "parking:both:orientation": "parallel",
+        "parking:both:zone": "29;38",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822151,
+      "bounds": {
+        "minlat": 52.5278395,
+        "minlon": 13.3905043,
+        "maxlat": 52.5278534,
+        "maxlon": 13.3905704
+      },
+      "geometry": [
+        {
+          "lat": 52.5278395,
+          "lon": 13.3905043
+        },
+        {
+          "lat": 52.5278534,
+          "lon": 13.3905704
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:both": "lane",
+        "parking:both:fee": "yes",
+        "parking:both:orientation": "parallel",
+        "parking:both:zone": "29;38",
+        "parking:left:fee:conditional": "no @ (Mo-Fr 00:00-18:00; Sa-Su 00:00-09:00)",
+        "parking:left:markings": "yes",
+        "parking:left:restriction:conditional": "loading_only @ (Mo-Fr 09:00-18:00)",
+        "parking:right:fee:conditional": "no @ (00:00-09:00)",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822153,
+      "bounds": {
+        "minlat": 52.5280203,
+        "minlon": 13.391366,
+        "maxlat": 52.5280907,
+        "maxlon": 13.3917171
+      },
+      "geometry": [
+        {
+          "lat": 52.5280203,
+          "lon": 13.391366
+        },
+        {
+          "lat": 52.5280907,
+          "lon": 13.3917171
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:left": "no",
+        "parking:left:restriction": "no_stopping",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (00:00-09:00)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "29;38",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822154,
+      "bounds": {
+        "minlat": 52.5283739,
+        "minlon": 13.3931132,
+        "maxlat": 52.5283957,
+        "maxlon": 13.3932193
+      },
+      "geometry": [
+        {
+          "lat": 52.5283739,
+          "lon": 13.3931132
+        },
+        {
+          "lat": 52.5283793,
+          "lon": 13.3931395
+        },
+        {
+          "lat": 52.5283957,
+          "lon": 13.3932193
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "5",
+        "lanes:backward": "3",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:left": "lane",
+        "parking:left:fee": "yes",
+        "parking:left:fee:conditional": "no @ (Mo-Fr 00:00-11:00; Sa-Su 00:00-09:00)",
+        "parking:left:orientation": "parallel",
+        "parking:left:restriction:conditional": "loading_only @ (Mo-Fr 07:00-11:00)",
+        "parking:left:zone": "29;38",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes:backward": "left|none|none"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822155,
+      "bounds": {
+        "minlat": 52.5284725,
+        "minlon": 13.3935803,
+        "maxlat": 52.528526,
+        "maxlon": 13.3938143
+      },
+      "geometry": [
+        {
+          "lat": 52.5284725,
+          "lon": 13.3935803
+        },
+        {
+          "lat": 52.528491,
+          "lon": 13.3936675
+        },
+        {
+          "lat": 52.528526,
+          "lon": 13.3938143
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:both": "no",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822156,
+      "bounds": {
+        "minlat": 52.5286611,
+        "minlon": 13.3943669,
+        "maxlat": 52.5287653,
+        "maxlon": 13.3947935
+      },
+      "geometry": [
+        {
+          "lat": 52.5286611,
+          "lon": 13.3943669
+        },
+        {
+          "lat": 52.5287152,
+          "lon": 13.3945909
+        },
+        {
+          "lat": 52.5287653,
+          "lon": 13.3947935
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-16:00; Sa-Su 00:00-09:00)",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "loading_only @ (Mo-Fr 07:00-16:00)",
+        "parking:right:zone": "29;38",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822157,
+      "bounds": {
+        "minlat": 52.5287653,
+        "minlon": 13.3947935,
+        "maxlat": 52.528803,
+        "maxlon": 13.3949456
+      },
+      "geometry": [
+        {
+          "lat": 52.5287653,
+          "lon": 13.3947935
+        },
+        {
+          "lat": 52.528803,
+          "lon": 13.3949456
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (00:00-09:00)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "29;38",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822158,
+      "bounds": {
+        "minlat": 52.528526,
+        "minlon": 13.3938143,
+        "maxlat": 52.5286611,
+        "maxlon": 13.3943669
+      },
+      "geometry": [
+        {
+          "lat": 52.528526,
+          "lon": 13.3938143
+        },
+        {
+          "lat": 52.5285711,
+          "lon": 13.3939942
+        },
+        {
+          "lat": 52.5286611,
+          "lon": 13.3943669
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:both": "no",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822160,
+      "bounds": {
+        "minlat": 52.5292693,
+        "minlon": 13.3968635,
+        "maxlat": 52.5294287,
+        "maxlon": 13.3975646
+      },
+      "geometry": [
+        {
+          "lat": 52.5292693,
+          "lon": 13.3968635
+        },
+        {
+          "lat": 52.5293492,
+          "lon": 13.3971919
+        },
+        {
+          "lat": 52.5293665,
+          "lon": 13.397264
+        },
+        {
+          "lat": 52.5293793,
+          "lon": 13.3973205
+        },
+        {
+          "lat": 52.5294287,
+          "lon": 13.3975646
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:both": "lane",
+        "parking:both:orientation": "parallel",
+        "parking:left:fee": "yes",
+        "parking:left:fee:conditional": "no @ (00:00-09:00)",
+        "parking:left:zone": "29;38",
+        "parking:right:fee": "no",
+        "parking:right:restriction": "loading_only",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822161,
+      "bounds": {
+        "minlat": 52.529495,
+        "minlon": 13.3987547,
+        "maxlat": 52.5295085,
+        "maxlon": 13.3989938
+      },
+      "geometry": [
+        {
+          "lat": 52.529495,
+          "lon": 13.3987547
+        },
+        {
+          "lat": 52.5295085,
+          "lon": 13.3989938
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lanes:backward": "2",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:both": "lane",
+        "parking:both:fee": "yes",
+        "parking:both:fee:conditional": "no @ (00:00-09:00)",
+        "parking:both:orientation": "parallel",
+        "parking:both:zone": "29;38",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822162,
+      "bounds": {
+        "minlat": 52.5295085,
+        "minlon": 13.3989938,
+        "maxlat": 52.5295327,
+        "maxlon": 13.3994238
+      },
+      "geometry": [
+        {
+          "lat": 52.5295085,
+          "lon": 13.3989938
+        },
+        {
+          "lat": 52.5295327,
+          "lon": 13.3994238
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lanes:backward": "2",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:both": "lane",
+        "parking:both:fee": "yes",
+        "parking:both:orientation": "parallel",
+        "parking:both:zone": "29;38",
+        "parking:left:fee:conditional": "no @ (00:00-09:00)",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-16:00; Sa-Su 00:00-09:00)",
+        "parking:right:restriction:conditional": "loading_only @ (Mo-Fr 07:00-16:00)",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822163,
+      "bounds": {
+        "minlat": 52.5294766,
+        "minlon": 13.3984462,
+        "maxlat": 52.529495,
+        "maxlon": 13.3987547
+      },
+      "geometry": [
+        {
+          "lat": 52.5294766,
+          "lon": 13.3984462
+        },
+        {
+          "lat": 52.529495,
+          "lon": 13.3987547
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lanes:backward": "2",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (00:00-09:00)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "29;38",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822164,
+      "bounds": {
+        "minlat": 52.5295514,
+        "minlon": 13.3997543,
+        "maxlat": 52.5295581,
+        "maxlon": 13.3998731
+      },
+      "geometry": [
+        {
+          "lat": 52.5295514,
+          "lon": 13.3997543
+        },
+        {
+          "lat": 52.5295581,
+          "lon": 13.3998731
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lanes:backward": "2",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:both": "lane",
+        "parking:both:fee": "yes",
+        "parking:both:orientation": "parallel",
+        "parking:both:zone": "29;38",
+        "parking:left:fee:conditional": "no @ (Mo-Sa 00:00-18:00; Su 00:00-09:00)",
+        "parking:left:restriction:conditional": "loading_only @ (Mo-Sa 08:00-18:00)",
+        "parking:right:fee:conditional": "no @ (00:00-09:00)",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822165,
+      "bounds": {
+        "minlat": 52.5295581,
+        "minlon": 13.3998731,
+        "maxlat": 52.5295771,
+        "maxlon": 13.4002309
+      },
+      "geometry": [
+        {
+          "lat": 52.5295581,
+          "lon": 13.3998731
+        },
+        {
+          "lat": 52.5295771,
+          "lon": 13.4002309
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lanes:backward": "2",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:both": "lane",
+        "parking:both:orientation": "parallel",
+        "parking:left:fee:conditional": "no @ (Mo-Sa 00:00-18:00; Su 00:00-09:00)",
+        "parking:left:restriction:conditional": "loading_only @ (Mo-Sa 08:00-18:00)",
+        "parking:left:zone": "29;38",
+        "parking:right:access": "no",
+        "parking:right:fee": "no",
+        "parking:right:taxi": "designated",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822166,
+      "bounds": {
+        "minlat": 52.5289758,
+        "minlon": 13.4075882,
+        "maxlat": 52.529041,
+        "maxlon": 13.4079752
+      },
+      "geometry": [
+        {
+          "lat": 52.529041,
+          "lon": 13.4075882
+        },
+        {
+          "lat": 52.5289758,
+          "lon": 13.4079752
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-17:00; Sa-Su 00:00-09:00)",
+        "parking:right:markings": "yes",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "loading_only @ (08:00-17:00)",
+        "parking:right:zone": "29;41",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822167,
+      "bounds": {
+        "minlat": 52.5292188,
+        "minlon": 13.4063216,
+        "maxlat": 52.529258,
+        "maxlon": 13.4065493
+      },
+      "geometry": [
+        {
+          "lat": 52.529258,
+          "lon": 13.4063216
+        },
+        {
+          "lat": 52.5292188,
+          "lon": 13.4065493
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-18:00; Sa-Su 00:00-09:00)",
+        "parking:right:markings": "yes",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "loading_only @ (Mo-Fr 09:00-18:00)",
+        "parking:right:zone": "29;41",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822168,
+      "bounds": {
+        "minlat": 52.529258,
+        "minlon": 13.4056379,
+        "maxlat": 52.5293757,
+        "maxlon": 13.4063216
+      },
+      "geometry": [
+        {
+          "lat": 52.5293757,
+          "lon": 13.4056379
+        },
+        {
+          "lat": 52.529258,
+          "lon": 13.4063216
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (00:00-09:00)",
+        "parking:right:markings": "yes",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "29;41",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822169,
+      "bounds": {
+        "minlat": 52.529041,
+        "minlon": 13.4065493,
+        "maxlat": 52.5292188,
+        "maxlon": 13.4075882
+      },
+      "geometry": [
+        {
+          "lat": 52.5292188,
+          "lon": 13.4065493
+        },
+        {
+          "lat": 52.5290621,
+          "lon": 13.4074602
+        },
+        {
+          "lat": 52.529041,
+          "lon": 13.4075882
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (00:00-09:00)",
+        "parking:right:markings": "yes",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "29;41",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822170,
+      "bounds": {
+        "minlat": 52.5294492,
+        "minlon": 13.4044168,
+        "maxlat": 52.5295895,
+        "maxlon": 13.4052034
+      },
+      "geometry": [
+        {
+          "lat": 52.5295895,
+          "lon": 13.4044168
+        },
+        {
+          "lat": 52.5294492,
+          "lon": 13.4052034
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (00:00-09:00)",
+        "parking:right:markings": "yes",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "29;41",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822171,
+      "bounds": {
+        "minlat": 52.5295895,
+        "minlon": 13.4040249,
+        "maxlat": 52.5296594,
+        "maxlon": 13.4044168
+      },
+      "geometry": [
+        {
+          "lat": 52.5296594,
+          "lon": 13.4040249
+        },
+        {
+          "lat": 52.5295895,
+          "lon": 13.4044168
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-17:00; Sa-Su 00:00-09:00)",
+        "parking:right:markings": "yes",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "loading_only @ (Mo-Fr 08:00-17:00)",
+        "parking:right:zone": "29;41",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822172,
+      "bounds": {
+        "minlat": 52.5296594,
+        "minlon": 13.4035093,
+        "maxlat": 52.5297192,
+        "maxlon": 13.4040249
+      },
+      "geometry": [
+        {
+          "lat": 52.5297192,
+          "lon": 13.4035093
+        },
+        {
+          "lat": 52.5297125,
+          "lon": 13.4036148
+        },
+        {
+          "lat": 52.5296839,
+          "lon": 13.4038877
+        },
+        {
+          "lat": 52.5296594,
+          "lon": 13.4040249
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (00:00-09:00)",
+        "parking:right:markings": "yes",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "29;41",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822174,
+      "bounds": {
+        "minlat": 52.5297142,
+        "minlon": 13.40312,
+        "maxlat": 52.5297238,
+        "maxlon": 13.4035093
+      },
+      "geometry": [
+        {
+          "lat": 52.5297142,
+          "lon": 13.40312
+        },
+        {
+          "lat": 52.5297223,
+          "lon": 13.4032609
+        },
+        {
+          "lat": 52.5297238,
+          "lon": 13.4034356
+        },
+        {
+          "lat": 52.5297192,
+          "lon": 13.4035093
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-18:00; Sa-Su 00:00-09:00)",
+        "parking:right:markings": "yes",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "loading_only @ (Mo-Fr 09:00-18:00)",
+        "parking:right:zone": "29;41",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822175,
+      "bounds": {
+        "minlat": 52.5296709,
+        "minlon": 13.4023929,
+        "maxlat": 52.5297142,
+        "maxlon": 13.40312
+      },
+      "geometry": [
+        {
+          "lat": 52.5296709,
+          "lon": 13.4023929
+        },
+        {
+          "lat": 52.5297055,
+          "lon": 13.4029695
+        },
+        {
+          "lat": 52.5297099,
+          "lon": 13.4030458
+        },
+        {
+          "lat": 52.5297142,
+          "lon": 13.40312
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822176,
+      "bounds": {
+        "minlat": 52.529647,
+        "minlon": 13.4019946,
+        "maxlat": 52.5296709,
+        "maxlon": 13.4023929
+      },
+      "geometry": [
+        {
+          "lat": 52.529647,
+          "lon": 13.4019946
+        },
+        {
+          "lat": 52.5296709,
+          "lon": 13.4023929
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:markings": "yes",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction": "loading_only",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822177,
+      "bounds": {
+        "minlat": 52.5298522,
+        "minlon": 13.4024623,
+        "maxlat": 52.5298818,
+        "maxlon": 13.4031818
+      },
+      "geometry": [
+        {
+          "lat": 52.5298818,
+          "lon": 13.4031818
+        },
+        {
+          "lat": 52.5298768,
+          "lon": 13.403019
+        },
+        {
+          "lat": 52.5298706,
+          "lon": 13.4028649
+        },
+        {
+          "lat": 52.5298522,
+          "lon": 13.4024623
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822179,
+      "bounds": {
+        "minlat": 52.5295301,
+        "minlon": 13.4054099,
+        "maxlat": 52.5295967,
+        "maxlon": 13.4058078
+      },
+      "geometry": [
+        {
+          "lat": 52.5295301,
+          "lon": 13.4058078
+        },
+        {
+          "lat": 52.5295417,
+          "lon": 13.4057413
+        },
+        {
+          "lat": 52.5295525,
+          "lon": 13.4056795
+        },
+        {
+          "lat": 52.5295604,
+          "lon": 13.4056284
+        },
+        {
+          "lat": 52.5295967,
+          "lon": 13.4054099
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822180,
+      "bounds": {
+        "minlat": 52.5291088,
+        "minlon": 13.4058078,
+        "maxlat": 52.5295301,
+        "maxlon": 13.4082286
+      },
+      "geometry": [
+        {
+          "lat": 52.5291088,
+          "lon": 13.4082286
+        },
+        {
+          "lat": 52.529134,
+          "lon": 13.4080975
+        },
+        {
+          "lat": 52.5292634,
+          "lon": 13.4073453
+        },
+        {
+          "lat": 52.5292807,
+          "lon": 13.4072443
+        },
+        {
+          "lat": 52.5292941,
+          "lon": 13.4071669
+        },
+        {
+          "lat": 52.5295301,
+          "lon": 13.4058078
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (00:00-09:00)",
+        "parking:right:markings": "yes",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "29;41",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1460822181,
+      "bounds": {
+        "minlat": 52.5289463,
+        "minlon": 13.4082286,
+        "maxlat": 52.5291088,
+        "maxlon": 13.4090296
+      },
+      "geometry": [
+        {
+          "lat": 52.5289463,
+          "lon": 13.4090296
+        },
+        {
+          "lat": 52.5289989,
+          "lon": 13.4087799
+        },
+        {
+          "lat": 52.5290809,
+          "lon": 13.4083651
+        },
+        {
+          "lat": 52.5291088,
+          "lon": 13.4082286
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "10119",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1479176884,
+      "bounds": {
+        "minlat": 52.5275083,
+        "minlon": 13.3889499,
+        "maxlat": 52.5275489,
+        "maxlon": 13.3891474
+      },
+      "geometry": [
+        {
+          "lat": 52.5275083,
+          "lon": 13.3889499
+        },
+        {
+          "lat": 52.5275489,
+          "lon": 13.3891474
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lanes:backward": "2",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:left": "lane",
+        "parking:left:fee": "yes",
+        "parking:left:fee:conditional": "no @ (Mo-Fr 00:00-18:00; Sa-Su 00:00-09:00)",
+        "parking:left:markings": "yes",
+        "parking:left:orientation": "parallel",
+        "parking:left:restriction:conditional": "loading_only @ (Mo-Fr 09:00-18:00)",
+        "parking:left:zone": "29;38",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1479176885,
+      "bounds": {
+        "minlat": 52.5274764,
+        "minlon": 13.3887951,
+        "maxlat": 52.5275083,
+        "maxlon": 13.3889499
+      },
+      "geometry": [
+        {
+          "lat": 52.5274764,
+          "lon": 13.3887951
+        },
+        {
+          "lat": 52.5275083,
+          "lon": 13.3889499
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lanes:backward": "2",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Torstraße",
+        "parking:left": "lane",
+        "parking:left:fee": "yes",
+        "parking:left:fee:conditional": "no @ (Mo-Fr 00:00-18:00; Sa-Su 00:00-09:00)",
+        "parking:left:markings": "yes",
+        "parking:left:orientation": "parallel",
+        "parking:left:restriction:conditional": "loading_only @ (Mo-Fr 09:00-18:00)",
+        "parking:left:zone": "29;38",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction": "loading_only",
+        "postal_code": "10115",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    }
+  ]
+}

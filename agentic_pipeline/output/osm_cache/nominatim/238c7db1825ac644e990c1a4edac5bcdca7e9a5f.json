@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 145611849,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "node",
+    "osm_id": 3933855829,
+    "lat": "52.5522617",
+    "lon": "13.3814583",
+    "category": "railway",
+    "type": "station",
+    "place_rank": 30,
+    "importance": 0.3876315200642101,
+    "addresstype": "railway",
+    "name": "Pankstraße",
+    "display_name": "Pankstraße, Badstraße, Gartenstadt Atlantic, Soldiner Kiez, Gesundbrunnen, Mitte, Berlin, 13357, Deutschland",
+    "boundingbox": [
+      "52.5472617",
+      "52.5572617",
+      "13.3764583",
+      "13.3864583"
+    ]
+  }
+]

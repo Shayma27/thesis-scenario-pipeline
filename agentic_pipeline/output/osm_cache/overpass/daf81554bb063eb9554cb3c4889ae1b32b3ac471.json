@@ -1,0 +1,714 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-07-15T20:44:30Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 24205285,
+      "bounds": {
+        "minlat": 52.430614,
+        "minlon": 13.6707536,
+        "maxlat": 52.431844,
+        "maxlon": 13.6709065
+      },
+      "geometry": [
+        {
+          "lat": 52.430614,
+          "lon": 13.6708346
+        },
+        {
+          "lat": 52.4306997,
+          "lon": 13.670882
+        },
+        {
+          "lat": 52.4307998,
+          "lon": 13.6709065
+        },
+        {
+          "lat": 52.4308968,
+          "lon": 13.6708962
+        },
+        {
+          "lat": 52.4310022,
+          "lon": 13.6708726
+        },
+        {
+          "lat": 52.4312162,
+          "lon": 13.6708214
+        },
+        {
+          "lat": 52.4313978,
+          "lon": 13.6707761
+        },
+        {
+          "lat": 52.4315506,
+          "lon": 13.6707536
+        },
+        {
+          "lat": 52.4316676,
+          "lon": 13.6707599
+        },
+        {
+          "lat": 52.431844,
+          "lon": 13.6708485
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "1",
+        "lit": "no",
+        "maxspeed": "30",
+        "name": "Straße zum Müggelhort",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:both": "no",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 24205286,
+      "bounds": {
+        "minlat": 52.4322376,
+        "minlon": 13.6744692,
+        "maxlat": 52.4330317,
+        "maxlon": 13.675977
+      },
+      "geometry": [
+        {
+          "lat": 52.4322376,
+          "lon": 13.6744692
+        },
+        {
+          "lat": 52.4323276,
+          "lon": 13.6745242
+        },
+        {
+          "lat": 52.4324505,
+          "lon": 13.6746824
+        },
+        {
+          "lat": 52.4328226,
+          "lon": 13.6752754
+        },
+        {
+          "lat": 52.4328631,
+          "lon": 13.6753599
+        },
+        {
+          "lat": 52.4330049,
+          "lon": 13.6759414
+        },
+        {
+          "lat": 52.4330317,
+          "lon": 13.675977
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "no",
+        "operator:type": "private",
+        "surface": "compacted"
+      }
+    },
+    {
+      "type": "way",
+      "id": 35097037,
+      "bounds": {
+        "minlat": 52.4315976,
+        "minlon": 13.6736575,
+        "maxlat": 52.4322888,
+        "maxlon": 13.6738915
+      },
+      "geometry": [
+        {
+          "lat": 52.4315976,
+          "lon": 13.6737976
+        },
+        {
+          "lat": 52.4317833,
+          "lon": 13.6738722
+        },
+        {
+          "lat": 52.4319071,
+          "lon": 13.6738915
+        },
+        {
+          "lat": 52.4320216,
+          "lon": 13.6738558
+        },
+        {
+          "lat": 52.4321186,
+          "lon": 13.6737929
+        },
+        {
+          "lat": 52.4322131,
+          "lon": 13.6737011
+        },
+        {
+          "lat": 52.4322888,
+          "lon": 13.6736575
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "no",
+        "name": "Elsnerweg",
+        "operator:type": "private",
+        "postal_code": "12559",
+        "smoothness": "very_bad",
+        "surface": "fine_gravel"
+      }
+    },
+    {
+      "type": "way",
+      "id": 35097083,
+      "bounds": {
+        "minlat": 52.431844,
+        "minlon": 13.6703486,
+        "maxlat": 52.4324537,
+        "maxlon": 13.6708485
+      },
+      "geometry": [
+        {
+          "lat": 52.431844,
+          "lon": 13.6708485
+        },
+        {
+          "lat": 52.431917,
+          "lon": 13.6708061
+        },
+        {
+          "lat": 52.4320652,
+          "lon": 13.6707699
+        },
+        {
+          "lat": 52.4321805,
+          "lon": 13.6706979
+        },
+        {
+          "lat": 52.4324537,
+          "lon": 13.6703486
+        }
+      ],
+      "tags": {
+        "highway": "path",
+        "lit": "no",
+        "smoothness": "bad",
+        "surface": "dirt",
+        "width": "1.5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 35097117,
+      "bounds": {
+        "minlat": 52.4236367,
+        "minlon": 13.6483956,
+        "maxlat": 52.4317721,
+        "maxlon": 13.6707599
+      },
+      "geometry": [
+        {
+          "lat": 52.4238022,
+          "lon": 13.6483956
+        },
+        {
+          "lat": 52.4237847,
+          "lon": 13.6486827
+        },
+        {
+          "lat": 52.4236367,
+          "lon": 13.650025
+        },
+        {
+          "lat": 52.423667,
+          "lon": 13.6502767
+        },
+        {
+          "lat": 52.4245963,
+          "lon": 13.6518957
+        },
+        {
+          "lat": 52.4247282,
+          "lon": 13.6521173
+        },
+        {
+          "lat": 52.4250828,
+          "lon": 13.6527173
+        },
+        {
+          "lat": 52.4253189,
+          "lon": 13.6529727
+        },
+        {
+          "lat": 52.4255449,
+          "lon": 13.6533119
+        },
+        {
+          "lat": 52.4257848,
+          "lon": 13.6537399
+        },
+        {
+          "lat": 52.426194,
+          "lon": 13.6544334
+        },
+        {
+          "lat": 52.4268939,
+          "lon": 13.6555143
+        },
+        {
+          "lat": 52.427033,
+          "lon": 13.655739
+        },
+        {
+          "lat": 52.4272184,
+          "lon": 13.6560993
+        },
+        {
+          "lat": 52.4274551,
+          "lon": 13.6563628
+        },
+        {
+          "lat": 52.4276875,
+          "lon": 13.6567653
+        },
+        {
+          "lat": 52.4284877,
+          "lon": 13.6581176
+        },
+        {
+          "lat": 52.4287768,
+          "lon": 13.6584884
+        },
+        {
+          "lat": 52.4290975,
+          "lon": 13.6588984
+        },
+        {
+          "lat": 52.4293412,
+          "lon": 13.6592742
+        },
+        {
+          "lat": 52.4294384,
+          "lon": 13.6593916
+        },
+        {
+          "lat": 52.4299785,
+          "lon": 13.6602469
+        },
+        {
+          "lat": 52.430061,
+          "lon": 13.6604724
+        },
+        {
+          "lat": 52.4301937,
+          "lon": 13.6611986
+        },
+        {
+          "lat": 52.4308757,
+          "lon": 13.6646136
+        },
+        {
+          "lat": 52.4314604,
+          "lon": 13.667088
+        },
+        {
+          "lat": 52.4315816,
+          "lon": 13.6677327
+        },
+        {
+          "lat": 52.4317414,
+          "lon": 13.6698887
+        },
+        {
+          "lat": 52.4317721,
+          "lon": 13.670485
+        },
+        {
+          "lat": 52.4317362,
+          "lon": 13.6706167
+        },
+        {
+          "lat": 52.4316676,
+          "lon": 13.6707599
+        }
+      ],
+      "tags": {
+        "highway": "track",
+        "lit": "no",
+        "motor_vehicle": "forestry",
+        "sidewalk": "no",
+        "smoothness": "bad",
+        "surface": "gravel",
+        "tracktype": "grade3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 51266179,
+      "bounds": {
+        "minlat": 52.4312224,
+        "minlon": 13.6737976,
+        "maxlat": 52.4315976,
+        "maxlon": 13.6767242
+      },
+      "geometry": [
+        {
+          "lat": 52.4312224,
+          "lon": 13.6767242
+        },
+        {
+          "lat": 52.4312309,
+          "lon": 13.6766458
+        },
+        {
+          "lat": 52.4313201,
+          "lon": 13.6747164
+        },
+        {
+          "lat": 52.4313925,
+          "lon": 13.674436
+        },
+        {
+          "lat": 52.4315694,
+          "lon": 13.6738376
+        },
+        {
+          "lat": 52.4315976,
+          "lon": 13.6737976
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "no",
+        "name": "Elsnerweg",
+        "operator:type": "private",
+        "postal_code": "12559",
+        "sidewalk": "no",
+        "smoothness": "very_bad",
+        "surface": "fine_gravel"
+      }
+    },
+    {
+      "type": "way",
+      "id": 176031308,
+      "bounds": {
+        "minlat": 52.4323276,
+        "minlon": 13.6703486,
+        "maxlat": 52.4325178,
+        "maxlon": 13.6745242
+      },
+      "geometry": [
+        {
+          "lat": 52.4324537,
+          "lon": 13.6703486
+        },
+        {
+          "lat": 52.4325096,
+          "lon": 13.6714099
+        },
+        {
+          "lat": 52.4325178,
+          "lon": 13.672143
+        },
+        {
+          "lat": 52.4324486,
+          "lon": 13.6731194
+        },
+        {
+          "lat": 52.4323276,
+          "lon": 13.6745242
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "lit": "no",
+        "name": "Am Müggelsee",
+        "name:etymology:wikidata": "Q694789",
+        "name:etymology:wikipedia": "de:Müggelsee",
+        "smoothness": "bad",
+        "surface": "dirt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 176031381,
+      "bounds": {
+        "minlat": 52.431844,
+        "minlon": 13.6708485,
+        "maxlat": 52.4323219,
+        "maxlon": 13.6741242
+      },
+      "geometry": [
+        {
+          "lat": 52.431844,
+          "lon": 13.6708485
+        },
+        {
+          "lat": 52.4319,
+          "lon": 13.6709167
+        },
+        {
+          "lat": 52.4319429,
+          "lon": 13.671001
+        },
+        {
+          "lat": 52.4319922,
+          "lon": 13.6711245
+        },
+        {
+          "lat": 52.4321881,
+          "lon": 13.6719082
+        },
+        {
+          "lat": 52.4322423,
+          "lon": 13.6721818
+        },
+        {
+          "lat": 52.4322939,
+          "lon": 13.6724676
+        },
+        {
+          "lat": 52.4323135,
+          "lon": 13.6726526
+        },
+        {
+          "lat": 52.4323219,
+          "lon": 13.6729465
+        },
+        {
+          "lat": 52.4323213,
+          "lon": 13.6733087
+        },
+        {
+          "lat": 52.4322888,
+          "lon": 13.6736575
+        },
+        {
+          "lat": 52.4322625,
+          "lon": 13.6741242
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "no",
+        "maxspeed": "30",
+        "name": "Straße zum Müggelhort",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:both": "no",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 178447861,
+      "bounds": {
+        "minlat": 52.429044,
+        "minlon": 13.6712947,
+        "maxlat": 52.4322423,
+        "maxlon": 13.6722864
+      },
+      "geometry": [
+        {
+          "lat": 52.4322423,
+          "lon": 13.6721818
+        },
+        {
+          "lat": 52.4320533,
+          "lon": 13.6722864
+        },
+        {
+          "lat": 52.4318435,
+          "lon": 13.671475
+        },
+        {
+          "lat": 52.4316539,
+          "lon": 13.6712947
+        },
+        {
+          "lat": 52.4310175,
+          "lon": 13.671555
+        },
+        {
+          "lat": 52.4308408,
+          "lon": 13.6721633
+        },
+        {
+          "lat": 52.4304453,
+          "lon": 13.6722173
+        },
+        {
+          "lat": 52.4302449,
+          "lon": 13.6721504
+        },
+        {
+          "lat": 52.4298334,
+          "lon": 13.6719702
+        },
+        {
+          "lat": 52.4295275,
+          "lon": 13.6722545
+        },
+        {
+          "lat": 52.4294212,
+          "lon": 13.6722061
+        },
+        {
+          "lat": 52.429044,
+          "lon": 13.6718941
+        }
+      ],
+      "tags": {
+        "check_date:surface": "2023-01-22",
+        "highway": "path",
+        "informal": "yes",
+        "lit": "no",
+        "smoothness": "very_bad",
+        "surface": "dirt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 326228602,
+      "bounds": {
+        "minlat": 52.4322423,
+        "minlon": 13.672143,
+        "maxlat": 52.4325178,
+        "maxlon": 13.6721818
+      },
+      "geometry": [
+        {
+          "lat": 52.4325178,
+          "lon": 13.672143
+        },
+        {
+          "lat": 52.4322423,
+          "lon": 13.6721818
+        }
+      ],
+      "tags": {
+        "check_date:surface": "2022-03-27",
+        "highway": "path",
+        "informal": "yes",
+        "lit": "no",
+        "smoothness": "very_bad",
+        "surface": "dirt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 376878298,
+      "bounds": {
+        "minlat": 52.4316971,
+        "minlon": 13.6722864,
+        "maxlat": 52.4320533,
+        "maxlon": 13.6733925
+      },
+      "geometry": [
+        {
+          "lat": 52.4320533,
+          "lon": 13.6722864
+        },
+        {
+          "lat": 52.4316971,
+          "lon": 13.6733925
+        }
+      ],
+      "tags": {
+        "highway": "path",
+        "informal": "yes",
+        "smoothness": "very_bad",
+        "surface": "dirt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1197648962,
+      "bounds": {
+        "minlat": 52.4315955,
+        "minlon": 13.6733925,
+        "maxlat": 52.4316971,
+        "maxlon": 13.6737976
+      },
+      "geometry": [
+        {
+          "lat": 52.4315976,
+          "lon": 13.6737976
+        },
+        {
+          "lat": 52.4315955,
+          "lon": 13.6737312
+        },
+        {
+          "lat": 52.4316971,
+          "lon": 13.6733925
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "no",
+        "name": "Elsnerweg",
+        "operator:type": "private",
+        "postal_code": "12559",
+        "sidewalk": "no",
+        "smoothness": "bad",
+        "surface": "fine_gravel",
+        "vehicle": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1447999749,
+      "bounds": {
+        "minlat": 52.4321383,
+        "minlon": 13.6741242,
+        "maxlat": 52.4322625,
+        "maxlon": 13.675806
+      },
+      "geometry": [
+        {
+          "lat": 52.4322625,
+          "lon": 13.6741242
+        },
+        {
+          "lat": 52.4322376,
+          "lon": 13.6744692
+        },
+        {
+          "lat": 52.4321718,
+          "lon": 13.675382
+        },
+        {
+          "lat": 52.4321383,
+          "lon": 13.675806
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "no",
+        "maxspeed": "30",
+        "name": "Straße zum Müggelhort",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "postal_code": "12559",
+        "sidewalk:both": "no",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    }
+  ]
+}

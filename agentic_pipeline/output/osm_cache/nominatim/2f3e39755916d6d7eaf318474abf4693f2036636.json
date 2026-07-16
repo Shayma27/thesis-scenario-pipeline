@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 146805737,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 176031381,
+    "lat": "52.4322910",
+    "lon": "13.6724514",
+    "category": "highway",
+    "type": "residential",
+    "place_rank": 26,
+    "importance": 0.05342208819714653,
+    "addresstype": "road",
+    "name": "Straße zum Müggelhort",
+    "display_name": "Straße zum Müggelhort, Müggelhort, Köpenick, Treptow-Köpenick, Berlin, 12559, Deutschland",
+    "boundingbox": [
+      "52.4318440",
+      "52.4323219",
+      "13.6708485",
+      "13.6741242"
+    ]
+  }
+]

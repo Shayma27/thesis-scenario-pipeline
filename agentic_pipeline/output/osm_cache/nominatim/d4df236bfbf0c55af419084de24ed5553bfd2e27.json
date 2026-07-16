@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 146764225,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 4579956,
+    "lat": "52.4796313",
+    "lon": "13.4826345",
+    "category": "highway",
+    "type": "residential",
+    "place_rank": 26,
+    "importance": 0.05342208819714653,
+    "addresstype": "road",
+    "name": "Dammweg",
+    "display_name": "Dammweg, Plänterwald, Treptow-Köpenick, Berlin, 12437, Deutschland",
+    "boundingbox": [
+      "52.4792666",
+      "52.4799960",
+      "13.4819496",
+      "13.4833194"
+    ]
+  }
+]

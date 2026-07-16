@@ -1,0 +1,6511 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-07-15T21:43:15Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 4421114,
+      "bounds": {
+        "minlat": 52.5190381,
+        "minlon": 13.2906007,
+        "maxlat": 52.5190975,
+        "maxlon": 13.2916927
+      },
+      "geometry": [
+        {
+          "lat": 52.519053,
+          "lon": 13.2906007
+        },
+        {
+          "lat": 52.5190381,
+          "lon": 13.290792
+        },
+        {
+          "lat": 52.5190915,
+          "lon": 13.2916186
+        },
+        {
+          "lat": 52.5190975,
+          "lon": 13.2916927
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "134",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4421115,
+      "bounds": {
+        "minlat": 52.5196462,
+        "minlon": 13.2984503,
+        "maxlat": 52.5196587,
+        "maxlon": 13.2986676
+      },
+      "geometry": [
+        {
+          "lat": 52.5196587,
+          "lon": 13.2986676
+        },
+        {
+          "lat": 52.5196462,
+          "lon": 13.2984503
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "10",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4421116,
+      "bounds": {
+        "minlat": 52.5187726,
+        "minlon": 13.2858724,
+        "maxlat": 52.5188032,
+        "maxlon": 13.2864278
+      },
+      "geometry": [
+        {
+          "lat": 52.5187726,
+          "lon": 13.2858724
+        },
+        {
+          "lat": 52.518789,
+          "lon": 13.2861536
+        },
+        {
+          "lat": 52.5188032,
+          "lon": 13.2864278
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "cycleway:both:width": "1.5",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "5",
+        "lanes:backward": "2",
+        "lanes:forward": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "turn:lanes:forward": "left|through|none",
+        "width": "18",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4421117,
+      "bounds": {
+        "minlat": 52.5186787,
+        "minlon": 13.2840841,
+        "maxlat": 52.5187028,
+        "maxlon": 13.284575
+      },
+      "geometry": [
+        {
+          "lat": 52.5187028,
+          "lon": 13.284575
+        },
+        {
+          "lat": 52.518682,
+          "lon": 13.2841507
+        },
+        {
+          "lat": 52.5186787,
+          "lon": 13.2840841
+        }
+      ],
+      "tags": {
+        "access:lanes": "yes|yes|yes|no",
+        "bridge": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "share_busway",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:traffic_sign": "DE:245,1022-10",
+        "cycleway:right:width": "4.3",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "4",
+        "layer": "1",
+        "level": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxweight:signed": "no",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "14059",
+        "psv:lanes": "yes|yes|yes|designated",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:traffic_sign:mapillary": "2593518007678932",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through;right|none",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4421118,
+      "bounds": {
+        "minlat": 52.5182411,
+        "minlon": 13.2784583,
+        "maxlat": 52.5182766,
+        "maxlon": 13.2790272
+      },
+      "geometry": [
+        {
+          "lat": 52.5182766,
+          "lon": 13.2784583
+        },
+        {
+          "lat": 52.5182538,
+          "lon": 13.278622
+        },
+        {
+          "lat": 52.5182411,
+          "lon": 13.2787733
+        },
+        {
+          "lat": 52.5182431,
+          "lon": 13.2790272
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "yes",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4446694,
+      "bounds": {
+        "minlat": 52.5197046,
+        "minlon": 13.2994926,
+        "maxlat": 52.5197098,
+        "maxlon": 13.2996776
+      },
+      "geometry": [
+        {
+          "lat": 52.5197098,
+          "lon": 13.2996776
+        },
+        {
+          "lat": 52.5197046,
+          "lon": 13.2994926
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "14",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4495213,
+      "bounds": {
+        "minlat": 52.5187028,
+        "minlon": 13.284575,
+        "maxlat": 52.5187406,
+        "maxlon": 13.2853253
+      },
+      "geometry": [
+        {
+          "lat": 52.5187406,
+          "lon": 13.2853253
+        },
+        {
+          "lat": 52.5187203,
+          "lon": 13.2848731
+        },
+        {
+          "lat": 52.5187028,
+          "lon": 13.284575
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "cycleway:right:width": "1.5",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-18:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_stopping @ (Mo-Fr 14:00-18:00); loading_only @ (09:00-14:00)",
+        "parking:right:restriction:reason": "bus_lane",
+        "parking:right:zone": "134",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4497944,
+      "bounds": {
+        "minlat": 52.5187094,
+        "minlon": 13.2760417,
+        "maxlat": 52.5188521,
+        "maxlon": 13.2768296
+      },
+      "geometry": [
+        {
+          "lat": 52.5187094,
+          "lon": 13.2768296
+        },
+        {
+          "lat": 52.5187839,
+          "lon": 13.2764181
+        },
+        {
+          "lat": 52.5188521,
+          "lon": 13.2760417
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 28502755,
+      "bounds": {
+        "minlat": 52.5225599,
+        "minlon": 13.2503482,
+        "maxlat": 52.5235641,
+        "maxlon": 13.254654
+      },
+      "geometry": [
+        {
+          "lat": 52.5235641,
+          "lon": 13.2503482
+        },
+        {
+          "lat": 52.5235093,
+          "lon": 13.2505441
+        },
+        {
+          "lat": 52.5234281,
+          "lon": 13.2508552
+        },
+        {
+          "lat": 52.5233985,
+          "lon": 13.2509769
+        },
+        {
+          "lat": 52.523186,
+          "lon": 13.2518752
+        },
+        {
+          "lat": 52.5229822,
+          "lon": 13.2527431
+        },
+        {
+          "lat": 52.5229536,
+          "lon": 13.2528651
+        },
+        {
+          "lat": 52.5227189,
+          "lon": 13.2538637
+        },
+        {
+          "lat": 52.5226672,
+          "lon": 13.2540917
+        },
+        {
+          "lat": 52.5226193,
+          "lon": 13.2543238
+        },
+        {
+          "lat": 52.5225599,
+          "lon": 13.254654
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:separation:left": "tree_row;kerb",
+        "cycleway:right:surface": "paving_stones",
+        "cycleway:right:surface:colour": "no",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "1",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 28658319,
+      "bounds": {
+        "minlat": 52.5188147,
+        "minlon": 13.2866547,
+        "maxlat": 52.5188274,
+        "maxlon": 13.2868971
+      },
+      "geometry": [
+        {
+          "lat": 52.5188147,
+          "lon": 13.2866547
+        },
+        {
+          "lat": 52.5188202,
+          "lon": 13.2867602
+        },
+        {
+          "lat": 52.518824,
+          "lon": 13.2868329
+        },
+        {
+          "lat": 52.5188274,
+          "lon": 13.2868971
+        }
+      ],
+      "tags": {
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "6",
+        "lanes:backward": "3",
+        "lanes:forward": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "turn:lanes:backward": "left|through|none",
+        "width": "18",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 28658320,
+      "bounds": {
+        "minlat": 52.5193385,
+        "minlon": 13.2957425,
+        "maxlat": 52.5193739,
+        "maxlon": 13.2961901
+      },
+      "geometry": [
+        {
+          "lat": 52.5193385,
+          "lon": 13.2957425
+        },
+        {
+          "lat": 52.5193739,
+          "lon": 13.2961901
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 28658321,
+      "bounds": {
+        "minlat": 52.5192279,
+        "minlon": 13.2916636,
+        "maxlat": 52.5192757,
+        "maxlon": 13.2923759
+      },
+      "geometry": [
+        {
+          "lat": 52.5192757,
+          "lon": 13.2923759
+        },
+        {
+          "lat": 52.5192724,
+          "lon": 13.2923262
+        },
+        {
+          "lat": 52.5192677,
+          "lon": 13.2922504
+        },
+        {
+          "lat": 52.5192407,
+          "lon": 13.2918157
+        },
+        {
+          "lat": 52.5192343,
+          "lon": 13.291731
+        },
+        {
+          "lat": 52.5192279,
+          "lon": 13.2916636
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:reason": "bus_stop",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10.5",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 32977538,
+      "bounds": {
+        "minlat": 52.5217138,
+        "minlon": 13.2591967,
+        "maxlat": 52.5217487,
+        "maxlon": 13.259393
+      },
+      "geometry": [
+        {
+          "lat": 52.5217487,
+          "lon": 13.2591967
+        },
+        {
+          "lat": 52.5217249,
+          "lon": 13.2593301
+        },
+        {
+          "lat": 52.5217138,
+          "lon": 13.259393
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 06:00-18:00)",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 32977541,
+      "bounds": {
+        "minlat": 52.5223808,
+        "minlon": 13.2529207,
+        "maxlat": 52.5230518,
+        "maxlon": 13.2562626
+      },
+      "geometry": [
+        {
+          "lat": 52.5223808,
+          "lon": 13.2562626
+        },
+        {
+          "lat": 52.5224674,
+          "lon": 13.2557743
+        },
+        {
+          "lat": 52.5226356,
+          "lon": 13.2548366
+        },
+        {
+          "lat": 52.5226492,
+          "lon": 13.254761
+        },
+        {
+          "lat": 52.5227071,
+          "lon": 13.2544372
+        },
+        {
+          "lat": 52.5227378,
+          "lon": 13.2542793
+        },
+        {
+          "lat": 52.5227703,
+          "lon": 13.2541174
+        },
+        {
+          "lat": 52.5230518,
+          "lon": 13.2529207
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 34412630,
+      "bounds": {
+        "minlat": 52.5184524,
+        "minlon": 13.2800698,
+        "maxlat": 52.5184685,
+        "maxlon": 13.2803027
+      },
+      "geometry": [
+        {
+          "lat": 52.5184685,
+          "lon": 13.2803027
+        },
+        {
+          "lat": 52.5184524,
+          "lon": 13.2800698
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Spandau;Olympiastadion",
+        "destination:colour": ";white",
+        "destination:symbol": ";stadium",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 34412631,
+      "bounds": {
+        "minlat": 52.5183725,
+        "minlon": 13.2785071,
+        "maxlat": 52.5184362,
+        "maxlon": 13.2798349
+      },
+      "geometry": [
+        {
+          "lat": 52.5184362,
+          "lon": 13.2798349
+        },
+        {
+          "lat": 52.5184187,
+          "lon": 13.2795818
+        },
+        {
+          "lat": 52.518414,
+          "lon": 13.2795144
+        },
+        {
+          "lat": 52.5183779,
+          "lon": 13.2789982
+        },
+        {
+          "lat": 52.5183725,
+          "lon": 13.2788759
+        },
+        {
+          "lat": 52.5183755,
+          "lon": 13.2787388
+        },
+        {
+          "lat": 52.5183855,
+          "lon": 13.2786358
+        },
+        {
+          "lat": 52.5184051,
+          "lon": 13.2785071
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "yes",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 34412632,
+      "bounds": {
+        "minlat": 52.5183221,
+        "minlon": 13.2800891,
+        "maxlat": 52.5183398,
+        "maxlon": 13.2803251
+      },
+      "geometry": [
+        {
+          "lat": 52.5183221,
+          "lon": 13.2800891
+        },
+        {
+          "lat": 52.5183398,
+          "lon": 13.2803251
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through|none",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 34412633,
+      "bounds": {
+        "minlat": 52.5183398,
+        "minlon": 13.2803251,
+        "maxlat": 52.5183572,
+        "maxlon": 13.2805584
+      },
+      "geometry": [
+        {
+          "lat": 52.5183398,
+          "lon": 13.2803251
+        },
+        {
+          "lat": 52.5183479,
+          "lon": 13.2804342
+        },
+        {
+          "lat": 52.5183525,
+          "lon": 13.2804965
+        },
+        {
+          "lat": 52.5183572,
+          "lon": 13.2805584
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Tiergarten",
+        "destination:symbol:to": "motorway",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 36192325,
+      "bounds": {
+        "minlat": 52.5244751,
+        "minlon": 13.2451072,
+        "maxlat": 52.5249013,
+        "maxlon": 13.2471715
+      },
+      "geometry": [
+        {
+          "lat": 52.5249013,
+          "lon": 13.2451072
+        },
+        {
+          "lat": 52.5247687,
+          "lon": 13.2457459
+        },
+        {
+          "lat": 52.5247216,
+          "lon": 13.2459963
+        },
+        {
+          "lat": 52.5246143,
+          "lon": 13.2465355
+        },
+        {
+          "lat": 52.5245465,
+          "lon": 13.2468671
+        },
+        {
+          "lat": 52.5244751,
+          "lon": 13.2471715
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:segregated": "yes",
+        "cycleway:right:separation:left": "kerb",
+        "cycleway:right:separation:right": "no",
+        "cycleway:right:surface": "paving_stones",
+        "cycleway:right:surface:colour": "none",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "1",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:width": "infra3D",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 37426244,
+      "bounds": {
+        "minlat": 52.5190458,
+        "minlon": 13.2905007,
+        "maxlat": 52.519053,
+        "maxlon": 13.2906007
+      },
+      "geometry": [
+        {
+          "lat": 52.5190458,
+          "lon": 13.2905007
+        },
+        {
+          "lat": 52.5190509,
+          "lon": 13.2905761
+        },
+        {
+          "lat": 52.519053,
+          "lon": 13.2906007
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "4",
+        "lanes:psv:backward": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "parking:both": "lane",
+        "parking:both:fee": "yes",
+        "parking:both:orientation": "parallel",
+        "parking:both:zone": "134",
+        "parking:left:fee:conditional": "no @ (Mo-Fr 00:00-18:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:left:restriction:conditional": "no_stopping @ (Mo-Fr 14:00-18:00); loading_only @ (09:00-14:00)",
+        "parking:left:restriction:reason": "bus_lane",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "18",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 38762417,
+      "bounds": {
+        "minlat": 52.5229536,
+        "minlon": 13.2528651,
+        "maxlat": 52.5230518,
+        "maxlon": 13.2529207
+      },
+      "geometry": [
+        {
+          "lat": 52.5230518,
+          "lon": 13.2529207
+        },
+        {
+          "lat": 52.5229536,
+          "lon": 13.2528651
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed:type": "DE:urban",
+        "name": "Spandauer Damm",
+        "parking:both": "no",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 41081448,
+      "bounds": {
+        "minlat": 52.5185955,
+        "minlon": 13.2846118,
+        "maxlat": 52.5187406,
+        "maxlon": 13.2853253
+      },
+      "geometry": [
+        {
+          "lat": 52.5185955,
+          "lon": 13.2846118
+        },
+        {
+          "lat": 52.5186105,
+          "lon": 13.2847358
+        },
+        {
+          "lat": 52.5186445,
+          "lon": 13.284917
+        },
+        {
+          "lat": 52.5187406,
+          "lon": 13.2853253
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "cycleway:right:segregated": "no",
+        "cycleway:right:width": "1.5",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 41081449,
+      "bounds": {
+        "minlat": 52.5184236,
+        "minlon": 13.2816148,
+        "maxlat": 52.5184999,
+        "maxlon": 13.2829001
+      },
+      "geometry": [
+        {
+          "lat": 52.5184236,
+          "lon": 13.2816148
+        },
+        {
+          "lat": 52.5184898,
+          "lon": 13.2827133
+        },
+        {
+          "lat": 52.5184999,
+          "lon": 13.2829001
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|through|through|right",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 41081451,
+      "bounds": {
+        "minlat": 52.5185258,
+        "minlon": 13.2811862,
+        "maxlat": 52.5186271,
+        "maxlon": 13.2828492
+      },
+      "geometry": [
+        {
+          "lat": 52.5186271,
+          "lon": 13.2828492
+        },
+        {
+          "lat": 52.5185761,
+          "lon": 13.281991
+        },
+        {
+          "lat": 52.5185572,
+          "lon": 13.2816978
+        },
+        {
+          "lat": 52.5185365,
+          "lon": 13.2813541
+        },
+        {
+          "lat": 52.5185258,
+          "lon": 13.2811862
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_stopping @ (Mo-Fr 06:00-09:00,14:00-18:00)",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 58530590,
+      "bounds": {
+        "minlat": 52.5245636,
+        "minlon": 13.2456326,
+        "maxlat": 52.5249013,
+        "maxlon": 13.2473027
+      },
+      "geometry": [
+        {
+          "lat": 52.5245636,
+          "lon": 13.2473027
+        },
+        {
+          "lat": 52.5246847,
+          "lon": 13.2467256
+        },
+        {
+          "lat": 52.5247346,
+          "lon": 13.2464697
+        },
+        {
+          "lat": 52.5249013,
+          "lon": 13.2456326
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 58530591,
+      "bounds": {
+        "minlat": 52.524065,
+        "minlon": 13.2474008,
+        "maxlat": 52.5244189,
+        "maxlon": 13.2486647
+      },
+      "geometry": [
+        {
+          "lat": 52.5244189,
+          "lon": 13.2474008
+        },
+        {
+          "lat": 52.5242871,
+          "lon": 13.2478954
+        },
+        {
+          "lat": 52.5242008,
+          "lon": 13.2482111
+        },
+        {
+          "lat": 52.524065,
+          "lon": 13.2486647
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:separation:left": "tree_row;kerb",
+        "cycleway:right:surface": "paving_stones",
+        "cycleway:right:surface:colour": "no",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "1",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:traffic_sign:mapillary": "24208854678740242",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 87755875,
+      "bounds": {
+        "minlat": 52.5184999,
+        "minlon": 13.2829001,
+        "maxlat": 52.5185045,
+        "maxlon": 13.2829952
+      },
+      "geometry": [
+        {
+          "lat": 52.5184999,
+          "lon": 13.2829001
+        },
+        {
+          "lat": 52.5185045,
+          "lon": 13.2829952
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "crossing",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:separation:left": "no",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "no",
+        "cycleway:right:traffic_sign": "DE:237",
+        "cycleway:right:width": "1.5",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:cycleway:right:traffic_sign:mapillary": "465286549304543",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|through|through",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 129536782,
+      "bounds": {
+        "minlat": 52.5218025,
+        "minlon": 13.2592383,
+        "maxlat": 52.5218494,
+        "maxlon": 13.2595031
+      },
+      "geometry": [
+        {
+          "lat": 52.5218025,
+          "lon": 13.2595031
+        },
+        {
+          "lat": 52.5218127,
+          "lon": 13.2594453
+        },
+        {
+          "lat": 52.5218494,
+          "lon": 13.2592383
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 136814968,
+      "bounds": {
+        "minlat": 52.5195556,
+        "minlon": 13.2969041,
+        "maxlat": 52.5196462,
+        "maxlon": 13.2984503
+      },
+      "geometry": [
+        {
+          "lat": 52.5196462,
+          "lon": 13.2984503
+        },
+        {
+          "lat": 52.5196251,
+          "lon": 13.2980823
+        },
+        {
+          "lat": 52.5195556,
+          "lon": 13.2969041
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction": "loading_only",
+        "parking:right:restriction:motorcar": "none",
+        "parking:right:zone": "134",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "10",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 198830966,
+      "bounds": {
+        "minlat": 52.5193535,
+        "minlon": 13.2747357,
+        "maxlat": 52.5219643,
+        "maxlon": 13.2759469
+      },
+      "geometry": [
+        {
+          "lat": 52.5193535,
+          "lon": 13.2747357
+        },
+        {
+          "lat": 52.5193856,
+          "lon": 13.274752
+        },
+        {
+          "lat": 52.5194402,
+          "lon": 13.2747798
+        },
+        {
+          "lat": 52.5194776,
+          "lon": 13.2747955
+        },
+        {
+          "lat": 52.5195517,
+          "lon": 13.2748277
+        },
+        {
+          "lat": 52.5196202,
+          "lon": 13.2748418
+        },
+        {
+          "lat": 52.5198498,
+          "lon": 13.2749483
+        },
+        {
+          "lat": 52.5200445,
+          "lon": 13.2750402
+        },
+        {
+          "lat": 52.5203179,
+          "lon": 13.2751675
+        },
+        {
+          "lat": 52.5204054,
+          "lon": 13.2752066
+        },
+        {
+          "lat": 52.520585,
+          "lon": 13.2752888
+        },
+        {
+          "lat": 52.5208957,
+          "lon": 13.2754366
+        },
+        {
+          "lat": 52.5210596,
+          "lon": 13.275513
+        },
+        {
+          "lat": 52.5219643,
+          "lon": 13.2759469
+        }
+      ],
+      "tags": {
+        "access": "destination",
+        "highway": "living_street",
+        "lit": "yes",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "parking:both": "no",
+        "parking:both:reason": "narrow",
+        "postal_code": "14050",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "way",
+      "id": 284527347,
+      "bounds": {
+        "minlat": 52.5184082,
+        "minlon": 13.2813541,
+        "maxlat": 52.5185365,
+        "maxlon": 13.2813741
+      },
+      "geometry": [
+        {
+          "lat": 52.5185365,
+          "lon": 13.2813541
+        },
+        {
+          "lat": 52.5184082,
+          "lon": 13.2813741
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "cycleway:both": "no",
+        "highway": "service",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "note": "Keine direkte Verbindung zu den nutzungspflichtigen Radwegen daher bicycle=no",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "sidewalk": "no",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 302429354,
+      "bounds": {
+        "minlat": 52.5193739,
+        "minlon": 13.2961901,
+        "maxlat": 52.5193854,
+        "maxlon": 13.2963905
+      },
+      "geometry": [
+        {
+          "lat": 52.5193739,
+          "lon": 13.2961901
+        },
+        {
+          "lat": 52.5193769,
+          "lon": 13.2962436
+        },
+        {
+          "lat": 52.5193823,
+          "lon": 13.2963388
+        },
+        {
+          "lat": 52.5193854,
+          "lon": 13.2963905
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "10.5",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 302429360,
+      "bounds": {
+        "minlat": 52.5195095,
+        "minlon": 13.2986408,
+        "maxlat": 52.5195254,
+        "maxlon": 13.2989503
+      },
+      "geometry": [
+        {
+          "lat": 52.5195095,
+          "lon": 13.2986408
+        },
+        {
+          "lat": 52.5195216,
+          "lon": 13.298877
+        },
+        {
+          "lat": 52.5195254,
+          "lon": 13.2989503
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "separate",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|through|through;right",
+        "width": "15",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 326265135,
+      "bounds": {
+        "minlat": 52.5186309,
+        "minlon": 13.2829355,
+        "maxlat": 52.5186481,
+        "maxlon": 13.2834181
+      },
+      "geometry": [
+        {
+          "lat": 52.5186481,
+          "lon": 13.2834181
+        },
+        {
+          "lat": 52.5186309,
+          "lon": 13.2829355
+        }
+      ],
+      "tags": {
+        "bridge": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:separation:left": "no",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "no",
+        "cycleway:right:traffic_sign": "DE:237",
+        "cycleway:right:width": "1.5",
+        "destination": "Spandau;Olympiastadion",
+        "destination:colour": ";white",
+        "destination:symbol": ";stadium",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "3",
+        "layer": "1",
+        "level": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxweight:signed": "no",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:traffic_sign:mapillary": "23878369558487696",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 326265136,
+      "bounds": {
+        "minlat": 52.5186481,
+        "minlon": 13.2834181,
+        "maxlat": 52.5186787,
+        "maxlon": 13.2840841
+      },
+      "geometry": [
+        {
+          "lat": 52.5186787,
+          "lon": 13.2840841
+        },
+        {
+          "lat": 52.5186618,
+          "lon": 13.2837143
+        },
+        {
+          "lat": 52.5186592,
+          "lon": 13.2836589
+        },
+        {
+          "lat": 52.5186481,
+          "lon": 13.2834181
+        }
+      ],
+      "tags": {
+        "bridge": "yes",
+        "cycleway:left": "no",
+        "cycleway:right:lane": "exclusive",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:separation:left": "no",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "no",
+        "cycleway:right:traffic_sign": "DE:237",
+        "cycleway:right:width": "1.3",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "4",
+        "layer": "1",
+        "level": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxweight:signed": "no",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "postal_code": "14059",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:cycleway:right:traffic_sign:mapillary": "2219672498465983",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through|right",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 328408599,
+      "bounds": {
+        "minlat": 52.523852,
+        "minlon": 13.2486647,
+        "maxlat": 52.524065,
+        "maxlon": 13.249364
+      },
+      "geometry": [
+        {
+          "lat": 52.524065,
+          "lon": 13.2486647
+        },
+        {
+          "lat": 52.5239286,
+          "lon": 13.2491062
+        },
+        {
+          "lat": 52.523852,
+          "lon": 13.249364
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:separation:left": "tree_row;kerb",
+        "cycleway:right:surface": "paving_stones",
+        "cycleway:right:surface:colour": "no",
+        "cycleway:right:traffic_sign": "DE:237",
+        "cycleway:right:width": "1",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:traffic_sign:mapillary": "24208854678740242",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "turn:lanes": "none|none|right",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 328440058,
+      "bounds": {
+        "minlat": 52.5194522,
+        "minlon": 13.2671897,
+        "maxlat": 52.5203088,
+        "maxlon": 13.2719423
+      },
+      "geometry": [
+        {
+          "lat": 52.5203088,
+          "lon": 13.2671897
+        },
+        {
+          "lat": 52.520292,
+          "lon": 13.2672829
+        },
+        {
+          "lat": 52.5201492,
+          "lon": 13.2680754
+        },
+        {
+          "lat": 52.5198942,
+          "lon": 13.2694897
+        },
+        {
+          "lat": 52.5198702,
+          "lon": 13.2696231
+        },
+        {
+          "lat": 52.5196334,
+          "lon": 13.2709367
+        },
+        {
+          "lat": 52.5194768,
+          "lon": 13.2718056
+        },
+        {
+          "lat": 52.5194522,
+          "lon": 13.2719423
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "yes",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 328440059,
+      "bounds": {
+        "minlat": 52.5217487,
+        "minlon": 13.2584985,
+        "maxlat": 52.521871,
+        "maxlon": 13.2591967
+      },
+      "geometry": [
+        {
+          "lat": 52.521871,
+          "lon": 13.2584985
+        },
+        {
+          "lat": 52.5217852,
+          "lon": 13.2589915
+        },
+        {
+          "lat": 52.5217487,
+          "lon": 13.2591967
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:separation:left": "tree_row;kerb",
+        "cycleway:right:surface": "paving_stones",
+        "cycleway:right:surface:colour": "no",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "1",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 06:00-18:00)",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 328440060,
+      "bounds": {
+        "minlat": 52.5182668,
+        "minlon": 13.2793336,
+        "maxlat": 52.518305,
+        "maxlon": 13.279858
+      },
+      "geometry": [
+        {
+          "lat": 52.5182668,
+          "lon": 13.2793336
+        },
+        {
+          "lat": 52.5182907,
+          "lon": 13.2796654
+        },
+        {
+          "lat": 52.5182989,
+          "lon": 13.2797755
+        },
+        {
+          "lat": 52.518305,
+          "lon": 13.279858
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|none|none",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 328440061,
+      "bounds": {
+        "minlat": 52.5185237,
+        "minlon": 13.2834795,
+        "maxlat": 52.5185955,
+        "maxlon": 13.2846118
+      },
+      "geometry": [
+        {
+          "lat": 52.5185237,
+          "lon": 13.2834795
+        },
+        {
+          "lat": 52.5185355,
+          "lon": 13.2837179
+        },
+        {
+          "lat": 52.5185723,
+          "lon": 13.2843034
+        },
+        {
+          "lat": 52.5185864,
+          "lon": 13.2845219
+        },
+        {
+          "lat": 52.5185955,
+          "lon": 13.2846118
+        }
+      ],
+      "tags": {
+        "access:lanes": "yes|yes|no",
+        "bridge": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "share_busway",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:traffic_sign": "DE:245,1022-10",
+        "cycleway:right:width": "4.3",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "3",
+        "layer": "1",
+        "level": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxweight:signed": "no",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "14059",
+        "psv:lanes": "yes|yes|designated",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:cycleway:right:traffic_sign:mapillary": "2572890086431928",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 338527890,
+      "bounds": {
+        "minlat": 52.5249013,
+        "minlon": 13.2451679,
+        "maxlat": 52.5250029,
+        "maxlon": 13.2456326
+      },
+      "geometry": [
+        {
+          "lat": 52.5249013,
+          "lon": 13.2456326
+        },
+        {
+          "lat": 52.5249657,
+          "lon": 13.245338
+        },
+        {
+          "lat": 52.5250029,
+          "lon": 13.2451679
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|none|none|none",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 338527891,
+      "bounds": {
+        "minlat": 52.5243037,
+        "minlon": 13.2474629,
+        "maxlat": 52.5245279,
+        "maxlon": 13.2482914
+      },
+      "geometry": [
+        {
+          "lat": 52.5243037,
+          "lon": 13.2482914
+        },
+        {
+          "lat": 52.5244673,
+          "lon": 13.2476988
+        },
+        {
+          "lat": 52.5245279,
+          "lon": 13.2474629
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "none|none|right",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 393238753,
+      "bounds": {
+        "minlat": 52.518696,
+        "minlon": 13.2799215,
+        "maxlat": 52.5188104,
+        "maxlon": 13.279938
+      },
+      "geometry": [
+        {
+          "lat": 52.518696,
+          "lon": 13.279938
+        },
+        {
+          "lat": 52.5188104,
+          "lon": 13.2799215
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "check_date:shelter": "2022-10-04",
+        "highway": "platform",
+        "kerb": "raised",
+        "kerb:approach_aid": "no",
+        "lit": "yes",
+        "name": "Königin-Elisabeth-Straße/Spandauer Damm",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "surface": "paved",
+        "tactile_paving": "no",
+        "wheelchair": "yes",
+        "width": "1.75"
+      }
+    },
+    {
+      "type": "way",
+      "id": 393238755,
+      "bounds": {
+        "minlat": 52.5182243,
+        "minlon": 13.2796658,
+        "maxlat": 52.5182328,
+        "maxlon": 13.2797879
+      },
+      "geometry": [
+        {
+          "lat": 52.5182328,
+          "lon": 13.2797879
+        },
+        {
+          "lat": 52.5182243,
+          "lon": 13.2796658
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "check_date:shelter": "2022-10-05",
+        "highway": "platform",
+        "kerb": "raised",
+        "kerb:approach_aid": "no",
+        "lit": "no",
+        "name": "Königin-Elisabeth-Straße/Spandauer Damm",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "surface": "paved",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 393238756,
+      "bounds": {
+        "minlat": 52.5184876,
+        "minlon": 13.2794514,
+        "maxlat": 52.5185105,
+        "maxlon": 13.2797564
+      },
+      "geometry": [
+        {
+          "lat": 52.5185105,
+          "lon": 13.2797564
+        },
+        {
+          "lat": 52.5184876,
+          "lon": 13.2794514
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:shelter": "2022-10-04",
+        "highway": "platform",
+        "kerb": "raised",
+        "kerb:approach_aid": "no",
+        "lit": "yes",
+        "name": "Königin-Elisabeth-Straße/Spandauer Damm",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "surface": "paved",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 393238757,
+      "bounds": {
+        "minlat": 52.5178715,
+        "minlon": 13.2805007,
+        "maxlat": 52.518037,
+        "maxlon": 13.280531
+      },
+      "geometry": [
+        {
+          "lat": 52.518037,
+          "lon": 13.2805007
+        },
+        {
+          "lat": 52.5178715,
+          "lon": 13.280531
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2022-07-30",
+        "highway": "platform",
+        "kerb": "raised",
+        "kerb:approach_aid": "no",
+        "lit": "yes",
+        "name": "Königin-Elisabeth-Straße/Spandauer Damm",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "surface": "paved",
+        "tactile_paving": "no",
+        "wheelchair": "yes",
+        "width": "1.25"
+      }
+    },
+    {
+      "type": "way",
+      "id": 393238803,
+      "bounds": {
+        "minlat": 52.5238245,
+        "minlon": 13.2498601,
+        "maxlat": 52.5238907,
+        "maxlon": 13.2500854
+      },
+      "geometry": [
+        {
+          "lat": 52.5238907,
+          "lon": 13.2498601
+        },
+        {
+          "lat": 52.5238245,
+          "lon": 13.2500854
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Spandauer Damm/Reichsstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 393238804,
+      "bounds": {
+        "minlat": 52.5235912,
+        "minlon": 13.2498552,
+        "maxlat": 52.523641,
+        "maxlon": 13.2500212
+      },
+      "geometry": [
+        {
+          "lat": 52.5235912,
+          "lon": 13.2500212
+        },
+        {
+          "lat": 52.523641,
+          "lon": 13.2498552
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Spandauer Damm/Reichsstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 411114889,
+      "bounds": {
+        "minlat": 52.5239546,
+        "minlon": 13.2482914,
+        "maxlat": 52.5243037,
+        "maxlon": 13.2494339
+      },
+      "geometry": [
+        {
+          "lat": 52.5239546,
+          "lon": 13.2494339
+        },
+        {
+          "lat": 52.5241315,
+          "lon": 13.2488653
+        },
+        {
+          "lat": 52.5243037,
+          "lon": 13.2482914
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "yes",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 428720063,
+      "bounds": {
+        "minlat": 52.519481,
+        "minlon": 13.2957151,
+        "maxlat": 52.5195088,
+        "maxlon": 13.2961676
+      },
+      "geometry": [
+        {
+          "lat": 52.5195088,
+          "lon": 13.2961676
+        },
+        {
+          "lat": 52.519481,
+          "lon": 13.2957151
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "junction",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "turn:lanes": "left|none|none",
+        "width": "15",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 428720064,
+      "bounds": {
+        "minlat": 52.518924,
+        "minlon": 13.2884972,
+        "maxlat": 52.5189475,
+        "maxlon": 13.2888862
+      },
+      "geometry": [
+        {
+          "lat": 52.518924,
+          "lon": 13.2884972
+        },
+        {
+          "lat": 52.518931,
+          "lon": 13.2886201
+        },
+        {
+          "lat": 52.5189475,
+          "lon": 13.2888862
+        }
+      ],
+      "tags": {
+        "cycleway:left": "separate",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "cycleway:right:mapillary": "704286611969292",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:separation:left": "flex_post",
+        "cycleway:right:separation:right": "kerb",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "no",
+        "cycleway:right:width": "2.6",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "4",
+        "lanes:psv:backward": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "parking:left": "lane",
+        "parking:left:fee": "yes",
+        "parking:left:fee:conditional": "no @ (Mo-Fr 00:00-18:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:left:orientation": "parallel",
+        "parking:left:restriction:conditional": "no_stopping @ (Mo-Fr 14:00-18:00); loading_only @ (09:00-14:00)",
+        "parking:left:restriction:reason": "bus_lane",
+        "parking:left:zone": "134",
+        "parking:right": "no",
+        "parking:right:reason": "cycleway",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "18",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 428720065,
+      "bounds": {
+        "minlat": 52.5193003,
+        "minlon": 13.2950287,
+        "maxlat": 52.5193385,
+        "maxlon": 13.2957425
+      },
+      "geometry": [
+        {
+          "lat": 52.5193003,
+          "lon": 13.2950287
+        },
+        {
+          "lat": 52.5193162,
+          "lon": 13.2953769
+        },
+        {
+          "lat": 52.5193251,
+          "lon": 13.2955288
+        },
+        {
+          "lat": 52.5193293,
+          "lon": 13.2956003
+        },
+        {
+          "lat": 52.5193351,
+          "lon": 13.2956899
+        },
+        {
+          "lat": 52.5193385,
+          "lon": 13.2957425
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:reason": "bus_stop",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 429488376,
+      "bounds": {
+        "minlat": 52.5184685,
+        "minlon": 13.2803027,
+        "maxlat": 52.5184842,
+        "maxlon": 13.2805289
+      },
+      "geometry": [
+        {
+          "lat": 52.5184842,
+          "lon": 13.2805289
+        },
+        {
+          "lat": 52.5184802,
+          "lon": 13.280471
+        },
+        {
+          "lat": 52.518476,
+          "lon": 13.2804102
+        },
+        {
+          "lat": 52.5184685,
+          "lon": 13.2803027
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through|through;right",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 429493397,
+      "bounds": {
+        "minlat": 52.5185045,
+        "minlon": 13.2829952,
+        "maxlat": 52.5185237,
+        "maxlon": 13.2834795
+      },
+      "geometry": [
+        {
+          "lat": 52.5185045,
+          "lon": 13.2829952
+        },
+        {
+          "lat": 52.5185237,
+          "lon": 13.2834795
+        }
+      ],
+      "tags": {
+        "bridge": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:segregated": "yes",
+        "cycleway:right:separation:left": "kerb",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "no",
+        "cycleway:right:traffic_sign": "DE:237",
+        "cycleway:right:width": "1.5",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "4",
+        "layer": "1",
+        "level": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxweight:signed": "no",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "14059",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:traffic_sign:mapillary": "46528654930454",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|through|through",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 429493398,
+      "bounds": {
+        "minlat": 52.5186271,
+        "minlon": 13.2828492,
+        "maxlat": 52.5186309,
+        "maxlon": 13.2829355
+      },
+      "geometry": [
+        {
+          "lat": 52.5186309,
+          "lon": 13.2829355
+        },
+        {
+          "lat": 52.5186271,
+          "lon": 13.2828492
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "crossing",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:separation:left": "no",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "no",
+        "cycleway:right:traffic_sign": "DE:237",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 490373684,
+      "bounds": {
+        "minlat": 52.5211923,
+        "minlon": 13.2617654,
+        "maxlat": 52.5214015,
+        "maxlon": 13.2629454
+      },
+      "geometry": [
+        {
+          "lat": 52.5211923,
+          "lon": 13.2629454
+        },
+        {
+          "lat": 52.521199,
+          "lon": 13.2629077
+        },
+        {
+          "lat": 52.5212106,
+          "lon": 13.2628424
+        },
+        {
+          "lat": 52.5214015,
+          "lon": 13.2617654
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 490373688,
+      "bounds": {
+        "minlat": 52.5211303,
+        "minlon": 13.2629454,
+        "maxlat": 52.5211923,
+        "maxlon": 13.2633432
+      },
+      "geometry": [
+        {
+          "lat": 52.5211303,
+          "lon": 13.2633432
+        },
+        {
+          "lat": 52.5211454,
+          "lon": 13.2632465
+        },
+        {
+          "lat": 52.521148,
+          "lon": 13.2632302
+        },
+        {
+          "lat": 52.5211527,
+          "lon": 13.2632
+        },
+        {
+          "lat": 52.5211923,
+          "lon": 13.2629454
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "turn:lanes": "left|none|none|none",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 561916870,
+      "bounds": {
+        "minlat": 52.521442,
+        "minlon": 13.259393,
+        "maxlat": 52.5217138,
+        "maxlon": 13.2609194
+      },
+      "geometry": [
+        {
+          "lat": 52.5217138,
+          "lon": 13.259393
+        },
+        {
+          "lat": 52.5215783,
+          "lon": 13.2601548
+        },
+        {
+          "lat": 52.521442,
+          "lon": 13.2609194
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 06:00-18:00)",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 706795514,
+      "bounds": {
+        "minlat": 52.523929,
+        "minlon": 13.2494339,
+        "maxlat": 52.5239546,
+        "maxlon": 13.2495186
+      },
+      "geometry": [
+        {
+          "lat": 52.523929,
+          "lon": 13.2495186
+        },
+        {
+          "lat": 52.5239546,
+          "lon": 13.2494339
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 742007349,
+      "bounds": {
+        "minlat": 52.5191466,
+        "minlon": 13.2923997,
+        "maxlat": 52.5191596,
+        "maxlon": 13.2926201
+      },
+      "geometry": [
+        {
+          "lat": 52.5191466,
+          "lon": 13.2923997
+        },
+        {
+          "lat": 52.5191541,
+          "lon": 13.2925267
+        },
+        {
+          "lat": 52.5191596,
+          "lon": 13.2926201
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_stopping @ (09:00-18:00)",
+        "parking:right:zone": "134",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 742007350,
+      "bounds": {
+        "minlat": 52.5193891,
+        "minlon": 13.2942226,
+        "maxlat": 52.5194438,
+        "maxlon": 13.29511
+      },
+      "geometry": [
+        {
+          "lat": 52.5194438,
+          "lon": 13.29511
+        },
+        {
+          "lat": 52.5193891,
+          "lon": 13.2942226
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction": "loading_only",
+        "parking:right:restriction:motorcar": "none",
+        "parking:right:zone": "134",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10.5",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 892182215,
+      "bounds": {
+        "minlat": 52.519053,
+        "minlon": 13.2906007,
+        "maxlat": 52.5192279,
+        "maxlon": 13.2916636
+      },
+      "geometry": [
+        {
+          "lat": 52.5192279,
+          "lon": 13.2916636
+        },
+        {
+          "lat": 52.5191987,
+          "lon": 13.2914273
+        },
+        {
+          "lat": 52.5191841,
+          "lon": 13.2913188
+        },
+        {
+          "lat": 52.5191686,
+          "lon": 13.2912155
+        },
+        {
+          "lat": 52.5191025,
+          "lon": 13.2907705
+        },
+        {
+          "lat": 52.519053,
+          "lon": 13.2906007
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "2",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-18:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_stopping @ (Mo-Fr 14:00-18:00); loading_only @ (09:00-14:00)",
+        "parking:right:restriction:reason": "bus_lane",
+        "parking:right:zone": "134",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10.5",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 892182530,
+      "bounds": {
+        "minlat": 52.5204057,
+        "minlon": 13.2642325,
+        "maxlat": 52.5210015,
+        "maxlon": 13.2675813
+      },
+      "geometry": [
+        {
+          "lat": 52.5204057,
+          "lon": 13.2675813
+        },
+        {
+          "lat": 52.5204461,
+          "lon": 13.2673577
+        },
+        {
+          "lat": 52.5204649,
+          "lon": 13.2672579
+        },
+        {
+          "lat": 52.5204837,
+          "lon": 13.2671503
+        },
+        {
+          "lat": 52.5205223,
+          "lon": 13.2669325
+        },
+        {
+          "lat": 52.5206455,
+          "lon": 13.2662383
+        },
+        {
+          "lat": 52.520725,
+          "lon": 13.2658027
+        },
+        {
+          "lat": 52.5209045,
+          "lon": 13.2647965
+        },
+        {
+          "lat": 52.5210015,
+          "lon": 13.2642325
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 892182831,
+      "bounds": {
+        "minlat": 52.5233563,
+        "minlon": 13.2495186,
+        "maxlat": 52.523929,
+        "maxlon": 13.2516255
+      },
+      "geometry": [
+        {
+          "lat": 52.5233563,
+          "lon": 13.2516255
+        },
+        {
+          "lat": 52.5235387,
+          "lon": 13.2508694
+        },
+        {
+          "lat": 52.5236109,
+          "lon": 13.2505986
+        },
+        {
+          "lat": 52.5236644,
+          "lon": 13.2503982
+        },
+        {
+          "lat": 52.5237205,
+          "lon": 13.2501999
+        },
+        {
+          "lat": 52.5238076,
+          "lon": 13.2499027
+        },
+        {
+          "lat": 52.5238903,
+          "lon": 13.2496385
+        },
+        {
+          "lat": 52.5239038,
+          "lon": 13.2495981
+        },
+        {
+          "lat": 52.5239174,
+          "lon": 13.2495552
+        },
+        {
+          "lat": 52.523929,
+          "lon": 13.2495186
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "share_busway",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:traffic_sign": "DE:245,1022-10,Zusatzzeichen",
+        "cycleway:right:width": "3.1",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "yes",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:cycleway:right:traffic_sign:mapillary": "4186238058329111",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 897672436,
+      "bounds": {
+        "minlat": 52.5195351,
+        "minlon": 13.2992597,
+        "maxlat": 52.5195435,
+        "maxlon": 13.2995282
+      },
+      "geometry": [
+        {
+          "lat": 52.5195351,
+          "lon": 13.2992597
+        },
+        {
+          "lat": 52.5195371,
+          "lon": 13.2993273
+        },
+        {
+          "lat": 52.5195404,
+          "lon": 13.2994323
+        },
+        {
+          "lat": 52.5195435,
+          "lon": 13.2995282
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|through|through;right",
+        "width": "15",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1092670178,
+      "bounds": {
+        "minlat": 52.5182766,
+        "minlon": 13.2759782,
+        "maxlat": 52.5187235,
+        "maxlon": 13.2784583
+      },
+      "geometry": [
+        {
+          "lat": 52.5187235,
+          "lon": 13.2759782
+        },
+        {
+          "lat": 52.5186386,
+          "lon": 13.2764496
+        },
+        {
+          "lat": 52.5183795,
+          "lon": 13.277887
+        },
+        {
+          "lat": 52.5183548,
+          "lon": 13.2780243
+        },
+        {
+          "lat": 52.5182766,
+          "lon": 13.2784583
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "yes",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101066476,
+      "bounds": {
+        "minlat": 52.5184842,
+        "minlon": 13.2805289,
+        "maxlat": 52.5185258,
+        "maxlon": 13.2811862
+      },
+      "geometry": [
+        {
+          "lat": 52.5185258,
+          "lon": 13.2811862
+        },
+        {
+          "lat": 52.518524,
+          "lon": 13.2811557
+        },
+        {
+          "lat": 52.518516,
+          "lon": 13.2810232
+        },
+        {
+          "lat": 52.5185,
+          "lon": 13.280758
+        },
+        {
+          "lat": 52.518486,
+          "lon": 13.2805552
+        },
+        {
+          "lat": 52.5184842,
+          "lon": 13.2805289
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:reason": "turn_lane",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through|through;right",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101066477,
+      "bounds": {
+        "minlat": 52.5183936,
+        "minlon": 13.281148,
+        "maxlat": 52.5184236,
+        "maxlon": 13.2816148
+      },
+      "geometry": [
+        {
+          "lat": 52.5183936,
+          "lon": 13.281148
+        },
+        {
+          "lat": 52.5184082,
+          "lon": 13.2813741
+        },
+        {
+          "lat": 52.5184236,
+          "lon": 13.2816148
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_stopping @ (Mo-Fr 06:00-09:00,14:00-18:00)",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101066493,
+      "bounds": {
+        "minlat": 52.518305,
+        "minlon": 13.279858,
+        "maxlat": 52.5183221,
+        "maxlon": 13.2800891
+      },
+      "geometry": [
+        {
+          "lat": 52.518305,
+          "lon": 13.279858
+        },
+        {
+          "lat": 52.5183098,
+          "lon": 13.2799224
+        },
+        {
+          "lat": 52.5183144,
+          "lon": 13.2799853
+        },
+        {
+          "lat": 52.5183221,
+          "lon": 13.2800891
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|none|none",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101066494,
+      "bounds": {
+        "minlat": 52.5184362,
+        "minlon": 13.2798349,
+        "maxlat": 52.5184524,
+        "maxlon": 13.2800698
+      },
+      "geometry": [
+        {
+          "lat": 52.5184524,
+          "lon": 13.2800698
+        },
+        {
+          "lat": 52.5184448,
+          "lon": 13.2799602
+        },
+        {
+          "lat": 52.5184405,
+          "lon": 13.2798982
+        },
+        {
+          "lat": 52.5184362,
+          "lon": 13.2798349
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Spandau;Olympiastadion",
+        "destination:colour": ";white",
+        "destination:symbol": ";stadium",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101185241,
+      "bounds": {
+        "minlat": 52.519692,
+        "minlon": 13.2992634,
+        "maxlat": 52.5197046,
+        "maxlon": 13.2994926
+      },
+      "geometry": [
+        {
+          "lat": 52.5197046,
+          "lon": 13.2994926
+        },
+        {
+          "lat": 52.5196977,
+          "lon": 13.299367
+        },
+        {
+          "lat": 52.519692,
+          "lon": 13.2992634
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "10",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101200721,
+      "bounds": {
+        "minlat": 52.5188032,
+        "minlon": 13.2864278,
+        "maxlat": 52.5188147,
+        "maxlon": 13.2866547
+      },
+      "geometry": [
+        {
+          "lat": 52.5188032,
+          "lon": 13.2864278
+        },
+        {
+          "lat": 52.5188063,
+          "lon": 13.2864896
+        },
+        {
+          "lat": 52.5188093,
+          "lon": 13.2865494
+        },
+        {
+          "lat": 52.5188147,
+          "lon": 13.2866547
+        }
+      ],
+      "tags": {
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "5",
+        "lanes:backward": "2",
+        "lanes:forward": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "turn:lanes:forward": "left|through|none",
+        "width": "18",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101200759,
+      "bounds": {
+        "minlat": 52.5188274,
+        "minlon": 13.2868971,
+        "maxlat": 52.518882,
+        "maxlon": 13.2878355
+      },
+      "geometry": [
+        {
+          "lat": 52.5188274,
+          "lon": 13.2868971
+        },
+        {
+          "lat": 52.5188316,
+          "lon": 13.2869785
+        },
+        {
+          "lat": 52.5188627,
+          "lon": 13.287507
+        },
+        {
+          "lat": 52.518882,
+          "lon": 13.2878355
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "6",
+        "lanes:backward": "3",
+        "lanes:forward": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "turn:lanes:backward": "left|through|none",
+        "width": "18",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1112702290,
+      "bounds": {
+        "minlat": 52.5235641,
+        "minlon": 13.249364,
+        "maxlat": 52.523852,
+        "maxlon": 13.2503482
+      },
+      "geometry": [
+        {
+          "lat": 52.523852,
+          "lon": 13.249364
+        },
+        {
+          "lat": 52.5238077,
+          "lon": 13.2495141
+        },
+        {
+          "lat": 52.5237853,
+          "lon": 13.2495899
+        },
+        {
+          "lat": 52.5236317,
+          "lon": 13.2501073
+        },
+        {
+          "lat": 52.5235641,
+          "lon": 13.2503482
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:separation:left": "tree_row;kerb",
+        "cycleway:right:surface": "paving_stones",
+        "cycleway:right:surface:colour": "no",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "1",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1112702291,
+      "bounds": {
+        "minlat": 52.5230789,
+        "minlon": 13.2516255,
+        "maxlat": 52.5233563,
+        "maxlon": 13.2528021
+      },
+      "geometry": [
+        {
+          "lat": 52.5230789,
+          "lon": 13.2528021
+        },
+        {
+          "lat": 52.5231292,
+          "lon": 13.2525861
+        },
+        {
+          "lat": 52.5232806,
+          "lon": 13.2519465
+        },
+        {
+          "lat": 52.5233563,
+          "lon": 13.2516255
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "share_busway",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:traffic_sign": "DE:245,1022-10,Zusatzzeichen",
+        "cycleway:right:width": "3.1",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "yes",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:cycleway:right:traffic_sign:mapillary": "4186238058329111",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1112702292,
+      "bounds": {
+        "minlat": 52.5210557,
+        "minlon": 13.2633432,
+        "maxlat": 52.5211303,
+        "maxlon": 13.2638817
+      },
+      "geometry": [
+        {
+          "lat": 52.5210557,
+          "lon": 13.2638817
+        },
+        {
+          "lat": 52.5211205,
+          "lon": 13.2634074
+        },
+        {
+          "lat": 52.5211303,
+          "lon": 13.2633432
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "turn:lanes": "left|none|none|none",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1112702296,
+      "bounds": {
+        "minlat": 52.521005,
+        "minlon": 13.2627242,
+        "maxlat": 52.5211218,
+        "maxlon": 13.2633358
+      },
+      "geometry": [
+        {
+          "lat": 52.5211218,
+          "lon": 13.2627242
+        },
+        {
+          "lat": 52.5211091,
+          "lon": 13.2627913
+        },
+        {
+          "lat": 52.5210968,
+          "lon": 13.2628559
+        },
+        {
+          "lat": 52.521088,
+          "lon": 13.2629019
+        },
+        {
+          "lat": 52.5210425,
+          "lon": 13.2631416
+        },
+        {
+          "lat": 52.5210322,
+          "lon": 13.2631958
+        },
+        {
+          "lat": 52.5210151,
+          "lon": 13.2632856
+        },
+        {
+          "lat": 52.521005,
+          "lon": 13.2633358
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1112702297,
+      "bounds": {
+        "minlat": 52.5203088,
+        "minlon": 13.2665101,
+        "maxlat": 52.5204296,
+        "maxlon": 13.2671897
+      },
+      "geometry": [
+        {
+          "lat": 52.5204296,
+          "lon": 13.2665101
+        },
+        {
+          "lat": 52.5203592,
+          "lon": 13.2669103
+        },
+        {
+          "lat": 52.5203294,
+          "lon": 13.2670753
+        },
+        {
+          "lat": 52.5203088,
+          "lon": 13.2671897
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "cycleway:right:surface": "paving_stones",
+        "cycleway:right:width": "1",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1112702300,
+      "bounds": {
+        "minlat": 52.5194841,
+        "minlon": 13.2719976,
+        "maxlat": 52.5196082,
+        "maxlon": 13.2726732
+      },
+      "geometry": [
+        {
+          "lat": 52.5194841,
+          "lon": 13.2726732
+        },
+        {
+          "lat": 52.5195066,
+          "lon": 13.2725578
+        },
+        {
+          "lat": 52.5195199,
+          "lon": 13.2724841
+        },
+        {
+          "lat": 52.5195682,
+          "lon": 13.272218
+        },
+        {
+          "lat": 52.5196082,
+          "lon": 13.2719976
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1112702301,
+      "bounds": {
+        "minlat": 52.5191034,
+        "minlon": 13.2733464,
+        "maxlat": 52.5193636,
+        "maxlon": 13.2747161
+      },
+      "geometry": [
+        {
+          "lat": 52.5191034,
+          "lon": 13.2747161
+        },
+        {
+          "lat": 52.5191204,
+          "lon": 13.2746189
+        },
+        {
+          "lat": 52.5191439,
+          "lon": 13.2744962
+        },
+        {
+          "lat": 52.5192379,
+          "lon": 13.2740046
+        },
+        {
+          "lat": 52.5193273,
+          "lon": 13.2735368
+        },
+        {
+          "lat": 52.5193636,
+          "lon": 13.2733464
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1112702312,
+      "bounds": {
+        "minlat": 52.5187235,
+        "minlon": 13.2753898,
+        "maxlat": 52.5188307,
+        "maxlon": 13.2759782
+      },
+      "geometry": [
+        {
+          "lat": 52.5188307,
+          "lon": 13.2753898
+        },
+        {
+          "lat": 52.5187476,
+          "lon": 13.2758458
+        },
+        {
+          "lat": 52.5187235,
+          "lon": 13.2759782
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1112702559,
+      "bounds": {
+        "minlat": 52.5184051,
+        "minlon": 13.2768296,
+        "maxlat": 52.5187094,
+        "maxlon": 13.2785071
+      },
+      "geometry": [
+        {
+          "lat": 52.5184051,
+          "lon": 13.2785071
+        },
+        {
+          "lat": 52.5184834,
+          "lon": 13.2780754
+        },
+        {
+          "lat": 52.5185067,
+          "lon": 13.2779474
+        },
+        {
+          "lat": 52.5185311,
+          "lon": 13.2778126
+        },
+        {
+          "lat": 52.5187094,
+          "lon": 13.2768296
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "yes",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1112702601,
+      "bounds": {
+        "minlat": 52.5188521,
+        "minlon": 13.2747161,
+        "maxlat": 52.5191034,
+        "maxlon": 13.2760417
+      },
+      "geometry": [
+        {
+          "lat": 52.5188521,
+          "lon": 13.2760417
+        },
+        {
+          "lat": 52.5188769,
+          "lon": 13.2759098
+        },
+        {
+          "lat": 52.5191034,
+          "lon": 13.2747161
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "yes",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1112717172,
+      "bounds": {
+        "minlat": 52.5182431,
+        "minlon": 13.2790272,
+        "maxlat": 52.5182668,
+        "maxlon": 13.2793336
+      },
+      "geometry": [
+        {
+          "lat": 52.5182431,
+          "lon": 13.2790272
+        },
+        {
+          "lat": 52.5182668,
+          "lon": 13.2793336
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|none|none",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1116986776,
+      "bounds": {
+        "minlat": 52.5194693,
+        "minlon": 13.2955251,
+        "maxlat": 52.519481,
+        "maxlon": 13.2957151
+      },
+      "geometry": [
+        {
+          "lat": 52.519481,
+          "lon": 13.2957151
+        },
+        {
+          "lat": 52.5194772,
+          "lon": 13.2956535
+        },
+        {
+          "lat": 52.5194726,
+          "lon": 13.2955788
+        },
+        {
+          "lat": 52.5194693,
+          "lon": 13.2955251
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10.5",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1116986778,
+      "bounds": {
+        "minlat": 52.5190975,
+        "minlon": 13.2916927,
+        "maxlat": 52.5191466,
+        "maxlon": 13.2923997
+      },
+      "geometry": [
+        {
+          "lat": 52.5190975,
+          "lon": 13.2916927
+        },
+        {
+          "lat": 52.5191116,
+          "lon": 13.2918674
+        },
+        {
+          "lat": 52.5191317,
+          "lon": 13.2921453
+        },
+        {
+          "lat": 52.5191389,
+          "lon": 13.2922676
+        },
+        {
+          "lat": 52.5191466,
+          "lon": 13.2923997
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:reason": "bus_stop",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1132171508,
+      "bounds": {
+        "minlat": 52.5244189,
+        "minlon": 13.247237,
+        "maxlat": 52.5244589,
+        "maxlon": 13.2474008
+      },
+      "geometry": [
+        {
+          "lat": 52.5244589,
+          "lon": 13.247237
+        },
+        {
+          "lat": 52.5244189,
+          "lon": 13.2474008
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:buffer:both": "no",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:marking:left": "dashed_line",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:separation:right": "kerb;railing",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "no",
+        "cycleway:right:traffic_sign": "DE:237",
+        "cycleway:right:width": "1",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1132171642,
+      "bounds": {
+        "minlat": 52.5245279,
+        "minlon": 13.2473027,
+        "maxlat": 52.5245636,
+        "maxlon": 13.2474629
+      },
+      "geometry": [
+        {
+          "lat": 52.5245279,
+          "lon": 13.2474629
+        },
+        {
+          "lat": 52.5245636,
+          "lon": 13.2473027
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1138386835,
+      "bounds": {
+        "minlat": 52.5193854,
+        "minlon": 13.2963905,
+        "maxlat": 52.5194639,
+        "maxlon": 13.2977327
+      },
+      "geometry": [
+        {
+          "lat": 52.5193854,
+          "lon": 13.2963905
+        },
+        {
+          "lat": 52.519461,
+          "lon": 13.2976539
+        },
+        {
+          "lat": 52.5194639,
+          "lon": 13.2977327
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "134",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "10.5",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1138386836,
+      "bounds": {
+        "minlat": 52.5195088,
+        "minlon": 13.2961676,
+        "maxlat": 52.5195283,
+        "maxlon": 13.296479
+      },
+      "geometry": [
+        {
+          "lat": 52.5195283,
+          "lon": 13.296479
+        },
+        {
+          "lat": 52.5195226,
+          "lon": 13.2963908
+        },
+        {
+          "lat": 52.5195181,
+          "lon": 13.2963177
+        },
+        {
+          "lat": 52.5195122,
+          "lon": 13.2962221
+        },
+        {
+          "lat": 52.5195088,
+          "lon": 13.2961676
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "10",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1138391194,
+      "bounds": {
+        "minlat": 52.5191596,
+        "minlon": 13.2926201,
+        "maxlat": 52.5193003,
+        "maxlon": 13.2950287
+      },
+      "geometry": [
+        {
+          "lat": 52.5191596,
+          "lon": 13.2926201
+        },
+        {
+          "lat": 52.5191874,
+          "lon": 13.2930879
+        },
+        {
+          "lat": 52.5192194,
+          "lon": 13.2936274
+        },
+        {
+          "lat": 52.5192242,
+          "lon": 13.293708
+        },
+        {
+          "lat": 52.5192331,
+          "lon": 13.2938578
+        },
+        {
+          "lat": 52.519293,
+          "lon": 13.2948674
+        },
+        {
+          "lat": 52.5193003,
+          "lon": 13.2950287
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "134",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1147619167,
+      "bounds": {
+        "minlat": 52.5210015,
+        "minlon": 13.2638817,
+        "maxlat": 52.5210557,
+        "maxlon": 13.2642325
+      },
+      "geometry": [
+        {
+          "lat": 52.5210015,
+          "lon": 13.2642325
+        },
+        {
+          "lat": 52.5210557,
+          "lon": 13.2638817
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1147628330,
+      "bounds": {
+        "minlat": 52.5211218,
+        "minlon": 13.2609194,
+        "maxlat": 52.521442,
+        "maxlon": 13.2627242
+      },
+      "geometry": [
+        {
+          "lat": 52.521442,
+          "lon": 13.2609194
+        },
+        {
+          "lat": 52.5214232,
+          "lon": 13.2610236
+        },
+        {
+          "lat": 52.5211224,
+          "lon": 13.2627209
+        },
+        {
+          "lat": 52.5211218,
+          "lon": 13.2627242
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1147628331,
+      "bounds": {
+        "minlat": 52.5204296,
+        "minlon": 13.2633358,
+        "maxlat": 52.521005,
+        "maxlon": 13.2665101
+      },
+      "geometry": [
+        {
+          "lat": 52.521005,
+          "lon": 13.2633358
+        },
+        {
+          "lat": 52.5204296,
+          "lon": 13.2665101
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1176346146,
+      "bounds": {
+        "minlat": 52.5183572,
+        "minlon": 13.2805584,
+        "maxlat": 52.5183936,
+        "maxlon": 13.281148
+      },
+      "geometry": [
+        {
+          "lat": 52.5183572,
+          "lon": 13.2805584
+        },
+        {
+          "lat": 52.5183618,
+          "lon": 13.2806202
+        },
+        {
+          "lat": 52.5183936,
+          "lon": 13.281148
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_stopping @ (Mo-Fr 06:00-09:00,14:00-18:00); no_parking @ (Mo-Fr 09:00-14:00)",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1311596135,
+      "bounds": {
+        "minlat": 52.5194639,
+        "minlon": 13.2977327,
+        "maxlat": 52.5194816,
+        "maxlon": 13.2980987
+      },
+      "geometry": [
+        {
+          "lat": 52.5194639,
+          "lon": 13.2977327
+        },
+        {
+          "lat": 52.5194816,
+          "lon": 13.2980987
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "7",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1319267355,
+      "bounds": {
+        "minlat": 52.5187406,
+        "minlon": 13.2853253,
+        "maxlat": 52.5187726,
+        "maxlon": 13.2858724
+      },
+      "geometry": [
+        {
+          "lat": 52.5187406,
+          "lon": 13.2853253
+        },
+        {
+          "lat": 52.5187726,
+          "lon": 13.2858724
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "cycleway:both:width": "1.5",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "5",
+        "lanes:backward": "2",
+        "lanes:forward": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "parking:left": "lane",
+        "parking:left:fee": "yes",
+        "parking:left:fee:conditional": "no @ (Mo-Fr 00:00-18:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:left:orientation": "parallel",
+        "parking:left:restriction:conditional": "no_stopping @ (Mo-Fr 14:00-18:00); loading_only @ (09:00-14:00)",
+        "parking:left:restriction:reason": "bus_lane",
+        "parking:left:zone": "134",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "turn:lanes:forward": "left|through|none",
+        "width": "18",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1324116377,
+      "bounds": {
+        "minlat": 52.5194438,
+        "minlon": 13.29511,
+        "maxlat": 52.5194693,
+        "maxlon": 13.2955251
+      },
+      "geometry": [
+        {
+          "lat": 52.5194693,
+          "lon": 13.2955251
+        },
+        {
+          "lat": 52.5194438,
+          "lon": 13.29511
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10.5",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1324116378,
+      "bounds": {
+        "minlat": 52.5189475,
+        "minlon": 13.2888862,
+        "maxlat": 52.5190112,
+        "maxlon": 13.2899788
+      },
+      "geometry": [
+        {
+          "lat": 52.5189475,
+          "lon": 13.2888862
+        },
+        {
+          "lat": 52.5189675,
+          "lon": 13.2892294
+        },
+        {
+          "lat": 52.5190112,
+          "lon": 13.2899788
+        }
+      ],
+      "tags": {
+        "cycleway:left": "separate",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "cycleway:right:mapillary": "704286611969292",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:separation:left": "flex_post",
+        "cycleway:right:separation:right": "kerb",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "no",
+        "cycleway:right:width": "2.6",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "4",
+        "lanes:psv:backward": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "parking:left": "lane",
+        "parking:left:fee": "yes",
+        "parking:left:fee:conditional": "no @ (Mo-Fr 00:00-18:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:left:orientation": "parallel",
+        "parking:left:restriction:conditional": "no_stopping @ (Mo-Fr 14:00-18:00); loading_only @ (09:00-14:00)",
+        "parking:left:restriction:reason": "bus_lane",
+        "parking:left:zone": "134",
+        "parking:right": "no",
+        "parking:right:reason": "cycleway",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "18",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1324116379,
+      "bounds": {
+        "minlat": 52.518895,
+        "minlon": 13.2880513,
+        "maxlat": 52.518924,
+        "maxlon": 13.2884972
+      },
+      "geometry": [
+        {
+          "lat": 52.518895,
+          "lon": 13.2880513
+        },
+        {
+          "lat": 52.5189014,
+          "lon": 13.2881535
+        },
+        {
+          "lat": 52.5189147,
+          "lon": 13.2883551
+        },
+        {
+          "lat": 52.518924,
+          "lon": 13.2884972
+        }
+      ],
+      "tags": {
+        "cycleway:left": "separate",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "cycleway:right:mapillary": "704286611969292",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:separation:left": "flex_post",
+        "cycleway:right:separation:right": "kerb",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "no",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "2.6",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "4",
+        "lanes:psv:backward": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "note": "Ganz neuer Radweg, Breite genau wie alter rechter Fahrstreifen.",
+        "parking:left": "lane",
+        "parking:left:fee": "yes",
+        "parking:left:fee:conditional": "no @ (Mo-Fr 00:00-18:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:left:orientation": "parallel",
+        "parking:left:restriction:conditional": "no_stopping @ (Mo-Fr 14:00-18:00); loading_only @ (09:00-14:00)",
+        "parking:left:restriction:reason": "bus_lane",
+        "parking:left:zone": "134",
+        "parking:right": "no",
+        "parking:right:reason": "cycleway",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "18",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1324116380,
+      "bounds": {
+        "minlat": 52.518882,
+        "minlon": 13.2878355,
+        "maxlat": 52.518895,
+        "maxlon": 13.2880513
+      },
+      "geometry": [
+        {
+          "lat": 52.518882,
+          "lon": 13.2878355
+        },
+        {
+          "lat": 52.518895,
+          "lon": 13.2880513
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "6",
+        "lanes:backward": "3",
+        "lanes:forward": "3",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "parking:left": "no",
+        "parking:left:restriction": "no_stopping",
+        "parking:left:restriction:conditional": "no_stopping @ (Mo-Fr 14:00-18:00); loading_only @ (09:00-14:00)",
+        "parking:right": "no",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "turn:lanes:backward": "left|through|none",
+        "width": "18",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1333710419,
+      "bounds": {
+        "minlat": 52.5192757,
+        "minlon": 13.2923759,
+        "maxlat": 52.5192862,
+        "maxlon": 13.2925465
+      },
+      "geometry": [
+        {
+          "lat": 52.5192862,
+          "lon": 13.2925465
+        },
+        {
+          "lat": 52.5192836,
+          "lon": 13.2925045
+        },
+        {
+          "lat": 52.5192757,
+          "lon": 13.2923759
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10.5",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1367279179,
+      "bounds": {
+        "minlat": 52.5214015,
+        "minlon": 13.2599892,
+        "maxlat": 52.5217163,
+        "maxlon": 13.2617654
+      },
+      "geometry": [
+        {
+          "lat": 52.5214015,
+          "lon": 13.2617654
+        },
+        {
+          "lat": 52.5215251,
+          "lon": 13.261068
+        },
+        {
+          "lat": 52.5215429,
+          "lon": 13.2609676
+        },
+        {
+          "lat": 52.5216599,
+          "lon": 13.2603076
+        },
+        {
+          "lat": 52.5217163,
+          "lon": 13.2599892
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "hazard": "children",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 06:00-18:00)",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1392196849,
+      "bounds": {
+        "minlat": 52.5196587,
+        "minlon": 13.2986676,
+        "maxlat": 52.5196888,
+        "maxlon": 13.2992122
+      },
+      "geometry": [
+        {
+          "lat": 52.5196888,
+          "lon": 13.2992122
+        },
+        {
+          "lat": 52.5196737,
+          "lon": 13.2989276
+        },
+        {
+          "lat": 52.519669,
+          "lon": 13.2988464
+        },
+        {
+          "lat": 52.5196587,
+          "lon": 13.2986676
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "share_busway",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "4.2",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "width": "10",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1392196852,
+      "bounds": {
+        "minlat": 52.5196888,
+        "minlon": 13.2992122,
+        "maxlat": 52.519692,
+        "maxlon": 13.2992634
+      },
+      "geometry": [
+        {
+          "lat": 52.519692,
+          "lon": 13.2992634
+        },
+        {
+          "lat": 52.5196888,
+          "lon": 13.2992122
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "share_busway",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "4.7",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:width": "Luftbild 2024",
+        "surface": "asphalt",
+        "width": "10",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1414679685,
+      "bounds": {
+        "minlat": 52.5194816,
+        "minlon": 13.2980987,
+        "maxlat": 52.5195095,
+        "maxlon": 13.2986408
+      },
+      "geometry": [
+        {
+          "lat": 52.5194816,
+          "lon": 13.2980987
+        },
+        {
+          "lat": 52.5195095,
+          "lon": 13.2986408
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "separate",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|through|through;right",
+        "width": "15",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1430586736,
+      "bounds": {
+        "minlat": 52.5230518,
+        "minlon": 13.2528021,
+        "maxlat": 52.5230789,
+        "maxlon": 13.2529207
+      },
+      "geometry": [
+        {
+          "lat": 52.5230518,
+          "lon": 13.2529207
+        },
+        {
+          "lat": 52.5230789,
+          "lon": 13.2528021
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "share_busway",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:traffic_sign": "DE:245,1022-10,Zusatzzeichen",
+        "cycleway:right:width": "3.1",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:cycleway:right:traffic_sign:mapillary": "4186238058329111",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1430586737,
+      "bounds": {
+        "minlat": 52.5222742,
+        "minlon": 13.2562626,
+        "maxlat": 52.5223808,
+        "maxlon": 13.2568598
+      },
+      "geometry": [
+        {
+          "lat": 52.5222742,
+          "lon": 13.2568598
+        },
+        {
+          "lat": 52.5223311,
+          "lon": 13.2565415
+        },
+        {
+          "lat": 52.5223498,
+          "lon": 13.2564369
+        },
+        {
+          "lat": 52.522363,
+          "lon": 13.2563633
+        },
+        {
+          "lat": 52.5223808,
+          "lon": 13.2562626
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1430586738,
+      "bounds": {
+        "minlat": 52.5218494,
+        "minlon": 13.2568598,
+        "maxlat": 52.5222742,
+        "maxlon": 13.2592383
+      },
+      "geometry": [
+        {
+          "lat": 52.5218494,
+          "lon": 13.2592383
+        },
+        {
+          "lat": 52.5221184,
+          "lon": 13.2577324
+        },
+        {
+          "lat": 52.5222742,
+          "lon": 13.2568598
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1430586739,
+      "bounds": {
+        "minlat": 52.5217163,
+        "minlon": 13.2595031,
+        "maxlat": 52.5218025,
+        "maxlon": 13.2599892
+      },
+      "geometry": [
+        {
+          "lat": 52.5217163,
+          "lon": 13.2599892
+        },
+        {
+          "lat": 52.5217636,
+          "lon": 13.2597226
+        },
+        {
+          "lat": 52.5218025,
+          "lon": 13.2595031
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "hazard": "children",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 06:00-18:00)",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1430586740,
+      "bounds": {
+        "minlat": 52.5202981,
+        "minlon": 13.2675813,
+        "maxlat": 52.5204057,
+        "maxlon": 13.2681773
+      },
+      "geometry": [
+        {
+          "lat": 52.5202981,
+          "lon": 13.2681773
+        },
+        {
+          "lat": 52.5203749,
+          "lon": 13.2677518
+        },
+        {
+          "lat": 52.5204057,
+          "lon": 13.2675813
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1430586741,
+      "bounds": {
+        "minlat": 52.5196082,
+        "minlon": 13.2681773,
+        "maxlat": 52.5202981,
+        "maxlon": 13.2719976
+      },
+      "geometry": [
+        {
+          "lat": 52.5196082,
+          "lon": 13.2719976
+        },
+        {
+          "lat": 52.5197879,
+          "lon": 13.2710023
+        },
+        {
+          "lat": 52.5197941,
+          "lon": 13.2709677
+        },
+        {
+          "lat": 52.5200465,
+          "lon": 13.2695628
+        },
+        {
+          "lat": 52.5200556,
+          "lon": 13.2695125
+        },
+        {
+          "lat": 52.5201953,
+          "lon": 13.2687461
+        },
+        {
+          "lat": 52.5202489,
+          "lon": 13.2684495
+        },
+        {
+          "lat": 52.5202981,
+          "lon": 13.2681773
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1430586742,
+      "bounds": {
+        "minlat": 52.5193636,
+        "minlon": 13.2726732,
+        "maxlat": 52.5194841,
+        "maxlon": 13.2733464
+      },
+      "geometry": [
+        {
+          "lat": 52.5193636,
+          "lon": 13.2733464
+        },
+        {
+          "lat": 52.5194165,
+          "lon": 13.2730547
+        },
+        {
+          "lat": 52.5194841,
+          "lon": 13.2726732
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "yes",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1430586743,
+      "bounds": {
+        "minlat": 52.5188307,
+        "minlon": 13.2726006,
+        "maxlat": 52.5193335,
+        "maxlon": 13.2753898
+      },
+      "geometry": [
+        {
+          "lat": 52.5193335,
+          "lon": 13.2726006
+        },
+        {
+          "lat": 52.519004,
+          "lon": 13.2744282
+        },
+        {
+          "lat": 52.5188307,
+          "lon": 13.2753898
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "yes",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1430586744,
+      "bounds": {
+        "minlat": 52.5193335,
+        "minlon": 13.2719423,
+        "maxlat": 52.5194522,
+        "maxlon": 13.2726006
+      },
+      "geometry": [
+        {
+          "lat": 52.5194522,
+          "lon": 13.2719423
+        },
+        {
+          "lat": 52.5194383,
+          "lon": 13.2720192
+        },
+        {
+          "lat": 52.5193816,
+          "lon": 13.2723339
+        },
+        {
+          "lat": 52.5193542,
+          "lon": 13.2724858
+        },
+        {
+          "lat": 52.5193335,
+          "lon": 13.2726006
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14050",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1430586745,
+      "bounds": {
+        "minlat": 52.521871,
+        "minlon": 13.2552699,
+        "maxlat": 52.5224492,
+        "maxlon": 13.2584985
+      },
+      "geometry": [
+        {
+          "lat": 52.5224492,
+          "lon": 13.2552699
+        },
+        {
+          "lat": 52.5222478,
+          "lon": 13.2563909
+        },
+        {
+          "lat": 52.5222299,
+          "lon": 13.2564905
+        },
+        {
+          "lat": 52.5221775,
+          "lon": 13.256782
+        },
+        {
+          "lat": 52.5220188,
+          "lon": 13.2576848
+        },
+        {
+          "lat": 52.521871,
+          "lon": 13.2584985
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:separation:left": "tree_row;kerb",
+        "cycleway:right:surface": "paving_stones",
+        "cycleway:right:surface:colour": "no",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "1",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1430586746,
+      "bounds": {
+        "minlat": 52.5224492,
+        "minlon": 13.254654,
+        "maxlat": 52.5225599,
+        "maxlon": 13.2552699
+      },
+      "geometry": [
+        {
+          "lat": 52.5225599,
+          "lon": 13.254654
+        },
+        {
+          "lat": 52.5225485,
+          "lon": 13.2547174
+        },
+        {
+          "lat": 52.5225353,
+          "lon": 13.2547907
+        },
+        {
+          "lat": 52.5224733,
+          "lon": 13.2551363
+        },
+        {
+          "lat": 52.5224702,
+          "lon": 13.2551533
+        },
+        {
+          "lat": 52.5224492,
+          "lon": 13.2552699
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:separation:left": "tree_row;kerb",
+        "cycleway:right:surface": "paving_stones",
+        "cycleway:right:surface:colour": "no",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "1",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:cycleway:right:width": "Messung aus Punktwolke (Infra3DViewer)",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1446962332,
+      "bounds": {
+        "minlat": 52.5190112,
+        "minlon": 13.2899788,
+        "maxlat": 52.5190176,
+        "maxlon": 13.2900883
+      },
+      "geometry": [
+        {
+          "lat": 52.5190112,
+          "lon": 13.2899788
+        },
+        {
+          "lat": 52.5190176,
+          "lon": 13.2900883
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "4",
+        "lanes:psv:backward": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "parking:left": "lane",
+        "parking:left:fee": "yes",
+        "parking:left:fee:conditional": "no @ (Mo-Fr 00:00-18:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:left:orientation": "parallel",
+        "parking:left:restriction:conditional": "no_stopping @ (Mo-Fr 14:00-18:00); loading_only @ (09:00-14:00)",
+        "parking:left:restriction:reason": "bus_lane",
+        "parking:left:zone": "134",
+        "parking:right": "no",
+        "parking:right:reason": "cycleway",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "18",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1462892073,
+      "bounds": {
+        "minlat": 52.5244589,
+        "minlon": 13.2471715,
+        "maxlat": 52.5244751,
+        "maxlon": 13.247237
+      },
+      "geometry": [
+        {
+          "lat": 52.5244751,
+          "lon": 13.2471715
+        },
+        {
+          "lat": 52.5244726,
+          "lon": 13.2471824
+        },
+        {
+          "lat": 52.5244589,
+          "lon": 13.247237
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:segregated": "yes",
+        "cycleway:right:separation:left": "kerb",
+        "cycleway:right:separation:right": "no",
+        "cycleway:right:surface": "paving_stones",
+        "cycleway:right:surface:colour": "none",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "1",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q158083",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "14052",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:width": "infra3D",
+        "surface": "asphalt",
+        "wikidata": "Q1772995"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1486857895,
+      "bounds": {
+        "minlat": 52.5190176,
+        "minlon": 13.2900883,
+        "maxlat": 52.5190458,
+        "maxlon": 13.2905007
+      },
+      "geometry": [
+        {
+          "lat": 52.5190176,
+          "lon": 13.2900883
+        },
+        {
+          "lat": 52.5190458,
+          "lon": 13.2905007
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "4",
+        "lanes:psv:backward": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "parking:left": "lane",
+        "parking:left:fee": "yes",
+        "parking:left:fee:conditional": "no @ (Mo-Fr 00:00-18:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:left:orientation": "parallel",
+        "parking:left:restriction:conditional": "no_stopping @ (Mo-Fr 14:00-18:00); loading_only @ (09:00-14:00)",
+        "parking:left:restriction:reason": "bus_lane",
+        "parking:left:zone": "134",
+        "parking:right": "no",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "18",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1497907462,
+      "bounds": {
+        "minlat": 52.5192862,
+        "minlon": 13.2925465,
+        "maxlat": 52.5193891,
+        "maxlon": 13.2942226
+      },
+      "geometry": [
+        {
+          "lat": 52.5193891,
+          "lon": 13.2942226
+        },
+        {
+          "lat": 52.5192862,
+          "lon": 13.2925465
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-18:00,20:00-24:00; Sa-Su)",
+        "parking:right:maxstay:conditional": "2 hours @ (09:00-18:00)",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:bus": "none",
+        "parking:right:restriction:conditional": "loading_only @ (09:00-18:00)",
+        "parking:right:zone": "134",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10.5",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1497907465,
+      "bounds": {
+        "minlat": 52.5195283,
+        "minlon": 13.296479,
+        "maxlat": 52.5195556,
+        "maxlon": 13.2969041
+      },
+      "geometry": [
+        {
+          "lat": 52.5195556,
+          "lon": 13.2969041
+        },
+        {
+          "lat": 52.5195283,
+          "lon": 13.296479
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:access": "no",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:taxi": "designated",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "width": "10",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1511914084,
+      "bounds": {
+        "minlat": 52.5195254,
+        "minlon": 13.2989503,
+        "maxlat": 52.5195351,
+        "maxlon": 13.2992597
+      },
+      "geometry": [
+        {
+          "lat": 52.5195254,
+          "lon": 13.2989503
+        },
+        {
+          "lat": 52.5195351,
+          "lon": 13.2992597
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "image": "https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Spandauer Damm",
+        "name:etymology:wikidata": "Q569827",
+        "name:etymology:wikipedia": "de:Berlin-Spandau",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "separate",
+        "postal_code": "14059",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|through|through;right",
+        "width": "12",
+        "wikidata": "Q1772995",
+        "wikimedia_commons": "Category:Spandauer Damm (Berlin-Westend)",
+        "wikipedia": "de:Spandauer Damm"
+      }
+    }
+  ]
+}

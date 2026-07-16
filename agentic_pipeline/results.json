@@ -1,0 +1,32 @@
+[
+  {
+    "scenario_id": "right_turn_salvador_allende_1038",
+    "scenario_type": "right_turn_conflict",
+    "confidence": 1.0,
+    "feedback_given": false,
+    "feedback_count": 0,
+    "feedback_messages": [],
+    "status": "confirmed",
+    "timestamp": "2026-06-08T08:01:58+00:00"
+  },
+  {
+    "scenario_id": "right_turn_mollstr_0405",
+    "scenario_type": "right_turn_conflict",
+    "confidence": 1.0,
+    "feedback_given": false,
+    "feedback_count": 0,
+    "feedback_messages": [],
+    "status": "confirmed",
+    "timestamp": "2026-06-08T08:12:59+00:00"
+  },
+  {
+    "scenario_id": "right_turn_gutschmidt_1215",
+    "scenario_type": "right_turn_conflict",
+    "confidence": 0.9,
+    "feedback_given": false,
+    "feedback_count": 0,
+    "feedback_messages": [],
+    "status": "confirmed",
+    "timestamp": "2026-06-08T08:16:55+00:00"
+  }
+]

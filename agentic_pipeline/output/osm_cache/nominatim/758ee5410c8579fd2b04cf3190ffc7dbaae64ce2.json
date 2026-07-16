@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 146505922,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 37480386,
+    "lat": "52.4407518",
+    "lon": "13.6012839",
+    "category": "highway",
+    "type": "residential",
+    "place_rank": 26,
+    "importance": 0.05342208819714653,
+    "addresstype": "road",
+    "name": "Müggelschlößchenweg",
+    "display_name": "Müggelschlößchenweg, Siedlung Kämmereiheide, Salvador-Allende-Viertel II, Köpenick, Treptow-Köpenick, Berlin, 12559, Deutschland",
+    "boundingbox": [
+      "52.4407486",
+      "52.4407551",
+      "13.6009584",
+      "13.6016095"
+    ]
+  }
+]

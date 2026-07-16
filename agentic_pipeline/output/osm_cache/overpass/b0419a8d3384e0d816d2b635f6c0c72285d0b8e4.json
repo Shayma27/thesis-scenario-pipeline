@@ -1,0 +1,425 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-07-15T22:03:30Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 24205285,
+      "bounds": {
+        "minlat": 52.430614,
+        "minlon": 13.6707536,
+        "maxlat": 52.431844,
+        "maxlon": 13.6709065
+      },
+      "geometry": [
+        {
+          "lat": 52.430614,
+          "lon": 13.6708346
+        },
+        {
+          "lat": 52.4306997,
+          "lon": 13.670882
+        },
+        {
+          "lat": 52.4307998,
+          "lon": 13.6709065
+        },
+        {
+          "lat": 52.4308968,
+          "lon": 13.6708962
+        },
+        {
+          "lat": 52.4310022,
+          "lon": 13.6708726
+        },
+        {
+          "lat": 52.4312162,
+          "lon": 13.6708214
+        },
+        {
+          "lat": 52.4313978,
+          "lon": 13.6707761
+        },
+        {
+          "lat": 52.4315506,
+          "lon": 13.6707536
+        },
+        {
+          "lat": 52.4316676,
+          "lon": 13.6707599
+        },
+        {
+          "lat": 52.431844,
+          "lon": 13.6708485
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "1",
+        "lit": "no",
+        "maxspeed": "30",
+        "name": "Straße zum Müggelhort",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:both": "no",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 24229551,
+      "bounds": {
+        "minlat": 52.4167225,
+        "minlon": 13.6536592,
+        "maxlat": 52.4220658,
+        "maxlon": 13.6564183
+      },
+      "geometry": [
+        {
+          "lat": 52.4167225,
+          "lon": 13.6536592
+        },
+        {
+          "lat": 52.4167647,
+          "lon": 13.6537157
+        },
+        {
+          "lat": 52.4167892,
+          "lon": 13.6537396
+        },
+        {
+          "lat": 52.4168276,
+          "lon": 13.6537771
+        },
+        {
+          "lat": 52.4169887,
+          "lon": 13.6538601
+        },
+        {
+          "lat": 52.4172429,
+          "lon": 13.6539911
+        },
+        {
+          "lat": 52.4188931,
+          "lon": 13.6548216
+        },
+        {
+          "lat": 52.4197343,
+          "lon": 13.6552457
+        },
+        {
+          "lat": 52.4202741,
+          "lon": 13.6555192
+        },
+        {
+          "lat": 52.4220658,
+          "lon": 13.6564183
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "unclassified",
+        "lane_markings": "no",
+        "lit": "no",
+        "maxspeed": "30",
+        "name": "Straße zum Müggelhort",
+        "parking:both": "no",
+        "sidewalk:both": "no",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 24764733,
+      "bounds": {
+        "minlat": 52.4220658,
+        "minlon": 13.6564183,
+        "maxlat": 52.430614,
+        "maxlon": 13.6708346
+      },
+      "geometry": [
+        {
+          "lat": 52.4220658,
+          "lon": 13.6564183
+        },
+        {
+          "lat": 52.4246263,
+          "lon": 13.6577332
+        },
+        {
+          "lat": 52.4247162,
+          "lon": 13.657806
+        },
+        {
+          "lat": 52.4247786,
+          "lon": 13.6578933
+        },
+        {
+          "lat": 52.4248834,
+          "lon": 13.6580971
+        },
+        {
+          "lat": 52.4251357,
+          "lon": 13.6586222
+        },
+        {
+          "lat": 52.4252228,
+          "lon": 13.6588284
+        },
+        {
+          "lat": 52.4252585,
+          "lon": 13.6589255
+        },
+        {
+          "lat": 52.4252926,
+          "lon": 13.6590372
+        },
+        {
+          "lat": 52.4253212,
+          "lon": 13.6591816
+        },
+        {
+          "lat": 52.4253495,
+          "lon": 13.6594136
+        },
+        {
+          "lat": 52.4254303,
+          "lon": 13.6602512
+        },
+        {
+          "lat": 52.425538,
+          "lon": 13.6614349
+        },
+        {
+          "lat": 52.4255831,
+          "lon": 13.6617096
+        },
+        {
+          "lat": 52.4256571,
+          "lon": 13.6619765
+        },
+        {
+          "lat": 52.4258798,
+          "lon": 13.6625589
+        },
+        {
+          "lat": 52.4262913,
+          "lon": 13.6634604
+        },
+        {
+          "lat": 52.4272747,
+          "lon": 13.6653595
+        },
+        {
+          "lat": 52.427419,
+          "lon": 13.6654891
+        },
+        {
+          "lat": 52.4290182,
+          "lon": 13.6663765
+        },
+        {
+          "lat": 52.4291675,
+          "lon": 13.6664706
+        },
+        {
+          "lat": 52.4292593,
+          "lon": 13.6665491
+        },
+        {
+          "lat": 52.4293081,
+          "lon": 13.6666299
+        },
+        {
+          "lat": 52.4293632,
+          "lon": 13.6667859
+        },
+        {
+          "lat": 52.4294197,
+          "lon": 13.6670091
+        },
+        {
+          "lat": 52.4295039,
+          "lon": 13.6674051
+        },
+        {
+          "lat": 52.4299216,
+          "lon": 13.6694052
+        },
+        {
+          "lat": 52.4299587,
+          "lon": 13.6695593
+        },
+        {
+          "lat": 52.430012,
+          "lon": 13.6697386
+        },
+        {
+          "lat": 52.4301839,
+          "lon": 13.670208
+        },
+        {
+          "lat": 52.4302725,
+          "lon": 13.670409
+        },
+        {
+          "lat": 52.4303455,
+          "lon": 13.6705458
+        },
+        {
+          "lat": 52.4304168,
+          "lon": 13.6706582
+        },
+        {
+          "lat": 52.4304672,
+          "lon": 13.6707194
+        },
+        {
+          "lat": 52.4305347,
+          "lon": 13.6707812
+        },
+        {
+          "lat": 52.430614,
+          "lon": 13.6708346
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:lane": "advisory",
+        "highway": "unclassified",
+        "lanes": "1",
+        "lit": "no",
+        "maxspeed": "30",
+        "name": "Straße zum Müggelhort",
+        "parking": "no",
+        "parking:both": "no",
+        "sidewalk:both": "lane",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 176031381,
+      "bounds": {
+        "minlat": 52.431844,
+        "minlon": 13.6708485,
+        "maxlat": 52.4323219,
+        "maxlon": 13.6741242
+      },
+      "geometry": [
+        {
+          "lat": 52.431844,
+          "lon": 13.6708485
+        },
+        {
+          "lat": 52.4319,
+          "lon": 13.6709167
+        },
+        {
+          "lat": 52.4319429,
+          "lon": 13.671001
+        },
+        {
+          "lat": 52.4319922,
+          "lon": 13.6711245
+        },
+        {
+          "lat": 52.4321881,
+          "lon": 13.6719082
+        },
+        {
+          "lat": 52.4322423,
+          "lon": 13.6721818
+        },
+        {
+          "lat": 52.4322939,
+          "lon": 13.6724676
+        },
+        {
+          "lat": 52.4323135,
+          "lon": 13.6726526
+        },
+        {
+          "lat": 52.4323219,
+          "lon": 13.6729465
+        },
+        {
+          "lat": 52.4323213,
+          "lon": 13.6733087
+        },
+        {
+          "lat": 52.4322888,
+          "lon": 13.6736575
+        },
+        {
+          "lat": 52.4322625,
+          "lon": 13.6741242
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "no",
+        "maxspeed": "30",
+        "name": "Straße zum Müggelhort",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:both": "no",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1447999749,
+      "bounds": {
+        "minlat": 52.4321383,
+        "minlon": 13.6741242,
+        "maxlat": 52.4322625,
+        "maxlon": 13.675806
+      },
+      "geometry": [
+        {
+          "lat": 52.4322625,
+          "lon": 13.6741242
+        },
+        {
+          "lat": 52.4322376,
+          "lon": 13.6744692
+        },
+        {
+          "lat": 52.4321718,
+          "lon": 13.675382
+        },
+        {
+          "lat": 52.4321383,
+          "lon": 13.675806
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "no",
+        "maxspeed": "30",
+        "name": "Straße zum Müggelhort",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "postal_code": "12559",
+        "sidewalk:both": "no",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1520 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-07-15T21:43:15Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 4446513,
+      "bounds": {
+        "minlat": 52.5134158,
+        "minlon": 13.2877541,
+        "maxlat": 52.5151804,
+        "maxlon": 13.2882992
+      },
+      "geometry": [
+        {
+          "lat": 52.5151804,
+          "lon": 13.2877541
+        },
+        {
+          "lat": 52.5148487,
+          "lon": 13.2878542
+        },
+        {
+          "lat": 52.5146335,
+          "lon": 13.2879199
+        },
+        {
+          "lat": 52.5145325,
+          "lon": 13.2879507
+        },
+        {
+          "lat": 52.5144831,
+          "lon": 13.2879657
+        },
+        {
+          "lat": 52.5143715,
+          "lon": 13.2879998
+        },
+        {
+          "lat": 52.5142866,
+          "lon": 13.2880257
+        },
+        {
+          "lat": 52.514063,
+          "lon": 13.288097
+        },
+        {
+          "lat": 52.5138505,
+          "lon": 13.2881649
+        },
+        {
+          "lat": 52.5137351,
+          "lon": 13.2882017
+        },
+        {
+          "lat": 52.5136808,
+          "lon": 13.2882187
+        },
+        {
+          "lat": 52.5134158,
+          "lon": 13.2882992
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "cycleway:both:width": "1.25",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:both": "separate",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source": "Stadtentwicklungsverwaltung, Abt. VII: \"Übergeordnetes Straßennetz\"",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "11",
+        "wikidata": "Q60236334"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4609235,
+      "bounds": {
+        "minlat": 52.5103917,
+        "minlon": 13.2891879,
+        "maxlat": 52.5105556,
+        "maxlon": 13.2892388
+      },
+      "geometry": [
+        {
+          "lat": 52.5103917,
+          "lon": 13.2892388
+        },
+        {
+          "lat": 52.5105556,
+          "lon": 13.2891879
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "cycleway:both:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:both": "no",
+        "sidewalk:both": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q60236334",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4756189,
+      "bounds": {
+        "minlat": 52.5242173,
+        "minlon": 13.2850149,
+        "maxlat": 52.5246923,
+        "maxlon": 13.2850992
+      },
+      "geometry": [
+        {
+          "lat": 52.5246923,
+          "lon": 13.2850149
+        },
+        {
+          "lat": 52.5244173,
+          "lon": 13.285039
+        },
+        {
+          "lat": 52.5242173,
+          "lon": 13.2850992
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:both": "lane",
+        "parking:both:fee": "yes",
+        "parking:both:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:both:orientation": "parallel",
+        "parking:both:zone": "134",
+        "postal_code": "14059",
+        "sidewalk": "no",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q60236334",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 5174236,
+      "bounds": {
+        "minlat": 52.5094059,
+        "minlon": 13.2895063,
+        "maxlat": 52.5095365,
+        "maxlon": 13.2895491
+      },
+      "geometry": [
+        {
+          "lat": 52.5095365,
+          "lon": 13.2895254
+        },
+        {
+          "lat": 52.5095179,
+          "lon": 13.2895317
+        },
+        {
+          "lat": 52.5094802,
+          "lon": 13.2895446
+        },
+        {
+          "lat": 52.5094434,
+          "lon": 13.2895491
+        },
+        {
+          "lat": 52.5094229,
+          "lon": 13.289541
+        },
+        {
+          "lat": 52.5094059,
+          "lon": 13.2895063
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:both": "no",
+        "postal_code": "14057",
+        "sidewalk:both": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q60236334"
+      }
+    },
+    {
+      "type": "way",
+      "id": 28658317,
+      "bounds": {
+        "minlat": 52.5194078,
+        "minlon": 13.2856756,
+        "maxlat": 52.5221631,
+        "maxlon": 13.2864777
+      },
+      "geometry": [
+        {
+          "lat": 52.5221631,
+          "lon": 13.2856756
+        },
+        {
+          "lat": 52.5221053,
+          "lon": 13.2856916
+        },
+        {
+          "lat": 52.5220805,
+          "lon": 13.2856985
+        },
+        {
+          "lat": 52.5220212,
+          "lon": 13.285716
+        },
+        {
+          "lat": 52.521912,
+          "lon": 13.2857482
+        },
+        {
+          "lat": 52.5217727,
+          "lon": 13.2857894
+        },
+        {
+          "lat": 52.5217104,
+          "lon": 13.2858076
+        },
+        {
+          "lat": 52.5215633,
+          "lon": 13.2858505
+        },
+        {
+          "lat": 52.5214067,
+          "lon": 13.2858962
+        },
+        {
+          "lat": 52.5213405,
+          "lon": 13.2859159
+        },
+        {
+          "lat": 52.5210775,
+          "lon": 13.2859922
+        },
+        {
+          "lat": 52.5209164,
+          "lon": 13.2860392
+        },
+        {
+          "lat": 52.5207352,
+          "lon": 13.2860921
+        },
+        {
+          "lat": 52.5206184,
+          "lon": 13.2861253
+        },
+        {
+          "lat": 52.5205363,
+          "lon": 13.2861502
+        },
+        {
+          "lat": 52.5203627,
+          "lon": 13.2862007
+        },
+        {
+          "lat": 52.5203253,
+          "lon": 13.2862115
+        },
+        {
+          "lat": 52.5200354,
+          "lon": 13.2862962
+        },
+        {
+          "lat": 52.5198804,
+          "lon": 13.2863414
+        },
+        {
+          "lat": 52.5196789,
+          "lon": 13.2864002
+        },
+        {
+          "lat": 52.5194078,
+          "lon": 13.2864777
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:both": "lane",
+        "parking:both:fee": "yes",
+        "parking:both:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:both:orientation": "parallel",
+        "parking:both:zone": "134",
+        "postal_code": "14059",
+        "sidewalk": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "width": "11",
+        "wikidata": "Q60236334",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 34024787,
+      "bounds": {
+        "minlat": 52.5246923,
+        "minlon": 13.2850149,
+        "maxlat": 52.5258137,
+        "maxlon": 13.2856715
+      },
+      "geometry": [
+        {
+          "lat": 52.5246923,
+          "lon": 13.2850149
+        },
+        {
+          "lat": 52.5247681,
+          "lon": 13.2850277
+        },
+        {
+          "lat": 52.5248887,
+          "lon": 13.2850681
+        },
+        {
+          "lat": 52.5249792,
+          "lon": 13.2851685
+        },
+        {
+          "lat": 52.5258137,
+          "lon": 13.2856715
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "name": "Sophie-Charlotten-Straße",
+        "operator:type": "public",
+        "parking:left": "no",
+        "parking:right": "shoulder",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "134",
+        "smoothness": "very_bad",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 35583972,
+      "bounds": {
+        "minlat": 52.5129593,
+        "minlon": 13.2883945,
+        "maxlat": 52.5130754,
+        "maxlon": 13.2884347
+      },
+      "geometry": [
+        {
+          "lat": 52.5130754,
+          "lon": 13.2883945
+        },
+        {
+          "lat": 52.5130254,
+          "lon": 13.2884116
+        },
+        {
+          "lat": 52.5129894,
+          "lon": 13.288424
+        },
+        {
+          "lat": 52.5129593,
+          "lon": 13.2884347
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lanes:backward": "2",
+        "lanes:forward": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "note": "Übergeordnete Straße, Stufe I",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source": "Stadtentwicklungsverwaltung, Abt. VII: \"Übergeordnetes Straßennetz\"",
+        "surface": "asphalt",
+        "turn:lanes:backward": "left|through;right",
+        "width": "11",
+        "wikidata": "Q60236334",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 331703878,
+      "bounds": {
+        "minlat": 52.5132131,
+        "minlon": 13.2882992,
+        "maxlat": 52.5134158,
+        "maxlon": 13.2883544
+      },
+      "geometry": [
+        {
+          "lat": 52.5134158,
+          "lon": 13.2882992
+        },
+        {
+          "lat": 52.5132131,
+          "lon": 13.2883544
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "cycleway:both:width": "1.25",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "3",
+        "lanes:backward": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:both": "no",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "source": "Stadtentwicklungsverwaltung, Abt. VII: \"Übergeordnetes Straßennetz\"",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "turn:lanes:forward": "left;through|right",
+        "width": "10",
+        "wikidata": "Q60236334"
+      }
+    },
+    {
+      "type": "way",
+      "id": 331703881,
+      "bounds": {
+        "minlat": 52.5106905,
+        "minlon": 13.2885093,
+        "maxlat": 52.5127193,
+        "maxlon": 13.289146
+      },
+      "geometry": [
+        {
+          "lat": 52.5127193,
+          "lon": 13.2885093
+        },
+        {
+          "lat": 52.5122653,
+          "lon": 13.2886626
+        },
+        {
+          "lat": 52.5121743,
+          "lon": 13.2886893
+        },
+        {
+          "lat": 52.5120084,
+          "lon": 13.2887394
+        },
+        {
+          "lat": 52.5118996,
+          "lon": 13.2887709
+        },
+        {
+          "lat": 52.511445,
+          "lon": 13.2889105
+        },
+        {
+          "lat": 52.510719,
+          "lon": 13.289137
+        },
+        {
+          "lat": 52.5106905,
+          "lon": 13.289146
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "note": "Übergeordnete Straße, Stufe I",
+        "parking:both": "separate",
+        "sidewalk:both": "separate",
+        "source": "Stadtentwicklungsverwaltung, Abt. VII: \"Übergeordnetes Straßennetz\"",
+        "surface": "asphalt",
+        "width": "11",
+        "wikidata": "Q60236334",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 428859991,
+      "bounds": {
+        "minlat": 52.5187651,
+        "minlon": 13.2872331,
+        "maxlat": 52.5187866,
+        "maxlon": 13.2875978
+      },
+      "geometry": [
+        {
+          "lat": 52.5187866,
+          "lon": 13.2875978
+        },
+        {
+          "lat": 52.5187651,
+          "lon": 13.2872331
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "platform",
+        "kerb": "raised",
+        "kerb:approach_aid": "no",
+        "lit": "yes",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "surface": "paved",
+        "tactile_paving": "no",
+        "wheelchair": "yes",
+        "wikidata": "Q60236334"
+      }
+    },
+    {
+      "type": "way",
+      "id": 806903762,
+      "bounds": {
+        "minlat": 52.5221631,
+        "minlon": 13.2855081,
+        "maxlat": 52.5227878,
+        "maxlon": 13.2856756
+      },
+      "geometry": [
+        {
+          "lat": 52.5227878,
+          "lon": 13.2855081
+        },
+        {
+          "lat": 52.5227399,
+          "lon": 13.285521
+        },
+        {
+          "lat": 52.5223421,
+          "lon": 13.2856296
+        },
+        {
+          "lat": 52.5222876,
+          "lon": 13.2856424
+        },
+        {
+          "lat": 52.5221631,
+          "lon": 13.2856756
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:both": "lane",
+        "parking:both:fee": "yes",
+        "parking:both:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:both:orientation": "parallel",
+        "parking:both:zone": "134",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q60236334",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101200182,
+      "bounds": {
+        "minlat": 52.5105556,
+        "minlon": 13.289146,
+        "maxlat": 52.5106905,
+        "maxlon": 13.2891879
+      },
+      "geometry": [
+        {
+          "lat": 52.5106905,
+          "lon": 13.289146
+        },
+        {
+          "lat": 52.5106593,
+          "lon": 13.2891557
+        },
+        {
+          "lat": 52.510625,
+          "lon": 13.2891663
+        },
+        {
+          "lat": 52.5105556,
+          "lon": 13.2891879
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "note": "Übergeordnete Straße, Stufe I",
+        "parking:both": "no",
+        "sidewalk:both": "separate",
+        "source": "Stadtentwicklungsverwaltung, Abt. VII: \"Übergeordnetes Straßennetz\"",
+        "surface": "asphalt",
+        "wikidata": "Q60236334",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101200331,
+      "bounds": {
+        "minlat": 52.510241,
+        "minlon": 13.2892388,
+        "maxlat": 52.5103917,
+        "maxlon": 13.2892856
+      },
+      "geometry": [
+        {
+          "lat": 52.5103917,
+          "lon": 13.2892388
+        },
+        {
+          "lat": 52.5103067,
+          "lon": 13.2892652
+        },
+        {
+          "lat": 52.5102704,
+          "lon": 13.2892765
+        },
+        {
+          "lat": 52.510241,
+          "lon": 13.2892856
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:both": "no",
+        "postal_code": "14057",
+        "sidewalk:both": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q60236334"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101200383,
+      "bounds": {
+        "minlat": 52.5127193,
+        "minlon": 13.2884347,
+        "maxlat": 52.5129593,
+        "maxlon": 13.2885093
+      },
+      "geometry": [
+        {
+          "lat": 52.5129593,
+          "lon": 13.2884347
+        },
+        {
+          "lat": 52.5129284,
+          "lon": 13.2884448
+        },
+        {
+          "lat": 52.5127193,
+          "lon": 13.2885093
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lanes:backward": "2",
+        "lanes:forward": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "note": "Übergeordnete Straße, Stufe I",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source": "Stadtentwicklungsverwaltung, Abt. VII: \"Übergeordnetes Straßennetz\"",
+        "surface": "asphalt",
+        "turn:lanes:backward": "left|through;right",
+        "width": "11",
+        "wikidata": "Q60236334",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101200605,
+      "bounds": {
+        "minlat": 52.5130754,
+        "minlon": 13.2883544,
+        "maxlat": 52.5132131,
+        "maxlon": 13.2883945
+      },
+      "geometry": [
+        {
+          "lat": 52.5132131,
+          "lon": 13.2883544
+        },
+        {
+          "lat": 52.5131579,
+          "lon": 13.2883691
+        },
+        {
+          "lat": 52.5131212,
+          "lon": 13.2883804
+        },
+        {
+          "lat": 52.5130754,
+          "lon": 13.2883945
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "cycleway:both:width": "1.25",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "3",
+        "lanes:backward": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "source": "Stadtentwicklungsverwaltung, Abt. VII: \"Übergeordnetes Straßennetz\"",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "turn:lanes:forward": "left;through|right",
+        "width": "10",
+        "wikidata": "Q60236334"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101200720,
+      "bounds": {
+        "minlat": 52.5186448,
+        "minlon": 13.2866547,
+        "maxlat": 52.5188147,
+        "maxlon": 13.2866987
+      },
+      "geometry": [
+        {
+          "lat": 52.5188147,
+          "lon": 13.2866547
+        },
+        {
+          "lat": 52.5187268,
+          "lon": 13.2866768
+        },
+        {
+          "lat": 52.5186925,
+          "lon": 13.2866854
+        },
+        {
+          "lat": 52.5186448,
+          "lon": 13.2866987
+        }
+      ],
+      "tags": {
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source": "Stadtentwicklungsverwaltung, Abt. VII: \"Übergeordnetes Straßennetz\"",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "11",
+        "wikidata": "Q60236334"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101200760,
+      "bounds": {
+        "minlat": 52.5188147,
+        "minlon": 13.2866025,
+        "maxlat": 52.5190162,
+        "maxlon": 13.2866547
+      },
+      "geometry": [
+        {
+          "lat": 52.5190162,
+          "lon": 13.2866025
+        },
+        {
+          "lat": 52.5189371,
+          "lon": 13.2866233
+        },
+        {
+          "lat": 52.5189059,
+          "lon": 13.2866313
+        },
+        {
+          "lat": 52.5188147,
+          "lon": 13.2866547
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "14059",
+        "sidewalk": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "width": "11",
+        "wikidata": "Q60236334",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1128015615,
+      "bounds": {
+        "minlat": 52.5190162,
+        "minlon": 13.2864777,
+        "maxlat": 52.5194078,
+        "maxlon": 13.2866025
+      },
+      "geometry": [
+        {
+          "lat": 52.5194078,
+          "lon": 13.2864777
+        },
+        {
+          "lat": 52.5193854,
+          "lon": 13.2864854
+        },
+        {
+          "lat": 52.5192044,
+          "lon": 13.2865478
+        },
+        {
+          "lat": 52.5191704,
+          "lon": 13.2865546
+        },
+        {
+          "lat": 52.5190162,
+          "lon": 13.2866025
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:both": "no",
+        "parking:left:reason": "bus_stop",
+        "parking:right:reason": "turn_lane",
+        "postal_code": "14059",
+        "sidewalk": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "width": "11",
+        "wikidata": "Q60236334",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1138722350,
+      "bounds": {
+        "minlat": 52.5227878,
+        "minlon": 13.2850992,
+        "maxlat": 52.5242173,
+        "maxlon": 13.2855081
+      },
+      "geometry": [
+        {
+          "lat": 52.5242173,
+          "lon": 13.2850992
+        },
+        {
+          "lat": 52.5234959,
+          "lon": 13.2853056
+        },
+        {
+          "lat": 52.5234487,
+          "lon": 13.2853191
+        },
+        {
+          "lat": 52.5227878,
+          "lon": 13.2855081
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:both": "lane",
+        "parking:both:fee": "yes",
+        "parking:both:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:both:orientation": "parallel",
+        "parking:both:zone": "134",
+        "postal_code": "14059",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q60236334",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1184861232,
+      "bounds": {
+        "minlat": 52.5101276,
+        "minlon": 13.2892856,
+        "maxlat": 52.510241,
+        "maxlon": 13.2893278
+      },
+      "geometry": [
+        {
+          "lat": 52.510241,
+          "lon": 13.2892856
+        },
+        {
+          "lat": 52.5102257,
+          "lon": 13.2892901
+        },
+        {
+          "lat": 52.5101276,
+          "lon": 13.2893278
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "131",
+        "postal_code": "14057",
+        "sidewalk:both": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q60236334"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1319014670,
+      "bounds": {
+        "minlat": 52.5175382,
+        "minlon": 13.2869036,
+        "maxlat": 52.5179831,
+        "maxlon": 13.2870422
+      },
+      "geometry": [
+        {
+          "lat": 52.5179831,
+          "lon": 13.2869036
+        },
+        {
+          "lat": 52.5179325,
+          "lon": 13.2869194
+        },
+        {
+          "lat": 52.5178767,
+          "lon": 13.2869368
+        },
+        {
+          "lat": 52.5175382,
+          "lon": 13.2870422
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "cycleway:both:width": "1.25",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:both": "separate",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source": "Stadtentwicklungsverwaltung, Abt. VII: \"Übergeordnetes Straßennetz\"",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "11",
+        "wikidata": "Q60236334"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1319230308,
+      "bounds": {
+        "minlat": 52.5190953,
+        "minlon": 13.2866151,
+        "maxlat": 52.5191977,
+        "maxlon": 13.286647
+      },
+      "geometry": [
+        {
+          "lat": 52.5191977,
+          "lon": 13.2866151
+        },
+        {
+          "lat": 52.5190953,
+          "lon": 13.286647
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2022-08-29",
+        "highway": "platform",
+        "kerb": "raised",
+        "kerb:approach_aid": "no",
+        "lit": "yes",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "surface": "paved",
+        "tactile_paving": "no",
+        "wheelchair": "yes",
+        "wikidata": "Q60236334"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1319230309,
+      "bounds": {
+        "minlat": 52.5188715,
+        "minlon": 13.2861341,
+        "maxlat": 52.5188871,
+        "maxlon": 13.286403
+      },
+      "geometry": [
+        {
+          "lat": 52.5188715,
+          "lon": 13.2861341
+        },
+        {
+          "lat": 52.5188871,
+          "lon": 13.286403
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q60236334"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1324116307,
+      "bounds": {
+        "minlat": 52.5151804,
+        "minlon": 13.2873583,
+        "maxlat": 52.5164831,
+        "maxlon": 13.2877541
+      },
+      "geometry": [
+        {
+          "lat": 52.5164831,
+          "lon": 13.2873583
+        },
+        {
+          "lat": 52.5162739,
+          "lon": 13.2874226
+        },
+        {
+          "lat": 52.5160388,
+          "lon": 13.2874948
+        },
+        {
+          "lat": 52.5159074,
+          "lon": 13.2875346
+        },
+        {
+          "lat": 52.5158013,
+          "lon": 13.2875668
+        },
+        {
+          "lat": 52.5157321,
+          "lon": 13.2875877
+        },
+        {
+          "lat": 52.5156888,
+          "lon": 13.2876013
+        },
+        {
+          "lat": 52.515502,
+          "lon": 13.2876565
+        },
+        {
+          "lat": 52.5154693,
+          "lon": 13.2876663
+        },
+        {
+          "lat": 52.5153694,
+          "lon": 13.2876959
+        },
+        {
+          "lat": 52.5151804,
+          "lon": 13.2877541
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "cycleway:both:width": "1.25",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:both": "separate",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source": "Stadtentwicklungsverwaltung, Abt. VII: \"Übergeordnetes Straßennetz\"",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "11",
+        "wikidata": "Q60236334"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1324116308,
+      "bounds": {
+        "minlat": 52.5164831,
+        "minlon": 13.2870915,
+        "maxlat": 52.5173748,
+        "maxlon": 13.2873583
+      },
+      "geometry": [
+        {
+          "lat": 52.5173748,
+          "lon": 13.2870915
+        },
+        {
+          "lat": 52.5171943,
+          "lon": 13.2871459
+        },
+        {
+          "lat": 52.5170111,
+          "lon": 13.2872012
+        },
+        {
+          "lat": 52.5169117,
+          "lon": 13.2872312
+        },
+        {
+          "lat": 52.5167898,
+          "lon": 13.287268
+        },
+        {
+          "lat": 52.5166412,
+          "lon": 13.2873149
+        },
+        {
+          "lat": 52.5164831,
+          "lon": 13.2873583
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "cycleway:both:width": "1.25",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:both": "separate",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source": "Stadtentwicklungsverwaltung, Abt. VII: \"Übergeordnetes Straßennetz\"",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10",
+        "wikidata": "Q60236334"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1324116368,
+      "bounds": {
+        "minlat": 52.5179831,
+        "minlon": 13.2866987,
+        "maxlat": 52.5186448,
+        "maxlon": 13.2869036
+      },
+      "geometry": [
+        {
+          "lat": 52.5186448,
+          "lon": 13.2866987
+        },
+        {
+          "lat": 52.5186269,
+          "lon": 13.2867033
+        },
+        {
+          "lat": 52.5186129,
+          "lon": 13.2867074
+        },
+        {
+          "lat": 52.5179831,
+          "lon": 13.2869036
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "cycleway:both:width": "1.25",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:left": "no",
+        "parking:left:restriction": "no_stopping",
+        "parking:right": "separate",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source": "Stadtentwicklungsverwaltung, Abt. VII: \"Übergeordnetes Straßennetz\"",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "11",
+        "wikidata": "Q60236334"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1324209549,
+      "bounds": {
+        "minlat": 52.5173748,
+        "minlon": 13.2870422,
+        "maxlat": 52.5175382,
+        "maxlon": 13.2870915
+      },
+      "geometry": [
+        {
+          "lat": 52.5175382,
+          "lon": 13.2870422
+        },
+        {
+          "lat": 52.5173748,
+          "lon": 13.2870915
+        }
+      ],
+      "tags": {
+        "cycleway": "separate",
+        "cycleway:both:width": "1.25",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:both": "separate",
+        "postal_code": "14059",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source": "Stadtentwicklungsverwaltung, Abt. VII: \"Übergeordnetes Straßennetz\"",
+        "source:cycleway:both:width": "Luftbild 2025",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "width": "10",
+        "wikidata": "Q60236334"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1467858786,
+      "bounds": {
+        "minlat": 52.5095365,
+        "minlon": 13.2893278,
+        "maxlat": 52.5101276,
+        "maxlon": 13.2895254
+      },
+      "geometry": [
+        {
+          "lat": 52.5101276,
+          "lon": 13.2893278
+        },
+        {
+          "lat": 52.5095365,
+          "lon": 13.2895254
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Sophie-Charlotten-Straße",
+        "name:etymology:wikidata": "Q57674",
+        "parking:both": "lane",
+        "parking:both:fee": "yes",
+        "parking:both:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:both:zone": "131",
+        "parking:left:orientation": "parallel",
+        "parking:right:orientation": "diagonal",
+        "postal_code": "14057",
+        "sidewalk:both": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q60236334"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1491651850,
+      "bounds": {
+        "minlat": 52.5258137,
+        "minlon": 13.2856715,
+        "maxlat": 52.5274184,
+        "maxlon": 13.2874379
+      },
+      "geometry": [
+        {
+          "lat": 52.5258137,
+          "lon": 13.2856715
+        },
+        {
+          "lat": 52.526165,
+          "lon": 13.2858833
+        },
+        {
+          "lat": 52.5265304,
+          "lon": 13.2860114
+        },
+        {
+          "lat": 52.5268215,
+          "lon": 13.286124
+        },
+        {
+          "lat": 52.5269122,
+          "lon": 13.2862081
+        },
+        {
+          "lat": 52.52696,
+          "lon": 13.2862738
+        },
+        {
+          "lat": 52.5270091,
+          "lon": 13.2863492
+        },
+        {
+          "lat": 52.5271965,
+          "lon": 13.2868416
+        },
+        {
+          "lat": 52.5274184,
+          "lon": 13.2874379
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "name": "Sophie-Charlotten-Straße",
+        "operator:type": "public",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "smoothness": "very_bad",
+        "surface": "sett"
+      }
+    }
+  ]
+}

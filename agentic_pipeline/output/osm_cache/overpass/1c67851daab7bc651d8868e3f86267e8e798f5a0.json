@@ -1,0 +1,4057 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-07-15T21:53:27Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 4579956,
+      "bounds": {
+        "minlat": 52.4792666,
+        "minlon": 13.4819496,
+        "maxlat": 52.479996,
+        "maxlon": 13.4833194
+      },
+      "geometry": [
+        {
+          "lat": 52.479996,
+          "lon": 13.4833194
+        },
+        {
+          "lat": 52.479762,
+          "lon": 13.48288
+        },
+        {
+          "lat": 52.4792666,
+          "lon": 13.4819496
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 10861731,
+      "bounds": {
+        "minlat": 52.4843529,
+        "minlon": 13.5113856,
+        "maxlat": 52.4853135,
+        "maxlon": 13.5142328
+      },
+      "geometry": [
+        {
+          "lat": 52.4853135,
+          "lon": 13.5142328
+        },
+        {
+          "lat": 52.4851625,
+          "lon": 13.5138708
+        },
+        {
+          "lat": 52.4850293,
+          "lon": 13.5135614
+        },
+        {
+          "lat": 52.4849289,
+          "lon": 13.5133208
+        },
+        {
+          "lat": 52.4848275,
+          "lon": 13.5130148
+        },
+        {
+          "lat": 52.4847226,
+          "lon": 13.5126514
+        },
+        {
+          "lat": 52.4846474,
+          "lon": 13.5123912
+        },
+        {
+          "lat": 52.4844936,
+          "lon": 13.5118479
+        },
+        {
+          "lat": 52.4843529,
+          "lon": 13.5113856
+        }
+      ],
+      "tags": {
+        "construction": "residential",
+        "cycleway:both": "no",
+        "highway": "construction",
+        "image": "https://commons.wikimedia.org/wiki/File:Blockdammweg.JPG",
+        "lane_markings": "no",
+        "lit": "no",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Blockdammweg",
+        "name:etymology:wikidata": "Q98969382",
+        "name:etymology:wikipedia": "de:Damm (Wall)",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "10318",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q86301402",
+        "wikimedia_commons": "Category:Blockdammweg (Berlin-Rummelsburg)",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 10863118,
+      "bounds": {
+        "minlat": 52.4841037,
+        "minlon": 13.5094947,
+        "maxlat": 52.4843475,
+        "maxlon": 13.5113325
+      },
+      "geometry": [
+        {
+          "lat": 52.4841037,
+          "lon": 13.5113325
+        },
+        {
+          "lat": 52.4841443,
+          "lon": 13.5112704
+        },
+        {
+          "lat": 52.4842631,
+          "lon": 13.5110886
+        },
+        {
+          "lat": 52.4842911,
+          "lon": 13.5110142
+        },
+        {
+          "lat": 52.4843081,
+          "lon": 13.5109233
+        },
+        {
+          "lat": 52.4843194,
+          "lon": 13.5108133
+        },
+        {
+          "lat": 52.484329,
+          "lon": 13.5103455
+        },
+        {
+          "lat": 52.4843475,
+          "lon": 13.5094947
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Blockdammweg.JPG",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Blockdammweg",
+        "name:etymology:wikidata": "Q98969382",
+        "name:etymology:wikipedia": "de:Damm (Wall)",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "10318",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "sidewalk:right:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q86301402",
+        "wikimedia_commons": "Category:Blockdammweg (Berlin-Rummelsburg)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 11657283,
+      "bounds": {
+        "minlat": 52.4830469,
+        "minlon": 13.5011505,
+        "maxlat": 52.4831054,
+        "maxlon": 13.5013557
+      },
+      "geometry": [
+        {
+          "lat": 52.4830469,
+          "lon": 13.5011505
+        },
+        {
+          "lat": 52.4831054,
+          "lon": 13.5013557
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Blockdammweg.JPG",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Blockdammweg",
+        "name:etymology:wikidata": "Q98969382",
+        "name:etymology:wikipedia": "de:Damm (Wall)",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10317",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "wikidata": "Q86301402",
+        "wikimedia_commons": "Category:Blockdammweg (Berlin-Rummelsburg)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 22689586,
+      "bounds": {
+        "minlat": 52.484819,
+        "minlon": 13.5134874,
+        "maxlat": 52.4852409,
+        "maxlon": 13.5145446
+      },
+      "geometry": [
+        {
+          "lat": 52.4852409,
+          "lon": 13.5145446
+        },
+        {
+          "lat": 52.4852287,
+          "lon": 13.5145125
+        },
+        {
+          "lat": 52.4849481,
+          "lon": 13.5138091
+        },
+        {
+          "lat": 52.4849217,
+          "lon": 13.5137467
+        },
+        {
+          "lat": 52.4848485,
+          "lon": 13.5135696
+        },
+        {
+          "lat": 52.484819,
+          "lon": 13.5134874
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Blockdammweg",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "sidewalk": "left",
+        "sidewalk:left:surface": "asphalt",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 24166493,
+      "bounds": {
+        "minlat": 52.4775421,
+        "minlon": 13.4786428,
+        "maxlat": 52.4776311,
+        "maxlon": 13.4788144
+      },
+      "geometry": [
+        {
+          "lat": 52.4775421,
+          "lon": 13.4786428
+        },
+        {
+          "lat": 52.4776311,
+          "lon": 13.4788144
+        }
+      ],
+      "tags": {
+        "cycleway": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "3",
+        "lanes:backward": "1",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "surface": "asphalt",
+        "turn:lanes:backward": "none",
+        "turn:lanes:forward": "left|none",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 24202434,
+      "bounds": {
+        "minlat": 52.4801229,
+        "minlon": 13.4835506,
+        "maxlat": 52.4832781,
+        "maxlon": 13.4895661
+      },
+      "geometry": [
+        {
+          "lat": 52.4801229,
+          "lon": 13.4835506
+        },
+        {
+          "lat": 52.480142,
+          "lon": 13.4835856
+        },
+        {
+          "lat": 52.4802171,
+          "lon": 13.4837272
+        },
+        {
+          "lat": 52.4802466,
+          "lon": 13.4837824
+        },
+        {
+          "lat": 52.4808661,
+          "lon": 13.4849437
+        },
+        {
+          "lat": 52.4816383,
+          "lon": 13.4863914
+        },
+        {
+          "lat": 52.4817312,
+          "lon": 13.4865655
+        },
+        {
+          "lat": 52.4820989,
+          "lon": 13.4872736
+        },
+        {
+          "lat": 52.4825683,
+          "lon": 13.4881775
+        },
+        {
+          "lat": 52.4827589,
+          "lon": 13.4885445
+        },
+        {
+          "lat": 52.4832781,
+          "lon": 13.4895661
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "horse": "yes",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxweight": "7.5",
+        "motor_vehicle": "destination",
+        "name": "Dammweg",
+        "postal_code": "12437",
+        "source:maxspeed": "sign",
+        "surface": "asphalt",
+        "traffic_sign": "DE:260"
+      }
+    },
+    {
+      "type": "way",
+      "id": 31744272,
+      "bounds": {
+        "minlat": 52.4705949,
+        "minlon": 13.4651509,
+        "maxlat": 52.4710397,
+        "maxlon": 13.4659977
+      },
+      "geometry": [
+        {
+          "lat": 52.4710397,
+          "lon": 13.4659977
+        },
+        {
+          "lat": 52.4709974,
+          "lon": 13.4659172
+        },
+        {
+          "lat": 52.4705949,
+          "lon": 13.4651509
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12057",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "ALKIS",
+        "surface": "asphalt",
+        "width": "8.5",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 31744276,
+      "bounds": {
+        "minlat": 52.4712017,
+        "minlon": 13.4665909,
+        "maxlat": 52.4714948,
+        "maxlon": 13.4671633
+      },
+      "geometry": [
+        {
+          "lat": 52.4712017,
+          "lon": 13.4665909
+        },
+        {
+          "lat": 52.4712979,
+          "lon": 13.4667761
+        },
+        {
+          "lat": 52.4713581,
+          "lon": 13.4668921
+        },
+        {
+          "lat": 52.4714082,
+          "lon": 13.4669918
+        },
+        {
+          "lat": 52.4714233,
+          "lon": 13.4670216
+        },
+        {
+          "lat": 52.471451,
+          "lon": 13.4670767
+        },
+        {
+          "lat": 52.4714948,
+          "lon": 13.4671633
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "sign",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12057",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "ALKIS",
+        "surface": "asphalt",
+        "width": "6",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 31744279,
+      "bounds": {
+        "minlat": 52.4716284,
+        "minlon": 13.4670761,
+        "maxlat": 52.4721331,
+        "maxlon": 13.4680364
+      },
+      "geometry": [
+        {
+          "lat": 52.4721331,
+          "lon": 13.4680364
+        },
+        {
+          "lat": 52.4720533,
+          "lon": 13.4678845
+        },
+        {
+          "lat": 52.4718978,
+          "lon": 13.4675885
+        },
+        {
+          "lat": 52.4716284,
+          "lon": 13.4670761
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "sign",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12057",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "ALKIS",
+        "surface": "asphalt",
+        "width": "7",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 35555505,
+      "bounds": {
+        "minlat": 52.4705753,
+        "minlon": 13.4654088,
+        "maxlat": 52.4709563,
+        "maxlon": 13.4661186
+      },
+      "geometry": [
+        {
+          "lat": 52.4705753,
+          "lon": 13.4654088
+        },
+        {
+          "lat": 52.4709097,
+          "lon": 13.4660318
+        },
+        {
+          "lat": 52.4709563,
+          "lon": 13.4661186
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12057",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "ALKIS",
+        "surface": "asphalt",
+        "width": "6",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 37077531,
+      "bounds": {
+        "minlat": 52.4723249,
+        "minlon": 13.4687079,
+        "maxlat": 52.4729907,
+        "maxlon": 13.4699681
+      },
+      "geometry": [
+        {
+          "lat": 52.4729907,
+          "lon": 13.4699681
+        },
+        {
+          "lat": 52.4728921,
+          "lon": 13.469795
+        },
+        {
+          "lat": 52.4728775,
+          "lon": 13.4697695
+        },
+        {
+          "lat": 52.472842,
+          "lon": 13.4696988
+        },
+        {
+          "lat": 52.472669,
+          "lon": 13.469369
+        },
+        {
+          "lat": 52.4725271,
+          "lon": 13.4690987
+        },
+        {
+          "lat": 52.4724428,
+          "lon": 13.4689407
+        },
+        {
+          "lat": 52.4723249,
+          "lon": 13.4687079
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "parking:right:reason": "narrow",
+        "postal_code": "12057",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 37785430,
+      "bounds": {
+        "minlat": 52.4842572,
+        "minlon": 13.5112929,
+        "maxlat": 52.4843271,
+        "maxlon": 13.5115091
+      },
+      "geometry": [
+        {
+          "lat": 52.4842671,
+          "lon": 13.5115091
+        },
+        {
+          "lat": 52.4842572,
+          "lon": 13.5114574
+        },
+        {
+          "lat": 52.4842603,
+          "lon": 13.5114108
+        },
+        {
+          "lat": 52.4843078,
+          "lon": 13.511327
+        },
+        {
+          "lat": 52.4843271,
+          "lon": 13.5112929
+        }
+      ],
+      "tags": {
+        "access": "no",
+        "check_date": "2026-03-06",
+        "construction": "residential",
+        "cycleway:both": "no",
+        "highway": "construction",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Blockdammweg",
+        "parking:both": "no",
+        "sidewalk": "no",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 38204647,
+      "bounds": {
+        "minlat": 52.4842533,
+        "minlon": 13.505853,
+        "maxlat": 52.4843881,
+        "maxlon": 13.5059046
+      },
+      "geometry": [
+        {
+          "lat": 52.4842533,
+          "lon": 13.5059046
+        },
+        {
+          "lat": 52.4843099,
+          "lon": 13.5058829
+        },
+        {
+          "lat": 52.4843371,
+          "lon": 13.5058725
+        },
+        {
+          "lat": 52.4843881,
+          "lon": 13.505853
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Blockdammweg.JPG",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Blockdammweg",
+        "name:etymology:wikidata": "Q98969382",
+        "name:etymology:wikipedia": "de:Damm (Wall)",
+        "parking:both": "no",
+        "postal_code": "10317",
+        "shoulder": "no",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "smoothness": "good",
+        "source:maxspeed": "sign",
+        "surface": "asphalt",
+        "wikidata": "Q86301402",
+        "wikimedia_commons": "Category:Blockdammweg (Berlin-Rummelsburg)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 41892672,
+      "bounds": {
+        "minlat": 52.4732988,
+        "minlon": 13.4705553,
+        "maxlat": 52.474686,
+        "maxlon": 13.4732077
+      },
+      "geometry": [
+        {
+          "lat": 52.474686,
+          "lon": 13.4732077
+        },
+        {
+          "lat": 52.4745475,
+          "lon": 13.4729416
+        },
+        {
+          "lat": 52.4741362,
+          "lon": 13.472151
+        },
+        {
+          "lat": 52.4741112,
+          "lon": 13.4721034
+        },
+        {
+          "lat": 52.4740148,
+          "lon": 13.4719196
+        },
+        {
+          "lat": 52.4738214,
+          "lon": 13.4715527
+        },
+        {
+          "lat": 52.4737965,
+          "lon": 13.4715037
+        },
+        {
+          "lat": 52.4735467,
+          "lon": 13.4710277
+        },
+        {
+          "lat": 52.4732988,
+          "lon": 13.4705553
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:left": "no",
+        "parking:left:restriction": "no_parking",
+        "parking:right": "separate",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 46104543,
+      "bounds": {
+        "minlat": 52.4841037,
+        "minlon": 13.5093427,
+        "maxlat": 52.4842141,
+        "maxlon": 13.5113325
+      },
+      "geometry": [
+        {
+          "lat": 52.4842141,
+          "lon": 13.5093427
+        },
+        {
+          "lat": 52.4842109,
+          "lon": 13.5094894
+        },
+        {
+          "lat": 52.4842017,
+          "lon": 13.50992
+        },
+        {
+          "lat": 52.4841806,
+          "lon": 13.5101193
+        },
+        {
+          "lat": 52.4841721,
+          "lon": 13.5104303
+        },
+        {
+          "lat": 52.4841582,
+          "lon": 13.5107762
+        },
+        {
+          "lat": 52.4841428,
+          "lon": 13.5109798
+        },
+        {
+          "lat": 52.4841107,
+          "lon": 13.5112695
+        },
+        {
+          "lat": 52.4841037,
+          "lon": 13.5113325
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Blockdammweg.JPG",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Blockdammweg",
+        "name:etymology:wikidata": "Q98969382",
+        "name:etymology:wikipedia": "de:Damm (Wall)",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "10318",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "sidewalk:right:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q86301402",
+        "wikimedia_commons": "Category:Blockdammweg (Berlin-Rummelsburg)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 48389144,
+      "bounds": {
+        "minlat": 52.4832005,
+        "minlon": 13.5012505,
+        "maxlat": 52.4834422,
+        "maxlon": 13.5020491
+      },
+      "geometry": [
+        {
+          "lat": 52.4834422,
+          "lon": 13.5020491
+        },
+        {
+          "lat": 52.4833795,
+          "lon": 13.501801
+        },
+        {
+          "lat": 52.4833065,
+          "lon": 13.5015058
+        },
+        {
+          "lat": 52.4833015,
+          "lon": 13.5014855
+        },
+        {
+          "lat": 52.4832935,
+          "lon": 13.5014533
+        },
+        {
+          "lat": 52.4832618,
+          "lon": 13.5013701
+        },
+        {
+          "lat": 52.4832334,
+          "lon": 13.5013111
+        },
+        {
+          "lat": 52.4832297,
+          "lon": 13.5013043
+        },
+        {
+          "lat": 52.4832005,
+          "lon": 13.5012505
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Blockdammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Blockdammweg",
+        "name:etymology:wikidata": "Q98969382",
+        "name:etymology:wikipedia": "de:Damm (Wall)",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10317",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|right",
+        "wikidata": "Q86301402",
+        "wikimedia_commons": "Category:Blockdammweg (Berlin-Rummelsburg)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 54629893,
+      "bounds": {
+        "minlat": 52.4783575,
+        "minlon": 13.4811783,
+        "maxlat": 52.4787305,
+        "maxlon": 13.481605
+      },
+      "geometry": [
+        {
+          "lat": 52.4783575,
+          "lon": 13.481605
+        },
+        {
+          "lat": 52.4786114,
+          "lon": 13.4813196
+        },
+        {
+          "lat": 52.4787305,
+          "lon": 13.4811783
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "name": "Dammweg",
+        "operator:type": "public",
+        "parking:both:fee": "no",
+        "parking:left": "lane",
+        "parking:left:orientation": "parallel",
+        "parking:right": "on_kerb",
+        "parking:right:orientation": "perpendicular",
+        "parking:right:surface": "unpaved",
+        "smoothness": "bad",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 192098055,
+      "bounds": {
+        "minlat": 52.4841428,
+        "minlon": 13.5109798,
+        "maxlat": 52.4842631,
+        "maxlon": 13.5110886
+      },
+      "geometry": [
+        {
+          "lat": 52.4842631,
+          "lon": 13.5110886
+        },
+        {
+          "lat": 52.4842101,
+          "lon": 13.5110406
+        },
+        {
+          "lat": 52.4841868,
+          "lon": 13.5110196
+        },
+        {
+          "lat": 52.4841428,
+          "lon": 13.5109798
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "image": "https://commons.wikimedia.org/wiki/File:Blockdammweg.JPG",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Blockdammweg",
+        "name:etymology:wikidata": "Q98969382",
+        "name:etymology:wikipedia": "de:Damm (Wall)",
+        "parking:both": "no",
+        "postal_code": "10318",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q86301402",
+        "wikimedia_commons": "Category:Blockdammweg (Berlin-Rummelsburg)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 192098056,
+      "bounds": {
+        "minlat": 52.4831011,
+        "minlon": 13.5010959,
+        "maxlat": 52.4832005,
+        "maxlon": 13.5012505
+      },
+      "geometry": [
+        {
+          "lat": 52.4832005,
+          "lon": 13.5012505
+        },
+        {
+          "lat": 52.4831011,
+          "lon": 13.5010959
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Blockdammweg.JPG",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Blockdammweg",
+        "name:etymology:wikidata": "Q98969382",
+        "name:etymology:wikipedia": "de:Damm (Wall)",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10317",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left",
+        "wikidata": "Q86301402",
+        "wikimedia_commons": "Category:Blockdammweg (Berlin-Rummelsburg)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 192098058,
+      "bounds": {
+        "minlat": 52.4831054,
+        "minlon": 13.5013557,
+        "maxlat": 52.4833101,
+        "maxlon": 13.5021253
+      },
+      "geometry": [
+        {
+          "lat": 52.4831054,
+          "lon": 13.5013557
+        },
+        {
+          "lat": 52.4831254,
+          "lon": 13.5014267
+        },
+        {
+          "lat": 52.4831595,
+          "lon": 13.5015477
+        },
+        {
+          "lat": 52.4832135,
+          "lon": 13.5017593
+        },
+        {
+          "lat": 52.4833101,
+          "lon": 13.5021253
+        }
+      ],
+      "tags": {
+        "bicycle": "optional_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Blockdammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Blockdammweg",
+        "name:etymology:wikidata": "Q98969382",
+        "name:etymology:wikipedia": "de:Damm (Wall)",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10317",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "|slight_left",
+        "wikidata": "Q86301402",
+        "wikimedia_commons": "Category:Blockdammweg (Berlin-Rummelsburg)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 306147856,
+      "bounds": {
+        "minlat": 52.4832781,
+        "minlon": 13.4895661,
+        "maxlat": 52.484135,
+        "maxlon": 13.4911871
+      },
+      "geometry": [
+        {
+          "lat": 52.4832781,
+          "lon": 13.4895661
+        },
+        {
+          "lat": 52.484135,
+          "lon": 13.4911871
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "horse": "yes",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxweight": "7.5",
+        "motor_vehicle": "destination",
+        "name": "Dammweg",
+        "source:maxspeed": "sign",
+        "surface": "asphalt",
+        "traffic_sign": "DE:260"
+      }
+    },
+    {
+      "type": "way",
+      "id": 311934112,
+      "bounds": {
+        "minlat": 52.4720983,
+        "minlon": 13.4683412,
+        "maxlat": 52.4723249,
+        "maxlon": 13.4687079
+      },
+      "geometry": [
+        {
+          "lat": 52.4720983,
+          "lon": 13.4683412
+        },
+        {
+          "lat": 52.4721438,
+          "lon": 13.4684155
+        },
+        {
+          "lat": 52.4721594,
+          "lon": 13.4684432
+        },
+        {
+          "lat": 52.472271,
+          "lon": 13.4686411
+        },
+        {
+          "lat": 52.4723249,
+          "lon": 13.4687079
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "sign",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "12057",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "ALKIS",
+        "surface": "asphalt",
+        "width": "5",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 319692414,
+      "bounds": {
+        "minlat": 52.4794765,
+        "minlon": 13.4840471,
+        "maxlat": 52.4796104,
+        "maxlon": 13.4841717
+      },
+      "geometry": [
+        {
+          "lat": 52.4794765,
+          "lon": 13.4841717
+        },
+        {
+          "lat": 52.4796104,
+          "lon": 13.4840471
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2021-10-07",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Neue Krugallee/Dammweg",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 319692415,
+      "bounds": {
+        "minlat": 52.4804238,
+        "minlon": 13.4828962,
+        "maxlat": 52.4805819,
+        "maxlon": 13.4830327
+      },
+      "geometry": [
+        {
+          "lat": 52.4805819,
+          "lon": 13.4828962
+        },
+        {
+          "lat": 52.4804764,
+          "lon": 13.4829873
+        },
+        {
+          "lat": 52.4804238,
+          "lon": 13.4830327
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Neue Krugallee/Dammweg",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 381784456,
+      "bounds": {
+        "minlat": 52.4700523,
+        "minlon": 13.4639274,
+        "maxlat": 52.4701615,
+        "maxlon": 13.4641318
+      },
+      "geometry": [
+        {
+          "lat": 52.4701615,
+          "lon": 13.4641318
+        },
+        {
+          "lat": 52.4700773,
+          "lon": 13.4639742
+        },
+        {
+          "lat": 52.4700523,
+          "lon": 13.4639274
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Dammweg/Sonnenallee",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 381784458,
+      "bounds": {
+        "minlat": 52.4707866,
+        "minlon": 13.4628064,
+        "maxlat": 52.4708395,
+        "maxlon": 13.4629976
+      },
+      "geometry": [
+        {
+          "lat": 52.4708395,
+          "lon": 13.4628064
+        },
+        {
+          "lat": 52.4707982,
+          "lon": 13.462955
+        },
+        {
+          "lat": 52.4707866,
+          "lon": 13.4629976
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Dammweg/Sonnenallee",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 381784459,
+      "bounds": {
+        "minlat": 52.4703783,
+        "minlon": 13.4651316,
+        "maxlat": 52.4704553,
+        "maxlon": 13.4652755
+      },
+      "geometry": [
+        {
+          "lat": 52.4704553,
+          "lon": 13.4652755
+        },
+        {
+          "lat": 52.4703783,
+          "lon": 13.4651316
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Dammweg/Sonnenallee",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 381784460,
+      "bounds": {
+        "minlat": 52.4707498,
+        "minlon": 13.4636868,
+        "maxlat": 52.4708273,
+        "maxlon": 13.4639005
+      },
+      "geometry": [
+        {
+          "lat": 52.4708273,
+          "lon": 13.4636868
+        },
+        {
+          "lat": 52.4707498,
+          "lon": 13.4639005
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Dammweg/Sonnenallee",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 431353990,
+      "bounds": {
+        "minlat": 52.4835065,
+        "minlon": 13.5023119,
+        "maxlat": 52.4843881,
+        "maxlon": 13.505853
+      },
+      "geometry": [
+        {
+          "lat": 52.4843881,
+          "lon": 13.505853
+        },
+        {
+          "lat": 52.4843774,
+          "lon": 13.505786
+        },
+        {
+          "lat": 52.4843523,
+          "lon": 13.5056656
+        },
+        {
+          "lat": 52.4843352,
+          "lon": 13.5055981
+        },
+        {
+          "lat": 52.4839018,
+          "lon": 13.5038937
+        },
+        {
+          "lat": 52.4835065,
+          "lon": 13.5023119
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Blockdammweg.JPG",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Blockdammweg",
+        "name:etymology:wikidata": "Q98969382",
+        "name:etymology:wikipedia": "de:Damm (Wall)",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "10317",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q86301402",
+        "wikimedia_commons": "Category:Blockdammweg (Berlin-Rummelsburg)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 431353992,
+      "bounds": {
+        "minlat": 52.4772813,
+        "minlon": 13.4781456,
+        "maxlat": 52.4775421,
+        "maxlon": 13.4786428
+      },
+      "geometry": [
+        {
+          "lat": 52.4775421,
+          "lon": 13.4786428
+        },
+        {
+          "lat": 52.4775029,
+          "lon": 13.4785681
+        },
+        {
+          "lat": 52.4774782,
+          "lon": 13.4785211
+        },
+        {
+          "lat": 52.4774624,
+          "lon": 13.4784908
+        },
+        {
+          "lat": 52.4774538,
+          "lon": 13.4784745
+        },
+        {
+          "lat": 52.4772813,
+          "lon": 13.4781456
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "3",
+        "lanes:backward": "2",
+        "lanes:forward": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes:backward": "left|none",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 431551302,
+      "bounds": {
+        "minlat": 52.4833101,
+        "minlon": 13.5021253,
+        "maxlat": 52.4842533,
+        "maxlon": 13.5059046
+      },
+      "geometry": [
+        {
+          "lat": 52.4833101,
+          "lon": 13.5021253
+        },
+        {
+          "lat": 52.4833439,
+          "lon": 13.5022581
+        },
+        {
+          "lat": 52.4833811,
+          "lon": 13.5024004
+        },
+        {
+          "lat": 52.4834729,
+          "lon": 13.5027665
+        },
+        {
+          "lat": 52.4835252,
+          "lon": 13.502978
+        },
+        {
+          "lat": 52.4837783,
+          "lon": 13.5039814
+        },
+        {
+          "lat": 52.4838746,
+          "lon": 13.5043616
+        },
+        {
+          "lat": 52.4840278,
+          "lon": 13.5049669
+        },
+        {
+          "lat": 52.4842082,
+          "lon": 13.5056796
+        },
+        {
+          "lat": 52.4842286,
+          "lon": 13.5057606
+        },
+        {
+          "lat": 52.4842429,
+          "lon": 13.5058323
+        },
+        {
+          "lat": 52.4842488,
+          "lon": 13.5058701
+        },
+        {
+          "lat": 52.4842533,
+          "lon": 13.5059046
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Blockdammweg.JPG",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Blockdammweg",
+        "name:etymology:wikidata": "Q98969382",
+        "name:etymology:wikipedia": "de:Damm (Wall)",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "10317",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "wikidata": "Q86301402",
+        "wikimedia_commons": "Category:Blockdammweg (Berlin-Rummelsburg)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 431551307,
+      "bounds": {
+        "minlat": 52.4721993,
+        "minlon": 13.4682024,
+        "maxlat": 52.4723249,
+        "maxlon": 13.4687079
+      },
+      "geometry": [
+        {
+          "lat": 52.4723249,
+          "lon": 13.4687079
+        },
+        {
+          "lat": 52.4723222,
+          "lon": 13.4686155
+        },
+        {
+          "lat": 52.4722681,
+          "lon": 13.4684148
+        },
+        {
+          "lat": 52.4722385,
+          "lon": 13.4683256
+        },
+        {
+          "lat": 52.4722278,
+          "lon": 13.4682935
+        },
+        {
+          "lat": 52.4721993,
+          "lon": 13.4682024
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "sign",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:reason": "narrow",
+        "postal_code": "12057",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "ALKIS",
+        "surface": "asphalt",
+        "width": "4",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 610322808,
+      "bounds": {
+        "minlat": 52.4770728,
+        "minlon": 13.4789881,
+        "maxlat": 52.4771869,
+        "maxlon": 13.4791543
+      },
+      "geometry": [
+        {
+          "lat": 52.4771869,
+          "lon": 13.4789881
+        },
+        {
+          "lat": 52.4770728,
+          "lon": 13.4791543
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:shelter": "2023-12-25",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Köpenicker Landstraße/Dammweg",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 610322809,
+      "bounds": {
+        "minlat": 52.4778093,
+        "minlon": 13.4785081,
+        "maxlat": 52.4779497,
+        "maxlon": 13.4787226
+      },
+      "geometry": [
+        {
+          "lat": 52.4778093,
+          "lon": 13.4787226
+        },
+        {
+          "lat": 52.4779497,
+          "lon": 13.4785081
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:shelter": "2023-12-25",
+        "highway": "platform",
+        "lit": "no",
+        "name": "Köpenicker Landstraße/Dammweg",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 626506999,
+      "bounds": {
+        "minlat": 52.4703345,
+        "minlon": 13.4646497,
+        "maxlat": 52.4705034,
+        "maxlon": 13.4649762
+      },
+      "geometry": [
+        {
+          "lat": 52.4705034,
+          "lon": 13.4649762
+        },
+        {
+          "lat": 52.4704398,
+          "lon": 13.4648548
+        },
+        {
+          "lat": 52.4704132,
+          "lon": 13.4648053
+        },
+        {
+          "lat": 52.4703772,
+          "lon": 13.4647335
+        },
+        {
+          "lat": 52.4703345,
+          "lon": 13.4646497
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "placement": "left_of:2",
+        "postal_code": "12057",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:width": "ALKIS",
+        "surface": "asphalt",
+        "width": "8.5",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 626507000,
+      "bounds": {
+        "minlat": 52.4703884,
+        "minlon": 13.4650218,
+        "maxlat": 52.4705753,
+        "maxlon": 13.4654088
+      },
+      "geometry": [
+        {
+          "lat": 52.4703884,
+          "lon": 13.4650218
+        },
+        {
+          "lat": 52.4704622,
+          "lon": 13.4651859
+        },
+        {
+          "lat": 52.470547,
+          "lon": 13.465353
+        },
+        {
+          "lat": 52.4705753,
+          "lon": 13.4654088
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12057",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "ALKIS",
+        "surface": "asphalt",
+        "width": "6",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 626507001,
+      "bounds": {
+        "minlat": 52.4702651,
+        "minlon": 13.4647801,
+        "maxlat": 52.4703884,
+        "maxlon": 13.4650218
+      },
+      "geometry": [
+        {
+          "lat": 52.4702651,
+          "lon": 13.4647801
+        },
+        {
+          "lat": 52.4703072,
+          "lon": 13.4648649
+        },
+        {
+          "lat": 52.470343,
+          "lon": 13.4649362
+        },
+        {
+          "lat": 52.4703577,
+          "lon": 13.4649641
+        },
+        {
+          "lat": 52.4703884,
+          "lon": 13.4650218
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12057",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:width": "ALKIS",
+        "surface": "asphalt",
+        "width": "6",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 837368617,
+      "bounds": {
+        "minlat": 52.4758323,
+        "minlon": 13.4753853,
+        "maxlat": 52.4766434,
+        "maxlon": 13.4769296
+      },
+      "geometry": [
+        {
+          "lat": 52.4766434,
+          "lon": 13.4769296
+        },
+        {
+          "lat": 52.4764517,
+          "lon": 13.4765613
+        },
+        {
+          "lat": 52.4762248,
+          "lon": 13.4761318
+        },
+        {
+          "lat": 52.4761371,
+          "lon": 13.4759666
+        },
+        {
+          "lat": 52.4760524,
+          "lon": 13.4758069
+        },
+        {
+          "lat": 52.476047,
+          "lon": 13.4757968
+        },
+        {
+          "lat": 52.4759925,
+          "lon": 13.4756891
+        },
+        {
+          "lat": 52.4759092,
+          "lon": 13.4755336
+        },
+        {
+          "lat": 52.4758323,
+          "lon": 13.4753853
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 847223898,
+      "bounds": {
+        "minlat": 52.4766434,
+        "minlon": 13.4769296,
+        "maxlat": 52.4772813,
+        "maxlon": 13.4781456
+      },
+      "geometry": [
+        {
+          "lat": 52.4772813,
+          "lon": 13.4781456
+        },
+        {
+          "lat": 52.4772045,
+          "lon": 13.4779991
+        },
+        {
+          "lat": 52.4766434,
+          "lon": 13.4769296
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:both": "separate",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 899453857,
+      "bounds": {
+        "minlat": 52.4800487,
+        "minlon": 13.4834146,
+        "maxlat": 52.4800785,
+        "maxlon": 13.4834683
+      },
+      "geometry": [
+        {
+          "lat": 52.4800785,
+          "lon": 13.4834683
+        },
+        {
+          "lat": 52.4800487,
+          "lon": 13.4834146
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "parking:both": "no",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 909395429,
+      "bounds": {
+        "minlat": 52.4800785,
+        "minlon": 13.4834683,
+        "maxlat": 52.4801229,
+        "maxlon": 13.4835506
+      },
+      "geometry": [
+        {
+          "lat": 52.4800785,
+          "lon": 13.4834683
+        },
+        {
+          "lat": 52.4801229,
+          "lon": 13.4835506
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxweight": "7.5",
+        "motor_vehicle": "destination",
+        "name": "Dammweg",
+        "postal_code": "12437",
+        "smoothness": "excellent",
+        "source:maxspeed": "sign",
+        "surface": "asphalt",
+        "traffic_sign": "DE:260"
+      }
+    },
+    {
+      "type": "way",
+      "id": 966012110,
+      "bounds": {
+        "minlat": 52.4836334,
+        "minlon": 13.5007842,
+        "maxlat": 52.4836636,
+        "maxlon": 13.5008178
+      },
+      "geometry": [
+        {
+          "lat": 52.4836636,
+          "lon": 13.5007842
+        },
+        {
+          "lat": 52.4836334,
+          "lon": 13.5008178
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Köpenicker Chaussee/Blockdammweg",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 966012111,
+      "bounds": {
+        "minlat": 52.4837937,
+        "minlon": 13.5001985,
+        "maxlat": 52.4838207,
+        "maxlon": 13.5002291
+      },
+      "geometry": [
+        {
+          "lat": 52.4837937,
+          "lon": 13.5002291
+        },
+        {
+          "lat": 52.4838207,
+          "lon": 13.5001985
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Köpenicker Chaussee/Blockdammweg",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 966016856,
+      "bounds": {
+        "minlat": 52.4842141,
+        "minlon": 13.5059046,
+        "maxlat": 52.4842785,
+        "maxlon": 13.5093427
+      },
+      "geometry": [
+        {
+          "lat": 52.4842533,
+          "lon": 13.5059046
+        },
+        {
+          "lat": 52.484266,
+          "lon": 13.5059988
+        },
+        {
+          "lat": 52.4842741,
+          "lon": 13.5061065
+        },
+        {
+          "lat": 52.4842772,
+          "lon": 13.5061826
+        },
+        {
+          "lat": 52.4842785,
+          "lon": 13.5062666
+        },
+        {
+          "lat": 52.4842717,
+          "lon": 13.5066432
+        },
+        {
+          "lat": 52.4842615,
+          "lon": 13.5071389
+        },
+        {
+          "lat": 52.4842141,
+          "lon": 13.5093427
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Blockdammweg.JPG",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Blockdammweg",
+        "name:etymology:wikidata": "Q98969382",
+        "name:etymology:wikipedia": "de:Damm (Wall)",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "10318",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "sidewalk:right:surface": "paving_stones",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "wikidata": "Q86301402",
+        "wikimedia_commons": "Category:Blockdammweg (Berlin-Rummelsburg)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 966426247,
+      "bounds": {
+        "minlat": 52.4843558,
+        "minlon": 13.505853,
+        "maxlat": 52.4844151,
+        "maxlon": 13.5090619
+      },
+      "geometry": [
+        {
+          "lat": 52.4843558,
+          "lon": 13.5090619
+        },
+        {
+          "lat": 52.4843643,
+          "lon": 13.5086905
+        },
+        {
+          "lat": 52.4843654,
+          "lon": 13.5086152
+        },
+        {
+          "lat": 52.4843833,
+          "lon": 13.5077866
+        },
+        {
+          "lat": 52.4843925,
+          "lon": 13.5073483
+        },
+        {
+          "lat": 52.4844151,
+          "lon": 13.5062645
+        },
+        {
+          "lat": 52.4844115,
+          "lon": 13.5061105
+        },
+        {
+          "lat": 52.4843973,
+          "lon": 13.5059313
+        },
+        {
+          "lat": 52.4843881,
+          "lon": 13.505853
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Blockdammweg.JPG",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Blockdammweg",
+        "name:etymology:wikidata": "Q98969382",
+        "name:etymology:wikipedia": "de:Damm (Wall)",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "10318",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "sidewalk:right:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q86301402",
+        "wikimedia_commons": "Category:Blockdammweg (Berlin-Rummelsburg)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 982095385,
+      "bounds": {
+        "minlat": 52.4710397,
+        "minlon": 13.4659977,
+        "maxlat": 52.4712349,
+        "maxlon": 13.4663691
+      },
+      "geometry": [
+        {
+          "lat": 52.4712349,
+          "lon": 13.4663691
+        },
+        {
+          "lat": 52.471106,
+          "lon": 13.4661238
+        },
+        {
+          "lat": 52.4710914,
+          "lon": 13.4660961
+        },
+        {
+          "lat": 52.4710397,
+          "lon": 13.4659977
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "sign",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12057",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "ALKIS",
+        "surface": "asphalt",
+        "width": "8.5",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 986920406,
+      "bounds": {
+        "minlat": 52.4843475,
+        "minlon": 13.5090619,
+        "maxlat": 52.4843558,
+        "maxlon": 13.5094947
+      },
+      "geometry": [
+        {
+          "lat": 52.4843475,
+          "lon": 13.5094947
+        },
+        {
+          "lat": 52.4843558,
+          "lon": 13.5090619
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Blockdammweg.JPG",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Blockdammweg",
+        "name:etymology:wikidata": "Q98969382",
+        "name:etymology:wikipedia": "de:Damm (Wall)",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "10318",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "sidewalk:right:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q86301402",
+        "wikimedia_commons": "Category:Blockdammweg (Berlin-Rummelsburg)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1002392336,
+      "bounds": {
+        "minlat": 52.4729907,
+        "minlon": 13.4699681,
+        "maxlat": 52.4732988,
+        "maxlon": 13.4705553
+      },
+      "geometry": [
+        {
+          "lat": 52.4732988,
+          "lon": 13.4705553
+        },
+        {
+          "lat": 52.4731543,
+          "lon": 13.4702801
+        },
+        {
+          "lat": 52.4731065,
+          "lon": 13.4701892
+        },
+        {
+          "lat": 52.4730333,
+          "lon": 13.47005
+        },
+        {
+          "lat": 52.4729907,
+          "lon": 13.4699681
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:both": "no",
+        "parking:left:restriction": "no_parking",
+        "parking:right:reason": "narrow",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1050732163,
+      "bounds": {
+        "minlat": 52.4853135,
+        "minlon": 13.5142328,
+        "maxlat": 52.4854876,
+        "maxlon": 13.5146501
+      },
+      "geometry": [
+        {
+          "lat": 52.4854876,
+          "lon": 13.5146501
+        },
+        {
+          "lat": 52.4853135,
+          "lon": 13.5142328
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "image": "https://commons.wikimedia.org/wiki/File:Blockdammweg.JPG",
+        "lane_markings": "no",
+        "lit": "no",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Blockdammweg",
+        "name:etymology:wikidata": "Q98969382",
+        "name:etymology:wikipedia": "de:Damm (Wall)",
+        "parking:left": "shoulder",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "10318",
+        "sidewalk": "no",
+        "smoothness": "bad",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q86301402",
+        "wikimedia_commons": "Category:Blockdammweg (Berlin-Rummelsburg)",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1121917418,
+      "bounds": {
+        "minlat": 52.474686,
+        "minlon": 13.4732077,
+        "maxlat": 52.4749769,
+        "maxlon": 13.4737533
+      },
+      "geometry": [
+        {
+          "lat": 52.4749769,
+          "lon": 13.4737533
+        },
+        {
+          "lat": 52.474947,
+          "lon": 13.4736972
+        },
+        {
+          "lat": 52.4749126,
+          "lon": 13.4736327
+        },
+        {
+          "lat": 52.4748762,
+          "lon": 13.4735644
+        },
+        {
+          "lat": 52.4747199,
+          "lon": 13.4732712
+        },
+        {
+          "lat": 52.474686,
+          "lon": 13.4732077
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:both": "no",
+        "parking:left:restriction": "no_parking",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1131080928,
+      "bounds": {
+        "minlat": 52.4834422,
+        "minlon": 13.5020491,
+        "maxlat": 52.4835065,
+        "maxlon": 13.5023119
+      },
+      "geometry": [
+        {
+          "lat": 52.4835065,
+          "lon": 13.5023119
+        },
+        {
+          "lat": 52.483472,
+          "lon": 13.502171
+        },
+        {
+          "lat": 52.4834422,
+          "lon": 13.5020491
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Blockdammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Blockdammweg",
+        "name:etymology:wikidata": "Q98969382",
+        "name:etymology:wikipedia": "de:Damm (Wall)",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10317",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|right",
+        "wikidata": "Q86301402",
+        "wikimedia_commons": "Category:Blockdammweg (Berlin-Rummelsburg)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1136456140,
+      "bounds": {
+        "minlat": 52.4705034,
+        "minlon": 13.4649762,
+        "maxlat": 52.4705949,
+        "maxlon": 13.4651509
+      },
+      "geometry": [
+        {
+          "lat": 52.4705949,
+          "lon": 13.4651509
+        },
+        {
+          "lat": 52.4705034,
+          "lon": 13.4649762
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:access": "no",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:taxi": "designated",
+        "placement": "left_of:2",
+        "postal_code": "12057",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "ALKIS",
+        "surface": "asphalt",
+        "width": "8.5",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1136456518,
+      "bounds": {
+        "minlat": 52.4714948,
+        "minlon": 13.4671633,
+        "maxlat": 52.4720983,
+        "maxlon": 13.4683412
+      },
+      "geometry": [
+        {
+          "lat": 52.4714948,
+          "lon": 13.4671633
+        },
+        {
+          "lat": 52.4715386,
+          "lon": 13.4672471
+        },
+        {
+          "lat": 52.471612,
+          "lon": 13.467387
+        },
+        {
+          "lat": 52.4720322,
+          "lon": 13.4682116
+        },
+        {
+          "lat": 52.4720983,
+          "lon": 13.4683412
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "sign",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12057",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "ALKIS",
+        "surface": "asphalt",
+        "width": "6",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1136456519,
+      "bounds": {
+        "minlat": 52.4709563,
+        "minlon": 13.4661186,
+        "maxlat": 52.4712017,
+        "maxlon": 13.4665909
+      },
+      "geometry": [
+        {
+          "lat": 52.4709563,
+          "lon": 13.4661186
+        },
+        {
+          "lat": 52.4710067,
+          "lon": 13.4662158
+        },
+        {
+          "lat": 52.4710211,
+          "lon": 13.4662436
+        },
+        {
+          "lat": 52.4712017,
+          "lon": 13.4665909
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "sign",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12057",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "ALKIS",
+        "surface": "asphalt",
+        "width": "6",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1180440872,
+      "bounds": {
+        "minlat": 52.4712349,
+        "minlon": 13.4663691,
+        "maxlat": 52.4714503,
+        "maxlon": 13.4667678
+      },
+      "geometry": [
+        {
+          "lat": 52.4714503,
+          "lon": 13.4667678
+        },
+        {
+          "lat": 52.4713718,
+          "lon": 13.4666225
+        },
+        {
+          "lat": 52.4712349,
+          "lon": 13.4663691
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "sign",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12057",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "ALKIS",
+        "surface": "asphalt",
+        "width": "8.5",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1180440873,
+      "bounds": {
+        "minlat": 52.4721331,
+        "minlon": 13.4680364,
+        "maxlat": 52.4721993,
+        "maxlon": 13.4682024
+      },
+      "geometry": [
+        {
+          "lat": 52.4721993,
+          "lon": 13.4682024
+        },
+        {
+          "lat": 52.472162,
+          "lon": 13.4680932
+        },
+        {
+          "lat": 52.4721331,
+          "lon": 13.4680364
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "sign",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:reason": "narrow",
+        "postal_code": "12057",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "ALKIS",
+        "surface": "asphalt",
+        "width": "7",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1218767186,
+      "bounds": {
+        "minlat": 52.4776311,
+        "minlon": 13.4788144,
+        "maxlat": 52.4777165,
+        "maxlon": 13.478979
+      },
+      "geometry": [
+        {
+          "lat": 52.4777165,
+          "lon": 13.478979
+        },
+        {
+          "lat": 52.4776985,
+          "lon": 13.4789443
+        },
+        {
+          "lat": 52.477688,
+          "lon": 13.4789241
+        },
+        {
+          "lat": 52.4776646,
+          "lon": 13.4788791
+        },
+        {
+          "lat": 52.4776311,
+          "lon": 13.4788144
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1234160296,
+      "bounds": {
+        "minlat": 52.4756064,
+        "minlon": 13.4749519,
+        "maxlat": 52.47574,
+        "maxlon": 13.4752073
+      },
+      "geometry": [
+        {
+          "lat": 52.47574,
+          "lon": 13.4752073
+        },
+        {
+          "lat": 52.4756531,
+          "lon": 13.4750416
+        },
+        {
+          "lat": 52.4756432,
+          "lon": 13.4750225
+        },
+        {
+          "lat": 52.4756064,
+          "lon": 13.4749519
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:left": "no",
+        "parking:left:restriction": "no_stopping",
+        "parking:right": "separate",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1234732703,
+      "bounds": {
+        "minlat": 52.4749769,
+        "minlon": 13.4737533,
+        "maxlat": 52.4750635,
+        "maxlon": 13.4739181
+      },
+      "geometry": [
+        {
+          "lat": 52.4750635,
+          "lon": 13.4739181
+        },
+        {
+          "lat": 52.4750544,
+          "lon": 13.4739008
+        },
+        {
+          "lat": 52.4749769,
+          "lon": 13.4737533
+        }
+      ],
+      "tags": {
+        "cycleway:both": "separate",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:both": "no",
+        "parking:left:restriction": "no_stopping",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1245692759,
+      "bounds": {
+        "minlat": 52.4777692,
+        "minlon": 13.4790793,
+        "maxlat": 52.4786364,
+        "maxlon": 13.4807307
+      },
+      "geometry": [
+        {
+          "lat": 52.4786364,
+          "lon": 13.4807307
+        },
+        {
+          "lat": 52.4784383,
+          "lon": 13.4803534
+        },
+        {
+          "lat": 52.4777692,
+          "lon": 13.4790793
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1245692761,
+      "bounds": {
+        "minlat": 52.4786364,
+        "minlon": 13.4807307,
+        "maxlat": 52.4787236,
+        "maxlon": 13.4808975
+      },
+      "geometry": [
+        {
+          "lat": 52.4787236,
+          "lon": 13.4808975
+        },
+        {
+          "lat": 52.4786827,
+          "lon": 13.4808193
+        },
+        {
+          "lat": 52.4786364,
+          "lon": 13.4807307
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1245692767,
+      "bounds": {
+        "minlat": 52.4787236,
+        "minlon": 13.4808975,
+        "maxlat": 52.478753,
+        "maxlon": 13.4809523
+      },
+      "geometry": [
+        {
+          "lat": 52.478753,
+          "lon": 13.4809523
+        },
+        {
+          "lat": 52.4787236,
+          "lon": 13.4808975
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1245692769,
+      "bounds": {
+        "minlat": 52.478753,
+        "minlon": 13.4809523,
+        "maxlat": 52.4788642,
+        "maxlon": 13.4811655
+      },
+      "geometry": [
+        {
+          "lat": 52.4788642,
+          "lon": 13.4811655
+        },
+        {
+          "lat": 52.4788107,
+          "lon": 13.4810631
+        },
+        {
+          "lat": 52.478753,
+          "lon": 13.4809523
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1245692770,
+      "bounds": {
+        "minlat": 52.4787305,
+        "minlon": 13.4810631,
+        "maxlat": 52.4788107,
+        "maxlon": 13.4811783
+      },
+      "geometry": [
+        {
+          "lat": 52.4787305,
+          "lon": 13.4811783
+        },
+        {
+          "lat": 52.4787458,
+          "lon": 13.4811562
+        },
+        {
+          "lat": 52.4788107,
+          "lon": 13.4810631
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "name": "Dammweg",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1245696599,
+      "bounds": {
+        "minlat": 52.4788642,
+        "minlon": 13.4811655,
+        "maxlat": 52.4791374,
+        "maxlon": 13.4816853
+      },
+      "geometry": [
+        {
+          "lat": 52.4791374,
+          "lon": 13.4816853
+        },
+        {
+          "lat": 52.478916,
+          "lon": 13.4812641
+        },
+        {
+          "lat": 52.4788642,
+          "lon": 13.4811655
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "width": "7",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1245696603,
+      "bounds": {
+        "minlat": 52.4791374,
+        "minlon": 13.4816853,
+        "maxlat": 52.4791997,
+        "maxlon": 13.4818152
+      },
+      "geometry": [
+        {
+          "lat": 52.4791997,
+          "lon": 13.4818152
+        },
+        {
+          "lat": 52.4791776,
+          "lon": 13.4817692
+        },
+        {
+          "lat": 52.4791374,
+          "lon": 13.4816853
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1245696613,
+      "bounds": {
+        "minlat": 52.4791997,
+        "minlon": 13.4818152,
+        "maxlat": 52.4792666,
+        "maxlon": 13.4819496
+      },
+      "geometry": [
+        {
+          "lat": 52.4792666,
+          "lon": 13.4819496
+        },
+        {
+          "lat": 52.4792496,
+          "lon": 13.4819194
+        },
+        {
+          "lat": 52.4792448,
+          "lon": 13.4819095
+        },
+        {
+          "lat": 52.4791997,
+          "lon": 13.4818152
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "no",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1245696614,
+      "bounds": {
+        "minlat": 52.479996,
+        "minlon": 13.4833194,
+        "maxlat": 52.4800487,
+        "maxlon": 13.4834146
+      },
+      "geometry": [
+        {
+          "lat": 52.4800487,
+          "lon": 13.4834146
+        },
+        {
+          "lat": 52.4800028,
+          "lon": 13.4833316
+        },
+        {
+          "lat": 52.479996,
+          "lon": 13.4833194
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "parking:both": "no",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1286262061,
+      "bounds": {
+        "minlat": 52.4750635,
+        "minlon": 13.4739181,
+        "maxlat": 52.4756064,
+        "maxlon": 13.4749519
+      },
+      "geometry": [
+        {
+          "lat": 52.4756064,
+          "lon": 13.4749519
+        },
+        {
+          "lat": 52.4754039,
+          "lon": 13.4745664
+        },
+        {
+          "lat": 52.4751485,
+          "lon": 13.47408
+        },
+        {
+          "lat": 52.4750812,
+          "lon": 13.4739518
+        },
+        {
+          "lat": 52.4750635,
+          "lon": 13.4739181
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "hazard": "children",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 06:00-18:00)",
+        "maxspeed:type": "DE:urban",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:left": "no",
+        "parking:left:restriction": "no_stopping",
+        "parking:right": "separate",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1308010758,
+      "bounds": {
+        "minlat": 52.4760942,
+        "minlon": 13.4759553,
+        "maxlat": 52.4761758,
+        "maxlon": 13.4761107
+      },
+      "geometry": [
+        {
+          "lat": 52.4760942,
+          "lon": 13.4759553
+        },
+        {
+          "lat": 52.4761758,
+          "lon": 13.4761107
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Dammweg/Bergaustraße",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1308124886,
+      "bounds": {
+        "minlat": 52.4760816,
+        "minlon": 13.475782,
+        "maxlat": 52.4761565,
+        "maxlon": 13.4759248
+      },
+      "geometry": [
+        {
+          "lat": 52.4761565,
+          "lon": 13.4759248
+        },
+        {
+          "lat": 52.4760816,
+          "lon": 13.475782
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Dammweg/Bergaustraße",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1322984397,
+      "bounds": {
+        "minlat": 52.4843843,
+        "minlon": 13.5091111,
+        "maxlat": 52.4843893,
+        "maxlon": 13.5093316
+      },
+      "geometry": [
+        {
+          "lat": 52.4843893,
+          "lon": 13.5091111
+        },
+        {
+          "lat": 52.4843843,
+          "lon": 13.5093316
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Blockdammweg",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1322984398,
+      "bounds": {
+        "minlat": 52.4841799,
+        "minlon": 13.5092211,
+        "maxlat": 52.4841837,
+        "maxlon": 13.5093993
+      },
+      "geometry": [
+        {
+          "lat": 52.4841799,
+          "lon": 13.5093993
+        },
+        {
+          "lat": 52.4841837,
+          "lon": 13.5092211
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Blockdammweg",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1428262929,
+      "bounds": {
+        "minlat": 52.4714503,
+        "minlon": 13.4667678,
+        "maxlat": 52.4716284,
+        "maxlon": 13.4670761
+      },
+      "geometry": [
+        {
+          "lat": 52.4716284,
+          "lon": 13.4670761
+        },
+        {
+          "lat": 52.4715311,
+          "lon": 13.466903
+        },
+        {
+          "lat": 52.4715042,
+          "lon": 13.466856
+        },
+        {
+          "lat": 52.4714503,
+          "lon": 13.4667678
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "sign",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12057",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:width": "ALKIS",
+        "surface": "asphalt",
+        "width": "7",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1451952306,
+      "bounds": {
+        "minlat": 52.47574,
+        "minlon": 13.4752073,
+        "maxlat": 52.4758323,
+        "maxlon": 13.4753853
+      },
+      "geometry": [
+        {
+          "lat": 52.4758323,
+          "lon": 13.4753853
+        },
+        {
+          "lat": 52.47574,
+          "lon": 13.4752073
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "maxspeed:type": "DE:urban",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "parking:left": "no",
+        "parking:left:restriction": "no_stopping",
+        "parking:right": "separate",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1451971791,
+      "bounds": {
+        "minlat": 52.4777165,
+        "minlon": 13.478979,
+        "maxlat": 52.4777692,
+        "maxlon": 13.4790793
+      },
+      "geometry": [
+        {
+          "lat": 52.4777692,
+          "lon": 13.4790793
+        },
+        {
+          "lat": 52.4777165,
+          "lon": 13.478979
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "image": "https://commons.wikimedia.org/wiki/File:Neuk%C3%B6lln_Dammweg.JPG",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Dammweg",
+        "name:etymology:wikidata": "Q1240054",
+        "name:etymology:wikipedia": "de:Knüppeldamm",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "parking:right:reason": "cycleway",
+        "postal_code": "12437",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q84678981",
+        "wikimedia_commons": "Category:Dammweg (Berlin)",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1456917114,
+      "bounds": {
+        "minlat": 52.4842671,
+        "minlon": 13.5115091,
+        "maxlat": 52.484819,
+        "maxlon": 13.5134874
+      },
+      "geometry": [
+        {
+          "lat": 52.484819,
+          "lon": 13.5134874
+        },
+        {
+          "lat": 52.4845834,
+          "lon": 13.512643
+        },
+        {
+          "lat": 52.4843165,
+          "lon": 13.5116861
+        },
+        {
+          "lat": 52.4842671,
+          "lon": 13.5115091
+        }
+      ],
+      "tags": {
+        "access": "no",
+        "check_date": "2026-03-06",
+        "construction": "residential",
+        "cycleway:both": "no",
+        "highway": "construction",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Blockdammweg",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "sidewalk": "no",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1486282894,
+      "bounds": {
+        "minlat": 52.4842631,
+        "minlon": 13.5110886,
+        "maxlat": 52.4843529,
+        "maxlon": 13.5113856
+      },
+      "geometry": [
+        {
+          "lat": 52.4843529,
+          "lon": 13.5113856
+        },
+        {
+          "lat": 52.4843271,
+          "lon": 13.5112929
+        },
+        {
+          "lat": 52.4842936,
+          "lon": 13.511186
+        },
+        {
+          "lat": 52.4842865,
+          "lon": 13.5111632
+        },
+        {
+          "lat": 52.4842631,
+          "lon": 13.5110886
+        }
+      ],
+      "tags": {
+        "construction": "residential",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "construction",
+        "image": "https://commons.wikimedia.org/wiki/File:Blockdammweg.JPG",
+        "lane_markings": "no",
+        "lit": "no",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Blockdammweg",
+        "name:etymology:wikidata": "Q98969382",
+        "name:etymology:wikipedia": "de:Damm (Wall)",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "10318",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q86301402",
+        "wikimedia_commons": "Category:Blockdammweg (Berlin-Rummelsburg)",
+        "zone:maxspeed": "DE:30"
+      }
+    }
+  ]
+}

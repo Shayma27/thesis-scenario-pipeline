@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 146364032,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 24900448,
+    "lat": "52.4311585",
+    "lon": "13.3537635",
+    "category": "highway",
+    "type": "secondary",
+    "place_rank": 26,
+    "importance": 0.05342208819714653,
+    "addresstype": "road",
+    "name": "Malteserstraße",
+    "display_name": "Malteserstraße, Großsiedlung Kamenzer Damm, Lankwitz, Steglitz-Zehlendorf, Berlin, 12249, Deutschland",
+    "boundingbox": [
+      "52.4297523",
+      "52.4325646",
+      "13.3532242",
+      "13.3543025"
+    ]
+  }
+]

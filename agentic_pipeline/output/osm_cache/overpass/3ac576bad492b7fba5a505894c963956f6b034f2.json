@@ -1,0 +1,4701 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-06-07T14:59:00Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 3168036672,
+      "lat": 52.5248721,
+      "lon": 13.419825,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3168036673,
+      "lat": 52.525514,
+      "lon": 13.4199541,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3168036675,
+      "lat": 52.5251392,
+      "lon": 13.420436,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4615405,
+      "bounds": {
+        "minlat": 52.5250581,
+        "minlon": 13.4221483,
+        "maxlat": 52.5252335,
+        "maxlon": 13.4227285
+      },
+      "geometry": [
+        {
+          "lat": 52.5252335,
+          "lon": 13.4221483
+        },
+        {
+          "lat": 52.5251474,
+          "lon": 13.422423
+        },
+        {
+          "lat": 52.5250581,
+          "lon": 13.4227285
+        }
+      ],
+      "tags": {
+        "description": "Privatstraße",
+        "highway": "service",
+        "lit": "yes",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "operator:type": "private",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "10249",
+        "smoothness": "intermediate",
+        "surface": "concrete:plates",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4790839,
+      "bounds": {
+        "minlat": 52.5252162,
+        "minlon": 13.4202425,
+        "maxlat": 52.5257126,
+        "maxlon": 13.4208381
+      },
+      "geometry": [
+        {
+          "lat": 52.5252162,
+          "lon": 13.4202425
+        },
+        {
+          "lat": 52.5253198,
+          "lon": 13.42037
+        },
+        {
+          "lat": 52.5253393,
+          "lon": 13.4203943
+        },
+        {
+          "lat": 52.5257126,
+          "lon": 13.4208381
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "cycleway:right:bicycle": "designated",
+        "cycleway:right:separation:left": "bump",
+        "cycleway:right:traffic_sign": "DE:237",
+        "cycleway:right:width": "2.2",
+        "destination": "Weißensee;Prenzlauer Berg",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Otto-Braun-Straße",
+        "name:etymology:wikidata": "Q58667",
+        "name:ja": "オット・ブラウン通り",
+        "old_name": "Rennweg, also Rönnweg (from 16th century until 17th century);Bernauer Straße (from 17th century until 1810);Neue Königstraße (from 1810 until 1966);Hans-Beimler-Straße (from 1966 until 01.11.1995)",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "separate",
+        "postal_code": "10249",
+        "priority_road": "designated",
+        "ref": "B 2",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q138874",
+        "wikipedia": "de:Otto-Braun-Straße",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4790843,
+      "bounds": {
+        "minlat": 52.5251729,
+        "minlon": 13.4195773,
+        "maxlat": 52.5253912,
+        "maxlon": 13.4198174
+      },
+      "geometry": [
+        {
+          "lat": 52.5253912,
+          "lon": 13.4198174
+        },
+        {
+          "lat": 52.525313,
+          "lon": 13.419733
+        },
+        {
+          "lat": 52.5252875,
+          "lon": 13.4197043
+        },
+        {
+          "lat": 52.5252852,
+          "lon": 13.4197015
+        },
+        {
+          "lat": 52.5252587,
+          "lon": 13.4196717
+        },
+        {
+          "lat": 52.5251729,
+          "lon": 13.4195773
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:surface": "asphalt",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Otto-Braun-Straße",
+        "name:etymology:wikidata": "Q58667",
+        "name:ja": "オット・ブラウン通り",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "10178",
+        "ref": "B 2",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through",
+        "wikidata": "Q138874",
+        "wikipedia": "de:Otto-Braun-Straße",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4790869,
+      "bounds": {
+        "minlat": 52.5249893,
+        "minlon": 13.4199696,
+        "maxlat": 52.5252162,
+        "maxlon": 13.4202425
+      },
+      "geometry": [
+        {
+          "lat": 52.5249893,
+          "lon": 13.4199696
+        },
+        {
+          "lat": 52.5250279,
+          "lon": 13.4200155
+        },
+        {
+          "lat": 52.5250658,
+          "lon": 13.4200618
+        },
+        {
+          "lat": 52.5250681,
+          "lon": 13.4200645
+        },
+        {
+          "lat": 52.5251186,
+          "lon": 13.4201269
+        },
+        {
+          "lat": 52.5252162,
+          "lon": 13.4202425
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:surface": "asphalt",
+        "destination": "Prenzlauer Berg;Weißensee",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Otto-Braun-Straße",
+        "name:etymology:wikidata": "Q58667",
+        "name:ja": "オット・ブラウン通り",
+        "old_name": "Rennweg, also Rönnweg (from 16th century until 17th century);Bernauer Straße (from 17th century until 1810);Neue Königstraße (from 1810 until 1966);Hans-Beimler-Straße (from 1966 until 01.11.1995)",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "10178",
+        "ref": "B 2",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through",
+        "wikidata": "Q138874",
+        "wikipedia": "de:Otto-Braun-Straße",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 29182574,
+      "bounds": {
+        "minlat": 52.5233596,
+        "minlon": 13.4206737,
+        "maxlat": 52.5236323,
+        "maxlon": 13.4221969
+      },
+      "geometry": [
+        {
+          "lat": 52.5236323,
+          "lon": 13.4206737
+        },
+        {
+          "lat": 52.5234533,
+          "lon": 13.4212583
+        },
+        {
+          "lat": 52.5233784,
+          "lon": 13.4215029
+        },
+        {
+          "lat": 52.5235635,
+          "lon": 13.4216464
+        },
+        {
+          "lat": 52.5234793,
+          "lon": 13.4218782
+        },
+        {
+          "lat": 52.5233596,
+          "lon": 13.4221969
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 29182575,
+      "bounds": {
+        "minlat": 52.5234533,
+        "minlon": 13.4212583,
+        "maxlat": 52.5235142,
+        "maxlon": 13.421274
+      },
+      "geometry": [
+        {
+          "lat": 52.5234533,
+          "lon": 13.4212583
+        },
+        {
+          "lat": 52.5235142,
+          "lon": 13.421274
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 29182577,
+      "bounds": {
+        "minlat": 52.5235635,
+        "minlon": 13.421589,
+        "maxlat": 52.5236785,
+        "maxlon": 13.4216464
+      },
+      "geometry": [
+        {
+          "lat": 52.5235635,
+          "lon": 13.4216464
+        },
+        {
+          "lat": 52.5236785,
+          "lon": 13.421589
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 48303485,
+      "bounds": {
+        "minlat": 52.5229795,
+        "minlon": 13.4201557,
+        "maxlat": 52.5239432,
+        "maxlon": 13.4209332
+      },
+      "geometry": [
+        {
+          "lat": 52.5229795,
+          "lon": 13.4201557
+        },
+        {
+          "lat": 52.5230661,
+          "lon": 13.4202203
+        },
+        {
+          "lat": 52.5236323,
+          "lon": 13.4206737
+        },
+        {
+          "lat": 52.5239432,
+          "lon": 13.4209332
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Berolinastraße",
+        "name:etymology:wikidata": "Q574396",
+        "parking:both": "half_on_kerb",
+        "parking:both:fee": "yes",
+        "parking:both:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:both:markings": "yes",
+        "parking:both:orientation": "parallel",
+        "parking:both:zone": "14",
+        "postal_code": "10178",
+        "sidewalk": "both",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "source:width": "Luftbild 2025",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "width": "7",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 137954786,
+      "bounds": {
+        "minlat": 52.5252335,
+        "minlon": 13.4221386,
+        "maxlat": 52.525879,
+        "maxlon": 13.4228292
+      },
+      "geometry": [
+        {
+          "lat": 52.525879,
+          "lon": 13.4228292
+        },
+        {
+          "lat": 52.5257936,
+          "lon": 13.4227142
+        },
+        {
+          "lat": 52.525315,
+          "lon": 13.4221551
+        },
+        {
+          "lat": 52.5252708,
+          "lon": 13.4221386
+        },
+        {
+          "lat": 52.5252335,
+          "lon": 13.4221483
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Pauline-Staegemann-Straße",
+        "name:etymology:wikidata": "Q1607278",
+        "name:etymology:wikipedia": "de:Pauline Staegemann",
+        "parking:left": "lane",
+        "parking:left:fee": "yes",
+        "parking:left:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:left:orientation": "parallel",
+        "parking:left:zone": "40",
+        "parking:right": "separate",
+        "postal_code": "10249",
+        "sidewalk": "both",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "source:width": "aerial imagery",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "width": "5.5",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 160216394,
+      "bounds": {
+        "minlat": 52.5251116,
+        "minlon": 13.4214467,
+        "maxlat": 52.5253224,
+        "maxlon": 13.4217969
+      },
+      "geometry": [
+        {
+          "lat": 52.5253224,
+          "lon": 13.4217969
+        },
+        {
+          "lat": 52.5252963,
+          "lon": 13.4217523
+        },
+        {
+          "lat": 52.5251788,
+          "lon": 13.4215574
+        },
+        {
+          "lat": 52.5251116,
+          "lon": 13.4214467
+        }
+      ],
+      "tags": {
+        "emergency": "designated",
+        "highway": "footway",
+        "name": "Pauline-Staegemann-Straße",
+        "name:etymology:wikidata": "Q1607278",
+        "name:etymology:wikipedia": "de:Pauline Staegemann",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 175717144,
+      "bounds": {
+        "minlat": 52.524862,
+        "minlon": 13.4197805,
+        "maxlat": 52.5249358,
+        "maxlon": 13.4199642
+      },
+      "geometry": [
+        {
+          "lat": 52.5249358,
+          "lon": 13.4197805
+        },
+        {
+          "lat": 52.5249037,
+          "lon": 13.4198605
+        },
+        {
+          "lat": 52.524862,
+          "lon": 13.4199642
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 175717568,
+      "bounds": {
+        "minlat": 52.5249988,
+        "minlon": 13.4202547,
+        "maxlat": 52.5250444,
+        "maxlon": 13.4203528
+      },
+      "geometry": [
+        {
+          "lat": 52.5249988,
+          "lon": 13.4203435
+        },
+        {
+          "lat": 52.5250083,
+          "lon": 13.4203528
+        },
+        {
+          "lat": 52.5250444,
+          "lon": 13.4202547
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "incline": "down",
+        "lit": "yes",
+        "paving_stones:width": "35",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 175717570,
+      "bounds": {
+        "minlat": 52.5248875,
+        "minlon": 13.4196838,
+        "maxlat": 52.5249448,
+        "maxlon": 13.4197581
+      },
+      "geometry": [
+        {
+          "lat": 52.5248943,
+          "lon": 13.4196838
+        },
+        {
+          "lat": 52.5248875,
+          "lon": 13.4197004
+        },
+        {
+          "lat": 52.5249448,
+          "lon": 13.4197581
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "incline": "down",
+        "lit": "yes",
+        "paving_stones:width": "35",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 175717571,
+      "bounds": {
+        "minlat": 52.5250446,
+        "minlon": 13.4203041,
+        "maxlat": 52.5250891,
+        "maxlon": 13.4203972
+      },
+      "geometry": [
+        {
+          "lat": 52.5250446,
+          "lon": 13.4203884
+        },
+        {
+          "lat": 52.5250539,
+          "lon": 13.4203972
+        },
+        {
+          "lat": 52.5250891,
+          "lon": 13.4203041
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "incline": "down",
+        "lit": "yes",
+        "paving_stones:width": "35",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 175717572,
+      "bounds": {
+        "minlat": 52.5254369,
+        "minlon": 13.4200363,
+        "maxlat": 52.5254862,
+        "maxlon": 13.420157
+      },
+      "geometry": [
+        {
+          "lat": 52.5254806,
+          "lon": 13.420157
+        },
+        {
+          "lat": 52.5254862,
+          "lon": 13.4201396
+        },
+        {
+          "lat": 52.5254369,
+          "lon": 13.4200363
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "incline": "down",
+        "lit": "yes",
+        "paving_stones:width": "35",
+        "postal_code": "10405",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 175717573,
+      "bounds": {
+        "minlat": 52.5249181,
+        "minlon": 13.4196177,
+        "maxlat": 52.5249732,
+        "maxlon": 13.4196876
+      },
+      "geometry": [
+        {
+          "lat": 52.5249234,
+          "lon": 13.4196177
+        },
+        {
+          "lat": 52.5249181,
+          "lon": 13.4196302
+        },
+        {
+          "lat": 52.5249732,
+          "lon": 13.4196876
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "incline": "down",
+        "lit": "yes",
+        "paving_stones:width": "35",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 187091988,
+      "bounds": {
+        "minlat": 52.5258463,
+        "minlon": 13.4203926,
+        "maxlat": 52.5260293,
+        "maxlon": 13.4206254
+      },
+      "geometry": [
+        {
+          "lat": 52.5260293,
+          "lon": 13.4206254
+        },
+        {
+          "lat": 52.5258463,
+          "lon": 13.4203926
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Otto-Braun-Straße",
+        "name:etymology:wikidata": "Q58667",
+        "name:ja": "オット・ブラウン通り",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:reason": "turn_lane",
+        "postal_code": "10405",
+        "ref": "B 2",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "none|through|through|none",
+        "wikidata": "Q138874",
+        "wikipedia": "de:Otto-Braun-Straße",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 187103792,
+      "bounds": {
+        "minlat": 52.524565,
+        "minlon": 13.4189431,
+        "maxlat": 52.5251729,
+        "maxlon": 13.4195773
+      },
+      "geometry": [
+        {
+          "lat": 52.5251729,
+          "lon": 13.4195773
+        },
+        {
+          "lat": 52.5250637,
+          "lon": 13.4194622
+        },
+        {
+          "lat": 52.5250434,
+          "lon": 13.419441
+        },
+        {
+          "lat": 52.524565,
+          "lon": 13.4189431
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "cycleway:right:width": "1.7",
+        "destination": "Tiergarten;Potsdamer Platz;Alexanderplatz;Mercedes-Platz",
+        "destination:colour": ";white;white;white",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Otto-Braun-Straße",
+        "name:etymology:wikidata": "Q58667",
+        "name:ja": "オット・ブラウン通り",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "10178",
+        "ref": "B 2",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q138874",
+        "wikipedia": "de:Otto-Braun-Straße",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 288749951,
+      "bounds": {
+        "minlat": 52.5249893,
+        "minlon": 13.4195773,
+        "maxlat": 52.5251729,
+        "maxlon": 13.4199696
+      },
+      "geometry": [
+        {
+          "lat": 52.5251729,
+          "lon": 13.4195773
+        },
+        {
+          "lat": 52.5251028,
+          "lon": 13.4197259
+        },
+        {
+          "lat": 52.5250869,
+          "lon": 13.4197598
+        },
+        {
+          "lat": 52.525064,
+          "lon": 13.4198091
+        },
+        {
+          "lat": 52.5250207,
+          "lon": 13.4199011
+        },
+        {
+          "lat": 52.5249893,
+          "lon": 13.4199696
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:surface": "asphalt",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "10178",
+        "priority_road": "yes_unposted",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|through|through",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 296598505,
+      "bounds": {
+        "minlat": 52.5245169,
+        "minlon": 13.4209641,
+        "maxlat": 52.5245773,
+        "maxlon": 13.4211285
+      },
+      "geometry": [
+        {
+          "lat": 52.5245773,
+          "lon": 13.4209641
+        },
+        {
+          "lat": 52.5245169,
+          "lon": 13.4211285
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:bicycle": "designated",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:surface": "asphalt",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "note": "old names from streets in approximate position of the Mollstraße built 1963: Linienstraße (from before 1748 until before 1778); Gollnows-Gasse (from before 1778 until 31.10.1836); Gollnowstraße (31.10.1836-09.08.1963)",
+        "old_name:1748-1778": "Linienstraße",
+        "old_name:1778-1836": "Gollnows-Gasse",
+        "old_name:1836-1963": "Gollnowstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "10178",
+        "priority_road": "designated",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "none|through;right|right",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße"
+      }
+    },
+    {
+      "type": "way",
+      "id": 296599267,
+      "bounds": {
+        "minlat": 52.5245773,
+        "minlon": 13.4206556,
+        "maxlat": 52.5246968,
+        "maxlon": 13.4209641
+      },
+      "geometry": [
+        {
+          "lat": 52.5246968,
+          "lon": 13.4206556
+        },
+        {
+          "lat": 52.5246518,
+          "lon": 13.4207594
+        },
+        {
+          "lat": 52.5245773,
+          "lon": 13.4209641
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:bicycle": "designated",
+        "cycleway:right:lane": "exclusive",
+        "cycleway:right:surface": "asphalt",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "note": "old names from streets in approximate position of the Mollstraße built 1963: Linienstraße (from before 1748 until before 1778); Gollnows-Gasse (from before 1778 until 31.10.1836); Gollnowstraße (31.10.1836-09.08.1963)",
+        "old_name:1748-1778": "Linienstraße",
+        "old_name:1778-1836": "Gollnows-Gasse",
+        "old_name:1836-1963": "Gollnowstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "10178",
+        "priority_road": "designated",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße"
+      }
+    },
+    {
+      "type": "way",
+      "id": 296599839,
+      "bounds": {
+        "minlat": 52.5240513,
+        "minlon": 13.4213329,
+        "maxlat": 52.5244427,
+        "maxlon": 13.4225463
+      },
+      "geometry": [
+        {
+          "lat": 52.5244427,
+          "lon": 13.4213329
+        },
+        {
+          "lat": 52.5242839,
+          "lon": 13.4218069
+        },
+        {
+          "lat": 52.5240513,
+          "lon": 13.4225463
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:bicycle": "designated",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:surface": "asphalt",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "note": "old names from streets in approximate position of the Mollstraße built 1963: Linienstraße (from before 1748 until before 1778); Gollnows-Gasse (from before 1778 until 31.10.1836); Gollnowstraße (31.10.1836-09.08.1963)",
+        "old_name:1748-1778": "Linienstraße",
+        "old_name:1778-1836": "Gollnows-Gasse",
+        "old_name:1836-1963": "Gollnowstraße",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "14",
+        "postal_code": "10178",
+        "priority_road": "yes_unposted",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße"
+      }
+    },
+    {
+      "type": "way",
+      "id": 296600334,
+      "bounds": {
+        "minlat": 52.5244427,
+        "minlon": 13.4211285,
+        "maxlat": 52.5245169,
+        "maxlon": 13.4213329
+      },
+      "geometry": [
+        {
+          "lat": 52.5245169,
+          "lon": 13.4211285
+        },
+        {
+          "lat": 52.5244427,
+          "lon": 13.4213329
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:bicycle": "designated",
+        "cycleway:right:lane": "exclusive",
+        "cycleway:right:surface": "asphalt",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "note": "old names from streets in approximate position of the Mollstraße built 1963: Linienstraße (from before 1748 until before 1778); Gollnows-Gasse (from before 1778 until 31.10.1836); Gollnowstraße (31.10.1836-09.08.1963)",
+        "old_name:1748-1778": "Linienstraße",
+        "old_name:1778-1836": "Gollnows-Gasse",
+        "old_name:1836-1963": "Gollnowstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "10178",
+        "priority_road": "designated",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "none|through|right",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße"
+      }
+    },
+    {
+      "type": "way",
+      "id": 297133119,
+      "bounds": {
+        "minlat": 52.5238023,
+        "minlon": 13.4225463,
+        "maxlat": 52.5240513,
+        "maxlon": 13.4232995
+      },
+      "geometry": [
+        {
+          "lat": 52.5240513,
+          "lon": 13.4225463
+        },
+        {
+          "lat": 52.5238023,
+          "lon": 13.4232995
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:bicycle": "designated",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:surface": "asphalt",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "note": "old names from streets in approximate position of the Mollstraße built 1963: Linienstraße (from before 1748 until before 1778); Gollnows-Gasse (from before 1778 until 31.10.1836); Gollnowstraße (31.10.1836-09.08.1963)",
+        "old_name:1748-1778": "Linienstraße",
+        "old_name:1778-1836": "Gollnows-Gasse",
+        "old_name:1836-1963": "Gollnowstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "10178",
+        "priority_road": "yes_unposted",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße"
+      }
+    },
+    {
+      "type": "way",
+      "id": 298912688,
+      "bounds": {
+        "minlat": 52.5252162,
+        "minlon": 13.4198174,
+        "maxlat": 52.5253912,
+        "maxlon": 13.4202425
+      },
+      "geometry": [
+        {
+          "lat": 52.5252162,
+          "lon": 13.4202425
+        },
+        {
+          "lat": 52.525303,
+          "lon": 13.4200319
+        },
+        {
+          "lat": 52.5253182,
+          "lon": 13.4199943
+        },
+        {
+          "lat": 52.52532,
+          "lon": 13.4199898
+        },
+        {
+          "lat": 52.5253367,
+          "lon": 13.4199488
+        },
+        {
+          "lat": 52.5253912,
+          "lon": 13.4198174
+        }
+      ],
+      "tags": {
+        "change:lanes": "only_right|only_left|only_right|only_left",
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "cycleway:surface": "asphalt",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:reason": "junction",
+        "postal_code": "10178",
+        "priority_road": "yes_unposted",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|through|through",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 299395919,
+      "bounds": {
+        "minlat": 52.524031,
+        "minlon": 13.4226484,
+        "maxlat": 52.5242647,
+        "maxlon": 13.4232557
+      },
+      "geometry": [
+        {
+          "lat": 52.524031,
+          "lon": 13.4232557
+        },
+        {
+          "lat": 52.5242647,
+          "lon": 13.4226484
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:bicycle": "designated",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:surface": "asphalt",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "note": "old names from streets in approximate position of the Mollstraße built 1963: Linienstraße (from before 1748 until before 1778); Gollnows-Gasse (from before 1778 until 31.10.1836); Gollnowstraße (31.10.1836-09.08.1963)",
+        "old_name:1748-1778": "Linienstraße",
+        "old_name:1778-1836": "Gollnows-Gasse",
+        "old_name:1836-1963": "Gollnowstraße",
+        "oneway": "yes",
+        "overtaking": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "14;40",
+        "postal_code": "10249",
+        "priority_road": "designated",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße"
+      }
+    },
+    {
+      "type": "way",
+      "id": 299397170,
+      "bounds": {
+        "minlat": 52.5242647,
+        "minlon": 13.4215854,
+        "maxlat": 52.5246797,
+        "maxlon": 13.4226484
+      },
+      "geometry": [
+        {
+          "lat": 52.5242647,
+          "lon": 13.4226484
+        },
+        {
+          "lat": 52.5245982,
+          "lon": 13.4217881
+        },
+        {
+          "lat": 52.5246797,
+          "lon": 13.4215854
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:bicycle": "designated",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:surface": "asphalt",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "note": "old names from streets in approximate position of the Mollstraße built 1963: Linienstraße (from before 1748 until before 1778); Gollnows-Gasse (from before 1778 until 31.10.1836); Gollnowstraße (31.10.1836-09.08.1963)",
+        "old_name:1748-1778": "Linienstraße",
+        "old_name:1778-1836": "Gollnows-Gasse",
+        "old_name:1836-1963": "Gollnowstraße",
+        "oneway": "yes",
+        "overtaking": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "14;40",
+        "postal_code": "10249",
+        "priority_road": "designated",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße"
+      }
+    },
+    {
+      "type": "way",
+      "id": 299605621,
+      "bounds": {
+        "minlat": 52.5248435,
+        "minlon": 13.4210093,
+        "maxlat": 52.5249085,
+        "maxlon": 13.4211738
+      },
+      "geometry": [
+        {
+          "lat": 52.5248435,
+          "lon": 13.4211738
+        },
+        {
+          "lat": 52.5249085,
+          "lon": 13.4210093
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:bicycle": "designated",
+        "cycleway:right:lane": "exclusive",
+        "cycleway:right:surface": "asphalt",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "note": "old names from streets in approximate position of the Mollstraße built 1963: Linienstraße (from before 1748 until before 1778); Gollnows-Gasse (from before 1778 until 31.10.1836); Gollnowstraße (31.10.1836-09.08.1963)",
+        "old_name:1748-1778": "Linienstraße",
+        "old_name:1778-1836": "Gollnows-Gasse",
+        "old_name:1836-1963": "Gollnowstraße",
+        "oneway": "yes",
+        "overtaking": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:reason": "cycleway",
+        "postal_code": "10249",
+        "priority_road": "designated",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße"
+      }
+    },
+    {
+      "type": "way",
+      "id": 299605821,
+      "bounds": {
+        "minlat": 52.5249085,
+        "minlon": 13.4208594,
+        "maxlat": 52.5249686,
+        "maxlon": 13.4210093
+      },
+      "geometry": [
+        {
+          "lat": 52.5249085,
+          "lon": 13.4210093
+        },
+        {
+          "lat": 52.5249686,
+          "lon": 13.4208594
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:bicycle": "designated",
+        "cycleway:right:lane": "exclusive",
+        "cycleway:right:surface": "asphalt",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "note": "old names from streets in approximate position of the Mollstraße built 1963: Linienstraße (from before 1748 until before 1778); Gollnows-Gasse (from before 1778 until 31.10.1836); Gollnowstraße (31.10.1836-09.08.1963)",
+        "old_name:1748-1778": "Linienstraße",
+        "old_name:1778-1836": "Gollnows-Gasse",
+        "old_name:1836-1963": "Gollnowstraße",
+        "oneway": "yes",
+        "overtaking": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:reason": "cycleway",
+        "postal_code": "10249",
+        "priority_road": "designated",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|through|through|right",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße"
+      }
+    },
+    {
+      "type": "way",
+      "id": 300062060,
+      "bounds": {
+        "minlat": 52.5246797,
+        "minlon": 13.4211738,
+        "maxlat": 52.5248435,
+        "maxlon": 13.4215854
+      },
+      "geometry": [
+        {
+          "lat": 52.5246797,
+          "lon": 13.4215854
+        },
+        {
+          "lat": 52.5248435,
+          "lon": 13.4211738
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:bicycle": "designated",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:surface": "asphalt",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "note": "old names from streets in approximate position of the Mollstraße built 1963: Linienstraße (from before 1748 until before 1778); Gollnows-Gasse (from before 1778 until 31.10.1836); Gollnowstraße (31.10.1836-09.08.1963)",
+        "old_name:1748-1778": "Linienstraße",
+        "old_name:1778-1836": "Gollnows-Gasse",
+        "old_name:1836-1963": "Gollnowstraße",
+        "oneway": "yes",
+        "overtaking": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "separate",
+        "postal_code": "10249",
+        "priority_road": "designated",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße"
+      }
+    },
+    {
+      "type": "way",
+      "id": 303019783,
+      "bounds": {
+        "minlat": 52.5236785,
+        "minlon": 13.421589,
+        "maxlat": 52.5241328,
+        "maxlon": 13.4218814
+      },
+      "geometry": [
+        {
+          "lat": 52.5236785,
+          "lon": 13.421589
+        },
+        {
+          "lat": 52.5241328,
+          "lon": 13.4218814
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 305094628,
+      "bounds": {
+        "minlat": 52.5253912,
+        "minlon": 13.4198174,
+        "maxlat": 52.5258463,
+        "maxlon": 13.4203926
+      },
+      "geometry": [
+        {
+          "lat": 52.5258463,
+          "lon": 13.4203926
+        },
+        {
+          "lat": 52.525514,
+          "lon": 13.4199541
+        },
+        {
+          "lat": 52.5255008,
+          "lon": 13.4199384
+        },
+        {
+          "lat": 52.5254831,
+          "lon": 13.4199175
+        },
+        {
+          "lat": 52.5253912,
+          "lon": 13.4198174
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "cycleway:right:surface": "paving_stones",
+        "destination:lanes": "Marzahn;Friedrichshain|Tiergarten;Mitte|Tiergarten;Mitte|Wedding",
+        "destination:ref:lanes": "|B 2|B 2|",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lane_markings": "yes",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Otto-Braun-Straße",
+        "name:etymology:wikidata": "Q58667",
+        "name:ja": "オット・ブラウン通り",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:reason": "turn_lane",
+        "postal_code": "10405",
+        "ref": "B 2",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through|right",
+        "wikidata": "Q138874",
+        "wikipedia": "de:Otto-Braun-Straße",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 310314714,
+      "bounds": {
+        "minlat": 52.5225262,
+        "minlon": 13.4176889,
+        "maxlat": 52.5245267,
+        "maxlon": 13.4199269
+      },
+      "geometry": [
+        {
+          "lat": 52.5225262,
+          "lon": 13.4176889
+        },
+        {
+          "lat": 52.5228522,
+          "lon": 13.4180532
+        },
+        {
+          "lat": 52.5234437,
+          "lon": 13.4187135
+        },
+        {
+          "lat": 52.5244331,
+          "lon": 13.4198218
+        },
+        {
+          "lat": 52.5245267,
+          "lon": 13.4199269
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 310742707,
+      "bounds": {
+        "minlat": 52.5252961,
+        "minlon": 13.4202429,
+        "maxlat": 52.5253572,
+        "maxlon": 13.4204508
+      },
+      "geometry": [
+        {
+          "lat": 52.5252961,
+          "lon": 13.4204508
+        },
+        {
+          "lat": 52.5253198,
+          "lon": 13.42037
+        },
+        {
+          "lat": 52.5253572,
+          "lon": 13.4202429
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10249",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 310742708,
+      "bounds": {
+        "minlat": 52.5251537,
+        "minlon": 13.4193645,
+        "maxlat": 52.5252842,
+        "maxlon": 13.4195045
+      },
+      "geometry": [
+        {
+          "lat": 52.5252842,
+          "lon": 13.4195045
+        },
+        {
+          "lat": 52.5252269,
+          "lon": 13.4194431
+        },
+        {
+          "lat": 52.5251723,
+          "lon": 13.4193845
+        },
+        {
+          "lat": 52.5251537,
+          "lon": 13.4193645
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 310742709,
+      "bounds": {
+        "minlat": 52.5250751,
+        "minlon": 13.4202886,
+        "maxlat": 52.5251015,
+        "maxlon": 13.4203178
+      },
+      "geometry": [
+        {
+          "lat": 52.5250751,
+          "lon": 13.4202886
+        },
+        {
+          "lat": 52.5250891,
+          "lon": 13.4203041
+        },
+        {
+          "lat": 52.5251015,
+          "lon": 13.4203178
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 310742710,
+      "bounds": {
+        "minlat": 52.5245267,
+        "minlon": 13.4197255,
+        "maxlat": 52.5246093,
+        "maxlon": 13.4199269
+      },
+      "geometry": [
+        {
+          "lat": 52.5245267,
+          "lon": 13.4199269
+        },
+        {
+          "lat": 52.5245767,
+          "lon": 13.419805
+        },
+        {
+          "lat": 52.5246093,
+          "lon": 13.4197255
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 310742711,
+      "bounds": {
+        "minlat": 52.5246093,
+        "minlon": 13.4197255,
+        "maxlat": 52.5248521,
+        "maxlon": 13.4199889
+      },
+      "geometry": [
+        {
+          "lat": 52.5246093,
+          "lon": 13.4197255
+        },
+        {
+          "lat": 52.5248521,
+          "lon": 13.4199889
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 310742712,
+      "bounds": {
+        "minlat": 52.5246978,
+        "minlon": 13.4200449,
+        "maxlat": 52.5248572,
+        "maxlon": 13.4201225
+      },
+      "geometry": [
+        {
+          "lat": 52.5248572,
+          "lon": 13.4200543
+        },
+        {
+          "lat": 52.5248213,
+          "lon": 13.4200449
+        },
+        {
+          "lat": 52.5247525,
+          "lon": 13.4200672
+        },
+        {
+          "lat": 52.5246978,
+          "lon": 13.4201225
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 310742713,
+      "bounds": {
+        "minlat": 52.5248521,
+        "minlon": 13.4199889,
+        "maxlat": 52.5248572,
+        "maxlon": 13.4200543
+      },
+      "geometry": [
+        {
+          "lat": 52.5248521,
+          "lon": 13.4199889
+        },
+        {
+          "lat": 52.5248572,
+          "lon": 13.4200543
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 310742714,
+      "bounds": {
+        "minlat": 52.5245267,
+        "minlon": 13.4199269,
+        "maxlat": 52.5246978,
+        "maxlon": 13.4201225
+      },
+      "geometry": [
+        {
+          "lat": 52.5245267,
+          "lon": 13.4199269
+        },
+        {
+          "lat": 52.5246978,
+          "lon": 13.4201225
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 310742715,
+      "bounds": {
+        "minlat": 52.5243348,
+        "minlon": 13.4201225,
+        "maxlat": 52.5246978,
+        "maxlon": 13.4211837
+      },
+      "geometry": [
+        {
+          "lat": 52.5246978,
+          "lon": 13.4201225
+        },
+        {
+          "lat": 52.5246596,
+          "lon": 13.4202238
+        },
+        {
+          "lat": 52.5244082,
+          "lon": 13.4209507
+        },
+        {
+          "lat": 52.5243397,
+          "lon": 13.4211682
+        },
+        {
+          "lat": 52.5243348,
+          "lon": 13.4211837
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "lit": "yes",
+        "paving_stones:width": "40",
+        "postal_code": "10178",
+        "smoothness": "intermediate",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 310898344,
+      "bounds": {
+        "minlat": 52.5252799,
+        "minlon": 13.4204942,
+        "maxlat": 52.5257288,
+        "maxlon": 13.4210358
+      },
+      "geometry": [
+        {
+          "lat": 52.5252799,
+          "lon": 13.4204942
+        },
+        {
+          "lat": 52.5257288,
+          "lon": 13.4210358
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "paving_stones:width": "35",
+        "postal_code": "10249",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 310898345,
+      "bounds": {
+        "minlat": 52.5252527,
+        "minlon": 13.4204845,
+        "maxlat": 52.5252799,
+        "maxlon": 13.4204942
+      },
+      "geometry": [
+        {
+          "lat": 52.5252527,
+          "lon": 13.4204845
+        },
+        {
+          "lat": 52.5252799,
+          "lon": 13.4204942
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "paving_stones:width": "35",
+        "postal_code": "10249",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 310898346,
+      "bounds": {
+        "minlat": 52.5257288,
+        "minlon": 13.4210358,
+        "maxlat": 52.5264152,
+        "maxlon": 13.4218639
+      },
+      "geometry": [
+        {
+          "lat": 52.5257288,
+          "lon": 13.4210358
+        },
+        {
+          "lat": 52.5264152,
+          "lon": 13.4218639
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "paving_stones:width": "40",
+        "postal_code": "10249",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 311046169,
+      "bounds": {
+        "minlat": 52.5255377,
+        "minlon": 13.4197469,
+        "maxlat": 52.5255388,
+        "maxlon": 13.4197739
+      },
+      "geometry": [
+        {
+          "lat": 52.5255388,
+          "lon": 13.4197739
+        },
+        {
+          "lat": 52.5255377,
+          "lon": 13.4197469
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "paving_stones:width": "40",
+        "postal_code": "10405",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 311357732,
+      "bounds": {
+        "minlat": 52.5259694,
+        "minlon": 13.4211447,
+        "maxlat": 52.5270394,
+        "maxlon": 13.4224563
+      },
+      "geometry": [
+        {
+          "lat": 52.5259694,
+          "lon": 13.4211447
+        },
+        {
+          "lat": 52.526498,
+          "lon": 13.4217874
+        },
+        {
+          "lat": 52.5266225,
+          "lon": 13.4219371
+        },
+        {
+          "lat": 52.5270394,
+          "lon": 13.4224563
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "track",
+        "cycleway:right:bicycle": "designated",
+        "cycleway:right:separation:left": "bump",
+        "cycleway:right:traffic_sign": "DE:237",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Otto-Braun-Straße",
+        "name:etymology:wikidata": "Q58667",
+        "name:ja": "オット・ブラウン通り",
+        "old_name": "Rennweg, also Rönnweg (from 16th century until 17th century);Bernauer Straße (from 17th century until 1810);Neue Königstraße (from 1810 until 1966);Hans-Beimler-Straße (from 1966 until 01.11.1995)",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_stopping @ (Mo-Fr 06:00-20:00)",
+        "parking:right:restriction:reason": "bus_lane",
+        "parking:right:zone": "40",
+        "postal_code": "10249",
+        "priority_road": "designated",
+        "ref": "B 2",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q138874",
+        "wikipedia": "de:Otto-Braun-Straße",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 311681170,
+      "bounds": {
+        "minlat": 52.5238665,
+        "minlon": 13.4190127,
+        "maxlat": 52.5244934,
+        "maxlon": 13.4197165
+      },
+      "geometry": [
+        {
+          "lat": 52.5238665,
+          "lon": 13.4190127
+        },
+        {
+          "lat": 52.5243197,
+          "lon": 13.4195308
+        },
+        {
+          "lat": 52.5244934,
+          "lon": 13.4197165
+        }
+      ],
+      "tags": {
+        "foot": "use_sidepath",
+        "highway": "service",
+        "lit": "yes",
+        "oneway": "no",
+        "postal_code": "10178",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 312018786,
+      "bounds": {
+        "minlat": 52.5244934,
+        "minlon": 13.4197165,
+        "maxlat": 52.5245767,
+        "maxlon": 13.419805
+      },
+      "geometry": [
+        {
+          "lat": 52.5244934,
+          "lon": 13.4197165
+        },
+        {
+          "lat": 52.5245767,
+          "lon": 13.419805
+        }
+      ],
+      "tags": {
+        "footway": "link",
+        "highway": "footway",
+        "lit": "yes",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 312133837,
+      "bounds": {
+        "minlat": 52.5255388,
+        "minlon": 13.4197739,
+        "maxlat": 52.5264118,
+        "maxlon": 13.4209487
+      },
+      "geometry": [
+        {
+          "lat": 52.5264118,
+          "lon": 13.4209487
+        },
+        {
+          "lat": 52.5258947,
+          "lon": 13.4202333
+        },
+        {
+          "lat": 52.5257842,
+          "lon": 13.4200944
+        },
+        {
+          "lat": 52.5256132,
+          "lon": 13.4198792
+        },
+        {
+          "lat": 52.5255388,
+          "lon": 13.4197739
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "paving_stones:width": "40",
+        "postal_code": "10405",
+        "smoothness": "bad",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 314356787,
+      "bounds": {
+        "minlat": 52.5243041,
+        "minlon": 13.4211837,
+        "maxlat": 52.5243348,
+        "maxlon": 13.421289
+      },
+      "geometry": [
+        {
+          "lat": 52.5243348,
+          "lon": 13.4211837
+        },
+        {
+          "lat": 52.5243203,
+          "lon": 13.4212335
+        },
+        {
+          "lat": 52.5243041,
+          "lon": 13.421289
+        }
+      ],
+      "tags": {
+        "crossing": "unmarked",
+        "crossing:markings": "no",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "intermediate",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 314356788,
+      "bounds": {
+        "minlat": 52.5241867,
+        "minlon": 13.421289,
+        "maxlat": 52.5243041,
+        "maxlon": 13.4216989
+      },
+      "geometry": [
+        {
+          "lat": 52.5243041,
+          "lon": 13.421289
+        },
+        {
+          "lat": 52.5241867,
+          "lon": 13.4216989
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "lit": "yes",
+        "paving_stones:width": "40",
+        "postal_code": "10178",
+        "smoothness": "intermediate",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 314576392,
+      "bounds": {
+        "minlat": 52.5241676,
+        "minlon": 13.4216989,
+        "maxlat": 52.5241867,
+        "maxlon": 13.4217632
+      },
+      "geometry": [
+        {
+          "lat": 52.5241867,
+          "lon": 13.4216989
+        },
+        {
+          "lat": 52.5241787,
+          "lon": 13.4217259
+        },
+        {
+          "lat": 52.5241676,
+          "lon": 13.4217632
+        }
+      ],
+      "tags": {
+        "footway": "crossing",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "lit": "yes",
+        "postal_code": "10178",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 314576393,
+      "bounds": {
+        "minlat": 52.5235175,
+        "minlon": 13.4217632,
+        "maxlat": 52.5241676,
+        "maxlon": 13.4239607
+      },
+      "geometry": [
+        {
+          "lat": 52.5241676,
+          "lon": 13.4217632
+        },
+        {
+          "lat": 52.5241328,
+          "lon": 13.4218814
+        },
+        {
+          "lat": 52.5238156,
+          "lon": 13.4229594
+        },
+        {
+          "lat": 52.523734,
+          "lon": 13.4232339
+        },
+        {
+          "lat": 52.5235623,
+          "lon": 13.4238116
+        },
+        {
+          "lat": 52.5235261,
+          "lon": 13.4239321
+        },
+        {
+          "lat": 52.5235175,
+          "lon": 13.4239607
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 314668794,
+      "bounds": {
+        "minlat": 52.5246596,
+        "minlon": 13.4200543,
+        "maxlat": 52.5248572,
+        "maxlon": 13.4203272
+      },
+      "geometry": [
+        {
+          "lat": 52.5248572,
+          "lon": 13.4200543
+        },
+        {
+          "lat": 52.5248547,
+          "lon": 13.4200948
+        },
+        {
+          "lat": 52.5247552,
+          "lon": 13.4203272
+        },
+        {
+          "lat": 52.5246596,
+          "lon": 13.4202238
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 316714670,
+      "bounds": {
+        "minlat": 52.5238313,
+        "minlon": 13.4215597,
+        "maxlat": 52.5248101,
+        "maxlon": 13.4240873
+      },
+      "geometry": [
+        {
+          "lat": 52.5238313,
+          "lon": 13.4240873
+        },
+        {
+          "lat": 52.5238582,
+          "lon": 13.4240002
+        },
+        {
+          "lat": 52.5238678,
+          "lon": 13.4239719
+        },
+        {
+          "lat": 52.5241116,
+          "lon": 13.4233479
+        },
+        {
+          "lat": 52.5248101,
+          "lon": 13.4215597
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "lit": "yes",
+        "paving_stones:width": "40",
+        "postal_code": "10249",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 317753952,
+      "bounds": {
+        "minlat": 52.5248101,
+        "minlon": 13.4204845,
+        "maxlat": 52.5252527,
+        "maxlon": 13.4215597
+      },
+      "geometry": [
+        {
+          "lat": 52.5248101,
+          "lon": 13.4215597
+        },
+        {
+          "lat": 52.5248696,
+          "lon": 13.4214417
+        },
+        {
+          "lat": 52.5249393,
+          "lon": 13.4212692
+        },
+        {
+          "lat": 52.5249664,
+          "lon": 13.4212013
+        },
+        {
+          "lat": 52.5252527,
+          "lon": 13.4204845
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "is_sidepath": "yes",
+        "lit": "yes",
+        "paving_stones:width": "35",
+        "postal_code": "10249",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 318442782,
+      "bounds": {
+        "minlat": 52.525453,
+        "minlon": 13.4197996,
+        "maxlat": 52.5255288,
+        "maxlon": 13.4199948
+      },
+      "geometry": [
+        {
+          "lat": 52.525453,
+          "lon": 13.4199948
+        },
+        {
+          "lat": 52.5254831,
+          "lon": 13.4199175
+        },
+        {
+          "lat": 52.5255288,
+          "lon": 13.4197996
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10405",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 318442784,
+      "bounds": {
+        "minlat": 52.5251015,
+        "minlon": 13.4203178,
+        "maxlat": 52.5252323,
+        "maxlon": 13.4204623
+      },
+      "geometry": [
+        {
+          "lat": 52.5251015,
+          "lon": 13.4203178
+        },
+        {
+          "lat": 52.5251599,
+          "lon": 13.4203824
+        },
+        {
+          "lat": 52.5252323,
+          "lon": 13.4204623
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10249",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 330460453,
+      "bounds": {
+        "minlat": 52.5249686,
+        "minlon": 13.4202425,
+        "maxlat": 52.5252162,
+        "maxlon": 13.4208594
+      },
+      "geometry": [
+        {
+          "lat": 52.5249686,
+          "lon": 13.4208594
+        },
+        {
+          "lat": 52.5251392,
+          "lon": 13.420436
+        },
+        {
+          "lat": 52.5251599,
+          "lon": 13.4203824
+        },
+        {
+          "lat": 52.5252162,
+          "lon": 13.4202425
+        }
+      ],
+      "tags": {
+        "change:lanes": "only_right|only_left|only_right|yes|only_left",
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:bicycle": "designated",
+        "cycleway:right:lane": "exclusive",
+        "cycleway:right:surface": "asphalt",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "note": "old names from streets in approximate position of the Mollstraße built 1963: Linienstraße (from before 1748 until before 1778); Gollnows-Gasse (from before 1778 until 31.10.1836); Gollnowstraße (31.10.1836-09.08.1963)",
+        "old_name:1748-1778": "Linienstraße",
+        "old_name:1778-1836": "Gollnows-Gasse",
+        "old_name:1836-1963": "Gollnowstraße",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right:reason": "cycleway",
+        "postal_code": "10249",
+        "priority_road": "designated",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|through|through|right",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße"
+      }
+    },
+    {
+      "type": "way",
+      "id": 340606553,
+      "bounds": {
+        "minlat": 52.5246979,
+        "minlon": 13.4233734,
+        "maxlat": 52.524842,
+        "maxlon": 13.4234914
+      },
+      "geometry": [
+        {
+          "lat": 52.524842,
+          "lon": 13.4234914
+        },
+        {
+          "lat": 52.5246979,
+          "lon": 13.4233734
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 340606604,
+      "bounds": {
+        "minlat": 52.5251474,
+        "minlon": 13.422423,
+        "maxlat": 52.5254386,
+        "maxlon": 13.4232796
+      },
+      "geometry": [
+        {
+          "lat": 52.5251474,
+          "lon": 13.422423
+        },
+        {
+          "lat": 52.5251737,
+          "lon": 13.4224694
+        },
+        {
+          "lat": 52.5251947,
+          "lon": 13.4225066
+        },
+        {
+          "lat": 52.5254386,
+          "lon": 13.422937
+        },
+        {
+          "lat": 52.5252225,
+          "lon": 13.4232796
+        }
+      ],
+      "tags": {
+        "emergency": "designated",
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 340606608,
+      "bounds": {
+        "minlat": 52.524648,
+        "minlon": 13.4215574,
+        "maxlat": 52.5251788,
+        "maxlon": 13.4224693
+      },
+      "geometry": [
+        {
+          "lat": 52.5251788,
+          "lon": 13.4215574
+        },
+        {
+          "lat": 52.5250964,
+          "lon": 13.4216247
+        },
+        {
+          "lat": 52.5250966,
+          "lon": 13.4216871
+        },
+        {
+          "lat": 52.5250923,
+          "lon": 13.4217156
+        },
+        {
+          "lat": 52.5250495,
+          "lon": 13.4218235
+        },
+        {
+          "lat": 52.5248696,
+          "lon": 13.4224693
+        },
+        {
+          "lat": 52.524648,
+          "lon": 13.4222708
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 340606612,
+      "bounds": {
+        "minlat": 52.5235154,
+        "minlon": 13.4213145,
+        "maxlat": 52.5250334,
+        "maxlon": 13.4257328
+      },
+      "geometry": [
+        {
+          "lat": 52.5250334,
+          "lon": 13.4213145
+        },
+        {
+          "lat": 52.5250184,
+          "lon": 13.4213528
+        },
+        {
+          "lat": 52.5249603,
+          "lon": 13.4214923
+        },
+        {
+          "lat": 52.524648,
+          "lon": 13.4222708
+        },
+        {
+          "lat": 52.5243778,
+          "lon": 13.423023
+        },
+        {
+          "lat": 52.5240657,
+          "lon": 13.4239436
+        },
+        {
+          "lat": 52.5240197,
+          "lon": 13.4240795
+        },
+        {
+          "lat": 52.5235516,
+          "lon": 13.4256167
+        },
+        {
+          "lat": 52.5235154,
+          "lon": 13.4257328
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "smoothness": "intermediate",
+        "surface": "compacted"
+      }
+    },
+    {
+      "type": "way",
+      "id": 388701972,
+      "bounds": {
+        "minlat": 52.5258404,
+        "minlon": 13.4211133,
+        "maxlat": 52.5259331,
+        "maxlon": 13.4212242
+      },
+      "geometry": [
+        {
+          "lat": 52.5259331,
+          "lon": 13.4212242
+        },
+        {
+          "lat": 52.5258404,
+          "lon": 13.4211133
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2024-10-29",
+        "highway": "platform",
+        "lit": "no",
+        "name": "Mollstraße/Otto-Braun-Straße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "wheelchair": "limited"
+      }
+    },
+    {
+      "type": "way",
+      "id": 552970989,
+      "bounds": {
+        "minlat": 52.5248371,
+        "minlon": 13.4224693,
+        "maxlat": 52.5248817,
+        "maxlon": 13.4227948
+      },
+      "geometry": [
+        {
+          "lat": 52.5248696,
+          "lon": 13.4224693
+        },
+        {
+          "lat": 52.5248371,
+          "lon": 13.422595
+        },
+        {
+          "lat": 52.5248422,
+          "lon": 13.4226312
+        },
+        {
+          "lat": 52.5248817,
+          "lon": 13.4227948
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 775889675,
+      "bounds": {
+        "minlat": 52.5240052,
+        "minlon": 13.420755,
+        "maxlat": 52.5240741,
+        "maxlon": 13.420985
+      },
+      "geometry": [
+        {
+          "lat": 52.5240052,
+          "lon": 13.420985
+        },
+        {
+          "lat": 52.5240289,
+          "lon": 13.4209058
+        },
+        {
+          "lat": 52.5240741,
+          "lon": 13.420755
+        }
+      ],
+      "tags": {
+        "access": "customers",
+        "highway": "service",
+        "lit": "yes",
+        "smoothness": "intermediate",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 831860716,
+      "bounds": {
+        "minlat": 52.5251723,
+        "minlon": 13.4177613,
+        "maxlat": 52.5258505,
+        "maxlon": 13.4195773
+      },
+      "geometry": [
+        {
+          "lat": 52.5258505,
+          "lon": 13.4177613
+        },
+        {
+          "lat": 52.5257717,
+          "lon": 13.4177852
+        },
+        {
+          "lat": 52.5257481,
+          "lon": 13.4178047
+        },
+        {
+          "lat": 52.5256532,
+          "lon": 13.4180879
+        },
+        {
+          "lat": 52.525583,
+          "lon": 13.4183112
+        },
+        {
+          "lat": 52.5255119,
+          "lon": 13.418515
+        },
+        {
+          "lat": 52.5254162,
+          "lon": 13.41876
+        },
+        {
+          "lat": 52.5253043,
+          "lon": 13.419026
+        },
+        {
+          "lat": 52.5252616,
+          "lon": 13.4191275
+        },
+        {
+          "lat": 52.5251809,
+          "lon": 13.4193199
+        },
+        {
+          "lat": 52.5251779,
+          "lon": 13.4193422
+        },
+        {
+          "lat": 52.5251723,
+          "lon": 13.4193845
+        },
+        {
+          "lat": 52.5251729,
+          "lon": 13.4195773
+        }
+      ],
+      "tags": {
+        "highway": "cycleway",
+        "is_sidepath": "yes",
+        "is_sidepath:of": "primary",
+        "is_sidepath:of:name": "Mollstraße",
+        "lit": "yes",
+        "oneway": "yes",
+        "smoothness": "good",
+        "source:width": "Luftbild 2025",
+        "surface": "paving_stones",
+        "traffic_sign": "DE:237",
+        "width": "2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 890801131,
+      "bounds": {
+        "minlat": 52.5253912,
+        "minlon": 13.4196306,
+        "maxlat": 52.5254679,
+        "maxlon": 13.4198174
+      },
+      "geometry": [
+        {
+          "lat": 52.5253912,
+          "lon": 13.4198174
+        },
+        {
+          "lat": 52.5254535,
+          "lon": 13.4196659
+        },
+        {
+          "lat": 52.5254679,
+          "lon": 13.4196306
+        }
+      ],
+      "tags": {
+        "bicycle:lanes": "no|no|no|no|designated",
+        "cycleway:both": "no",
+        "cycleway:right:bicycle": "designated",
+        "cycleway:right:buffer": "no",
+        "cycleway:right:separation:left": "solid_line",
+        "cycleway:right:separation:right": "kerb",
+        "cycleway:right:traffic_sign": "DE:237",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "4",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "old_name": "Straße C, Abt. XII des Bebauungsplanes (until 24.4.1890);Jostystraße (24.4.1890-03.09.1969)",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10178",
+        "priority_road": "yes_unposted",
+        "psv:lanes": "yes|yes|yes|designated|no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "vehicle:lanes": "yes|yes|yes|no|no",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 906570455,
+      "bounds": {
+        "minlat": 52.5235142,
+        "minlon": 13.421274,
+        "maxlat": 52.5242839,
+        "maxlon": 13.4218069
+      },
+      "geometry": [
+        {
+          "lat": 52.5242839,
+          "lon": 13.4218069
+        },
+        {
+          "lat": 52.5241787,
+          "lon": 13.4217259
+        },
+        {
+          "lat": 52.5236034,
+          "lon": 13.4212826
+        },
+        {
+          "lat": 52.5235142,
+          "lon": 13.421274
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "operator:type": "private",
+        "parking:left": "separate",
+        "parking:right": "lane",
+        "parking:right:orientation": "parallel",
+        "postal_code": "10178",
+        "source:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "width": "4",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße"
+      }
+    },
+    {
+      "type": "way",
+      "id": 985194594,
+      "bounds": {
+        "minlat": 52.5249603,
+        "minlon": 13.4214923,
+        "maxlat": 52.525262,
+        "maxlon": 13.4218598
+      },
+      "geometry": [
+        {
+          "lat": 52.5249603,
+          "lon": 13.4214923
+        },
+        {
+          "lat": 52.5250221,
+          "lon": 13.4215632
+        },
+        {
+          "lat": 52.5250966,
+          "lon": 13.4216871
+        },
+        {
+          "lat": 52.5252229,
+          "lon": 13.421819
+        },
+        {
+          "lat": 52.525262,
+          "lon": 13.4218598
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 985194595,
+      "bounds": {
+        "minlat": 52.525262,
+        "minlon": 13.4217523,
+        "maxlat": 52.5252963,
+        "maxlon": 13.4218598
+      },
+      "geometry": [
+        {
+          "lat": 52.525262,
+          "lon": 13.4218598
+        },
+        {
+          "lat": 52.5252963,
+          "lon": 13.4217523
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 985194596,
+      "bounds": {
+        "minlat": 52.5251788,
+        "minlon": 13.4215574,
+        "maxlat": 52.5252229,
+        "maxlon": 13.421819
+      },
+      "geometry": [
+        {
+          "lat": 52.5251788,
+          "lon": 13.4215574
+        },
+        {
+          "lat": 52.5252009,
+          "lon": 13.4217325
+        },
+        {
+          "lat": 52.5252229,
+          "lon": 13.421819
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1055411232,
+      "bounds": {
+        "minlat": 52.5248622,
+        "minlon": 13.4227783,
+        "maxlat": 52.525021,
+        "maxlon": 13.4228596
+      },
+      "geometry": [
+        {
+          "lat": 52.525021,
+          "lon": 13.4228596
+        },
+        {
+          "lat": 52.5249163,
+          "lon": 13.4227783
+        },
+        {
+          "lat": 52.5248875,
+          "lon": 13.4227838
+        },
+        {
+          "lat": 52.5248817,
+          "lon": 13.4227948
+        },
+        {
+          "lat": 52.5248622,
+          "lon": 13.4228316
+        }
+      ],
+      "tags": {
+        "description": "Privatstraße",
+        "highway": "service",
+        "lit": "yes",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "operator:type": "private",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "10249",
+        "smoothness": "intermediate",
+        "surface": "concrete:plates",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1055411345,
+      "bounds": {
+        "minlat": 52.525021,
+        "minlon": 13.4227285,
+        "maxlat": 52.5250581,
+        "maxlon": 13.4228596
+      },
+      "geometry": [
+        {
+          "lat": 52.5250581,
+          "lon": 13.4227285
+        },
+        {
+          "lat": 52.525021,
+          "lon": 13.4228596
+        }
+      ],
+      "tags": {
+        "description": "Privatstraße",
+        "highway": "service",
+        "lit": "yes",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "operator:type": "private",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "10249",
+        "smoothness": "intermediate",
+        "surface": "concrete:plates",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1055411348,
+      "bounds": {
+        "minlat": 52.5246353,
+        "minlon": 13.4228596,
+        "maxlat": 52.525021,
+        "maxlon": 13.4241734
+      },
+      "geometry": [
+        {
+          "lat": 52.5246353,
+          "lon": 13.4241734
+        },
+        {
+          "lat": 52.5246784,
+          "lon": 13.4240317
+        },
+        {
+          "lat": 52.5248004,
+          "lon": 13.4236302
+        },
+        {
+          "lat": 52.524842,
+          "lon": 13.4234914
+        },
+        {
+          "lat": 52.5250088,
+          "lon": 13.4229351
+        },
+        {
+          "lat": 52.525021,
+          "lon": 13.4228596
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "highway": "service",
+        "service": "parking_aisle"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1055411426,
+      "bounds": {
+        "minlat": 52.5244149,
+        "minlon": 13.4233734,
+        "maxlat": 52.5246979,
+        "maxlon": 13.4243071
+      },
+      "geometry": [
+        {
+          "lat": 52.5246979,
+          "lon": 13.4233734
+        },
+        {
+          "lat": 52.5244912,
+          "lon": 13.4240554
+        },
+        {
+          "lat": 52.524461,
+          "lon": 13.4241552
+        },
+        {
+          "lat": 52.5244149,
+          "lon": 13.4243071
+        }
+      ],
+      "tags": {
+        "description": "Privatstraße",
+        "highway": "service",
+        "lit": "yes",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "operator:type": "private",
+        "parking:left": "separate",
+        "parking:right": "lane",
+        "parking:right:access": "private",
+        "parking:right:orientation": "parallel",
+        "postal_code": "10249",
+        "smoothness": "intermediate",
+        "surface": "concrete:plates",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1055411427,
+      "bounds": {
+        "minlat": 52.5246979,
+        "minlon": 13.4228316,
+        "maxlat": 52.5248622,
+        "maxlon": 13.4233734
+      },
+      "geometry": [
+        {
+          "lat": 52.5248622,
+          "lon": 13.4228316
+        },
+        {
+          "lat": 52.5246979,
+          "lon": 13.4233734
+        }
+      ],
+      "tags": {
+        "description": "Privatstraße",
+        "highway": "service",
+        "lit": "yes",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "operator:type": "private",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "10249",
+        "smoothness": "intermediate",
+        "surface": "concrete:plates",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1095365678,
+      "bounds": {
+        "minlat": 52.5252335,
+        "minlon": 13.4217969,
+        "maxlat": 52.5253224,
+        "maxlon": 13.4221483
+      },
+      "geometry": [
+        {
+          "lat": 52.5252335,
+          "lon": 13.4221483
+        },
+        {
+          "lat": 52.5252587,
+          "lon": 13.4220523
+        },
+        {
+          "lat": 52.5253224,
+          "lon": 13.4217969
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "name": "Pauline-Staegemann-Straße",
+        "name:etymology:wikidata": "Q1607278",
+        "name:etymology:wikipedia": "de:Pauline Staegemann",
+        "service": "emergency_access",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101404055,
+      "bounds": {
+        "minlat": 52.5246968,
+        "minlon": 13.4199696,
+        "maxlat": 52.5249893,
+        "maxlon": 13.4206556
+      },
+      "geometry": [
+        {
+          "lat": 52.5249893,
+          "lon": 13.4199696
+        },
+        {
+          "lat": 52.5249257,
+          "lon": 13.4201235
+        },
+        {
+          "lat": 52.5249145,
+          "lon": 13.4201517
+        },
+        {
+          "lat": 52.5249017,
+          "lon": 13.4201838
+        },
+        {
+          "lat": 52.5247958,
+          "lon": 13.4204493
+        },
+        {
+          "lat": 52.5246968,
+          "lon": 13.4206556
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:bicycle": "designated",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:surface": "asphalt",
+        "destination": "Marzahn;Friedrichshain",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "note": "old names from streets in approximate position of the Mollstraße built 1963: Linienstraße (from before 1748 until before 1778); Gollnows-Gasse (from before 1778 until 31.10.1836); Gollnowstraße (31.10.1836-09.08.1963)",
+        "old_name:1748-1778": "Linienstraße",
+        "old_name:1778-1836": "Gollnows-Gasse",
+        "old_name:1836-1963": "Gollnowstraße",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "14",
+        "postal_code": "10178",
+        "priority_road": "designated",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101404059,
+      "bounds": {
+        "minlat": 52.5244253,
+        "minlon": 13.4193575,
+        "maxlat": 52.5249893,
+        "maxlon": 13.4199696
+      },
+      "geometry": [
+        {
+          "lat": 52.5244253,
+          "lon": 13.4193575
+        },
+        {
+          "lat": 52.5248721,
+          "lon": 13.419825
+        },
+        {
+          "lat": 52.5248874,
+          "lon": 13.4198422
+        },
+        {
+          "lat": 52.5249037,
+          "lon": 13.4198605
+        },
+        {
+          "lat": 52.5249893,
+          "lon": 13.4199696
+        }
+      ],
+      "tags": {
+        "cycleway:bicycle": "designated",
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "cycleway:right:surface": "asphalt",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Otto-Braun-Straße",
+        "name:etymology:wikidata": "Q58667",
+        "name:ja": "オット・ブラウン通り",
+        "old_name": "Rennweg, also Rönnweg (from 16th century until 17th century);Bernauer Straße (from 17th century until 1810);Neue Königstraße (from 1810 until 1966);Hans-Beimler-Straße (from 1966 until 01.11.1995)",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10178",
+        "ref": "B 2",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through|right",
+        "wikidata": "Q138874",
+        "wikipedia": "de:Otto-Braun-Straße",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101404067,
+      "bounds": {
+        "minlat": 52.5251729,
+        "minlon": 13.4193904,
+        "maxlat": 52.5252484,
+        "maxlon": 13.4195773
+      },
+      "geometry": [
+        {
+          "lat": 52.5252484,
+          "lon": 13.4193904
+        },
+        {
+          "lat": 52.5252269,
+          "lon": 13.4194431
+        },
+        {
+          "lat": 52.5251729,
+          "lon": 13.4195773
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Mollstraße",
+        "name:etymology:wikidata": "Q118916",
+        "old_name": "Straße C, Abt. XII des Bebauungsplanes (until 24.4.1890);Jostystraße (24.4.1890-03.09.1969)",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10178",
+        "priority_road": "designated",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|through|through|right",
+        "wikidata": "Q1606884",
+        "wikipedia": "de:Mollstraße",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1169708027,
+      "bounds": {
+        "minlat": 52.5257293,
+        "minlon": 13.4215147,
+        "maxlat": 52.5262486,
+        "maxlon": 13.4222054
+      },
+      "geometry": [
+        {
+          "lat": 52.5262486,
+          "lon": 13.4222054
+        },
+        {
+          "lat": 52.5262263,
+          "lon": 13.4221842
+        },
+        {
+          "lat": 52.5261664,
+          "lon": 13.4221252
+        },
+        {
+          "lat": 52.5261158,
+          "lon": 13.422042
+        },
+        {
+          "lat": 52.5260609,
+          "lon": 13.4219359
+        },
+        {
+          "lat": 52.5259985,
+          "lon": 13.4218332
+        },
+        {
+          "lat": 52.5259188,
+          "lon": 13.4217377
+        },
+        {
+          "lat": 52.5258101,
+          "lon": 13.4216545
+        },
+        {
+          "lat": 52.5257487,
+          "lon": 13.421566
+        },
+        {
+          "lat": 52.5257293,
+          "lon": 13.4215147
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1169708028,
+      "bounds": {
+        "minlat": 52.5259197,
+        "minlon": 13.4220592,
+        "maxlat": 52.5261398,
+        "maxlon": 13.4223864
+      },
+      "geometry": [
+        {
+          "lat": 52.5261398,
+          "lon": 13.4223864
+        },
+        {
+          "lat": 52.5259607,
+          "lon": 13.4220689
+        },
+        {
+          "lat": 52.5259434,
+          "lon": 13.4220592
+        },
+        {
+          "lat": 52.5259294,
+          "lon": 13.4220601
+        },
+        {
+          "lat": 52.5259197,
+          "lon": 13.4220645
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "service": "driveway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400775,
+      "bounds": {
+        "minlat": 52.5253572,
+        "minlon": 13.4201627,
+        "maxlat": 52.5253889,
+        "maxlon": 13.4202429
+      },
+      "geometry": [
+        {
+          "lat": 52.5253572,
+          "lon": 13.4202429
+        },
+        {
+          "lat": 52.5253889,
+          "lon": 13.4201627
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10249",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400776,
+      "bounds": {
+        "minlat": 52.5252799,
+        "minlon": 13.4204508,
+        "maxlat": 52.5252961,
+        "maxlon": 13.4204942
+      },
+      "geometry": [
+        {
+          "lat": 52.5252799,
+          "lon": 13.4204942
+        },
+        {
+          "lat": 52.5252961,
+          "lon": 13.4204508
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "paving_stones:width": "35",
+        "postal_code": "10249",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400777,
+      "bounds": {
+        "minlat": 52.5253889,
+        "minlon": 13.4200802,
+        "maxlat": 52.5254198,
+        "maxlon": 13.4201627
+      },
+      "geometry": [
+        {
+          "lat": 52.5253889,
+          "lon": 13.4201627
+        },
+        {
+          "lat": 52.525397,
+          "lon": 13.4201406
+        },
+        {
+          "lat": 52.5253989,
+          "lon": 13.420136
+        },
+        {
+          "lat": 52.5254108,
+          "lon": 13.4201044
+        },
+        {
+          "lat": 52.5254124,
+          "lon": 13.4200999
+        },
+        {
+          "lat": 52.5254198,
+          "lon": 13.4200802
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400778,
+      "bounds": {
+        "minlat": 52.5254198,
+        "minlon": 13.4199948,
+        "maxlat": 52.525453,
+        "maxlon": 13.4200802
+      },
+      "geometry": [
+        {
+          "lat": 52.5254198,
+          "lon": 13.4200802
+        },
+        {
+          "lat": 52.5254369,
+          "lon": 13.4200363
+        },
+        {
+          "lat": 52.525453,
+          "lon": 13.4199948
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10405",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400779,
+      "bounds": {
+        "minlat": 52.5255288,
+        "minlon": 13.4197739,
+        "maxlat": 52.5255388,
+        "maxlon": 13.4197996
+      },
+      "geometry": [
+        {
+          "lat": 52.5255288,
+          "lon": 13.4197996
+        },
+        {
+          "lat": 52.5255388,
+          "lon": 13.4197739
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "paving_stones:width": "40",
+        "postal_code": "10405",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400780,
+      "bounds": {
+        "minlat": 52.5253913,
+        "minlon": 13.4196195,
+        "maxlat": 52.5255219,
+        "maxlon": 13.4197133
+      },
+      "geometry": [
+        {
+          "lat": 52.5255219,
+          "lon": 13.4197133
+        },
+        {
+          "lat": 52.5254535,
+          "lon": 13.4196659
+        },
+        {
+          "lat": 52.5253913,
+          "lon": 13.4196195
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400782,
+      "bounds": {
+        "minlat": 52.5252842,
+        "minlon": 13.4194941,
+        "maxlat": 52.5253156,
+        "maxlon": 13.419518
+      },
+      "geometry": [
+        {
+          "lat": 52.5253156,
+          "lon": 13.4195031
+        },
+        {
+          "lat": 52.5253071,
+          "lon": 13.4194941
+        },
+        {
+          "lat": 52.5252963,
+          "lon": 13.419518
+        },
+        {
+          "lat": 52.5252842,
+          "lon": 13.4195045
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400783,
+      "bounds": {
+        "minlat": 52.5253678,
+        "minlon": 13.419564,
+        "maxlat": 52.5253913,
+        "maxlon": 13.4196195
+      },
+      "geometry": [
+        {
+          "lat": 52.5253913,
+          "lon": 13.4196195
+        },
+        {
+          "lat": 52.5253767,
+          "lon": 13.4195954
+        },
+        {
+          "lat": 52.5253678,
+          "lon": 13.419564
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400784,
+      "bounds": {
+        "minlat": 52.5250796,
+        "minlon": 13.4193452,
+        "maxlat": 52.525107,
+        "maxlon": 13.4194227
+      },
+      "geometry": [
+        {
+          "lat": 52.525107,
+          "lon": 13.4193452
+        },
+        {
+          "lat": 52.5250796,
+          "lon": 13.4194227
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "paving_stones:width": "35",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400785,
+      "bounds": {
+        "minlat": 52.5250328,
+        "minlon": 13.4194227,
+        "maxlat": 52.5250796,
+        "maxlon": 13.4195392
+      },
+      "geometry": [
+        {
+          "lat": 52.5250796,
+          "lon": 13.4194227
+        },
+        {
+          "lat": 52.5250637,
+          "lon": 13.4194622
+        },
+        {
+          "lat": 52.5250328,
+          "lon": 13.4195392
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400786,
+      "bounds": {
+        "minlat": 52.5249657,
+        "minlon": 13.4196693,
+        "maxlat": 52.5249805,
+        "maxlon": 13.4197061
+      },
+      "geometry": [
+        {
+          "lat": 52.5249805,
+          "lon": 13.4196693
+        },
+        {
+          "lat": 52.5249732,
+          "lon": 13.4196876
+        },
+        {
+          "lat": 52.5249657,
+          "lon": 13.4197061
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400787,
+      "bounds": {
+        "minlat": 52.5249474,
+        "minlon": 13.4197061,
+        "maxlat": 52.5249657,
+        "maxlon": 13.4197517
+      },
+      "geometry": [
+        {
+          "lat": 52.5249657,
+          "lon": 13.4197061
+        },
+        {
+          "lat": 52.5249566,
+          "lon": 13.4197277
+        },
+        {
+          "lat": 52.5249474,
+          "lon": 13.4197517
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400788,
+      "bounds": {
+        "minlat": 52.5249358,
+        "minlon": 13.4197517,
+        "maxlat": 52.5249474,
+        "maxlon": 13.4197805
+      },
+      "geometry": [
+        {
+          "lat": 52.5249474,
+          "lon": 13.4197517
+        },
+        {
+          "lat": 52.5249448,
+          "lon": 13.4197581
+        },
+        {
+          "lat": 52.5249358,
+          "lon": 13.4197805
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400789,
+      "bounds": {
+        "minlat": 52.5248521,
+        "minlon": 13.4199642,
+        "maxlat": 52.524862,
+        "maxlon": 13.4199889
+      },
+      "geometry": [
+        {
+          "lat": 52.524862,
+          "lon": 13.4199642
+        },
+        {
+          "lat": 52.5248521,
+          "lon": 13.4199889
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400790,
+      "bounds": {
+        "minlat": 52.5249805,
+        "minlon": 13.4195956,
+        "maxlat": 52.5250104,
+        "maxlon": 13.4196693
+      },
+      "geometry": [
+        {
+          "lat": 52.5250104,
+          "lon": 13.4195956
+        },
+        {
+          "lat": 52.525002,
+          "lon": 13.4196167
+        },
+        {
+          "lat": 52.5249965,
+          "lon": 13.4196293
+        },
+        {
+          "lat": 52.5249895,
+          "lon": 13.419648
+        },
+        {
+          "lat": 52.5249805,
+          "lon": 13.4196693
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400791,
+      "bounds": {
+        "minlat": 52.5250104,
+        "minlon": 13.4195392,
+        "maxlat": 52.5250328,
+        "maxlon": 13.4195956
+      },
+      "geometry": [
+        {
+          "lat": 52.5250328,
+          "lon": 13.4195392
+        },
+        {
+          "lat": 52.5250104,
+          "lon": 13.4195956
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400792,
+      "bounds": {
+        "minlat": 52.5248572,
+        "minlon": 13.4200543,
+        "maxlat": 52.5248738,
+        "maxlon": 13.4200661
+      },
+      "geometry": [
+        {
+          "lat": 52.5248572,
+          "lon": 13.4200543
+        },
+        {
+          "lat": 52.5248738,
+          "lon": 13.4200661
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400793,
+      "bounds": {
+        "minlat": 52.5252323,
+        "minlon": 13.4204623,
+        "maxlat": 52.5252527,
+        "maxlon": 13.4204845
+      },
+      "geometry": [
+        {
+          "lat": 52.5252323,
+          "lon": 13.4204623
+        },
+        {
+          "lat": 52.5252527,
+          "lon": 13.4204845
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "lit": "yes",
+        "paving_stones:width": "35",
+        "postal_code": "10249",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400794,
+      "bounds": {
+        "minlat": 52.5248738,
+        "minlon": 13.4200661,
+        "maxlat": 52.5249494,
+        "maxlon": 13.4201497
+      },
+      "geometry": [
+        {
+          "lat": 52.5248738,
+          "lon": 13.4200661
+        },
+        {
+          "lat": 52.5249257,
+          "lon": 13.4201235
+        },
+        {
+          "lat": 52.5249494,
+          "lon": 13.4201497
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400795,
+      "bounds": {
+        "minlat": 52.5249494,
+        "minlon": 13.4201497,
+        "maxlat": 52.5249823,
+        "maxlon": 13.4201861
+      },
+      "geometry": [
+        {
+          "lat": 52.5249494,
+          "lon": 13.4201497
+        },
+        {
+          "lat": 52.5249823,
+          "lon": 13.4201861
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400796,
+      "bounds": {
+        "minlat": 52.5249823,
+        "minlon": 13.4201861,
+        "maxlat": 52.5250308,
+        "maxlon": 13.4202396
+      },
+      "geometry": [
+        {
+          "lat": 52.5249823,
+          "lon": 13.4201861
+        },
+        {
+          "lat": 52.5249944,
+          "lon": 13.4201993
+        },
+        {
+          "lat": 52.5249989,
+          "lon": 13.4202043
+        },
+        {
+          "lat": 52.5250194,
+          "lon": 13.4202269
+        },
+        {
+          "lat": 52.5250308,
+          "lon": 13.4202396
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400797,
+      "bounds": {
+        "minlat": 52.5250308,
+        "minlon": 13.4202396,
+        "maxlat": 52.5250528,
+        "maxlon": 13.4202639
+      },
+      "geometry": [
+        {
+          "lat": 52.5250308,
+          "lon": 13.4202396
+        },
+        {
+          "lat": 52.5250444,
+          "lon": 13.4202547
+        },
+        {
+          "lat": 52.5250528,
+          "lon": 13.4202639
+        }
+      ],
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181400798,
+      "bounds": {
+        "minlat": 52.5250528,
+        "minlon": 13.4202639,
+        "maxlat": 52.5250751,
+        "maxlon": 13.4202886
+      },
+      "geometry": [
+        {
+          "lat": 52.5250528,
+          "lon": 13.4202639
+        },
+        {
+          "lat": 52.5250633,
+          "lon": 13.4202749
+        },
+        {
+          "lat": 52.5250751,
+          "lon": 13.4202886
+        }
+      ],
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "dashes",
+        "footway": "crossing",
+        "highway": "footway",
+        "lit": "yes",
+        "postal_code": "10178",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1235510847,
+      "bounds": {
+        "minlat": 52.5248435,
+        "minlon": 13.4211738,
+        "maxlat": 52.5251116,
+        "maxlon": 13.4214467
+      },
+      "geometry": [
+        {
+          "lat": 52.5251116,
+          "lon": 13.4214467
+        },
+        {
+          "lat": 52.5250184,
+          "lon": 13.4213528
+        },
+        {
+          "lat": 52.5249393,
+          "lon": 13.4212692
+        },
+        {
+          "lat": 52.5248435,
+          "lon": 13.4211738
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "name": "Pauline-Staegemann-Straße",
+        "name:etymology:wikidata": "Q1607278",
+        "name:etymology:wikipedia": "de:Pauline Staegemann",
+        "service": "emergency_access",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1344181457,
+      "bounds": {
+        "minlat": 52.5257126,
+        "minlon": 13.4208381,
+        "maxlat": 52.5259694,
+        "maxlon": 13.4211447
+      },
+      "geometry": [
+        {
+          "lat": 52.5257126,
+          "lon": 13.4208381
+        },
+        {
+          "lat": 52.5259694,
+          "lon": 13.4211447
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "dual_carriageway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Otto-Braun-Straße",
+        "name:etymology:wikidata": "Q58667",
+        "name:ja": "オット・ブラウン通り",
+        "old_name": "Rennweg, also Rönnweg (from 16th century until 17th century);Bernauer Straße (from 17th century until 1810);Neue Königstraße (from 1810 until 1966);Hans-Beimler-Straße (from 1966 until 01.11.1995)",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:left:reason": "dual_carriage",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_stopping @ (Mo-Fr 06:00-20:00)",
+        "parking:right:restriction:reason": "bus_lane",
+        "parking:right:zone": "40",
+        "postal_code": "10249",
+        "priority_road": "designated",
+        "ref": "B 2",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q138874",
+        "wikipedia": "de:Otto-Braun-Straße",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1372179530,
+      "bounds": {
+        "minlat": 52.5224197,
+        "minlon": 13.419603,
+        "maxlat": 52.5243397,
+        "maxlon": 13.4211682
+      },
+      "geometry": [
+        {
+          "lat": 52.5243397,
+          "lon": 13.4211682
+        },
+        {
+          "lat": 52.5240289,
+          "lon": 13.4209058
+        },
+        {
+          "lat": 52.52272,
+          "lon": 13.4198415
+        },
+        {
+          "lat": 52.5224197,
+          "lon": 13.419603
+        }
+      ],
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1375947523,
+      "bounds": {
+        "minlat": 52.5249664,
+        "minlon": 13.4212013,
+        "maxlat": 52.5251116,
+        "maxlon": 13.4214467
+      },
+      "geometry": [
+        {
+          "lat": 52.5251116,
+          "lon": 13.4214467
+        },
+        {
+          "lat": 52.5250334,
+          "lon": 13.4213145
+        },
+        {
+          "lat": 52.5249664,
+          "lon": 13.4212013
+        }
+      ],
+      "tags": {
+        "highway": "footway",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1463740200,
+      "bounds": {
+        "minlat": 52.5239432,
+        "minlon": 13.4209332,
+        "maxlat": 52.5240885,
+        "maxlon": 13.421051
+      },
+      "geometry": [
+        {
+          "lat": 52.5239432,
+          "lon": 13.4209332
+        },
+        {
+          "lat": 52.5240052,
+          "lon": 13.420985
+        },
+        {
+          "lat": 52.5240885,
+          "lon": 13.421051
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Berolinastraße",
+        "name:etymology:wikidata": "Q574396",
+        "parking:left": "no",
+        "parking:right": "half_on_kerb",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:markings": "yes",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "14",
+        "postal_code": "10178",
+        "sidewalk": "both",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "source:width": "Luftbild 2025",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "width": "7",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1463740201,
+      "bounds": {
+        "minlat": 52.5240885,
+        "minlon": 13.421051,
+        "maxlat": 52.5242561,
+        "maxlon": 13.4211836
+      },
+      "geometry": [
+        {
+          "lat": 52.5240885,
+          "lon": 13.421051
+        },
+        {
+          "lat": 52.5242561,
+          "lon": 13.4211836
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Berolinastraße",
+        "name:etymology:wikidata": "Q574396",
+        "parking:both": "half_on_kerb",
+        "parking:both:fee": "yes",
+        "parking:both:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:both:markings": "yes",
+        "parking:both:orientation": "parallel",
+        "parking:both:zone": "14",
+        "postal_code": "10178",
+        "sidewalk": "both",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "source:width": "Luftbild 2025",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "width": "7",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1463740202,
+      "bounds": {
+        "minlat": 52.5242561,
+        "minlon": 13.4211836,
+        "maxlat": 52.5244427,
+        "maxlon": 13.4213329
+      },
+      "geometry": [
+        {
+          "lat": 52.5242561,
+          "lon": 13.4211836
+        },
+        {
+          "lat": 52.5243089,
+          "lon": 13.4212254
+        },
+        {
+          "lat": 52.5243203,
+          "lon": 13.4212335
+        },
+        {
+          "lat": 52.5244427,
+          "lon": 13.4213329
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Berolinastraße",
+        "name:etymology:wikidata": "Q574396",
+        "parking:both": "no",
+        "postal_code": "10178",
+        "sidewalk": "both",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "source:width": "Luftbild 2025",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "width": "7",
+        "zone:maxspeed": "DE:30"
+      }
+    }
+  ]
+}

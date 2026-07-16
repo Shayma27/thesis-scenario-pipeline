@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 145498769,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "node",
+    "osm_id": 5198810677,
+    "lat": "52.5400429",
+    "lon": "13.3702888",
+    "category": "railway",
+    "type": "station",
+    "place_rank": 30,
+    "importance": 0.3895399885548953,
+    "addresstype": "railway",
+    "name": "Reinickendorfer Straße",
+    "display_name": "Reinickendorfer Straße, Müllerstraße, Antonkiez, Wedding, Mitte, Berlin, 13347, Deutschland",
+    "boundingbox": [
+      "52.5350429",
+      "52.5450429",
+      "13.3652888",
+      "13.3752888"
+    ]
+  }
+]

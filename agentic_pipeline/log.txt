@@ -3,30 +3,30 @@ esmini GIT TAG: v3.0.4
 esmini GIT BRANCH: tags/v3.0.4^0
 esmini BUILD VERSION: 6144
 [] [info] Loaded config file: /home/chimo/tools/esmini/esmini-demo/config.yml (/home/chimo/tools/esmini/esmini-demo/bin/../config.yml)
-[] [info] Loaded /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/20260602_mueggelschloesschenweg/20260602_mueggelschloesschenweg.xosc
-[2026-06-02 13:54:58]
-[] [info] Player options: --osc /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/20260602_mueggelschloesschenweg/20260602_mueggelschloesschenweg.xosc --camera_mode orbit --fixed_timestep 0.05 --ground_plane auto --info_text 1 --logfile_path log.txt --log_level info --text_scale 1.0 --traj_filter 0.1 
-[] [info] Run simulation decoupled from realtime, with fixed timestep: 0.05
-[] [info] Generated seed 1676269933
-[] [info] Loading /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/20260602_mueggelschloesschenweg/20260602_mueggelschloesschenweg.xosc (v1.3)
+[] [info] Loaded /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/20260706_gutschmidtstrasse/20260706_gutschmidtstrasse.xosc
+[2026-07-06 00:25:41]
+[] [info] Player options: --osc /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/20260706_gutschmidtstrasse/20260706_gutschmidtstrasse.xosc --camera_mode orbit --ground_plane auto --info_text 1 --logfile_path log.txt --log_level info --text_scale 1.0 --traj_filter 0.1 
+[] [info] No fixed timestep specified - running in realtime speed
+[] [info] Generated seed 1969327270
+[] [info] Loading /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/20260706_gutschmidtstrasse/20260706_gutschmidtstrasse.xosc (v1.3)
 [] [info] 0 variables
-[] [info] Loaded OpenDRIVE: /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/20260602_mueggelschloesschenweg/20260602_mueggelschloesschenweg.xodr
+[] [info] Loaded OpenDRIVE: /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/20260706_gutschmidtstrasse/intersection_4way.xodr
 [] [info] Add and deactivate new object "truck_1" (id 0)
 [] [info] Add and deactivate new object "cyclist_1" (id 1)
 [] [info] 0 parameters
-[0.000] [info] Window created at 104,146 with size 800,600
+[0.000] [info] Window created at 409,1648 with size 800,600
 [0.000] [info] Generating a simplistic 3D model of the road network
 [0.000] [info] Name: truck_1
 [0.000] [info] Name: cyclist_1
 [0.000] [info] Init truck_1 TeleportAction initState -> startTransition -> runningState
 [0.000] [info] Starting teleport Action
 [0.000] [info] truck_1 New position:
-[0.000] [info] Pos(30.00, -1.75, 0.00) Rot(0.00, 0.00, 0.00) roadId 0 laneId -1 s 30.00 offset 0.00 t -1.75
+[0.000] [info] Pos(32.26, -39.83, 0.00) Rot(4.94, 0.00, 0.00) roadId 0 laneId -1 s 30.00 offset 0.00 t -1.75
 [0.000] [info] Init truck_1 LongitudinalAction initState -> startTransition -> runningState
 [0.000] [info] Init cyclist_1 TeleportAction initState -> startTransition -> runningState
 [0.000] [info] Starting teleport Action
 [0.000] [info] cyclist_1 New position:
-[0.000] [info] Pos(10.00, -4.50, 0.00) Rot(0.00, 0.00, 0.00) roadId 0 laneId -2 s 10.00 offset 0.00 t -4.50
+[0.000] [info] Pos(27.70, -20.34, 0.00) Rot(4.94, 0.00, 0.00) roadId 0 laneId -1 s 10.00 offset 0.00 t -1.75
 [0.000] [info] Init cyclist_1 LongitudinalAction initState -> startTransition -> runningState
 [0.000] [info] storyBoard initState -> startTransition -> runningState
 [0.000] [info] story_act_maneuvuergroup_MotorVehicleManeuverManeuver initState -> startTransition -> runningState
@@ -37,58 +37,58 @@ esmini BUILD VERSION: 6144
 [0.000] [info] Init truck_1 LongitudinalAction runningState -> endTransition -> completeState
 [0.000] [info] Init cyclist_1 TeleportAction runningState -> endTransition -> completeState
 [0.000] [info] Init cyclist_1 LongitudinalAction runningState -> endTransition -> completeState
-[0.050] [info] act_start: true, delay: 0.00, 0.0500 > 0.0000, edge: rising
-[0.050] [info] Trigger /------------------------------------------------
-[0.050] [info] Group 0:
-[0.050] [info] act_start: true
-[0.050] [info] Trigger  ------------------------------------------------/
-[0.050] [info] act_maneuvuergroup_MotorVehicleManeuverManeuver standbyState -> startTransition -> runningState
-[0.050] [info] maneuvuergroup_MotorVehicleManeuverManeuver initState -> startTransition -> runningState
-[0.050] [info] MotorVehicleManeuverManeuver initState -> startTransition -> runningState
-[0.050] [info] MotorVehicleManeuverEvent initState -> initToStandbyTransition -> standbyState
-[0.050] [info] act_start: true, delay: 0.00, 0.0500 > 0.0000, edge: rising
-[0.050] [info] Trigger /------------------------------------------------
-[0.050] [info] Group 0:
-[0.050] [info] act_start: true
-[0.050] [info] Trigger  ------------------------------------------------/
-[0.050] [info] act_maneuvuergroup_CyclistGoStraightManeuver standbyState -> startTransition -> runningState
-[0.050] [info] maneuvuergroup_CyclistGoStraightManeuver initState -> startTransition -> runningState
-[0.050] [info] CyclistGoStraightManeuver initState -> startTransition -> runningState
-[0.050] [info] CyclistGoStraightEvent initState -> initToStandbyTransition -> standbyState
-[0.150] [info] MotorVehicleManeuverStart: true, delay: 0.00, 0.1500 > 0.1000, edge: none
-[0.150] [info] Trigger /------------------------------------------------
-[0.150] [info] Group 0:
-[0.150] [info] MotorVehicleManeuverStart: true
-[0.150] [info] Trigger  ------------------------------------------------/
-[0.150] [info] MotorVehicleManeuverEvent standbyState -> startTransition -> runningState
-[0.150] [info] MotorVehicleManeuverFollowTrajectory initState -> startTransition -> runningState
-[0.150] [info] CyclistGoStraightStart: true, delay: 0.00, 0.1500 > 0.1000, edge: none
-[0.150] [info] Trigger /------------------------------------------------
-[0.150] [info] Group 0:
-[0.150] [info] CyclistGoStraightStart: true
-[0.150] [info] Trigger  ------------------------------------------------/
-[0.150] [info] CyclistGoStraightEvent standbyState -> startTransition -> runningState
-[0.150] [info] CyclistGoStraightFollowTrajectory initState -> startTransition -> runningState
-[10.050] [info] StopSimulation: true, delay: 0.00, 10.0500 > 10.0000, edge: rising
-[10.050] [info] Trigger /------------------------------------------------
-[10.050] [info] Group 0:
-[10.050] [info] StopSimulation: true
-[10.050] [info] Trigger  ------------------------------------------------/
-[10.050] [info] MotorVehicleManeuverFollowTrajectory runningState -> stopTransition -> completeState
-[10.050] [info] MotorVehicleManeuverEvent complete after 1 execution
-[10.050] [info] MotorVehicleManeuverEvent runningState -> endTransition -> completeState
-[10.050] [info] MotorVehicleManeuverManeuver runningState -> endTransition -> completeState
-[10.050] [info] maneuvuergroup_MotorVehicleManeuverManeuver complete after 1 execution
-[10.050] [info] maneuvuergroup_MotorVehicleManeuverManeuver runningState -> endTransition -> completeState
-[10.050] [info] act_maneuvuergroup_MotorVehicleManeuverManeuver runningState -> endTransition -> completeState
-[10.050] [info] story_act_maneuvuergroup_MotorVehicleManeuverManeuver runningState -> endTransition -> completeState
-[10.050] [info] CyclistGoStraightFollowTrajectory runningState -> stopTransition -> completeState
-[10.050] [info] CyclistGoStraightEvent complete after 1 execution
-[10.050] [info] CyclistGoStraightEvent runningState -> endTransition -> completeState
-[10.050] [info] CyclistGoStraightManeuver runningState -> endTransition -> completeState
-[10.050] [info] maneuvuergroup_CyclistGoStraightManeuver complete after 1 execution
-[10.050] [info] maneuvuergroup_CyclistGoStraightManeuver runningState -> endTransition -> completeState
-[10.050] [info] act_maneuvuergroup_CyclistGoStraightManeuver runningState -> endTransition -> completeState
-[10.050] [info] story_act_maneuvuergroup_CyclistGoStraightManeuver runningState -> endTransition -> completeState
-[10.050] [info] storyBoard runningState -> stopTransition -> completeState
-[10.050] [info] Closing
+[0.001] [info] act_start: true, delay: 0.00, 0.0010 > 0.0000, edge: rising
+[0.001] [info] Trigger /------------------------------------------------
+[0.001] [info] Group 0:
+[0.001] [info] act_start: true
+[0.001] [info] Trigger  ------------------------------------------------/
+[0.001] [info] act_maneuvuergroup_MotorVehicleManeuverManeuver standbyState -> startTransition -> runningState
+[0.001] [info] maneuvuergroup_MotorVehicleManeuverManeuver initState -> startTransition -> runningState
+[0.001] [info] MotorVehicleManeuverManeuver initState -> startTransition -> runningState
+[0.001] [info] MotorVehicleManeuverEvent initState -> initToStandbyTransition -> standbyState
+[0.001] [info] act_start: true, delay: 0.00, 0.0010 > 0.0000, edge: rising
+[0.001] [info] Trigger /------------------------------------------------
+[0.001] [info] Group 0:
+[0.001] [info] act_start: true
+[0.001] [info] Trigger  ------------------------------------------------/
+[0.001] [info] act_maneuvuergroup_CyclistGoStraightManeuver standbyState -> startTransition -> runningState
+[0.001] [info] maneuvuergroup_CyclistGoStraightManeuver initState -> startTransition -> runningState
+[0.001] [info] CyclistGoStraightManeuver initState -> startTransition -> runningState
+[0.001] [info] CyclistGoStraightEvent initState -> initToStandbyTransition -> standbyState
+[0.102] [info] MotorVehicleManeuverStart: true, delay: 0.00, 0.1023 > 0.1000, edge: none
+[0.102] [info] Trigger /------------------------------------------------
+[0.102] [info] Group 0:
+[0.102] [info] MotorVehicleManeuverStart: true
+[0.102] [info] Trigger  ------------------------------------------------/
+[0.102] [info] MotorVehicleManeuverEvent standbyState -> startTransition -> runningState
+[0.102] [info] MotorVehicleManeuverFollowTrajectory initState -> startTransition -> runningState
+[0.102] [info] CyclistGoStraightStart: true, delay: 0.00, 0.1023 > 0.1000, edge: none
+[0.102] [info] Trigger /------------------------------------------------
+[0.102] [info] Group 0:
+[0.102] [info] CyclistGoStraightStart: true
+[0.102] [info] Trigger  ------------------------------------------------/
+[0.102] [info] CyclistGoStraightEvent standbyState -> startTransition -> runningState
+[0.102] [info] CyclistGoStraightFollowTrajectory initState -> startTransition -> runningState
+[10.000] [info] StopSimulation: true, delay: 0.00, 10.0005 > 10.0000, edge: rising
+[10.000] [info] Trigger /------------------------------------------------
+[10.000] [info] Group 0:
+[10.000] [info] StopSimulation: true
+[10.000] [info] Trigger  ------------------------------------------------/
+[10.000] [info] MotorVehicleManeuverFollowTrajectory runningState -> stopTransition -> completeState
+[10.000] [info] MotorVehicleManeuverEvent complete after 1 execution
+[10.000] [info] MotorVehicleManeuverEvent runningState -> endTransition -> completeState
+[10.000] [info] MotorVehicleManeuverManeuver runningState -> endTransition -> completeState
+[10.000] [info] maneuvuergroup_MotorVehicleManeuverManeuver complete after 1 execution
+[10.000] [info] maneuvuergroup_MotorVehicleManeuverManeuver runningState -> endTransition -> completeState
+[10.000] [info] act_maneuvuergroup_MotorVehicleManeuverManeuver runningState -> endTransition -> completeState
+[10.000] [info] story_act_maneuvuergroup_MotorVehicleManeuverManeuver runningState -> endTransition -> completeState
+[10.000] [info] CyclistGoStraightFollowTrajectory runningState -> stopTransition -> completeState
+[10.000] [info] CyclistGoStraightEvent complete after 1 execution
+[10.000] [info] CyclistGoStraightEvent runningState -> endTransition -> completeState
+[10.000] [info] CyclistGoStraightManeuver runningState -> endTransition -> completeState
+[10.000] [info] maneuvuergroup_CyclistGoStraightManeuver complete after 1 execution
+[10.000] [info] maneuvuergroup_CyclistGoStraightManeuver runningState -> endTransition -> completeState
+[10.000] [info] act_maneuvuergroup_CyclistGoStraightManeuver runningState -> endTransition -> completeState
+[10.000] [info] story_act_maneuvuergroup_CyclistGoStraightManeuver runningState -> endTransition -> completeState
+[10.000] [info] storyBoard runningState -> stopTransition -> completeState
+[10.000] [info] Closing

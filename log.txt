@@ -1,0 +1,94 @@
+esmini GIT REV: v3.0.4-0-1d33e9f2
+esmini GIT TAG: v3.0.4
+esmini GIT BRANCH: tags/v3.0.4^0
+esmini BUILD VERSION: 6144
+[] [info] Loaded config file: /home/chimo/tools/esmini/esmini-demo/config.yml (/home/chimo/tools/esmini/esmini-demo/bin/../config.yml)
+[] [info] Loaded /home/chimo/Shayma/Shayma/scenario_pipeline/output/straight_crossing_charlottenburg_2021_10_17.xosc
+[2026-06-07 15:29:11]
+[] [info] Player options: --osc /home/chimo/Shayma/Shayma/scenario_pipeline/output/straight_crossing_charlottenburg_2021_10_17.xosc --camera_mode orbit --ground_plane auto --info_text 1 --logfile_path log.txt --log_level info --text_scale 1.0 --traj_filter 0.1 
+[] [info] No fixed timestep specified - running in realtime speed
+[] [info] Generated seed 2951691509
+[] [info] Loading /home/chimo/Shayma/Shayma/scenario_pipeline/output/straight_crossing_charlottenburg_2021_10_17.xosc (v1.3)
+[] [info] 0 variables
+[] [info] Loaded OpenDRIVE: /home/chimo/Shayma/Shayma/scenario_pipeline/output/straight_crossing_charlottenburg_2021_10_17.xodr
+[] [info] Add and deactivate new object "cyclist_1" (id 0)
+[] [info] Add and deactivate new object "car_1" (id 1)
+[] [info] 0 parameters
+[0.000] [info] Window created at 193,1797 with size 800,600
+[0.000] [info] Generating a simplistic 3D model of the road network
+[0.000] [info] Name: cyclist_1
+[0.000] [info] Name: car_1
+[0.000] [info] Init cyclist_1 TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] cyclist_1 New position:
+[0.000] [info] Pos(-1.75, 22.25, 0.00) Rot(4.71, 0.00, 0.00) roadId 0 laneId -1 s 27.75 offset 0.00 t -1.75
+[0.000] [info] Init cyclist_1 LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] Init car_1 TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] car_1 New position:
+[0.000] [info] Pos(37.75, 1.75, 0.00) Rot(3.14, 0.00, 0.00) roadId 1 laneId -1 s 12.25 offset 0.00 t -1.75
+[0.000] [info] Init car_1 LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] storyBoard initState -> startTransition -> runningState
+[0.000] [info] story_act_maneuvuergroup_CyclistEnterIntersectionManeuver initState -> startTransition -> runningState
+[0.000] [info] act_maneuvuergroup_CyclistEnterIntersectionManeuver initState -> initToStandbyTransition -> standbyState
+[0.000] [info] story_act_maneuvuergroup_CarStraightThroughIntersectionManeuver initState -> startTransition -> runningState
+[0.000] [info] act_maneuvuergroup_CarStraightThroughIntersectionManeuver initState -> initToStandbyTransition -> standbyState
+[0.000] [info] Init cyclist_1 TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init cyclist_1 LongitudinalAction runningState -> endTransition -> completeState
+[0.000] [info] Init car_1 TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init car_1 LongitudinalAction runningState -> endTransition -> completeState
+[0.001] [info] act_start: true, delay: 0.00, 0.0010 > 0.0000, edge: rising
+[0.001] [info] Trigger /------------------------------------------------
+[0.001] [info] Group 0:
+[0.001] [info] act_start: true
+[0.001] [info] Trigger  ------------------------------------------------/
+[0.001] [info] act_maneuvuergroup_CyclistEnterIntersectionManeuver standbyState -> startTransition -> runningState
+[0.001] [info] maneuvuergroup_CyclistEnterIntersectionManeuver initState -> startTransition -> runningState
+[0.001] [info] CyclistEnterIntersectionManeuver initState -> startTransition -> runningState
+[0.001] [info] CyclistEnterIntersectionEvent initState -> initToStandbyTransition -> standbyState
+[0.001] [info] act_start: true, delay: 0.00, 0.0010 > 0.0000, edge: rising
+[0.001] [info] Trigger /------------------------------------------------
+[0.001] [info] Group 0:
+[0.001] [info] act_start: true
+[0.001] [info] Trigger  ------------------------------------------------/
+[0.001] [info] act_maneuvuergroup_CarStraightThroughIntersectionManeuver standbyState -> startTransition -> runningState
+[0.001] [info] maneuvuergroup_CarStraightThroughIntersectionManeuver initState -> startTransition -> runningState
+[0.001] [info] CarStraightThroughIntersectionManeuver initState -> startTransition -> runningState
+[0.001] [info] CarStraightThroughIntersectionEvent initState -> initToStandbyTransition -> standbyState
+[0.103] [info] CyclistEnterIntersectionStart: true, delay: 0.00, 0.1027 > 0.1000, edge: none
+[0.103] [info] Trigger /------------------------------------------------
+[0.103] [info] Group 0:
+[0.103] [info] CyclistEnterIntersectionStart: true
+[0.103] [info] Trigger  ------------------------------------------------/
+[0.103] [info] CyclistEnterIntersectionEvent standbyState -> startTransition -> runningState
+[0.103] [info] CyclistEnterIntersectionFollowTrajectory initState -> startTransition -> runningState
+[0.103] [info] CarStraightThroughIntersectionStart: true, delay: 0.00, 0.1027 > 0.1000, edge: none
+[0.103] [info] Trigger /------------------------------------------------
+[0.103] [info] Group 0:
+[0.103] [info] CarStraightThroughIntersectionStart: true
+[0.103] [info] Trigger  ------------------------------------------------/
+[0.103] [info] CarStraightThroughIntersectionEvent standbyState -> startTransition -> runningState
+[0.103] [info] CarStraightThroughIntersectionFollowTrajectory initState -> startTransition -> runningState
+[9.000] [info] StopSimulation: true, delay: 0.00, 9.0001 > 9.0000, edge: rising
+[9.000] [info] Trigger /------------------------------------------------
+[9.000] [info] Group 0:
+[9.000] [info] StopSimulation: true
+[9.000] [info] Trigger  ------------------------------------------------/
+[9.000] [info] CyclistEnterIntersectionFollowTrajectory runningState -> stopTransition -> completeState
+[9.000] [info] CyclistEnterIntersectionEvent complete after 1 execution
+[9.000] [info] CyclistEnterIntersectionEvent runningState -> endTransition -> completeState
+[9.000] [info] CyclistEnterIntersectionManeuver runningState -> endTransition -> completeState
+[9.000] [info] maneuvuergroup_CyclistEnterIntersectionManeuver complete after 1 execution
+[9.000] [info] maneuvuergroup_CyclistEnterIntersectionManeuver runningState -> endTransition -> completeState
+[9.000] [info] act_maneuvuergroup_CyclistEnterIntersectionManeuver runningState -> endTransition -> completeState
+[9.000] [info] story_act_maneuvuergroup_CyclistEnterIntersectionManeuver runningState -> endTransition -> completeState
+[9.000] [info] CarStraightThroughIntersectionFollowTrajectory runningState -> stopTransition -> completeState
+[9.000] [info] CarStraightThroughIntersectionEvent complete after 1 execution
+[9.000] [info] CarStraightThroughIntersectionEvent runningState -> endTransition -> completeState
+[9.000] [info] CarStraightThroughIntersectionManeuver runningState -> endTransition -> completeState
+[9.000] [info] maneuvuergroup_CarStraightThroughIntersectionManeuver complete after 1 execution
+[9.000] [info] maneuvuergroup_CarStraightThroughIntersectionManeuver runningState -> endTransition -> completeState
+[9.000] [info] act_maneuvuergroup_CarStraightThroughIntersectionManeuver runningState -> endTransition -> completeState
+[9.000] [info] story_act_maneuvuergroup_CarStraightThroughIntersectionManeuver runningState -> endTransition -> completeState
+[9.000] [info] storyBoard runningState -> stopTransition -> completeState
+[9.000] [info] Closing

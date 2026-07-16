@@ -1,0 +1,1401 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-07-15T21:44:15Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 26427693,
+      "bounds": {
+        "minlat": 52.4167225,
+        "minlon": 13.6231199,
+        "maxlat": 52.4252708,
+        "maxlon": 13.6536592
+      },
+      "geometry": [
+        {
+          "lat": 52.4252708,
+          "lon": 13.6231199
+        },
+        {
+          "lat": 52.4251458,
+          "lon": 13.623456
+        },
+        {
+          "lat": 52.4250895,
+          "lon": 13.6236294
+        },
+        {
+          "lat": 52.4250086,
+          "lon": 13.6238858
+        },
+        {
+          "lat": 52.4248338,
+          "lon": 13.6245884
+        },
+        {
+          "lat": 52.4246839,
+          "lon": 13.6253287
+        },
+        {
+          "lat": 52.4239533,
+          "lon": 13.6290599
+        },
+        {
+          "lat": 52.4239287,
+          "lon": 13.6291864
+        },
+        {
+          "lat": 52.4239089,
+          "lon": 13.6292918
+        },
+        {
+          "lat": 52.4226014,
+          "lon": 13.6359123
+        },
+        {
+          "lat": 52.4221438,
+          "lon": 13.638275
+        },
+        {
+          "lat": 52.4217324,
+          "lon": 13.6404172
+        },
+        {
+          "lat": 52.4216543,
+          "lon": 13.6408295
+        },
+        {
+          "lat": 52.4216033,
+          "lon": 13.6410976
+        },
+        {
+          "lat": 52.4212539,
+          "lon": 13.6429676
+        },
+        {
+          "lat": 52.4208719,
+          "lon": 13.6451354
+        },
+        {
+          "lat": 52.4206351,
+          "lon": 13.6462022
+        },
+        {
+          "lat": 52.4204651,
+          "lon": 13.6467441
+        },
+        {
+          "lat": 52.4201739,
+          "lon": 13.6474618
+        },
+        {
+          "lat": 52.4196496,
+          "lon": 13.6484439
+        },
+        {
+          "lat": 52.419114,
+          "lon": 13.6493861
+        },
+        {
+          "lat": 52.4185009,
+          "lon": 13.6504777
+        },
+        {
+          "lat": 52.4178863,
+          "lon": 13.651564
+        },
+        {
+          "lat": 52.417255,
+          "lon": 13.6526902
+        },
+        {
+          "lat": 52.4167225,
+          "lon": 13.6536592
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "separate",
+        "cycleway:right": "no",
+        "foot": "use_sidepath",
+        "hazmat:water": "no",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "no",
+        "maxspeed": "50",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12559",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 26427731,
+      "bounds": {
+        "minlat": 52.4132705,
+        "minlon": 13.6571984,
+        "maxlat": 52.4148022,
+        "maxlon": 13.6599803
+      },
+      "geometry": [
+        {
+          "lat": 52.4148022,
+          "lon": 13.6571984
+        },
+        {
+          "lat": 52.4145667,
+          "lon": 13.6576249
+        },
+        {
+          "lat": 52.4145439,
+          "lon": 13.6576679
+        },
+        {
+          "lat": 52.4145332,
+          "lon": 13.6576858
+        },
+        {
+          "lat": 52.4143833,
+          "lon": 13.6579494
+        },
+        {
+          "lat": 52.4143307,
+          "lon": 13.6580419
+        },
+        {
+          "lat": 52.4139552,
+          "lon": 13.658737
+        },
+        {
+          "lat": 52.4139016,
+          "lon": 13.6588337
+        },
+        {
+          "lat": 52.4136648,
+          "lon": 13.6592659
+        },
+        {
+          "lat": 52.4132705,
+          "lon": 13.6599803
+        }
+      ],
+      "tags": {
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "separate",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 26427739,
+      "bounds": {
+        "minlat": 52.4150641,
+        "minlon": 13.6555581,
+        "maxlat": 52.4156956,
+        "maxlon": 13.6567032
+      },
+      "geometry": [
+        {
+          "lat": 52.4156956,
+          "lon": 13.6555581
+        },
+        {
+          "lat": 52.4155414,
+          "lon": 13.6558267
+        },
+        {
+          "lat": 52.4154516,
+          "lon": 13.6559952
+        },
+        {
+          "lat": 52.4152498,
+          "lon": 13.6563727
+        },
+        {
+          "lat": 52.4150945,
+          "lon": 13.6566496
+        },
+        {
+          "lat": 52.4150641,
+          "lon": 13.6567032
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (mo-fr 06:00-18:00)",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12559",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|through",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 26427750,
+      "bounds": {
+        "minlat": 52.4151245,
+        "minlon": 13.6560887,
+        "maxlat": 52.4155141,
+        "maxlon": 13.6567962
+      },
+      "geometry": [
+        {
+          "lat": 52.4151245,
+          "lon": 13.6567962
+        },
+        {
+          "lat": 52.415155,
+          "lon": 13.656737
+        },
+        {
+          "lat": 52.4153473,
+          "lon": 13.6564024
+        },
+        {
+          "lat": 52.4154772,
+          "lon": 13.6561589
+        },
+        {
+          "lat": 52.4155141,
+          "lon": 13.6560887
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (mo-fr 06:00-18:00)",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12559",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|through",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 90992168,
+      "bounds": {
+        "minlat": 52.4120397,
+        "minlon": 13.6599354,
+        "maxlat": 52.412758,
+        "maxlon": 13.6609139
+      },
+      "geometry": [
+        {
+          "lat": 52.4120397,
+          "lon": 13.6599354
+        },
+        {
+          "lat": 52.4121106,
+          "lon": 13.6600451
+        },
+        {
+          "lat": 52.4121588,
+          "lon": 13.6601083
+        },
+        {
+          "lat": 52.4122766,
+          "lon": 13.6602628
+        },
+        {
+          "lat": 52.4123358,
+          "lon": 13.6602776
+        },
+        {
+          "lat": 52.4126181,
+          "lon": 13.6607216
+        },
+        {
+          "lat": 52.41271,
+          "lon": 13.6608649
+        },
+        {
+          "lat": 52.412724,
+          "lon": 13.6608868
+        },
+        {
+          "lat": 52.412758,
+          "lon": 13.6609139
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "maxspeed": "50",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "operator:type": "private",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:orientation": "parallel",
+        "postal_code": "12559",
+        "surface": "concrete",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 90992170,
+      "bounds": {
+        "minlat": 52.4114464,
+        "minlon": 13.6599195,
+        "maxlat": 52.4119681,
+        "maxlon": 13.6605844
+      },
+      "geometry": [
+        {
+          "lat": 52.4119681,
+          "lon": 13.6599195
+        },
+        {
+          "lat": 52.4118453,
+          "lon": 13.6601469
+        },
+        {
+          "lat": 52.4118046,
+          "lon": 13.6601915
+        },
+        {
+          "lat": 52.4114464,
+          "lon": 13.6605844
+        }
+      ],
+      "tags": {
+        "access": "destination",
+        "highway": "service",
+        "maxspeed": "50",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "operator:type": "private",
+        "postal_code": "12559",
+        "surface": "paving_stones",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 169076530,
+      "bounds": {
+        "minlat": 52.4252708,
+        "minlon": 13.6160842,
+        "maxlat": 52.4293984,
+        "maxlon": 13.6231199
+      },
+      "geometry": [
+        {
+          "lat": 52.4293984,
+          "lon": 13.6160842
+        },
+        {
+          "lat": 52.4291041,
+          "lon": 13.6166036
+        },
+        {
+          "lat": 52.427669,
+          "lon": 13.6189532
+        },
+        {
+          "lat": 52.4276116,
+          "lon": 13.6190471
+        },
+        {
+          "lat": 52.4261812,
+          "lon": 13.6213556
+        },
+        {
+          "lat": 52.4258072,
+          "lon": 13.6219835
+        },
+        {
+          "lat": 52.4256094,
+          "lon": 13.6223482
+        },
+        {
+          "lat": 52.4253649,
+          "lon": 13.622885
+        },
+        {
+          "lat": 52.4253226,
+          "lon": 13.6229814
+        },
+        {
+          "lat": 52.4252708,
+          "lon": 13.6231199
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "separate",
+        "cycleway:right": "no",
+        "foot": "use_sidepath",
+        "hazmat:water": "no",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "no",
+        "maxspeed": "70",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12557",
+        "shoulder": "no",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 169076546,
+      "bounds": {
+        "minlat": 52.4295921,
+        "minlon": 13.5983686,
+        "maxlat": 52.4363181,
+        "maxlon": 13.6157244
+      },
+      "geometry": [
+        {
+          "lat": 52.4363181,
+          "lon": 13.5983686
+        },
+        {
+          "lat": 52.4358868,
+          "lon": 13.5994934
+        },
+        {
+          "lat": 52.4356678,
+          "lon": 13.6000702
+        },
+        {
+          "lat": 52.4355301,
+          "lon": 13.6004251
+        },
+        {
+          "lat": 52.4347115,
+          "lon": 13.6025553
+        },
+        {
+          "lat": 52.4346711,
+          "lon": 13.6026605
+        },
+        {
+          "lat": 52.43455,
+          "lon": 13.6029709
+        },
+        {
+          "lat": 52.4345193,
+          "lon": 13.6030516
+        },
+        {
+          "lat": 52.4344042,
+          "lon": 13.603359
+        },
+        {
+          "lat": 52.4337548,
+          "lon": 13.6050459
+        },
+        {
+          "lat": 52.4325144,
+          "lon": 13.6082801
+        },
+        {
+          "lat": 52.430295,
+          "lon": 13.6140736
+        },
+        {
+          "lat": 52.4300511,
+          "lon": 13.6146876
+        },
+        {
+          "lat": 52.4299253,
+          "lon": 13.6149912
+        },
+        {
+          "lat": 52.4297814,
+          "lon": 13.6153238
+        },
+        {
+          "lat": 52.4295921,
+          "lon": 13.6157244
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "separate",
+        "cycleway:right": "no",
+        "foot": "use_sidepath",
+        "hazmat:water": "no",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "no",
+        "maxspeed": "70",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12557",
+        "shoulder": "no",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 183256000,
+      "bounds": {
+        "minlat": 52.4131037,
+        "minlon": 13.6601235,
+        "maxlat": 52.4131917,
+        "maxlon": 13.6602841
+      },
+      "geometry": [
+        {
+          "lat": 52.4131917,
+          "lon": 13.6601235
+        },
+        {
+          "lat": 52.4131307,
+          "lon": 13.6602349
+        },
+        {
+          "lat": 52.4131037,
+          "lon": 13.6602841
+        }
+      ],
+      "tags": {
+        "cycleway:both": "separate",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "sign",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "sign",
+        "surface": "asphalt",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 216226951,
+      "bounds": {
+        "minlat": 52.4216543,
+        "minlon": 13.6408295,
+        "maxlat": 52.4233171,
+        "maxlon": 13.6417599
+      },
+      "geometry": [
+        {
+          "lat": 52.4216543,
+          "lon": 13.6408295
+        },
+        {
+          "lat": 52.4217168,
+          "lon": 13.640866
+        },
+        {
+          "lat": 52.4217471,
+          "lon": 13.6408827
+        },
+        {
+          "lat": 52.4232217,
+          "lon": 13.6417117
+        },
+        {
+          "lat": 52.4233171,
+          "lon": 13.6417599
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "operator:type": "private",
+        "sidewalk": "left",
+        "smoothness": "bad",
+        "surface": "concrete",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 325347114,
+      "bounds": {
+        "minlat": 52.4164013,
+        "minlon": 13.6547837,
+        "maxlat": 52.4173102,
+        "maxlon": 13.656431
+      },
+      "geometry": [
+        {
+          "lat": 52.4168497,
+          "lon": 13.656431
+        },
+        {
+          "lat": 52.4171117,
+          "lon": 13.6558485
+        },
+        {
+          "lat": 52.4173102,
+          "lon": 13.6553915
+        },
+        {
+          "lat": 52.4169048,
+          "lon": 13.6548083
+        },
+        {
+          "lat": 52.4168545,
+          "lon": 13.6547837
+        },
+        {
+          "lat": 52.4168238,
+          "lon": 13.6548163
+        },
+        {
+          "lat": 52.4166715,
+          "lon": 13.6551152
+        },
+        {
+          "lat": 52.4164013,
+          "lon": 13.6555901
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "parking:both": "no",
+        "sidewalk:both": "no",
+        "wikidata": "Q73521254",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 325347116,
+      "bounds": {
+        "minlat": 52.416025,
+        "minlon": 13.6549546,
+        "maxlat": 52.4170622,
+        "maxlon": 13.6567803
+      },
+      "geometry": [
+        {
+          "lat": 52.416025,
+          "lon": 13.6549546
+        },
+        {
+          "lat": 52.4160739,
+          "lon": 13.6550201
+        },
+        {
+          "lat": 52.4161058,
+          "lon": 13.655062
+        },
+        {
+          "lat": 52.416213,
+          "lon": 13.6552028
+        },
+        {
+          "lat": 52.4164013,
+          "lon": 13.6555901
+        },
+        {
+          "lat": 52.41661,
+          "lon": 13.6559815
+        },
+        {
+          "lat": 52.4166251,
+          "lon": 13.6560098
+        },
+        {
+          "lat": 52.4166559,
+          "lon": 13.6560675
+        },
+        {
+          "lat": 52.4168497,
+          "lon": 13.656431
+        },
+        {
+          "lat": 52.4168947,
+          "lon": 13.6565049
+        },
+        {
+          "lat": 52.4169121,
+          "lon": 13.6565336
+        },
+        {
+          "lat": 52.4169347,
+          "lon": 13.6565707
+        },
+        {
+          "lat": 52.4170622,
+          "lon": 13.6567803
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "parking:both": "lane",
+        "parking:both:access": "yes",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "sidewalk:both": "no",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "concrete",
+        "traffic_sign": "DE:274.1",
+        "wikidata": "Q73521254",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 440901373,
+      "bounds": {
+        "minlat": 52.4155902,
+        "minlon": 13.6555581,
+        "maxlat": 52.4156956,
+        "maxlon": 13.6559036
+      },
+      "geometry": [
+        {
+          "lat": 52.4155902,
+          "lon": 13.6559036
+        },
+        {
+          "lat": 52.4156956,
+          "lon": 13.6555581
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (mo-fr 06:00-18:00)",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12559",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 440901374,
+      "bounds": {
+        "minlat": 52.4148022,
+        "minlon": 13.6567032,
+        "maxlat": 52.4150641,
+        "maxlon": 13.6571984
+      },
+      "geometry": [
+        {
+          "lat": 52.4150641,
+          "lon": 13.6567032
+        },
+        {
+          "lat": 52.4150349,
+          "lon": 13.6567551
+        },
+        {
+          "lat": 52.4149905,
+          "lon": 13.6568227
+        },
+        {
+          "lat": 52.4149224,
+          "lon": 13.6569491
+        },
+        {
+          "lat": 52.4148022,
+          "lon": 13.6571984
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12559",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 440901375,
+      "bounds": {
+        "minlat": 52.4148022,
+        "minlon": 13.6567962,
+        "maxlat": 52.4151245,
+        "maxlon": 13.6571984
+      },
+      "geometry": [
+        {
+          "lat": 52.4148022,
+          "lon": 13.6571984
+        },
+        {
+          "lat": 52.4149224,
+          "lon": 13.6570643
+        },
+        {
+          "lat": 52.4149845,
+          "lon": 13.6570048
+        },
+        {
+          "lat": 52.4150547,
+          "lon": 13.6569118
+        },
+        {
+          "lat": 52.4150998,
+          "lon": 13.6568457
+        },
+        {
+          "lat": 52.4151245,
+          "lon": 13.6567962
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12559",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 504598334,
+      "bounds": {
+        "minlat": 52.4155141,
+        "minlon": 13.6559036,
+        "maxlat": 52.4155902,
+        "maxlon": 13.6560887
+      },
+      "geometry": [
+        {
+          "lat": 52.4155141,
+          "lon": 13.6560887
+        },
+        {
+          "lat": 52.4155902,
+          "lon": 13.6559036
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (mo-fr 06:00-18:00)",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12559",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "turn:lanes": "left|through",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 897363744,
+      "bounds": {
+        "minlat": 52.416025,
+        "minlon": 13.6536592,
+        "maxlat": 52.4167225,
+        "maxlon": 13.6549546
+      },
+      "geometry": [
+        {
+          "lat": 52.4167225,
+          "lon": 13.6536592
+        },
+        {
+          "lat": 52.4166746,
+          "lon": 13.6537461
+        },
+        {
+          "lat": 52.4161281,
+          "lon": 13.6547627
+        },
+        {
+          "lat": 52.416025,
+          "lon": 13.6549546
+        }
+      ],
+      "tags": {
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (mo-fr 06:00-18:00)",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 913645520,
+      "bounds": {
+        "minlat": 52.4293984,
+        "minlon": 13.6157244,
+        "maxlat": 52.4295921,
+        "maxlon": 13.6160842
+      },
+      "geometry": [
+        {
+          "lat": 52.4295921,
+          "lon": 13.6157244
+        },
+        {
+          "lat": 52.4295768,
+          "lon": 13.6157522
+        },
+        {
+          "lat": 52.4293984,
+          "lon": 13.6160842
+        }
+      ],
+      "tags": {
+        "bicycle": "use_sidepath",
+        "cycleway:left": "separate",
+        "cycleway:right": "no",
+        "foot": "use_sidepath",
+        "hazmat:water": "no",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "no",
+        "maxspeed": "70",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "parking:both": "no",
+        "postal_code": "12557",
+        "shoulder": "no",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 988243078,
+      "bounds": {
+        "minlat": 52.4116423,
+        "minlon": 13.6594337,
+        "maxlat": 52.4120397,
+        "maxlon": 13.6599354
+      },
+      "geometry": [
+        {
+          "lat": 52.4116423,
+          "lon": 13.6594337
+        },
+        {
+          "lat": 52.4119681,
+          "lon": 13.6599195
+        },
+        {
+          "lat": 52.4120397,
+          "lon": 13.6599354
+        }
+      ],
+      "tags": {
+        "access": "destination",
+        "highway": "service",
+        "maxspeed": "50",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "operator:type": "private",
+        "postal_code": "12559",
+        "surface": "paving_stones",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1448002715,
+      "bounds": {
+        "minlat": 52.4132315,
+        "minlon": 13.6599803,
+        "maxlat": 52.4132705,
+        "maxlon": 13.6600576
+      },
+      "geometry": [
+        {
+          "lat": 52.4132705,
+          "lon": 13.6599803
+        },
+        {
+          "lat": 52.4132315,
+          "lon": 13.6600576
+        }
+      ],
+      "tags": {
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1448002716,
+      "bounds": {
+        "minlat": 52.4131917,
+        "minlon": 13.6600576,
+        "maxlat": 52.4132315,
+        "maxlon": 13.6601235
+      },
+      "geometry": [
+        {
+          "lat": 52.4132315,
+          "lon": 13.6600576
+        },
+        {
+          "lat": 52.4131917,
+          "lon": 13.6601235
+        }
+      ],
+      "tags": {
+        "cycleway:both": "separate",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "sign",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "parking:both": "no",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "sign",
+        "surface": "asphalt",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1448002717,
+      "bounds": {
+        "minlat": 52.4130071,
+        "minlon": 13.6602841,
+        "maxlat": 52.4131037,
+        "maxlon": 13.6604605
+      },
+      "geometry": [
+        {
+          "lat": 52.4131037,
+          "lon": 13.6602841
+        },
+        {
+          "lat": 52.4130242,
+          "lon": 13.6604294
+        },
+        {
+          "lat": 52.4130071,
+          "lon": 13.6604605
+        }
+      ],
+      "tags": {
+        "cycleway:both": "separate",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "sign",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "parking:left": "shoulder",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "sign",
+        "surface": "asphalt",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1448002718,
+      "bounds": {
+        "minlat": 52.4129044,
+        "minlon": 13.6604605,
+        "maxlat": 52.4130071,
+        "maxlon": 13.6606474
+      },
+      "geometry": [
+        {
+          "lat": 52.4130071,
+          "lon": 13.6604605
+        },
+        {
+          "lat": 52.4129044,
+          "lon": 13.6606474
+        }
+      ],
+      "tags": {
+        "cycleway:both": "separate",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "sign",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "parking:left": "shoulder",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "sign",
+        "surface": "asphalt",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1448002720,
+      "bounds": {
+        "minlat": 52.4127209,
+        "minlon": 13.6606474,
+        "maxlat": 52.4129044,
+        "maxlon": 13.6609831
+      },
+      "geometry": [
+        {
+          "lat": 52.4129044,
+          "lon": 13.6606474
+        },
+        {
+          "lat": 52.412758,
+          "lon": 13.6609139
+        },
+        {
+          "lat": 52.4127209,
+          "lon": 13.6609831
+        }
+      ],
+      "tags": {
+        "cycleway:both": "separate",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "sign",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "parking:left": "lane",
+        "parking:left:access": "yes",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "sign",
+        "surface": "asphalt",
+        "wikidata": "Q73521254"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1448007176,
+      "bounds": {
+        "minlat": 52.4156956,
+        "minlon": 13.6549546,
+        "maxlat": 52.416025,
+        "maxlon": 13.6555581
+      },
+      "geometry": [
+        {
+          "lat": 52.416025,
+          "lon": 13.6549546
+        },
+        {
+          "lat": 52.4156956,
+          "lon": 13.6555581
+        }
+      ],
+      "tags": {
+        "cycleway:both": "separate",
+        "foot": "use_sidepath",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (mo-fr 06:00-18:00)",
+        "name": "Müggelheimer Damm",
+        "name:etymology:wikidata": "Q644380",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "12559",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q73521254"
+      }
+    }
+  ]
+}

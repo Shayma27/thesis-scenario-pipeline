@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 146839498,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 383987237,
+    "lat": "52.4406734",
+    "lon": "13.4345672",
+    "category": "highway",
+    "type": "platform",
+    "place_rank": 30,
+    "importance": 8.875486381318407e-05,
+    "addresstype": "highway",
+    "name": "Buckower Damm/Gutschmidtstraße",
+    "display_name": "Buckower Damm/Gutschmidtstraße, Buckower Damm, Britz, Neukölln, Berlin, 12349, Deutschland",
+    "boundingbox": [
+      "52.4405889",
+      "52.4407579",
+      "13.4345601",
+      "13.4345742"
+    ]
+  }
+]

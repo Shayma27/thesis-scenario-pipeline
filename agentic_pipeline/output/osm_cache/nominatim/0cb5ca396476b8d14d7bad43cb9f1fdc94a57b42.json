@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 146064561,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "node",
+    "osm_id": 21385751,
+    "lat": "52.5237432",
+    "lon": "13.4648885",
+    "category": "railway",
+    "type": "halt",
+    "place_rank": 30,
+    "importance": 0.35810617938020467,
+    "addresstype": "railway",
+    "name": "Storkower Straße",
+    "display_name": "Storkower Straße, Hermann-Blankenstein-Straße, Eldenaer Viertel, Prenzlauer Berg, Pankow, Berlin, 10249, Deutschland",
+    "boundingbox": [
+      "52.5236932",
+      "52.5237932",
+      "13.4648385",
+      "13.4649385"
+    ]
+  }
+]

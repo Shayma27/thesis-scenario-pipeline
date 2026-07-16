@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 145585713,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 1319014670,
+    "lat": "52.5177607",
+    "lon": "13.2869729",
+    "category": "highway",
+    "type": "tertiary",
+    "place_rank": 26,
+    "importance": 0.05342208819714653,
+    "addresstype": "road",
+    "name": "Sophie-Charlotten-Straße",
+    "display_name": "Sophie-Charlotten-Straße, Danckelmannkiez, Charlottenburg, Charlottenburg-Wilmersdorf, Berlin, 14059, Deutschland",
+    "boundingbox": [
+      "52.5175382",
+      "52.5179831",
+      "13.2869036",
+      "13.2870422"
+    ]
+  }
+]

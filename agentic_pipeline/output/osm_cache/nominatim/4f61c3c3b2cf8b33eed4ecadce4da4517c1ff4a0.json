@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 145196325,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 1058151978,
+    "lat": "52.5938266",
+    "lon": "13.3964327",
+    "category": "highway",
+    "type": "tertiary",
+    "place_rank": 26,
+    "importance": 0.05342208819714653,
+    "addresstype": "road",
+    "name": "Schönhauser Straße",
+    "display_name": "Schönhauser Straße, Nordend, Rosenthal, Pankow, Berlin, 13158, Deutschland",
+    "boundingbox": [
+      "52.5936492",
+      "52.5939941",
+      "13.3961670",
+      "13.3966922"
+    ]
+  }
+]

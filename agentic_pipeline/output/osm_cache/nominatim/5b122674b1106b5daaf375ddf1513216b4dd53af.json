@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 144697159,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 328440059,
+    "lat": "52.5218102",
+    "lon": "13.2588477",
+    "category": "highway",
+    "type": "secondary",
+    "place_rank": 26,
+    "importance": 0.26704010519783294,
+    "addresstype": "road",
+    "name": "Spandauer Damm",
+    "display_name": "Spandauer Damm, Neu-Westend, Westend, Charlottenburg-Wilmersdorf, Berlin, 14052, Deutschland",
+    "boundingbox": [
+      "52.5217487",
+      "52.5218710",
+      "13.2584985",
+      "13.2591967"
+    ]
+  }
+]

@@ -1,0 +1,4085 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-07-15T22:04:28Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 4777025,
+      "bounds": {
+        "minlat": 52.5923473,
+        "minlon": 13.4211654,
+        "maxlat": 52.5930428,
+        "maxlon": 13.4223857
+      },
+      "geometry": [
+        {
+          "lat": 52.5923473,
+          "lon": 13.4211654
+        },
+        {
+          "lat": 52.5924104,
+          "lon": 13.4212445
+        },
+        {
+          "lat": 52.5924617,
+          "lon": 13.4213214
+        },
+        {
+          "lat": 52.5925793,
+          "lon": 13.4215359
+        },
+        {
+          "lat": 52.5927399,
+          "lon": 13.4218253
+        },
+        {
+          "lat": 52.5929436,
+          "lon": 13.4222005
+        },
+        {
+          "lat": 52.5930428,
+          "lon": 13.4223857
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "maxspeed:type": "sign",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:left": "separate",
+        "parking:right": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 11103418,
+      "bounds": {
+        "minlat": 52.524707,
+        "minlon": 13.4031626,
+        "maxlat": 52.5247221,
+        "maxlon": 13.4033363
+      },
+      "geometry": [
+        {
+          "lat": 52.5247221,
+          "lon": 13.4031626
+        },
+        {
+          "lat": 52.5247207,
+          "lon": 13.4031847
+        },
+        {
+          "lat": 52.5247092,
+          "lon": 13.4033122
+        },
+        {
+          "lat": 52.524707,
+          "lon": 13.4033363
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Neue Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "name:etymology:wikipedia": "de:Berlin-Niederschönhausen",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10178",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 22779097,
+      "bounds": {
+        "minlat": 52.6003248,
+        "minlon": 13.3783988,
+        "maxlat": 52.6003983,
+        "maxlon": 13.3787141
+      },
+      "geometry": [
+        {
+          "lat": 52.6003983,
+          "lon": 13.3783988
+        },
+        {
+          "lat": 52.6003484,
+          "lon": 13.3785635
+        },
+        {
+          "lat": 52.6003248,
+          "lon": 13.3787141
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "10",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "no",
+        "postal_code": "13158",
+        "sidewalk": "both",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "bad",
+        "surface": "sett",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 23809678,
+      "bounds": {
+        "minlat": 52.5245683,
+        "minlon": 13.4033363,
+        "maxlat": 52.5247709,
+        "maxlon": 13.4057074
+      },
+      "geometry": [
+        {
+          "lat": 52.524707,
+          "lon": 13.4033363
+        },
+        {
+          "lat": 52.524674,
+          "lon": 13.4036629
+        },
+        {
+          "lat": 52.5246372,
+          "lon": 13.403972
+        },
+        {
+          "lat": 52.5246171,
+          "lon": 13.4041407
+        },
+        {
+          "lat": 52.5246094,
+          "lon": 13.4042055
+        },
+        {
+          "lat": 52.5245797,
+          "lon": 13.4044546
+        },
+        {
+          "lat": 52.5245758,
+          "lon": 13.4045127
+        },
+        {
+          "lat": 52.5245683,
+          "lon": 13.4046251
+        },
+        {
+          "lat": 52.5245689,
+          "lon": 13.4046593
+        },
+        {
+          "lat": 52.5245707,
+          "lon": 13.4047729
+        },
+        {
+          "lat": 52.5245855,
+          "lon": 13.4049078
+        },
+        {
+          "lat": 52.5245904,
+          "lon": 13.4049357
+        },
+        {
+          "lat": 52.5246054,
+          "lon": 13.4050201
+        },
+        {
+          "lat": 52.5246451,
+          "lon": 13.4051838
+        },
+        {
+          "lat": 52.5246716,
+          "lon": 13.4052931
+        },
+        {
+          "lat": 52.5246845,
+          "lon": 13.4053463
+        },
+        {
+          "lat": 52.5247709,
+          "lon": 13.4057074
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "embedded_rails": "tram",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Neue Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "name:etymology:wikipedia": "de:Berlin-Niederschönhausen",
+        "oneway": "yes",
+        "parking:both": "lane",
+        "parking:both:fee": "yes",
+        "parking:both:fee:conditional": "no @ (00:00-09:00)",
+        "parking:both:orientation": "parallel",
+        "parking:both:zone": "29",
+        "postal_code": "10178",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 24241762,
+      "bounds": {
+        "minlat": 52.5262292,
+        "minlon": 13.4074112,
+        "maxlat": 52.5263195,
+        "maxlon": 13.4074837
+      },
+      "geometry": [
+        {
+          "lat": 52.5262292,
+          "lon": 13.4074112
+        },
+        {
+          "lat": 52.5262729,
+          "lon": 13.4074457
+        },
+        {
+          "lat": 52.5263195,
+          "lon": 13.4074837
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "embedded_rails": "tram",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Alte Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "name:etymology:wikipedia": "de:Berlin-Niederschönhausen",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25760140,
+      "bounds": {
+        "minlat": 52.5358371,
+        "minlon": 13.4663723,
+        "maxlat": 52.5367437,
+        "maxlon": 13.4680743
+      },
+      "geometry": [
+        {
+          "lat": 52.5358371,
+          "lon": 13.4680743
+        },
+        {
+          "lat": 52.5361599,
+          "lon": 13.4678053
+        },
+        {
+          "lat": 52.5362471,
+          "lon": 13.4676344
+        },
+        {
+          "lat": 52.5363153,
+          "lon": 13.4674432
+        },
+        {
+          "lat": 52.5364428,
+          "lon": 13.4669267
+        },
+        {
+          "lat": 52.536674,
+          "lon": 13.4663958
+        },
+        {
+          "lat": 52.5366915,
+          "lon": 13.4663723
+        },
+        {
+          "lat": 52.5367437,
+          "lon": 13.466379
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "dog": "leashed",
+        "highway": "service",
+        "lit": "no",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Hohenschönhauser Straße",
+        "sidewalk:both": "no",
+        "smoothness": "good",
+        "surface": "concrete"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25939421,
+      "bounds": {
+        "minlat": 52.6003248,
+        "minlon": 13.3786362,
+        "maxlat": 52.6006363,
+        "maxlon": 13.3787596
+      },
+      "geometry": [
+        {
+          "lat": 52.6003248,
+          "lon": 13.3787141
+        },
+        {
+          "lat": 52.6004021,
+          "lon": 13.3787569
+        },
+        {
+          "lat": 52.600483,
+          "lon": 13.3787596
+        },
+        {
+          "lat": 52.6005343,
+          "lon": 13.3787513
+        },
+        {
+          "lat": 52.6005929,
+          "lon": 13.3787096
+        },
+        {
+          "lat": 52.6006363,
+          "lon": 13.3786362
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "13158",
+        "sidewalk": "no",
+        "smoothness": "intermediate",
+        "surface": "sett",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 27155071,
+      "bounds": {
+        "minlat": 52.5954177,
+        "minlon": 13.3888511,
+        "maxlat": 52.596029,
+        "maxlon": 13.389555
+      },
+      "geometry": [
+        {
+          "lat": 52.596029,
+          "lon": 13.389555
+        },
+        {
+          "lat": 52.5957776,
+          "lon": 13.3892679
+        },
+        {
+          "lat": 52.5954177,
+          "lon": 13.3888511
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "maxspeed": "10",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "no",
+        "postal_code": "13158",
+        "surface": "paving_stones",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 42689609,
+      "bounds": {
+        "minlat": 52.5991416,
+        "minlon": 13.3789138,
+        "maxlat": 52.6000803,
+        "maxlon": 13.3811671
+      },
+      "geometry": [
+        {
+          "lat": 52.6000803,
+          "lon": 13.3789138
+        },
+        {
+          "lat": 52.6000223,
+          "lon": 13.3789745
+        },
+        {
+          "lat": 52.5999912,
+          "lon": 13.3790426
+        },
+        {
+          "lat": 52.5995687,
+          "lon": 13.380136
+        },
+        {
+          "lat": 52.5991416,
+          "lon": 13.3811671
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "sidewalk:left:surface": "paving_stones",
+        "sidewalk:right": "yes",
+        "sidewalk:right:surface": "sand",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 44427219,
+      "bounds": {
+        "minlat": 52.5285866,
+        "minlon": 13.4093002,
+        "maxlat": 52.5287067,
+        "maxlon": 13.4094033
+      },
+      "geometry": [
+        {
+          "lat": 52.5287067,
+          "lon": 13.4094033
+        },
+        {
+          "lat": 52.5286234,
+          "lon": 13.4093293
+        },
+        {
+          "lat": 52.5286001,
+          "lon": 13.4093105
+        },
+        {
+          "lat": 52.5285866,
+          "lon": 13.4093002
+        }
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:buffer:both": "no",
+        "cycleway:both:lane": "advisory",
+        "cycleway:both:lane:advisory": "crossing",
+        "cycleway:both:marking:both": "dashed_line",
+        "cycleway:both:surface": "asphalt",
+        "cycleway:both:surface:colour": "none",
+        "cycleway:both:traffic_sign": "none",
+        "cycleway:left:oneway": "-1",
+        "cycleway:left:width": "1.2",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:width": "2.8",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Alte Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "name:etymology:wikipedia": "de:Berlin-Niederschönhausen",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:cycleway:both:width": "infra3D 2021/22",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 59098972,
+      "bounds": {
+        "minlat": 52.5934374,
+        "minlon": 13.4213063,
+        "maxlat": 52.5942141,
+        "maxlon": 13.4231228
+      },
+      "geometry": [
+        {
+          "lat": 52.5934374,
+          "lon": 13.4231228
+        },
+        {
+          "lat": 52.5934667,
+          "lon": 13.4230621
+        },
+        {
+          "lat": 52.5938586,
+          "lon": 13.4222498
+        },
+        {
+          "lat": 52.5939809,
+          "lon": 13.4219442
+        },
+        {
+          "lat": 52.5942141,
+          "lon": 13.4213063
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "name": "Schönhauser Straße",
+        "old_name": "Saßnitzweg",
+        "operator:type": "private",
+        "surface": "grass_paver",
+        "tracktype": "grade2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 59099581,
+      "bounds": {
+        "minlat": 52.5939809,
+        "minlon": 13.4219442,
+        "maxlat": 52.5946051,
+        "maxlon": 13.4225615
+      },
+      "geometry": [
+        {
+          "lat": 52.5946051,
+          "lon": 13.4225615
+        },
+        {
+          "lat": 52.5939809,
+          "lon": 13.4219442
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "name": "Schönhauser Straße",
+        "old_name": "Garzweg",
+        "operator:type": "private",
+        "tracktype": "grade3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 59099583,
+      "bounds": {
+        "minlat": 52.5929436,
+        "minlon": 13.4214681,
+        "maxlat": 52.5934608,
+        "maxlon": 13.4222005
+      },
+      "geometry": [
+        {
+          "lat": 52.5934608,
+          "lon": 13.4214681
+        },
+        {
+          "lat": 52.5929935,
+          "lon": 13.4221298
+        },
+        {
+          "lat": 52.5929436,
+          "lon": 13.4222005
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "name": "Schönhauser Straße",
+        "old_name": "Granitzweg",
+        "operator:type": "private",
+        "surface": "concrete:lanes",
+        "tracktype": "grade3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 59099584,
+      "bounds": {
+        "minlat": 52.5941636,
+        "minlon": 13.4230855,
+        "maxlat": 52.5946258,
+        "maxlon": 13.4244527
+      },
+      "geometry": [
+        {
+          "lat": 52.5941636,
+          "lon": 13.4244527
+        },
+        {
+          "lat": 52.5941891,
+          "lon": 13.4243772
+        },
+        {
+          "lat": 52.5946258,
+          "lon": 13.4230855
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "name": "Schönhauser Straße",
+        "old_name": "Sellinweg",
+        "operator:type": "private",
+        "surface": "dirt",
+        "tracktype": "grade3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 59099588,
+      "bounds": {
+        "minlat": 52.594009,
+        "minlon": 13.4211129,
+        "maxlat": 52.5942141,
+        "maxlon": 13.4213063
+      },
+      "geometry": [
+        {
+          "lat": 52.594009,
+          "lon": 13.4211129
+        },
+        {
+          "lat": 52.5942,
+          "lon": 13.4212616
+        },
+        {
+          "lat": 52.5942141,
+          "lon": 13.4213063
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "name": "Schönhauser Straße",
+        "old_name": "Binzweg",
+        "operator:type": "private",
+        "tracktype": "grade5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 59099589,
+      "bounds": {
+        "minlat": 52.5942141,
+        "minlon": 13.4213063,
+        "maxlat": 52.5946076,
+        "maxlon": 13.4214923
+      },
+      "geometry": [
+        {
+          "lat": 52.5942141,
+          "lon": 13.4213063
+        },
+        {
+          "lat": 52.594522,
+          "lon": 13.4214524
+        },
+        {
+          "lat": 52.5946076,
+          "lon": 13.4214923
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "name": "Schönhauser Straße",
+        "old_name": "Binzweg",
+        "operator:type": "private",
+        "tracktype": "grade3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 59099590,
+      "bounds": {
+        "minlat": 52.5933324,
+        "minlon": 13.4212269,
+        "maxlat": 52.5938586,
+        "maxlon": 13.4222498
+      },
+      "geometry": [
+        {
+          "lat": 52.5933324,
+          "lon": 13.4212269
+        },
+        {
+          "lat": 52.5934608,
+          "lon": 13.4214681
+        },
+        {
+          "lat": 52.5938343,
+          "lon": 13.4221631
+        },
+        {
+          "lat": 52.5938586,
+          "lon": 13.4222498
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "name": "Schönhauser Straße",
+        "old_name": "Arkonaweg",
+        "operator:type": "private",
+        "surface": "compacted",
+        "tracktype": "grade2"
+      }
+    },
+    {
+      "type": "way",
+      "id": 59099597,
+      "bounds": {
+        "minlat": 52.5938586,
+        "minlon": 13.4222498,
+        "maxlat": 52.5946258,
+        "maxlon": 13.4230855
+      },
+      "geometry": [
+        {
+          "lat": 52.5938586,
+          "lon": 13.4222498
+        },
+        {
+          "lat": 52.5946149,
+          "lon": 13.4230112
+        },
+        {
+          "lat": 52.5946258,
+          "lon": 13.4230855
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "service",
+        "name": "Schönhauser Straße",
+        "old_name": "Arkonaweg",
+        "operator:type": "private",
+        "surface": "compacted",
+        "tracktype": "grade3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 69602660,
+      "bounds": {
+        "minlat": 52.5914523,
+        "minlon": 13.3994599,
+        "maxlat": 52.5916462,
+        "maxlon": 13.3997234
+      },
+      "geometry": [
+        {
+          "lat": 52.5914523,
+          "lon": 13.3997234
+        },
+        {
+          "lat": 52.5916122,
+          "lon": 13.3995075
+        },
+        {
+          "lat": 52.5916359,
+          "lon": 13.3994736
+        },
+        {
+          "lat": 52.5916462,
+          "lon": 13.3994599
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "no",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "13158",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 145671826,
+      "bounds": {
+        "minlat": 52.596029,
+        "minlon": 13.3881865,
+        "maxlat": 52.5964453,
+        "maxlon": 13.389555
+      },
+      "geometry": [
+        {
+          "lat": 52.5964453,
+          "lon": 13.3881865
+        },
+        {
+          "lat": 52.5964313,
+          "lon": 13.3882325
+        },
+        {
+          "lat": 52.5962231,
+          "lon": 13.3889151
+        },
+        {
+          "lat": 52.5961177,
+          "lon": 13.3892662
+        },
+        {
+          "lat": 52.5961026,
+          "lon": 13.3893196
+        },
+        {
+          "lat": 52.596029,
+          "lon": 13.389555
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "separate",
+        "postal_code": "13158",
+        "sidewalk:both:surface": "paving_stones",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "yes",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 145671835,
+      "bounds": {
+        "minlat": 52.5975819,
+        "minlon": 13.3839099,
+        "maxlat": 52.5980355,
+        "maxlon": 13.3850159
+      },
+      "geometry": [
+        {
+          "lat": 52.5980355,
+          "lon": 13.3839099
+        },
+        {
+          "lat": 52.5977679,
+          "lon": 13.3845743
+        },
+        {
+          "lat": 52.5977261,
+          "lon": 13.3846782
+        },
+        {
+          "lat": 52.5975819,
+          "lon": 13.3850159
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "parking:both:staggered": "yes",
+        "postal_code": "13158",
+        "sidewalk": "right",
+        "sidewalk:right:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 176753760,
+      "bounds": {
+        "minlat": 52.5955238,
+        "minlon": 13.426085,
+        "maxlat": 52.5980711,
+        "maxlon": 13.4277005
+      },
+      "geometry": [
+        {
+          "lat": 52.5955238,
+          "lon": 13.426085
+        },
+        {
+          "lat": 52.5958244,
+          "lon": 13.4262831
+        },
+        {
+          "lat": 52.5960737,
+          "lon": 13.4264414
+        },
+        {
+          "lat": 52.5962607,
+          "lon": 13.4265621
+        },
+        {
+          "lat": 52.5966664,
+          "lon": 13.4268263
+        },
+        {
+          "lat": 52.5967025,
+          "lon": 13.4268473
+        },
+        {
+          "lat": 52.5969294,
+          "lon": 13.4269821
+        },
+        {
+          "lat": 52.5973213,
+          "lon": 13.4272334
+        },
+        {
+          "lat": 52.5975403,
+          "lon": 13.4273696
+        },
+        {
+          "lat": 52.5979162,
+          "lon": 13.4276094
+        },
+        {
+          "lat": 52.5980711,
+          "lon": 13.4277005
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 176753762,
+      "bounds": {
+        "minlat": 52.5948677,
+        "minlon": 13.4257107,
+        "maxlat": 52.5955238,
+        "maxlon": 13.426085
+      },
+      "geometry": [
+        {
+          "lat": 52.5948677,
+          "lon": 13.4257107
+        },
+        {
+          "lat": 52.594927,
+          "lon": 13.4257136
+        },
+        {
+          "lat": 52.5952577,
+          "lon": 13.4259174
+        },
+        {
+          "lat": 52.5955238,
+          "lon": 13.426085
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:left:surface": "compacted",
+        "sidewalk:right:surface": "paving_stones",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 396906456,
+      "bounds": {
+        "minlat": 52.593456,
+        "minlon": 13.3969103,
+        "maxlat": 52.5935483,
+        "maxlon": 13.3970487
+      },
+      "geometry": [
+        {
+          "lat": 52.5935483,
+          "lon": 13.3969103
+        },
+        {
+          "lat": 52.593456,
+          "lon": 13.3970487
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date": "2016-02-08",
+        "check_date:shelter": "2023-04-13",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Schönhauser Straße/Kirchstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 396906457,
+      "bounds": {
+        "minlat": 52.5931883,
+        "minlon": 13.3971536,
+        "maxlat": 52.5932566,
+        "maxlon": 13.3972561
+      },
+      "geometry": [
+        {
+          "lat": 52.5931883,
+          "lon": 13.3972561
+        },
+        {
+          "lat": 52.5932566,
+          "lon": 13.3971536
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date": "2016-02-08",
+        "check_date:tactile_paving": "2023-07-21",
+        "highway": "platform",
+        "lit": "yes",
+        "name": "Schönhauser Straße/Kirchstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 831637663,
+      "bounds": {
+        "minlat": 52.5946076,
+        "minlon": 13.4214923,
+        "maxlat": 52.5949766,
+        "maxlon": 13.4217783
+      },
+      "geometry": [
+        {
+          "lat": 52.5946076,
+          "lon": 13.4214923
+        },
+        {
+          "lat": 52.5948723,
+          "lon": 13.4216067
+        },
+        {
+          "lat": 52.5949245,
+          "lon": 13.421671
+        },
+        {
+          "lat": 52.5949766,
+          "lon": 13.4217783
+        }
+      ],
+      "tags": {
+        "access": "private",
+        "cycleway:both": "no",
+        "highway": "service",
+        "name": "Schönhauser Straße",
+        "old_name": "Binzweg",
+        "tracktype": "grade3"
+      }
+    },
+    {
+      "type": "way",
+      "id": 850240180,
+      "bounds": {
+        "minlat": 52.5282835,
+        "minlon": 13.4090716,
+        "maxlat": 52.5285866,
+        "maxlon": 13.4093002
+      },
+      "geometry": [
+        {
+          "lat": 52.5285866,
+          "lon": 13.4093002
+        },
+        {
+          "lat": 52.5285225,
+          "lon": 13.4092519
+        },
+        {
+          "lat": 52.5283523,
+          "lon": 13.4091235
+        },
+        {
+          "lat": 52.5282835,
+          "lon": 13.4090716
+        }
+      ],
+      "tags": {
+        "cycleway:left": "track",
+        "cycleway:left:oneway": "yes",
+        "cycleway:left:segregated": "yes",
+        "cycleway:left:separation:right": "no",
+        "cycleway:left:surface": "paving_stones",
+        "cycleway:left:surface:colour": "red",
+        "cycleway:left:traffic_sign": "DE:237",
+        "cycleway:left:width": "2",
+        "cycleway:right": "lane",
+        "cycleway:right:buffer:both": "no",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:marking:both": "dashed_line",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "none",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "2.4",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Alte Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "name:etymology:wikipedia": "de:Berlin-Niederschönhausen",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (00:00-09:00)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "29",
+        "postal_code": "10119",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:cycleway:left:width": "Luftbild 2025",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1045086255,
+      "bounds": {
+        "minlat": 52.6006587,
+        "minlon": 13.4295543,
+        "maxlat": 52.601251,
+        "maxlon": 13.430025
+      },
+      "geometry": [
+        {
+          "lat": 52.6006587,
+          "lon": 13.4295543
+        },
+        {
+          "lat": 52.6011846,
+          "lon": 13.4299719
+        },
+        {
+          "lat": 52.601251,
+          "lon": 13.430025
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1058151978,
+      "bounds": {
+        "minlat": 52.5936492,
+        "minlon": 13.396167,
+        "maxlat": 52.5939941,
+        "maxlon": 13.3966922
+      },
+      "geometry": [
+        {
+          "lat": 52.5939941,
+          "lon": 13.396167
+        },
+        {
+          "lat": 52.593938,
+          "lon": 13.3962688
+        },
+        {
+          "lat": 52.5936842,
+          "lon": 13.3966423
+        },
+        {
+          "lat": 52.5936492,
+          "lon": 13.3966922
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "13158",
+        "sidewalk:both:surface": "paving_stones",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "yes",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1058153679,
+      "bounds": {
+        "minlat": 52.5943736,
+        "minlon": 13.390451,
+        "maxlat": 52.5957578,
+        "maxlon": 13.3949817
+      },
+      "geometry": [
+        {
+          "lat": 52.5957578,
+          "lon": 13.390451
+        },
+        {
+          "lat": 52.5956544,
+          "lon": 13.3907891
+        },
+        {
+          "lat": 52.5954903,
+          "lon": 13.3913297
+        },
+        {
+          "lat": 52.5954176,
+          "lon": 13.3915609
+        },
+        {
+          "lat": 52.5952551,
+          "lon": 13.3921045
+        },
+        {
+          "lat": 52.5951729,
+          "lon": 13.3923724
+        },
+        {
+          "lat": 52.59508,
+          "lon": 13.392661
+        },
+        {
+          "lat": 52.5950436,
+          "lon": 13.3927742
+        },
+        {
+          "lat": 52.5949576,
+          "lon": 13.3930592
+        },
+        {
+          "lat": 52.5948965,
+          "lon": 13.3932617
+        },
+        {
+          "lat": 52.5946943,
+          "lon": 13.3939216
+        },
+        {
+          "lat": 52.5943736,
+          "lon": 13.3949817
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "parking:left": "lane",
+        "parking:right": "shoulder",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "sidewalk:left:surface": "paving_stones",
+        "sidewalk:right": "no",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1058154242,
+      "bounds": {
+        "minlat": 52.5967984,
+        "minlon": 13.3856635,
+        "maxlat": 52.5973003,
+        "maxlon": 13.3870287
+      },
+      "geometry": [
+        {
+          "lat": 52.5973003,
+          "lon": 13.3856635
+        },
+        {
+          "lat": 52.5972036,
+          "lon": 13.385886
+        },
+        {
+          "lat": 52.5970011,
+          "lon": 13.3863791
+        },
+        {
+          "lat": 52.5969916,
+          "lon": 13.3864092
+        },
+        {
+          "lat": 52.5968567,
+          "lon": 13.3868387
+        },
+        {
+          "lat": 52.5967984,
+          "lon": 13.3870287
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "parking:both:staggered": "yes",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1074113697,
+      "bounds": {
+        "minlat": 52.599485,
+        "minlon": 13.4286151,
+        "maxlat": 52.6006587,
+        "maxlon": 13.4295543
+      },
+      "geometry": [
+        {
+          "lat": 52.599485,
+          "lon": 13.4286151
+        },
+        {
+          "lat": 52.5995354,
+          "lon": 13.4286553
+        },
+        {
+          "lat": 52.6001742,
+          "lon": 13.4291647
+        },
+        {
+          "lat": 52.6006587,
+          "lon": 13.4295543
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:left:surface": "asphalt",
+        "sidewalk:right:surface": "paving_stones",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1095407474,
+      "bounds": {
+        "minlat": 52.5270785,
+        "minlon": 13.408095,
+        "maxlat": 52.5282835,
+        "maxlon": 13.4090716
+      },
+      "geometry": [
+        {
+          "lat": 52.5270785,
+          "lon": 13.408095
+        },
+        {
+          "lat": 52.5270882,
+          "lon": 13.4081027
+        },
+        {
+          "lat": 52.527135,
+          "lon": 13.4081398
+        },
+        {
+          "lat": 52.5272185,
+          "lon": 13.4082114
+        },
+        {
+          "lat": 52.5275031,
+          "lon": 13.4084438
+        },
+        {
+          "lat": 52.5278614,
+          "lon": 13.4087306
+        },
+        {
+          "lat": 52.528193,
+          "lon": 13.408998
+        },
+        {
+          "lat": 52.5282412,
+          "lon": 13.4090372
+        },
+        {
+          "lat": 52.5282835,
+          "lon": 13.4090716
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "embedded_rails": "tram",
+        "foot": "use_sidepath",
+        "hazard": "children",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Alte Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "name:etymology:wikipedia": "de:Berlin-Niederschönhausen",
+        "parking:both": "separate",
+        "postal_code": "10119",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "source:width": "ARCore",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "width": "12",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1105815307,
+      "bounds": {
+        "minlat": 52.5983345,
+        "minlon": 13.3826932,
+        "maxlat": 52.5985156,
+        "maxlon": 13.3831302
+      },
+      "geometry": [
+        {
+          "lat": 52.5985156,
+          "lon": 13.3826932
+        },
+        {
+          "lat": 52.5984543,
+          "lon": 13.3828412
+        },
+        {
+          "lat": 52.5983345,
+          "lon": 13.3831302
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "sidewalk:left:surface": "paving_stones",
+        "sidewalk:right": "yes",
+        "sidewalk:right:surface": "sand",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1105815308,
+      "bounds": {
+        "minlat": 52.5981681,
+        "minlon": 13.3834832,
+        "maxlat": 52.598196,
+        "maxlon": 13.3835608
+      },
+      "geometry": [
+        {
+          "lat": 52.598196,
+          "lon": 13.3834832
+        },
+        {
+          "lat": 52.5981681,
+          "lon": 13.3835608
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13158",
+        "sidewalk:both:surface": "paving_stones",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "yes",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1132425842,
+      "bounds": {
+        "minlat": 52.599232,
+        "minlon": 13.428439,
+        "maxlat": 52.599485,
+        "maxlon": 13.4286151
+      },
+      "geometry": [
+        {
+          "lat": 52.599232,
+          "lon": 13.428439
+        },
+        {
+          "lat": 52.599485,
+          "lon": 13.4286151
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "no",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1150954111,
+      "bounds": {
+        "minlat": 52.5263195,
+        "minlon": 13.4074837,
+        "maxlat": 52.5270785,
+        "maxlon": 13.408095
+      },
+      "geometry": [
+        {
+          "lat": 52.5263195,
+          "lon": 13.4074837
+        },
+        {
+          "lat": 52.5266269,
+          "lon": 13.4077318
+        },
+        {
+          "lat": 52.5269012,
+          "lon": 13.4079533
+        },
+        {
+          "lat": 52.5269612,
+          "lon": 13.4080048
+        },
+        {
+          "lat": 52.5270249,
+          "lon": 13.4080527
+        },
+        {
+          "lat": 52.5270785,
+          "lon": 13.408095
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "embedded_rails": "tram",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Alte Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "name:etymology:wikipedia": "de:Berlin-Niederschönhausen",
+        "parking:both": "separate",
+        "postal_code": "10119",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1157231003,
+      "bounds": {
+        "minlat": 52.5249387,
+        "minlon": 13.4063271,
+        "maxlat": 52.5251869,
+        "maxlon": 13.4065709
+      },
+      "geometry": [
+        {
+          "lat": 52.5249387,
+          "lon": 13.4063271
+        },
+        {
+          "lat": 52.5249804,
+          "lon": 13.4063914
+        },
+        {
+          "lat": 52.5250328,
+          "lon": 13.4064514
+        },
+        {
+          "lat": 52.5250766,
+          "lon": 13.406483
+        },
+        {
+          "lat": 52.5250867,
+          "lon": 13.4064915
+        },
+        {
+          "lat": 52.5251869,
+          "lon": 13.4065709
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "embedded_rails": "tram",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Alte Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "name:etymology:wikipedia": "de:Berlin-Niederschönhausen",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "priority_road": "yes",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1157231004,
+      "bounds": {
+        "minlat": 52.5248056,
+        "minlon": 13.4058524,
+        "maxlat": 52.5249387,
+        "maxlon": 13.4063271
+      },
+      "geometry": [
+        {
+          "lat": 52.5248056,
+          "lon": 13.4058524
+        },
+        {
+          "lat": 52.5248355,
+          "lon": 13.4059775
+        },
+        {
+          "lat": 52.5248459,
+          "lon": 13.4060206
+        },
+        {
+          "lat": 52.5248615,
+          "lon": 13.406085
+        },
+        {
+          "lat": 52.5248654,
+          "lon": 13.4061009
+        },
+        {
+          "lat": 52.5248775,
+          "lon": 13.4061535
+        },
+        {
+          "lat": 52.5249068,
+          "lon": 13.4062513
+        },
+        {
+          "lat": 52.5249387,
+          "lon": 13.4063271
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "embedded_rails": "tram",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Neue Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "name:etymology:wikipedia": "de:Berlin-Niederschönhausen",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "10178",
+        "priority_road": "yes",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1370728927,
+      "bounds": {
+        "minlat": 52.5924072,
+        "minlon": 13.3971268,
+        "maxlat": 52.5933355,
+        "maxlon": 13.398424
+      },
+      "geometry": [
+        {
+          "lat": 52.5933355,
+          "lon": 13.3971268
+        },
+        {
+          "lat": 52.5932215,
+          "lon": 13.397287
+        },
+        {
+          "lat": 52.5924586,
+          "lon": 13.3983523
+        },
+        {
+          "lat": 52.5924072,
+          "lon": 13.398424
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "separate",
+        "postal_code": "13158",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429025857,
+      "bounds": {
+        "minlat": 52.6000803,
+        "minlon": 13.3787411,
+        "maxlat": 52.6002894,
+        "maxlon": 13.3789138
+      },
+      "geometry": [
+        {
+          "lat": 52.6002894,
+          "lon": 13.3787411
+        },
+        {
+          "lat": 52.6000803,
+          "lon": 13.3789138
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "parking:both:staggered": "yes",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "sidewalk:left:surface": "paving_stones",
+        "sidewalk:right": "yes",
+        "sidewalk:right:surface": "sand",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429025858,
+      "bounds": {
+        "minlat": 52.6002894,
+        "minlon": 13.3787141,
+        "maxlat": 52.6003248,
+        "maxlon": 13.3787411
+      },
+      "geometry": [
+        {
+          "lat": 52.6002894,
+          "lon": 13.3787411
+        },
+        {
+          "lat": 52.6003248,
+          "lon": 13.3787141
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "13158",
+        "sidewalk:left": "yes",
+        "sidewalk:left:surface": "sand",
+        "sidewalk:right": "separate",
+        "sidewalk:right:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429033308,
+      "bounds": {
+        "minlat": 52.5981026,
+        "minlon": 13.3835608,
+        "maxlat": 52.5981681,
+        "maxlon": 13.3837434
+      },
+      "geometry": [
+        {
+          "lat": 52.5981681,
+          "lon": 13.3835608
+        },
+        {
+          "lat": 52.5981026,
+          "lon": 13.3837434
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "separate",
+        "postal_code": "13158",
+        "sidewalk:both:surface": "paving_stones",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "yes",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429033310,
+      "bounds": {
+        "minlat": 52.598196,
+        "minlon": 13.3833714,
+        "maxlat": 52.5982399,
+        "maxlon": 13.3834832
+      },
+      "geometry": [
+        {
+          "lat": 52.5982399,
+          "lon": 13.3833714
+        },
+        {
+          "lat": 52.598196,
+          "lon": 13.3834832
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "sidewalk:left:surface": "paving_stones",
+        "sidewalk:right": "yes",
+        "sidewalk:right:surface": "sand",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429033311,
+      "bounds": {
+        "minlat": 52.5982399,
+        "minlon": 13.3831302,
+        "maxlat": 52.5983345,
+        "maxlon": 13.3833714
+      },
+      "geometry": [
+        {
+          "lat": 52.5983345,
+          "lon": 13.3831302
+        },
+        {
+          "lat": 52.5982399,
+          "lon": 13.3833714
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "sidewalk:left:surface": "paving_stones",
+        "sidewalk:right": "yes",
+        "sidewalk:right:surface": "sand",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429033313,
+      "bounds": {
+        "minlat": 52.5985156,
+        "minlon": 13.3826362,
+        "maxlat": 52.5985393,
+        "maxlon": 13.3826932
+      },
+      "geometry": [
+        {
+          "lat": 52.5985393,
+          "lon": 13.3826362
+        },
+        {
+          "lat": 52.5985156,
+          "lon": 13.3826932
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:both": "no",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "sidewalk:left:surface": "paving_stones",
+        "sidewalk:right": "yes",
+        "sidewalk:right:surface": "sand",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429033314,
+      "bounds": {
+        "minlat": 52.5985393,
+        "minlon": 13.3821954,
+        "maxlat": 52.5987203,
+        "maxlon": 13.3826362
+      },
+      "geometry": [
+        {
+          "lat": 52.5987203,
+          "lon": 13.3821954
+        },
+        {
+          "lat": 52.5986145,
+          "lon": 13.3824547
+        },
+        {
+          "lat": 52.5985393,
+          "lon": 13.3826362
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "sidewalk:left:surface": "paving_stones",
+        "sidewalk:right": "yes",
+        "sidewalk:right:surface": "sand",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429037314,
+      "bounds": {
+        "minlat": 52.5987203,
+        "minlon": 13.3811671,
+        "maxlat": 52.5991416,
+        "maxlon": 13.3821954
+      },
+      "geometry": [
+        {
+          "lat": 52.5991416,
+          "lon": 13.3811671
+        },
+        {
+          "lat": 52.5988526,
+          "lon": 13.3818649
+        },
+        {
+          "lat": 52.5987203,
+          "lon": 13.3821954
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "oneway": "no",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "sidewalk:left:surface": "paving_stones",
+        "sidewalk:right": "yes",
+        "sidewalk:right:surface": "sand",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429047994,
+      "bounds": {
+        "minlat": 52.5964453,
+        "minlon": 13.3870287,
+        "maxlat": 52.5967984,
+        "maxlon": 13.3881865
+      },
+      "geometry": [
+        {
+          "lat": 52.5964453,
+          "lon": 13.3881865
+        },
+        {
+          "lat": 52.5965583,
+          "lon": 13.3878145
+        },
+        {
+          "lat": 52.5967625,
+          "lon": 13.3871427
+        },
+        {
+          "lat": 52.5967984,
+          "lon": 13.3870287
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "parking:both:staggered": "yes",
+        "postal_code": "13158",
+        "sidewalk:both:surface": "paving_stones",
+        "sidewalk:left": "yes",
+        "sidewalk:right": "separate",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429048001,
+      "bounds": {
+        "minlat": 52.5957578,
+        "minlon": 13.3904031,
+        "maxlat": 52.5957716,
+        "maxlon": 13.390451
+      },
+      "geometry": [
+        {
+          "lat": 52.5957716,
+          "lon": 13.3904031
+        },
+        {
+          "lat": 52.5957578,
+          "lon": 13.390451
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "sidewalk:left:surface": "paving_stones",
+        "sidewalk:right": "no",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1429048002,
+      "bounds": {
+        "minlat": 52.5957716,
+        "minlon": 13.389555,
+        "maxlat": 52.596029,
+        "maxlon": 13.3904031
+      },
+      "geometry": [
+        {
+          "lat": 52.596029,
+          "lon": 13.389555
+        },
+        {
+          "lat": 52.5959359,
+          "lon": 13.3898567
+        },
+        {
+          "lat": 52.5959256,
+          "lon": 13.3898902
+        },
+        {
+          "lat": 52.5958682,
+          "lon": 13.3900814
+        },
+        {
+          "lat": 52.5957716,
+          "lon": 13.3904031
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "separate",
+        "postal_code": "13158",
+        "sidewalk:both:surface": "paving_stones",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "yes",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1434850628,
+      "bounds": {
+        "minlat": 52.6021814,
+        "minlon": 13.4307656,
+        "maxlat": 52.6022107,
+        "maxlon": 13.4307876
+      },
+      "geometry": [
+        {
+          "lat": 52.6021814,
+          "lon": 13.4307656
+        },
+        {
+          "lat": 52.6022107,
+          "lon": 13.4307876
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "no",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1434850629,
+      "bounds": {
+        "minlat": 52.6020174,
+        "minlon": 13.4306428,
+        "maxlat": 52.6021814,
+        "maxlon": 13.4307656
+      },
+      "geometry": [
+        {
+          "lat": 52.6020174,
+          "lon": 13.4306428
+        },
+        {
+          "lat": 52.6021814,
+          "lon": 13.4307656
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "no",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1434850630,
+      "bounds": {
+        "minlat": 52.601251,
+        "minlon": 13.430025,
+        "maxlat": 52.6019563,
+        "maxlon": 13.4305938
+      },
+      "geometry": [
+        {
+          "lat": 52.601251,
+          "lon": 13.430025
+        },
+        {
+          "lat": 52.6016131,
+          "lon": 13.4303121
+        },
+        {
+          "lat": 52.6019563,
+          "lon": 13.4305938
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "parking:left:restriction:conditional": "yes",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1434850631,
+      "bounds": {
+        "minlat": 52.6019563,
+        "minlon": 13.4305938,
+        "maxlat": 52.6020174,
+        "maxlon": 13.4306428
+      },
+      "geometry": [
+        {
+          "lat": 52.6019563,
+          "lon": 13.4305938
+        },
+        {
+          "lat": 52.6020009,
+          "lon": 13.4306304
+        },
+        {
+          "lat": 52.6020174,
+          "lon": 13.4306428
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1434871396,
+      "bounds": {
+        "minlat": 52.5991572,
+        "minlon": 13.4283897,
+        "maxlat": 52.599232,
+        "maxlon": 13.428439
+      },
+      "geometry": [
+        {
+          "lat": 52.5991572,
+          "lon": 13.4283897
+        },
+        {
+          "lat": 52.5991746,
+          "lon": 13.4284012
+        },
+        {
+          "lat": 52.599232,
+          "lon": 13.428439
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "no",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1434871397,
+      "bounds": {
+        "minlat": 52.5984416,
+        "minlon": 13.4279274,
+        "maxlat": 52.5986653,
+        "maxlon": 13.4280662
+      },
+      "geometry": [
+        {
+          "lat": 52.5984416,
+          "lon": 13.4279274
+        },
+        {
+          "lat": 52.5985779,
+          "lon": 13.4280097
+        },
+        {
+          "lat": 52.5986653,
+          "lon": 13.4280662
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both:orientation": "parallel",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1434871399,
+      "bounds": {
+        "minlat": 52.5980711,
+        "minlon": 13.4277005,
+        "maxlat": 52.5984416,
+        "maxlon": 13.4279274
+      },
+      "geometry": [
+        {
+          "lat": 52.5980711,
+          "lon": 13.4277005
+        },
+        {
+          "lat": 52.5982366,
+          "lon": 13.4278036
+        },
+        {
+          "lat": 52.5984416,
+          "lon": 13.4279274
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both:orientation": "parallel",
+        "parking:left": "no",
+        "parking:left:restriction": "no_parking",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1434871400,
+      "bounds": {
+        "minlat": 52.5986653,
+        "minlon": 13.4280662,
+        "maxlat": 52.5991572,
+        "maxlon": 13.4283897
+      },
+      "geometry": [
+        {
+          "lat": 52.5986653,
+          "lon": 13.4280662
+        },
+        {
+          "lat": 52.5987122,
+          "lon": 13.4280966
+        },
+        {
+          "lat": 52.5991572,
+          "lon": 13.4283897
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both:orientation": "parallel",
+        "parking:left": "no",
+        "parking:left:restriction": "no_parking",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1442120664,
+      "bounds": {
+        "minlat": 52.5921169,
+        "minlon": 13.3986718,
+        "maxlat": 52.5922255,
+        "maxlon": 13.3988198
+      },
+      "geometry": [
+        {
+          "lat": 52.5921169,
+          "lon": 13.3988198
+        },
+        {
+          "lat": 52.5922255,
+          "lon": 13.3986718
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "no",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "13158",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1442120665,
+      "bounds": {
+        "minlat": 52.5922255,
+        "minlon": 13.398424,
+        "maxlat": 52.5924072,
+        "maxlon": 13.3986718
+      },
+      "geometry": [
+        {
+          "lat": 52.5922255,
+          "lon": 13.3986718
+        },
+        {
+          "lat": 52.5923621,
+          "lon": 13.3984855
+        },
+        {
+          "lat": 52.5924072,
+          "lon": 13.398424
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "no",
+        "parking:both": "no",
+        "postal_code": "13158",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1442120666,
+      "bounds": {
+        "minlat": 52.5916462,
+        "minlon": 13.3988198,
+        "maxlat": 52.5921169,
+        "maxlon": 13.3994599
+      },
+      "geometry": [
+        {
+          "lat": 52.5916462,
+          "lon": 13.3994599
+        },
+        {
+          "lat": 52.5916926,
+          "lon": 13.3993983
+        },
+        {
+          "lat": 52.5921169,
+          "lon": 13.3988198
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "no",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "13158",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1442120667,
+      "bounds": {
+        "minlat": 52.5910396,
+        "minlon": 13.3997234,
+        "maxlat": 52.5914523,
+        "maxlon": 13.4002807
+      },
+      "geometry": [
+        {
+          "lat": 52.5910396,
+          "lon": 13.4002807
+        },
+        {
+          "lat": 52.5914523,
+          "lon": 13.3997234
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "no",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "13158",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1442120668,
+      "bounds": {
+        "minlat": 52.5906866,
+        "minlon": 13.4002807,
+        "maxlat": 52.5910396,
+        "maxlon": 13.4007591
+      },
+      "geometry": [
+        {
+          "lat": 52.5906866,
+          "lon": 13.4007591
+        },
+        {
+          "lat": 52.5908343,
+          "lon": 13.4005558
+        },
+        {
+          "lat": 52.5909061,
+          "lon": 13.4004578
+        },
+        {
+          "lat": 52.5909323,
+          "lon": 13.4004256
+        },
+        {
+          "lat": 52.5910396,
+          "lon": 13.4002807
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "no",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "13158",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1442120669,
+      "bounds": {
+        "minlat": 52.5900626,
+        "minlon": 13.4007591,
+        "maxlat": 52.5906866,
+        "maxlon": 13.4017083
+      },
+      "geometry": [
+        {
+          "lat": 52.5900626,
+          "lon": 13.4017083
+        },
+        {
+          "lat": 52.5900658,
+          "lon": 13.4016855
+        },
+        {
+          "lat": 52.59012,
+          "lon": 13.4015516
+        },
+        {
+          "lat": 52.5902072,
+          "lon": 13.4014107
+        },
+        {
+          "lat": 52.5903258,
+          "lon": 13.4012533
+        },
+        {
+          "lat": 52.5905038,
+          "lon": 13.4010107
+        },
+        {
+          "lat": 52.5906866,
+          "lon": 13.4007591
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "note": "Ergänzungsstraße mit besonderer Bedeutung",
+        "oneway": "no",
+        "parking:both": "no",
+        "postal_code": "13158",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1442594836,
+      "bounds": {
+        "minlat": 52.5941414,
+        "minlon": 13.3949817,
+        "maxlat": 52.5943736,
+        "maxlon": 13.3957297
+      },
+      "geometry": [
+        {
+          "lat": 52.5943736,
+          "lon": 13.3949817
+        },
+        {
+          "lat": 52.5942308,
+          "lon": 13.3954365
+        },
+        {
+          "lat": 52.5941414,
+          "lon": 13.3957297
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "13158",
+        "sidewalk:both:surface": "paving_stones",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "yes",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1442594837,
+      "bounds": {
+        "minlat": 52.5933355,
+        "minlon": 13.3966922,
+        "maxlat": 52.5936492,
+        "maxlon": 13.3971268
+      },
+      "geometry": [
+        {
+          "lat": 52.5936492,
+          "lon": 13.3966922
+        },
+        {
+          "lat": 52.5935191,
+          "lon": 13.3968689
+        },
+        {
+          "lat": 52.5933408,
+          "lon": 13.3971203
+        },
+        {
+          "lat": 52.5933355,
+          "lon": 13.3971268
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "postal_code": "13158",
+        "sidewalk:both:surface": "paving_stones",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "yes",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1442594838,
+      "bounds": {
+        "minlat": 52.5939941,
+        "minlon": 13.3957297,
+        "maxlat": 52.5941414,
+        "maxlon": 13.396167
+      },
+      "geometry": [
+        {
+          "lat": 52.5941414,
+          "lon": 13.3957297
+        },
+        {
+          "lat": 52.5940524,
+          "lon": 13.3960213
+        },
+        {
+          "lat": 52.5939986,
+          "lon": 13.3961588
+        },
+        {
+          "lat": 52.5939941,
+          "lon": 13.396167
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "no",
+        "postal_code": "13158",
+        "sidewalk:both:surface": "paving_stones",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "yes",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443520149,
+      "bounds": {
+        "minlat": 52.5917944,
+        "minlon": 13.4205275,
+        "maxlat": 52.5919098,
+        "maxlon": 13.4207133
+      },
+      "geometry": [
+        {
+          "lat": 52.5917944,
+          "lon": 13.4205275
+        },
+        {
+          "lat": 52.5918683,
+          "lon": 13.4206607
+        },
+        {
+          "lat": 52.5919098,
+          "lon": 13.4207133
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "maxspeed:type": "sign",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "no",
+        "parking:left:restriction": "no_stopping",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443531765,
+      "bounds": {
+        "minlat": 52.5922419,
+        "minlon": 13.4210538,
+        "maxlat": 52.5923473,
+        "maxlon": 13.4211654
+      },
+      "geometry": [
+        {
+          "lat": 52.5922419,
+          "lon": 13.4210538
+        },
+        {
+          "lat": 52.5923081,
+          "lon": 13.4211193
+        },
+        {
+          "lat": 52.5923473,
+          "lon": 13.4211654
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "maxspeed:type": "sign",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both:orientation": "parallel",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:right": "no",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443531766,
+      "bounds": {
+        "minlat": 52.5919098,
+        "minlon": 13.4207133,
+        "maxlat": 52.5922419,
+        "maxlon": 13.4210538
+      },
+      "geometry": [
+        {
+          "lat": 52.5919098,
+          "lon": 13.4207133
+        },
+        {
+          "lat": 52.5921833,
+          "lon": 13.4209958
+        },
+        {
+          "lat": 52.5922419,
+          "lon": 13.4210538
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "maxspeed:type": "sign",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "no",
+        "parking:left:restriction": "no_stopping",
+        "parking:right:restriction": "no_parking",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443531771,
+      "bounds": {
+        "minlat": 52.5930428,
+        "minlon": 13.4223857,
+        "maxlat": 52.5931884,
+        "maxlon": 13.4226576
+      },
+      "geometry": [
+        {
+          "lat": 52.5930428,
+          "lon": 13.4223857
+        },
+        {
+          "lat": 52.5931884,
+          "lon": 13.4226576
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "maxspeed:type": "sign",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:left": "no",
+        "parking:left:restriction": "no_stopping",
+        "parking:right": "lane",
+        "parking:right:fee": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443531772,
+      "bounds": {
+        "minlat": 52.5931884,
+        "minlon": 13.4226576,
+        "maxlat": 52.5934109,
+        "maxlon": 13.4230734
+      },
+      "geometry": [
+        {
+          "lat": 52.5931884,
+          "lon": 13.4226576
+        },
+        {
+          "lat": 52.5934109,
+          "lon": 13.4230734
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "maxspeed:type": "sign",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "parking:left:restriction:conditional": "no_stopping @ (Mo-Fr 09:00-17:00)",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443531773,
+      "bounds": {
+        "minlat": 52.5934109,
+        "minlon": 13.4230734,
+        "maxlat": 52.5935619,
+        "maxlon": 13.4233487
+      },
+      "geometry": [
+        {
+          "lat": 52.5934109,
+          "lon": 13.4230734
+        },
+        {
+          "lat": 52.5934374,
+          "lon": 13.4231228
+        },
+        {
+          "lat": 52.5934655,
+          "lon": 13.4231724
+        },
+        {
+          "lat": 52.5935619,
+          "lon": 13.4233487
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "maxspeed:type": "sign",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:left:restriction:conditional": "no_stopping @ (Mo-Fr 09:00-17:00)",
+        "parking:right": "no",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443531775,
+      "bounds": {
+        "minlat": 52.5935619,
+        "minlon": 13.4233487,
+        "maxlat": 52.5944952,
+        "maxlon": 13.4250648
+      },
+      "geometry": [
+        {
+          "lat": 52.5935619,
+          "lon": 13.4233487
+        },
+        {
+          "lat": 52.5938585,
+          "lon": 13.4238972
+        },
+        {
+          "lat": 52.5940034,
+          "lon": 13.4241609
+        },
+        {
+          "lat": 52.5941636,
+          "lon": 13.4244527
+        },
+        {
+          "lat": 52.5943547,
+          "lon": 13.4248081
+        },
+        {
+          "lat": 52.5943877,
+          "lon": 13.4248708
+        },
+        {
+          "lat": 52.5944175,
+          "lon": 13.4249243
+        },
+        {
+          "lat": 52.5944952,
+          "lon": 13.4250648
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "maxspeed:type": "sign",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "parking:left": "lane",
+        "parking:left:restriction:conditional": "no_stopping @ (Mo-Fr 09:00-17:00)",
+        "parking:right": "half_on_kerb",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443531776,
+      "bounds": {
+        "minlat": 52.5944952,
+        "minlon": 13.4250648,
+        "maxlat": 52.5948107,
+        "maxlon": 13.4255965
+      },
+      "geometry": [
+        {
+          "lat": 52.5944952,
+          "lon": 13.4250648
+        },
+        {
+          "lat": 52.5947382,
+          "lon": 13.425504
+        },
+        {
+          "lat": 52.5948107,
+          "lon": 13.4255965
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "maxspeed:type": "sign",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "parking:left:restriction:conditional": "no_stopping @ (Mo-Fr 09:00-17:00)",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1443531777,
+      "bounds": {
+        "minlat": 52.5948107,
+        "minlon": 13.4255965,
+        "maxlat": 52.5948677,
+        "maxlon": 13.4257107
+      },
+      "geometry": [
+        {
+          "lat": 52.5948107,
+          "lon": 13.4255965
+        },
+        {
+          "lat": 52.5948456,
+          "lon": 13.4256539
+        },
+        {
+          "lat": 52.5948677,
+          "lon": 13.4257107
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "maxspeed:type": "sign",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "no",
+        "postal_code": "13127",
+        "sidewalk:both": "separate",
+        "sidewalk:both:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1462571447,
+      "bounds": {
+        "minlat": 52.5259119,
+        "minlon": 13.4071558,
+        "maxlat": 52.5262292,
+        "maxlon": 13.4074112
+      },
+      "geometry": [
+        {
+          "lat": 52.5259119,
+          "lon": 13.4071558
+        },
+        {
+          "lat": 52.5262292,
+          "lon": 13.4074112
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "embedded_rails": "tram",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Alte Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "name:etymology:wikipedia": "de:Berlin-Niederschönhausen",
+        "parking:both": "lane",
+        "parking:both:fee": "yes",
+        "parking:both:fee:conditional": "no @ (00:00-09:00)",
+        "parking:both:orientation": "parallel",
+        "parking:both:zone": "29",
+        "postal_code": "10119",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1462571449,
+      "bounds": {
+        "minlat": 52.5257237,
+        "minlon": 13.4070043,
+        "maxlat": 52.5259119,
+        "maxlon": 13.4071558
+      },
+      "geometry": [
+        {
+          "lat": 52.5257237,
+          "lon": 13.4070043
+        },
+        {
+          "lat": 52.5259119,
+          "lon": 13.4071558
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "embedded_rails": "tram",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Alte Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "name:etymology:wikipedia": "de:Berlin-Niederschönhausen",
+        "parking:both": "lane",
+        "parking:both:fee": "yes",
+        "parking:both:orientation": "parallel",
+        "parking:both:zone": "29",
+        "parking:left:fee:conditional": "no @ (00:00-09:00)",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-16:00; Sa-Su 00:00-09:00)",
+        "parking:right:restriction:conditional": "loading_only @ (Mo-Fr 08:00-16:00)",
+        "postal_code": "10119",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1462571450,
+      "bounds": {
+        "minlat": 52.5256581,
+        "minlon": 13.4069515,
+        "maxlat": 52.5257237,
+        "maxlon": 13.4070043
+      },
+      "geometry": [
+        {
+          "lat": 52.5256581,
+          "lon": 13.4069515
+        },
+        {
+          "lat": 52.5257237,
+          "lon": 13.4070043
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "embedded_rails": "tram",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Alte Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "name:etymology:wikipedia": "de:Berlin-Niederschönhausen",
+        "parking:both": "lane",
+        "parking:both:fee": "yes",
+        "parking:both:orientation": "parallel",
+        "parking:both:zone": "29",
+        "parking:left:fee:conditional": "no @ (Mo-Fr 00:00-18:00; Sa-Su 00:00-09:00)",
+        "parking:left:restriction:conditional": "loading_only @ (Mo-Fr 08:00-18:00)",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-16:00; Sa-Su 00:00-09:00)",
+        "parking:right:restriction:conditional": "loading_only @ (Mo-Fr 08:00-16:00)",
+        "postal_code": "10119",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1462571451,
+      "bounds": {
+        "minlat": 52.5255529,
+        "minlon": 13.4068668,
+        "maxlat": 52.5256581,
+        "maxlon": 13.4069515
+      },
+      "geometry": [
+        {
+          "lat": 52.5255529,
+          "lon": 13.4068668
+        },
+        {
+          "lat": 52.5256581,
+          "lon": 13.4069515
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "embedded_rails": "tram",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Alte Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "name:etymology:wikipedia": "de:Berlin-Niederschönhausen",
+        "parking:left": "lane",
+        "parking:left:fee": "yes",
+        "parking:left:fee:conditional": "no @ (Mo-Fr 00:00-18:00; Sa-Su 00:00-09:00)",
+        "parking:left:orientation": "parallel",
+        "parking:left:restriction:conditional": "loading_only @ (Mo-Fr 08:00-18:00)",
+        "parking:left:zone": "29",
+        "parking:right": "no",
+        "postal_code": "10119",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1462571452,
+      "bounds": {
+        "minlat": 52.5254103,
+        "minlon": 13.406752,
+        "maxlat": 52.5255529,
+        "maxlon": 13.4068668
+      },
+      "geometry": [
+        {
+          "lat": 52.5254103,
+          "lon": 13.406752
+        },
+        {
+          "lat": 52.5255529,
+          "lon": 13.4068668
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "embedded_rails": "tram",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Alte Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "name:etymology:wikipedia": "de:Berlin-Niederschönhausen",
+        "parking:left": "lane",
+        "parking:left:fee": "yes",
+        "parking:left:fee:conditional": "no @ (00:00-09:00)",
+        "parking:left:orientation": "parallel",
+        "parking:left:zone": "29",
+        "parking:right": "no",
+        "postal_code": "10119",
+        "sidewalk:both": "separate",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1462571453,
+      "bounds": {
+        "minlat": 52.5251869,
+        "minlon": 13.4065709,
+        "maxlat": 52.5254103,
+        "maxlon": 13.406752
+      },
+      "geometry": [
+        {
+          "lat": 52.5251869,
+          "lon": 13.4065709
+        },
+        {
+          "lat": 52.5254103,
+          "lon": 13.406752
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "embedded_rails": "tram",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Alte Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "name:etymology:wikipedia": "de:Berlin-Niederschönhausen",
+        "parking:both": "no",
+        "postal_code": "10119",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1462571454,
+      "bounds": {
+        "minlat": 52.5247709,
+        "minlon": 13.4057074,
+        "maxlat": 52.5248056,
+        "maxlon": 13.4058524
+      },
+      "geometry": [
+        {
+          "lat": 52.5247709,
+          "lon": 13.4057074
+        },
+        {
+          "lat": 52.5248056,
+          "lon": 13.4058524
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "embedded_rails": "tram",
+        "foot": "use_sidepath",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "DE:zone30",
+        "name": "Neue Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "name:etymology:wikipedia": "de:Berlin-Niederschönhausen",
+        "oneway": "yes",
+        "parking:left": "street_side",
+        "parking:left:fee": "yes",
+        "parking:left:fee:conditional": "no @ (00:00-09:00)",
+        "parking:left:orientation": "parallel",
+        "parking:left:zone": "29",
+        "parking:right": "no",
+        "postal_code": "10178",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:zone30",
+        "surface": "asphalt",
+        "traffic_sign": "DE:274.1",
+        "zone:maxspeed": "DE:30"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1497888052,
+      "bounds": {
+        "minlat": 52.5980355,
+        "minlon": 13.3837434,
+        "maxlat": 52.5981026,
+        "maxlon": 13.3839099
+      },
+      "geometry": [
+        {
+          "lat": 52.5981026,
+          "lon": 13.3837434
+        },
+        {
+          "lat": 52.5980355,
+          "lon": 13.3839099
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "parking:left": "lane",
+        "parking:right": "shoulder",
+        "parking:right:informal": "yes",
+        "postal_code": "13158",
+        "sidewalk": "right",
+        "sidewalk:right:surface": "paving_stones",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1497889316,
+      "bounds": {
+        "minlat": 52.5973003,
+        "minlon": 13.3855365,
+        "maxlat": 52.5973555,
+        "maxlon": 13.3856635
+      },
+      "geometry": [
+        {
+          "lat": 52.5973555,
+          "lon": 13.3855365
+        },
+        {
+          "lat": 52.5973003,
+          "lon": 13.3856635
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:left": "lane",
+        "parking:left:fee": "no",
+        "parking:left:orientation": "parallel",
+        "parking:right": "separate",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1497889317,
+      "bounds": {
+        "minlat": 52.5973555,
+        "minlon": 13.3850159,
+        "maxlat": 52.5975819,
+        "maxlon": 13.3855365
+      },
+      "geometry": [
+        {
+          "lat": 52.5975819,
+          "lon": 13.3850159
+        },
+        {
+          "lat": 52.5973555,
+          "lon": 13.3855365
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "highway": "tertiary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Schönhauser Straße",
+        "name:etymology:wikidata": "Q512959",
+        "parking:both": "lane",
+        "parking:both:fee": "no",
+        "parking:both:orientation": "parallel",
+        "parking:both:staggered": "yes",
+        "postal_code": "13158",
+        "sidewalk:left": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q93325642"
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 145372859,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 312651886,
+    "lat": "52.5298244",
+    "lon": "13.4018795",
+    "category": "highway",
+    "type": "secondary",
+    "place_rank": 26,
+    "importance": 0.05342208819714653,
+    "addresstype": "road",
+    "name": "Torstraße",
+    "display_name": "Torstraße, Rosenthaler Vorstadt, Mitte, Berlin, 10119, Deutschland",
+    "boundingbox": [
+      "52.5297587",
+      "52.5298522",
+      "13.4013006",
+      "13.4024623"
+    ]
+  }
+]

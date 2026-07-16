@@ -1,0 +1,4474 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-07-15T21:51:22Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 4541085,
+      "bounds": {
+        "minlat": 52.5524728,
+        "minlon": 13.3661138,
+        "maxlat": 52.5546235,
+        "maxlon": 13.3669236
+      },
+      "geometry": [
+        {
+          "lat": 52.5524728,
+          "lon": 13.3669236
+        },
+        {
+          "lat": 52.5530209,
+          "lon": 13.3666465
+        },
+        {
+          "lat": 52.5534003,
+          "lon": 13.366454
+        },
+        {
+          "lat": 52.5534943,
+          "lon": 13.3664072
+        },
+        {
+          "lat": 52.5537639,
+          "lon": 13.366295
+        },
+        {
+          "lat": 52.5539346,
+          "lon": 13.3662447
+        },
+        {
+          "lat": 52.5545779,
+          "lon": 13.3661216
+        },
+        {
+          "lat": 52.5546235,
+          "lon": 13.3661138
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 06:00-18:00)",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4594807,
+      "bounds": {
+        "minlat": 52.5483751,
+        "minlon": 13.3690395,
+        "maxlat": 52.5483815,
+        "maxlon": 13.3692001
+      },
+      "geometry": [
+        {
+          "lat": 52.5483815,
+          "lon": 13.3692001
+        },
+        {
+          "lat": 52.5483751,
+          "lon": 13.3690395
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lanes:backward": "2",
+        "lanes:forward": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4596985,
+      "bounds": {
+        "minlat": 52.5401049,
+        "minlon": 13.3698168,
+        "maxlat": 52.5415302,
+        "maxlon": 13.3709663
+      },
+      "geometry": [
+        {
+          "lat": 52.5401049,
+          "lon": 13.3709663
+        },
+        {
+          "lat": 52.5401511,
+          "lon": 13.3709521
+        },
+        {
+          "lat": 52.5401708,
+          "lon": 13.370946
+        },
+        {
+          "lat": 52.5402189,
+          "lon": 13.3709093
+        },
+        {
+          "lat": 52.5406496,
+          "lon": 13.3702569
+        },
+        {
+          "lat": 52.5406698,
+          "lon": 13.3702333
+        },
+        {
+          "lat": 52.5406909,
+          "lon": 13.3702152
+        },
+        {
+          "lat": 52.5407139,
+          "lon": 13.370203
+        },
+        {
+          "lat": 52.5408836,
+          "lon": 13.3701515
+        },
+        {
+          "lat": 52.5410029,
+          "lon": 13.3701143
+        },
+        {
+          "lat": 52.5411213,
+          "lon": 13.3700783
+        },
+        {
+          "lat": 52.5411233,
+          "lon": 13.3700777
+        },
+        {
+          "lat": 52.5411554,
+          "lon": 13.3700682
+        },
+        {
+          "lat": 52.5413614,
+          "lon": 13.3700062
+        },
+        {
+          "lat": 52.5413967,
+          "lon": 13.3699924
+        },
+        {
+          "lat": 52.5414258,
+          "lon": 13.3699748
+        },
+        {
+          "lat": 52.5414459,
+          "lon": 13.3699512
+        },
+        {
+          "lat": 52.5415302,
+          "lon": 13.3698168
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "living_street",
+        "lane_markings": "no",
+        "lit": "yes",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "no",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13347",
+        "sidewalk:both": "separate",
+        "smoothness": "intermediate",
+        "surface": "concrete",
+        "traffic_sign": "DE:325.1",
+        "wikidata": "Q60447616"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4596995,
+      "bounds": {
+        "minlat": 52.5446439,
+        "minlon": 13.3700805,
+        "maxlat": 52.5446943,
+        "maxlon": 13.3702872
+      },
+      "geometry": [
+        {
+          "lat": 52.5446943,
+          "lon": 13.3700805
+        },
+        {
+          "lat": 52.5446439,
+          "lon": 13.3702872
+        }
+      ],
+      "tags": {
+        "cycleway:left": "separate",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4638315,
+      "bounds": {
+        "minlat": 52.5550479,
+        "minlon": 13.3656601,
+        "maxlat": 52.5560214,
+        "maxlon": 13.3658528
+      },
+      "geometry": [
+        {
+          "lat": 52.5560214,
+          "lon": 13.3656601
+        },
+        {
+          "lat": 52.555113,
+          "lon": 13.36584
+        },
+        {
+          "lat": 52.5550731,
+          "lon": 13.365848
+        },
+        {
+          "lat": 52.5550479,
+          "lon": 13.3658528
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 06:00-18:00)",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 8003545,
+      "bounds": {
+        "minlat": 52.5514419,
+        "minlon": 13.3672407,
+        "maxlat": 52.5515563,
+        "maxlon": 13.3673149
+      },
+      "geometry": [
+        {
+          "lat": 52.5515563,
+          "lon": 13.3672407
+        },
+        {
+          "lat": 52.5514419,
+          "lon": 13.3673149
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:buffer:both": "no",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:marking:both": "dashed_line",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "red",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "2",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:right:width": "infra3D 2021/22",
+        "source:maxspeed": "DE:urban",
+        "source:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 8004068,
+      "bounds": {
+        "minlat": 52.5515547,
+        "minlon": 13.3673949,
+        "maxlat": 52.5516726,
+        "maxlon": 13.3674633
+      },
+      "geometry": [
+        {
+          "lat": 52.5515547,
+          "lon": 13.3674633
+        },
+        {
+          "lat": 52.5516726,
+          "lon": 13.3673949
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:buffer:both": "no",
+        "cycleway:right:lane": "advisory",
+        "cycleway:right:marking:both": "dashed_line",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "red",
+        "cycleway:right:traffic_sign": "none",
+        "cycleway:right:width": "2",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:cycleway:right:width": "infra3D 2021/22",
+        "source:maxspeed": "DE:urban",
+        "source:width": "Luftbild 2025",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 8005699,
+      "bounds": {
+        "minlat": 52.5461788,
+        "minlon": 13.3692906,
+        "maxlat": 52.5461846,
+        "maxlon": 13.3694171
+      },
+      "geometry": [
+        {
+          "lat": 52.5461846,
+          "lon": 13.3694171
+        },
+        {
+          "lat": 52.5461788,
+          "lon": 13.3692906
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "shoulder": "no",
+        "sidewalk": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616"
+      }
+    },
+    {
+      "type": "way",
+      "id": 8008709,
+      "bounds": {
+        "minlat": 52.5428715,
+        "minlon": 13.3696901,
+        "maxlat": 52.5428796,
+        "maxlon": 13.3698661
+      },
+      "geometry": [
+        {
+          "lat": 52.5428715,
+          "lon": 13.3696901
+        },
+        {
+          "lat": 52.5428796,
+          "lon": 13.3698661
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "shoulder": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 20160206,
+      "bounds": {
+        "minlat": 52.5454268,
+        "minlon": 13.3694347,
+        "maxlat": 52.5460143,
+        "maxlon": 13.3698
+      },
+      "geometry": [
+        {
+          "lat": 52.5454268,
+          "lon": 13.3698
+        },
+        {
+          "lat": 52.5454499,
+          "lon": 13.3697294
+        },
+        {
+          "lat": 52.5455254,
+          "lon": 13.3696
+        },
+        {
+          "lat": 52.5455752,
+          "lon": 13.369552
+        },
+        {
+          "lat": 52.5456287,
+          "lon": 13.3695043
+        },
+        {
+          "lat": 52.5456969,
+          "lon": 13.3694665
+        },
+        {
+          "lat": 52.5460143,
+          "lon": 13.3694347
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Reinickendorf",
+        "destination:ref": "B 96",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 23635725,
+      "bounds": {
+        "minlat": 52.5451599,
+        "minlon": 13.3704023,
+        "maxlat": 52.5451952,
+        "maxlon": 13.3705879
+      },
+      "geometry": [
+        {
+          "lat": 52.5451952,
+          "lon": 13.3704023
+        },
+        {
+          "lat": 52.5451599,
+          "lon": 13.3705879
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 23705617,
+      "bounds": {
+        "minlat": 52.5521485,
+        "minlon": 13.3668928,
+        "maxlat": 52.5521788,
+        "maxlon": 13.367095
+      },
+      "geometry": [
+        {
+          "lat": 52.5521788,
+          "lon": 13.367095
+        },
+        {
+          "lat": 52.5521485,
+          "lon": 13.3668928
+        }
+      ],
+      "tags": {
+        "check_date:cycleway": "2024-12-31",
+        "cycleway:both": "no",
+        "highway": "primary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk": "left",
+        "sidewalk:left:surface": "paving_stones",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25217947,
+      "bounds": {
+        "minlat": 52.5419154,
+        "minlon": 13.3697567,
+        "maxlat": 52.541932,
+        "maxlon": 13.3699799
+      },
+      "geometry": [
+        {
+          "lat": 52.541932,
+          "lon": 13.3699799
+        },
+        {
+          "lat": 52.5419154,
+          "lon": 13.3697567
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25712771,
+      "bounds": {
+        "minlat": 52.5448767,
+        "minlon": 13.3692396,
+        "maxlat": 52.5453159,
+        "maxlon": 13.3693904
+      },
+      "geometry": [
+        {
+          "lat": 52.5453159,
+          "lon": 13.3692396
+        },
+        {
+          "lat": 52.5451727,
+          "lon": 13.3692547
+        },
+        {
+          "lat": 52.5449679,
+          "lon": 13.3692721
+        },
+        {
+          "lat": 52.5449203,
+          "lon": 13.3692761
+        },
+        {
+          "lat": 52.5448767,
+          "lon": 13.3693904
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "highway": "pedestrian",
+        "lit": "yes",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "postal_code": "13347",
+        "smoothness": "good",
+        "surface": "paving_stones",
+        "wikidata": "Q60447616"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25781481,
+      "bounds": {
+        "minlat": 52.5451952,
+        "minlon": 13.3704023,
+        "maxlat": 52.5452987,
+        "maxlon": 13.3704572
+      },
+      "geometry": [
+        {
+          "lat": 52.5452987,
+          "lon": 13.3704572
+        },
+        {
+          "lat": 52.5451952,
+          "lon": 13.3704023
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 25781742,
+      "bounds": {
+        "minlat": 52.5428796,
+        "minlon": 13.3697946,
+        "maxlat": 52.543795,
+        "maxlon": 13.3698661
+      },
+      "geometry": [
+        {
+          "lat": 52.5428796,
+          "lon": 13.3698661
+        },
+        {
+          "lat": 52.5430423,
+          "lon": 13.3698322
+        },
+        {
+          "lat": 52.5431614,
+          "lon": 13.3698111
+        },
+        {
+          "lat": 52.543348,
+          "lon": 13.3697946
+        },
+        {
+          "lat": 52.5434933,
+          "lon": 13.3697986
+        },
+        {
+          "lat": 52.5436275,
+          "lon": 13.369817
+        },
+        {
+          "lat": 52.5436642,
+          "lon": 13.3698227
+        },
+        {
+          "lat": 52.5437407,
+          "lon": 13.3698346
+        },
+        {
+          "lat": 52.543765,
+          "lon": 13.3698384
+        },
+        {
+          "lat": 52.543795,
+          "lon": 13.3698497
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "30",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 27848136,
+      "bounds": {
+        "minlat": 52.5568199,
+        "minlon": 13.3654533,
+        "maxlat": 52.5571139,
+        "maxlon": 13.3655065
+      },
+      "geometry": [
+        {
+          "lat": 52.5571139,
+          "lon": 13.3654533
+        },
+        {
+          "lat": 52.5569786,
+          "lon": 13.3654778
+        },
+        {
+          "lat": 52.5569485,
+          "lon": 13.3654832
+        },
+        {
+          "lat": 52.5568199,
+          "lon": 13.3655065
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13359",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "left|none|none",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 42732303,
+      "bounds": {
+        "minlat": 52.5446943,
+        "minlon": 13.3700805,
+        "maxlat": 52.5451952,
+        "maxlon": 13.3704023
+      },
+      "geometry": [
+        {
+          "lat": 52.5451952,
+          "lon": 13.3704023
+        },
+        {
+          "lat": 52.5451318,
+          "lon": 13.3703641
+        },
+        {
+          "lat": 52.5448545,
+          "lon": 13.3701971
+        },
+        {
+          "lat": 52.5448174,
+          "lon": 13.3701701
+        },
+        {
+          "lat": 52.5447642,
+          "lon": 13.3701314
+        },
+        {
+          "lat": 52.5446943,
+          "lon": 13.3700805
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Tiergarten",
+        "destination:ref": "B 96",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 42732309,
+      "bounds": {
+        "minlat": 52.5446439,
+        "minlon": 13.3702872,
+        "maxlat": 52.545262,
+        "maxlon": 13.3706465
+      },
+      "geometry": [
+        {
+          "lat": 52.5446439,
+          "lon": 13.3702872
+        },
+        {
+          "lat": 52.5447114,
+          "lon": 13.3703312
+        },
+        {
+          "lat": 52.5447667,
+          "lon": 13.3703673
+        },
+        {
+          "lat": 52.5450264,
+          "lon": 13.3705124
+        },
+        {
+          "lat": 52.5450786,
+          "lon": 13.3705415
+        },
+        {
+          "lat": 52.5450934,
+          "lon": 13.37055
+        },
+        {
+          "lat": 52.5451599,
+          "lon": 13.3705879
+        },
+        {
+          "lat": 52.545262,
+          "lon": 13.3706465
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|through|none",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 48343151,
+      "bounds": {
+        "minlat": 52.5488629,
+        "minlon": 13.3679055,
+        "maxlat": 52.5507619,
+        "maxlon": 13.3689951
+      },
+      "geometry": [
+        {
+          "lat": 52.5488629,
+          "lon": 13.3689951
+        },
+        {
+          "lat": 52.5490822,
+          "lon": 13.3688614
+        },
+        {
+          "lat": 52.549977,
+          "lon": 13.368329
+        },
+        {
+          "lat": 52.5500672,
+          "lon": 13.3682753
+        },
+        {
+          "lat": 52.550204,
+          "lon": 13.3681993
+        },
+        {
+          "lat": 52.5507619,
+          "lon": 13.3679055
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 48343154,
+      "bounds": {
+        "minlat": 52.5455906,
+        "minlon": 13.3692906,
+        "maxlat": 52.5461788,
+        "maxlon": 13.369384
+      },
+      "geometry": [
+        {
+          "lat": 52.5461788,
+          "lon": 13.3692906
+        },
+        {
+          "lat": 52.5460537,
+          "lon": 13.3693032
+        },
+        {
+          "lat": 52.5457258,
+          "lon": 13.3693337
+        },
+        {
+          "lat": 52.5456302,
+          "lon": 13.3693635
+        },
+        {
+          "lat": 52.5455906,
+          "lon": 13.369384
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 59112729,
+      "bounds": {
+        "minlat": 52.5418282,
+        "minlon": 13.3697567,
+        "maxlat": 52.5419154,
+        "maxlon": 13.3699424
+      },
+      "geometry": [
+        {
+          "lat": 52.5419154,
+          "lon": 13.3697567
+        },
+        {
+          "lat": 52.5418646,
+          "lon": 13.3698551
+        },
+        {
+          "lat": 52.5418282,
+          "lon": 13.3699424
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "no",
+        "highway": "primary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 120633877,
+      "bounds": {
+        "minlat": 52.5466264,
+        "minlon": 13.3690643,
+        "maxlat": 52.5481402,
+        "maxlon": 13.3692401
+      },
+      "geometry": [
+        {
+          "lat": 52.5481402,
+          "lon": 13.3690643
+        },
+        {
+          "lat": 52.5480436,
+          "lon": 13.3690737
+        },
+        {
+          "lat": 52.547963,
+          "lon": 13.3691095
+        },
+        {
+          "lat": 52.5477629,
+          "lon": 13.36913
+        },
+        {
+          "lat": 52.5475271,
+          "lon": 13.3691513
+        },
+        {
+          "lat": 52.5470149,
+          "lon": 13.3692003
+        },
+        {
+          "lat": 52.5467338,
+          "lon": 13.3692303
+        },
+        {
+          "lat": 52.5466264,
+          "lon": 13.3692401
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 120634176,
+      "bounds": {
+        "minlat": 52.547963,
+        "minlon": 13.3691095,
+        "maxlat": 52.5479669,
+        "maxlon": 13.3692475
+      },
+      "geometry": [
+        {
+          "lat": 52.5479669,
+          "lon": 13.3692475
+        },
+        {
+          "lat": 52.547963,
+          "lon": 13.3691095
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "parking:both": "no",
+        "ref": "B 96",
+        "shoulder": "no",
+        "sidewalk": "no",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 120634177,
+      "bounds": {
+        "minlat": 52.5486693,
+        "minlon": 13.3689564,
+        "maxlat": 52.5486959,
+        "maxlon": 13.3690968
+      },
+      "geometry": [
+        {
+          "lat": 52.5486693,
+          "lon": 13.3689564
+        },
+        {
+          "lat": 52.5486959,
+          "lon": 13.3690968
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "no",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "parking:both": "no",
+        "ref": "B 96",
+        "shoulder": "no",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 162964323,
+      "bounds": {
+        "minlat": 52.5487859,
+        "minlon": 13.3676952,
+        "maxlat": 52.550837,
+        "maxlon": 13.3688894
+      },
+      "geometry": [
+        {
+          "lat": 52.550837,
+          "lon": 13.3676952
+        },
+        {
+          "lat": 52.5505167,
+          "lon": 13.3678795
+        },
+        {
+          "lat": 52.5504815,
+          "lon": 13.3678988
+        },
+        {
+          "lat": 52.5502213,
+          "lon": 13.368053
+        },
+        {
+          "lat": 52.5501762,
+          "lon": 13.3680755
+        },
+        {
+          "lat": 52.5500423,
+          "lon": 13.3681525
+        },
+        {
+          "lat": 52.5499509,
+          "lon": 13.3682063
+        },
+        {
+          "lat": 52.5496441,
+          "lon": 13.3683874
+        },
+        {
+          "lat": 52.5495911,
+          "lon": 13.3684186
+        },
+        {
+          "lat": 52.5492717,
+          "lon": 13.3686068
+        },
+        {
+          "lat": 52.5492399,
+          "lon": 13.3686256
+        },
+        {
+          "lat": 52.5490263,
+          "lon": 13.3687514
+        },
+        {
+          "lat": 52.5487859,
+          "lon": 13.3688894
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 182765411,
+      "bounds": {
+        "minlat": 52.5500423,
+        "minlon": 13.3681525,
+        "maxlat": 52.5500672,
+        "maxlon": 13.3682753
+      },
+      "geometry": [
+        {
+          "lat": 52.5500672,
+          "lon": 13.3682753
+        },
+        {
+          "lat": 52.5500423,
+          "lon": 13.3681525
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "parking:both": "no",
+        "postal_code": "13357",
+        "ref": "B 96",
+        "sidewalk": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 182765413,
+      "bounds": {
+        "minlat": 52.5534768,
+        "minlon": 13.3662331,
+        "maxlat": 52.5534943,
+        "maxlon": 13.3664072
+      },
+      "geometry": [
+        {
+          "lat": 52.5534768,
+          "lon": 13.3662331
+        },
+        {
+          "lat": 52.5534943,
+          "lon": 13.3664072
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 316085828,
+      "bounds": {
+        "minlat": 52.5545662,
+        "minlon": 13.3659479,
+        "maxlat": 52.5545779,
+        "maxlon": 13.3661216
+      },
+      "geometry": [
+        {
+          "lat": 52.5545779,
+          "lon": 13.3661216
+        },
+        {
+          "lat": 52.5545662,
+          "lon": 13.3659479
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "no",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "shoulder": "no",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 350932989,
+      "bounds": {
+        "minlat": 52.5562404,
+        "minlon": 13.3657326,
+        "maxlat": 52.556697,
+        "maxlon": 13.3658175
+      },
+      "geometry": [
+        {
+          "lat": 52.5562404,
+          "lon": 13.3658175
+        },
+        {
+          "lat": 52.5562736,
+          "lon": 13.3658109
+        },
+        {
+          "lat": 52.556447,
+          "lon": 13.3657791
+        },
+        {
+          "lat": 52.5565721,
+          "lon": 13.3657557
+        },
+        {
+          "lat": 52.556697,
+          "lon": 13.3657326
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "slight_left|through|none",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 377644574,
+      "bounds": {
+        "minlat": 52.545262,
+        "minlon": 13.3704572,
+        "maxlat": 52.5452987,
+        "maxlon": 13.3706465
+      },
+      "geometry": [
+        {
+          "lat": 52.545262,
+          "lon": 13.3706465
+        },
+        {
+          "lat": 52.5452987,
+          "lon": 13.3704572
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 377644575,
+      "bounds": {
+        "minlat": 52.5433446,
+        "minlon": 13.3696456,
+        "maxlat": 52.543348,
+        "maxlon": 13.3697946
+      },
+      "geometry": [
+        {
+          "lat": 52.5433446,
+          "lon": 13.3696456
+        },
+        {
+          "lat": 52.543348,
+          "lon": 13.3697946
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "parking:both": "no",
+        "ref": "B 96",
+        "service": "driveway",
+        "sidewalk": "no",
+        "source:maxspeed": "DE:urban",
+        "surface": "sett",
+        "wikidata": "Q60447616"
+      }
+    },
+    {
+      "type": "way",
+      "id": 377644576,
+      "bounds": {
+        "minlat": 52.5437407,
+        "minlon": 13.3696454,
+        "maxlat": 52.5437408,
+        "maxlon": 13.3698346
+      },
+      "geometry": [
+        {
+          "lat": 52.5437408,
+          "lon": 13.3696454
+        },
+        {
+          "lat": 52.5437407,
+          "lon": 13.3698346
+        }
+      ],
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "parking:both": "no",
+        "ref": "B 96",
+        "sidewalk": "no",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616"
+      }
+    },
+    {
+      "type": "way",
+      "id": 377644577,
+      "bounds": {
+        "minlat": 52.5438996,
+        "minlon": 13.3698889,
+        "maxlat": 52.544232,
+        "maxlon": 13.3700338
+      },
+      "geometry": [
+        {
+          "lat": 52.5438996,
+          "lon": 13.3698889
+        },
+        {
+          "lat": 52.5439288,
+          "lon": 13.3699018
+        },
+        {
+          "lat": 52.544232,
+          "lon": 13.3700338
+        }
+      ],
+      "tags": {
+        "check_date:smoothness": "2023-07-03",
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 377644578,
+      "bounds": {
+        "minlat": 52.5418282,
+        "minlon": 13.3699424,
+        "maxlat": 52.541932,
+        "maxlon": 13.3699799
+      },
+      "geometry": [
+        {
+          "lat": 52.5418282,
+          "lon": 13.3699424
+        },
+        {
+          "lat": 52.541932,
+          "lon": 13.3699799
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 377644579,
+      "bounds": {
+        "minlat": 52.5481402,
+        "minlon": 13.3690643,
+        "maxlat": 52.5481471,
+        "maxlon": 13.3692384
+      },
+      "geometry": [
+        {
+          "lat": 52.5481402,
+          "lon": 13.3690643
+        },
+        {
+          "lat": 52.5481471,
+          "lon": 13.3692384
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "parking:both": "no",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 377644580,
+      "bounds": {
+        "minlat": 52.544232,
+        "minlon": 13.3700338,
+        "maxlat": 52.5446439,
+        "maxlon": 13.3702872
+      },
+      "geometry": [
+        {
+          "lat": 52.544232,
+          "lon": 13.3700338
+        },
+        {
+          "lat": 52.5443787,
+          "lon": 13.3701203
+        },
+        {
+          "lat": 52.5444544,
+          "lon": 13.3701637
+        },
+        {
+          "lat": 52.544505,
+          "lon": 13.3701967
+        },
+        {
+          "lat": 52.5445757,
+          "lon": 13.3702428
+        },
+        {
+          "lat": 52.5446439,
+          "lon": 13.3702872
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "intermediate",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 377644581,
+      "bounds": {
+        "minlat": 52.5481402,
+        "minlon": 13.3690395,
+        "maxlat": 52.5483751,
+        "maxlon": 13.3690643
+      },
+      "geometry": [
+        {
+          "lat": 52.5483751,
+          "lon": 13.3690395
+        },
+        {
+          "lat": 52.5482124,
+          "lon": 13.3690576
+        },
+        {
+          "lat": 52.5481402,
+          "lon": 13.3690643
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (07:00-10:00)",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "left|through",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 377644582,
+      "bounds": {
+        "minlat": 52.541749,
+        "minlon": 13.3696275,
+        "maxlat": 52.5419154,
+        "maxlon": 13.3697567
+      },
+      "geometry": [
+        {
+          "lat": 52.5419154,
+          "lon": 13.3697567
+        },
+        {
+          "lat": 52.5418208,
+          "lon": 13.3697016
+        },
+        {
+          "lat": 52.541749,
+          "lon": 13.3696275
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "share_busway",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "none",
+        "cycleway:right:traffic_sign": "DE:245,1022-10",
+        "cycleway:right:width": "4",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "psv:lanes:conditional": "yes|yes|designated@(Mo-Fr 06:00-18:00)",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 377644583,
+      "bounds": {
+        "minlat": 52.550837,
+        "minlon": 13.3673149,
+        "maxlat": 52.5514419,
+        "maxlon": 13.3676952
+      },
+      "geometry": [
+        {
+          "lat": 52.5514419,
+          "lon": 13.3673149
+        },
+        {
+          "lat": 52.551342,
+          "lon": 13.3673796
+        },
+        {
+          "lat": 52.5512371,
+          "lon": 13.3674506
+        },
+        {
+          "lat": 52.550837,
+          "lon": 13.3676952
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "none|merge_to_left",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 377644584,
+      "bounds": {
+        "minlat": 52.5507619,
+        "minlon": 13.3674633,
+        "maxlat": 52.5515547,
+        "maxlon": 13.3679055
+      },
+      "geometry": [
+        {
+          "lat": 52.5507619,
+          "lon": 13.3679055
+        },
+        {
+          "lat": 52.5512777,
+          "lon": 13.3676204
+        },
+        {
+          "lat": 52.5514118,
+          "lon": 13.3675463
+        },
+        {
+          "lat": 52.551453,
+          "lon": 13.3675224
+        },
+        {
+          "lat": 52.5515547,
+          "lon": 13.3674633
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 377644585,
+      "bounds": {
+        "minlat": 52.5451952,
+        "minlon": 13.369625,
+        "maxlat": 52.545378,
+        "maxlon": 13.3704023
+      },
+      "geometry": [
+        {
+          "lat": 52.545378,
+          "lon": 13.369625
+        },
+        {
+          "lat": 52.5453737,
+          "lon": 13.3696327
+        },
+        {
+          "lat": 52.5453167,
+          "lon": 13.369786
+        },
+        {
+          "lat": 52.5452393,
+          "lon": 13.3701776
+        },
+        {
+          "lat": 52.5452269,
+          "lon": 13.3702399
+        },
+        {
+          "lat": 52.5452194,
+          "lon": 13.3702784
+        },
+        {
+          "lat": 52.5451952,
+          "lon": 13.3704023
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "left|right|right",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 377644586,
+      "bounds": {
+        "minlat": 52.5415989,
+        "minlon": 13.3697055,
+        "maxlat": 52.5418282,
+        "maxlon": 13.3699424
+      },
+      "geometry": [
+        {
+          "lat": 52.5415989,
+          "lon": 13.3697055
+        },
+        {
+          "lat": 52.5416511,
+          "lon": 13.3697808
+        },
+        {
+          "lat": 52.5417043,
+          "lon": 13.3698456
+        },
+        {
+          "lat": 52.5417382,
+          "lon": 13.3698721
+        },
+        {
+          "lat": 52.5418282,
+          "lon": 13.3699424
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "none|none|right",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 377644587,
+      "bounds": {
+        "minlat": 52.5434484,
+        "minlon": 13.369626,
+        "maxlat": 52.5440205,
+        "maxlon": 13.3696544
+      },
+      "geometry": [
+        {
+          "lat": 52.5440205,
+          "lon": 13.3696277
+        },
+        {
+          "lat": 52.54399,
+          "lon": 13.369626
+        },
+        {
+          "lat": 52.5438115,
+          "lon": 13.3696345
+        },
+        {
+          "lat": 52.5437408,
+          "lon": 13.3696454
+        },
+        {
+          "lat": 52.5436829,
+          "lon": 13.3696544
+        },
+        {
+          "lat": 52.5435108,
+          "lon": 13.3696537
+        },
+        {
+          "lat": 52.5434484,
+          "lon": 13.3696507
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "share_busway",
+        "cycleway:right:oneway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "30",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_stopping @ (Mo-Fr 06:00-18:00); loading_only @ (Mo-Fr 10:00-14:00)",
+        "parking:right:zone": "80",
+        "postal_code": "13347",
+        "psv:lanes:conditional": "yes|yes|designated@(Mo-Fr 06:00-18:00)",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 394681618,
+      "bounds": {
+        "minlat": 52.5407067,
+        "minlon": 13.368808,
+        "maxlat": 52.5407625,
+        "maxlon": 13.368903
+      },
+      "geometry": [
+        {
+          "lat": 52.5407067,
+          "lon": 13.368903
+        },
+        {
+          "lat": 52.5407625,
+          "lon": 13.368808
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2021-09-11",
+        "departures_board": "timetable",
+        "highway": "platform",
+        "kerb": "raised",
+        "kerb:approach_aid": "no",
+        "lit": "yes",
+        "name": "U Reinickendorfer Straße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "surface": "paved",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 394681619,
+      "bounds": {
+        "minlat": 52.5396032,
+        "minlon": 13.3705641,
+        "maxlat": 52.5396579,
+        "maxlon": 13.3706656
+      },
+      "geometry": [
+        {
+          "lat": 52.5396579,
+          "lon": 13.3705641
+        },
+        {
+          "lat": 52.5396032,
+          "lon": 13.3706656
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2024-12-21",
+        "departures_board": "timetable",
+        "highway": "platform",
+        "kerb": "raised",
+        "kerb:approach_aid": "no",
+        "lit": "yes",
+        "name": "U Reinickendorfer Straße/Sellerstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "surface": "paving_stones",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 394681620,
+      "bounds": {
+        "minlat": 52.5397381,
+        "minlon": 13.3708419,
+        "maxlat": 52.5398363,
+        "maxlon": 13.370986
+      },
+      "geometry": [
+        {
+          "lat": 52.5397381,
+          "lon": 13.370986
+        },
+        {
+          "lat": 52.5398363,
+          "lon": 13.3708419
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2024-12-21",
+        "covered": "yes",
+        "departures_board": "timetable",
+        "highway": "platform",
+        "kerb": "raised",
+        "kerb:approach_aid": "no",
+        "lit": "yes",
+        "name": "U Reinickendorfer Straße/Sellerstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "surface": "paved",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 417073455,
+      "bounds": {
+        "minlat": 52.5550457,
+        "minlon": 13.3658712,
+        "maxlat": 52.5559532,
+        "maxlon": 13.3660407
+      },
+      "geometry": [
+        {
+          "lat": 52.5550457,
+          "lon": 13.3660407
+        },
+        {
+          "lat": 52.5559532,
+          "lon": 13.3658712
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 417073456,
+      "bounds": {
+        "minlat": 52.5521349,
+        "minlon": 13.3669236,
+        "maxlat": 52.5524728,
+        "maxlon": 13.3671212
+      },
+      "geometry": [
+        {
+          "lat": 52.5521349,
+          "lon": 13.3671212
+        },
+        {
+          "lat": 52.5521788,
+          "lon": 13.367095
+        },
+        {
+          "lat": 52.5524728,
+          "lon": 13.3669236
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:orientation": "parallel",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "none|merge_to_left",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 417073457,
+      "bounds": {
+        "minlat": 52.5515563,
+        "minlon": 13.3668928,
+        "maxlat": 52.5521485,
+        "maxlon": 13.3672407
+      },
+      "geometry": [
+        {
+          "lat": 52.5521485,
+          "lon": 13.3668928
+        },
+        {
+          "lat": 52.5520348,
+          "lon": 13.366954
+        },
+        {
+          "lat": 52.5517142,
+          "lon": 13.3671384
+        },
+        {
+          "lat": 52.5516734,
+          "lon": 13.3671649
+        },
+        {
+          "lat": 52.5515563,
+          "lon": 13.3672407
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 417073458,
+      "bounds": {
+        "minlat": 52.5516726,
+        "minlon": 13.3671212,
+        "maxlat": 52.5521349,
+        "maxlon": 13.3673949
+      },
+      "geometry": [
+        {
+          "lat": 52.5516726,
+          "lon": 13.3673949
+        },
+        {
+          "lat": 52.5517878,
+          "lon": 13.367328
+        },
+        {
+          "lat": 52.5518503,
+          "lon": 13.3672913
+        },
+        {
+          "lat": 52.5519579,
+          "lon": 13.367227
+        },
+        {
+          "lat": 52.5521349,
+          "lon": 13.3671212
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 417073459,
+      "bounds": {
+        "minlat": 52.5566969,
+        "minlon": 13.3655065,
+        "maxlat": 52.5568199,
+        "maxlon": 13.3655288
+      },
+      "geometry": [
+        {
+          "lat": 52.5568199,
+          "lon": 13.3655065
+        },
+        {
+          "lat": 52.5567566,
+          "lon": 13.365518
+        },
+        {
+          "lat": 52.5567209,
+          "lon": 13.3655245
+        },
+        {
+          "lat": 52.5566969,
+          "lon": 13.3655288
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "destination": "Tiergarten",
+        "destination:ref": "B 96",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "none|merge_to_left",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 428853076,
+      "bounds": {
+        "minlat": 52.5413858,
+        "minlon": 13.3687613,
+        "maxlat": 52.5414513,
+        "maxlon": 13.3689189
+      },
+      "geometry": [
+        {
+          "lat": 52.5413858,
+          "lon": 13.3687613
+        },
+        {
+          "lat": 52.5414513,
+          "lon": 13.3689189
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2023-12-05",
+        "departures_board": "timetable",
+        "highway": "platform",
+        "kerb": "raised",
+        "kerb:approach_aid": "no",
+        "lit": "yes",
+        "name": "U Reinickendorfer Straße/Fennstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "surface": "paved",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 428853077,
+      "bounds": {
+        "minlat": 52.5413397,
+        "minlon": 13.3693192,
+        "maxlat": 52.541518,
+        "maxlon": 13.369682
+      },
+      "geometry": [
+        {
+          "lat": 52.541518,
+          "lon": 13.369682
+        },
+        {
+          "lat": 52.5414093,
+          "lon": 13.369472
+        },
+        {
+          "lat": 52.5413397,
+          "lon": 13.3693192
+        }
+      ],
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:tactile_paving": "2023-12-05",
+        "departures_board": "timetable",
+        "highway": "platform",
+        "kerb": "raised",
+        "kerb:approach_aid": "no",
+        "lit": "yes",
+        "name": "U Reinickendorfer Straße/Fennstraße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "surface": "paved",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 914405990,
+      "bounds": {
+        "minlat": 52.5408861,
+        "minlon": 13.3676845,
+        "maxlat": 52.540931,
+        "maxlon": 13.3677826
+      },
+      "geometry": [
+        {
+          "lat": 52.5408861,
+          "lon": 13.3676845
+        },
+        {
+          "lat": 52.540931,
+          "lon": 13.3677826
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "platform",
+        "kerb": "raised",
+        "kerb:approach_aid": "no",
+        "lit": "yes",
+        "name": "U Reinickendorfer Straße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "surface": "paved",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 914405991,
+      "bounds": {
+        "minlat": 52.5415708,
+        "minlon": 13.3679322,
+        "maxlat": 52.5416012,
+        "maxlon": 13.3679861
+      },
+      "geometry": [
+        {
+          "lat": 52.5416012,
+          "lon": 13.3679322
+        },
+        {
+          "lat": 52.5415708,
+          "lon": 13.3679861
+        }
+      ],
+      "tags": {
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "platform",
+        "kerb": "raised",
+        "kerb:approach_aid": "no",
+        "lit": "yes",
+        "name": "U Reinickendorfer Straße",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "no",
+        "surface": "paved",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1018576606,
+      "bounds": {
+        "minlat": 52.5426993,
+        "minlon": 13.3696456,
+        "maxlat": 52.5434484,
+        "maxlon": 13.3697124
+      },
+      "geometry": [
+        {
+          "lat": 52.5434484,
+          "lon": 13.3696507
+        },
+        {
+          "lat": 52.5433446,
+          "lon": 13.3696456
+        },
+        {
+          "lat": 52.5432939,
+          "lon": 13.3696476
+        },
+        {
+          "lat": 52.5431757,
+          "lon": 13.3696523
+        },
+        {
+          "lat": 52.5428715,
+          "lon": 13.3696901
+        },
+        {
+          "lat": 52.5427746,
+          "lon": 13.3697022
+        },
+        {
+          "lat": 52.5426993,
+          "lon": 13.3697124
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "share_busway",
+        "cycleway:right:oneway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "30",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_stopping @ (Mo-Fr 06:00-18:00); loading_only @ (Mo-Fr 10:00-14:00)",
+        "parking:right:zone": "80",
+        "postal_code": "13347",
+        "psv:lanes:conditional": "yes|yes|designated@(Mo-Fr 06:00-18:00)",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1018576607,
+      "bounds": {
+        "minlat": 52.543795,
+        "minlon": 13.3698497,
+        "maxlat": 52.5438996,
+        "maxlon": 13.3698889
+      },
+      "geometry": [
+        {
+          "lat": 52.543795,
+          "lon": 13.3698497
+        },
+        {
+          "lat": 52.5438996,
+          "lon": 13.3698889
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (22:00-06:00)",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1039466857,
+      "bounds": {
+        "minlat": 52.5467021,
+        "minlon": 13.3692384,
+        "maxlat": 52.5481471,
+        "maxlon": 13.3693665
+      },
+      "geometry": [
+        {
+          "lat": 52.5467021,
+          "lon": 13.3693665
+        },
+        {
+          "lat": 52.5474228,
+          "lon": 13.3692964
+        },
+        {
+          "lat": 52.5477005,
+          "lon": 13.3692694
+        },
+        {
+          "lat": 52.5479338,
+          "lon": 13.3692527
+        },
+        {
+          "lat": 52.5479669,
+          "lon": 13.3692475
+        },
+        {
+          "lat": 52.5480232,
+          "lon": 13.3692425
+        },
+        {
+          "lat": 52.5480474,
+          "lon": 13.3692404
+        },
+        {
+          "lat": 52.5481471,
+          "lon": 13.3692384
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101202557,
+      "bounds": {
+        "minlat": 52.556697,
+        "minlon": 13.3657065,
+        "maxlat": 52.5568312,
+        "maxlon": 13.3657326
+      },
+      "geometry": [
+        {
+          "lat": 52.556697,
+          "lon": 13.3657326
+        },
+        {
+          "lat": 52.5567346,
+          "lon": 13.3657253
+        },
+        {
+          "lat": 52.5567708,
+          "lon": 13.3657182
+        },
+        {
+          "lat": 52.5568312,
+          "lon": 13.3657065
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "slight_left|through|none",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101202558,
+      "bounds": {
+        "minlat": 52.5560214,
+        "minlon": 13.3655288,
+        "maxlat": 52.5566969,
+        "maxlon": 13.3656601
+      },
+      "geometry": [
+        {
+          "lat": 52.5566969,
+          "lon": 13.3655288
+        },
+        {
+          "lat": 52.5564338,
+          "lon": 13.3655786
+        },
+        {
+          "lat": 52.5563846,
+          "lon": 13.3655879
+        },
+        {
+          "lat": 52.5560214,
+          "lon": 13.3656601
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "exclusive",
+        "destination": "Tiergarten",
+        "destination:ref": "B 96",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "turn:lanes": "none|merge_to_left",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1102166933,
+      "bounds": {
+        "minlat": 52.5483751,
+        "minlon": 13.3688894,
+        "maxlat": 52.5487859,
+        "maxlon": 13.3690428
+      },
+      "geometry": [
+        {
+          "lat": 52.5487859,
+          "lon": 13.3688894
+        },
+        {
+          "lat": 52.5486693,
+          "lon": 13.3689564
+        },
+        {
+          "lat": 52.548639,
+          "lon": 13.3689759
+        },
+        {
+          "lat": 52.5485205,
+          "lon": 13.3690301
+        },
+        {
+          "lat": 52.5484876,
+          "lon": 13.369038
+        },
+        {
+          "lat": 52.5484322,
+          "lon": 13.3690428
+        },
+        {
+          "lat": 52.5483751,
+          "lon": 13.3690395
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1102623883,
+      "bounds": {
+        "minlat": 52.541932,
+        "minlon": 13.3699799,
+        "maxlat": 52.5420436,
+        "maxlon": 13.3699845
+      },
+      "geometry": [
+        {
+          "lat": 52.541932,
+          "lon": 13.3699799
+        },
+        {
+          "lat": 52.5420242,
+          "lon": 13.3699845
+        },
+        {
+          "lat": 52.5420436,
+          "lon": 13.3699834
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "30",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1133400241,
+      "bounds": {
+        "minlat": 52.5426601,
+        "minlon": 13.3698661,
+        "maxlat": 52.5428796,
+        "maxlon": 13.3699035
+      },
+      "geometry": [
+        {
+          "lat": 52.5426601,
+          "lon": 13.3699035
+        },
+        {
+          "lat": 52.5427826,
+          "lon": 13.3698863
+        },
+        {
+          "lat": 52.5428796,
+          "lon": 13.3698661
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "30",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1133400243,
+      "bounds": {
+        "minlat": 52.5419154,
+        "minlon": 13.3697567,
+        "maxlat": 52.542063,
+        "maxlon": 13.3697952
+      },
+      "geometry": [
+        {
+          "lat": 52.542063,
+          "lon": 13.3697923
+        },
+        {
+          "lat": 52.542026,
+          "lon": 13.3697952
+        },
+        {
+          "lat": 52.5419419,
+          "lon": 13.3697658
+        },
+        {
+          "lat": 52.5419154,
+          "lon": 13.3697567
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "share_busway",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "none",
+        "cycleway:right:traffic_sign": "DE:245,1022-10",
+        "cycleway:right:width": "4",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "30",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "psv:lanes:conditional": "yes|yes|designated@(Mo-Fr 06:00-18:00)",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1165052752,
+      "bounds": {
+        "minlat": 52.5420436,
+        "minlon": 13.3699035,
+        "maxlat": 52.5426601,
+        "maxlon": 13.3699834
+      },
+      "geometry": [
+        {
+          "lat": 52.5420436,
+          "lon": 13.3699834
+        },
+        {
+          "lat": 52.5426601,
+          "lon": 13.3699035
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "30",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "80",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1188508764,
+      "bounds": {
+        "minlat": 52.5415709,
+        "minlon": 13.3697055,
+        "maxlat": 52.5415989,
+        "maxlon": 13.3697507
+      },
+      "geometry": [
+        {
+          "lat": 52.5415709,
+          "lon": 13.3697507
+        },
+        {
+          "lat": 52.5415989,
+          "lon": 13.3697055
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "living_street",
+        "lane_markings": "no",
+        "lit": "yes",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "no",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "sidewalk:both": "separate",
+        "sidewalk:right:surface": "paving_stones",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "traffic_sign": "DE:325.1",
+        "wikidata": "Q60447616"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1188508765,
+      "bounds": {
+        "minlat": 52.5415302,
+        "minlon": 13.3697507,
+        "maxlat": 52.5415709,
+        "maxlon": 13.3698168
+      },
+      "geometry": [
+        {
+          "lat": 52.5415302,
+          "lon": 13.3698168
+        },
+        {
+          "lat": 52.5415396,
+          "lon": 13.3698016
+        },
+        {
+          "lat": 52.541562,
+          "lon": 13.3697652
+        },
+        {
+          "lat": 52.5415709,
+          "lon": 13.3697507
+        }
+      ],
+      "tags": {
+        "cycleway:both": "no",
+        "foot": "use_sidepath",
+        "highway": "living_street",
+        "lane_markings": "no",
+        "lit": "yes",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "no",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "sidewalk:both": "separate",
+        "sidewalk:right:surface": "paving_stones",
+        "smoothness": "intermediate",
+        "surface": "sett",
+        "traffic_sign": "DE:325.1",
+        "wikidata": "Q60447616"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1198117976,
+      "bounds": {
+        "minlat": 52.5445351,
+        "minlon": 13.3699635,
+        "maxlat": 52.5446943,
+        "maxlon": 13.3700805
+      },
+      "geometry": [
+        {
+          "lat": 52.5446943,
+          "lon": 13.3700805
+        },
+        {
+          "lat": 52.5446235,
+          "lon": 13.370029
+        },
+        {
+          "lat": 52.5445614,
+          "lon": 13.3699838
+        },
+        {
+          "lat": 52.5445351,
+          "lon": 13.3699635
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "30",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1199289619,
+      "bounds": {
+        "minlat": 52.5461788,
+        "minlon": 13.3692741,
+        "maxlat": 52.5463179,
+        "maxlon": 13.3692906
+      },
+      "geometry": [
+        {
+          "lat": 52.5463179,
+          "lon": 13.3692741
+        },
+        {
+          "lat": 52.5461788,
+          "lon": 13.3692906
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1297653217,
+      "bounds": {
+        "minlat": 52.5521485,
+        "minlon": 13.3659662,
+        "maxlat": 52.5544703,
+        "maxlon": 13.3668928
+      },
+      "geometry": [
+        {
+          "lat": 52.5544703,
+          "lon": 13.3659662
+        },
+        {
+          "lat": 52.5539142,
+          "lon": 13.3660723
+        },
+        {
+          "lat": 52.5538851,
+          "lon": 13.3660812
+        },
+        {
+          "lat": 52.5536861,
+          "lon": 13.366142
+        },
+        {
+          "lat": 52.5534768,
+          "lon": 13.3662331
+        },
+        {
+          "lat": 52.5533579,
+          "lon": 13.3662906
+        },
+        {
+          "lat": 52.5530748,
+          "lon": 13.3664315
+        },
+        {
+          "lat": 52.5527732,
+          "lon": 13.3665817
+        },
+        {
+          "lat": 52.5525912,
+          "lon": 13.3666724
+        },
+        {
+          "lat": 52.5521485,
+          "lon": 13.3668928
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 06:00-18:00)",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1300623029,
+      "bounds": {
+        "minlat": 52.5453159,
+        "minlon": 13.3692396,
+        "maxlat": 52.5454508,
+        "maxlon": 13.369507
+      },
+      "geometry": [
+        {
+          "lat": 52.5454508,
+          "lon": 13.369507
+        },
+        {
+          "lat": 52.545415,
+          "lon": 13.3694356
+        },
+        {
+          "lat": 52.5454065,
+          "lon": 13.3694191
+        },
+        {
+          "lat": 52.5453548,
+          "lon": 13.3693193
+        },
+        {
+          "lat": 52.5453344,
+          "lon": 13.3692789
+        },
+        {
+          "lat": 52.5453159,
+          "lon": 13.3692396
+        }
+      ],
+      "tags": {
+        "bicycle": "no",
+        "highway": "service",
+        "lit": "yes",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "postal_code": "13347",
+        "smoothness": "excellent",
+        "surface": "paving_stones",
+        "wikidata": "Q60447616"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1308611917,
+      "bounds": {
+        "minlat": 52.5462602,
+        "minlon": 13.3693665,
+        "maxlat": 52.5467021,
+        "maxlon": 13.3694115
+      },
+      "geometry": [
+        {
+          "lat": 52.5462602,
+          "lon": 13.3694115
+        },
+        {
+          "lat": 52.5465329,
+          "lon": 13.3693828
+        },
+        {
+          "lat": 52.5467021,
+          "lon": 13.3693665
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Reinickendorf",
+        "destination:ref": "B 96",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1308904096,
+      "bounds": {
+        "minlat": 52.5481471,
+        "minlon": 13.3689951,
+        "maxlat": 52.5488629,
+        "maxlon": 13.3692384
+      },
+      "geometry": [
+        {
+          "lat": 52.5481471,
+          "lon": 13.3692384
+        },
+        {
+          "lat": 52.5483023,
+          "lon": 13.3692135
+        },
+        {
+          "lat": 52.5483815,
+          "lon": 13.3692001
+        },
+        {
+          "lat": 52.5484956,
+          "lon": 13.3691769
+        },
+        {
+          "lat": 52.5485331,
+          "lon": 13.3691695
+        },
+        {
+          "lat": 52.5486107,
+          "lon": 13.3691411
+        },
+        {
+          "lat": 52.5486959,
+          "lon": 13.3690968
+        },
+        {
+          "lat": 52.5488629,
+          "lon": 13.3689951
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (2024 Aug 02-2026 Mar 31 00:00-24:00)",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "note:de": "Baustelle, bis Frühjahr 2026 geplant",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1390992958,
+      "bounds": {
+        "minlat": 52.5546235,
+        "minlon": 13.3660407,
+        "maxlat": 52.5550457,
+        "maxlon": 13.3661138
+      },
+      "geometry": [
+        {
+          "lat": 52.5546235,
+          "lon": 13.3661138
+        },
+        {
+          "lat": 52.5548851,
+          "lon": 13.366069
+        },
+        {
+          "lat": 52.5549683,
+          "lon": 13.3660549
+        },
+        {
+          "lat": 52.5550044,
+          "lon": 13.3660485
+        },
+        {
+          "lat": 52.5550457,
+          "lon": 13.3660407
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 06:00-18:00)",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1396650506,
+      "bounds": {
+        "minlat": 52.5440205,
+        "minlon": 13.3696277,
+        "maxlat": 52.5445351,
+        "maxlon": 13.3699635
+      },
+      "geometry": [
+        {
+          "lat": 52.5445351,
+          "lon": 13.3699635
+        },
+        {
+          "lat": 52.5442281,
+          "lon": 13.3697267
+        },
+        {
+          "lat": 52.5441437,
+          "lon": 13.3696769
+        },
+        {
+          "lat": 52.544063,
+          "lon": 13.3696392
+        },
+        {
+          "lat": 52.5440205,
+          "lon": 13.3696277
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "share_busway",
+        "cycleway:right:oneway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "30",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "psv:lanes:conditional": "yes|yes|designated@(Mo-Fr 06:00-18:00)",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1396650507,
+      "bounds": {
+        "minlat": 52.5426147,
+        "minlon": 13.3697124,
+        "maxlat": 52.5426993,
+        "maxlon": 13.369724
+      },
+      "geometry": [
+        {
+          "lat": 52.5426993,
+          "lon": 13.3697124
+        },
+        {
+          "lat": 52.5426147,
+          "lon": 13.369724
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "share_busway",
+        "cycleway:right:oneway": "yes",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "30",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "13347",
+        "psv:lanes:conditional": "yes|yes|designated@(Mo-Fr 06:00-18:00)",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1396650508,
+      "bounds": {
+        "minlat": 52.542063,
+        "minlon": 13.369724,
+        "maxlat": 52.5426147,
+        "maxlon": 13.3697923
+      },
+      "geometry": [
+        {
+          "lat": 52.5426147,
+          "lon": 13.369724
+        },
+        {
+          "lat": 52.5421636,
+          "lon": 13.3697841
+        },
+        {
+          "lat": 52.5420876,
+          "lon": 13.3697903
+        },
+        {
+          "lat": 52.542063,
+          "lon": 13.3697923
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "share_busway",
+        "cycleway:right:oneway": "yes",
+        "cycleway:right:surface": "asphalt",
+        "cycleway:right:surface:colour": "none",
+        "cycleway:right:traffic_sign": "DE:245,1022-10",
+        "cycleway:right:width": "4",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "3",
+        "lanes:psv": "1",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "30",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:restriction:conditional": "no_stopping @ (Mo-Fr 06:00-18:00); loading_only @ (Mo-Fr 10:00-14:00)",
+        "parking:right:zone": "80",
+        "postal_code": "13347",
+        "psv:lanes:conditional": "yes|yes|designated@(Mo-Fr 06:00-18:00)",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:cycleway:right:width": "Luftbild 2025",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1412209244,
+      "bounds": {
+        "minlat": 52.5461846,
+        "minlon": 13.3694115,
+        "maxlat": 52.5462602,
+        "maxlon": 13.3694171
+      },
+      "geometry": [
+        {
+          "lat": 52.5461846,
+          "lon": 13.3694171
+        },
+        {
+          "lat": 52.5462602,
+          "lon": 13.3694115
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Reinickendorf",
+        "destination:ref": "B 96",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1412209245,
+      "bounds": {
+        "minlat": 52.5460143,
+        "minlon": 13.3694171,
+        "maxlat": 52.5461846,
+        "maxlon": 13.3694347
+      },
+      "geometry": [
+        {
+          "lat": 52.5460143,
+          "lon": 13.3694347
+        },
+        {
+          "lat": 52.5460547,
+          "lon": 13.3694306
+        },
+        {
+          "lat": 52.5461846,
+          "lon": 13.3694171
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Reinickendorf",
+        "destination:ref": "B 96",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1412209246,
+      "bounds": {
+        "minlat": 52.545378,
+        "minlon": 13.369384,
+        "maxlat": 52.5455906,
+        "maxlon": 13.369625
+      },
+      "geometry": [
+        {
+          "lat": 52.5455906,
+          "lon": 13.369384
+        },
+        {
+          "lat": 52.5455436,
+          "lon": 13.3694207
+        },
+        {
+          "lat": 52.5454508,
+          "lon": 13.369507
+        },
+        {
+          "lat": 52.5454056,
+          "lon": 13.3695712
+        },
+        {
+          "lat": 52.545378,
+          "lon": 13.369625
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1412209253,
+      "bounds": {
+        "minlat": 52.5453387,
+        "minlon": 13.3698,
+        "maxlat": 52.5454268,
+        "maxlon": 13.3702503
+      },
+      "geometry": [
+        {
+          "lat": 52.5453387,
+          "lon": 13.3702503
+        },
+        {
+          "lat": 52.545401,
+          "lon": 13.3699118
+        },
+        {
+          "lat": 52.5454268,
+          "lon": 13.3698
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Reinickendorf",
+        "destination:ref": "B 96",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "lane",
+        "parking:right:fee": "yes",
+        "parking:right:fee:conditional": "no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)",
+        "parking:right:orientation": "parallel",
+        "parking:right:zone": "79;80",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1412209254,
+      "bounds": {
+        "minlat": 52.5452987,
+        "minlon": 13.3702503,
+        "maxlat": 52.5453387,
+        "maxlon": 13.3704572
+      },
+      "geometry": [
+        {
+          "lat": 52.5452987,
+          "lon": 13.3704572
+        },
+        {
+          "lat": 52.545323,
+          "lon": 13.3703317
+        },
+        {
+          "lat": 52.5453308,
+          "lon": 13.3702917
+        },
+        {
+          "lat": 52.5453387,
+          "lon": 13.3702503
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "separate",
+        "destination": "Reinickendorf",
+        "destination:ref": "B 96",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1412226007,
+      "bounds": {
+        "minlat": 52.5463179,
+        "minlon": 13.3692401,
+        "maxlat": 52.5466264,
+        "maxlon": 13.3692741
+      },
+      "geometry": [
+        {
+          "lat": 52.5466264,
+          "lon": 13.3692401
+        },
+        {
+          "lat": 52.5465291,
+          "lon": 13.369249
+        },
+        {
+          "lat": 52.5463179,
+          "lon": 13.3692741
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 07:00-17:00)",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:both:restriction": "no_stopping",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1415224408,
+      "bounds": {
+        "minlat": 52.5559532,
+        "minlon": 13.3658175,
+        "maxlat": 52.5562404,
+        "maxlon": 13.3658712
+      },
+      "geometry": [
+        {
+          "lat": 52.5559532,
+          "lon": 13.3658712
+        },
+        {
+          "lat": 52.5562404,
+          "lon": 13.3658175
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1415228170,
+      "bounds": {
+        "minlat": 52.5544703,
+        "minlon": 13.365929,
+        "maxlat": 52.5546642,
+        "maxlon": 13.3659662
+      },
+      "geometry": [
+        {
+          "lat": 52.5546642,
+          "lon": 13.365929
+        },
+        {
+          "lat": 52.5545662,
+          "lon": 13.3659479
+        },
+        {
+          "lat": 52.5544703,
+          "lon": 13.3659662
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 06:00-18:00)",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:left": "no",
+        "parking:right": "separate",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1415228171,
+      "bounds": {
+        "minlat": 52.5546642,
+        "minlon": 13.3658528,
+        "maxlat": 52.5550479,
+        "maxlon": 13.365929
+      },
+      "geometry": [
+        {
+          "lat": 52.5550479,
+          "lon": 13.3658528
+        },
+        {
+          "lat": 52.554904,
+          "lon": 13.3658802
+        },
+        {
+          "lat": 52.5546642,
+          "lon": 13.365929
+        }
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "cycleway:right:lane": "advisory",
+        "foot": "use_sidepath",
+        "highway": "primary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "maxspeed:conditional": "30 @ (Mo-Fr 06:00-18:00)",
+        "name": "Reinickendorfer Straße",
+        "name:etymology:wikidata": "Q158876",
+        "oneway": "yes",
+        "parking:both": "no",
+        "parking:right:restriction": "no_stopping",
+        "postal_code": "13347",
+        "ref": "B 96",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:maxspeed": "DE:urban",
+        "surface": "asphalt",
+        "wikidata": "Q60447616",
+        "zone:traffic": "DE:urban"
+      }
+    }
+  ]
+}
