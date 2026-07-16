@@ -26,6 +26,7 @@ NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
 OVERPASS_URL = "https://overpass-api.de/api/interpreter"
 USER_AGENT = "shayma-kfz-fahrrad-scenario-pipeline/0.1"
 DEFAULT_RADIUS_M = 140
+_DEFAULT_CACHE_DIR = Path(__file__).resolve().parent / "output" / "osm_cache"
 BIKE_FACILITY_TYPES = {
     "separated_cycle_track",
     "protected_bike_lane",
@@ -175,7 +176,7 @@ out tags geom;
     return _run_overpass_query(query, cache_dir)
 
 
-def _run_overpass_query(query, cache_dir, retries=2):
+def _run_overpass_query(query, cache_dir, retries=3):
     cache_key = _cache_key(query)
     cache_path = cache_dir / "overpass" / f"{cache_key}.json"
     if cache_path.exists():
@@ -191,8 +192,9 @@ def _run_overpass_query(query, cache_dir, retries=2):
             "Content-Type": "application/x-www-form-urlencoded",
         },
     )
-    # The public Overpass instance intermittently returns 504s under load,
-    # unrelated to query correctness — retry a couple of times before giving up.
+    # The public Overpass instance intermittently returns 504/503 (server
+    # too busy) or 429 (rate limited) under load, unrelated to query
+    # correctness — retry a few times with backoff before giving up.
     for attempt in range(retries + 1):
         time.sleep(1.0)
         try:
@@ -200,9 +202,9 @@ def _run_overpass_query(query, cache_dir, retries=2):
                 payload = json.loads(response.read().decode("utf-8"))
             break
         except HTTPError as exc:
-            if exc.code not in (504, 503) or attempt == retries:
+            if exc.code not in (504, 503, 429) or attempt == retries:
                 raise
-            time.sleep(3.0 * (attempt + 1))
+            time.sleep(5.0 * (attempt + 1))
     cache_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
     return payload
 
@@ -958,6 +960,302 @@ def _manual_heading_override(data, road_name, cache_dir):
             return None
 
     return None
+
+
+# ── Topology detection (midblock vs. junction) for OpenDRIVE template selection ─
+#
+# Automates what was previously a manual Google Maps/OSM lookup: given a
+# report's text, decide whether its location is a straight midblock segment
+# or a junction, and if a junction, how many roads actually meet there. This
+# reuses the same intersection-node infrastructure already built and
+# verified for heading resolution above (_overpass_named_ways,
+# _shared_geometry_point) rather than a parallel Overpass query system —
+# the only new query is _count_ways_at_node(), which reuses
+# _overpass_nearby_roads() (already fixed/verified) at the node itself.
+
+_STREET_STOPWORDS = {
+    "richtung", "kreuzung", "hoehe", "höhe", "ecke", "naehe", "nähe", "bereich",
+    "einmuendung", "einmündung", "hausnummer", "kreuzungsbereich", "querungshilfe",
+    "kollision", "unfall", "beteiligte",
+}
+_STREET_EXCLUDE_FULL = {"radweg", "gehweg", "parkplatz", "mittelstreifen", "fahrbahn"}
+_STREET_SUFFIX_WORDS = ("strasse", "weg", "allee", "damm", "platz", "gasse", "ufer", "ring", "chaussee")
+
+# A handful of German street-naming patterns with an embedded lowercase
+# preposition (e.g. "Straße zum Müggelhort", "Unter den Eichen") that a plain
+# capitalized-word chain can't capture on its own.
+_PREPOSITION_STREET_RE = re.compile(
+    r"\b(?:Straße (?:zum|zur) [A-ZÄÖÜ][\wäöüÄÖÜß]*"
+    r"|Unter den [A-ZÄÖÜ][\wäöüÄÖÜß]*"
+    r"|Am [A-ZÄÖÜ][\wäöüÄÖÜß]*"
+    r"|An der [A-ZÄÖÜ][\wäöüÄÖÜß]*)\b"
+)
+_STREET_CHAIN_RE = re.compile(r"\b[A-ZÄÖÜ][\wäöüÄÖÜß]*(?:[- ][A-ZÄÖÜ][\wäöüÄÖÜß]*)*\.?")
+# "STREET Richtung STREET2" / "STREET in Richtung STREET2" — STREET2 is a
+# heading/destination reference, not a distinct collision-site cross-street.
+_RICHTUNG_BEFORE_RE = re.compile(r"(?:in\s+)?[Rr]ichtung\s+$")
+
+
+def _street_word_normalize(word):
+    return word.casefold().replace("ß", "ss").rstrip(".")
+
+
+def _street_suffix_and_period(word):
+    """Return (has_street_suffix, needs_trailing_period)."""
+    n = _street_word_normalize(word)
+    if n.endswith("str"):
+        return True, True  # abbreviation: keep the period ("...Str.")
+    return any(n.endswith(s) for s in _STREET_SUFFIX_WORDS), False
+
+
+def _street_is_bare_suffix_word(word):
+    n = _street_word_normalize(word)
+    return n == "str" or n in _STREET_SUFFIX_WORDS
+
+
+def _street_dedup_key(name):
+    """Fold hyphen/space and the str/straße abbreviation so 'Erwin-Bock Str.'
+    and 'Erwin-Bock-Straße' are recognized as the same street when the same
+    report names it twice, inconsistently."""
+    n = _street_word_normalize(name).replace("-", " ")
+    n = re.sub(r"\bstr\b", "strasse", n)
+    return re.sub(r"\s+", " ", n)
+
+
+def _extract_street_candidates(report_text):
+    """Deterministic, regex-based extraction of German street names from a
+    report's raw text (no LLM call — the topology *decision* must be
+    deterministic, and this keeps the whole pipeline testable/reproducible).
+    Validated against all 19 reports in manual_classification_reference.md;
+    known limitation: reports phrased as "from X toward Y" without an
+    explicit "turned into"/"crossing of" cue can be ambiguous about which
+    named streets define the actual collision site (see
+    topology_detection_report.md for flagged cases).
+    """
+    found = []  # (name, start, end)
+    for m in _PREPOSITION_STREET_RE.finditer(report_text):
+        found.append((m.group(0), m.start(), m.end()))
+    covered_spans = [(s, e) for _, s, e in found]
+
+    def overlaps_covered(span):
+        return any(s <= span[0] < e or s < span[1] <= e for s, e in covered_spans)
+
+    for m in _STREET_CHAIN_RE.finditer(report_text):
+        if overlaps_covered(m.span()):
+            continue
+        raw = m.group(0)
+        base = m.start()
+        tokens = re.split(r"([- ])", raw)
+        words = tokens[0::2]
+        seps = tokens[1::2] + [""]
+
+        segments = [[]]  # list of (word, sep, offset_within_raw)
+        offset = 0
+        for word, sep in zip(words, seps):
+            if _street_word_normalize(word) in _STREET_STOPWORDS:
+                segments.append([])
+            else:
+                segments[-1].append((word, sep, offset))
+            offset += len(word) + len(sep)
+
+        for seg in segments:
+            if not seg:
+                continue
+            last_word, _, last_offset = seg[-1]
+            has_suffix, needs_period = _street_suffix_and_period(last_word)
+            if not has_suffix:
+                continue
+            if len(seg) == 1 and _street_is_bare_suffix_word(last_word):
+                continue  # lone "Straße"/"Weg"/... with no qualifier — too generic
+            last_clean = last_word.rstrip(".")
+            if needs_period:
+                last_clean += "."
+            parts = [w for w, _, _ in seg[:-1]]
+            seps_between = [s for _, s, _ in seg[:-1]]
+            name = "".join(p + s for p, s in zip(parts, seps_between)) + last_clean
+            if _street_word_normalize(name) in _STREET_EXCLUDE_FULL:
+                continue
+            seg_start = base + seg[0][2]
+            seg_end = base + last_offset + len(last_word)
+            found.append((name, seg_start, seg_end))
+
+    # Drop "STREET Richtung STREET2" destination references.
+    found.sort(key=lambda t: t[1])
+    kept = []
+    for name, start, end in found:
+        prefix = report_text[:start]
+        m = _RICHTUNG_BEFORE_RE.search(prefix)
+        is_direction_ref = False
+        if m:
+            before = prefix[: m.start()].rstrip()
+            if any(before.endswith(k[0]) for k in kept):
+                is_direction_ref = True
+        if not is_direction_ref:
+            kept.append((name, start, end))
+
+    candidates = []
+    seen_keys = []
+    for name, _, _ in kept:
+        key = _street_dedup_key(name)
+        if key in seen_keys:
+            continue
+        seen_keys.append(key)
+        candidates.append(name)
+    return candidates
+
+
+def _extract_house_number(report_text):
+    m = re.search(r"Hausnummer\s+(\d+)", report_text)
+    return m.group(1) if m else None
+
+
+def _count_ways_at_node(lat, lon, cache_dir, radius_m=30):
+    """Count distinct OSM ways whose geometry passes through (lat, lon) — the
+    shared node found by _shared_geometry_point() — regardless of name.
+    Reuses _overpass_nearby_roads(), the already-fixed nearby-roads query,
+    rather than a new Overpass query path.
+    """
+    overpass = _overpass_nearby_roads(lat, lon, radius_m, cache_dir)
+    roads, _ = _extract_road_context(overpass)
+    count = 0
+    for road in roads:
+        for pt in road.get("geometry", []):
+            if _local_distance_m(lat, lon, float(pt["lat"]), float(pt["lon"])) < 0.5:
+                count += 1
+                break
+    return count
+
+
+# turning_06's location was manually verified for the heading override above
+# (Alte Schönhauser Straße / Torstraße, Mitte, 52.528644/13.409324). Checking
+# the actual shared node there (see this session) found 4 distinct ways
+# touching it — Schönhauser Allee, Alte Schönhauser Straße, and Torstraße
+# split into two segments — a genuine 4-way crossing, not a forced answer.
+_TURNING_06_TOPOLOGY_OVERRIDE = {
+    "topology": "4way_junction",
+    "streets": ["Alte Schönhauser Straße", "Torstraße"],
+    "house_number": None,
+    "way_count": 4,
+    "reason": (
+        "Manually verified location (52.528644, 13.409324) — same override "
+        "as the heading fix. The exact shared node there has 4 ways "
+        "(Schönhauser Allee, Alte Schönhauser Straße, Torstraße x2 segments) "
+        "— a genuine 4-way crossing, not a forced/guessed answer."
+    ),
+}
+
+
+def _manual_topology_override(scenario_id):
+    if scenario_id == _TURNING_06_OVERRIDE_SCENARIO_ID:
+        return dict(_TURNING_06_TOPOLOGY_OVERRIDE, scenario_id=scenario_id)
+    return None
+
+
+def detect_topology(report_text, scenario_id, cache_dir=None):
+    """Deterministically classify a report's location topology from its
+    street name(s): "midblock" (-> straight_road.xodr), "4way_junction"
+    (-> intersection_4way.xodr), or "needs_manual_review" (do not force a
+    template choice). Reuses the intersection-node lookup infrastructure
+    built for heading resolution (_overpass_named_ways/_shared_geometry_point)
+    rather than a parallel query system.
+
+    Returns a dict: {scenario_id, topology, streets, house_number,
+    way_count, reason}.
+    """
+    if cache_dir is None:
+        cache_dir = _DEFAULT_CACHE_DIR
+
+    override = _manual_topology_override(scenario_id)
+    if override is not None:
+        return override
+
+    streets = _extract_street_candidates(report_text)
+    house_number = _extract_house_number(report_text)
+    base = {"scenario_id": scenario_id, "streets": streets, "house_number": house_number}
+
+    if len(streets) == 1:
+        return dict(
+            base,
+            topology="midblock",
+            way_count=None,
+            reason="Only one street name found in the report text; no distinct cross-street mentioned.",
+        )
+
+    if len(streets) != 2:
+        return dict(
+            base,
+            topology="needs_manual_review",
+            way_count=None,
+            reason=(
+                f"{len(streets)} candidate street names found ({streets}); "
+                "the decision logic is only defined for exactly 1 or 2 — "
+                "cannot deterministically pick which pair (if any) defines "
+                "the collision location."
+            ),
+        )
+
+    name_a, name_b = streets
+    # The combined "A / B" query is not always resolvable even when both
+    # streets individually are; it's only used as an approximate anchor for
+    # the subsequent named-way search (at a generous radius), so a fallback
+    # to either street alone is fine here — precision comes from the actual
+    # shared-node lookup below, not from this geocode.
+    geocode_queries = [
+        f"{name_a} / {name_b}, Berlin, Germany",
+        f"{name_a}, Berlin, Germany",
+        f"{name_b}, Berlin, Germany",
+    ]
+    geocoded = None
+    try:
+        for query in geocode_queries:
+            geocoded = _nominatim_search(query, cache_dir)
+            if geocoded:
+                break
+    except (HTTPError, URLError, TimeoutError, OSError, ValueError) as exc:
+        return dict(base, topology="needs_manual_review", way_count=None,
+                    reason=f"Geocoding failed: {exc}")
+    if not geocoded:
+        return dict(base, topology="needs_manual_review", way_count=None,
+                    reason="Geocoding returned no result for either street name.")
+    lat, lon = float(geocoded["lat"]), float(geocoded["lon"])
+
+    try:
+        payload_a = _overpass_named_ways(name_a, lat, lon, INTERSECTION_SEARCH_RADIUS_M, cache_dir)
+        payload_b = _overpass_named_ways(name_b, lat, lon, INTERSECTION_SEARCH_RADIUS_M, cache_dir)
+    except (HTTPError, URLError, TimeoutError, OSError, ValueError) as exc:
+        return dict(base, topology="needs_manual_review", way_count=None,
+                    reason=f"Overpass query failed: {exc}")
+
+    roads_a, _ = _extract_road_context(payload_a)
+    roads_b, _ = _extract_road_context(payload_b)
+    road_b, index = _shared_geometry_point(roads_a, roads_b)
+    if road_b is None:
+        return dict(
+            base, topology="needs_manual_review", way_count=None,
+            reason=(
+                f"No shared OSM node found between {name_a!r} and {name_b!r} "
+                f"within {INTERSECTION_SEARCH_RADIUS_M}m of the geocoded location "
+                "(fragmentation, a genuine data gap, or a wrong geocode)."
+            ),
+        )
+
+    node = road_b["geometry"][index]
+    node_lat, node_lon = float(node["lat"]), float(node["lon"])
+    try:
+        way_count = _count_ways_at_node(node_lat, node_lon, cache_dir)
+    except (HTTPError, URLError, TimeoutError, OSError, ValueError) as exc:
+        return dict(base, topology="needs_manual_review", way_count=None,
+                    reason=f"Way-count query at the shared node failed: {exc}")
+
+    if way_count == 2:
+        topology, reason = "midblock", f"{way_count} ways at the shared node — not actually a junction."
+    elif way_count == 4:
+        topology, reason = "4way_junction", f"{way_count} ways at the shared node — a genuine 4-way crossing."
+    else:
+        topology = "needs_manual_review"
+        reason = f"{way_count} ways at the shared node — not the clean 2 or 4 case; do not force a template."
+
+    return dict(base, topology=topology, way_count=way_count, reason=reason)
 
 
 def _best_lane_count(roads, preferred_name=None):

@@ -28,6 +28,7 @@ import shutil
 
 from extract_scenario import extract_scenario as _extract_scenario
 from osm_enrichment import enrich_with_osm as _enrich_with_osm
+from osm_enrichment import detect_topology as _detect_topology
 from complete_parameters import complete_parameters as _complete_parameters
 from template_selector import select_template as _select_template
 from generate_scenario import generate_openscenario as _generate_openscenario
@@ -425,11 +426,21 @@ def _tool_generate_scenario(state: AgentState, parameter_overrides: str | None =
     enriched_path = state.output_dir / f"{sid}.enriched.json"
 
     scenario_type = state.data.get("classification", {}).get("scenario_type", "")
-    template_rel = _select_template(scenario_type)
+    report_text = state.data.get("source", {}).get("raw_text", "")
+    topology_result = _detect_topology(report_text, sid, cache_dir=OSM_CACHE_DIR)
+    state.data["topology"] = topology_result
+    state.record("detect_topology", topology_result)
+    print(
+        f"  ✓ Topology: {topology_result['topology']}"
+        f"  (streets={topology_result['streets']}, way_count={topology_result['way_count']})"
+    )
+
+    template_rel = _select_template(scenario_type, topology_result["topology"])
     template_src = Path(__file__).resolve().parent / template_rel
     xodr_filename = Path(template_rel).name
     xodr_path = state.output_dir / xodr_filename
     shutil.copy2(template_src, xodr_path)
+    state.data["template_used"] = xodr_filename
 
     try:
         _generate_openscenario(state.data, xosc_path, xodr_filename=xodr_filename)

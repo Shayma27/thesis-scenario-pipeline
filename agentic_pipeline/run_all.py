@@ -134,6 +134,8 @@ def _run_one(
     confidence = (
         state.data.get("classification", {}).get("confidence") if state.data else None
     )
+    topology = state.data.get("topology", {}) if state.data else {}
+    template_used = state.data.get("template_used") if state.data else None
 
     _launch_esmini(xosc)
 
@@ -143,6 +145,13 @@ def _run_one(
 
     while True:
         print()
+        print(f"  {'─' * (W - 2)}")
+        print(f"  scenario_type: {scenario_type}  (confidence: {confidence})")
+        print(
+            f"  topology:      {topology.get('topology', '?')}"
+            f"  (streets={topology.get('streets')}, way_count={topology.get('way_count')})"
+            f"  →  template: {template_used}"
+        )
         print(f"  {'─' * (W - 2)}")
         print("  [r]  Rewatch the simulation")
         print("  [f]  Give feedback to improve it")
