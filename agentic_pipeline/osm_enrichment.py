@@ -445,7 +445,7 @@ def _apply_lane_context(data, context, cache_dir):
         if secondary_road_name:
             sec_heading = _manual_heading_override(data, secondary_road_name, cache_dir)
             if sec_heading is not None:
-                sec_source, sec_reason = "manual_override", _TURNING_06_OVERRIDE_REASON
+                sec_source, sec_reason = "manual_override", _TURNING_06_OVERRIDE_SECONDARY_REASON
             else:
                 sec_source = "osm_way_geometry"
                 sec_reason = "Secondary road heading derived from OSM way geometry."
@@ -876,14 +876,28 @@ def _resolve_road_heading(roads, road_name, other_road_name, geocoded, cache_dir
 # as Alte Schönhauser Straße at Torstraße, Mitte (52.528644, 13.409324) —
 # see this session. This override is scoped to this one scenario_id and
 # road name only — it must not affect any other report.
+#
+# The secondary road ("Torstraße") is not itself ambiguous in OSM — its own
+# name resolves fine — but _resolve_road_heading()'s fallback search for it
+# was still anchored at context["geocoded"], i.e. the same wrong Pankow
+# point, so it never found the real segment ~15-20m from the verified
+# coordinate (osm_id 1460822181 near 52.5290287, 13.4086293). The override
+# below re-anchors *only* this report's secondary-road search at the same
+# verified coordinate used for the primary-road fix.
 _TURNING_06_OVERRIDE_SCENARIO_ID = "turning_06"
 _TURNING_06_OVERRIDE_ROAD_NAME = "Schönhauser Straße"
+_TURNING_06_OVERRIDE_SECONDARY_ROAD_NAME = "Torstraße"
 _TURNING_06_OVERRIDE_LAT = 52.528644
 _TURNING_06_OVERRIDE_LON = 13.409324
 _TURNING_06_OVERRIDE_REASON = (
     "Report's 'Schönhauser Straße' wrongly geocodes to an unrelated Pankow "
     "street; verified manually as Alte Schönhauser Straße at Torstraße, "
     "Mitte (52.528644, 13.409324) — see this session."
+)
+_TURNING_06_OVERRIDE_SECONDARY_REASON = (
+    "Report's 'Torstraße' search was anchored at the same wrong Pankow "
+    "geocode as the primary road; re-anchored at the same manually "
+    "verified coordinate (52.528644, 13.409324) — see this session."
 )
 
 
@@ -919,9 +933,31 @@ def _manual_heading_override(data, road_name, cache_dir):
     match that single report, else None. See the override block above."""
     if data.get("source", {}).get("source_id") != _TURNING_06_OVERRIDE_SCENARIO_ID:
         return None
-    if not road_name or _normalize_name(road_name) != _normalize_name(_TURNING_06_OVERRIDE_ROAD_NAME):
+    if not road_name:
         return None
-    return _nearest_road_heading(_TURNING_06_OVERRIDE_LAT, _TURNING_06_OVERRIDE_LON, cache_dir)
+    normalized = _normalize_name(road_name)
+
+    if normalized == _normalize_name(_TURNING_06_OVERRIDE_ROAD_NAME):
+        # "Schönhauser Straße" itself geocodes to the wrong street entirely —
+        # use whichever real road is physically nearest the verified point.
+        return _nearest_road_heading(_TURNING_06_OVERRIDE_LAT, _TURNING_06_OVERRIDE_LON, cache_dir)
+
+    if normalized == _normalize_name(_TURNING_06_OVERRIDE_SECONDARY_ROAD_NAME):
+        # "Torstraße" is not itself ambiguous — it just needs searching near
+        # the verified point instead of the wrong Pankow anchor.
+        try:
+            overpass = _overpass_nearby_roads(
+                _TURNING_06_OVERRIDE_LAT, _TURNING_06_OVERRIDE_LON, 150, cache_dir
+            )
+        except (HTTPError, URLError, TimeoutError, OSError, ValueError):
+            return None
+        roads, _ = _extract_road_context(overpass)
+        try:
+            return _best_road_heading(roads, road_name)
+        except RoadHeadingNotFoundError:
+            return None
+
+    return None
 
 
 def _best_lane_count(roads, preferred_name=None):
