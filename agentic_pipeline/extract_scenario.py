@@ -25,12 +25,7 @@ INPUT_DIR = PROJECT_DIR / "input"
 
 # ── Allowed values (Hierarchical Scenario Repository) ─────────────────────────
 SCHEMA = {
-    "scenario_types": [
-        "right_turn_conflict", "left_turn_conflict", "straight_crossing_conflict",
-        "midblock_crossing_conflict", "priority_violation_conflict",
-        "parking_access_conflict", "enter_roadway_conflict",
-        "lane_change_conflict", "overtaking_conflict", "dooring", "unknown"
-    ],
+    "scenario_types": ["turning", "crossing", "longitudinal", "other"],
     "participant_types": ["car", "truck", "bus", "bicycle", "e_bike", "pedestrian", "other"],
     "maneuvers": [
         "go_straight", "turn_right", "turn_left", "turn_right_into_parking",
@@ -50,6 +45,16 @@ SYSTEM_PROMPT = f"""You are Agent 1 of a multi-agent pipeline for autonomous dri
 Your task: extract structured scenario information from a German Berlin police accident report involving a car/truck and a cyclist.
 
 OUTPUT: Return ONLY a valid JSON object. No explanation, no markdown, no code blocks. Raw JSON only.
+
+SCENARIO_TYPE DEFINITIONS (classify into exactly one of these four):
+- turning: the motor vehicle turns across the cyclist's path.
+- crossing: the motor vehicle goes straight while the cyclist crosses its path.
+  The cyclist's exact maneuver does not matter for this category (straight,
+  turning, red-light violation, etc. all count as "crossing" as long as it is
+  the cyclist who crosses the vehicle's straight path).
+- longitudinal: the motor vehicle and cyclist travel in the same direction
+  (includes overtaking and lane-change scenarios).
+- other: everything else.
 
 EXTRACTION RULES:
 - Extract only what is explicitly stated or can be directly inferred from the text
