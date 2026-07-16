@@ -317,7 +317,7 @@ def generate_opendrive(data, output_path):
     """Generate a straight OpenDRIVE road for the Malteserstraße prototype."""
     output_path = Path(output_path)
     scenario_type = data.get("classification", {}).get("scenario_type")
-    if scenario_type == "straight_crossing_conflict":
+    if scenario_type == "crossing":
         _generate_crossing_opendrive(data, output_path)
         return
 

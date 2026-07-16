@@ -130,15 +130,19 @@ attention.
 
 - **`template_selector.py`**: `select_template()` now takes an optional
   `topology` argument (the `detect_topology()` result) and uses it as the
-  deciding input for `right_turn_conflict` / `left_turn_conflict` /
-  `straight_crossing_conflict` / `priority_violation_conflict` / `unknown`,
-  replacing the previous scenario_type-only lookup table for those types.
-  `lane_change_conflict` still always gets `straight_road.xodr` regardless
-  of topology — a lane change is a single-road maneuver by definition, and
-  the street names these reports mention are incidental landmarks along
-  that road, not a real cross-street (see longitudinal_01/02 above). `dooring`
-  is still excluded outright. When topology is `None` or
-  `needs_manual_review`, the old scenario_type-based table is used as a
+  deciding input for `turning` / `crossing` / `other`, replacing the previous
+  scenario_type-only lookup table for those types. (Note: this document was
+  originally written against the earlier 9-category scenario_type system —
+  right_turn_conflict/left_turn_conflict/straight_crossing_conflict/etc.
+  Classification has since been rebuilt around a 4-category taxonomy —
+  turning/crossing/longitudinal/other — but the topology results above, which
+  never depended on scenario_type at all, are unaffected.) `longitudinal`
+  still always gets `straight_road.xodr` regardless of topology — a
+  longitudinal (overtaking/lane-change) scenario is a single-road maneuver by
+  definition, and the street names these reports mention are incidental
+  landmarks along that road, not a real cross-street (see
+  longitudinal_01/02 above). When topology is `None` or
+  `needs_manual_review`, the scenario_type-based table is used as a
   fallback so generation isn't blocked while a report awaits manual review.
 - **`pipeline.py`**: `_tool_generate_scenario()` now calls
   `detect_topology(report_text, scenario_id)` (reusing

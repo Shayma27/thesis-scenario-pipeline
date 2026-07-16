@@ -18,17 +18,11 @@ from defaults import (
     DEFAULT_SPEEDS_MPS,
 )
 
-# Scenario types that use the two-road crossing layout
-_CROSSING = {"straight_crossing_conflict"}
-
-# Types where the motor vehicle makes a turn at the conflict point
-_TURNING = {"right_turn_conflict", "left_turn_conflict", "parking_access_conflict"}
-
-# Types where the car approaches at higher speed (reports explicitly say überhöhte Geschwindigkeit)
-_HIGH_SPEED = {"midblock_crossing_conflict"}
-
-# Types where the motor vehicle is stationary (door opens into cyclist path)
-_PARKED = {"dooring"}
+# "crossing" is the only category using the two-road crossing layout: the
+# motor vehicle goes straight on one road while the cyclist crosses it on
+# another, so both need to be placed on (and timed across) two distinct
+# approaches. "turning", "longitudinal", and "other" are all single-road
+# scenarios by comparison.
 
 
 def complete_parameters(data: dict) -> dict:
@@ -37,7 +31,7 @@ def complete_parameters(data: dict) -> dict:
     parameters filled in using scenario-type-aware defaults.
     """
     data = copy.deepcopy(data)
-    stype = data.get("classification", {}).get("scenario_type", "unknown")
+    stype = data.get("classification", {}).get("scenario_type", "other")
 
     params = data.setdefault("generated_simulation_parameters", {})
     odr = params.setdefault("opendrive", {})
@@ -48,14 +42,20 @@ def complete_parameters(data: dict) -> dict:
     _setd(odr, "road_length_m", DEFAULT_ROAD_LENGTH_M)
     _setd(odr, "motor_lane_width_m", DEFAULT_MOTOR_LANE_WIDTH_M)
     _setd(odr, "bike_lane_width_m", DEFAULT_BIKE_LANE_WIDTH_M)
-    _setd(odr, "road_geometry", "crossing" if stype in _CROSSING else "line")
+    is_crossing = stype == "crossing"
+    _setd(odr, "road_geometry", "crossing" if is_crossing else "line")
     road_len = float(odr["road_length_m"])
 
     _setd(osc, "simulation_duration_s", DEFAULT_SIMULATION_DURATION_S)
 
-    is_crossing = stype in _CROSSING
     motor_p = _find(data, "motor_vehicle")
     cyclist_p = _find(data, "cyclist")
+    motor_maneuver = str((motor_p or {}).get("maneuver", "")).lower()
+    # A stationary/parked motor vehicle (e.g. a door-opening incident) is
+    # identified from the participant's own maneuver, not scenario_type —
+    # "other" is a broad catch-all that includes many non-stationary cases
+    # too, so this can't be inferred from the coarse category alone.
+    is_parked = motor_maneuver == "parked"
 
     # ── Conflict parameters ───────────────────────────────────────────────
     conf = osc.setdefault("conflict", {})
@@ -95,18 +95,21 @@ def complete_parameters(data: dict) -> dict:
         a = actors[mid]
         mtype = motor_p.get("type", "car")
         mmaneuver = motor_p.get("maneuver", "go_straight")
-        mspeed = _motor_speed(mtype, mmaneuver, stype)
+        mspeed = _motor_speed(mtype, mmaneuver)
 
         _setd(a, "vehicle_category", mtype)
         _setd(a, "initial_road_id", 1 if is_crossing else 0)
         _setd(a, "initial_lane_id", _motor_lane(odr, for_secondary_road=is_crossing))
         if is_crossing:
             _setd(a, "initial_s_m", round(max(2.0, cs - mspeed * ct), 2))
-        elif stype in _PARKED:
+        elif is_parked:
             _setd(a, "initial_s_m", cs)
-        elif stype in _TURNING:
+        elif stype == "turning":
+            # A turn is imminent at the conflict point, so start closer to it.
             _setd(a, "initial_s_m", round(max(2.0, cs - 20.0), 2))
         else:
+            # longitudinal / other (not parked): a normal following distance
+            # on a single straight road, no turn or crossing in progress.
             _setd(a, "initial_s_m", round(max(2.0, cs - 25.0), 2))
         _setd(a, "initial_speed_mps", mspeed)
         _note(data, mid, a, stype)
@@ -141,20 +144,30 @@ def _cyclist_speed(ctype: str) -> float:
     return DEFAULT_SPEEDS_MPS["cyclist"]["normal"]
 
 
-def _motor_speed(mtype: str, mmaneuver: str, stype: str) -> float:
-    if stype in _PARKED:
+def _motor_speed(mtype: str, mmaneuver: str) -> float:
+    # A stationary/parked vehicle and a turning vehicle are both identified
+    # from the participant's own maneuver — decoupled from scenario_type,
+    # since e.g. "other" is too broad a category to imply either on its own.
+    maneuver_lower = mmaneuver.lower()
+    if maneuver_lower == "parked":
         return 0.0
-    is_turn = any(t in mmaneuver.lower() for t in ("turn_right", "turn_left", "turn"))
-    if mtype == "bus":
-        return DEFAULT_SPEEDS_MPS["bus"]["overtaking"]
+    is_turn = any(t in maneuver_lower for t in ("turn_right", "turn_left", "turn"))
+    is_overtake = "overtake" in maneuver_lower
+
     if mtype == "truck":
         return (DEFAULT_SPEEDS_MPS["truck"]["turning"] if is_turn
                 else DEFAULT_SPEEDS_MPS["truck"]["urban_straight"])
+    if mtype == "bus":
+        # Buses share a truck's large-vehicle turning dynamics; only an
+        # "overtaking" speed is defined for buses (the one bus report in
+        # this corpus is a same-direction overtaking scenario), so that
+        # remains the straight-line/longitudinal default.
+        return DEFAULT_SPEEDS_MPS["truck"]["turning"] if is_turn else DEFAULT_SPEEDS_MPS["bus"]["overtaking"]
     # car / default
     if is_turn:
         return DEFAULT_SPEEDS_MPS["car"]["turning"]
-    if stype in _HIGH_SPEED:
-        return DEFAULT_SPEEDS_MPS["car"]["excessive"]
+    if is_overtake:
+        return DEFAULT_SPEEDS_MPS["car"]["overtaking"]
     return DEFAULT_SPEEDS_MPS["car"]["urban_straight"]
 
 

@@ -13,6 +13,10 @@ DEFAULT_SPEEDS_MPS = {
     "car": {
         "turning": 4.0,
         "urban_straight": 8.0,
+        # A car needs to be faster than the cyclist it's overtaking to
+        # actually complete the pass — distinct from "excessive", which
+        # represents unsafe/reckless speed, not merely "fast enough to overtake".
+        "overtaking": 10.0,
         "excessive": 13.0,
     },
     "truck": {

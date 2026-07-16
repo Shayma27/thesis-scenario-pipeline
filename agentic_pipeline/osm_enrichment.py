@@ -326,7 +326,7 @@ def _apply_osm_context(data, context, cache_dir):
         "openscenario", {}
     ).setdefault("actors", {})
 
-    if scenario_type == "straight_crossing_conflict" and "car_1" in actors:
+    if scenario_type == "crossing" and "car_1" in actors:
         speed_mps = round(maxspeed_kmh * 0.65 / 3.6, 2)
         actors["car_1"]["initial_speed_mps"] = speed_mps
         _upsert_missing_parameter(
@@ -349,7 +349,7 @@ def _apply_lane_context(data, context, cache_dir):
     roads = context.get("matched_roads", [])
     geocoded = context.get("geocoded")
 
-    if scenario_type == "straight_crossing_conflict":
+    if scenario_type == "crossing":
         location = data.get("location", {})
         approaches = _approach_descriptors_from_location(location)
         primary_evidence = _approach_lane_count_evidence(
@@ -635,27 +635,48 @@ def _apply_cyclist_lane_id(data, position, opendrive_params):
 
 
 def _apply_turning_vehicle_lane_id(data, lane_count):
-    if data.get("classification", {}).get("scenario_type") != "parking_access_conflict":
+    if data.get("classification", {}).get("scenario_type") != "turning":
         return
+
+    motor_participant = next(
+        (p for p in data.get("participants", []) if p.get("class") == "motor_vehicle"), None
+    )
+    if not motor_participant:
+        return
+    motor_id = motor_participant.get("id")
 
     actors = data.setdefault("generated_simulation_parameters", {}).setdefault(
         "openscenario", {}
     ).setdefault("actors", {})
-    truck = actors.get("truck_1")
-    if not truck:
+    actor = actors.get(motor_id)
+    if not actor:
         return
 
-    lane_id = -max(1, int(lane_count))
-    truck["initial_lane_id"] = lane_id
+    maneuver = str(motor_participant.get("maneuver", "")).lower()
+    if "turn_left" in maneuver:
+        # A left-turning vehicle starts in the innermost lane, adjacent to
+        # the centerline (lane_id -1 in this template's numbering).
+        lane_id = -1
+        reason = (
+            "For a left-turning vehicle, it starts in the innermost "
+            "motor-vehicle lane (adjacent to the centerline)."
+        )
+    else:
+        # Right turns (and turning into a parking/side access on the right)
+        # start from the outermost/rightmost motor-vehicle lane.
+        lane_id = -max(1, int(lane_count))
+        reason = (
+            "For a right-turning vehicle, it starts in the rightmost "
+            "motor-vehicle lane of the generated OpenDRIVE road."
+        )
+
+    actor["initial_lane_id"] = lane_id
     _upsert_missing_parameter(
         data,
-        parameter="truck_1.initial_lane_id",
+        parameter=f"{motor_id}.initial_lane_id",
         value_used=lane_id,
         source="derived_from_osm_motor_lane_count",
-        reason=(
-            "For a right-turn/parking-access conflict, the truck starts in the "
-            "rightmost motor-vehicle lane of the generated OpenDRIVE road."
-        ),
+        reason=reason,
     )
 
 
@@ -1529,7 +1550,7 @@ def _apply_heading_overrides(data, opendrive_params, context):
 
 
 def _apply_lane_guided_maneuver_context(data, context):
-    if data.get("classification", {}).get("scenario_type") != "straight_crossing_conflict":
+    if data.get("classification", {}).get("scenario_type") != "crossing":
         return
 
     car_position = _participant_road_position(data, "car_1")

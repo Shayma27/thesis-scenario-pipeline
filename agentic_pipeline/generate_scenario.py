@@ -713,10 +713,12 @@ def _find_motor_participant_id(data):
 
 
 def generate_openscenario(data, output_path, xodr_filename):
-    """Generate the first OpenSCENARIO parking-access conflict prototype."""
+    """Generate the OpenSCENARIO file for "turning"/"longitudinal"/"other"
+    scenarios (dispatches to _generate_straight_crossing_openscenario for
+    "crossing")."""
     output_path = Path(output_path)
     scenario_type = data.get("classification", {}).get("scenario_type")
-    if scenario_type == "straight_crossing_conflict":
+    if scenario_type == "crossing":
         _generate_straight_crossing_openscenario(data, output_path, xodr_filename)
         return
 

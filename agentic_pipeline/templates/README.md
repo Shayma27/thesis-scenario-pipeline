@@ -1,16 +1,22 @@
 # OpenDRIVE Templates
 
-Pre-validated `.xodr` road topology files used by the agentic pipeline.
-The pipeline selects the appropriate template based on `scenario_type` extracted from
-the accident report, instead of generating a new `.xodr` per scenario.
+Pre-validated `.xodr` road topology files used by the agentic pipeline,
+instead of generating a new `.xodr` per scenario. Template choice is decided
+primarily by `osm_enrichment.detect_topology()` (an OSM-based signal for "is
+this location a straight midblock segment or a junction?"), with
+`scenario_type` — one of `turning`, `crossing`, `longitudinal`, `other` — used
+only where topology doesn't apply (`longitudinal` is a single-road maneuver
+by definition) or as a fallback while a report's topology is still
+`needs_manual_review`. See `template_selector.py` and
+`docs/topology_detection_report.md`.
 
 ## Template files
 
-| File | Topology | Derived from | Used for scenario types |
+| File | Topology | Derived from | Used for scenario types (fallback / when topology doesn't decide) |
 |------|----------|--------------|------------------------|
-| `intersection_4way.xodr` | 4-way intersection | esmini `fabriksgatan.xodr` [esmini v2.57.0] | `right_turn_conflict`, `left_turn_conflict`, `straight_crossing_conflict`, `priority_violation_conflict`, `unknown` |
-| `straight_road.xodr` | Straight road 500 m | esmini `straight_500m.xodr` [esmini v2.57.0] | `lane_change_conflict` |
-| `tjunction.xodr` | T-junction | placeholder — replace before production use | `priority_violation_conflict` (legacy) |
+| `intersection_4way.xodr` | 4-way intersection | esmini `fabriksgatan.xodr` [esmini v2.57.0] | `turning`, `crossing`, `other` |
+| `straight_road.xodr` | Straight road 500 m | esmini `straight_500m.xodr` [esmini v2.57.0] | `longitudinal` |
+| `tjunction.xodr` | T-junction | placeholder — replace before production use | unused — not referenced by `template_selector.py` |
 
 ## Bike lane modifications
 
@@ -24,14 +30,20 @@ outermost driving lane on each approach road and each connecting road:
 - **Junction laneLinks** added for all right-side-incoming biking movements
   (`intersection_4way.xodr` only)
 
-## Excluded scenario types
+## Known limitation: parked-vehicle (dooring) reports
 
-| Scenario type | Reason |
-|---------------|--------|
-| `dooring` | No suitable static template — esmini cannot model a door-opening event [esmini v2.57.0] |
-
-`select_template()` raises `ValueError` for `dooring`; the pipeline must handle this
-and skip esmini scenario generation for such reports.
+Under the previous 9-category system, a distinct `dooring` scenario_type let
+`select_template()` reject door-opening reports outright (no suitable static
+template exists — esmini cannot model a door-opening event). Under the
+4-category system, dooring-like reports fall under `other` alongside many
+unrelated, representable scenarios, so scenario_type alone can no longer
+identify and exclude them at the template-selection stage — `other` reports
+now get a template like any other unresolved case (see the table above).
+`complete_parameters.py` still detects a stationary motor vehicle from the
+participant's own `maneuver == "parked"` field (not from scenario_type) and
+places it correctly, but the underlying limitation — esmini has no template
+for an actual door-opening event — is unchanged; it's just no longer
+enforced as a hard rejection at template selection.
 
 ## Source attribution
 
