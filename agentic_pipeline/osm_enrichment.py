@@ -413,53 +413,63 @@ def _apply_lane_context(data, context, cache_dir):
                 source="osm_tag",
                 reason="OpenDRIVE motor-lane count was derived from nearby OSM lanes tags.",
             )
-        try:
-            heading = _resolve_road_heading(
-                roads, primary_road_name, secondary_road_name, geocoded, cache_dir
-            )
-        except RoadHeadingNotFoundError as exc:
-            heading = None
-            context["notes"].append(f"primary_heading_rad: {exc}")
-            _upsert_missing_parameter(
-                data,
-                parameter="primary_heading_rad",
-                value_used=None,
-                source="not_found",
-                reason=str(exc),
-            )
+        heading = _manual_heading_override(data, primary_road_name, cache_dir)
+        if heading is not None:
+            heading_source, heading_reason = "manual_override", _TURNING_06_OVERRIDE_REASON
+        else:
+            heading_source = "osm_way_geometry"
+            heading_reason = "Primary road heading derived from OSM way geometry."
+            try:
+                heading = _resolve_road_heading(
+                    roads, primary_road_name, secondary_road_name, geocoded, cache_dir
+                )
+            except RoadHeadingNotFoundError as exc:
+                context["notes"].append(f"primary_heading_rad: {exc}")
+                _upsert_missing_parameter(
+                    data,
+                    parameter="primary_heading_rad",
+                    value_used=None,
+                    source="not_found",
+                    reason=str(exc),
+                )
         if heading is not None:
             params["primary_heading_rad"] = heading
             _upsert_missing_parameter(
                 data,
                 parameter="primary_heading_rad",
                 value_used=round(heading, 6),
-                source="osm_way_geometry",
-                reason="Primary road heading derived from OSM way geometry.",
+                source=heading_source,
+                reason=heading_reason,
             )
 
         if secondary_road_name:
-            try:
-                sec_heading = _resolve_road_heading(
-                    roads, secondary_road_name, primary_road_name, geocoded, cache_dir
-                )
-            except RoadHeadingNotFoundError as exc:
-                sec_heading = None
-                context["notes"].append(f"secondary_heading_rad: {exc}")
-                _upsert_missing_parameter(
-                    data,
-                    parameter="secondary_heading_rad",
-                    value_used=None,
-                    source="not_found",
-                    reason=str(exc),
-                )
+            sec_heading = _manual_heading_override(data, secondary_road_name, cache_dir)
+            if sec_heading is not None:
+                sec_source, sec_reason = "manual_override", _TURNING_06_OVERRIDE_REASON
+            else:
+                sec_source = "osm_way_geometry"
+                sec_reason = "Secondary road heading derived from OSM way geometry."
+                try:
+                    sec_heading = _resolve_road_heading(
+                        roads, secondary_road_name, primary_road_name, geocoded, cache_dir
+                    )
+                except RoadHeadingNotFoundError as exc:
+                    context["notes"].append(f"secondary_heading_rad: {exc}")
+                    _upsert_missing_parameter(
+                        data,
+                        parameter="secondary_heading_rad",
+                        value_used=None,
+                        source="not_found",
+                        reason=str(exc),
+                    )
             if sec_heading is not None:
                 params["secondary_heading_rad"] = sec_heading
                 _upsert_missing_parameter(
                     data,
                     parameter="secondary_heading_rad",
                     value_used=round(sec_heading, 6),
-                    source="osm_way_geometry",
-                    reason="Secondary road heading derived from OSM way geometry.",
+                    source=sec_source,
+                    reason=sec_reason,
                 )
             sec_lanes = _best_lane_count(roads, secondary_road_name)
             if sec_lanes:
@@ -852,6 +862,66 @@ def _resolve_road_heading(roads, road_name, other_road_name, geocoded, cache_dir
                 f"{INTERSECTION_SEARCH_RADIUS_M}m of the geocoded location."
             ) from exc
         return heading
+
+
+# ── Single-report manual override ────────────────────────────────────────────
+# Report "turning_06" (the report_loader.py scenario_id for
+# manual_classification_reference.md's TURNING entry #6, "Eine Radfahrerin
+# befuhr die Schönhauser Straße in Richtung Torstraße...") has its primary
+# road "Schönhauser Straße" wrongly geocode ~7km away to an unrelated street
+# in Pankow — the general name-resolution/intersection-lookup fix (commit
+# 639a62c) can't recover from a wrong geocode anchor, and was deliberately
+# not widened to force it (see that commit's notes). Report's "Schönhauser
+# Straße" wrongly geocodes to an unrelated Pankow street; verified manually
+# as Alte Schönhauser Straße at Torstraße, Mitte (52.528644, 13.409324) —
+# see this session. This override is scoped to this one scenario_id and
+# road name only — it must not affect any other report.
+_TURNING_06_OVERRIDE_SCENARIO_ID = "turning_06"
+_TURNING_06_OVERRIDE_ROAD_NAME = "Schönhauser Straße"
+_TURNING_06_OVERRIDE_LAT = 52.528644
+_TURNING_06_OVERRIDE_LON = 13.409324
+_TURNING_06_OVERRIDE_REASON = (
+    "Report's 'Schönhauser Straße' wrongly geocodes to an unrelated Pankow "
+    "street; verified manually as Alte Schönhauser Straße at Torstraße, "
+    "Mitte (52.528644, 13.409324) — see this session."
+)
+
+
+def _local_distance_m(lat1, lon1, lat2, lon2):
+    avg_lat_rad = math.radians((lat1 + lat2) / 2)
+    dx = (lon2 - lon1) * 111_320 * math.cos(avg_lat_rad)
+    dy = (lat2 - lat1) * 110_540
+    return math.hypot(dx, dy)
+
+
+def _nearest_road_heading(lat, lon, cache_dir, radius_m=150):
+    """Heading of whichever real OSM road segment is physically nearest
+    (lat, lon), regardless of name. Used only for the turning_06 override
+    above, where a verified exact coordinate is known but the road's own
+    name fails to geocode to the right place.
+    """
+    overpass = _overpass_nearby_roads(lat, lon, radius_m, cache_dir)
+    roads, _ = _extract_road_context(overpass)
+    best = None  # (distance_m, road, index)
+    for road in roads:
+        for index, pt in enumerate(road.get("geometry", [])):
+            distance_m = _local_distance_m(lat, lon, float(pt["lat"]), float(pt["lon"]))
+            if best is None or distance_m < best[0]:
+                best = (distance_m, road, index)
+    if best is None:
+        return None
+    _, nearest_road, index = best
+    return _local_heading_rad(nearest_road.get("geometry", []), index)
+
+
+def _manual_heading_override(data, road_name, cache_dir):
+    """Return the turning_06 coordinate-override heading if `data`/`road_name`
+    match that single report, else None. See the override block above."""
+    if data.get("source", {}).get("source_id") != _TURNING_06_OVERRIDE_SCENARIO_ID:
+        return None
+    if not road_name or _normalize_name(road_name) != _normalize_name(_TURNING_06_OVERRIDE_ROAD_NAME):
+        return None
+    return _nearest_road_heading(_TURNING_06_OVERRIDE_LAT, _TURNING_06_OVERRIDE_LON, cache_dir)
 
 
 def _best_lane_count(roads, preferred_name=None):
