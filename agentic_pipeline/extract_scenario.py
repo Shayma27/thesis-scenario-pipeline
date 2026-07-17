@@ -34,10 +34,18 @@ SCHEMA = {
     ],
     "bike_facility_types": [
         "separated_cycle_track", "bike_lane", "shared_foot_cycle_path",
-        "cycle_crossing", "roadway_mixed", "sidewalk", "unknown"
+        "cycle_crossing", "roadway_mixed", "sidewalk", "median_strip", "unknown"
     ],
     "traffic_rule_status": ["priority", "must_yield", "violated_priority", "unknown"],
-    "directions": ["north", "south", "east", "west", "northwest", "northeast", "southwest", "southeast", "unknown"]
+    "directions": ["north", "south", "east", "west", "northwest", "northeast", "southwest", "southeast", "unknown"],
+    # Assumption 2 (docs/modeling_assumptions.md): explicit report language
+    # placing a participant on a *numbered driving lane* (Fahrstreifen),
+    # e.g. "den linken der drei Fahrstreifen" / "den äußerst rechten
+    # Fahrstreifen" — distinct from bike_facility_type/bike_facility_position,
+    # which describe a separate cycling facility, not a driving lane.
+    "road_positions": ["leftmost_motor_lane", "middle_motor_lane", "rightmost_motor_lane", "unknown"],
+    # Which side of the road a cycling facility is on, only if explicitly stated.
+    "bike_facility_positions": ["left", "middle", "right", "rightmost", "unknown"],
 }
 
 # ── System prompt ──────────────────────────────────────────────────────────────
@@ -60,7 +68,9 @@ EXTRACTION RULES:
 - Extract only what is explicitly stated or can be directly inferred from the text
 - Use null for any value not available in the report
 - For the osm_query field: construct the best possible OpenStreetMap search string from the location info
-- "LSA" means traffic light (Lichtzeichenanlage)
+- Traffic lights / signal state (LSA, "rote/grüne Ampel", "Rotlicht") are NEVER extracted or
+  represented anywhere in this pipeline (a deliberate modeling assumption) — do not add a field
+  for it and ignore any such mention when filling every other field
 - "Radfahrer/Radfahrerin" = bicycle
 - "LKW/Lkw/Lastwagen" = truck
 - "Pkw/Auto" = car
@@ -68,9 +78,16 @@ EXTRACTION RULES:
 - "baulich getrennter Radweg" = separated_cycle_track
 - "Schutzstreifen/Radfahrschutzstreifen" = bike_lane
 - "Nebenfahrbahn" = roadway_mixed (cyclist riding on side roadway)
+- "(begrünter) Mittelstreifen" = median_strip (cyclist coming from a median/central refuge strip)
 - participant id: use "truck_1", "car_1", "bus_1" for motor vehicle; always "cyclist_1" for cyclist
 - participant class: "motor_vehicle" or "cyclist"
 - conflict_mechanism: describe in snake_case what happened (e.g. "right_turn_across_cycle_track", "door_opened_into_cyclist_path")
+- road_position (per participant): set ONLY when the report explicitly places that participant on
+  a numbered driving lane, not a bike facility, e.g. "den linken/linksten/äußerst linken
+  Fahrstreifen" = leftmost_motor_lane, "den rechten/äußerst rechten Fahrstreifen" =
+  rightmost_motor_lane, "den mittleren Fahrstreifen" = middle_motor_lane. Otherwise null.
+- bike_facility_position: set ONLY when the report explicitly states which side of the road the
+  cycling facility is on (e.g. "der Radweg auf der linken Seite" = left). Otherwise null.
 
 ALLOWED VALUES:
 - scenario_type: {SCHEMA['scenario_types']}
@@ -79,6 +96,8 @@ ALLOWED VALUES:
 - bike_facility_type: {SCHEMA['bike_facility_types']}
 - traffic_rule_status: {SCHEMA['traffic_rule_status']}
 - directions: {SCHEMA['directions']}
+- road_position: {SCHEMA['road_positions']}
+- bike_facility_position: {SCHEMA['bike_facility_positions']}
 
 OUTPUT JSON STRUCTURE (fill every field, use null if unknown):
 {{
@@ -105,8 +124,8 @@ OUTPUT JSON STRUCTURE (fill every field, use null if unknown):
     "direction_references": ["<list of directions mentioned, e.g. 'north', 'south'>"]
   }},
   "road_context": {{
-    "traffic_light_present": "<yes / no / unknown>",
     "bike_facility_type": "<from allowed list>",
+    "bike_facility_position": "<from allowed list, or null if not stated>",
     "parking_present": "<yes / no / unknown>",
     "number_of_lanes_mentioned": "<number as string or 'unknown'>"
   }},
@@ -117,7 +136,8 @@ OUTPUT JSON STRUCTURE (fill every field, use null if unknown):
       "type": "<from allowed list>",
       "maneuver": "<from allowed list>",
       "initial_direction": "<from allowed directions>",
-      "traffic_rule_status": "<from allowed list>"
+      "traffic_rule_status": "<from allowed list>",
+      "road_position": "<from allowed list, or null if not stated>"
     }},
     {{
       "id": "cyclist_1",
@@ -125,7 +145,8 @@ OUTPUT JSON STRUCTURE (fill every field, use null if unknown):
       "type": "<bicycle or e_bike>",
       "maneuver": "<from allowed list>",
       "initial_direction": "<from allowed directions>",
-      "traffic_rule_status": "<from allowed list>"
+      "traffic_rule_status": "<from allowed list>",
+      "road_position": "<from allowed list, or null if not stated>"
     }}
   ],
   "conflict": {{

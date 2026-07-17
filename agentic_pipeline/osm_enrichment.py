@@ -60,7 +60,6 @@ def enrich_with_osm(data, cache_dir):
         "enrichment_status": "not_started",
         "radius_m": DEFAULT_RADIUS_M,
         "matched_roads": [],
-        "traffic_signals_nearby": "unknown",
         "notes": [],
     }
 
@@ -94,10 +93,9 @@ def enrich_with_osm(data, cache_dir):
         }
 
         overpass = _overpass_nearby_roads(lat, lon, DEFAULT_RADIUS_M, cache_dir)
-        roads, traffic_signals = _extract_road_context(overpass)
+        roads = _extract_road_context(overpass)
         matches = _select_relevant_roads(enriched, roads)
         context["matched_roads"] = matches
-        context["traffic_signals_nearby"] = "yes" if traffic_signals else "no"
         context["enrichment_status"] = "ok"
 
         _apply_osm_context(enriched, context, cache_dir)
@@ -150,11 +148,12 @@ def _nominatim_search(query, cache_dir):
 
 
 def _overpass_nearby_roads(lat, lon, radius_m, cache_dir):
+    # Assumption 3 (docs/modeling_assumptions.md): traffic lights are never
+    # modeled, so this query no longer fetches highway=traffic_signals nodes.
     query = f"""
 [out:json][timeout:25];
 (
   way(around:{radius_m},{lat},{lon})["highway"];
-  node(around:{radius_m},{lat},{lon})["highway"="traffic_signals"];
 );
 out tags center geom;
 """
@@ -227,19 +226,8 @@ def _cached_json(url, cache_dir, min_delay_s=0):
 
 def _extract_road_context(overpass_payload):
     roads = []
-    traffic_signals = []
     for element in overpass_payload.get("elements", []):
         tags = element.get("tags", {})
-        if element.get("type") == "node" and tags.get("highway") == "traffic_signals":
-            traffic_signals.append(
-                {
-                    "osm_id": element.get("id"),
-                    "lat": element.get("lat"),
-                    "lon": element.get("lon"),
-                }
-            )
-            continue
-
         if element.get("type") != "way" or "highway" not in tags:
             continue
 
@@ -276,7 +264,7 @@ def _extract_road_context(overpass_payload):
                 "geometry": element.get("geometry", []),
             }
         )
-    return roads, traffic_signals
+    return roads
 
 
 def _select_relevant_roads(data, roads):
@@ -294,10 +282,9 @@ def _select_relevant_roads(data, roads):
 
 
 def _apply_osm_context(data, context, cache_dir):
-    road_context = data.setdefault("road_context", {})
-    if road_context.get("traffic_light_present") in {None, "unknown"}:
-        road_context["traffic_light_present"] = context["traffic_signals_nearby"]
-
+    # Assumption 3 (docs/modeling_assumptions.md): traffic lights / signal
+    # state are never modeled, so road_context.traffic_light_present is not
+    # populated or merged from OSM here.
     geocoded = context.get("geocoded", {})
     if geocoded.get("lat") is not None and geocoded.get("lon") is not None:
         opendrive_params = data.setdefault("generated_simulation_parameters", {}).setdefault(

@@ -122,20 +122,36 @@ def _lane_position(actor):
 
 
 def _world_position_from_lane_s(actor, odr_params):
-    """Approximate lane positions for trajectory points on the straight road."""
+    """Approximate lane positions for trajectory points on the straight road.
+
+    Assumption 1 (docs/modeling_assumptions.md): straight_road.xodr models a
+    standard two-way road — lane id 1 is the real OpenDRIVE lane on the
+    opposite (positive-t) side of the center lane from lane id -1, adjacent
+    to it across the center-lane marking. For "longitudinal" scenarios this
+    positive/negative pair is reinterpreted as two same-direction parallel
+    lanes rather than opposing carriageways, so the lane id's sign (not its
+    absolute value) decides which side of the center lane a point sits on.
+    This keeps lane 1 and lane -1 at distinct, correctly-adjacent lateral
+    offsets instead of collapsing onto the same y — required for a
+    lane-change between them (e.g. manual_classification_reference.md
+    reports 18/19) to show up as an actual lateral move. Every other
+    scenario type only ever uses negative lane ids, so this is a strict
+    generalization with no behavior change for them.
+    """
     s = float(actor["initial_s_m"])
     lane_id = int(actor["initial_lane_id"])
     lane_index = abs(lane_id)
+    side = 1 if lane_id > 0 else -1
     motor_lane_width_m = float(odr_params.get("motor_lane_width_m", 3.5))
     bike_lane_width_m = float(odr_params.get("bike_lane_width_m", 2.0))
     motor_lane_count = int(odr_params.get("motor_lane_count", 1))
 
     if lane_index <= motor_lane_count:
-        y = -motor_lane_width_m * (lane_index - 0.5)
+        y = side * motor_lane_width_m * (lane_index - 0.5)
     elif lane_index == motor_lane_count + 1 and bike_lane_width_m > 0:
-        y = -(motor_lane_width_m * motor_lane_count + bike_lane_width_m / 2)
+        y = side * (motor_lane_width_m * motor_lane_count + bike_lane_width_m / 2)
     else:
-        y = -(
+        y = side * (
             motor_lane_width_m * motor_lane_count
             + max(0, bike_lane_width_m)
             + 0.75

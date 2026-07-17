@@ -77,8 +77,8 @@ TOOLS = [
             "name": "query_osm",
             "description": (
                 "Query OpenStreetMap for real road data at the accident location. "
-                "Returns actual lane counts, bike facility type and position, speed limit, "
-                "and traffic signal presence. Call after extract_scenario using the "
+                "Returns actual lane counts, bike facility type and position, and speed limit. "
+                "Call after extract_scenario using the "
                 "osm_query string from the extraction result."
             ),
             "parameters": {
@@ -293,7 +293,7 @@ def _show_extraction_summary(data: dict) -> None:
     print(f"  │  Conflict   {conflict.get('conflict_mechanism')}")
     col = "yes" if conflict.get("collision_happened") else "no"
     print(f"  │  Collision  {col}  ·  severity: {conflict.get('severity_text')}")
-    print(f"  │  Bike infra {road.get('bike_facility_type')}  ·  traffic light: {road.get('traffic_light_present')}")
+    print(f"  │  Bike infra {road.get('bike_facility_type')}")
     print(f"  └{'─' * (W - 2)}")
 
 
@@ -320,7 +320,6 @@ def _tool_extract_scenario(state: AgentState, report_text: str, scenario_id: str
         "conflict_mechanism": extracted["conflict"]["conflict_mechanism"],
         "collision_happened": extracted["conflict"]["collision_happened"],
         "bike_facility_type": extracted["road_context"]["bike_facility_type"],
-        "traffic_light_present": extracted["road_context"]["traffic_light_present"],
         "location_type": extracted["location"]["location_type"],
     }
 
@@ -346,7 +345,6 @@ def _tool_query_osm(state: AgentState, osm_query: str) -> dict:
 
     result: dict = {
         "enrichment_status": status,
-        "traffic_signals_nearby": ctx.get("traffic_signals_nearby"),
     }
     if notes:
         result["notes"] = notes

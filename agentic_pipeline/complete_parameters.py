@@ -99,7 +99,7 @@ def complete_parameters(data: dict) -> dict:
 
         _setd(a, "vehicle_category", mtype)
         _setd(a, "initial_road_id", 1 if is_crossing else 0)
-        _setd(a, "initial_lane_id", _motor_lane(odr, for_secondary_road=is_crossing))
+        _setd(a, "initial_lane_id", _motor_lane(odr, data, for_secondary_road=is_crossing))
         if is_crossing:
             _setd(a, "initial_s_m", round(max(2.0, cs - mspeed * ct), 2))
         elif is_parked:
@@ -119,20 +119,110 @@ def complete_parameters(data: dict) -> dict:
 
 # ── Lane defaults ─────────────────────────────────────────────────────────────
 
+# Assumption 2 (docs/modeling_assumptions.md): both templates model exactly
+# one cycling facility per direction — a 1.25 m at-grade painted lane (ERA
+# 2010 Schutzstreifen width), directly beside the driving lane, with no curb
+# or vertical separation. A report describing a *different* facility
+# geometry (a physically separated Radweg, a shared Geh-/Radweg, a Gehweg,
+# or a median strip) cannot be placed more precisely than this painted
+# lane, so these are flagged as unrepresentable and fall back to it, same
+# as "not specified" reports.
+_UNREPRESENTABLE_BIKE_FACILITIES = {
+    "separated_cycle_track", "shared_foot_cycle_path", "sidewalk", "median_strip",
+}
+
+
+def _road_position_lane_id(road_position: str, lane_count: int, *, allow_left_lane: bool) -> int | None:
+    """Map an explicit report "<side> Fahrstreifen" position to a lane id.
+
+    `allow_left_lane` gates Assumption 1's same-direction reinterpretation:
+    only "longitudinal" scenarios (straight_road.xodr) may use lane id 1,
+    the template's real second driving lane, as a same-direction lane.
+    Everywhere else "leftmost" still means the innermost lane on the
+    participant's own (negative-id) side, i.e. lane -1.
+    """
+    if road_position == "leftmost_motor_lane":
+        return 1 if allow_left_lane else -1
+    if road_position == "middle_motor_lane":
+        return -max(1, (lane_count + 1) // 2)
+    if road_position in {"rightmost_motor_lane", "right_motor_lane"}:
+        return -max(1, lane_count)
+    return None
+
+
 def _cyclist_lane(odr: dict, data: dict) -> int:
+    stype = data.get("classification", {}).get("scenario_type", "other")
+    n = int(odr.get("primary_road_lanes", odr.get("motor_lane_count", 1)))
+
+    # Assumption 2: explicit report language about the cyclist's own lane
+    # takes priority over any bike-facility inference — e.g.
+    # manual_classification_reference.md report 18 ("den linken der drei
+    # Fahrstreifen" -> "den äußerst rechten Fahrstreifen") describes the
+    # cyclist riding on the road itself, not a cycling facility at all.
+    cyclist_p = _find(data, "cyclist") or {}
+    road_position = str(cyclist_p.get("road_position") or "").casefold()
+    lane_id = _road_position_lane_id(road_position, n, allow_left_lane=stype == "longitudinal")
+    if lane_id is not None:
+        return lane_id
+
+    # Flag geometry mismatches from the report text regardless of what
+    # primary_has_bike_facility already says — osm_enrichment.py's
+    # BIKE_FACILITY_TYPES already treats "separated_cycle_track" as "has a
+    # bike facility" (true, for lane-choice purposes: it still goes on the
+    # template's bike lane), which would otherwise skip this check before
+    # it runs and silently miss flagging turning_01/turning_07.
+    ftype = data.get("road_context", {}).get("bike_facility_type", "unknown")
+    if ftype in _UNREPRESENTABLE_BIKE_FACILITIES:
+        _flag_unrepresentable_bike_facility(data, ftype)
+
     has_fac = bool(odr.get("primary_has_bike_facility"))
     if not has_fac:
-        ftype = data.get("road_context", {}).get("bike_facility_type", "unknown")
-        has_fac = ftype not in (None, "unknown", "none_reported", "roadway_mixed")
-    n = int(odr.get("primary_road_lanes", odr.get("motor_lane_count", 1)))
+        # Assumption 2 default: a "not specified" report and a report
+        # describing an unrepresentable facility type both fall back to the
+        # template's existing painted bike lane. "roadway_mixed" is the one
+        # facility type that explicitly means "no bike facility, cyclist
+        # rides the driving lane".
+        has_fac = ftype != "roadway_mixed"
     return -(n + 1) if has_fac else -n
 
 
-def _motor_lane(odr: dict, for_secondary_road: bool = False) -> int:
+def _flag_unrepresentable_bike_facility(data: dict, ftype: str) -> None:
+    missing = data.setdefault("missing_parameters", [])
+    param = "road_context.bike_facility_type"
+    source = "unrepresentable_bike_facility_geometry"
+    if any(m.get("parameter") == param and m.get("source") == source for m in missing):
+        return
+    missing.append({
+        "parameter": param,
+        "value_used": "bike_lane (template fallback)",
+        "source": source,
+        "reason": (
+            f"Report describes bike_facility_type='{ftype}', which neither "
+            "straight_road.xodr nor intersection_4way.xodr models precisely "
+            "(see Assumption 2 in docs/modeling_assumptions.md). Falling "
+            "back to the template's existing painted bike lane."
+        ),
+    })
+
+
+def _motor_lane(odr: dict, data: dict, for_secondary_road: bool = False) -> int:
     if for_secondary_road:
         n = int(odr.get("secondary_road_lanes", 1))
-    else:
-        n = int(odr.get("primary_road_lanes", odr.get("motor_lane_count", 1)))
+        return -max(1, n)
+
+    n = int(odr.get("primary_road_lanes", odr.get("motor_lane_count", 1)))
+    stype = data.get("classification", {}).get("scenario_type", "other")
+
+    # Assumption 1/2: symmetric with _cyclist_lane — a report can place the
+    # motor vehicle on an explicit numbered lane too (none of the 19
+    # reference reports need this today, but the two actors are equally
+    # eligible per Assumption 1's "both may use either of the two lanes").
+    motor_p = _find(data, "motor_vehicle") or {}
+    road_position = str(motor_p.get("road_position") or "").casefold()
+    lane_id = _road_position_lane_id(road_position, n, allow_left_lane=stype == "longitudinal")
+    if lane_id is not None:
+        return lane_id
+
     return -max(1, n)
 
 
