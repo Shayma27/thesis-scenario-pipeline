@@ -122,7 +122,10 @@ falling back on the other.
 | `shared_foot_cycle_path` (gemeinsamer Geh-/Radweg) | **no** — no distinct shared-path lane in the position policy | falls back to the biking lane |
 | `sidewalk` (Gehweg) | **no** — not wired into the position policy on either template (and doesn't exist in `straight_road.xodr` at all) | falls back to the biking lane |
 | `median_strip` (Mittelstreifen) | **no** — a median/central refuge strip has no OpenDRIVE counterpart in either template | falls back to the biking lane |
+| `roadway_mixed` (Nebenfahrbahn) describing a genuine **separate parallel carriageway** (dual-carriageway boulevard, not extra lanes of one road) | **no** — neither template models a separated parallel carriageway, only one continuous roadway | falls back to the biking lane |
 | not mentioned | — | default: the biking lane |
+
+Note the last two rows both start from `bike_facility_type = "roadway_mixed"` text — the difference is what "Nebenfahrbahn" turns out to mean at that specific location once checked against a map. It is not something the extraction schema can currently distinguish on its own (see crossing_08 below), so this is handled as a scoped, per-report manual override rather than a change to how "roadway_mixed" is interpreted generally.
 
 ### Per-report position table
 
@@ -148,16 +151,41 @@ Source: `docs/manual_classification_reference.md`'s 19 reports (numbered
 | crossing_05 (Storkower Straße) | not specified | — | biking lane (default) |
 | crossing_06 (Oranienburger Straße) | "Radfahrschutzstreifen" → bike_lane | **yes** | biking lane (exact match) |
 | crossing_07 (Luisenplatz) | not specified | — | biking lane (default) |
-| crossing_08 (Unter den Eichen) | "rechten Fahrstreifen der Nebenfahrbahn" → roadway_mixed | **yes** | driving lane |
+| crossing_08 (Unter den Eichen) | "rechten Fahrstreifen der Nebenfahrbahn" → roadway_mixed | **no — flagged** (see below) | biking lane (fallback) |
 | longitudinal_01 (Alt-Biesdorf) | explicit driving-lane language ("linken der drei Fahrstreifen" → "äußersten rechten Fahrstreifen"), not a bike facility | **yes, via Assumption 1's reinterpretation** (see remaining simplification above) | driving lanes `1` → `-1` |
 | longitudinal_02 (Markgrafendamm) | "Schutzstreifen" → bike_lane, then "nach links in den ... rechten Fahrstreifen" | **yes** — bike lane and driving lane are already adjacent on the same side | bike lane `-2` → driving lane `-1` |
 
-**Flagged/unrepresentable: 5 of 19** (turning_01, turning_07, turning_09,
-crossing_01, crossing_04). All five fall back to the template's biking
-lane and are recorded per-scenario in `missing_parameters` with
-`source: "unrepresentable_bike_facility_geometry"` (see
-`complete_parameters._flag_unrepresentable_bike_facility`) — they are not
-silently misrepresented as an exact match.
+**crossing_08 reclassified (this session):** originally listed as
+representable — "roadway_mixed" was read as "cyclist rides the general
+driving lane, no dedicated facility," same as crossing_08's own extraction
+rule ("Nebenfahrbahn" = roadway_mixed) implies for any other report.
+Manually re-verified against a satellite map: "Unter den Eichen" at this
+location is a genuine dual carriageway (Hauptfahrbahn + Nebenfahrbahn) —
+two physically separate parallel roadways with a median/verge between
+them, not a single road with multiple lanes. **The report's "rechten
+Fahrstreifen der Nebenfahrbahn" refers to this separate secondary
+carriageway, which neither `straight_road.xodr` nor
+`intersection_4way.xodr` models (both have only one continuous roadway
+with an adjacent bike lane, no concept of a separated parallel
+carriageway) — manually verified against satellite map, 2026-07-17.**
+This is scoped to crossing_08 only (`complete_parameters.py`'s
+`_CROSSING_08_OVERRIDE_SCENARIO_ID`) — it does not change how
+"roadway_mixed" is interpreted for any other report, since for most
+reports "Nebenfahrbahn"/"roadway_mixed" genuinely does just mean "ride the
+general lane." Flagged under its own source label rather than the generic
+bike-facility one, since the mismatch is about carriageway topology, not
+cycling-facility geometry — see Implementation below.
+
+**Flagged/unrepresentable: 6 of 19** (turning_01, turning_07, turning_09,
+crossing_01, crossing_04, crossing_08). The first five fall back to the
+template's biking lane and are recorded per-scenario in
+`missing_parameters` with `source:
+"unrepresentable_bike_facility_geometry"` (see
+`complete_parameters._flag_unrepresentable_bike_facility`); crossing_08
+falls back the same way but is recorded with `source:
+"unrepresentable_carriageway_geometry"` (see
+`complete_parameters._flag_unrepresentable_carriageway_geometry`). None
+of the six are silently misrepresented as an exact match.
 
 ### Implementation
 
@@ -176,6 +204,19 @@ silently misrepresented as an exact match.
   implemented the equivalent report-text-first priority for OSM-enriched
   runs; it is unchanged by this task (see the separate, out-of-scope
   Agent 2/Agent 3 ordering issue noted below).
+- `complete_parameters.py`'s `_cyclist_lane()` also carries a single-report
+  manual override, keyed on `data["source"]["source_id"] ==
+  "crossing_08"` (the stable id `report_loader.py` synthesizes for this
+  report — same pattern already used for `osm_enrichment.py`'s
+  `turning_06` heading override): when this report's `bike_facility_type`
+  is `"roadway_mixed"`, it is treated as unrepresentable instead of "ride
+  the driving lane," and flagged via the new
+  `_flag_unrepresentable_carriageway_geometry()` /
+  `source: "unrepresentable_carriageway_geometry"` (kept separate from
+  `_flag_unrepresentable_bike_facility()` /
+  `unrepresentable_bike_facility_geometry`, since this is a carriageway-
+  topology mismatch, not a cycling-facility-geometry mismatch). No other
+  report's `"roadway_mixed"` handling changes.
 
 ---
 

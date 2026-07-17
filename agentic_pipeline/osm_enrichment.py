@@ -840,8 +840,8 @@ def _intersection_heading(name_a, name_b, lat, lon, cache_dir, radius_m=INTERSEC
     except (HTTPError, URLError, TimeoutError, OSError, ValueError):
         return None
 
-    roads_a, _ = _extract_road_context(payload_a)
-    roads_b, _ = _extract_road_context(payload_b)
+    roads_a = _extract_road_context(payload_a)
+    roads_b = _extract_road_context(payload_b)
     if not roads_a or not roads_b:
         return None
 
@@ -925,7 +925,7 @@ def _nearest_road_heading(lat, lon, cache_dir, radius_m=150):
     name fails to geocode to the right place.
     """
     overpass = _overpass_nearby_roads(lat, lon, radius_m, cache_dir)
-    roads, _ = _extract_road_context(overpass)
+    roads = _extract_road_context(overpass)
     best = None  # (distance_m, road, index)
     for road in roads:
         for index, pt in enumerate(road.get("geometry", [])):
@@ -961,7 +961,7 @@ def _manual_heading_override(data, road_name, cache_dir):
             )
         except (HTTPError, URLError, TimeoutError, OSError, ValueError):
             return None
-        roads, _ = _extract_road_context(overpass)
+        roads = _extract_road_context(overpass)
         try:
             return _best_road_heading(roads, road_name)
         except RoadHeadingNotFoundError:
@@ -1124,7 +1124,7 @@ def _count_ways_at_node(lat, lon, cache_dir, radius_m=30):
     rather than a new Overpass query path.
     """
     overpass = _overpass_nearby_roads(lat, lon, radius_m, cache_dir)
-    roads, _ = _extract_road_context(overpass)
+    roads = _extract_road_context(overpass)
     count = 0
     for road in roads:
         for pt in road.get("geometry", []):
@@ -1234,8 +1234,8 @@ def detect_topology(report_text, scenario_id, cache_dir=None):
         return dict(base, topology="needs_manual_review", way_count=None,
                     reason=f"Overpass query failed: {exc}")
 
-    roads_a, _ = _extract_road_context(payload_a)
-    roads_b, _ = _extract_road_context(payload_b)
+    roads_a = _extract_road_context(payload_a)
+    roads_b = _extract_road_context(payload_b)
     road_b, index = _shared_geometry_point(roads_a, roads_b)
     if road_b is None:
         return dict(

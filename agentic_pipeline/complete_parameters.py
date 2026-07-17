@@ -131,6 +131,35 @@ _UNREPRESENTABLE_BIKE_FACILITIES = {
     "separated_cycle_track", "shared_foot_cycle_path", "sidewalk", "median_strip",
 }
 
+# ── Single-report manual override ───────────────────────────────────────────
+# Report "crossing_08" (Unter den Eichen / Drakestraße / Habelschwerdter
+# Allee) was initially classified bike_facility_type="roadway_mixed"
+# ("rechten Fahrstreifen der Nebenfahrbahn") and treated as representable —
+# ride the driving lane like any other roadway_mixed report (commit
+# 24c50b9). Manually re-verified against a satellite map: "Unter den
+# Eichen" at this location is a genuine dual carriageway (Hauptfahrbahn +
+# Nebenfahrbahn) — two physically separate parallel roadways with a
+# median/verge between them, not extra lanes of one road. Neither
+# straight_road.xodr nor intersection_4way.xodr models a separated
+# parallel carriageway (both have exactly one continuous roadway with an
+# adjacent bike lane), so this is a road-topology mismatch, not a
+# bike-facility-type mismatch — flagged under its own source label rather
+# than reusing _UNREPRESENTABLE_BIKE_FACILITIES/
+# unrepresentable_bike_facility_geometry, which is about the geometry of a
+# cycling facility, not the carriageway itself. Scoped to this one
+# scenario_id only — every other report's "roadway_mixed" still means what
+# it always meant (ride the general lane, no dedicated bike facility).
+_CROSSING_08_OVERRIDE_SCENARIO_ID = "crossing_08"
+_CROSSING_08_OVERRIDE_REASON = (
+    "Report describes the cyclist on the 'rechten Fahrstreifen der "
+    "Nebenfahrbahn' of Unter den Eichen. Manually verified against a "
+    "satellite map (2026-07-17): this Nebenfahrbahn is a physically "
+    "separate parallel carriageway (dual-carriageway boulevard), not a "
+    "lane of the main road — neither template models a separated "
+    "parallel carriageway, so this falls back to the template's biking "
+    "lane like the other flagged reports."
+)
+
 
 def _road_position_lane_id(road_position: str, lane_count: int, *, allow_left_lane: bool) -> int | None:
     """Map an explicit report "<side> Fahrstreifen" position to a lane id.
@@ -175,14 +204,25 @@ def _cyclist_lane(odr: dict, data: dict) -> int:
     if ftype in _UNREPRESENTABLE_BIKE_FACILITIES:
         _flag_unrepresentable_bike_facility(data, ftype)
 
+    # crossing_08 manual override (see above): its "roadway_mixed" is a
+    # separate carriageway, not the generic "ride the driving lane" case
+    # every other roadway_mixed report is.
+    is_crossing_08_override = (
+        ftype == "roadway_mixed"
+        and data.get("source", {}).get("source_id") == _CROSSING_08_OVERRIDE_SCENARIO_ID
+    )
+    if is_crossing_08_override:
+        _flag_unrepresentable_carriageway_geometry(data)
+
     has_fac = bool(odr.get("primary_has_bike_facility"))
     if not has_fac:
         # Assumption 2 default: a "not specified" report and a report
         # describing an unrepresentable facility type both fall back to the
         # template's existing painted bike lane. "roadway_mixed" is the one
         # facility type that explicitly means "no bike facility, cyclist
-        # rides the driving lane".
-        has_fac = ftype != "roadway_mixed"
+        # rides the driving lane" — except for the crossing_08 override
+        # above, where it means a separate carriageway instead.
+        has_fac = ftype != "roadway_mixed" or is_crossing_08_override
     return -(n + 1) if has_fac else -n
 
 
@@ -202,6 +242,20 @@ def _flag_unrepresentable_bike_facility(data: dict, ftype: str) -> None:
             "(see Assumption 2 in docs/modeling_assumptions.md). Falling "
             "back to the template's existing painted bike lane."
         ),
+    })
+
+
+def _flag_unrepresentable_carriageway_geometry(data: dict) -> None:
+    missing = data.setdefault("missing_parameters", [])
+    param = "road_context.bike_facility_type"
+    source = "unrepresentable_carriageway_geometry"
+    if any(m.get("parameter") == param and m.get("source") == source for m in missing):
+        return
+    missing.append({
+        "parameter": param,
+        "value_used": "bike_lane (template fallback)",
+        "source": source,
+        "reason": _CROSSING_08_OVERRIDE_REASON,
     })
 
 
