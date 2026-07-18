@@ -8,3 +8,5 @@ wheels/
 
 # Virtual environments
 .venv
+agentic_pipeline/output/osm_cache/
+*.log
