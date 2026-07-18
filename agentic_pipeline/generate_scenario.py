@@ -228,6 +228,63 @@ def _is_junction_template(xodr_filename):
     return Path(xodr_filename).name == _JUNCTION_XODR_NAME
 
 
+def _resolve_road_id(xodr_filename, is_secondary_approach=False):
+    """The actor's real OpenDRIVE road id for whichever template was
+    actually selected.
+
+    complete_parameters.py can't get this right on its own: template
+    selection (and the topology detection it depends on) happens later, in
+    pipeline.py's _tool_generate_scenario, after complete_parameters()
+    already ran and set initial_road_id — always "0", matching
+    intersection_4way.xodr's primary approach. That's wrong whenever the
+    template actually selected turns out to be straight_road.xodr, whose
+    one real <road> element has id="1", not "0" (verified directly against
+    the template file) — which happens for every "longitudinal" scenario
+    (always straight_road.xodr, regardless of topology) and for any other
+    scenario_type whose topology resolves to "midblock" instead of
+    "4way_junction" (see template_selector.select_template / topology_
+    detection_report.md — several turning/crossing reports do resolve to
+    "midblock" in practice). This is the one place with definitive
+    knowledge of the actually-selected xodr_filename, so it corrects
+    initial_road_id here rather than guessing earlier.
+    """
+    if not _is_junction_template(xodr_filename):
+        # straight_road.xodr: a single road, real id "1" — every actor is
+        # on it, regardless of scenario_type.
+        return 1
+    # intersection_4way.xodr: "crossing" puts the motor vehicle on the
+    # secondary approach (real road id "1"); every other actor — including
+    # the cyclist, and the motor vehicle for every non-crossing type, both
+    # of which start on the shared approach before any turn — is on the
+    # primary approach (real road id "0").
+    return 1 if is_secondary_approach else 0
+
+
+def _clamp_initial_s_to_real_road(xodr_filename, road_id, initial_s_m):
+    """Clamp an actor's teleport s-position to the real selected road's
+    actual length, parsed directly from the template file.
+
+    complete_parameters.py computes initial_s_m against a synthetic
+    road_length_m (100 m by default) — a reasonable abstraction for
+    straight_road.xodr (whose one real road is 500 m, comfortably larger),
+    but intersection_4way.xodr's individual roads are real, geometrically
+    varied, and several are much shorter (e.g. the secondary approach is
+    ~16.9 m). An unclamped initial_s_m from that synthetic 100 m
+    assumption can exceed a short real road's actual length, which fails
+    OpenDRIVE lane-position validation ("initial s=X is outside road Y
+    length Z"). This mirrors the same defensive clamping
+    _junction_maneuver_samples already does internally for the trajectory
+    itself (e.g. `approach_m = min(approach_margin_m, entry_length)`) —
+    the teleport's starting s should be consistent with it, not a
+    separate, unbounded value.
+    """
+    try:
+        segments = _parse_xodr_road_geometry(_TEMPLATE_DIR / xodr_filename, road_id)
+    except (OSError, ValueError):
+        return initial_s_m
+    return max(0.0, min(initial_s_m, _road_total_length(segments)))
+
+
 def _maneuver_kind(raw_maneuver):
     """Normalize a report/participant 'maneuver' string to a connector key."""
     text = (raw_maneuver or "").lower()
@@ -511,6 +568,16 @@ def _generate_straight_crossing_openscenario(data, output_path, xodr_filename):
     car_actor = _actor_params(data, "car_1")
     cyclist_info = _participant(data, "cyclist_1")
     car_info = _participant(data, "car_1")
+    # Correct for whichever template was actually selected — see
+    # _resolve_road_id's / _clamp_initial_s_to_real_road's docstrings.
+    cyclist_actor["initial_road_id"] = _resolve_road_id(xodr_filename, is_secondary_approach=False)
+    car_actor["initial_road_id"] = _resolve_road_id(xodr_filename, is_secondary_approach=True)
+    cyclist_actor["initial_s_m"] = _clamp_initial_s_to_real_road(
+        xodr_filename, cyclist_actor["initial_road_id"], float(cyclist_actor["initial_s_m"])
+    )
+    car_actor["initial_s_m"] = _clamp_initial_s_to_real_road(
+        xodr_filename, car_actor["initial_road_id"], float(car_actor["initial_s_m"])
+    )
 
     entities = xosc.Entities()
     entities.add_scenario_object(
@@ -745,14 +812,25 @@ def generate_openscenario(data, output_path, xodr_filename):
         osc_params.get("simulation_duration_s", DEFAULT_SIMULATION_DURATION_S)
     )
     conflict_s_m = float(osc_params.get("conflict", {}).get("conflict_s_m", 50))
-    motor_lane_width_m = float(odr_params.get("motor_lane_width_m", 3.5))
-    bike_lane_width_m = float(odr_params.get("bike_lane_width_m", 2.0))
 
     motor_id = _find_motor_participant_id(data)
     motor_actor = _actor_params(data, motor_id)
     cyclist_actor = _actor_params(data, "cyclist_1")
     motor_info = _participant(data, motor_id)
     cyclist_info = _participant(data, "cyclist_1")
+    # Correct for whichever template was actually selected — see
+    # _resolve_road_id's / _clamp_initial_s_to_real_road's docstrings. Both
+    # actors share the same (primary) approach here; only "crossing"
+    # (handled above, in _generate_straight_crossing_openscenario) puts the
+    # motor vehicle on a secondary approach.
+    motor_actor["initial_road_id"] = _resolve_road_id(xodr_filename, is_secondary_approach=False)
+    cyclist_actor["initial_road_id"] = _resolve_road_id(xodr_filename, is_secondary_approach=False)
+    motor_actor["initial_s_m"] = _clamp_initial_s_to_real_road(
+        xodr_filename, motor_actor["initial_road_id"], float(motor_actor["initial_s_m"])
+    )
+    cyclist_actor["initial_s_m"] = _clamp_initial_s_to_real_road(
+        xodr_filename, cyclist_actor["initial_road_id"], float(cyclist_actor["initial_s_m"])
+    )
 
     entities = xosc.Entities()
     entities.add_scenario_object(

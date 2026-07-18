@@ -117,7 +117,6 @@ def _build_location_queries(data):
     city = location.get("city") or "Berlin"
     house_number = location.get("house_number_reference")
     primary = location.get("primary_road")
-    secondary = location.get("secondary_road")
 
     if house_number and primary:
         queries.append(f"{primary} {house_number}, {city}, Germany")
@@ -307,25 +306,14 @@ def _apply_osm_context(data, context, cache_dir):
         "maxspeed_kmh": maxspeed_kmh,
         "urban_intersection_approach_factor": 0.65,
     }
-
-    scenario_type = data.get("classification", {}).get("scenario_type")
-    actors = data.setdefault("generated_simulation_parameters", {}).setdefault(
-        "openscenario", {}
-    ).setdefault("actors", {})
-
-    if scenario_type == "crossing" and "car_1" in actors:
-        speed_mps = round(maxspeed_kmh * 0.65 / 3.6, 2)
-        actors["car_1"]["initial_speed_mps"] = speed_mps
-        _upsert_missing_parameter(
-            data,
-            parameter="car_1.initial_speed_mps",
-            value_used=speed_mps,
-            source="osm_derived_assumption",
-            reason=(
-                f"OSM maxspeed={maxspeed_kmh} km/h was found near the location; "
-                "the simulation uses 65% of the limit as an intersection approach speed."
-            ),
-        )
+    # Converting this into car_1's initial_speed_mps has moved to
+    # complete_parameters.py (Agent 3) — this function (Agent 2, query_osm)
+    # always runs before generated_simulation_parameters.openscenario
+    # .actors["car_1"] exists, the same Agent 2/Agent 3 ordering issue as
+    # _apply_turning_vehicle_lane_id (commit 79d8000) and
+    # _apply_cyclist_lane_id (commit 2c3a444) — this one checked "car_1" in
+    # actors, which was therefore always False. See
+    # complete_parameters._apply_osm_derived_crossing_speed.
 
 
 def _apply_lane_context(data, context, cache_dir):
@@ -525,9 +513,10 @@ def _apply_cyclist_position_policy(data, context):
     params = data.setdefault("generated_simulation_parameters", {}).setdefault(
         "openscenario", {}
     )
-    opendrive_params = data.setdefault("generated_simulation_parameters", {}).setdefault(
-        "opendrive", {}
-    )
+    # No longer reads/writes opendrive params directly here — converting
+    # "position" into initial_lane_id moved to
+    # complete_parameters._apply_cyclist_lane_id (see the comment further
+    # below where that call used to happen).
     road_context = data.setdefault("road_context", {})
     report_position = _participant_road_position(data, "cyclist_1")
     report_facility = road_context.get("bike_facility_position")

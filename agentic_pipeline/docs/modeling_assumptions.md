@@ -282,3 +282,73 @@ always firing, but its write only actually takes effect (and is only
 recorded in `missing_parameters`) on the reports where its formula
 happens to agree with `_cyclist_lane()`'s. See that commit for the exact
 per-report comparison.
+
+**Update (readiness audit before HPC testing):** a general audit of
+`agentic_pipeline/` (pyflakes + a real, offline end-to-end generation run
+of all 19 reference reports — not just the parameter-completion logic in
+isolation) turned up three more issues, all now fixed:
+
+1. **A third instance of the same Agent 2/Agent 3 ordering bug.**
+   `osm_enrichment._apply_osm_context()` derived `car_1`'s
+   `initial_speed_mps` for "crossing" reports from a nearby OSM `maxspeed`
+   tag (65% of the limit, as an intersection-approach speed), gated on
+   `"car_1" in actors` — always `False`, same root cause as the other two.
+   Unlike the cyclist-lane case, nothing in `complete_parameters.py`
+   already computes an equivalent value this could conflict with, so it
+   was moved the same way as the turning-vehicle fix: now
+   `complete_parameters._apply_osm_derived_crossing_speed()`, called
+   before the generic per-type/maneuver speed default's `_setd()`, reading
+   the already-computed `maxspeed_kmh` from `data["osm_context"]["derived"]`
+   rather than re-deriving it. The original hardcoded `"car_1"` (not the
+   actual actor id) is preserved unchanged — every "crossing" report in
+   this corpus uses a car.
+2. **Wrong `initial_road_id` for every actor on `straight_road.xodr`.**
+   `complete_parameters.py` always set `initial_road_id = 0` for
+   non-crossing actors — correct for `intersection_4way.xodr` (its
+   primary approach really is road `0`), but `straight_road.xodr`'s one
+   real `<road>` element has `id="1"`, not `0` (verified directly against
+   the template file). This affects every `"longitudinal"` report (always
+   `straight_road.xodr`) and any other report whose topology resolves to
+   `"midblock"` instead of `"4way_junction"` — several turning/crossing
+   reports do, per the topology table above. `complete_parameters.py`
+   can't get this right on its own: template selection (and the topology
+   detection it depends on) happens later, in `pipeline.py`'s
+   `_tool_generate_scenario`, after `complete_parameters()` already ran.
+   Fixed at the one place with definitive knowledge of the actually
+   -selected template — `generate_scenario.py`'s `_resolve_road_id()`,
+   called from both `generate_openscenario()` and
+   `_generate_straight_crossing_openscenario()` right before building each
+   actor's `LanePosition`.
+3. **Unbounded `initial_s_m` against `intersection_4way.xodr`'s real,
+   short roads.** `complete_parameters.py` computes `initial_s_m` against
+   a synthetic 100 m road — fine for `straight_road.xodr` (500 m, always
+   comfortably larger), but `intersection_4way.xodr`'s individual roads
+   are real and geometrically varied (the secondary approach is only
+   ~16.9 m). An unclamped `initial_s_m` from the synthetic assumption
+   could exceed a short real road's actual length, failing OpenDRIVE
+   lane-position validation. Fixed alongside (2), in the same two call
+   sites: `generate_scenario._clamp_initial_s_to_real_road()` parses the
+   real selected road's length directly from the template file (reusing
+   the existing `_parse_xodr_road_geometry()`/`_road_total_length()`
+   helpers `_junction_maneuver_samples()` already relies on for the
+   trajectory itself) and clamps to it — the same defensive philosophy
+   `_junction_maneuver_samples()` already applies internally
+   (`approach_m = min(approach_margin_m, entry_length)`), now applied
+   consistently to the teleport's starting position too.
+
+Verified via a genuine end-to-end run (real templates copied, real
+`.xodr`/`.xosc` files written, real `validate_outputs.py` checks — not
+just the parameter-completion functions in isolation) for all 19
+reference reports against their actual topology results from
+`docs/topology_detection_report.md`: all 19 now produce valid output.
+Before these three fixes, `longitudinal_01`/`longitudinal_02` and
+`crossing_02`/`03`/`06`/`07`/`08` (the ones resolving to
+`intersection_4way.xodr`'s real junction) failed validation.
+
+A few pre-existing, unrelated dead-code/style items were also cleaned up
+in passing (unused local variables and one unused import flagged by
+pyflakes) — cosmetic only, no behavior change. `test_feedback_geometry.py`'s
+fixture JSON (`output/agentic/20260602_mueggelschloesschenweg/...`) is
+stale — `scenario_type: "right_turn_conflict"` predates the 4-category
+taxonomy migration (commit 715d56b) — noted but not regenerated, since it
+requires a live LLM run and doesn't affect the pipeline itself.

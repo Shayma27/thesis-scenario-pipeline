@@ -129,6 +129,10 @@ def complete_parameters(data: dict) -> dict:
             # longitudinal / other (not parked): a normal following distance
             # on a single straight road, no turn or crossing in progress.
             _setd(a, "initial_s_m", round(max(2.0, cs - 25.0), 2))
+        # OSM-measured maxspeed takes priority over the flat per-type/
+        # maneuver default below — must run before the _setd() below, since
+        # _setd() only fills a field that's still absent.
+        _apply_osm_derived_crossing_speed(data, mid, a, is_crossing)
         _setd(a, "initial_speed_mps", mspeed)
         _note(data, mid, a, stype)
 
@@ -440,6 +444,46 @@ def _apply_turning_vehicle_lane_id(data: dict, lane_count) -> None:
         value_used=lane_id,
         source="derived_from_osm_motor_lane_count",
         reason=reason,
+    )
+
+
+# Agent 2/Agent 3 ordering fix: this used to live in osm_enrichment.py's
+# _apply_osm_context() and run during Agent 2 (query_osm) — before Agent 3
+# (complete_parameters(), this module) ever creates
+# generated_simulation_parameters.openscenario.actors["car_1"]. It checked
+# "car_1" in actors, which was therefore always False (same bug class as
+# _apply_turning_vehicle_lane_id, commit 79d8000, and _apply_cyclist_lane_id,
+# commit 2c3a444). Unlike the cyclist-lane case, nothing in this module
+# already computes an equivalent (or more complete) value for
+# initial_speed_mps that this would conflict with — _motor_speed() below is
+# a flat per-type/maneuver constant that this OSM-measured value was always
+# meant to take priority over, matching the "values set by earlier agents
+# are never overwritten" contract this whole module already follows. So
+# this can use _setd() directly, the same as the turning-vehicle fix.
+#
+# The original hardcoded "car_1" (not the actual motor participant id) is
+# preserved unchanged: every "crossing" report in the reference corpus uses
+# a car as the motor vehicle, and generalizing this beyond what the
+# original code did would be a behavior change, not just an ordering fix.
+def _apply_osm_derived_crossing_speed(data: dict, mid: str, actor: dict, is_crossing: bool) -> None:
+    if not (is_crossing and mid == "car_1"):
+        return
+    maxspeed_kmh = data.get("osm_context", {}).get("derived", {}).get("maxspeed_kmh")
+    if maxspeed_kmh is None:
+        return
+    speed_mps = round(float(maxspeed_kmh) * 0.65 / 3.6, 2)
+    _setd(actor, "initial_speed_mps", speed_mps)
+    if actor.get("initial_speed_mps") != speed_mps:
+        return  # something else already set it first; don't misattribute it
+    _upsert_missing_parameter(
+        data,
+        parameter="car_1.initial_speed_mps",
+        value_used=speed_mps,
+        source="osm_derived_assumption",
+        reason=(
+            f"OSM maxspeed={maxspeed_kmh} km/h was found near the location; "
+            "the simulation uses 65% of the limit as an intersection approach speed."
+        ),
     )
 
 
