@@ -261,6 +261,24 @@ turning-lane assignment — `osm_enrichment._apply_turning_vehicle_lane_id()`
 running during Agent 2 before Agent 3 created the actor entry it needed —
 has since been fixed by moving that function into
 `complete_parameters.py`, called right after the motor vehicle's actor
-entry exists. See that commit for details. The cyclist-side instance
-above (`_apply_cyclist_lane_id()`) is a distinct function and was **not**
-touched by that fix — it remains open, tracked separately.
+entry exists. See that commit for details.
+
+**Update (yet another later session):** the cyclist-side instance above
+(`_apply_cyclist_lane_id()`) has also been moved into
+`complete_parameters.py`, called right after `_cyclist_lane()` sets the
+cyclist's actor entry. Unlike the motor-vehicle fix, this one could
+**not** simply mirror the same "unconditional overwrite" pattern:
+`_apply_cyclist_lane_id()`'s own lane-selection logic predates Assumption
+2 entirely (no representability flagging, no crossing_08 override, and
+its own "nothing matched" fallback is the driving lane, not the bike
+lane — the exact hardcoded-default behavior Assumption 2 replaced).
+Direct comparison against all 19 reports showed 15 of 19 would have
+silently regressed to the driving lane under an unconditional overwrite.
+So its write is now guarded the same way every other field in
+`complete_parameters()` already is (`_setd`-style — only if not already
+set): `_cyclist_lane()` runs first and remains authoritative; the moved
+function's guard clause is now evaluated against a real actor instead of
+always firing, but its write only actually takes effect (and is only
+recorded in `missing_parameters`) on the reports where its formula
+happens to agree with `_cyclist_lane()`'s. See that commit for the exact
+per-report comparison.

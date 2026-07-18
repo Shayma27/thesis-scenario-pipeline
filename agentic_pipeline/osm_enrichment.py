@@ -566,7 +566,14 @@ def _apply_cyclist_position_policy(data, context):
         )
 
     params["cyclist_lateral_position"] = position
-    _apply_cyclist_lane_id(data, position, opendrive_params)
+    # Converting this "position" into an actual initial_lane_id has moved to
+    # complete_parameters.py (Agent 3) — it needs
+    # generated_simulation_parameters.openscenario.actors["cyclist_1"] to
+    # already exist, which this function (Agent 2, query_osm) always runs
+    # before that entry is created in Agent 3's complete_parameters(). See
+    # complete_parameters._apply_cyclist_lane_id, which also explains why
+    # its write no longer unconditionally overwrites the way it used to
+    # here (it would regress Assumption 2's cyclist-position work).
     context["cyclist_lateral_position"] = {
         "value": position,
         "source": source,
@@ -578,51 +585,6 @@ def _apply_cyclist_position_policy(data, context):
         value_used=position,
         source=source,
         reason=reason,
-    )
-
-
-def _apply_cyclist_lane_id(data, position, opendrive_params):
-    actors = data.setdefault("generated_simulation_parameters", {}).setdefault(
-        "openscenario", {}
-    ).setdefault("actors", {})
-    cyclist = actors.get("cyclist_1")
-    if not cyclist:
-        return
-
-    lane_count = int(
-        opendrive_params.get(
-            "primary_road_lanes",
-            opendrive_params.get("motor_lane_count", 1),
-        )
-    )
-    has_bike_facility = bool(opendrive_params.get("primary_has_bike_facility"))
-    if position == "rightmost_motor_lane":
-        lane_id = -max(1, lane_count)
-    elif position == "leftmost_motor_lane":
-        lane_id = -1
-    elif position == "middle_motor_lane":
-        lane_id = -max(1, (lane_count + 1) // 2)
-    elif has_bike_facility and position in {"right", "rightmost", "both"}:
-        lane_id = -(lane_count + 1)
-    elif has_bike_facility and position == "left":
-        lane_id = -1
-    elif position in {"right", "rightmost", "both"}:
-        lane_id = -max(1, lane_count)
-    elif position == "middle":
-        lane_id = -max(1, (lane_count + 1) // 2)
-    else:
-        lane_id = -1
-
-    cyclist["initial_lane_id"] = lane_id
-    _upsert_missing_parameter(
-        data,
-        parameter="cyclist_1.initial_lane_id",
-        value_used=lane_id,
-        source="derived_from_cyclist_lateral_position",
-        reason=(
-            "Cyclist OpenSCENARIO lane id follows the chosen lateral-position "
-            "policy so the initial teleport matches the generated trajectory."
-        ),
     )
 
 

@@ -12,6 +12,7 @@ import copy
 
 from defaults import (
     DEFAULT_BIKE_LANE_WIDTH_M,
+    DEFAULT_CYCLIST_LATERAL_POSITION,
     DEFAULT_MOTOR_LANE_WIDTH_M,
     DEFAULT_ROAD_LENGTH_M,
     DEFAULT_SIMULATION_DURATION_S,
@@ -81,6 +82,15 @@ def complete_parameters(data: dict) -> dict:
         _setd(a, "vehicle_category", ctype)
         _setd(a, "initial_road_id", 0)
         _setd(a, "initial_lane_id", _cyclist_lane(odr, data))
+        # See the function's own docstring: this can now genuinely find the
+        # actor (the Agent 2/Agent 3 ordering bug fixed here), but its write
+        # is guarded so _cyclist_lane() above — already Assumption-2-aware —
+        # stays authoritative. Must still run after the _setd above.
+        _apply_cyclist_lane_id(
+            data,
+            osc.get("cyclist_lateral_position", DEFAULT_CYCLIST_LATERAL_POSITION),
+            odr,
+        )
         if is_crossing:
             _setd(a, "initial_s_m", round(max(2.0, cs - cspeed * ct), 2))
         else:
@@ -265,6 +275,81 @@ def _flag_unrepresentable_carriageway_geometry(data: dict) -> None:
         "source": source,
         "reason": _CROSSING_08_OVERRIDE_REASON,
     })
+
+
+# Agent 2/Agent 3 ordering fix: this used to live in osm_enrichment.py and
+# run during Agent 2 (query_osm), inside _apply_cyclist_position_policy() —
+# before Agent 3 (complete_parameters(), this module) ever creates
+# generated_simulation_parameters.openscenario.actors["cyclist_1"]. Its
+# "cyclist = actors.get('cyclist_1'); if not cyclist: return" guard
+# therefore always fired, identical to _apply_turning_vehicle_lane_id's bug
+# fixed in commit 79d8000.
+#
+# UNLIKE that fix, simply moving this one and letting it run the same way
+# (an unconditional overwrite right after the actor entry exists) would be
+# a regression, not just a bugfix: this function's own logic predates
+# Assumption 2 (docs/modeling_assumptions.md, commits 24c50b9/4a81265) and
+# knows nothing about it — no bike_facility_type representability
+# flagging, no crossing_08 carriageway override, and its own "nothing
+# matched" fallback is the driving lane (-1), not the template's bike lane
+# — i.e. exactly the "hardcode a blanket default" behavior Assumption 2
+# was written to replace. Verified directly: reproducing this function's
+# formula against all 19 manual_classification_reference.md reports and
+# comparing to _cyclist_lane()'s (the actively-maintained, Assumption
+# -2-aware decision) shows 15 of 19 would silently flip to the driving
+# lane if this function's write were allowed to win.
+#
+# So this now runs (the ordering bug is fixed — the actor exists, the
+# guard clause is evaluated for real instead of trivially firing), but its
+# write uses the same "only fill a field that's still absent" contract
+# _setd() gives every other field in complete_parameters() — _cyclist_lane()
+# already ran first via _setd() above and remains authoritative. The
+# lane-selection formula itself is unchanged from the original.
+def _apply_cyclist_lane_id(data: dict, position: str, opendrive_params: dict) -> None:
+    actors = data.setdefault("generated_simulation_parameters", {}).setdefault(
+        "openscenario", {}
+    ).setdefault("actors", {})
+    cyclist = actors.get("cyclist_1")
+    if not cyclist:
+        return
+
+    lane_count = int(
+        opendrive_params.get(
+            "primary_road_lanes",
+            opendrive_params.get("motor_lane_count", 1),
+        )
+    )
+    has_bike_facility = bool(opendrive_params.get("primary_has_bike_facility"))
+    if position == "rightmost_motor_lane":
+        lane_id = -max(1, lane_count)
+    elif position == "leftmost_motor_lane":
+        lane_id = -1
+    elif position == "middle_motor_lane":
+        lane_id = -max(1, (lane_count + 1) // 2)
+    elif has_bike_facility and position in {"right", "rightmost", "both"}:
+        lane_id = -(lane_count + 1)
+    elif has_bike_facility and position == "left":
+        lane_id = -1
+    elif position in {"right", "rightmost", "both"}:
+        lane_id = -max(1, lane_count)
+    elif position == "middle":
+        lane_id = -max(1, (lane_count + 1) // 2)
+    else:
+        lane_id = -1
+
+    _setd(cyclist, "initial_lane_id", lane_id)
+    if cyclist.get("initial_lane_id") != lane_id:
+        return  # _cyclist_lane() already decided a different value; keep it.
+    _upsert_missing_parameter(
+        data,
+        parameter="cyclist_1.initial_lane_id",
+        value_used=lane_id,
+        source="derived_from_cyclist_lateral_position",
+        reason=(
+            "Cyclist OpenSCENARIO lane id follows the chosen lateral-position "
+            "policy so the initial teleport matches the generated trajectory."
+        ),
+    )
 
 
 def _motor_lane(odr: dict, data: dict, for_secondary_road: bool = False) -> int:
