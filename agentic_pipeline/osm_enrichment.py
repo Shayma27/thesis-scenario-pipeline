@@ -394,7 +394,12 @@ def _apply_lane_context(data, context, cache_dir):
         lane_count = _best_lane_count(roads, primary_road_name)
         if lane_count:
             params["motor_lane_count"] = lane_count
-            _apply_turning_vehicle_lane_id(data, lane_count)
+            # Turning-vehicle lane assignment (left turn -> innermost lane,
+            # right turn -> outermost lane) has moved to complete_parameters.py
+            # (Agent 3) — it needs generated_simulation_parameters.openscenario
+            # .actors[motor_id] to already exist, which this function (Agent 2,
+            # query_osm) always runs before that entry is created in Agent 3's
+            # complete_parameters(). See complete_parameters._apply_turning_vehicle_lane_id.
             _upsert_missing_parameter(
                 data,
                 parameter="motor_lane_count",
@@ -618,52 +623,6 @@ def _apply_cyclist_lane_id(data, position, opendrive_params):
             "Cyclist OpenSCENARIO lane id follows the chosen lateral-position "
             "policy so the initial teleport matches the generated trajectory."
         ),
-    )
-
-
-def _apply_turning_vehicle_lane_id(data, lane_count):
-    if data.get("classification", {}).get("scenario_type") != "turning":
-        return
-
-    motor_participant = next(
-        (p for p in data.get("participants", []) if p.get("class") == "motor_vehicle"), None
-    )
-    if not motor_participant:
-        return
-    motor_id = motor_participant.get("id")
-
-    actors = data.setdefault("generated_simulation_parameters", {}).setdefault(
-        "openscenario", {}
-    ).setdefault("actors", {})
-    actor = actors.get(motor_id)
-    if not actor:
-        return
-
-    maneuver = str(motor_participant.get("maneuver", "")).lower()
-    if "turn_left" in maneuver:
-        # A left-turning vehicle starts in the innermost lane, adjacent to
-        # the centerline (lane_id -1 in this template's numbering).
-        lane_id = -1
-        reason = (
-            "For a left-turning vehicle, it starts in the innermost "
-            "motor-vehicle lane (adjacent to the centerline)."
-        )
-    else:
-        # Right turns (and turning into a parking/side access on the right)
-        # start from the outermost/rightmost motor-vehicle lane.
-        lane_id = -max(1, int(lane_count))
-        reason = (
-            "For a right-turning vehicle, it starts in the rightmost "
-            "motor-vehicle lane of the generated OpenDRIVE road."
-        )
-
-    actor["initial_lane_id"] = lane_id
-    _upsert_missing_parameter(
-        data,
-        parameter=f"{motor_id}.initial_lane_id",
-        value_used=lane_id,
-        source="derived_from_osm_motor_lane_count",
-        reason=reason,
     )
 
 

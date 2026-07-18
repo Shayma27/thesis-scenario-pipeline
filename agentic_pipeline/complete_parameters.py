@@ -100,6 +100,14 @@ def complete_parameters(data: dict) -> dict:
         _setd(a, "vehicle_category", mtype)
         _setd(a, "initial_road_id", 1 if is_crossing else 0)
         _setd(a, "initial_lane_id", _motor_lane(odr, data, for_secondary_road=is_crossing))
+        # Maneuver-aware override for "turning" (no-ops for every other
+        # scenario_type, and for a turning report whose text already places
+        # the vehicle on an explicit lane — see the function's own
+        # docstring). Must run after the _setd above, since it needs
+        # actors[mid] to already exist.
+        _apply_turning_vehicle_lane_id(
+            data, int(odr.get("primary_road_lanes", odr.get("motor_lane_count", 1)))
+        )
         if is_crossing:
             _setd(a, "initial_s_m", round(max(2.0, cs - mspeed * ct), 2))
         elif is_parked:
@@ -278,6 +286,100 @@ def _motor_lane(odr: dict, data: dict, for_secondary_road: bool = False) -> int:
         return lane_id
 
     return -max(1, n)
+
+
+# Agent 2/Agent 3 ordering fix: this used to live in osm_enrichment.py and run
+# during Agent 2 (query_osm), inside _apply_lane_context() — before Agent 3
+# (complete_parameters(), this module) ever creates
+# generated_simulation_parameters.openscenario.actors[motor_id]. Its
+# "actor = actors.get(motor_id); if not actor: return" guard therefore always
+# fired (actors was always {} at that point in every version of the
+# pipeline), making it dead code that never actually assigned a turning
+# vehicle's lane. The lane-selection logic itself (left turn -> innermost
+# lane -1, right turn -> outermost lane) is unchanged from the original;
+# only where/when it runs has moved — now called from complete_parameters()
+# right after this actor's entry (and its road-position-aware default lane,
+# from _motor_lane() above) already exist.
+def _apply_turning_vehicle_lane_id(data: dict, lane_count) -> None:
+    if data.get("classification", {}).get("scenario_type") != "turning":
+        return
+
+    motor_participant = next(
+        (p for p in data.get("participants", []) if p.get("class") == "motor_vehicle"), None
+    )
+    if not motor_participant:
+        return
+    motor_id = motor_participant.get("id")
+
+    # Assumption 2: explicit report text about which lane the vehicle is on
+    # takes priority over this maneuver-derived heuristic — same priority
+    # _motor_lane() above already gives road_position for every other
+    # scenario type. A turning report that also says e.g. "aus der
+    # mittleren Spur" should keep that explicit lane, not the
+    # turn-direction default computed below.
+    road_position = str(motor_participant.get("road_position") or "").casefold()
+    if road_position in {
+        "leftmost_motor_lane", "middle_motor_lane", "rightmost_motor_lane", "right_motor_lane",
+    }:
+        return
+
+    actors = data.setdefault("generated_simulation_parameters", {}).setdefault(
+        "openscenario", {}
+    ).setdefault("actors", {})
+    actor = actors.get(motor_id)
+    if not actor:
+        return
+
+    maneuver = str(motor_participant.get("maneuver", "")).lower()
+    if "turn_left" in maneuver:
+        # A left-turning vehicle starts in the innermost lane, adjacent to
+        # the centerline (lane_id -1 in this template's numbering).
+        lane_id = -1
+        reason = (
+            "For a left-turning vehicle, it starts in the innermost "
+            "motor-vehicle lane (adjacent to the centerline)."
+        )
+    else:
+        # Right turns (and turning into a parking/side access on the right)
+        # start from the outermost/rightmost motor-vehicle lane.
+        lane_id = -max(1, int(lane_count))
+        reason = (
+            "For a right-turning vehicle, it starts in the rightmost "
+            "motor-vehicle lane of the generated OpenDRIVE road."
+        )
+
+    actor["initial_lane_id"] = lane_id
+    _upsert_missing_parameter(
+        data,
+        parameter=f"{motor_id}.initial_lane_id",
+        value_used=lane_id,
+        source="derived_from_osm_motor_lane_count",
+        reason=reason,
+    )
+
+
+def _upsert_missing_parameter(data: dict, parameter: str, value_used, source: str, reason: str) -> None:
+    """Local copy of osm_enrichment.py's helper of the same name/behavior —
+    this module deliberately doesn't import from osm_enrichment.py (see
+    _flag_unrepresentable_bike_facility/_flag_unrepresentable_carriageway_geometry
+    above for the same "keep modules independent" pattern, and _note() below
+    for this module's own append-only variant). Unlike _note(), this one
+    overwrites an existing entry for the same `parameter` rather than
+    skipping — matching the original osm_enrichment.py behavior exactly.
+    """
+    missing = data.setdefault("missing_parameters", [])
+    for item in missing:
+        if item.get("parameter") == parameter:
+            item["value_used"] = value_used
+            item["source"] = source
+            item["reason"] = reason
+            return
+    missing.append({
+        "parameter": parameter,
+        "value_used": value_used,
+        "source": source,
+        "reason": reason,
+    })
 
 
 # ── Speed defaults ────────────────────────────────────────────────────────────

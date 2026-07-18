@@ -249,9 +249,18 @@ unused, confusing field in the enriched JSON.
 
 ## Out of scope
 
-Per task instructions, this pass does **not** fix the separate Agent
+Per task instructions, this pass did **not** fix the separate Agent
 2/Agent 3 ordering issue: `osm_enrichment.py`'s `_apply_cyclist_lane_id()`
 runs before `complete_parameters.py` has created the `actors["cyclist_1"]`
 entry, so it is currently a no-op and `complete_parameters._cyclist_lane()`
 is the function actually deciding `initial_lane_id` in practice (confirmed
-above). That ordering fix is tracked separately.
+above).
+
+**Update (later session):** the equivalent bug for the *motor vehicle's*
+turning-lane assignment — `osm_enrichment._apply_turning_vehicle_lane_id()`
+running during Agent 2 before Agent 3 created the actor entry it needed —
+has since been fixed by moving that function into
+`complete_parameters.py`, called right after the motor vehicle's actor
+entry exists. See that commit for details. The cyclist-side instance
+above (`_apply_cyclist_lane_id()`) is a distinct function and was **not**
+touched by that fix — it remains open, tracked separately.
