@@ -155,10 +155,10 @@ attention.
 - **`run_all.py`**: the `[r]/[f]/[ok]` review loop now prints a line showing
   `topology`, `streets`, `way_count`, and the resolved `template` alongside
   the existing `scenario_type`/`confidence` line.
-- **`generate_road.py`**: **no changes** — it is not imported or called
-  anywhere in the active pipeline (`pipeline.py` copies a pre-validated
-  static `.xodr` template via `shutil.copy2`, it does not call
-  `generate_opendrive()`). It appears to be separate, not-yet-wired-in work.
+- **`generate_road.py`**: was never imported or called anywhere in the
+  active pipeline (`pipeline.py` copies a pre-validated static `.xodr`
+  template via `shutil.copy2`, it never called `generate_opendrive()`) —
+  removed outright in a later cleanup pass rather than left as dead code.
 - **`generate_scenario.py`**: **no changes** — its junction-vs-straight
   branch (`_is_junction_template()`, added for Bug 2) already keys off the
   *actual resolved template filename*, not scenario_type, so it
