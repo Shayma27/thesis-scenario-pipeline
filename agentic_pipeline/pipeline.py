@@ -129,7 +129,9 @@ TOOLS = [
                         "type": "string",
                         "description": (
                             "Optional JSON string with parameter overrides. "
-                            "Example: '{\"opendrive\": {\"motor_lane_count\": 1}}'"
+                            "Example: '{\"opendrive\": {\"motor_lane_count\": 1}}'. "
+                            "To fix a specific actor (e.g. initial_s_m, initial_lane_id), use "
+                            "'{\"actors\": {\"car_1\": {\"initial_s_m\": 10.0}}}'."
                         ),
                     },
                 },
@@ -411,9 +413,20 @@ def _tool_generate_scenario(state: AgentState, parameter_overrides: str | None =
             overrides = json.loads(parameter_overrides)
             sim = state.data.setdefault("generated_simulation_parameters", {})
             for section, vals in overrides.items():
-                if isinstance(vals, dict):
-                    sim.setdefault(section, {}).update(vals)
-                    print(f"  ✓ Applied override [{section}]: {vals}")
+                if not isinstance(vals, dict):
+                    continue
+                if section == "actors":
+                    # complete_parameters()'s tool response flattens actors to a
+                    # top-level "actors" key (see _tool_complete_parameters), but
+                    # the data generate_scenario.py actually reads lives one level
+                    # deeper, under openscenario.actors (_osc_params/_actor_params
+                    # in generate_scenario.py). Route there instead of writing to
+                    # an "actors" key nothing ever reads.
+                    osc = sim.setdefault("openscenario", {})
+                    osc["actors"] = _deep_merge(osc.get("actors", {}), vals)
+                else:
+                    sim[section] = _deep_merge(sim.get(section, {}), vals)
+                print(f"  ✓ Applied override [{section}]: {vals}")
         except json.JSONDecodeError as exc:
             return {"success": False, "error": f"Invalid parameter_overrides JSON: {exc}"}
 
@@ -679,6 +692,9 @@ def run_agent(report_text: str, scenario_id: str) -> dict:
     iteration = 0
     final_valid = False
     final_summary: str | None = None
+    last_tool_name: str | None = None
+    nudge_count = 0
+    MAX_NUDGES = 2
 
     while iteration < MAX_ITERATIONS:
         iteration += 1
@@ -760,6 +776,27 @@ def run_agent(report_text: str, scenario_id: str) -> dict:
             print(f"  Agent: {textwrap.fill(msg.content.strip(), W - 10, subsequent_indent='          ')}")
 
         if not msg.tool_calls:
+            if (
+                not final_valid
+                and last_tool_name == "generate_scenario"
+                and state.retry_count <= MAX_RETRIES
+                and nudge_count < MAX_NUDGES
+            ):
+                # generate_scenario ran (e.g. to apply a fix override) but the
+                # model stopped without re-validating. Left alone, this ends
+                # the run with final_valid still False regardless of whether
+                # the regenerated files actually pass now — an unverified
+                # result reported as INVALID. Push it to close the loop.
+                nudge_count += 1
+                messages.append({"role": "assistant", "content": msg.content or ""})
+                messages.append({
+                    "role": "user",
+                    "content": (
+                        "You regenerated the files but haven't verified them. "
+                        "Call validate_and_fix() now before concluding."
+                    ),
+                })
+                continue
             final_summary = msg.content
             messages.append({"role": "assistant", "content": msg.content or ""})
             break
@@ -768,6 +805,7 @@ def run_agent(report_text: str, scenario_id: str) -> dict:
 
         for tc in msg.tool_calls:
             fn_name = tc.function.name
+            last_tool_name = fn_name
             try:
                 fn_args = json.loads(tc.function.arguments) if tc.function.arguments else {}
             except json.JSONDecodeError:
