@@ -29,6 +29,7 @@ _JUNCTION_EXIT_ROAD = {8: 1, 9: 2, 10: 3, 6: 2, 7: 3, 5: 0}
 _JUNCTION_EXIT_CONTACT = {8: "start", 9: "end", 10: "end", 6: "end", 7: "end", 5: "start"}
 
 _xodr_road_geometry_cache: dict[tuple[str, str], list[dict]] = {}
+_xodr_lane_offset_cache: dict[tuple[str, str], list[dict]] = {}
 
 
 def _osc_params(data):
@@ -337,6 +338,60 @@ def _parse_xodr_road_geometry(xodr_path, road_id):
     return segments
 
 
+def _parse_xodr_lane_offset(xodr_path, road_id):
+    """Read <road id=road_id>'s <lanes><laneOffset> polynomial segments.
+
+    OpenDRIVE's laneOffset shifts a road's lane-section t=0 reference away
+    from its raw <planView> geometry line. In this template every
+    junction="4" connector/exit road carries a constant +1.75 laneOffset
+    while the four real approach roads (junction="-1") don't -- ignoring it
+    (as _road_world_point previously did) put every connector/exit-road
+    point 1.75m+ off from where the road's actual lanes sit.
+    """
+    key = (str(xodr_path), str(road_id))
+    cached = _xodr_lane_offset_cache.get(key)
+    if cached is not None:
+        return cached
+
+    tree = ET.parse(xodr_path)
+    road_el = next(
+        (r for r in tree.getroot().findall("road") if r.get("id") == str(road_id)),
+        None,
+    )
+    if road_el is None:
+        raise ValueError(f"Road id={road_id!r} not found in {xodr_path}")
+
+    segments = []
+    lanes_el = road_el.find("lanes")
+    if lanes_el is not None:
+        for lo in lanes_el.findall("laneOffset"):
+            segments.append(
+                {
+                    "s0": float(lo.get("s")),
+                    "a": float(lo.get("a")),
+                    "b": float(lo.get("b")),
+                    "c": float(lo.get("c")),
+                    "d": float(lo.get("d")),
+                }
+            )
+    segments.sort(key=lambda seg: seg["s0"])
+    _xodr_lane_offset_cache[key] = segments
+    return segments
+
+
+def _lane_offset_at(lane_offset_segments, s):
+    if not lane_offset_segments:
+        return 0.0
+    seg = lane_offset_segments[0]
+    for cand in lane_offset_segments:
+        if cand["s0"] <= s:
+            seg = cand
+        else:
+            break
+    ds = s - seg["s0"]
+    return seg["a"] + seg["b"] * ds + seg["c"] * ds**2 + seg["d"] * ds**3
+
+
 def _evaluate_geometry_segment(seg, local_s):
     x0, y0, hdg0, kind = seg["x0"], seg["y0"], seg["hdg0"], seg["kind"]
 
@@ -378,10 +433,11 @@ def _road_point(segments, s):
     return _evaluate_geometry_segment(last, last["length"])
 
 
-def _road_world_point(segments, s, t_m):
+def _road_world_point(segments, s, t_m, lane_offset_segments=None):
     x, y, heading = _road_point(segments, s)
+    total_t = t_m + _lane_offset_at(lane_offset_segments, s)
     nx, ny = _road_normal(heading)
-    return x + nx * t_m, y + ny * t_m, heading
+    return x + nx * total_t, y + ny * total_t, heading
 
 
 def _junction_maneuver_samples(
@@ -402,6 +458,9 @@ def _junction_maneuver_samples(
     entry_segs = _parse_xodr_road_geometry(xodr_path, entry_road_id)
     connector_segs = _parse_xodr_road_geometry(xodr_path, connector_id)
     exit_segs = _parse_xodr_road_geometry(xodr_path, exit_road_id)
+    entry_lo = _parse_xodr_lane_offset(xodr_path, entry_road_id)
+    connector_lo = _parse_xodr_lane_offset(xodr_path, connector_id)
+    exit_lo = _parse_xodr_lane_offset(xodr_path, exit_road_id)
 
     entry_length = _road_total_length(entry_segs)
     connector_length = _road_total_length(connector_segs)
@@ -416,7 +475,8 @@ def _junction_maneuver_samples(
     for i in range(n_entry + 1):
         frac = i / n_entry
         s = approach_m * (1 - frac)
-        x, y, heading = _road_world_point(entry_segs, s, t_offset_m)
+        x, y, heading = _road_world_point(entry_segs, s, t_offset_m, entry_lo)
+        heading = _normalize_angle(heading + math.pi)
         samples.append((approach_m * frac, x, y, heading))
 
     # If the requested approach margin exceeds the entry road's real modeled
@@ -437,21 +497,26 @@ def _junction_maneuver_samples(
         samples = extension + samples
 
     # The entry road's own reference-line endpoint (s=0) and the connector's
-    # actual start point are a few OpenDRIVE lanes apart in this template
-    # (the reference line vs. the specific lane's connection point) — shift
-    # the whole entry-road tail so it meets the connector with no jump.
-    entry_end_x, entry_end_y, _ = _road_world_point(entry_segs, 0.0, t_offset_m)
-    conn_start_x, conn_start_y, _ = _road_world_point(connector_segs, 0.0, t_offset_m)
+    # actual start point can still be a bit apart in this template even with
+    # laneOffset accounted for (a genuine small modeling seam between the two
+    # roads' authored geometry) -- shift the whole entry-road tail so it
+    # meets the connector with no jump. This is a rigid, uniform shift (not
+    # tapered): tapering it to vary along the approach would add an
+    # artificial "drift" component to each point's position that the stored
+    # heading (the real road's own tangent) doesn't reflect, which distorts
+    # the vehicle's facing direction during the approach -- worse than a
+    # small, constant position offset at the very start of the trajectory.
+    entry_end_x, entry_end_y, _ = _road_world_point(entry_segs, 0.0, t_offset_m, entry_lo)
+    conn_start_x, conn_start_y, _ = _road_world_point(connector_segs, 0.0, t_offset_m, connector_lo)
     dx, dy = conn_start_x - entry_end_x, conn_start_y - entry_end_y
     samples = [(d, x + dx, y + dy, h) for d, x, y, h in samples]
-
     junction_entry_distance = samples[-1][0]
 
     # Connector: real junction geometry, s increasing 0 -> connector_length.
     n_conn = max(4, int(connector_length / sample_step_m))
     for i in range(1, n_conn + 1):
         s = connector_length * i / n_conn
-        x, y, heading = _road_world_point(connector_segs, s, t_offset_m)
+        x, y, heading = _road_world_point(connector_segs, s, t_offset_m, connector_lo)
         samples.append((junction_entry_distance + s, x, y, heading))
 
     junction_exit_distance = samples[-1][0]
@@ -462,14 +527,16 @@ def _junction_maneuver_samples(
     exit_length = _road_total_length(exit_segs)
     exit_m = min(10.0, exit_length)
     n_exit = max(2, int(exit_m / sample_step_m))
-    conn_end_x, conn_end_y, _ = _road_world_point(connector_segs, connector_length, t_offset_m)
+    conn_end_x, conn_end_y, _ = _road_world_point(
+        connector_segs, connector_length, t_offset_m, connector_lo
+    )
     exit_anchor_s = 0.0 if exit_contact == "start" else exit_length
-    exit_anchor_x, exit_anchor_y, _ = _road_world_point(exit_segs, exit_anchor_s, t_offset_m)
+    exit_anchor_x, exit_anchor_y, _ = _road_world_point(exit_segs, exit_anchor_s, t_offset_m, exit_lo)
     edx, edy = conn_end_x - exit_anchor_x, conn_end_y - exit_anchor_y
     direction = 1.0 if exit_contact == "start" else -1.0
     for i in range(1, n_exit + 1):
         s = exit_anchor_s + direction * exit_m * i / n_exit
-        x, y, heading = _road_world_point(exit_segs, s, t_offset_m)
+        x, y, heading = _road_world_point(exit_segs, s, t_offset_m, exit_lo)
         if exit_contact == "end":
             heading = _normalize_angle(heading + math.pi)
         samples.append((junction_exit_distance + exit_m * i / n_exit, x + edx, y + edy, heading))
@@ -903,8 +970,16 @@ def generate_openscenario(data, output_path, xodr_filename):
                 cyclist_samples, cyclist_impact_dist - dist_before_impact
             )
 
+        # Real path-distance-before-impact at the actor's actual teleported
+        # start (cyc_j_start - cyclist_start_s is that start's distance along
+        # the sampled path, on the same road-0 s-axis the TeleportAction uses)
+        # -- NOT impact_x - cyclist_start_s, which subtracts conflict_s_m (an
+        # unrelated old straight-road-model s-value) from a real road-0 s and
+        # made the trajectory's t=0 point land 15-25m from the teleport spot.
+        cyclist_dist0 = cyclist_impact_dist - (cyc_j_start - cyclist_start_s)
+
         cyclist_points = [
-            (0, *_cyclist_at(impact_x - cyclist_start_s)),
+            (0, *_cyclist_at(cyclist_dist0)),
             (conflict_time_s - 0.2, *_cyclist_at(1.0)),
             (conflict_time_s, *_cyclist_at(0.0)),
             (duration_s, *_cyclist_at(0.0)),
@@ -916,9 +991,7 @@ def generate_openscenario(data, output_path, xodr_filename):
                 0, "go_straight", motor_y,
                 approach_margin_m=max(30.0, impact_x - motor_start_s + 5),
             )
-            point = _path_point_at_distance(
-                motor_samples, motor_j_start - (impact_x - motor_start_s)
-            )
+            point = _path_point_at_distance(motor_samples, motor_j_start - motor_start_s)
             motor_points = [(0, *point), (duration_s, *point)]
         else:
             motor_samples, motor_j_start, motor_j_end = _junction_maneuver_samples(
@@ -932,13 +1005,16 @@ def generate_openscenario(data, output_path, xodr_filename):
                     motor_samples, motor_impact_dist - dist_before_impact
                 )
 
+            # See cyclist_dist0 above: real path-distance-before-impact at the
+            # actor's actual teleported start, not impact_x - motor_start_s.
+            motor_dist0 = motor_impact_dist - (motor_j_start - motor_start_s)
+
             motor_turn_start_time_s = max(1.0, conflict_time_s - turn_duration_s)
-            motor_approach_dist = impact_x - min(
-                conflict_s_m - 8.0,
-                motor_start_s + motor_speed_mps * motor_turn_start_time_s,
+            motor_approach_dist = max(
+                8.0, motor_dist0 - motor_speed_mps * motor_turn_start_time_s
             )
             motor_points = [
-                (0, *_motor_at(impact_x - motor_start_s)),
+                (0, *_motor_at(motor_dist0)),
                 (motor_turn_start_time_s, *_motor_at(motor_approach_dist)),
                 (conflict_time_s - 1.2, *_motor_at(4.2)),
                 (conflict_time_s - 0.5, *_motor_at(1.2)),
