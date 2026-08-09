@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "longitudinal_02",
+    "raw_text": "Eine Radfahrerin befuhr den Markgrafendamm auf dem Schutzstreifen für Fahrradfahrende in Richtung Hauptstraße. Kurz nach der Einmündung zur Persiusstraße wechselte sie nach links in den danebenliegenden rechten Fahrstreifen, wo sie von einem Pkw erfasst wurde, der zu diesem Zeitpunkt den Markgrafendamm in dieselbe Richtung befuhr."
+  },
+  "classification": {
+    "scenario_type": "longitudinal",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Markgrafendamm",
+    "secondary_road": "Persiusstraße",
+    "house_number_reference": null
+  },
+  "road_context": {
+    "bike_facility_type": "bike_lane",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "change_lane",
+      "initial_direction": "hauptstraße",
+      "traffic_rule_status": null,
+      "road_position": null
+    },
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": "hauptstraße",
+      "traffic_rule_status": null,
+      "road_position": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "cyclist_lane_change_into_car_path",
+    "heading_relation": "same_direction",
+    "collision_happened": true,
+    "collision_description": "A cyclist changed lanes and collided with a car traveling in the same direction."
+  }
+}

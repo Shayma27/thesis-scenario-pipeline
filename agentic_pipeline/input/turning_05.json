@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "turning_05",
+    "raw_text": "Ein Lastwagen samt Anhänger befuhr die Kiefholzstraße in Richtung Südostallee. Beim Rechtsabbiegen in den Dammweg übersah der Fahrer eine Radfahrerin, wodurch es zur Kollision kam."
+  },
+  "classification": {
+    "scenario_type": "turning",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Kiefholzstraße",
+    "secondary_road": "Dammweg",
+    "house_number_reference": null
+  },
+  "road_context": {
+    "bike_facility_type": "roadway_mixed",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "truck_1",
+      "class": "motor_vehicle",
+      "type": "truck",
+      "maneuver": "turn_right",
+      "initial_direction": "southeast",
+      "traffic_rule_status": null,
+      "road_position": null
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "traffic_rule_status": null,
+      "road_position": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across_cycle_track",
+    "heading_relation": "crossing",
+    "collision_happened": true,
+    "collision_description": "A truck turning right failed to observe a cyclist and struck them."
+  }
+}

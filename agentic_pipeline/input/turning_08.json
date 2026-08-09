@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "turning_08",
+    "raw_text": "Ein Pkw befuhr die Reinickendorfer Straße und wollte links in die Pankstraße abbiegen. Ein Radfahrer überfuhr eine rote Ampel, wodurch es zum Zusammenstoß kam."
+  },
+  "classification": {
+    "scenario_type": "crossing",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Reinickendorfer Straße",
+    "secondary_road": "Pankstraße",
+    "house_number_reference": null
+  },
+  "road_context": {
+    "bike_facility_type": "roadway_mixed",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "turn_left_into_parking",
+      "initial_direction": null,
+      "traffic_rule_status": null,
+      "road_position": null
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "traffic_rule_status": "violated_priority",
+      "road_position": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_roadway",
+    "heading_relation": "crossing",
+    "collision_happened": true,
+    "collision_description": "A cyclist ran a red light and collided with a car turning left."
+  }
+}
