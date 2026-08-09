@@ -44,11 +44,14 @@ def load_reports() -> list[tuple[str, str, str]]:
             continue
 
         for position, match in enumerate(_ENTRY_RE.finditer(body), start=1):
-            meta = match.group("meta").strip()
-            narrative = " ".join(
+            # The date/time meta line is deliberately dropped here: Agent 1 no
+            # longer extracts source.date/source.time (see extract_scenario.py),
+            # so fusing it onto the narrative was pure noise sent to the LLM —
+            # worse, run-on with no punctuation ("...10:38 Uhr Der Fahrer..."),
+            # which measurably affected scenario_type classification in testing.
+            report_text = " ".join(
                 line.strip() for line in match.group("narrative").strip().splitlines()
             )
-            report_text = f"Datum: {meta} {narrative}"
             scenario_id = f"{scenario_type}_{position:02d}"
             records.append((scenario_id, report_text, scenario_type))
 
