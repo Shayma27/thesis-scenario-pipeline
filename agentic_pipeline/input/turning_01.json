@@ -3,10 +3,10 @@
   "source": {
     "dataset": "Berlin Police Reports",
     "source_id": "turning_01",
-    "raw_text": "<verbatim report text>"
+    "raw_text": "Der Fahrer wartete in dem von ihm geführten LKW auf der Fahrbahn der Salvador-Allende-Str. vor der Rotlicht abstrahlenden LSA. Als die LSA für seine Richtung grünes Licht abstrahlte, bog er nach rechts in den Müggelschlößchenweg ab und erfasste die neben ihm in gleicher Richtung geradeaus fahrende Radfahrerin. Sie befuhr den von der Fahrbahn baulich getrennten Radweg der Salvador-Allende-Str. in nördliche Richtung. Die LSA für Radfahrende strahlte grünes Wechsellicht ab. Die Radfahrerin und das Fahrrad wurden durch den rechts abbiegenden LKW vollständig überrollt."
   },
   "classification": {
-    "scenario_type": "crossing",
+    "scenario_type": "turning",
     "confidence": 1.0
   },
   "location": {
@@ -16,7 +16,7 @@
   },
   "road_context": {
     "bike_facility_type": "separated_cycle_track",
-    "bike_facility_position": null
+    "bike_facility_position": "left"
   },
   "participants": [
     {

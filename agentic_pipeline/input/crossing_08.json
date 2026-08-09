@@ -39,6 +39,6 @@
   "conflict": {
     "conflict_mechanism": "cyclist_crosses_vehicle_path_from_mixed_road",
     "collision_happened": true,
-    "collision_description": "A cyclist traveling on the rightmost lane of a mixed road collided with a car traveling on the leftmost lane."
+    "collision_description": "A cyclist, who was riding on the rightmost lane of a mixed road, collided with a car that was traveling on the leftmost lane of a crossing road."
   }
 }

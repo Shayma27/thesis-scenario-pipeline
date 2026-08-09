@@ -24,7 +24,7 @@
       "class": "cyclist",
       "type": "e_bike",
       "maneuver": "go_straight",
-      "initial_direction": "spreeufer",
+      "initial_direction": null,
       "road_position": null
     },
     {

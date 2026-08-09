@@ -39,6 +39,6 @@
   "conflict": {
     "conflict_mechanism": "right_turn_across_cycle_path",
     "collision_happened": true,
-    "collision_description": "A truck turning right failed to observe a cyclist traveling in the same direction."
+    "collision_description": "A truck turning right failed to observe a cyclist traveling in the same direction and struck them."
   }
 }

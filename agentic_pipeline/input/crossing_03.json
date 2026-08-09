@@ -24,7 +24,7 @@
       "class": "motor_vehicle",
       "type": "car",
       "maneuver": "go_straight",
-      "initial_direction": "south_east",
+      "initial_direction": null,
       "road_position": null
     },
     {
@@ -37,7 +37,7 @@
     }
   ],
   "conflict": {
-    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_road",
+    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_roadway",
     "collision_happened": true,
     "collision_description": "A group of cyclists crossing the road were struck by a speeding car."
   }

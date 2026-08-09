@@ -24,7 +24,7 @@
       "class": "cyclist",
       "type": "bicycle",
       "maneuver": "change_lane",
-      "initial_direction": "hauptstraße",
+      "initial_direction": null,
       "road_position": null
     },
     {
@@ -32,13 +32,13 @@
       "class": "motor_vehicle",
       "type": "car",
       "maneuver": "go_straight",
-      "initial_direction": "hauptstraße",
+      "initial_direction": null,
       "road_position": null
     }
   ],
   "conflict": {
     "conflict_mechanism": "cyclist_lane_change_into_car_path",
     "collision_happened": true,
-    "collision_description": "A cyclist changed from a bike lane to a motor vehicle lane and was struck by a car traveling in the same direction."
+    "collision_description": "A cyclist changed lanes and was struck by a car traveling in the same direction."
   }
 }

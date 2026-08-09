@@ -6,7 +6,7 @@
     "raw_text": "Eine Radfahrerin befuhr die Schönhauser Straße in Richtung Torstraße. Als sie auf die Kreuzung der Torstraße in Richtung Alte Schönhauser fuhr, erfasste sie ein Lkw-Fahrer, der zunächst in gleicher Richtung fahrend dort nach rechts in die Torstraße abbog."
   },
   "classification": {
-    "scenario_type": "crossing",
+    "scenario_type": "turning",
     "confidence": 1.0
   },
   "location": {
@@ -24,7 +24,7 @@
       "class": "cyclist",
       "type": "bicycle",
       "maneuver": "go_straight",
-      "initial_direction": "torstraße",
+      "initial_direction": null,
       "road_position": null
     },
     {
@@ -32,7 +32,7 @@
       "class": "motor_vehicle",
       "type": "truck",
       "maneuver": "turn_right",
-      "initial_direction": "torstraße",
+      "initial_direction": null,
       "road_position": null
     }
   ],

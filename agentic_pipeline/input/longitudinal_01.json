@@ -11,7 +11,7 @@
   },
   "location": {
     "primary_road": "Alt-Biesdorf",
-    "secondary_road": "Lötschbergstraße",
+    "secondary_road": null,
     "house_number_reference": null
   },
   "road_context": {
@@ -24,7 +24,7 @@
       "class": "cyclist",
       "type": "bicycle",
       "maneuver": "change_lane",
-      "initial_direction": "north",
+      "initial_direction": null,
       "road_position": "leftmost_motor_lane"
     },
     {
@@ -32,7 +32,7 @@
       "class": "motor_vehicle",
       "type": "car",
       "maneuver": "go_straight",
-      "initial_direction": "north",
+      "initial_direction": null,
       "road_position": null
     }
   ],

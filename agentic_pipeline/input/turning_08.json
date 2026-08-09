@@ -6,7 +6,7 @@
     "raw_text": "Ein Pkw befuhr die Reinickendorfer Straße und wollte links in die Pankstraße abbiegen. Ein Radfahrer überfuhr eine rote Ampel, wodurch es zum Zusammenstoß kam."
   },
   "classification": {
-    "scenario_type": "crossing",
+    "scenario_type": "turning",
     "confidence": 1.0
   },
   "location": {
@@ -37,7 +37,7 @@
     }
   ],
   "conflict": {
-    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_median",
+    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_red_light",
     "collision_happened": true,
     "collision_description": "A cyclist ran a red light and collided with a car turning left."
   }

@@ -6,7 +6,7 @@
     "raw_text": "Eine Rad fahrende Person befuhr den Radfahrschutzstreifen der Oranienburger Straße nach Norden und wollte nach links in den Taldorfer Weg abbiegen, ohne auf den nachfolgenden in gleicher Richtung fahrenden Pkw zu achten. Es kam zum Zusammenstoß."
   },
   "classification": {
-    "scenario_type": "turning",
+    "scenario_type": "crossing",
     "confidence": 1.0
   },
   "location": {
@@ -37,8 +37,8 @@
     }
   ],
   "conflict": {
-    "conflict_mechanism": "right_turn_across_cycle_lane",
+    "conflict_mechanism": "cyclist_turns_across_vehicle_path",
     "collision_happened": true,
-    "collision_description": "A cyclist turning left from a bike lane was struck by a car traveling in the same direction."
+    "collision_description": "A cyclist turning left failed to observe a car traveling in the same direction and collided with it."
   }
 }

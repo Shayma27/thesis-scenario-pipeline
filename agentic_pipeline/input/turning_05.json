@@ -15,7 +15,7 @@
     "house_number_reference": null
   },
   "road_context": {
-    "bike_facility_type": "roadway_mixed",
+    "bike_facility_type": null,
     "bike_facility_position": null
   },
   "participants": [
@@ -24,7 +24,7 @@
       "class": "motor_vehicle",
       "type": "truck",
       "maneuver": "turn_right",
-      "initial_direction": "south_east",
+      "initial_direction": null,
       "road_position": null
     },
     {

@@ -37,8 +37,8 @@
     }
   ],
   "conflict": {
-    "conflict_mechanism": "right_turn_into_parking_across_separated_cycle_track",
+    "conflict_mechanism": "truck_turns_across_separated_cycle_track",
     "collision_happened": true,
-    "collision_description": "A truck turning right into a parking lot collided with a cyclist on a separated bike path."
+    "collision_description": "A truck turning right across a separated cycle track collided with a cyclist traveling in the same direction."
   }
 }
