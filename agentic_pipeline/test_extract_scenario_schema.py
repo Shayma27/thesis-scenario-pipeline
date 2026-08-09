@@ -194,6 +194,10 @@ def test_sanitizes_invalid_enum_values() -> list[str]:
     broken["participants"][0]["initial_direction"] = "same as final"
     broken["participants"][1]["initial_direction"] = "torstraße"
     broken["road_context"]["bike_facility_position"] = "somewhere vague"
+    # real bug from the live batch run: crossing_06's cyclist maneuver came
+    # back as "turn_left_into_parking" — not a real value, invented by
+    # pattern-completion from turn_right_into_parking.
+    broken["participants"][1]["maneuver"] = "turn_left_into_parking"
     _stub_llm_response(broken)
     result = es.extract_scenario(SALVADOR_RAW, "test_sanitize")
 
@@ -210,9 +214,16 @@ def test_sanitizes_invalid_enum_values() -> list[str]:
         )
     if result["road_context"]["bike_facility_position"] is not None:
         failures.append("invalid bike_facility_position was not sanitized to null")
+    if result["participants"][1]["maneuver"] != "unknown":
+        failures.append(
+            f"invalid maneuver 'turn_left_into_parking' was not sanitized to 'unknown', "
+            f"got {result['participants'][1]['maneuver']!r}"
+        )
     # valid enum values must survive untouched
     if result["participants"][0]["road_position"] is not None:
         failures.append("valid null road_position was incorrectly changed")
+    if result["participants"][0]["maneuver"] != "turn_right":
+        failures.append("valid maneuver 'turn_right' was incorrectly changed")
     return failures
 
 

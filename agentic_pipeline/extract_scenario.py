@@ -108,11 +108,12 @@ RULES:
   description like "same as X", and never a place/street name. Only literal compass words like
   "nördliche Richtung" (north) count; if only implied relative to another actor, use that actor's
   own literal compass value, never a phrase.
-- heading_reference (per participant): destination-relative phrasing is very common in these
-  reports and is NOT a compass direction but IS worth keeping — "Richtung Torstraße" (toward
-  Torstraße), "in Höhe von X" (at/near X). Quote it short, e.g. "Richtung Torstraße". Null if
-  nothing like this is stated. This is independent of initial_direction — a participant can have
-  one, both, or neither.
+- heading_reference: for EACH participant separately, check the text near their own action for
+  "Richtung X" (toward X) or "in Höhe von X" (near X) — extremely common in these reports, and NOT
+  a compass direction. Do this check even when initial_direction is already filled for that
+  participant, and even when the OTHER participant already has a heading_reference — check both
+  participants independently every time. Quote it short, e.g. "Richtung Torstraße". Null only if
+  truly nothing like this is stated for that participant.
 
 ALLOWED VALUES — scenario_type:{_pipe(SCHEMA['scenario_types'])} participant_type:{_pipe(SCHEMA['participant_types'])}
 maneuver:{_pipe(SCHEMA['maneuvers'])} bike_facility_type:{_pipe(SCHEMA['bike_facility_types'])}
@@ -217,15 +218,26 @@ _ROAD_CONTEXT_ENUM_FIELDS = {
 def _sanitize_enum_fields(extracted: dict) -> None:
     """Null out any allowed-list field whose value isn't actually in that
     list. The model occasionally invents non-enum strings (e.g. "same as
-    final", "torstraße" for initial_direction) instead of picking from the
-    list or using null — a hallucinated value is worse than null downstream,
-    since nothing consumes it expecting free text.
+    final", "torstraße" for initial_direction, "turn_left_into_parking" —
+    not a real value, a pattern-completion from turn_right_into_parking —
+    for maneuver) instead of picking from the list or using null — a
+    hallucinated value is worse than null downstream, since nothing
+    consumes it expecting free text.
     """
     for participant in extracted.get("participants", []):
         for field, allowed in _ENUM_FIELDS.items():
             value = participant.get(field)
             if value is not None and value not in allowed:
                 participant[field] = None
+
+        # maneuver falls back to "unknown" rather than null: several
+        # downstream call sites do str(maneuver).lower() without a None
+        # guard, and "unknown" is already a legitimate value in this
+        # specific enum, unlike the null-for-"not stated" convention used
+        # everywhere else.
+        maneuver = participant.get("maneuver")
+        if maneuver is not None and maneuver not in SCHEMA["maneuvers"]:
+            participant["maneuver"] = "unknown"
 
     road_context = extracted.get("road_context", {})
     for field, allowed in _ROAD_CONTEXT_ENUM_FIELDS.items():
