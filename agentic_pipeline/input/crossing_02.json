@@ -33,7 +33,7 @@
       "type": "car",
       "maneuver": "enter_roadway",
       "initial_direction": null,
-      "road_position": null
+      "road_position": "rightmost_motor_lane"
     }
   ],
   "conflict": {

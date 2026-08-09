@@ -39,6 +39,6 @@
   "conflict": {
     "conflict_mechanism": "cyclist_lane_change_into_car_path",
     "collision_happened": true,
-    "collision_description": "A cyclist changed lanes and was struck by a car traveling in the same direction."
+    "collision_description": "A cyclist changed lanes and collided with a car traveling in the same direction."
   }
 }

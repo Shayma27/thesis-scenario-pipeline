@@ -16,7 +16,7 @@
   },
   "road_context": {
     "bike_facility_type": "separated_cycle_track",
-    "bike_facility_position": "left"
+    "bike_facility_position": null
   },
   "participants": [
     {

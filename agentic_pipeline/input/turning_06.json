@@ -37,8 +37,8 @@
     }
   ],
   "conflict": {
-    "conflict_mechanism": "truck_turns_across_cyclist_path",
+    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_straight",
     "collision_happened": true,
-    "collision_description": "A truck turning right across a cyclist's path struck the cyclist."
+    "collision_description": "A cyclist traveling straight was struck by a truck turning right."
   }
 }

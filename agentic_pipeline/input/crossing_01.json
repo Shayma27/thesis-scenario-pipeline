@@ -37,8 +37,8 @@
     }
   ],
   "conflict": {
-    "conflict_mechanism": "cyclist_entering_road_from_sidewalk",
+    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_sidewalk",
     "collision_happened": true,
-    "collision_description": "A cyclist entered the road from the sidewalk and collided with a car."
+    "collision_description": "A cyclist crossing from the sidewalk was struck by a car."
   }
 }

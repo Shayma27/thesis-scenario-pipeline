@@ -37,8 +37,8 @@
     }
   ],
   "conflict": {
-    "conflict_mechanism": "right_turn_across_cycle_crossing",
+    "conflict_mechanism": "truck_turns_across_cycle_crossing",
     "collision_happened": true,
-    "collision_description": "A truck turning right across a cycle crossing collided with an e-bike traveling straight."
+    "collision_description": "A truck turning right struck a cyclist crossing from the adjacent bike lane."
   }
 }

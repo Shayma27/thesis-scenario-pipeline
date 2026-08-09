@@ -37,8 +37,8 @@
     }
   ],
   "conflict": {
-    "conflict_mechanism": "cyclist_turns_across_vehicle_path",
+    "conflict_mechanism": "cyclist_turns_across_vehicle_path_from_bike_lane",
     "collision_happened": true,
-    "collision_description": "A cyclist turning left failed to observe a car traveling in the same direction and collided with it."
+    "collision_description": "A cyclist turning left from a bike lane collided with a car traveling in the same direction."
   }
 }

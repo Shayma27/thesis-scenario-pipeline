@@ -37,8 +37,8 @@
     }
   ],
   "conflict": {
-    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_roadway",
+    "conflict_mechanism": "group_of_cyclists_crosses_vehicle_path_from_roadway",
     "collision_happened": true,
-    "collision_description": "A group of cyclists crossing the road were struck by a speeding car."
+    "collision_description": "A group of cyclists crossing the road from the roadway was struck by a speeding car."
   }
 }
