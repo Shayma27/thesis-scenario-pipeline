@@ -11,7 +11,7 @@
   },
   "location": {
     "primary_road": "Alt-Biesdorf",
-    "secondary_road": null,
+    "secondary_road": "Lötschbergstraße",
     "house_number_reference": null
   },
   "road_context": {
@@ -24,8 +24,7 @@
       "class": "cyclist",
       "type": "bicycle",
       "maneuver": "change_lane",
-      "initial_direction": null,
-      "traffic_rule_status": null,
+      "initial_direction": "north",
       "road_position": "leftmost_motor_lane"
     },
     {
@@ -33,14 +32,12 @@
       "class": "motor_vehicle",
       "type": "car",
       "maneuver": "go_straight",
-      "initial_direction": null,
-      "traffic_rule_status": null,
+      "initial_direction": "north",
       "road_position": null
     }
   ],
   "conflict": {
     "conflict_mechanism": "cyclist_lane_change_into_car_path",
-    "heading_relation": "same_direction",
     "collision_happened": true,
     "collision_description": "A cyclist changed from the leftmost to the rightmost of three lanes and collided with a car traveling in the same direction."
   }

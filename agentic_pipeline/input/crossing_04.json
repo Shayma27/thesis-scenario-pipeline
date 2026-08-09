@@ -25,7 +25,6 @@
       "type": "car",
       "maneuver": "go_straight",
       "initial_direction": "west",
-      "traffic_rule_status": null,
       "road_position": null
     },
     {
@@ -34,13 +33,11 @@
       "type": "bicycle",
       "maneuver": "go_straight",
       "initial_direction": "north",
-      "traffic_rule_status": null,
       "road_position": null
     }
   ],
   "conflict": {
     "conflict_mechanism": "cyclist_crosses_vehicle_path_from_median",
-    "heading_relation": "crossing",
     "collision_happened": true,
     "collision_description": "A cyclist crossing from a green median strip was struck by a speeding car."
   }

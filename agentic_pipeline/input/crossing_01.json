@@ -15,7 +15,7 @@
     "house_number_reference": "89"
   },
   "road_context": {
-    "bike_facility_type": "roadway_mixed",
+    "bike_facility_type": "sidewalk",
     "bike_facility_position": null
   },
   "participants": [
@@ -25,7 +25,6 @@
       "type": "car",
       "maneuver": "go_straight",
       "initial_direction": null,
-      "traffic_rule_status": null,
       "road_position": "leftmost_motor_lane"
     },
     {
@@ -34,14 +33,12 @@
       "type": "bicycle",
       "maneuver": "enter_roadway",
       "initial_direction": null,
-      "traffic_rule_status": null,
       "road_position": null
     }
   ],
   "conflict": {
-    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_sidewalk",
-    "heading_relation": "crossing",
+    "conflict_mechanism": "cyclist_enters_vehicle_path_from_sidewalk",
     "collision_happened": true,
-    "collision_description": "A cyclist entered the road from the sidewalk and collided with a car."
+    "collision_description": "A cyclist entered the road from a sidewalk and collided with a car."
   }
 }

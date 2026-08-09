@@ -25,7 +25,6 @@
       "type": "e_bike",
       "maneuver": "go_straight",
       "initial_direction": "spreeufer",
-      "traffic_rule_status": null,
       "road_position": null
     },
     {
@@ -34,13 +33,11 @@
       "type": "car",
       "maneuver": "enter_roadway",
       "initial_direction": null,
-      "traffic_rule_status": null,
       "road_position": null
     }
   ],
   "conflict": {
-    "conflict_mechanism": "car_entering_roadway_violating_cyclist_path",
-    "heading_relation": "crossing",
+    "conflict_mechanism": "vehicle_entering_roadway_across_cyclist_path",
     "collision_happened": true,
     "collision_description": "A car entering the road from the right side failed to observe a cyclist and collided with them."
   }

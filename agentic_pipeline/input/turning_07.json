@@ -25,7 +25,6 @@
       "type": "truck",
       "maneuver": "turn_right_into_parking",
       "initial_direction": "south",
-      "traffic_rule_status": null,
       "road_position": null
     },
     {
@@ -34,14 +33,12 @@
       "type": "bicycle",
       "maneuver": "go_straight",
       "initial_direction": "south",
-      "traffic_rule_status": null,
       "road_position": null
     }
   ],
   "conflict": {
-    "conflict_mechanism": "right_turn_across_separated_cycle_track",
-    "heading_relation": "crossing",
+    "conflict_mechanism": "right_turn_into_parking_across_separated_cycle_track",
     "collision_happened": true,
-    "collision_description": "A truck turning right across a separated cycle track collided with a cyclist traveling in the same direction."
+    "collision_description": "A truck turning right into a parking lot collided with a cyclist on a separated bike path."
   }
 }

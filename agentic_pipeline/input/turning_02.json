@@ -24,8 +24,7 @@
       "class": "motor_vehicle",
       "type": "truck",
       "maneuver": "turn_right",
-      "initial_direction": "same_direction",
-      "traffic_rule_status": "violated_priority",
+      "initial_direction": null,
       "road_position": null
     },
     {
@@ -33,15 +32,13 @@
       "class": "cyclist",
       "type": "bicycle",
       "maneuver": "go_straight",
-      "initial_direction": "same_direction",
-      "traffic_rule_status": "priority",
+      "initial_direction": null,
       "road_position": null
     }
   ],
   "conflict": {
-    "conflict_mechanism": "right_turn_across_cycle_track",
-    "heading_relation": "same_direction",
+    "conflict_mechanism": "right_turn_across_cycle_path",
     "collision_happened": true,
-    "collision_description": "A truck turning right failed to observe a cyclist traveling in the same direction and collided with them."
+    "collision_description": "A truck turning right failed to observe a cyclist traveling in the same direction."
   }
 }

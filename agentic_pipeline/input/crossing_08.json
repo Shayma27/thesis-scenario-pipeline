@@ -25,7 +25,6 @@
       "type": "bicycle",
       "maneuver": "go_straight",
       "initial_direction": null,
-      "traffic_rule_status": "violated_priority",
       "road_position": "rightmost_motor_lane"
     },
     {
@@ -34,14 +33,12 @@
       "type": "car",
       "maneuver": "go_straight",
       "initial_direction": "south",
-      "traffic_rule_status": null,
       "road_position": "leftmost_motor_lane"
     }
   ],
   "conflict": {
     "conflict_mechanism": "cyclist_crosses_vehicle_path_from_mixed_road",
-    "heading_relation": "crossing",
     "collision_happened": true,
-    "collision_description": "A cyclist, who ran a red light, collided with a car traveling in the opposite direction on a mixed road."
+    "collision_description": "A cyclist traveling on the rightmost lane of a mixed road collided with a car traveling on the leftmost lane."
   }
 }

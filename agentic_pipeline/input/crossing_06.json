@@ -25,7 +25,6 @@
       "type": "bicycle",
       "maneuver": "turn_left",
       "initial_direction": "north",
-      "traffic_rule_status": null,
       "road_position": null
     },
     {
@@ -34,14 +33,12 @@
       "type": "car",
       "maneuver": "go_straight",
       "initial_direction": "north",
-      "traffic_rule_status": null,
       "road_position": null
     }
   ],
   "conflict": {
-    "conflict_mechanism": "right_turn_violating_yield_sign_across_bike_lane",
-    "heading_relation": "same_direction",
+    "conflict_mechanism": "right_turn_across_cycle_lane",
     "collision_happened": true,
-    "collision_description": "A cyclist turning left from a bike lane collided with a car traveling in the same direction."
+    "collision_description": "A cyclist turning left from a bike lane was struck by a car traveling in the same direction."
   }
 }

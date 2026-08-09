@@ -23,9 +23,8 @@
       "id": "car_1",
       "class": "motor_vehicle",
       "type": "car",
-      "maneuver": "turn_left_into_parking",
+      "maneuver": "turn_left",
       "initial_direction": null,
-      "traffic_rule_status": null,
       "road_position": null
     },
     {
@@ -34,13 +33,11 @@
       "type": "bicycle",
       "maneuver": "go_straight",
       "initial_direction": null,
-      "traffic_rule_status": "violated_priority",
       "road_position": null
     }
   ],
   "conflict": {
-    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_roadway",
-    "heading_relation": "crossing",
+    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_median",
     "collision_happened": true,
     "collision_description": "A cyclist ran a red light and collided with a car turning left."
   }

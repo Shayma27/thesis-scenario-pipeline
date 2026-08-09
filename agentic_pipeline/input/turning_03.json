@@ -6,7 +6,7 @@
     "raw_text": "Eine Lkw fahrende Person befuhr die Gutschmidtstraße in Richtung Westen und bog nach rechts auf den Buckower Damm Richtung Britzer Damm ab. Dabei kam es in Höhe der Radverkehrsfuhrt zum Zusammenstoß mit einer E-Bike fahrenden Person, die aus der Gutschmidtstraße kommend geradeaus auf die Kreuzung fuhr."
   },
   "classification": {
-    "scenario_type": "crossing",
+    "scenario_type": "turning",
     "confidence": 1.0
   },
   "location": {
@@ -25,7 +25,6 @@
       "type": "truck",
       "maneuver": "turn_right",
       "initial_direction": "west",
-      "traffic_rule_status": null,
       "road_position": null
     },
     {
@@ -34,14 +33,12 @@
       "type": "e_bike",
       "maneuver": "go_straight",
       "initial_direction": null,
-      "traffic_rule_status": null,
       "road_position": null
     }
   ],
   "conflict": {
-    "conflict_mechanism": "truck_turns_across_cyclist_path_from_cycle_crossing",
-    "heading_relation": "crossing",
+    "conflict_mechanism": "right_turn_across_cycle_crossing",
     "collision_happened": true,
-    "collision_description": "A truck turning right from a cycle crossing collided with an e-bike traveling straight."
+    "collision_description": "A truck turning right collided with an e-bike traveling straight through a cycle crossing."
   }
 }

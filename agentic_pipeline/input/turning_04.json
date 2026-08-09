@@ -24,8 +24,7 @@
       "class": "motor_vehicle",
       "type": "car",
       "maneuver": "turn_right",
-      "initial_direction": "same as road",
-      "traffic_rule_status": null,
+      "initial_direction": "same as Otto-Suhr-Allee",
       "road_position": null
     },
     {
@@ -33,14 +32,12 @@
       "class": "cyclist",
       "type": "bicycle",
       "maneuver": "go_straight",
-      "initial_direction": "same as road",
-      "traffic_rule_status": null,
+      "initial_direction": "same as Otto-Suhr-Allee",
       "road_position": null
     }
   ],
   "conflict": {
     "conflict_mechanism": "right_turn_across_cycle_track",
-    "heading_relation": "crossing",
     "collision_happened": true,
     "collision_description": "A car turning right collided with a cyclist traveling in the same direction."
   }

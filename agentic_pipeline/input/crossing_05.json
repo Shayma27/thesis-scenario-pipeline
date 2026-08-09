@@ -6,7 +6,7 @@
     "raw_text": "Eine Rad fahrende Person befuhr die Storkower Straße in Richtung Osten und übersah beim Linksabbiegen einen in gleicher Richtung fahrenden Pkw. Es kam zum Zusammenstoß."
   },
   "classification": {
-    "scenario_type": "turning",
+    "scenario_type": "crossing",
     "confidence": 1.0
   },
   "location": {
@@ -25,7 +25,6 @@
       "type": "bicycle",
       "maneuver": "turn_left",
       "initial_direction": "east",
-      "traffic_rule_status": null,
       "road_position": null
     },
     {
@@ -34,14 +33,12 @@
       "type": "car",
       "maneuver": "go_straight",
       "initial_direction": "east",
-      "traffic_rule_status": null,
       "road_position": null
     }
   ],
   "conflict": {
-    "conflict_mechanism": "right_turn_across_cycle_track",
-    "heading_relation": "same_direction",
+    "conflict_mechanism": "cyclist_turns_across_vehicle_path",
     "collision_happened": true,
-    "collision_description": "A cyclist turning left failed to observe a car traveling in the same direction and collided."
+    "collision_description": "A cyclist turning left failed to observe a car traveling in the same direction and collided with it."
   }
 }
