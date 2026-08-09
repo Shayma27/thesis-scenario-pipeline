@@ -15,7 +15,7 @@
     "house_number_reference": null
   },
   "road_context": {
-    "bike_facility_type": "roadway_mixed",
+    "bike_facility_type": null,
     "bike_facility_position": null
   },
   "participants": [
@@ -25,6 +25,7 @@
       "type": "car",
       "maneuver": "go_straight",
       "initial_direction": null,
+      "heading_reference": null,
       "road_position": null
     },
     {
@@ -32,13 +33,14 @@
       "class": "cyclist",
       "type": "bicycle",
       "maneuver": "go_straight",
-      "initial_direction": "north",
+      "initial_direction": null,
+      "heading_reference": null,
       "road_position": null
     }
   ],
   "conflict": {
-    "conflict_mechanism": "group_of_cyclists_crosses_vehicle_path_from_roadway",
+    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_roadway",
     "collision_happened": true,
-    "collision_description": "A group of cyclists crossing the road from the roadway was struck by a speeding car."
+    "collision_description": "A group of cyclists crossing the road were struck by a speeding car."
   }
 }

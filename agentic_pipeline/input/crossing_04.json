@@ -25,6 +25,7 @@
       "type": "car",
       "maneuver": "go_straight",
       "initial_direction": "west",
+      "heading_reference": null,
       "road_position": null
     },
     {
@@ -33,6 +34,7 @@
       "type": "bicycle",
       "maneuver": "go_straight",
       "initial_direction": "north",
+      "heading_reference": null,
       "road_position": null
     }
   ],

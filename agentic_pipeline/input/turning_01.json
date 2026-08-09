@@ -25,6 +25,7 @@
       "type": "truck",
       "maneuver": "turn_right",
       "initial_direction": "north",
+      "heading_reference": null,
       "road_position": null
     },
     {
@@ -33,11 +34,12 @@
       "type": "bicycle",
       "maneuver": "go_straight",
       "initial_direction": "north",
+      "heading_reference": null,
       "road_position": null
     }
   ],
   "conflict": {
-    "conflict_mechanism": "truck_turns_across_separated_cycle_track",
+    "conflict_mechanism": "vehicle_turns_across_cycle_track",
     "collision_happened": true,
     "collision_description": "A truck turning right struck a cyclist who was traveling in the same direction on a separated bike path."
   }

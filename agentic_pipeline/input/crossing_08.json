@@ -25,20 +25,22 @@
       "type": "bicycle",
       "maneuver": "go_straight",
       "initial_direction": null,
-      "road_position": "rightmost_motor_lane"
+      "heading_reference": null,
+      "road_position": null
     },
     {
       "id": "car_1",
       "class": "motor_vehicle",
       "type": "car",
       "maneuver": "go_straight",
-      "initial_direction": "south",
-      "road_position": "leftmost_motor_lane"
+      "initial_direction": "north",
+      "heading_reference": null,
+      "road_position": null
     }
   ],
   "conflict": {
-    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_mixed_road",
+    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_mixed_roadway",
     "collision_happened": true,
-    "collision_description": "A cyclist, who was traveling on the rightmost lane of a mixed road, collided with a car that was traveling on the leftmost lane of a perpendicular road."
+    "collision_description": "A cyclist crossing from a mixed roadway was struck by a car."
   }
 }

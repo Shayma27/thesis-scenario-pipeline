@@ -25,6 +25,7 @@
       "type": "truck",
       "maneuver": "turn_right",
       "initial_direction": "west",
+      "heading_reference": null,
       "road_position": null
     },
     {
@@ -33,12 +34,13 @@
       "type": "e_bike",
       "maneuver": "go_straight",
       "initial_direction": null,
+      "heading_reference": null,
       "road_position": null
     }
   ],
   "conflict": {
     "conflict_mechanism": "truck_turns_across_cycle_crossing",
     "collision_happened": true,
-    "collision_description": "A truck turning right struck a cyclist crossing from the adjacent bike lane."
+    "collision_description": "A truck turning right struck a cyclist crossing from a designated bike crossing."
   }
 }

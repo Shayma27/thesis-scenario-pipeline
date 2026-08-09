@@ -15,7 +15,7 @@
     "house_number_reference": null
   },
   "road_context": {
-    "bike_facility_type": "roadway_mixed",
+    "bike_facility_type": null,
     "bike_facility_position": null
   },
   "participants": [
@@ -23,9 +23,10 @@
       "id": "cyclist_1",
       "class": "cyclist",
       "type": "bicycle",
-      "maneuver": "change_lane",
+      "maneuver": "change_lane_left_to_right",
       "initial_direction": null,
-      "road_position": "leftmost_motor_lane"
+      "heading_reference": "Richtung Grabensprung",
+      "road_position": null
     },
     {
       "id": "car_1",
@@ -33,6 +34,7 @@
       "type": "car",
       "maneuver": "go_straight",
       "initial_direction": null,
+      "heading_reference": null,
       "road_position": null
     }
   ],

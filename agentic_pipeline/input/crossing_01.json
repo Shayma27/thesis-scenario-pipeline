@@ -25,6 +25,7 @@
       "type": "car",
       "maneuver": "go_straight",
       "initial_direction": null,
+      "heading_reference": null,
       "road_position": "leftmost_motor_lane"
     },
     {
@@ -33,12 +34,13 @@
       "type": "bicycle",
       "maneuver": "enter_roadway",
       "initial_direction": null,
+      "heading_reference": null,
       "road_position": null
     }
   ],
   "conflict": {
     "conflict_mechanism": "cyclist_crosses_vehicle_path_from_sidewalk",
     "collision_happened": true,
-    "collision_description": "A cyclist crossing from the sidewalk was struck by a car."
+    "collision_description": "A cyclist crossing from the sidewalk collided with a car."
   }
 }
