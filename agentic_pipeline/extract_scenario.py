@@ -95,8 +95,10 @@ RULES:
   which is a separate cycling facility, not a driving lane.
 - bike_facility_position: only if the report states which side of the road the facility is on. Else null.
 - initial_direction: must be exactly one of the allowed compass words below, or null. Never a
-  description like "same as X" — if the direction is only implied relative to another actor, use
-  that actor's own literal compass value, not a phrase.
+  description like "same as X", and never a place/street name — "Richtung Torstraße" (toward
+  Torstraße) names a destination, not a compass direction, so that stays null. Only literal compass
+  words like "nördliche Richtung" (north) count. If only implied relative to another actor, use
+  that actor's own literal compass value, never a phrase.
 
 ALLOWED VALUES — scenario_type:{_pipe(SCHEMA['scenario_types'])} participant_type:{_pipe(SCHEMA['participant_types'])}
 maneuver:{_pipe(SCHEMA['maneuvers'])} bike_facility_type:{_pipe(SCHEMA['bike_facility_types'])}
@@ -105,7 +107,7 @@ bike_facility_position:{_pipe(SCHEMA['bike_facility_positions'])}
 
 STRUCTURE (fill exactly this, nothing more — no osm_query/city/lane counts/speeds/coordinates):
 {{ "schema_version": "0.2",
-  "source": {{ "dataset": "Berlin Police Reports", "source_id": "<script fills>", "raw_text": "<verbatim>" }},
+  "source": {{ "dataset": "Berlin Police Reports", "source_id": "<script fills>" }},
   "classification": {{ "scenario_type": "<allowed>", "confidence": <0.0-1.0> }},
   "location": {{ "primary_road": "<or null>", "secondary_road": "<or null>", "house_number_reference": "<or null>" }},
   "road_context": {{ "bike_facility_type": "<allowed or null>", "bike_facility_position": "<allowed or null>" }},
@@ -134,7 +136,7 @@ REPORT: "Eine Pkw fahrende Person fuhr auf der Straße zum Müggelhort nach Süd
 CORRECT OUTPUT:
 {
   "schema_version": "0.2",
-  "source": { "dataset": "Berlin Police Reports", "source_id": "<will be filled by script>", "raw_text": "<verbatim report text>" },
+  "source": { "dataset": "Berlin Police Reports", "source_id": "<will be filled by script>" },
   "classification": { "scenario_type": "turning", "confidence": 1.0 },
   "location": { "primary_road": "Müggelheimer Damm", "secondary_road": "Straße zum Müggelhort", "house_number_reference": null },
   "road_context": { "bike_facility_type": "shared_foot_cycle_path", "bike_facility_position": null },
@@ -151,7 +153,7 @@ REPORT: "Eine Rad fahrende Person querte an einer Querungshilfe unachtsam die st
 CORRECT OUTPUT:
 {
   "schema_version": "0.2",
-  "source": { "dataset": "Berlin Police Reports", "source_id": "<will be filled by script>", "raw_text": "<verbatim report text>" },
+  "source": { "dataset": "Berlin Police Reports", "source_id": "<will be filled by script>" },
   "classification": { "scenario_type": "crossing", "confidence": 1.0 },
   "location": { "primary_road": "Landsberger Allee", "secondary_road": null, "house_number_reference": null },
   "road_context": { "bike_facility_type": "median_strip", "bike_facility_position": null },
@@ -168,7 +170,7 @@ REPORT: "Ein Radfahrer befuhr den linken der drei Fahrstreifen auf der Straße A
 CORRECT OUTPUT:
 {
   "schema_version": "0.2",
-  "source": { "dataset": "Berlin Police Reports", "source_id": "<will be filled by script>", "raw_text": "<verbatim report text>" },
+  "source": { "dataset": "Berlin Police Reports", "source_id": "<will be filled by script>" },
   "classification": { "scenario_type": "longitudinal", "confidence": 1.0 },
   "location": { "primary_road": "Alt-Biesdorf", "secondary_road": null, "house_number_reference": null },
   "road_context": { "bike_facility_type": "roadway_mixed", "bike_facility_position": null },
@@ -187,14 +189,62 @@ coordinates, speeds, OSM queries, or simulator parameters.
 SYSTEM_PROMPT = SYSTEM_PROMPT + "\n" + FEWSHOT_EXAMPLES
 
 
+_TURNING_MANEUVERS = {"turn_right", "turn_left", "turn_right_into_parking"}
+_ENUM_FIELDS = {
+    "initial_direction": SCHEMA["directions"],
+    "road_position": SCHEMA["road_positions"],
+}
+_ROAD_CONTEXT_ENUM_FIELDS = {
+    "bike_facility_type": SCHEMA["bike_facility_types"],
+    "bike_facility_position": SCHEMA["bike_facility_positions"],
+}
+
+
+def _sanitize_enum_fields(extracted: dict) -> None:
+    """Null out any allowed-list field whose value isn't actually in that
+    list. The model occasionally invents non-enum strings (e.g. "same as
+    final", "torstraße" for initial_direction) instead of picking from the
+    list or using null — a hallucinated value is worse than null downstream,
+    since nothing consumes it expecting free text.
+    """
+    for participant in extracted.get("participants", []):
+        for field, allowed in _ENUM_FIELDS.items():
+            value = participant.get(field)
+            if value is not None and value not in allowed:
+                participant[field] = None
+
+    road_context = extracted.get("road_context", {})
+    for field, allowed in _ROAD_CONTEXT_ENUM_FIELDS.items():
+        value = road_context.get(field)
+        if value is not None and value not in allowed:
+            road_context[field] = None
+
+
+def _enforce_turning_definition(extracted: dict) -> None:
+    """scenario_type=turning is fully determined by the motor vehicle's own
+    maneuver (see SYSTEM_PROMPT's SCENARIO_TYPE rule) — but the model can
+    still self-contradict, extracting maneuver=turn_right for the vehicle
+    while classifying scenario_type=crossing in the same response. Enforce
+    the rule in Python using data the model already produced, rather than
+    trusting it to cross-check its own two fields consistently.
+    """
+    for participant in extracted.get("participants", []):
+        if participant.get("class") == "motor_vehicle" and participant.get("maneuver") in _TURNING_MANEUVERS:
+            extracted.setdefault("classification", {})["scenario_type"] = "turning"
+            break
+
+
 # ── Agent 1 function ───────────────────────────────────────────────────────────
 def extract_scenario(report_text: str, scenario_id: str) -> dict:
     """
     Calls the LLM to extract structured SEMANTIC scenario information from a
     German police report — no simulator-specific parameters, no OSM/query
-    fields, nothing computed in Python. Returns exactly what the LLM produced,
-    with only source_id overridden. Anything the next pipeline stage needs
-    beyond this (OSM query strings, etc.) is that stage's own responsibility.
+    fields, nothing computed in Python except source_id/raw_text (which
+    Python already knows authoritatively — no reason to trust the LLM to
+    reproduce them) and two safety nets: nulling out hallucinated non-enum
+    values, and enforcing the turning definition against the model's own
+    self-contradictions. Anything the next pipeline stage needs beyond this
+    (OSM query strings, etc.) is that stage's own responsibility.
     """
     client = get_client()
 
@@ -212,8 +262,14 @@ def extract_scenario(report_text: str, scenario_id: str) -> dict:
     raw = response.choices[0].message.content
     extracted = json.loads(raw)
 
-    # Always set the source_id from our argument, not from LLM
+    # source_id/raw_text: Python already has the authoritative values, no
+    # reason to trust (or even ask) the LLM to reproduce them — this is what
+    # let turning_01's raw_text get corrupted to a literal few-shot placeholder.
     extracted["source"]["source_id"] = scenario_id
+    extracted["source"]["raw_text"] = report_text.strip()
+
+    _sanitize_enum_fields(extracted)
+    _enforce_turning_definition(extracted)
 
     return extracted
 

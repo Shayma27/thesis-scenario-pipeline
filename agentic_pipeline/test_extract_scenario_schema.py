@@ -2,23 +2,28 @@
 Test: Agent 1 (extract_scenario.py) output shape and downstream compatibility.
 
 Runs entirely offline — no vLLM endpoint required — by stubbing the LLM
-response with a hand-written, schema-correct JSON for the Salvador-Allende-
-Str. turning report. Checks:
+response. Checks:
   1. extract_scenario() returns PURE LLM output: no osm_query/city/
      location_type/direction_references/generated_simulation_parameters/
-     missing_parameters leak in from anywhere.
-  2. source_id is always overridden from the script argument.
-  3. pipeline._fill_location_query_fields() correctly derives the
-     osm_query/city/osm_roads/direction_references/location_type fields
-     pipeline.py's tool-calling loop needs, without mutating anything the
-     LLM already produced.
-  4. The result survives real (non-mocked) calls into
+     missing_parameters/evidence/heading_relation/traffic_rule_status leak
+     in from anywhere.
+  2. source_id/raw_text are always Python-set from the function arguments,
+     never trusted from the LLM.
+  3. Invalid (non-enum) values the model sometimes invents — e.g. "same as
+     final", "torstraße" for initial_direction — get sanitized to null.
+  4. scenario_type=turning is enforced whenever the motor vehicle's own
+     maneuver is a turn, even if the model self-contradicts and picks a
+     different scenario_type (a real failure seen in a live batch run).
+  5. pipeline._fill_location_query_fields() correctly derives what
+     pipeline.py's tool-calling loop needs.
+  6. The result survives real (non-mocked) calls into
      osm_enrichment._build_location_queries() and
      complete_parameters.complete_parameters() without crashing.
 """
 
 from __future__ import annotations
 
+import copy
 import json
 import sys
 import types
@@ -52,12 +57,13 @@ SALVADOR_RAW = (
     "überrollt."
 )
 
+# Note: no "raw_text" here — the LLM is no longer asked to reproduce it,
+# extract_scenario() injects it from the report_text argument instead.
 FAKE_LLM_JSON = {
     "schema_version": "0.2",
     "source": {
         "dataset": "Berlin Police Reports",
         "source_id": "THIS_SHOULD_BE_OVERWRITTEN",
-        "raw_text": SALVADOR_RAW,
     },
     "classification": {"scenario_type": "turning", "confidence": 1.0},
     "location": {
@@ -84,9 +90,9 @@ FAKE_LLM_JSON = {
 }
 
 
-def _stub_llm_response(monkeypatch_client) -> None:
+def _stub_llm_response(fake_json: dict) -> None:
     class _Message:
-        content = json.dumps(FAKE_LLM_JSON)
+        content = json.dumps(fake_json)
 
     class _Choice:
         message = _Message()
@@ -107,18 +113,19 @@ def _stub_llm_response(monkeypatch_client) -> None:
     es.get_client = lambda: _FakeClient()
 
 
-def main() -> None:
-    _stub_llm_response(es)
-
+def test_structure_and_downstream_compat() -> list[str]:
+    _stub_llm_response(FAKE_LLM_JSON)
     result = es.extract_scenario(SALVADOR_RAW, "right_turn_salvador_allende_1038")
 
     failures = []
 
-    # 1. source_id always overridden
+    # source_id/raw_text always Python-set, never trusted from the LLM
     if result["source"]["source_id"] != "right_turn_salvador_allende_1038":
         failures.append("source_id was not overridden from the script argument")
+    if result["source"]["raw_text"] != SALVADOR_RAW:
+        failures.append("raw_text was not set from the report_text argument")
 
-    # 2. pure LLM output — no Python-derived or simulator fields
+    # pure LLM output — no Python-derived or simulator fields
     for leaked_field in ("osm_query", "city", "osm_roads", "direction_references", "location_type"):
         if leaked_field in result["location"]:
             failures.append(f"location.{leaked_field} leaked into extract_scenario() output")
@@ -137,7 +144,7 @@ def main() -> None:
         if "traffic_rule_status" in participant:
             failures.append(f"{participant['id']}.traffic_rule_status leaked into extract_scenario() output")
 
-    # 3. pipeline.py's compatibility glue derives what it needs, correctly
+    # pipeline.py's compatibility glue derives what it needs, correctly
     import pipeline as pl
 
     pl._fill_location_query_fields(result["location"], result["participants"])
@@ -149,17 +156,16 @@ def main() -> None:
 
     # pipeline.py's _tool_extract_scenario digest uses bracket access on these —
     # they must exist or the real tool-calling loop would KeyError.
-    for path in (
+    for section, key in (
         ("location", "primary_road"), ("location", "secondary_road"), ("location", "osm_query"),
         ("location", "location_type"), ("classification", "scenario_type"),
         ("classification", "confidence"), ("conflict", "conflict_mechanism"),
         ("conflict", "collision_happened"), ("road_context", "bike_facility_type"),
     ):
-        section, key = path
         if key not in result[section]:
             failures.append(f"pipeline.py requires {section}.{key}, which is missing")
 
-    # 4. real downstream functions run without crashing
+    # real downstream functions run without crashing
     import osm_enrichment as oe
     queries = oe._build_location_queries(result)
     if not queries:
@@ -171,16 +177,81 @@ def main() -> None:
     if set(actors) != {"truck_1", "cyclist_1"}:
         failures.append(f"complete_parameters() produced unexpected actors: {set(actors)}")
 
+    return failures
+
+
+def test_sanitizes_invalid_enum_values() -> list[str]:
+    """Reproduces the real turning_01/turning_06 bugs: the model inventing a
+    non-enum string ("same as final", "torstraße") for initial_direction
+    instead of a compass word or null.
+    """
+    broken = copy.deepcopy(FAKE_LLM_JSON)
+    broken["participants"][0]["initial_direction"] = "same as final"
+    broken["participants"][1]["initial_direction"] = "torstraße"
+    broken["road_context"]["bike_facility_position"] = "somewhere vague"
+    _stub_llm_response(broken)
+    result = es.extract_scenario(SALVADOR_RAW, "test_sanitize")
+
+    failures = []
+    if result["participants"][0]["initial_direction"] is not None:
+        failures.append(
+            f"invalid initial_direction 'same as final' was not sanitized to null, "
+            f"got {result['participants'][0]['initial_direction']!r}"
+        )
+    if result["participants"][1]["initial_direction"] is not None:
+        failures.append(
+            f"invalid initial_direction 'torstraße' was not sanitized to null, "
+            f"got {result['participants'][1]['initial_direction']!r}"
+        )
+    if result["road_context"]["bike_facility_position"] is not None:
+        failures.append("invalid bike_facility_position was not sanitized to null")
+    # valid enum values must survive untouched
+    if result["participants"][0]["road_position"] is not None:
+        failures.append("valid null road_position was incorrectly changed")
+    return failures
+
+
+def test_enforces_turning_definition() -> list[str]:
+    """Reproduces the real turning_06 bug: the model extracted the motor
+    vehicle's maneuver as turn_right (correct) but still classified
+    scenario_type as crossing (self-contradiction). Python must force
+    scenario_type=turning using the maneuver it already has.
+    """
+    contradictory = copy.deepcopy(FAKE_LLM_JSON)
+    contradictory["classification"]["scenario_type"] = "crossing"
+    assert contradictory["participants"][0]["maneuver"] == "turn_right"  # sanity check on the fixture
+    _stub_llm_response(contradictory)
+    result = es.extract_scenario(SALVADOR_RAW, "test_turning_enforced")
+
+    failures = []
+    if result["classification"]["scenario_type"] != "turning":
+        failures.append(
+            f"scenario_type was not forced to 'turning' despite motor_vehicle.maneuver=turn_right, "
+            f"got {result['classification']['scenario_type']!r}"
+        )
+    return failures
+
+
+def main() -> None:
+    all_failures: list[tuple[str, str]] = []
+    for name, test_fn in (
+        ("structure_and_downstream_compat", test_structure_and_downstream_compat),
+        ("sanitizes_invalid_enum_values", test_sanitizes_invalid_enum_values),
+        ("enforces_turning_definition", test_enforces_turning_definition),
+    ):
+        for failure in test_fn():
+            all_failures.append((name, failure))
+
     print(f"\n{'═' * 70}")
-    if failures:
-        print(f"  FAILED — {len(failures)} issue(s)")
-        for f in failures:
-            print(f"    ✗ {f}")
+    if all_failures:
+        print(f"  FAILED — {len(all_failures)} issue(s)")
+        for test_name, f in all_failures:
+            print(f"    ✗ [{test_name}] {f}")
         print(f"{'═' * 70}\n")
         sys.exit(1)
     else:
-        print("  PASSED — extract_scenario.py is pure LLM output;")
-        print("  pipeline.py glue + downstream agents all consume it cleanly.")
+        print("  PASSED — extract_scenario.py output is clean, sanitized,")
+        print("  self-consistent, and downstream agents consume it without crashing.")
         print(f"{'═' * 70}\n")
 
 
