@@ -95,7 +95,6 @@ RULES:
   rightmost_motor_lane, "mittleren"=middle_motor_lane. Else null. Distinct from bike_facility_*,
   which is a separate cycling facility, not a driving lane.
 - bike_facility_position: only if the report states which side of the road the facility is on. Else null.
-- evidence: shortest quoted fragment (few words) grounding each field; null if the field is null.
 
 ALLOWED VALUES — scenario_type:{_pipe(SCHEMA['scenario_types'])} participant_type:{_pipe(SCHEMA['participant_types'])}
 maneuver:{_pipe(SCHEMA['maneuvers'])} bike_facility_type:{_pipe(SCHEMA['bike_facility_types'])}
@@ -116,9 +115,7 @@ STRUCTURE (fill exactly this, nothing more — no osm_query/city/lane counts/spe
        "initial_direction": "<allowed or null>", "traffic_rule_status": "<allowed or null>", "road_position": "<allowed or null>" }}
   ],
   "conflict": {{ "conflict_mechanism": "<snake_case>", "heading_relation": "<allowed>",
-    "collision_happened": <bool>, "collision_description": "<one English sentence>" }},
-  "evidence": {{ "location": "<or null>", "vehicle_maneuver": "<or null>", "cyclist_maneuver": "<or null>",
-    "heading_relation": "<or null>", "bike_facility": "<or null>", "traffic_rule_status": "<or null>" }}
+    "collision_happened": <bool>, "collision_description": "<one English sentence>" }}
 }}"""
 
 # ── Few-shot examples (one per scenario_type) ──────────────────────────────────
@@ -128,7 +125,7 @@ STRUCTURE (fill exactly this, nothing more — no osm_query/city/lane counts/spe
 # one-line notes) — this whole prompt has to fit a small deployment context
 # window alongside the report text and the response.
 FEWSHOT_EXAMPLES = """
-EXAMPLES (one per scenario_type — study which fields are filled vs. null, and how evidence backs them):
+EXAMPLES (one per scenario_type — study which fields are filled vs. left null):
 
 --- EXAMPLE 1 (turning) ---
 REPORT: "Eine Pkw fahrende Person fuhr auf der Straße zum Müggelhort nach Süden zum Müggelheimer Damm. Dort bog sie nach rechts nach Köpenick ab, ohne die Vorfahrtregelung durch Z.205 zu beachten. Sie übersah beim Abbiegen eine Rad fahrenden Person, die auf dem gemeinsamen Geh- und Radweg des Müggelheimer Damm vorfahrtberechtigt war."
@@ -145,7 +142,6 @@ CORRECT OUTPUT:
     { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "go_straight", "initial_direction": null, "traffic_rule_status": "priority", "road_position": null }
   ],
   "conflict": { "conflict_mechanism": "right_turn_violating_yield_sign_across_shared_path", "heading_relation": "crossing", "collision_happened": true, "collision_description": "A car turning right failed to observe a yield sign and struck a cyclist who had right of way on the shared path." },
-  "evidence": { "location": "Straße zum Müggelhort ... Müggelheimer Damm", "vehicle_maneuver": "bog sie nach rechts ... ab", "cyclist_maneuver": null, "heading_relation": "übersah beim Abbiegen", "bike_facility": "gemeinsamen Geh- und Radweg", "traffic_rule_status": "ohne die Vorfahrtregelung durch Z.205; vorfahrtberechtigt" }
 }
 
 --- EXAMPLE 2 (crossing) ---
@@ -163,7 +159,6 @@ CORRECT OUTPUT:
     { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "go_straight", "initial_direction": "north", "traffic_rule_status": null, "road_position": null }
   ],
   "conflict": { "conflict_mechanism": "cyclist_crosses_vehicle_path_from_median", "heading_relation": "crossing", "collision_happened": true, "collision_description": "A cyclist crossing from a green median strip was struck by a speeding car." },
-  "evidence": { "location": "Landsberger Allee", "vehicle_maneuver": "Richtung Westen ... fuhr", "cyclist_maneuver": "querte ... vom begrünten Mittelstreifen kommend", "heading_relation": "querte ... die ... Richtungsfahrbahn", "bike_facility": "begrünten Mittelstreifen", "traffic_rule_status": null }
 }
 
 --- EXAMPLE 3 (longitudinal) ---
@@ -181,7 +176,6 @@ CORRECT OUTPUT:
     { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "go_straight", "initial_direction": null, "traffic_rule_status": null, "road_position": null }
   ],
   "conflict": { "conflict_mechanism": "cyclist_lane_change_into_car_path", "heading_relation": "same_direction", "collision_happened": true, "collision_description": "A cyclist changed from the leftmost to the rightmost of three lanes and collided with a car traveling in the same direction." },
-  "evidence": { "location": "Straße Alt-Biesdorf", "vehicle_maneuver": "in die gleiche Richtung unterwegs", "cyclist_maneuver": "wechselte ... auf den äußerst rechten Fahrstreifen", "heading_relation": "in die gleiche Richtung unterwegs", "bike_facility": null, "traffic_rule_status": null }
 }
 
 RULE ACROSS ALL EXAMPLES: every field is either a direct quote-level match or explicitly null.

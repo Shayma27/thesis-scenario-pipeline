@@ -82,14 +82,6 @@ FAKE_LLM_JSON = {
         "collision_happened": True,
         "collision_description": "A truck turning right ran over a cyclist riding straight on the adjacent separated cycle track.",
     },
-    "evidence": {
-        "location": "Salvador-Allende-Str. / Müggelschlößchenweg",
-        "vehicle_maneuver": "bog er nach rechts ... ab",
-        "cyclist_maneuver": "geradeaus fahrende Radfahrerin",
-        "heading_relation": "in gleicher Richtung",
-        "bike_facility": "baulich getrennten Radweg",
-        "traffic_rule_status": None,
-    },
 }
 
 
@@ -135,6 +127,8 @@ def main() -> None:
         failures.append("generated_simulation_parameters leaked into extract_scenario() output")
     if "missing_parameters" in result:
         failures.append("missing_parameters leaked into extract_scenario() output")
+    if "evidence" in result:
+        failures.append("evidence leaked into extract_scenario() output")
     for dropped_field in ("date", "time"):
         if dropped_field in result["source"]:
             failures.append(f"source.{dropped_field} should have been dropped from the schema")
