@@ -88,6 +88,9 @@ RULES:
   "gemeinsamer Geh- und Radweg"=shared_foot_cycle_path, "Radverkehrsfurt"=cycle_crossing,
   "Nebenfahrbahn"=roadway_mixed, "(begrünter) Mittelstreifen"=median_strip.
 - participant id: truck_1/car_1/bus_1 for the motor vehicle, always cyclist_1 for the cyclist.
+- maneuver attribution: match each action to its actual grammatical subject, never the nearest
+  noun. "[Radfahrer] übersah beim Abbiegen [einen Pkw]" — the SUBJECT (Radfahrer) is turning, the
+  Pkw is not, even though "Abbiegen" sits right next to "Pkw" in the sentence.
 - conflict_mechanism: snake_case summary, e.g. "right_turn_across_cycle_track".
 - road_position (per participant): only for an explicit *numbered driving lane* (Fahrstreifen) —
   "den linken/äußerst linken Fahrstreifen"=leftmost_motor_lane, "rechten/äußerst rechten"=
