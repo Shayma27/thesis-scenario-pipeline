@@ -69,16 +69,15 @@ FAKE_LLM_JSON = {
     "participants": [
         {
             "id": "truck_1", "class": "motor_vehicle", "type": "truck", "maneuver": "turn_right",
-            "initial_direction": "north", "traffic_rule_status": None, "road_position": None,
+            "initial_direction": "north", "road_position": None,
         },
         {
             "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "go_straight",
-            "initial_direction": "north", "traffic_rule_status": None, "road_position": None,
+            "initial_direction": "north", "road_position": None,
         },
     ],
     "conflict": {
         "conflict_mechanism": "right_turn_across_separated_cycle_track",
-        "heading_relation": "same_direction",
         "collision_happened": True,
         "collision_description": "A truck turning right ran over a cyclist riding straight on the adjacent separated cycle track.",
     },
@@ -129,9 +128,14 @@ def main() -> None:
         failures.append("missing_parameters leaked into extract_scenario() output")
     if "evidence" in result:
         failures.append("evidence leaked into extract_scenario() output")
+    if "heading_relation" in result.get("conflict", {}):
+        failures.append("conflict.heading_relation leaked into extract_scenario() output")
     for dropped_field in ("date", "time"):
         if dropped_field in result["source"]:
             failures.append(f"source.{dropped_field} should have been dropped from the schema")
+    for participant in result["participants"]:
+        if "traffic_rule_status" in participant:
+            failures.append(f"{participant['id']}.traffic_rule_status leaked into extract_scenario() output")
 
     # 3. pipeline.py's compatibility glue derives what it needs, correctly
     import pipeline as pl

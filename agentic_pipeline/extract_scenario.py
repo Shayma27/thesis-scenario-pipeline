@@ -40,9 +40,7 @@ SCHEMA = {
         "separated_cycle_track", "bike_lane", "shared_foot_cycle_path",
         "cycle_crossing", "roadway_mixed", "sidewalk", "median_strip"
     ],
-    "traffic_rule_status": ["priority", "must_yield", "violated_priority"],
     "directions": ["north", "south", "east", "west", "northwest", "northeast", "southwest", "southeast"],
-    "heading_relations": ["same_direction", "opposite_direction", "crossing", "unknown"],
     # Assumption 2 (docs/modeling_assumptions.md): explicit report language
     # placing a participant on a *numbered driving lane* (Fahrstreifen),
     # e.g. "den linken der drei Fahrstreifen" / "den äußerst rechten
@@ -74,32 +72,35 @@ simulator-specific value — a later stage does that, not you.
 
 OUTPUT: ONLY a valid JSON object. No explanation, no markdown, no code blocks.
 
-SCENARIO_TYPE (exactly one): turning = motor vehicle turns across the cyclist's path. crossing =
-motor vehicle goes straight while the cyclist crosses its path (cyclist's own maneuver doesn't
-matter). longitudinal = both travel the same general direction (incl. overtaking/lane-change).
-other = anything else.
+SCENARIO_TYPE (exactly one, decided ONLY from the motor vehicle's own maneuver, never the cyclist's):
+turning = vehicle's maneuver is turn_right/turn_left/turn_right_into_parking. This ALWAYS wins,
+full stop, no matter what the cyclist does — if the vehicle turns, the type is turning, never
+crossing or longitudinal. crossing = vehicle goes straight AND the cyclist's path crosses it at an
+angle (entering, crossing, or the cyclist itself turning across the vehicle's straight path).
+longitudinal = vehicle goes straight AND the cyclist travels the same general direction alongside
+it (following, overtaking, lane change). other = anything else.
 
 RULES:
 - Extract only what is stated or directly inferable. Use JSON null (never "unknown") if not stated.
-- Traffic lights/signals (LSA, "rote/grüne Ampel") are NEVER extracted or used to fill any other
-  field, including traffic_rule_status and heading_relation.
+- Traffic lights/signals (LSA, "rote/grüne Ampel") are NEVER extracted or represented in any field —
+  ignore any such mention entirely.
 - "Schutzstreifen/Radfahrschutzstreifen"=bike_lane, "baulich getrennter Radweg"=separated_cycle_track,
   "gemeinsamer Geh- und Radweg"=shared_foot_cycle_path, "Radverkehrsfurt"=cycle_crossing,
   "Nebenfahrbahn"=roadway_mixed, "(begrünter) Mittelstreifen"=median_strip.
 - participant id: truck_1/car_1/bus_1 for the motor vehicle, always cyclist_1 for the cyclist.
 - conflict_mechanism: snake_case summary, e.g. "right_turn_across_cycle_track".
-- heading_relation: same_direction/opposite_direction only if stated explicitly (e.g. "gleicher
-  Richtung"); "crossing" when paths cross at an angle (typical for turning/crossing); else "unknown".
 - road_position (per participant): only for an explicit *numbered driving lane* (Fahrstreifen) —
   "den linken/äußerst linken Fahrstreifen"=leftmost_motor_lane, "rechten/äußerst rechten"=
   rightmost_motor_lane, "mittleren"=middle_motor_lane. Else null. Distinct from bike_facility_*,
   which is a separate cycling facility, not a driving lane.
 - bike_facility_position: only if the report states which side of the road the facility is on. Else null.
+- initial_direction: must be exactly one of the allowed compass words below, or null. Never a
+  description like "same as X" — if the direction is only implied relative to another actor, use
+  that actor's own literal compass value, not a phrase.
 
 ALLOWED VALUES — scenario_type:{_pipe(SCHEMA['scenario_types'])} participant_type:{_pipe(SCHEMA['participant_types'])}
 maneuver:{_pipe(SCHEMA['maneuvers'])} bike_facility_type:{_pipe(SCHEMA['bike_facility_types'])}
-traffic_rule_status:{_pipe(SCHEMA['traffic_rule_status'])} directions:{_pipe(SCHEMA['directions'])}
-heading_relation:{_pipe(SCHEMA['heading_relations'])} road_position:{_pipe(SCHEMA['road_positions'])}
+directions:{_pipe(SCHEMA['directions'])} road_position:{_pipe(SCHEMA['road_positions'])}
 bike_facility_position:{_pipe(SCHEMA['bike_facility_positions'])}
 
 STRUCTURE (fill exactly this, nothing more — no osm_query/city/lane counts/speeds/coordinates):
@@ -110,11 +111,11 @@ STRUCTURE (fill exactly this, nothing more — no osm_query/city/lane counts/spe
   "road_context": {{ "bike_facility_type": "<allowed or null>", "bike_facility_position": "<allowed or null>" }},
   "participants": [
     {{ "id": "<truck_1/car_1/bus_1>", "class": "motor_vehicle", "type": "<allowed>", "maneuver": "<allowed>",
-       "initial_direction": "<allowed or null>", "traffic_rule_status": "<allowed or null>", "road_position": "<allowed or null>" }},
+       "initial_direction": "<allowed or null>", "road_position": "<allowed or null>" }},
     {{ "id": "cyclist_1", "class": "cyclist", "type": "<bicycle/e_bike>", "maneuver": "<allowed>",
-       "initial_direction": "<allowed or null>", "traffic_rule_status": "<allowed or null>", "road_position": "<allowed or null>" }}
+       "initial_direction": "<allowed or null>", "road_position": "<allowed or null>" }}
   ],
-  "conflict": {{ "conflict_mechanism": "<snake_case>", "heading_relation": "<allowed>",
+  "conflict": {{ "conflict_mechanism": "<snake_case>",
     "collision_happened": <bool>, "collision_description": "<one English sentence>" }}
 }}"""
 
@@ -138,10 +139,10 @@ CORRECT OUTPUT:
   "location": { "primary_road": "Müggelheimer Damm", "secondary_road": "Straße zum Müggelhort", "house_number_reference": null },
   "road_context": { "bike_facility_type": "shared_foot_cycle_path", "bike_facility_position": null },
   "participants": [
-    { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "turn_right", "initial_direction": "south", "traffic_rule_status": "violated_priority", "road_position": null },
-    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "go_straight", "initial_direction": null, "traffic_rule_status": "priority", "road_position": null }
+    { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "turn_right", "initial_direction": "south", "road_position": null },
+    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "go_straight", "initial_direction": null, "road_position": null }
   ],
-  "conflict": { "conflict_mechanism": "right_turn_violating_yield_sign_across_shared_path", "heading_relation": "crossing", "collision_happened": true, "collision_description": "A car turning right failed to observe a yield sign and struck a cyclist who had right of way on the shared path." },
+  "conflict": { "conflict_mechanism": "right_turn_violating_yield_sign_across_shared_path", "collision_happened": true, "collision_description": "A car turning right failed to observe a yield sign and struck a cyclist who had right of way on the shared path." }
 }
 
 --- EXAMPLE 2 (crossing) ---
@@ -155,10 +156,10 @@ CORRECT OUTPUT:
   "location": { "primary_road": "Landsberger Allee", "secondary_road": null, "house_number_reference": null },
   "road_context": { "bike_facility_type": "median_strip", "bike_facility_position": null },
   "participants": [
-    { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "go_straight", "initial_direction": "west", "traffic_rule_status": null, "road_position": null },
-    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "go_straight", "initial_direction": "north", "traffic_rule_status": null, "road_position": null }
+    { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "go_straight", "initial_direction": "west", "road_position": null },
+    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "go_straight", "initial_direction": "north", "road_position": null }
   ],
-  "conflict": { "conflict_mechanism": "cyclist_crosses_vehicle_path_from_median", "heading_relation": "crossing", "collision_happened": true, "collision_description": "A cyclist crossing from a green median strip was struck by a speeding car." },
+  "conflict": { "conflict_mechanism": "cyclist_crosses_vehicle_path_from_median", "collision_happened": true, "collision_description": "A cyclist crossing from a green median strip was struck by a speeding car." }
 }
 
 --- EXAMPLE 3 (longitudinal) ---
@@ -172,10 +173,10 @@ CORRECT OUTPUT:
   "location": { "primary_road": "Alt-Biesdorf", "secondary_road": null, "house_number_reference": null },
   "road_context": { "bike_facility_type": "roadway_mixed", "bike_facility_position": null },
   "participants": [
-    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "change_lane", "initial_direction": null, "traffic_rule_status": null, "road_position": "leftmost_motor_lane" },
-    { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "go_straight", "initial_direction": null, "traffic_rule_status": null, "road_position": null }
+    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "change_lane", "initial_direction": null, "road_position": "leftmost_motor_lane" },
+    { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "go_straight", "initial_direction": null, "road_position": null }
   ],
-  "conflict": { "conflict_mechanism": "cyclist_lane_change_into_car_path", "heading_relation": "same_direction", "collision_happened": true, "collision_description": "A cyclist changed from the leftmost to the rightmost of three lanes and collided with a car traveling in the same direction." },
+  "conflict": { "conflict_mechanism": "cyclist_lane_change_into_car_path", "collision_happened": true, "collision_description": "A cyclist changed from the leftmost to the rightmost of three lanes and collided with a car traveling in the same direction." }
 }
 
 RULE ACROSS ALL EXAMPLES: every field is either a direct quote-level match or explicitly null.
