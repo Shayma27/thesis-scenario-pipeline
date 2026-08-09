@@ -75,11 +75,11 @@ FAKE_LLM_JSON = {
     "participants": [
         {
             "id": "truck_1", "class": "motor_vehicle", "type": "truck", "maneuver": "turn_right",
-            "initial_direction": "north", "road_position": None,
+            "initial_direction": "north", "heading_reference": None, "road_position": None,
         },
         {
             "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "go_straight",
-            "initial_direction": "north", "road_position": None,
+            "initial_direction": "north", "heading_reference": "Richtung Müggelschlößchenweg", "road_position": None,
         },
     ],
     "conflict": {
@@ -124,6 +124,11 @@ def test_structure_and_downstream_compat() -> list[str]:
         failures.append("source_id was not overridden from the script argument")
     if result["source"]["raw_text"] != SALVADOR_RAW:
         failures.append("raw_text was not set from the report_text argument")
+
+    # heading_reference is free text, not enum-constrained — must survive
+    # untouched, unlike initial_direction/road_position which get sanitized
+    if result["participants"][1]["heading_reference"] != "Richtung Müggelschlößchenweg":
+        failures.append("heading_reference (free text) was altered — it should never be sanitized")
 
     # pure LLM output — no Python-derived or simulator fields
     for leaked_field in ("osm_query", "city", "osm_roads", "direction_references", "location_type"):

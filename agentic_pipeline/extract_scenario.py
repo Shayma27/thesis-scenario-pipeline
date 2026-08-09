@@ -33,7 +33,8 @@ SCHEMA = {
     "participant_types": ["car", "truck", "bus", "bicycle", "e_bike", "pedestrian", "other"],
     "maneuvers": [
         "go_straight", "turn_right", "turn_left", "turn_right_into_parking",
-        "stop", "wait", "parked", "open_door", "change_lane",
+        "stop", "wait", "parked", "open_door",
+        "change_lane_left_to_right", "change_lane_right_to_left", "change_lane",
         "enter_roadway", "exit_roadway", "overtake", "unknown"
     ],
     "bike_facility_types": [
@@ -87,21 +88,31 @@ RULES:
 - "Schutzstreifen/Radfahrschutzstreifen"=bike_lane, "baulich getrennter Radweg"=separated_cycle_track,
   "gemeinsamer Geh- und Radweg"=shared_foot_cycle_path, "Radverkehrsfurt"=cycle_crossing,
   "Nebenfahrbahn"=roadway_mixed, "(begrünter) Mittelstreifen"=median_strip.
+- bike_facility_type: null UNLESS one of the phrases above is literally present. A cyclist riding
+  on an ordinary street/lane with no facility named is null, NOT roadway_mixed — roadway_mixed
+  requires the word "Nebenfahrbahn" specifically, it is not a default for "no facility mentioned".
 - participant id: truck_1/car_1/bus_1 for the motor vehicle, always cyclist_1 for the cyclist.
 - maneuver attribution: match each action to its actual grammatical subject, never the nearest
   noun. "[Radfahrer] übersah beim Abbiegen [einen Pkw]" — the SUBJECT (Radfahrer) is turning, the
   Pkw is not, even though "Abbiegen" sits right next to "Pkw" in the sentence.
+- change_lane maneuver: if the report states which lane it started/ended in (e.g. "vom linken auf
+  den rechten Fahrstreifen"), use change_lane_left_to_right or change_lane_right_to_left. Use plain
+  change_lane only if a change happened but the direction isn't stated.
 - conflict_mechanism: snake_case summary, e.g. "right_turn_across_cycle_track".
 - road_position (per participant): only for an explicit *numbered driving lane* (Fahrstreifen) —
   "den linken/äußerst linken Fahrstreifen"=leftmost_motor_lane, "rechten/äußerst rechten"=
   rightmost_motor_lane, "mittleren"=middle_motor_lane. Else null. Distinct from bike_facility_*,
   which is a separate cycling facility, not a driving lane.
 - bike_facility_position: only if the report states which side of the road the facility is on. Else null.
-- initial_direction: must be exactly one of the allowed compass words below, or null. Never a
-  description like "same as X", and never a place/street name — "Richtung Torstraße" (toward
-  Torstraße) names a destination, not a compass direction, so that stays null. Only literal compass
-  words like "nördliche Richtung" (north) count. If only implied relative to another actor, use
-  that actor's own literal compass value, never a phrase.
+- initial_direction: must be exactly one of the allowed compass words below, or null — never a
+  description like "same as X", and never a place/street name. Only literal compass words like
+  "nördliche Richtung" (north) count; if only implied relative to another actor, use that actor's
+  own literal compass value, never a phrase.
+- heading_reference (per participant): destination-relative phrasing is very common in these
+  reports and is NOT a compass direction but IS worth keeping — "Richtung Torstraße" (toward
+  Torstraße), "in Höhe von X" (at/near X). Quote it short, e.g. "Richtung Torstraße". Null if
+  nothing like this is stated. This is independent of initial_direction — a participant can have
+  one, both, or neither.
 
 ALLOWED VALUES — scenario_type:{_pipe(SCHEMA['scenario_types'])} participant_type:{_pipe(SCHEMA['participant_types'])}
 maneuver:{_pipe(SCHEMA['maneuvers'])} bike_facility_type:{_pipe(SCHEMA['bike_facility_types'])}
@@ -116,9 +127,9 @@ STRUCTURE (fill exactly this, nothing more — no osm_query/city/lane counts/spe
   "road_context": {{ "bike_facility_type": "<allowed or null>", "bike_facility_position": "<allowed or null>" }},
   "participants": [
     {{ "id": "<truck_1/car_1/bus_1>", "class": "motor_vehicle", "type": "<allowed>", "maneuver": "<allowed>",
-       "initial_direction": "<allowed or null>", "road_position": "<allowed or null>" }},
+       "initial_direction": "<allowed or null>", "heading_reference": "<short quote or null>", "road_position": "<allowed or null>" }},
     {{ "id": "cyclist_1", "class": "cyclist", "type": "<bicycle/e_bike>", "maneuver": "<allowed>",
-       "initial_direction": "<allowed or null>", "road_position": "<allowed or null>" }}
+       "initial_direction": "<allowed or null>", "heading_reference": "<short quote or null>", "road_position": "<allowed or null>" }}
   ],
   "conflict": {{ "conflict_mechanism": "<snake_case>",
     "collision_happened": <bool>, "collision_description": "<one English sentence>" }}
@@ -144,8 +155,8 @@ CORRECT OUTPUT:
   "location": { "primary_road": "Müggelheimer Damm", "secondary_road": "Straße zum Müggelhort", "house_number_reference": null },
   "road_context": { "bike_facility_type": "shared_foot_cycle_path", "bike_facility_position": null },
   "participants": [
-    { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "turn_right", "initial_direction": "south", "road_position": null },
-    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "go_straight", "initial_direction": null, "road_position": null }
+    { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "turn_right", "initial_direction": "south", "heading_reference": null, "road_position": null },
+    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "go_straight", "initial_direction": null, "heading_reference": null, "road_position": null }
   ],
   "conflict": { "conflict_mechanism": "right_turn_violating_yield_sign_across_shared_path", "collision_happened": true, "collision_description": "A car turning right failed to observe a yield sign and struck a cyclist who had right of way on the shared path." }
 }
@@ -161,8 +172,8 @@ CORRECT OUTPUT:
   "location": { "primary_road": "Landsberger Allee", "secondary_road": null, "house_number_reference": null },
   "road_context": { "bike_facility_type": "median_strip", "bike_facility_position": null },
   "participants": [
-    { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "go_straight", "initial_direction": "west", "road_position": null },
-    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "go_straight", "initial_direction": "north", "road_position": null }
+    { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "go_straight", "initial_direction": "west", "heading_reference": null, "road_position": null },
+    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "go_straight", "initial_direction": "north", "heading_reference": null, "road_position": null }
   ],
   "conflict": { "conflict_mechanism": "cyclist_crosses_vehicle_path_from_median", "collision_happened": true, "collision_description": "A cyclist crossing from a green median strip was struck by a speeding car." }
 }
@@ -176,10 +187,10 @@ CORRECT OUTPUT:
   "source": { "dataset": "Berlin Police Reports", "source_id": "<will be filled by script>" },
   "classification": { "scenario_type": "longitudinal", "confidence": 1.0 },
   "location": { "primary_road": "Alt-Biesdorf", "secondary_road": null, "house_number_reference": null },
-  "road_context": { "bike_facility_type": "roadway_mixed", "bike_facility_position": null },
+  "road_context": { "bike_facility_type": null, "bike_facility_position": null },
   "participants": [
-    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "change_lane", "initial_direction": null, "road_position": "leftmost_motor_lane" },
-    { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "go_straight", "initial_direction": null, "road_position": null }
+    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "change_lane_left_to_right", "initial_direction": null, "heading_reference": "Richtung Grabensprung", "road_position": "leftmost_motor_lane" },
+    { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "go_straight", "initial_direction": null, "heading_reference": null, "road_position": null }
   ],
   "conflict": { "conflict_mechanism": "cyclist_lane_change_into_car_path", "collision_happened": true, "collision_description": "A cyclist changed from the leftmost to the rightmost of three lanes and collided with a car traveling in the same direction." }
 }
