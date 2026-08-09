@@ -293,16 +293,55 @@ def _show_extraction_summary(data: dict) -> None:
         print(f"  │  {role}  {p.get('id')}  ·  {p.get('type')}  ·  {p.get('maneuver')}")
     print(f"  │  Conflict   {conflict.get('conflict_mechanism')}")
     col = "yes" if conflict.get("collision_happened") else "no"
-    print(f"  │  Collision  {col}  ·  severity: {conflict.get('severity_text')}")
+    print(f"  │  Collision  {col}  ·  heading: {conflict.get('heading_relation')}")
     print(f"  │  Bike infra {road.get('bike_facility_type')}")
     print(f"  └{'─' * (W - 2)}")
 
 
 # ── Tool implementations ──────────────────────────────────────────────────────
 
+def _fill_location_query_fields(location: dict, participants: list) -> None:
+    """extract_scenario.py's LLM output is pure semantic extraction — no OSM
+    query, no city constant, no location_type. This pipeline's tool-calling
+    loop needs an osm_query string to pass to the next tool (query_osm) and a
+    location_type for its own digest, so that glue lives here, at the one
+    place that actually consumes it, not inside the extraction agent itself.
+    """
+    primary = location.get("primary_road")
+    secondary = location.get("secondary_road")
+    house_number = location.get("house_number_reference")
+
+    location["city"] = "Berlin"
+
+    if primary and secondary:
+        location["osm_query"] = f"{primary} / {secondary}, Berlin, Germany"
+    elif primary:
+        location["osm_query"] = f"{primary}, Berlin, Germany"
+    else:
+        location["osm_query"] = None
+    location["osm_roads"] = [road for road in (primary, secondary) if road]
+
+    directions = []
+    for participant in participants:
+        direction = participant.get("initial_direction")
+        if direction and direction not in directions:
+            directions.append(direction)
+    location["direction_references"] = directions
+
+    if secondary:
+        location["location_type"] = "intersection"
+    elif house_number:
+        location["location_type"] = "midblock"
+    else:
+        location["location_type"] = None
+
+
 def _tool_extract_scenario(state: AgentState, report_text: str, scenario_id: str) -> dict:
     print(f"  → Calling LLM ({MODEL}) for extraction...")
     extracted = _extract_scenario(report_text, scenario_id)
+    _fill_location_query_fields(
+        extracted.setdefault("location", {}), extracted.get("participants", [])
+    )
     state.data = extracted
     stype = extracted["classification"]["scenario_type"]
     conf = extracted["classification"]["confidence"]
