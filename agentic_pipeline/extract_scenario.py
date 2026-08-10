@@ -112,8 +112,9 @@ RULES:
   "Richtung X" (toward X) or "in Höhe von X" (near X) — extremely common in these reports, and NOT
   a compass direction. Do this check even when initial_direction is already filled for that
   participant, and even when the OTHER participant already has a heading_reference — check both
-  participants independently every time. Quote it short, e.g. "Richtung Torstraße". Null only if
-  truly nothing like this is stated for that participant.
+  participants independently every time. Write it in ENGLISH, short — "Richtung Torstraße"
+  becomes "toward Torstraße", "in Höhe der Braunsdorfstraße" becomes "near Braunsdorfstraße" —
+  never copy the German phrase verbatim. Null only if truly nothing like this is stated.
 
 ALLOWED VALUES — scenario_type:{_pipe(SCHEMA['scenario_types'])} participant_type:{_pipe(SCHEMA['participant_types'])}
 maneuver:{_pipe(SCHEMA['maneuvers'])} bike_facility_type:{_pipe(SCHEMA['bike_facility_types'])}
@@ -128,9 +129,9 @@ STRUCTURE (fill exactly this, nothing more — no osm_query/city/lane counts/spe
   "road_context": {{ "bike_facility_type": "<allowed or null>", "bike_facility_position": "<allowed or null>" }},
   "participants": [
     {{ "id": "<truck_1/car_1/bus_1>", "class": "motor_vehicle", "type": "<allowed>", "maneuver": "<allowed>",
-       "initial_direction": "<allowed or null>", "heading_reference": "<short quote or null>", "road_position": "<allowed or null>" }},
+       "initial_direction": "<allowed or null>", "heading_reference": "<short English phrase or null>", "road_position": "<allowed or null>" }},
     {{ "id": "cyclist_1", "class": "cyclist", "type": "<bicycle/e_bike>", "maneuver": "<allowed>",
-       "initial_direction": "<allowed or null>", "heading_reference": "<short quote or null>", "road_position": "<allowed or null>" }}
+       "initial_direction": "<allowed or null>", "heading_reference": "<short English phrase or null>", "road_position": "<allowed or null>" }}
   ],
   "conflict": {{ "conflict_mechanism": "<snake_case>",
     "collision_happened": <bool>, "collision_description": "<one English sentence>" }}
@@ -190,7 +191,7 @@ CORRECT OUTPUT:
   "location": { "primary_road": "Alt-Biesdorf", "secondary_road": null, "house_number_reference": null },
   "road_context": { "bike_facility_type": null, "bike_facility_position": null },
   "participants": [
-    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "change_lane_left_to_right", "initial_direction": null, "heading_reference": "Richtung Grabensprung", "road_position": "leftmost_motor_lane" },
+    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "change_lane_left_to_right", "initial_direction": null, "heading_reference": "toward Grabensprung", "road_position": "leftmost_motor_lane" },
     { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "go_straight", "initial_direction": null, "heading_reference": null, "road_position": null }
   ],
   "conflict": { "conflict_mechanism": "cyclist_lane_change_into_car_path", "collision_happened": true, "collision_description": "A cyclist changed from the leftmost to the rightmost of three lanes and collided with a car traveling in the same direction." }
@@ -230,14 +231,26 @@ def _sanitize_enum_fields(extracted: dict) -> None:
             if value is not None and value not in allowed:
                 participant[field] = None
 
-        # maneuver falls back to "unknown" rather than null: several
-        # downstream call sites do str(maneuver).lower() without a None
-        # guard, and "unknown" is already a legitimate value in this
-        # specific enum, unlike the null-for-"not stated" convention used
-        # everywhere else.
+        # maneuver: invalid values degrade to the recognizable prefix rather
+        # than being discarded wholesale — e.g. "turn_left_into_parking" (a
+        # real bug: invented by pattern-completion from turn_right_into_parking,
+        # with no parking lot anywhere in that report) still correctly tells
+        # us the participant turned left; only the fabricated "_into_parking"
+        # part is ungrounded. Falls back to "unknown" (not null) only when
+        # nothing recognizable remains — "unknown" is a legitimate value in
+        # this specific enum, unlike the null-for-"not stated" convention
+        # used everywhere else, and downstream code does str(maneuver).lower()
+        # without a None guard.
         maneuver = participant.get("maneuver")
         if maneuver is not None and maneuver not in SCHEMA["maneuvers"]:
-            participant["maneuver"] = "unknown"
+            if maneuver.startswith("turn_left"):
+                participant["maneuver"] = "turn_left"
+            elif maneuver.startswith("turn_right"):
+                participant["maneuver"] = "turn_right"
+            elif maneuver.startswith("change_lane"):
+                participant["maneuver"] = "change_lane"
+            else:
+                participant["maneuver"] = "unknown"
 
     road_context = extracted.get("road_context", {})
     for field, allowed in _ROAD_CONTEXT_ENUM_FIELDS.items():

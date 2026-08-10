@@ -214,16 +214,28 @@ def test_sanitizes_invalid_enum_values() -> list[str]:
         )
     if result["road_context"]["bike_facility_position"] is not None:
         failures.append("invalid bike_facility_position was not sanitized to null")
-    if result["participants"][1]["maneuver"] != "unknown":
+    if result["participants"][1]["maneuver"] != "turn_left":
         failures.append(
-            f"invalid maneuver 'turn_left_into_parking' was not sanitized to 'unknown', "
-            f"got {result['participants'][1]['maneuver']!r}"
+            f"invalid maneuver 'turn_left_into_parking' should degrade to the recognizable "
+            f"prefix 'turn_left' (not discarded to 'unknown'), got {result['participants'][1]['maneuver']!r}"
         )
     # valid enum values must survive untouched
     if result["participants"][0]["road_position"] is not None:
         failures.append("valid null road_position was incorrectly changed")
     if result["participants"][0]["maneuver"] != "turn_right":
         failures.append("valid maneuver 'turn_right' was incorrectly changed")
+
+    # a truly unrecognizable maneuver (no valid prefix at all) has nothing
+    # to degrade to, so it must fall back to "unknown"
+    gibberish = copy.deepcopy(FAKE_LLM_JSON)
+    gibberish["participants"][1]["maneuver"] = "spontaneously_levitated"
+    _stub_llm_response(gibberish)
+    result2 = es.extract_scenario(SALVADOR_RAW, "test_sanitize_gibberish")
+    if result2["participants"][1]["maneuver"] != "unknown":
+        failures.append(
+            f"fully unrecognizable maneuver should fall back to 'unknown', "
+            f"got {result2['participants'][1]['maneuver']!r}"
+        )
     return failures
 
 
