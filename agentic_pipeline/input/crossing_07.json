@@ -39,8 +39,8 @@
     }
   ],
   "conflict": {
-    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_roadway",
+    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_unknown_facility",
     "collision_happened": true,
-    "collision_description": "A cyclist crossing from the roadway was struck by a car."
+    "collision_description": "A cyclist entering a crossroads collided with a car traveling in the same direction."
   }
 }

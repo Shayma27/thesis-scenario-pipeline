@@ -10,8 +10,8 @@
     "confidence": 1.0
   },
   "location": {
-    "primary_road": "Torstraße",
-    "secondary_road": "Schönhauser Straße",
+    "primary_road": "Schönhauser Straße",
+    "secondary_road": "Torstraße",
     "house_number_reference": null
   },
   "road_context": {
@@ -25,7 +25,7 @@
       "type": "bicycle",
       "maneuver": "go_straight",
       "initial_direction": null,
-      "heading_reference": "Richtung Torstraße",
+      "heading_reference": null,
       "road_position": null
     },
     {
@@ -33,8 +33,8 @@
       "class": "motor_vehicle",
       "type": "truck",
       "maneuver": "turn_right",
-      "initial_direction": null,
-      "heading_reference": null,
+      "initial_direction": "north",
+      "heading_reference": "toward Torstraße",
       "road_position": null
     }
   ],

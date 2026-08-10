@@ -25,8 +25,8 @@
       "type": "bicycle",
       "maneuver": "change_lane_left_to_right",
       "initial_direction": null,
-      "heading_reference": "Richtung Grabensprung",
-      "road_position": null
+      "heading_reference": null,
+      "road_position": "leftmost_motor_lane"
     },
     {
       "id": "car_1",

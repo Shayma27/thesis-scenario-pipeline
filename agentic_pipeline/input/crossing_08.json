@@ -33,7 +33,7 @@
       "class": "motor_vehicle",
       "type": "car",
       "maneuver": "go_straight",
-      "initial_direction": "north",
+      "initial_direction": "south",
       "heading_reference": null,
       "road_position": null
     }

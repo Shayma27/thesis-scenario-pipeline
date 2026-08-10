@@ -23,7 +23,7 @@
       "id": "cyclist_1",
       "class": "cyclist",
       "type": "bicycle",
-      "maneuver": "turn_left_into_parking",
+      "maneuver": "turn_left",
       "initial_direction": "north",
       "heading_reference": null,
       "road_position": null

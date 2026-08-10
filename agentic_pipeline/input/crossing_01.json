@@ -41,6 +41,6 @@
   "conflict": {
     "conflict_mechanism": "cyclist_crosses_vehicle_path_from_sidewalk",
     "collision_happened": true,
-    "collision_description": "A cyclist crossing from the sidewalk collided with a car."
+    "collision_description": "A cyclist suddenly entered the road from the sidewalk and collided with a car."
   }
 }

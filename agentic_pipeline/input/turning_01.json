@@ -16,7 +16,7 @@
   },
   "road_context": {
     "bike_facility_type": "separated_cycle_track",
-    "bike_facility_position": null
+    "bike_facility_position": "left"
   },
   "participants": [
     {
@@ -39,8 +39,8 @@
     }
   ],
   "conflict": {
-    "conflict_mechanism": "vehicle_turns_across_cycle_track",
+    "conflict_mechanism": "right_turn_across_cycle_track",
     "collision_happened": true,
-    "collision_description": "A truck turning right struck a cyclist who was traveling in the same direction on a separated bike path."
+    "collision_description": "A truck turning right struck a cyclist traveling in the same direction on a separated cycle track."
   }
 }
