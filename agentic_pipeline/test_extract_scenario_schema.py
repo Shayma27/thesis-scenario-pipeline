@@ -278,8 +278,9 @@ def main() -> None:
         print(f"{'═' * 70}\n")
         sys.exit(1)
     else:
-        print("  PASSED — extract_scenario.py output is clean, sanitized,")
-        print("  self-consistent, and downstream agents consume it without crashing.")
+        print("  STRUCTURAL CHECKS PASSED — schema shape, sanitization, and downstream")
+        print("  compatibility are OK. This does NOT mean the extracted content is")
+        print("  semantically correct — see test_semantic_correctness.py for that.")
         print(f"{'═' * 70}\n")
 
 
