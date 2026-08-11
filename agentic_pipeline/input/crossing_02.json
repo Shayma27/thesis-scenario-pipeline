@@ -12,7 +12,8 @@
   "location": {
     "primary_road": "Rathausstraße",
     "secondary_road": "Poststraße",
-    "house_number_reference": null
+    "house_number_reference": null,
+    "intersection": null
   },
   "road_context": {
     "bike_facility_type": null,
@@ -25,7 +26,7 @@
       "type": "e_bike",
       "maneuver": "go_straight",
       "initial_direction": null,
-      "heading_reference": null,
+      "heading_reference": "toward Spreeufer",
       "road_position": null
     },
     {
@@ -39,8 +40,8 @@
     }
   ],
   "conflict": {
-    "conflict_mechanism": "vehicle_entering_roadway_across_cyclist_path",
+    "conflict_mechanism": "vehicle_entering_road_crosses",
     "collision_happened": true,
-    "collision_description": "A car entering the road from the right side failed to observe a cyclist and collided with them."
+    "collision_description": "A car entering the road from the right side failed to see a cyclist and collided with them."
   }
 }

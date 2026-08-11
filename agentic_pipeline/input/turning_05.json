@@ -12,7 +12,8 @@
   "location": {
     "primary_road": "Kiefholzstraße",
     "secondary_road": "Dammweg",
-    "house_number_reference": null
+    "house_number_reference": null,
+    "intersection": null
   },
   "road_context": {
     "bike_facility_type": null,
@@ -25,7 +26,7 @@
       "type": "truck",
       "maneuver": "turn_right",
       "initial_direction": null,
-      "heading_reference": null,
+      "heading_reference": "toward Südostallee",
       "road_position": null
     },
     {
@@ -39,8 +40,8 @@
     }
   ],
   "conflict": {
-    "conflict_mechanism": "right_turn_across_cycle_path",
+    "conflict_mechanism": "right_turn_across",
     "collision_happened": true,
-    "collision_description": "A truck turning right failed to observe a cyclist and collided with them."
+    "collision_description": "A truck turning right struck a cyclist going straight."
   }
 }

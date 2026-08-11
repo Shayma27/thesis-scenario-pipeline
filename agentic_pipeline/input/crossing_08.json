@@ -12,7 +12,8 @@
   "location": {
     "primary_road": "Unter den Eichen",
     "secondary_road": "Drakestraße",
-    "house_number_reference": null
+    "house_number_reference": null,
+    "intersection": "Unter den Eichen / Drakestraße / Habelschwerdter Allee"
   },
   "road_context": {
     "bike_facility_type": "roadway_mixed",
@@ -26,21 +27,21 @@
       "maneuver": "go_straight",
       "initial_direction": null,
       "heading_reference": null,
-      "road_position": null
+      "road_position": "rightmost_motor_lane"
     },
     {
       "id": "car_1",
       "class": "motor_vehicle",
       "type": "car",
       "maneuver": "go_straight",
-      "initial_direction": "south",
-      "heading_reference": null,
-      "road_position": null
+      "initial_direction": null,
+      "heading_reference": "toward Unter den Eichen",
+      "road_position": "leftmost_motor_lane"
     }
   ],
   "conflict": {
-    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_mixed_roadway",
+    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_mixed_road",
     "collision_happened": true,
-    "collision_description": "A cyclist crossing from a mixed roadway was struck by a car."
+    "collision_description": "A cyclist going straight on a mixed road collided with a car."
   }
 }

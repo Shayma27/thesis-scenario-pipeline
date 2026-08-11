@@ -12,7 +12,8 @@
   "location": {
     "primary_road": "Reinickendorfer Straße",
     "secondary_road": "Pankstraße",
-    "house_number_reference": null
+    "house_number_reference": null,
+    "intersection": null
   },
   "road_context": {
     "bike_facility_type": null,
@@ -39,8 +40,8 @@
     }
   ],
   "conflict": {
-    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_red_light",
+    "conflict_mechanism": "cyclist_crosses_vehicle_path_from",
     "collision_happened": true,
-    "collision_description": "A cyclist ran a red light and collided with a car turning left."
+    "collision_description": "A cyclist and collided with a car turning left."
   }
 }

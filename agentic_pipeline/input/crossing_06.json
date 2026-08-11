@@ -12,7 +12,8 @@
   "location": {
     "primary_road": "Oranienburger Straße",
     "secondary_road": "Taldorfer Weg",
-    "house_number_reference": null
+    "house_number_reference": null,
+    "intersection": null
   },
   "road_context": {
     "bike_facility_type": "bike_lane",
@@ -41,6 +42,6 @@
   "conflict": {
     "conflict_mechanism": "cyclist_turns_across_vehicle_path",
     "collision_happened": true,
-    "collision_description": "A cyclist turning left across the path of a car traveling in the same direction collided with the car."
+    "collision_description": "A cyclist turning left from a bike lane collided with a car traveling in the same direction."
   }
 }

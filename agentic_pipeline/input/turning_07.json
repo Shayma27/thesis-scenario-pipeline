@@ -12,7 +12,8 @@
   "location": {
     "primary_road": "Malteserstraße",
     "secondary_road": null,
-    "house_number_reference": "139"
+    "house_number_reference": "139",
+    "intersection": null
   },
   "road_context": {
     "bike_facility_type": "separated_cycle_track",
@@ -25,7 +26,7 @@
       "type": "truck",
       "maneuver": "turn_right_into_parking",
       "initial_direction": "south",
-      "heading_reference": null,
+      "heading_reference": "toward the parking lot",
       "road_position": null
     },
     {
@@ -39,8 +40,8 @@
     }
   ],
   "conflict": {
-    "conflict_mechanism": "truck_turns_across_cycle_track",
+    "conflict_mechanism": "right_turn_into_parking_across_cycle_track",
     "collision_happened": true,
-    "collision_description": "A truck turning right into a parking lot collided with a cyclist traveling on a separated bike path."
+    "collision_description": "A truck turning right into a parking lot collided with a cyclist traveling straight on a separated cycle track."
   }
 }

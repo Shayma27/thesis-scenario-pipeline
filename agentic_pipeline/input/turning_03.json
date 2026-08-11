@@ -12,7 +12,8 @@
   "location": {
     "primary_road": "Buckower Damm",
     "secondary_road": "Gutschmidtstraße",
-    "house_number_reference": null
+    "house_number_reference": null,
+    "intersection": null
   },
   "road_context": {
     "bike_facility_type": "cycle_crossing",
@@ -25,7 +26,7 @@
       "type": "truck",
       "maneuver": "turn_right",
       "initial_direction": "west",
-      "heading_reference": null,
+      "heading_reference": "toward Britzer Damm",
       "road_position": null
     },
     {
@@ -39,8 +40,8 @@
     }
   ],
   "conflict": {
-    "conflict_mechanism": "truck_turns_across_cycle_crossing",
+    "conflict_mechanism": "right_turn_across_cycle_crossing",
     "collision_happened": true,
-    "collision_description": "A truck turning right struck a cyclist crossing from a designated bike crossing."
+    "collision_description": "A truck turning right struck an e-bike going straight at a cycle crossing."
   }
 }

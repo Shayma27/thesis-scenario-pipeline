@@ -12,11 +12,12 @@
   "location": {
     "primary_road": "Salvador-Allende-Str.",
     "secondary_road": "Müggelschlößchenweg",
-    "house_number_reference": null
+    "house_number_reference": null,
+    "intersection": null
   },
   "road_context": {
     "bike_facility_type": "separated_cycle_track",
-    "bike_facility_position": "left"
+    "bike_facility_position": null
   },
   "participants": [
     {
@@ -41,6 +42,6 @@
   "conflict": {
     "conflict_mechanism": "right_turn_across_cycle_track",
     "collision_happened": true,
-    "collision_description": "A truck turning right struck a cyclist traveling in the same direction on a separated cycle track."
+    "collision_description": "A truck turning right struck a cyclist going straight on the separated cycle track."
   }
 }

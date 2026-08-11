@@ -12,7 +12,8 @@
   "location": {
     "primary_road": "Müggelheimer Damm",
     "secondary_road": "Straße zum Müggelhort",
-    "house_number_reference": null
+    "house_number_reference": null,
+    "intersection": null
   },
   "road_context": {
     "bike_facility_type": "shared_foot_cycle_path",
@@ -25,7 +26,7 @@
       "type": "car",
       "maneuver": "turn_right",
       "initial_direction": "south",
-      "heading_reference": null,
+      "heading_reference": "toward Köpenick",
       "road_position": null
     },
     {
@@ -39,8 +40,8 @@
     }
   ],
   "conflict": {
-    "conflict_mechanism": "right_turn_violating_yield_sign_across_shared_path",
+    "conflict_mechanism": "right_turn_across_shared_path",
     "collision_happened": true,
-    "collision_description": "A car turning right failed to observe a yield sign and struck a cyclist who had right of way on the shared path."
+    "collision_description": "A car turning right struck a cyclist going straight on the shared path."
   }
 }

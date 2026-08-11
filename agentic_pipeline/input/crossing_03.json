@@ -11,8 +11,9 @@
   },
   "location": {
     "primary_road": "Müggelheimer Damm",
-    "secondary_road": "Waldnesselweg/Erwin-Bock Str.",
-    "house_number_reference": null
+    "secondary_road": null,
+    "house_number_reference": null,
+    "intersection": "Waldnesselweg/Erwin-Bock Str."
   },
   "road_context": {
     "bike_facility_type": null,
@@ -24,8 +25,8 @@
       "class": "motor_vehicle",
       "type": "car",
       "maneuver": "go_straight",
-      "initial_direction": null,
-      "heading_reference": null,
+      "initial_direction": "southeast",
+      "heading_reference": "toward Müggelheim",
       "road_position": null
     },
     {
@@ -34,13 +35,13 @@
       "type": "bicycle",
       "maneuver": "go_straight",
       "initial_direction": null,
-      "heading_reference": null,
+      "heading_reference": "toward Erwin-Bock-Straße",
       "road_position": null
     }
   ],
   "conflict": {
-    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_roadway",
+    "conflict_mechanism": "cyclist_crosses_vehicle_path",
     "collision_happened": true,
-    "collision_description": "A group of cyclists crossing the road were struck by a speeding car."
+    "collision_description": "A car struck a cyclist crossing the road."
   }
 }

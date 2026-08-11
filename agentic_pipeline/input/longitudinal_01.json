@@ -12,7 +12,8 @@
   "location": {
     "primary_road": "Alt-Biesdorf",
     "secondary_road": null,
-    "house_number_reference": null
+    "house_number_reference": null,
+    "intersection": null
   },
   "road_context": {
     "bike_facility_type": null,
@@ -25,7 +26,7 @@
       "type": "bicycle",
       "maneuver": "change_lane_left_to_right",
       "initial_direction": null,
-      "heading_reference": null,
+      "heading_reference": "toward Grabensprung",
       "road_position": "leftmost_motor_lane"
     },
     {
