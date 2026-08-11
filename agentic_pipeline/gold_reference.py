@@ -137,7 +137,7 @@ GOLD = {
     },
     "turning_06": {
         "scenario_type": "turning",
-        "location": {"primary_road": "Schönhauser Straße", "secondary_road": "Torstraße", "intersection": None},
+        "location": {"primary_road": "Torstraße", "secondary_road": "Schönhauser Straße", "intersection": None},
         "road_context": {"bike_facility_type": None, "bike_facility_position": None},
         "participants": {
             "cyclist_1": {"type": "bicycle", "maneuver": "go_straight", "initial_direction": None, "heading_reference": "toward Alte Schönhauser", "road_position": None},
@@ -152,7 +152,11 @@ GOLD = {
                  "separately hallucinated truck initial_direction=north with zero compass word "
                  "anywhere in the text. heading_reference only holds one value; 'toward Alte "
                  "Schönhauser' is preferred (user decision) as her last stated destination "
-                 "before the collision, not the earlier one.",
+                 "before the collision, not the earlier one. primary_road='Torstraße' "
+                 "(user decision, revised from 'Schönhauser Straße'): the collision happens "
+                 "right at the Torstraße intersection the truck turns into, same 'primary road "
+                 "= where the collision physically happens' logic already accepted for "
+                 "turning_03's Buckower Damm — not 'primary = road originally traveled'.",
     },
     "turning_07": {
         "scenario_type": "turning",

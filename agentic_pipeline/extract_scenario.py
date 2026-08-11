@@ -787,6 +787,26 @@ def _sanitize_forbidden_prose(extracted: dict) -> None:
         conflict["collision_description"] = cleaned
 
 
+def _clear_redundant_parking_heading(extracted: dict) -> None:
+    """turn_right_into_parking already captures "turns into the parking
+    lot" structurally — a heading_reference restating that as "toward the
+    parking lot" (turning_07: a real LLM run produced exactly this) is
+    redundant, not a genuine additional destination, and isn't grounded in
+    any "Richtung X"/"nach X" phrase either — the raw text says "auf den
+    dortigen Parkplatz abbog" ("auf", not "Richtung"/"nach"), so
+    _extract_heading_candidates correctly finds nothing here and leaves the
+    LLM's own value untouched (per the "no signal to check" invariant) —
+    this narrow check catches the one specific case where that invariant
+    lets an ungrounded-but-plausible-sounding value through anyway.
+    """
+    for participant in extracted.get("participants", []):
+        if participant.get("maneuver") != "turn_right_into_parking":
+            continue
+        heading = participant.get("heading_reference")
+        if heading and "park" in heading.lower():
+            participant["heading_reference"] = None
+
+
 def _downgrade_ungrounded_lane_change_direction(extracted: dict) -> None:
     """change_lane_left_to_right/right_to_left claim a specific starting
     lane side — if road_position (the participant's starting numbered-lane
@@ -847,6 +867,7 @@ def extract_scenario(report_text: str, scenario_id: str) -> dict:
     _backfill_intersection(extracted)
     _clear_multi_road_secondary(extracted)
     _validate_bike_facility_position_grounding(extracted)
+    _clear_redundant_parking_heading(extracted)
     _downgrade_ungrounded_lane_change_direction(extracted)
     _sanitize_conflict_mechanism(extracted)
     _sanitize_ungrounded_same_direction_claim(extracted)

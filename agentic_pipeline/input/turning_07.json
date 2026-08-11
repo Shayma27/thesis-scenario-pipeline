@@ -26,7 +26,7 @@
       "type": "truck",
       "maneuver": "turn_right_into_parking",
       "initial_direction": "south",
-      "heading_reference": "toward the parking lot",
+      "heading_reference": null,
       "road_position": null
     },
     {
