@@ -197,10 +197,6 @@ def _make_follow_trajectory_maneuver(name, trajectory):
     return maneuver
 
 
-def _rightmost_lane_center_offset(lane_width_m, lane_count):
-    return -float(lane_width_m) * (max(1, int(lane_count)) - 0.5)
-
-
 def _road_start(length_m, heading_rad):
     return (
         -math.cos(heading_rad) * length_m / 2,
@@ -592,30 +588,34 @@ def _closest_heading(reference_rad, candidates):
     return min(candidates, key=lambda candidate: abs(_heading_delta(candidate, reference_rad)))
 
 
-def _cyclist_lateral_offset(odr_params, osc_params, road_key="primary_road_lanes"):
+def _cyclist_lateral_offset(odr_params, osc_params):
+    """Lateral offset (meters, from the road centerline) for the cyclist's
+    drawn trajectory — a separate calculation from the actual OpenDRIVE
+    lane the cyclist teleports to (initial_lane_id, fixed by
+    complete_parameters.py's _cyclist_lane to the template's one real
+    lane). Both templates have exactly one real driving lane and one real
+    biking lane per direction, always, so every "leftmost"/"middle"/
+    "rightmost" policy converges to the same physical offset here too —
+    same principle as complete_parameters.py's lane-id fix, applied to
+    this separate trajectory-offset calculation.
+
+    Before this fix, several branches multiplied by the OSM/report-derived
+    lane count instead of a fixed single lane, which could offset the
+    drawn path meters away from wherever the cyclist is actually
+    teleported (verified: up to 7m for a report claiming 3 lanes) whenever
+    that count was > 1 — the teleport and the trajectory would silently
+    disagree on where the cyclist starts.
+    """
     lane_width_m = float(odr_params.get("motor_lane_width_m", 3.5))
     bike_lane_width_m = float(odr_params.get("bike_lane_width_m", 2.0))
-    lane_count = int(odr_params.get(road_key, 1))
     policy = osc_params.get("cyclist_lateral_position", DEFAULT_CYCLIST_LATERAL_POSITION)
     has_bike_facility = bool(odr_params.get("primary_has_bike_facility"))
 
-    if policy == "rightmost_motor_lane":
-        return _rightmost_lane_center_offset(lane_width_m, lane_count)
-    if policy == "leftmost_motor_lane":
-        return -lane_width_m / 2
-    if policy == "middle_motor_lane":
-        return _rightmost_lane_center_offset(lane_width_m, max(1, (lane_count + 1) // 2))
     if has_bike_facility and policy in {"right", "rightmost", "both"}:
-        return -(lane_width_m * lane_count + bike_lane_width_m / 2)
+        return -(lane_width_m + bike_lane_width_m / 2)
     if has_bike_facility and policy == "left":
         return -bike_lane_width_m / 2
-    if policy in {"right", "rightmost", "both"}:
-        return _rightmost_lane_center_offset(lane_width_m, lane_count)
-    if policy == "left":
-        return -lane_width_m / 2
-    if policy == "middle":
-        return _rightmost_lane_center_offset(lane_width_m, max(1, (lane_count + 1) // 2))
-    return _rightmost_lane_center_offset(lane_width_m, lane_count)
+    return -lane_width_m / 2
 
 
 def _generate_straight_crossing_openscenario(data, output_path, xodr_filename):
@@ -678,7 +678,7 @@ def _generate_straight_crossing_openscenario(data, output_path, xodr_filename):
     # Match the report-specific movement directions. When OSM enrichment has
     # found directed way segments, their headings are used here; otherwise this
     # falls back to the simple perpendicular crossing abstraction.
-    cyclist_offset = _cyclist_lateral_offset(odr_params, osc_params, "primary_road_lanes")
+    cyclist_offset = _cyclist_lateral_offset(odr_params, osc_params)
     car_offset = -float(odr_params.get("motor_lane_width_m", 3.5)) * (
         abs(int(car_actor["initial_lane_id"])) - 0.5
     )

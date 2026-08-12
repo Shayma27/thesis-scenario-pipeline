@@ -92,6 +92,52 @@ def enrich_with_osm(data, cache_dir):
             "osm_id": geocoded.get("osm_id"),
         }
 
+        # Refine with the shared-node lookup when a second street name is
+        # available — see _shared_node_geocode's docstring for why. Also
+        # tries alternate anchors if the primary road's own geocode isn't
+        # close enough — see _find_shared_node_any_anchor's docstring.
+        #
+        # road_names is widened with _extract_street_candidates' own
+        # regex-based read of the raw report text (the same deterministic
+        # extractor topology detection already uses) — location.* only has
+        # what extract_scenario's schema has room for (primary_road/
+        # secondary_road/intersection), which can miss a real landmark
+        # street the report names in a different phrasing. Confirmed for
+        # longitudinal_01: the report's actual collision landmark
+        # ("In Höhe der Braunsdorfstraße") isn't primary_road, secondary_road,
+        # or intersection — none of extract_scenario's location fields
+        # capture it — but the regex extractor already finds it correctly
+        # (it's what topology detection uses), so reusing it here finds the
+        # real intersection instead of leaving Alt-Biesdorf's ambiguous,
+        # kilometers-long single-street geocode unrefined.
+        road_names = _road_names_from_location(enriched.get("location", {}))
+        report_text = enriched.get("source", {}).get("raw_text", "")
+        for candidate in _extract_street_candidates(report_text):
+            if candidate not in road_names:
+                road_names.append(candidate)
+        if len(road_names) >= 2:
+            shared, other, anchor_note = _find_shared_node_any_anchor(
+                road_names, lat, lon, cache_dir
+            )
+            if shared:
+                context["geocoded"]["nominatim_lat"] = lat
+                context["geocoded"]["nominatim_lon"] = lon
+                context["geocoded"]["refined_by"] = "shared_node_lookup"
+                context["geocoded"]["refined_streets"] = [road_names[0], other]
+                context["geocoded"]["refined_way_id"] = shared["osm_way_id"]
+                if anchor_note:
+                    context["geocoded"]["refined_anchor_note"] = anchor_note
+                lat, lon = shared["lat"], shared["lon"]
+                context["geocoded"]["lat"] = lat
+                context["geocoded"]["lon"] = lon
+            else:
+                context["notes"].append(
+                    f"No shared OSM node found between {road_names[0]!r} and "
+                    f"any of {road_names[1:]!r}, even retried anchored at "
+                    "each street's own geocode — kept the single-query "
+                    "Nominatim geocode."
+                )
+
         overpass = _overpass_nearby_roads(lat, lon, DEFAULT_RADIUS_M, cache_dir)
         roads = _extract_road_context(overpass)
         matches = _select_relevant_roads(enriched, roads)
@@ -110,16 +156,26 @@ def enrich_with_osm(data, cache_dir):
 def _build_location_queries(data):
     location = data.get("location", {})
     queries = []
-    if location.get("osm_query"):
-        queries.append(location["osm_query"])
-    queries.extend(location.get("osm_query_candidates", []))
 
     city = location.get("city") or "Berlin"
     house_number = location.get("house_number_reference")
     primary = location.get("primary_road")
 
+    # A house number is the most disambiguating information available (an
+    # exact street address) — try it FIRST. _nominatim_search stops at the
+    # first candidate that returns anything, so a bare street-name query
+    # (below) can silently "succeed" on a same-named street elsewhere in
+    # Berlin before the house-number query is ever tried. Confirmed for
+    # crossing_01: "Mühlenstr., Berlin, Germany" matched a Mühlenstraße in
+    # Blankenburg (~3.5km from the real site) while "Mühlenstr. 89, Berlin,
+    # Germany" correctly resolves to osm node 831808684, the actual
+    # address the report names — verified manually against that node.
     if house_number and primary:
         queries.append(f"{primary} {house_number}, {city}, Germany")
+
+    if location.get("osm_query"):
+        queries.append(location["osm_query"])
+    queries.extend(location.get("osm_query_candidates", []))
 
     road_names = _road_names_from_location(location)
     if len(road_names) >= 2:
@@ -280,6 +336,23 @@ def _select_relevant_roads(data, roads):
     return selected[:30]
 
 
+# Manual maxspeed corrections, scoped to specific scenario_ids where
+# _first_maxspeed_kmh's "first tagged segment near the geocoded point"
+# heuristic picks an ambiguous street's wrong segment. longitudinal_01's
+# primary_road ("Alt-Biesdorf") has segments tagged both 50 and 60 km/h
+# nearby, and the report's actual collision landmark ("In Höhe der
+# Braunsdorfstraße") isn't captured in any of extract_scenario's location
+# fields, only found via the raw-text regex extractor alongside another,
+# earlier-mentioned street ("Lötschbergstraße", where the cyclist merely
+# started riding from) — nothing structurally distinguishes which of the
+# two is the real collision site, so the automated geocoding refinement
+# can't reliably disambiguate this one. Manually confirmed against the
+# real OSM tags this session: 50 km/h.
+_MANUAL_MAXSPEED_OVERRIDES_KMH = {
+    "longitudinal_01": 50.0,
+}
+
+
 def _apply_osm_context(data, context, cache_dir):
     # Assumption 3 (docs/modeling_assumptions.md): traffic lights / signal
     # state are never modeled, so road_context.traffic_light_present is not
@@ -297,7 +370,16 @@ def _apply_osm_context(data, context, cache_dir):
     _apply_lane_guided_maneuver_context(data, context)
     _apply_cyclist_position_policy(data, context)
 
-    maxspeed_kmh = _first_maxspeed_kmh(context["matched_roads"])
+    scenario_id = data.get("source", {}).get("source_id")
+    override_kmh = _MANUAL_MAXSPEED_OVERRIDES_KMH.get(scenario_id)
+    if override_kmh is not None:
+        maxspeed_kmh = override_kmh
+        context["notes"].append(
+            f"maxspeed_kmh manually overridden to {override_kmh} — "
+            "see _MANUAL_MAXSPEED_OVERRIDES_KMH's comment for why."
+        )
+    else:
+        maxspeed_kmh = _first_maxspeed_kmh(context["matched_roads"])
     if maxspeed_kmh is None:
         context["notes"].append("No parseable maxspeed tag found near the geocoded location.")
         return
@@ -761,6 +843,87 @@ def _intersection_heading(name_a, name_b, lat, lon, cache_dir, radius_m=INTERSEC
     return _local_heading_rad(road_b.get("geometry", []), index)
 
 
+def _shared_node_geocode(name_a, name_b, anchor_lat, anchor_lon, cache_dir, radius_m=INTERSECTION_SEARCH_RADIUS_M):
+    """Find the real OSM node where road name_a and road name_b actually
+    meet, near (anchor_lat, anchor_lon) — same shared-geometry-point
+    mechanism already proven for topology detection and heading resolution
+    above, reused here as a geocoding source. Returns
+    {"lat", "lon", "osm_way_id"} or None if no shared node is found.
+
+    This exists because Nominatim's free-text geocoder frequently returns
+    nothing for a combined "STREET1 / STREET2" intersection query (verified:
+    empty results for both "/" and space-joined forms against real
+    Nominatim), silently discarding the second street name's disambiguating
+    power and leaving the single-street fallback query to land on whichever
+    same-named street elsewhere in Berlin Nominatim happens to rank first —
+    a real risk, since German street names commonly repeat across boroughs
+    (this is the same root cause already fixed for crossing_01/turning_07's
+    house-number geocoding).
+    """
+    try:
+        payload_a = _overpass_named_ways(name_a, anchor_lat, anchor_lon, radius_m, cache_dir)
+        payload_b = _overpass_named_ways(name_b, anchor_lat, anchor_lon, radius_m, cache_dir)
+    except (HTTPError, URLError, TimeoutError, OSError, ValueError):
+        return None
+
+    roads_a = _extract_road_context(payload_a)
+    roads_b = _extract_road_context(payload_b)
+    if not roads_a or not roads_b:
+        return None
+
+    road_b, index = _shared_geometry_point(roads_a, roads_b)
+    if road_b is None:
+        return None
+
+    point = road_b["geometry"][index]
+    return {
+        "lat": float(point["lat"]),
+        "lon": float(point["lon"]),
+        "osm_way_id": road_b.get("osm_id"),
+    }
+
+
+def _find_shared_node_any_anchor(road_names, primary_lat, primary_lon, cache_dir):
+    """Try _shared_node_geocode(road_names[0], other, ...) for every other
+    name in road_names[1:], first anchored at (primary_lat, primary_lon) —
+    the primary road's own Nominatim geocode. If nothing is found from
+    there, retry anchored at each candidate street's own individual
+    Nominatim geocode instead.
+
+    That second pass exists because the primary road's name can itself be
+    the ambiguous one. Confirmed for crossing_06: "Oranienburger Straße"
+    alone geocodes to a well-known street in central Mitte, ~7km from the
+    real collision site in Reinickendorf — outside even
+    _shared_node_geocode's 5km search radius, so anchoring there can never
+    find the real intersection no matter how far the radius is widened
+    from that point. But "Taldorfer Weg" (the report's other named street)
+    geocodes on its own almost exactly to the real site — confirmed
+    directly against a manually-supplied OSM way — because it's a far less
+    common name. So when the primary anchor fails, each other street's own
+    geocode is tried as an alternate anchor before giving up.
+
+    Returns (shared_result, matched_other_name, anchor_note) — anchor_note
+    is None when the primary anchor worked, otherwise a short string
+    naming which alternate anchor succeeded. All three are None if no pair
+    from any anchor finds a shared node.
+    """
+    for other in road_names[1:]:
+        shared = _shared_node_geocode(road_names[0], other, primary_lat, primary_lon, cache_dir)
+        if shared:
+            return shared, other, None
+
+    for other in road_names[1:]:
+        alt_anchor = _nominatim_search(f"{other}, Berlin, Germany", cache_dir)
+        if not alt_anchor:
+            continue
+        alt_lat, alt_lon = float(alt_anchor["lat"]), float(alt_anchor["lon"])
+        shared = _shared_node_geocode(road_names[0], other, alt_lat, alt_lon, cache_dir)
+        if shared:
+            return shared, other, f"anchored at {other!r}'s own geocode, not the primary road's"
+
+    return None, None, None
+
+
 def _resolve_road_heading(roads, road_name, other_road_name, geocoded, cache_dir):
     """_best_road_heading(), falling back to an intersection-point lookup
     against other_road_name when the plain nearby-roads search can't match
@@ -997,19 +1160,25 @@ def _extract_street_candidates(report_text):
             seg_end = base + last_offset + len(last_word)
             found.append((name, seg_start, seg_end))
 
-    # Drop "STREET Richtung STREET2" destination references.
+    # Drop "(in) Richtung STREET2" destination references — unconditional:
+    # any street immediately following "Richtung"/"in Richtung" is a
+    # heading/destination, never a distinct collision-site cross-street,
+    # regardless of what precedes "Richtung" in the sentence. An earlier
+    # version of this filter additionally required the text right before
+    # "Richtung" to end with an already-kept street name (intended for the
+    # direct "STREET Richtung STREET2" case) — that extra condition missed
+    # phrasings with a verb between the two, e.g. crossing_02's "...von der
+    # Poststraße kommend in Richtung Spreeufer", where "kommend" sits
+    # between "Poststraße" and "in Richtung", so "Spreeufer" was kept as a
+    # spurious third street candidate and blocked topology resolution
+    # entirely (detect_topology only handles exactly 1 or 2 candidates).
     found.sort(key=lambda t: t[1])
     kept = []
     for name, start, end in found:
         prefix = report_text[:start]
-        m = _RICHTUNG_BEFORE_RE.search(prefix)
-        is_direction_ref = False
-        if m:
-            before = prefix[: m.start()].rstrip()
-            if any(before.endswith(k[0]) for k in kept):
-                is_direction_ref = True
-        if not is_direction_ref:
-            kept.append((name, start, end))
+        if _RICHTUNG_BEFORE_RE.search(prefix):
+            continue
+        kept.append((name, start, end))
 
     candidates = []
     seen_keys = []
@@ -1044,29 +1213,175 @@ def _count_ways_at_node(lat, lon, cache_dir, radius_m=30):
     return count
 
 
-# turning_06's location was manually verified for the heading override above
-# (Alte Schönhauser Straße / Torstraße, Mitte, 52.528644/13.409324). Checking
-# the actual shared node there (see this session) found 4 distinct ways
-# touching it — Schönhauser Allee, Alte Schönhauser Straße, and Torstraße
-# split into two segments — a genuine 4-way crossing, not a forced answer.
-_TURNING_06_TOPOLOGY_OVERRIDE = {
-    "topology": "4way_junction",
-    "streets": ["Alte Schönhauser Straße", "Torstraße"],
-    "house_number": None,
-    "way_count": 4,
-    "reason": (
-        "Manually verified location (52.528644, 13.409324) — same override "
-        "as the heading fix. The exact shared node there has 4 ways "
-        "(Schönhauser Allee, Alte Schönhauser Straße, Torstraße x2 segments) "
-        "— a genuine 4-way crossing, not a forced/guessed answer."
-    ),
+# Manual topology overrides, scoped to specific scenario_ids where the
+# deterministic shared-node lookup either can't decide (needs_manual_review,
+# usually because it found more or fewer than the exactly-2 street names its
+# logic handles, or because its own geocoding — see detect_topology's
+# separate, simpler geocode-fallback list below — landed too far from the
+# real site) or its way_count metric disagrees with a human map check.
+#
+# Each entry's "reason" says explicitly what kind of override it is:
+#   - an independently re-verified arm count (turning_06: 4 arms actually
+#     counted at a manually-verified coordinate);
+#   - the deterministic way_count itself, just judged closer to a real
+#     junction than "not a junction" (crossing_02, turning_08, turning_09 —
+#     way_count 2 or 3, but only two templates exist, so 4way_junction is
+#     the nearer approximation of a real, if not cleanly 4-armed, junction);
+#   - a report that names a real cross-street the report text itself
+#     confirms (crossing_03/crossing_08's "Kreuzung X" phrasing, crossing_06's
+#     Oranienburger Straße/Taldorfer Weg, turning_02's "bog... ab" — turned
+#     off Mollstraße onto an unnamed street) but which detect_topology's own
+#     logic can't reach (3+ candidate streets, or — crossing_06 — its own
+#     geocode-fallback list doesn't yet share enrich_with_osm's multi-anchor
+#     retry, so it anchors on the wrong same-named Oranienburger Straße in
+#     Mitte and never finds the real one 7km away in Reinickendorf);
+#   - an explicit best-guess where even manual map review couldn't resolve
+#     it (crossing_05 — flagged as such, not presented as verified).
+_MANUAL_TOPOLOGY_OVERRIDES = {
+    "turning_06": {
+        "topology": "4way_junction",
+        "streets": ["Alte Schönhauser Straße", "Torstraße"],
+        "house_number": None,
+        "way_count": 4,
+        "reason": (
+            "Manually verified location (52.528644, 13.409324) — same "
+            "override as the heading fix. The exact shared node there has "
+            "4 ways (Schönhauser Allee, Alte Schönhauser Straße, Torstraße "
+            "x2 segments) — a genuine 4-way crossing, not a "
+            "forced/guessed answer."
+        ),
+    },
+    "crossing_02": {
+        "topology": "4way_junction",
+        "streets": ["Rathausstraße", "Poststraße"],
+        "house_number": None,
+        "way_count": 2,
+        "reason": (
+            "Deterministic shared-node lookup found only 2 ways at the "
+            "Rathausstraße/Poststraße node (not a clean 4-way by that "
+            "metric), but manual review of the map (this session) "
+            "confirms a real junction there — Poststraße joins "
+            "Rathausstraße, and the report's car maneuver is "
+            "'enter_roadway' near that junction. Overridden to "
+            "intersection_4way.xodr as the closer of the two available "
+            "templates for a real (if not cleanly 4-armed) junction, not "
+            "because 4 arms were independently verified."
+        ),
+    },
+    "crossing_03": {
+        "topology": "4way_junction",
+        "streets": ["Müggelheimer Damm", "Waldnesselweg", "Erwin-Bock Str."],
+        "house_number": None,
+        "way_count": None,
+        "reason": (
+            "The report itself names the collision site as 'der Kreuzung "
+            "Waldnesselweg/Erwin-Bock Str.' on Müggelheimer Damm — a real, "
+            "explicitly-named intersection — but the deterministic street "
+            "extractor found 3 candidate names, and detect_topology's "
+            "logic only decides the exactly-1-or-2 case. Manually "
+            "confirmed as an intersection this session."
+        ),
+    },
+    "crossing_05": {
+        "topology": "4way_junction",
+        "streets": ["Storkower Straße"],
+        "house_number": None,
+        "way_count": None,
+        "reason": (
+            "Report names only one street ('Storkower Straße, Richtung "
+            "Osten') with no cross-street, house number, or other "
+            "disambiguating detail. Manual map review this session could "
+            "not identify the exact collision point either — this is an "
+            "explicit best-guess assumption that a real intersection is "
+            "present, modeled as intersection_4way.xodr (the closer of "
+            "the two available templates), NOT a verified fact like the "
+            "other overrides here."
+        ),
+    },
+    "crossing_06": {
+        "topology": "4way_junction",
+        "streets": ["Oranienburger Straße", "Taldorfer Weg"],
+        "house_number": None,
+        "way_count": None,
+        "reason": (
+            "Manually confirmed as a real intersection this session — "
+            "Oranienburger Straße (maxspeed 50) meets Taldorfer Weg "
+            "(maxspeed 30) in Reinickendorf. detect_topology's own "
+            "geocode-fallback list (combined query, then name_a alone, "
+            "then name_b alone) stops at 'Oranienburger Straße' alone, "
+            "which matches a same-named but unrelated street ~7km away in "
+            "Mitte — outside even the 5km shared-node search radius — so "
+            "it never reaches the real intersection. (enrich_with_osm's "
+            "own geocoding has since been fixed to retry anchored at each "
+            "street's own geocode — see _find_shared_node_any_anchor — "
+            "but detect_topology's simpler fallback list hasn't been "
+            "unified with it yet.)"
+        ),
+    },
+    "crossing_08": {
+        "topology": "4way_junction",
+        "streets": ["Unter den Eichen", "Drakestraße", "Habelschwerdter Allee"],
+        "house_number": None,
+        "way_count": None,
+        "reason": (
+            "Manually confirmed as an intersection this session. Same "
+            "class of gap as crossing_03: the deterministic street "
+            "extractor found 3 candidate names, and detect_topology's "
+            "logic only decides the exactly-1-or-2 case. Independent of "
+            "complete_parameters.py's separate crossing_08 override (the "
+            "cyclist's 'Nebenfahrbahn' being a genuine dual carriageway, "
+            "not a bike-facility question) — this override is about "
+            "topology/template selection only."
+        ),
+    },
+    "turning_02": {
+        "topology": "4way_junction",
+        "streets": ["Mollstraße"],
+        "house_number": None,
+        "way_count": None,
+        "reason": (
+            "Report says the truck 'bog nach rechts in die Mollstraße ab' "
+            "— turned right INTO Mollstraße from some other street — "
+            "meaning a real intersection exists, but the street the truck "
+            "turned from is never named in the text, so the extractor "
+            "only ever finds one street name and defaults to midblock. "
+            "Manually confirmed as an intersection this session."
+        ),
+    },
+    "turning_08": {
+        "topology": "4way_junction",
+        "streets": ["Reinickendorfer Straße", "Pankstraße"],
+        "house_number": None,
+        "way_count": 3,
+        "reason": (
+            "Deterministic shared-node lookup found exactly 3 ways at "
+            "this node — genuinely a 3-way junction in reality, confirmed "
+            "manually this session ('3way in reality'). Overridden to "
+            "intersection_4way.xodr anyway as the closer of the two "
+            "available templates; not a claim that a 4th arm exists."
+        ),
+    },
+    "turning_09": {
+        "topology": "4way_junction",
+        "streets": ["Straße zum Müggelhort", "Müggelheimer Damm"],
+        "house_number": None,
+        "way_count": 3,
+        "reason": (
+            "Deterministic shared-node lookup found exactly 3 ways at "
+            "this node — a real junction between the report's primary and "
+            "secondary road, confirmed manually this session. Overridden "
+            "to intersection_4way.xodr as the closer of the two available "
+            "templates; not a claim that a 4th arm exists."
+        ),
+    },
 }
 
 
 def _manual_topology_override(scenario_id):
-    if scenario_id == _TURNING_06_OVERRIDE_SCENARIO_ID:
-        return dict(_TURNING_06_TOPOLOGY_OVERRIDE, scenario_id=scenario_id)
-    return None
+    override = _MANUAL_TOPOLOGY_OVERRIDES.get(scenario_id)
+    if override is None:
+        return None
+    return dict(override, scenario_id=scenario_id)
 
 
 def detect_topology(report_text, scenario_id, cache_dir=None):
@@ -1678,8 +1993,16 @@ def _point_distance_m(a, b):
 
 
 def _road_names_from_location(location):
+    # "intersection" (e.g. "Waldnesselweg/Erwin-Bock Str.") is extract_scenario's
+    # own free-text capture of a named junction the report mentions — often
+    # more precise than primary_road/secondary_road alone (crossing_03's
+    # primary_road is just "Müggelheimer Damm", a many-kilometer street; its
+    # intersection field names the exact cross-streets where the collision
+    # happened). Reading it here means every caller of this function —
+    # _build_location_queries, _select_relevant_roads, and enrich_with_osm's
+    # shared-node geocode refinement — benefits without separate wiring.
     names = []
-    for key in ("primary_road", "secondary_road", "osm_roads"):
+    for key in ("primary_road", "secondary_road", "osm_roads", "intersection"):
         value = location.get(key)
         if not value:
             continue

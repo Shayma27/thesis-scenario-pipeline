@@ -12,6 +12,7 @@ Public API:  run_agent(report_text, scenario_id)
 
 from __future__ import annotations
 
+import copy
 import json
 import re
 import textwrap
@@ -32,6 +33,7 @@ from complete_parameters import complete_parameters as _complete_parameters
 from template_selector import select_template as _select_template
 from generate_scenario import generate_openscenario as _generate_openscenario
 from validate_outputs import validate_generated_files as _validate_outputs
+from provenance import check_agent1_preserved
 
 
 OUTPUT_BASE = PROJECT_DIR / "output" / "agentic"
@@ -259,6 +261,7 @@ class AgentState:
     def __init__(self, scenario_id: str):
         self.scenario_id = scenario_id
         self.data: dict | None = None
+        self.agent1_snapshot: dict | None = None
         self.output_dir: Path = OUTPUT_BASE / scenario_id
         self.xodr_path: Path | None = None
         self.xosc_path: Path | None = None
@@ -343,6 +346,18 @@ def _tool_extract_scenario(state: AgentState, report_text: str, scenario_id: str
         extracted.setdefault("location", {}), extracted.get("participants", [])
     )
     state.data = extracted
+
+    # Snapshot Agent 1's output before anything downstream (OSM enrichment,
+    # parameter completion) can touch it. Later stages are checked against
+    # this snapshot via provenance.check_agent1_preserved: they may fill in
+    # fields Agent 1 left null, but must never change one it already set.
+    state.agent1_snapshot = copy.deepcopy(extracted)
+    state.output_dir.mkdir(parents=True, exist_ok=True)
+    agent1_path = state.output_dir / f"{scenario_id}.agent1.json"
+    agent1_path.write_text(
+        json.dumps(extracted, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+
     stype = extracted["classification"]["scenario_type"]
     conf = extracted["classification"]["confidence"]
     state.record("extract_scenario", {"scenario_type": stype, "confidence": conf})
@@ -373,6 +388,7 @@ def _tool_query_osm(state: AgentState, osm_query: str) -> dict:
     state.output_dir.mkdir(parents=True, exist_ok=True)
 
     enriched = _enrich_with_osm(state.data, OSM_CACHE_DIR)
+    check_agent1_preserved(state.agent1_snapshot, enriched)
     state.data = enriched
 
     ctx = enriched.get("osm_context", {})
@@ -415,7 +431,9 @@ def _tool_complete_parameters(state: AgentState) -> dict:
     if state.data is None:
         return {"error": "extract_scenario must be called first"}
 
-    state.data = _complete_parameters(state.data)
+    completed = _complete_parameters(state.data)
+    check_agent1_preserved(state.agent1_snapshot, completed)
+    state.data = completed
     state.record("complete_parameters", {})
 
     odr = state.data["generated_simulation_parameters"]["opendrive"]

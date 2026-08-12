@@ -25,6 +25,12 @@ from defaults import (
 # approaches. "turning", "longitudinal", and "other" are all single-road
 # scenarios by comparison.
 
+# Traffic-engineering assumption, not an OSM measurement: an approaching
+# vehicle is modeled at this fraction of the posted speed limit. See
+# _apply_osm_derived_crossing_speed for why this is tracked separately from
+# the OSM-observed maxspeed it's applied to.
+APPROACH_SPEED_FACTOR = 0.65
+
 
 def complete_parameters(data: dict) -> dict:
     """
@@ -109,7 +115,7 @@ def complete_parameters(data: dict) -> dict:
 
         _setd(a, "vehicle_category", mtype)
         _setd(a, "initial_road_id", 1 if is_crossing else 0)
-        _setd(a, "initial_lane_id", _motor_lane(odr, data, for_secondary_road=is_crossing))
+        _setd(a, "initial_lane_id", _motor_lane(odr, data, mid, for_secondary_road=is_crossing))
         # Maneuver-aware override for "turning" (no-ops for every other
         # scenario_type, and for a turning report whose text already places
         # the vehicle on an explicit lane — see the function's own
@@ -186,18 +192,31 @@ _CROSSING_08_OVERRIDE_REASON = (
 def _road_position_lane_id(road_position: str, lane_count: int, *, allow_left_lane: bool) -> int | None:
     """Map an explicit report "<side> Fahrstreifen" position to a lane id.
 
+    Both templates have exactly ONE real driving lane per direction (id -1
+    on the participant's own side; id 1 on the opposite side, only usable
+    via Assumption 1's same-direction reinterpretation below) — never more,
+    regardless of what `lane_count` (from OSM or the report) claims. So
+    "leftmost"/"middle"/"rightmost" all resolve to that same single real
+    lane; the report's numbered distinction between them ("the middle of
+    three lanes" vs "the rightmost") isn't representable and collapses to
+    it, the same accepted limitation Assumption 1 already documents for
+    "leftmost". `lane_count` is kept as a parameter only so callers can
+    detect and flag when it implied a distinction that got collapsed here
+    (see _cyclist_lane/_motor_lane's flagging around this call) — it must
+    never again feed into the returned id itself, which is what silently
+    produced a wrong-typed lane (biking/border/sidewalk instead of driving)
+    whenever lane_count > 1.
+
     `allow_left_lane` gates Assumption 1's same-direction reinterpretation:
     only "longitudinal" scenarios (straight_road.xodr) may use lane id 1,
     the template's real second driving lane, as a same-direction lane.
-    Everywhere else "leftmost" still means the innermost lane on the
-    participant's own (negative-id) side, i.e. lane -1.
     """
     if road_position == "leftmost_motor_lane":
         return 1 if allow_left_lane else -1
     if road_position == "middle_motor_lane":
-        return -max(1, (lane_count + 1) // 2)
+        return -1
     if road_position in {"rightmost_motor_lane", "right_motor_lane"}:
-        return -max(1, lane_count)
+        return -1
     return None
 
 
@@ -214,6 +233,8 @@ def _cyclist_lane(odr: dict, data: dict) -> int:
     road_position = str(cyclist_p.get("road_position") or "").casefold()
     lane_id = _road_position_lane_id(road_position, n, allow_left_lane=stype == "longitudinal")
     if lane_id is not None:
+        if n > 1 and road_position in {"middle_motor_lane", "rightmost_motor_lane", "right_motor_lane"}:
+            _flag_lane_count_exceeds_template(data, "cyclist_1.initial_lane_id", n)
         return lane_id
 
     # Flag geometry mismatches from the report text regardless of what
@@ -245,7 +266,43 @@ def _cyclist_lane(odr: dict, data: dict) -> int:
         # rides the driving lane" — except for the crossing_08 override
         # above, where it means a separate carriageway instead.
         has_fac = ftype != "roadway_mixed" or is_crossing_08_override
-    return -(n + 1) if has_fac else -n
+
+    # Both templates have exactly one real biking lane (-2) and one real
+    # driving lane (-1) per direction, always — never "-(n+1)"/"-n" real
+    # lanes. Using n here used to place the cyclist on whatever the
+    # template's lane -(n+1)/-n actually is (the sidewalk or border lane,
+    # for n>1), not the intended bike/driving lane. n is only used below to
+    # flag that OSM/the report implied more real lanes than either template
+    # models — the cyclist still goes on the one real lane that exists.
+    if n > 1:
+        _flag_lane_count_exceeds_template(data, "cyclist_1.initial_lane_id", n)
+    return -2 if has_fac else -1
+
+
+def _flag_lane_count_exceeds_template(data: dict, parameter: str, lane_count: int) -> None:
+    """Record that OSM or the report implied more real driving lanes than
+    either template models (both have exactly one real driving lane and
+    one real biking lane per direction) — the actor still goes on the
+    template's one real lane; this is purely a traceability record, same
+    pattern as _flag_unrepresentable_bike_facility."""
+    missing = data.setdefault("missing_parameters", [])
+    source = "lane_count_exceeds_template_capacity"
+    if any(m.get("parameter") == parameter and m.get("source") == source for m in missing):
+        return
+    missing.append({
+        "parameter": parameter,
+        "value_used": "template's one real lane of the intended type",
+        "source": source,
+        "reason": (
+            f"OSM or the report implied {lane_count} lanes, but neither "
+            "straight_road.xodr nor intersection_4way.xodr models more than "
+            "one real driving lane and one real biking lane per direction "
+            "(see Assumption 1 in docs/modeling_assumptions.md). Any "
+            "numbered-lane distinction beyond that isn't representable; the "
+            "actor is placed on the template's one real lane of the "
+            "intended type instead."
+        ),
+    })
 
 
 def _flag_unrepresentable_bike_facility(data: dict, ftype: str) -> None:
@@ -317,27 +374,16 @@ def _apply_cyclist_lane_id(data: dict, position: str, opendrive_params: dict) ->
     if not cyclist:
         return
 
-    lane_count = int(
-        opendrive_params.get(
-            "primary_road_lanes",
-            opendrive_params.get("motor_lane_count", 1),
-        )
-    )
+    # Both templates have exactly one real driving lane (-1) and one real
+    # biking lane (-2) per direction, always — primary_road_lanes/
+    # motor_lane_count (from OSM/the report) never corresponds to a real
+    # additional lane in either template, so it must not feed into which id
+    # is picked (see _cyclist_lane's matching comment for the full
+    # explanation). Every position other than "on the bike facility" lands
+    # on the one real driving lane.
     has_bike_facility = bool(opendrive_params.get("primary_has_bike_facility"))
-    if position == "rightmost_motor_lane":
-        lane_id = -max(1, lane_count)
-    elif position == "leftmost_motor_lane":
-        lane_id = -1
-    elif position == "middle_motor_lane":
-        lane_id = -max(1, (lane_count + 1) // 2)
-    elif has_bike_facility and position in {"right", "rightmost", "both"}:
-        lane_id = -(lane_count + 1)
-    elif has_bike_facility and position == "left":
-        lane_id = -1
-    elif position in {"right", "rightmost", "both"}:
-        lane_id = -max(1, lane_count)
-    elif position == "middle":
-        lane_id = -max(1, (lane_count + 1) // 2)
+    if has_bike_facility and position in {"right", "rightmost", "both"}:
+        lane_id = -2
     else:
         lane_id = -1
 
@@ -356,10 +402,18 @@ def _apply_cyclist_lane_id(data: dict, position: str, opendrive_params: dict) ->
     )
 
 
-def _motor_lane(odr: dict, data: dict, for_secondary_road: bool = False) -> int:
+def _motor_lane(odr: dict, data: dict, motor_id: str, for_secondary_road: bool = False) -> int:
+    # Both templates have exactly one real driving lane per direction on
+    # every real approach road — never more, regardless of what
+    # primary_road_lanes/secondary_road_lanes/motor_lane_count (OSM or
+    # report-derived) claims. See _cyclist_lane's matching comment: those
+    # counts must not feed into which lane id is picked, only into whether
+    # to flag that the template can't represent as many lanes as reported.
     if for_secondary_road:
         n = int(odr.get("secondary_road_lanes", 1))
-        return -max(1, n)
+        if n > 1:
+            _flag_lane_count_exceeds_template(data, f"{motor_id}.initial_lane_id (secondary road)", n)
+        return -1
 
     n = int(odr.get("primary_road_lanes", odr.get("motor_lane_count", 1)))
     stype = data.get("classification", {}).get("scenario_type", "other")
@@ -372,9 +426,13 @@ def _motor_lane(odr: dict, data: dict, for_secondary_road: bool = False) -> int:
     road_position = str(motor_p.get("road_position") or "").casefold()
     lane_id = _road_position_lane_id(road_position, n, allow_left_lane=stype == "longitudinal")
     if lane_id is not None:
+        if n > 1 and road_position in {"middle_motor_lane", "rightmost_motor_lane", "right_motor_lane"}:
+            _flag_lane_count_exceeds_template(data, f"{motor_id}.initial_lane_id", n)
         return lane_id
 
-    return -max(1, n)
+    if n > 1:
+        _flag_lane_count_exceeds_template(data, f"{motor_id}.initial_lane_id", n)
+    return -1
 
 
 # Agent 2/Agent 3 ordering fix: this used to live in osm_enrichment.py and run
@@ -419,23 +477,29 @@ def _apply_turning_vehicle_lane_id(data: dict, lane_count) -> None:
     if not actor:
         return
 
+    # Both templates have exactly one real driving lane per direction
+    # (id -1) — never the "rightmost of lane_count" lane that used to be
+    # computed here. With only one real lane, "innermost" (left turn) and
+    # "outermost" (right turn) are the same physical lane; the distinction
+    # this function used to encode only ever mattered for lane_count > 1,
+    # which is exactly the case where -max(1, lane_count) pointed at the
+    # template's biking/border/sidewalk lane instead of a driving lane.
     maneuver = str(motor_participant.get("maneuver", "")).lower()
+    lane_id = -1
     if "turn_left" in maneuver:
-        # A left-turning vehicle starts in the innermost lane, adjacent to
-        # the centerline (lane_id -1 in this template's numbering).
-        lane_id = -1
         reason = (
             "For a left-turning vehicle, it starts in the innermost "
             "motor-vehicle lane (adjacent to the centerline)."
         )
     else:
-        # Right turns (and turning into a parking/side access on the right)
-        # start from the outermost/rightmost motor-vehicle lane.
-        lane_id = -max(1, int(lane_count))
         reason = (
             "For a right-turning vehicle, it starts in the rightmost "
-            "motor-vehicle lane of the generated OpenDRIVE road."
+            "motor-vehicle lane of the generated OpenDRIVE road — which, "
+            "since the template models only one real driving lane per "
+            "direction, is the same lane a left turn starts from."
         )
+    if int(lane_count) > 1:
+        _flag_lane_count_exceeds_template(data, f"{motor_id}.initial_lane_id", int(lane_count))
 
     actor["initial_lane_id"] = lane_id
     _upsert_missing_parameter(
@@ -471,18 +535,34 @@ def _apply_osm_derived_crossing_speed(data: dict, mid: str, actor: dict, is_cros
     maxspeed_kmh = data.get("osm_context", {}).get("derived", {}).get("maxspeed_kmh")
     if maxspeed_kmh is None:
         return
-    speed_mps = round(float(maxspeed_kmh) * 0.65 / 3.6, 2)
+
+    # These are two different kinds of fact and must not share one label:
+    # maxspeed_kmh is an observed OSM tag; APPROACH_SPEED_FACTOR is a
+    # traffic-engineering modeling assumption applied on top of it. The old
+    # single "osm_derived_assumption" source blurred them into one entry
+    # that read as if the resulting speed were itself measured from OSM.
+    speed_mps = round(float(maxspeed_kmh) * APPROACH_SPEED_FACTOR / 3.6, 2)
     _setd(actor, "initial_speed_mps", speed_mps)
     if actor.get("initial_speed_mps") != speed_mps:
         return  # something else already set it first; don't misattribute it
+
+    _upsert_missing_parameter(
+        data,
+        parameter="car_1.approach_maxspeed_kmh",
+        value_used=maxspeed_kmh,
+        source="osm_tag",
+        reason="Posted speed limit near the geocoded location, from OSM's maxspeed tag.",
+    )
     _upsert_missing_parameter(
         data,
         parameter="car_1.initial_speed_mps",
         value_used=speed_mps,
-        source="osm_derived_assumption",
+        source="engineering_assumption",
         reason=(
-            f"OSM maxspeed={maxspeed_kmh} km/h was found near the location; "
-            "the simulation uses 65% of the limit as an intersection approach speed."
+            "Not stated in the report and not itself observable from OSM. Modeled as "
+            f"{APPROACH_SPEED_FACTOR:.0%} of the OSM-observed maxspeed ({maxspeed_kmh} km/h) "
+            "as a typical intersection-approach speed — the 65% factor is a "
+            "traffic-engineering assumption, not an OSM-derived value."
         ),
     )
 
