@@ -1,0 +1,597 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "turning_05",
+    "raw_text": "Ein Lastwagen samt Anhänger befuhr die Kiefholzstraße in Richtung Südostallee. Beim Rechtsabbiegen in den Dammweg übersah der Fahrer eine Radfahrerin, wodurch es zur Kollision kam."
+  },
+  "classification": {
+    "scenario_type": "turning",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Kiefholzstraße",
+    "secondary_road": "Dammweg",
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Kiefholzstraße / Dammweg, Berlin, Germany",
+    "osm_roads": [
+      "Kiefholzstraße",
+      "Dammweg"
+    ],
+    "direction_references": [],
+    "location_type": "intersection"
+  },
+  "road_context": {
+    "bike_facility_type": "bike_lane",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "truck_1",
+      "class": "motor_vehicle",
+      "type": "truck",
+      "maneuver": "turn_right",
+      "initial_direction": null,
+      "heading_reference": "toward Südostallee",
+      "road_position": null
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across",
+    "collision_happened": true,
+    "collision_description": "A truck turning right struck a cyclist going straight."
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "intersection_lat": 52.4749769,
+      "intersection_lon": 13.4737533,
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "bike_lane",
+      "primary_bike_facility_position": "both",
+      "bike_lane_width_m": 2.0,
+      "motor_lane_count": 2,
+      "primary_heading_rad": -0.8513200808158813,
+      "secondary_heading_rad": -2.4355944127299574,
+      "secondary_road_lanes": 2
+    },
+    "openscenario": {
+      "cyclist_lateral_position": "both"
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "bike_lane",
+      "source": "osm_tag",
+      "reason": "OSM cycleway tags indicate bike_lane."
+    },
+    {
+      "parameter": "motor_lane_count",
+      "value_used": 2,
+      "source": "osm_tag",
+      "reason": "OpenDRIVE motor-lane count was derived from nearby OSM lanes tags."
+    },
+    {
+      "parameter": "primary_heading_rad",
+      "value_used": -0.85132,
+      "source": "osm_way_geometry",
+      "reason": "Primary road heading derived from OSM way geometry."
+    },
+    {
+      "parameter": "secondary_heading_rad",
+      "value_used": -2.435594,
+      "source": "osm_way_geometry",
+      "reason": "Secondary road heading derived from OSM way geometry."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "both",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    }
+  ],
+  "osm_context": {
+    "query": "Kiefholzstraße, Berlin, Germany",
+    "queries_tried": [
+      "Kiefholzstraße / Dammweg, Berlin, Germany",
+      "Kiefholzstraße Dammweg, Berlin, Germany",
+      "Kiefholzstraße, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 23859440,
+        "name": "Kiefholzstraße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "11.0",
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:both": "lane",
+          "cycleway:both:buffer:right": "0.75",
+          "cycleway:both:lane": "exclusive",
+          "cycleway:both:marking:left": "double_solid_line",
+          "cycleway:both:marking:right": "solid_line",
+          "cycleway:both:separation:right": "kerb",
+          "cycleway:both:traffic_sign": "DE:237",
+          "cycleway:both:width": "1.5"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4765623,
+            "lon": 13.4714891
+          },
+          {
+            "lat": 52.4762949,
+            "lon": 13.4718618
+          },
+          {
+            "lat": 52.4757808,
+            "lon": 13.4726044
+          },
+          {
+            "lat": 52.4756592,
+            "lon": 13.4727801
+          },
+          {
+            "lat": 52.4756113,
+            "lon": 13.4728494
+          },
+          {
+            "lat": 52.4755274,
+            "lon": 13.4729681
+          },
+          {
+            "lat": 52.4751352,
+            "lon": 13.4735275
+          }
+        ]
+      },
+      {
+        "osm_id": 41892672,
+        "name": "Dammweg",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "yes",
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:both": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.474686,
+            "lon": 13.4732077
+          },
+          {
+            "lat": 52.4745475,
+            "lon": 13.4729416
+          },
+          {
+            "lat": 52.4741362,
+            "lon": 13.472151
+          },
+          {
+            "lat": 52.4741112,
+            "lon": 13.4721034
+          },
+          {
+            "lat": 52.4740148,
+            "lon": 13.4719196
+          },
+          {
+            "lat": 52.4738214,
+            "lon": 13.4715527
+          },
+          {
+            "lat": 52.4737965,
+            "lon": 13.4715037
+          },
+          {
+            "lat": 52.4735467,
+            "lon": 13.4710277
+          },
+          {
+            "lat": 52.4732988,
+            "lon": 13.4705553
+          }
+        ]
+      },
+      {
+        "osm_id": 837376161,
+        "name": "Kiefholzstraße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4746175,
+            "lon": 13.4742659
+          },
+          {
+            "lat": 52.4744263,
+            "lon": 13.4745364
+          },
+          {
+            "lat": 52.4737878,
+            "lon": 13.4754481
+          }
+        ]
+      },
+      {
+        "osm_id": 837376162,
+        "name": "Kiefholzstraße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4749769,
+            "lon": 13.4737533
+          },
+          {
+            "lat": 52.4749435,
+            "lon": 13.4738009
+          },
+          {
+            "lat": 52.4749,
+            "lon": 13.473863
+          },
+          {
+            "lat": 52.4748549,
+            "lon": 13.4739273
+          },
+          {
+            "lat": 52.4746175,
+            "lon": 13.4742659
+          }
+        ]
+      },
+      {
+        "osm_id": 1121917418,
+        "name": "Dammweg",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "yes",
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:both": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4749769,
+            "lon": 13.4737533
+          },
+          {
+            "lat": 52.474947,
+            "lon": 13.4736972
+          },
+          {
+            "lat": 52.4749126,
+            "lon": 13.4736327
+          },
+          {
+            "lat": 52.4748762,
+            "lon": 13.4735644
+          },
+          {
+            "lat": 52.4747199,
+            "lon": 13.4732712
+          },
+          {
+            "lat": 52.474686,
+            "lon": 13.4732077
+          }
+        ]
+      },
+      {
+        "osm_id": 1234160296,
+        "name": "Dammweg",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "yes",
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:both": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.47574,
+            "lon": 13.4752073
+          },
+          {
+            "lat": 52.4756531,
+            "lon": 13.4750416
+          },
+          {
+            "lat": 52.4756432,
+            "lon": 13.4750225
+          },
+          {
+            "lat": 52.4756064,
+            "lon": 13.4749519
+          }
+        ]
+      },
+      {
+        "osm_id": 1234732703,
+        "name": "Dammweg",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:both": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4750635,
+            "lon": 13.4739181
+          },
+          {
+            "lat": 52.4750544,
+            "lon": 13.4739008
+          },
+          {
+            "lat": 52.4749769,
+            "lon": 13.4737533
+          }
+        ]
+      },
+      {
+        "osm_id": 1286262061,
+        "name": "Dammweg",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "yes",
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:both": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4756064,
+            "lon": 13.4749519
+          },
+          {
+            "lat": 52.4754039,
+            "lon": 13.4745664
+          },
+          {
+            "lat": 52.4751485,
+            "lon": 13.47408
+          },
+          {
+            "lat": 52.4750812,
+            "lon": 13.4739518
+          },
+          {
+            "lat": 52.4750635,
+            "lon": 13.4739181
+          }
+        ]
+      },
+      {
+        "osm_id": 1307925199,
+        "name": "Kiefholzstraße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "12",
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:both:buffer:right": "0.75",
+          "cycleway:both:marking:left": "double_solid_line",
+          "cycleway:both:marking:right": "solid_line",
+          "cycleway:both:separation:right": "kerb",
+          "cycleway:both:traffic_sign": "DE:237",
+          "cycleway:both:width": "1.5",
+          "cycleway:left": "lane",
+          "cycleway:left:lane": "exclusive",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4751352,
+            "lon": 13.4735275
+          },
+          {
+            "lat": 52.47508,
+            "lon": 13.4736062
+          },
+          {
+            "lat": 52.4750533,
+            "lon": 13.4736442
+          },
+          {
+            "lat": 52.4750078,
+            "lon": 13.4737092
+          },
+          {
+            "lat": 52.4749769,
+            "lon": 13.4737533
+          }
+        ]
+      },
+      {
+        "osm_id": 1451952306,
+        "name": "Dammweg",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "yes",
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:both": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4758323,
+            "lon": 13.4753853
+          },
+          {
+            "lat": 52.47574,
+            "lon": 13.4752073
+          }
+        ]
+      }
+    ],
+    "notes": [],
+    "geocoded": {
+      "display_name": "Kiefholzstraße, Plänterwald, Treptow-Köpenick, Berlin, 12435, Deutschland",
+      "lat": 52.4749769,
+      "lon": 13.4737533,
+      "osm_type": "way",
+      "osm_id": 384136088,
+      "nominatim_lat": 52.4849626,
+      "nominatim_lon": 13.4596073,
+      "refined_by": "shared_node_lookup",
+      "refined_streets": [
+        "Kiefholzstraße",
+        "Dammweg"
+      ],
+      "refined_way_id": 1121917418
+    },
+    "bike_facility": {
+      "type": "bike_lane",
+      "position": "both",
+      "source": "osm_tag",
+      "osm_evidence": {
+        "bike_facility_type": "bike_lane",
+        "position": "both",
+        "tags": {
+          "cycleway:both": "lane"
+        }
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "both",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

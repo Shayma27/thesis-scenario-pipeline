@@ -1,0 +1,862 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "turning_06",
+    "raw_text": "Eine Radfahrerin befuhr die Schönhauser Straße in Richtung Torstraße. Als sie auf die Kreuzung der Torstraße in Richtung Alte Schönhauser fuhr, erfasste sie ein Lkw-Fahrer, der zunächst in gleicher Richtung fahrend dort nach rechts in die Torstraße abbog."
+  },
+  "classification": {
+    "scenario_type": "turning",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Torstraße",
+    "secondary_road": "Schönhauser Straße",
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Torstraße / Schönhauser Straße, Berlin, Germany",
+    "osm_roads": [
+      "Torstraße",
+      "Schönhauser Straße"
+    ],
+    "direction_references": [],
+    "location_type": "intersection"
+  },
+  "road_context": {
+    "bike_facility_type": "bike_lane",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": "toward Alte Schönhauser",
+      "road_position": null
+    },
+    {
+      "id": "truck_1",
+      "class": "motor_vehicle",
+      "type": "truck",
+      "maneuver": "turn_right",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_straight",
+    "collision_happened": true,
+    "collision_description": "A cyclist going straight was struck by a truck turning right."
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "intersection_lat": 52.5287067,
+      "intersection_lon": 13.4094033,
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "bike_lane",
+      "primary_bike_facility_position": "both",
+      "bike_lane_width_m": 2.0,
+      "primary_heading_rad": 2.8453777133969274,
+      "secondary_heading_rad": -2.0549772760503457,
+      "secondary_road_lanes": 2
+    },
+    "openscenario": {
+      "cyclist_lateral_position": "both"
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "bike_lane",
+      "source": "osm_tag",
+      "reason": "OSM cycleway tags indicate bike_lane."
+    },
+    {
+      "parameter": "primary_heading_rad",
+      "value_used": 2.845378,
+      "source": "manual_override",
+      "reason": "Report's 'Schönhauser Straße' wrongly geocodes to an unrelated Pankow street; verified manually as Alte Schönhauser Straße at Torstraße, Mitte (52.528644, 13.409324) — see this session."
+    },
+    {
+      "parameter": "secondary_heading_rad",
+      "value_used": -2.054977,
+      "source": "manual_override",
+      "reason": "Report's 'Torstraße' search was anchored at the same wrong Pankow geocode as the primary road; re-anchored at the same manually verified coordinate (52.528644, 13.409324) — see this session."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "both",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    }
+  ],
+  "osm_context": {
+    "query": "Torstraße, Berlin, Germany",
+    "queries_tried": [
+      "Torstraße / Schönhauser Straße, Berlin, Germany",
+      "Torstraße Schönhauser Straße, Berlin, Germany",
+      "Torstraße, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 44427219,
+        "name": "Alte Schönhauser Straße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:both": "lane",
+          "cycleway:both:buffer:both": "no",
+          "cycleway:both:lane": "advisory",
+          "cycleway:both:lane:advisory": "crossing",
+          "cycleway:both:marking:both": "dashed_line",
+          "cycleway:both:surface": "asphalt",
+          "cycleway:both:surface:colour": "none",
+          "cycleway:both:traffic_sign": "none",
+          "cycleway:left:oneway": "-1",
+          "cycleway:left:width": "1.2",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:width": "2.8"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5287067,
+            "lon": 13.4094033
+          },
+          {
+            "lat": 52.5286234,
+            "lon": 13.4093293
+          },
+          {
+            "lat": 52.5286001,
+            "lon": 13.4093105
+          },
+          {
+            "lat": 52.5285866,
+            "lon": 13.4093002
+          }
+        ]
+      },
+      {
+        "osm_id": 102983787,
+        "name": "Torstraße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|through",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5287526,
+            "lon": 13.4100022
+          },
+          {
+            "lat": 52.5288044,
+            "lon": 13.4097001
+          },
+          {
+            "lat": 52.5288445,
+            "lon": 13.4095107
+          }
+        ]
+      },
+      {
+        "osm_id": 312654702,
+        "name": "Torstraße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|through;right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5289758,
+            "lon": 13.4079752
+          },
+          {
+            "lat": 52.5287611,
+            "lon": 13.4091377
+          },
+          {
+            "lat": 52.5287483,
+            "lon": 13.4092003
+          },
+          {
+            "lat": 52.5287067,
+            "lon": 13.4094033
+          }
+        ]
+      },
+      {
+        "osm_id": 312654704,
+        "name": "Torstraße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "through|through;right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5286433,
+            "lon": 13.4106998
+          },
+          {
+            "lat": 52.528713,
+            "lon": 13.4102559
+          },
+          {
+            "lat": 52.5287244,
+            "lon": 13.4101838
+          },
+          {
+            "lat": 52.5287526,
+            "lon": 13.4100022
+          }
+        ]
+      },
+      {
+        "osm_id": 312654705,
+        "name": "Torstraße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "through|through;right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "exclusive",
+          "cycleway:right:marking:both": "dashed_line",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_sign": "none",
+          "cycleway:right:width": "1.5"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5287067,
+            "lon": 13.4094033
+          },
+          {
+            "lat": 52.5286931,
+            "lon": 13.4094694
+          },
+          {
+            "lat": 52.5286778,
+            "lon": 13.4095445
+          },
+          {
+            "lat": 52.528642,
+            "lon": 13.4097194
+          },
+          {
+            "lat": 52.5286058,
+            "lon": 13.4098965
+          },
+          {
+            "lat": 52.5285905,
+            "lon": 13.4099673
+          }
+        ]
+      },
+      {
+        "osm_id": 312654706,
+        "name": "Torstraße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5285535,
+            "lon": 13.4101382
+          },
+          {
+            "lat": 52.5285148,
+            "lon": 13.4103171
+          },
+          {
+            "lat": 52.5285053,
+            "lon": 13.4103608
+          },
+          {
+            "lat": 52.5284003,
+            "lon": 13.4110037
+          },
+          {
+            "lat": 52.5283699,
+            "lon": 13.4111705
+          },
+          {
+            "lat": 52.5283481,
+            "lon": 13.4112904
+          },
+          {
+            "lat": 52.5283264,
+            "lon": 13.4113888
+          },
+          {
+            "lat": 52.5282487,
+            "lon": 13.411679
+          },
+          {
+            "lat": 52.5282007,
+            "lon": 13.4118516
+          }
+        ]
+      },
+      {
+        "osm_id": 414976603,
+        "name": "Torstraße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "through|through;right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:both": "dashed_line",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_sign": "none",
+          "cycleway:right:width": "1.5"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5285905,
+            "lon": 13.4099673
+          },
+          {
+            "lat": 52.5285535,
+            "lon": 13.4101382
+          }
+        ]
+      },
+      {
+        "osm_id": 850240180,
+        "name": "Alte Schönhauser Straße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "track",
+        "cycleway_tags": {
+          "cycleway:left": "track",
+          "cycleway:left:oneway": "yes",
+          "cycleway:left:segregated": "yes",
+          "cycleway:left:separation:right": "no",
+          "cycleway:left:surface": "paving_stones",
+          "cycleway:left:surface:colour": "red",
+          "cycleway:left:traffic_sign": "DE:237",
+          "cycleway:left:width": "2",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer:both": "no",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:both": "dashed_line",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_sign": "none",
+          "cycleway:right:width": "2.4"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5285866,
+            "lon": 13.4093002
+          },
+          {
+            "lat": 52.5285225,
+            "lon": 13.4092519
+          },
+          {
+            "lat": 52.5283523,
+            "lon": 13.4091235
+          },
+          {
+            "lat": 52.5282835,
+            "lon": 13.4090716
+          }
+        ]
+      },
+      {
+        "osm_id": 1095407474,
+        "name": "Alte Schönhauser Straße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "12",
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5270785,
+            "lon": 13.408095
+          },
+          {
+            "lat": 52.5270882,
+            "lon": 13.4081027
+          },
+          {
+            "lat": 52.527135,
+            "lon": 13.4081398
+          },
+          {
+            "lat": 52.5272185,
+            "lon": 13.4082114
+          },
+          {
+            "lat": 52.5275031,
+            "lon": 13.4084438
+          },
+          {
+            "lat": 52.5278614,
+            "lon": 13.4087306
+          },
+          {
+            "lat": 52.528193,
+            "lon": 13.408998
+          },
+          {
+            "lat": 52.5282412,
+            "lon": 13.4090372
+          },
+          {
+            "lat": 52.5282835,
+            "lon": 13.4090716
+          }
+        ]
+      },
+      {
+        "osm_id": 1101404342,
+        "name": "Torstraße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:both": "dashed_line",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_sign": "none",
+          "cycleway:right:width": "1.5"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5288445,
+            "lon": 13.4095107
+          },
+          {
+            "lat": 52.528894,
+            "lon": 13.4092797
+          },
+          {
+            "lat": 52.5289014,
+            "lon": 13.4092432
+          }
+        ]
+      },
+      {
+        "osm_id": 1105526086,
+        "name": "Torstraße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5283373,
+            "lon": 13.4120173
+          },
+          {
+            "lat": 52.5283991,
+            "lon": 13.4118153
+          },
+          {
+            "lat": 52.5284104,
+            "lon": 13.4117753
+          },
+          {
+            "lat": 52.5284497,
+            "lon": 13.4116359
+          },
+          {
+            "lat": 52.5285069,
+            "lon": 13.4114184
+          },
+          {
+            "lat": 52.5285496,
+            "lon": 13.4112335
+          },
+          {
+            "lat": 52.5286433,
+            "lon": 13.4106998
+          }
+        ]
+      },
+      {
+        "osm_id": 1126747525,
+        "name": "Torstraße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:both": "dashed_line",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_sign": "none",
+          "cycleway:right:width": "1.5"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5289014,
+            "lon": 13.4092432
+          },
+          {
+            "lat": 52.5289463,
+            "lon": 13.4090296
+          }
+        ]
+      },
+      {
+        "osm_id": 1460822166,
+        "name": "Torstraße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.529041,
+            "lon": 13.4075882
+          },
+          {
+            "lat": 52.5289758,
+            "lon": 13.4079752
+          }
+        ]
+      },
+      {
+        "osm_id": 1460822169,
+        "name": "Torstraße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5292188,
+            "lon": 13.4065493
+          },
+          {
+            "lat": 52.5290621,
+            "lon": 13.4074602
+          },
+          {
+            "lat": 52.529041,
+            "lon": 13.4075882
+          }
+        ]
+      },
+      {
+        "osm_id": 1460822180,
+        "name": "Torstraße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5291088,
+            "lon": 13.4082286
+          },
+          {
+            "lat": 52.529134,
+            "lon": 13.4080975
+          },
+          {
+            "lat": 52.5292634,
+            "lon": 13.4073453
+          },
+          {
+            "lat": 52.5292807,
+            "lon": 13.4072443
+          },
+          {
+            "lat": 52.5292941,
+            "lon": 13.4071669
+          },
+          {
+            "lat": 52.5295301,
+            "lon": 13.4058078
+          }
+        ]
+      },
+      {
+        "osm_id": 1460822181,
+        "name": "Torstraße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5289463,
+            "lon": 13.4090296
+          },
+          {
+            "lat": 52.5289989,
+            "lon": 13.4087799
+          },
+          {
+            "lat": 52.5290809,
+            "lon": 13.4083651
+          },
+          {
+            "lat": 52.5291088,
+            "lon": 13.4082286
+          }
+        ]
+      }
+    ],
+    "notes": [],
+    "geocoded": {
+      "display_name": "Torstraße, Rosenthaler Vorstadt, Mitte, Berlin, 10119, Deutschland",
+      "lat": 52.5287067,
+      "lon": 13.4094033,
+      "osm_type": "way",
+      "osm_id": 312651886,
+      "nominatim_lat": 52.5298244,
+      "nominatim_lon": 13.4018795,
+      "refined_by": "shared_node_lookup",
+      "refined_streets": [
+        "Torstraße",
+        "Schönhauser Straße"
+      ],
+      "refined_way_id": 44427219
+    },
+    "bike_facility": {
+      "type": "bike_lane",
+      "position": "both",
+      "source": "osm_tag",
+      "osm_evidence": {
+        "bike_facility_type": "bike_lane",
+        "position": "both",
+        "tags": {
+          "cycleway:both": "lane"
+        }
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "both",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 30.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

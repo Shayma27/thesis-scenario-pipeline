@@ -1,0 +1,995 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "turning_02",
+    "raw_text": "Eine LKW fahrende Person bog nach rechts in die Mollstraße ab, ohne auf eine in gleicher Richtung Rad fahrende Person zu achten. Es kam zum Zusammenstoß."
+  },
+  "classification": {
+    "scenario_type": "turning",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Mollstraße",
+    "secondary_road": null,
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Mollstraße, Berlin, Germany",
+    "osm_roads": [
+      "Mollstraße"
+    ],
+    "direction_references": [],
+    "location_type": null
+  },
+  "road_context": {
+    "bike_facility_type": "bike_lane",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "truck_1",
+      "class": "motor_vehicle",
+      "type": "truck",
+      "maneuver": "turn_right",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across",
+    "collision_happened": true,
+    "collision_description": "A truck turning right struck a cyclist going straight."
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "intersection_lat": 52.5247616,
+      "intersection_lon": 13.4213796,
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "bike_lane",
+      "primary_bike_facility_position": "right",
+      "bike_lane_width_m": 2.0,
+      "primary_heading_rad": -0.45835401515365565
+    },
+    "openscenario": {
+      "cyclist_lateral_position": "right"
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "bike_lane",
+      "source": "osm_tag",
+      "reason": "OSM cycleway tags indicate bike_lane."
+    },
+    {
+      "parameter": "primary_heading_rad",
+      "value_used": -0.458354,
+      "source": "osm_way_geometry",
+      "reason": "Primary road heading derived from OSM way geometry."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "right",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    }
+  ],
+  "osm_context": {
+    "query": "Mollstraße, Berlin, Germany",
+    "queries_tried": [
+      "Mollstraße, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 4615405,
+        "name": "Mollstraße",
+        "highway": "service",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5252335,
+            "lon": 13.4221483
+          },
+          {
+            "lat": 52.5251474,
+            "lon": 13.422423
+          },
+          {
+            "lat": 52.5250581,
+            "lon": 13.4227285
+          }
+        ]
+      },
+      {
+        "osm_id": 288749951,
+        "name": "Mollstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|left|through|through",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:surface": "asphalt"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5251729,
+            "lon": 13.4195773
+          },
+          {
+            "lat": 52.5251028,
+            "lon": 13.4197259
+          },
+          {
+            "lat": 52.5250869,
+            "lon": 13.4197598
+          },
+          {
+            "lat": 52.525064,
+            "lon": 13.4198091
+          },
+          {
+            "lat": 52.5250207,
+            "lon": 13.4199011
+          },
+          {
+            "lat": 52.5249893,
+            "lon": 13.4199696
+          }
+        ]
+      },
+      {
+        "osm_id": 296598505,
+        "name": "Mollstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "none|through;right|right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:surface": "asphalt"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5245773,
+            "lon": 13.4209641
+          },
+          {
+            "lat": 52.5245169,
+            "lon": 13.4211285
+          }
+        ]
+      },
+      {
+        "osm_id": 296599267,
+        "name": "Mollstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "exclusive",
+          "cycleway:right:surface": "asphalt"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5246968,
+            "lon": 13.4206556
+          },
+          {
+            "lat": 52.5246518,
+            "lon": 13.4207594
+          },
+          {
+            "lat": 52.5245773,
+            "lon": 13.4209641
+          }
+        ]
+      },
+      {
+        "osm_id": 296599839,
+        "name": "Mollstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:surface": "asphalt"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5244427,
+            "lon": 13.4213329
+          },
+          {
+            "lat": 52.5242839,
+            "lon": 13.4218069
+          },
+          {
+            "lat": 52.5240513,
+            "lon": 13.4225463
+          }
+        ]
+      },
+      {
+        "osm_id": 296600334,
+        "name": "Mollstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "none|through|right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "exclusive",
+          "cycleway:right:surface": "asphalt"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5245169,
+            "lon": 13.4211285
+          },
+          {
+            "lat": 52.5244427,
+            "lon": 13.4213329
+          }
+        ]
+      },
+      {
+        "osm_id": 297133119,
+        "name": "Mollstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:surface": "asphalt"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5240513,
+            "lon": 13.4225463
+          },
+          {
+            "lat": 52.5238023,
+            "lon": 13.4232995
+          }
+        ]
+      },
+      {
+        "osm_id": 298912688,
+        "name": "Mollstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|left|through|through",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "advisory",
+          "cycleway:surface": "asphalt"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5252162,
+            "lon": 13.4202425
+          },
+          {
+            "lat": 52.525303,
+            "lon": 13.4200319
+          },
+          {
+            "lat": 52.5253182,
+            "lon": 13.4199943
+          },
+          {
+            "lat": 52.52532,
+            "lon": 13.4199898
+          },
+          {
+            "lat": 52.5253367,
+            "lon": 13.4199488
+          },
+          {
+            "lat": 52.5253912,
+            "lon": 13.4198174
+          }
+        ]
+      },
+      {
+        "osm_id": 299395919,
+        "name": "Mollstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:surface": "asphalt"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.524031,
+            "lon": 13.4232557
+          },
+          {
+            "lat": 52.5242647,
+            "lon": 13.4226484
+          }
+        ]
+      },
+      {
+        "osm_id": 299397170,
+        "name": "Mollstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:surface": "asphalt"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5242647,
+            "lon": 13.4226484
+          },
+          {
+            "lat": 52.5245982,
+            "lon": 13.4217881
+          },
+          {
+            "lat": 52.5246797,
+            "lon": 13.4215854
+          }
+        ]
+      },
+      {
+        "osm_id": 299605621,
+        "name": "Mollstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "exclusive",
+          "cycleway:right:surface": "asphalt"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5248435,
+            "lon": 13.4211738
+          },
+          {
+            "lat": 52.5249085,
+            "lon": 13.4210093
+          }
+        ]
+      },
+      {
+        "osm_id": 299605821,
+        "name": "Mollstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "5",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|left|through|through|right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "exclusive",
+          "cycleway:right:surface": "asphalt"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5249085,
+            "lon": 13.4210093
+          },
+          {
+            "lat": 52.5249686,
+            "lon": 13.4208594
+          }
+        ]
+      },
+      {
+        "osm_id": 300062060,
+        "name": "Mollstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:surface": "asphalt"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5246797,
+            "lon": 13.4215854
+          },
+          {
+            "lat": 52.5248435,
+            "lon": 13.4211738
+          }
+        ]
+      },
+      {
+        "osm_id": 330460453,
+        "name": "Mollstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "5",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|left|through|through|right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "exclusive",
+          "cycleway:right:surface": "asphalt"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5249686,
+            "lon": 13.4208594
+          },
+          {
+            "lat": 52.5251392,
+            "lon": 13.420436
+          },
+          {
+            "lat": 52.5251599,
+            "lon": 13.4203824
+          },
+          {
+            "lat": 52.5252162,
+            "lon": 13.4202425
+          }
+        ]
+      },
+      {
+        "osm_id": 388701972,
+        "name": "Mollstraße/Otto-Braun-Straße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5259331,
+            "lon": 13.4212242
+          },
+          {
+            "lat": 52.5258404,
+            "lon": 13.4211133
+          }
+        ]
+      },
+      {
+        "osm_id": 890801131,
+        "name": "Mollstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:buffer": "no",
+          "cycleway:right:separation:left": "solid_line",
+          "cycleway:right:separation:right": "kerb",
+          "cycleway:right:traffic_sign": "DE:237"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5253912,
+            "lon": 13.4198174
+          },
+          {
+            "lat": 52.5254535,
+            "lon": 13.4196659
+          },
+          {
+            "lat": 52.5254679,
+            "lon": 13.4196306
+          }
+        ]
+      },
+      {
+        "osm_id": 906570455,
+        "name": "Mollstraße",
+        "highway": "service",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "4",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5242839,
+            "lon": 13.4218069
+          },
+          {
+            "lat": 52.5241787,
+            "lon": 13.4217259
+          },
+          {
+            "lat": 52.5236034,
+            "lon": 13.4212826
+          },
+          {
+            "lat": 52.5235142,
+            "lon": 13.421274
+          }
+        ]
+      },
+      {
+        "osm_id": 1055411232,
+        "name": "Mollstraße",
+        "highway": "service",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.525021,
+            "lon": 13.4228596
+          },
+          {
+            "lat": 52.5249163,
+            "lon": 13.4227783
+          },
+          {
+            "lat": 52.5248875,
+            "lon": 13.4227838
+          },
+          {
+            "lat": 52.5248817,
+            "lon": 13.4227948
+          },
+          {
+            "lat": 52.5248622,
+            "lon": 13.4228316
+          }
+        ]
+      },
+      {
+        "osm_id": 1055411345,
+        "name": "Mollstraße",
+        "highway": "service",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5250581,
+            "lon": 13.4227285
+          },
+          {
+            "lat": 52.525021,
+            "lon": 13.4228596
+          }
+        ]
+      },
+      {
+        "osm_id": 1055411426,
+        "name": "Mollstraße",
+        "highway": "service",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5246979,
+            "lon": 13.4233734
+          },
+          {
+            "lat": 52.5244912,
+            "lon": 13.4240554
+          },
+          {
+            "lat": 52.524461,
+            "lon": 13.4241552
+          },
+          {
+            "lat": 52.5244149,
+            "lon": 13.4243071
+          }
+        ]
+      },
+      {
+        "osm_id": 1055411427,
+        "name": "Mollstraße",
+        "highway": "service",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5248622,
+            "lon": 13.4228316
+          },
+          {
+            "lat": 52.5246979,
+            "lon": 13.4233734
+          }
+        ]
+      },
+      {
+        "osm_id": 1101404055,
+        "name": "Mollstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:surface": "asphalt"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5249893,
+            "lon": 13.4199696
+          },
+          {
+            "lat": 52.5249257,
+            "lon": 13.4201235
+          },
+          {
+            "lat": 52.5249145,
+            "lon": 13.4201517
+          },
+          {
+            "lat": 52.5249017,
+            "lon": 13.4201838
+          },
+          {
+            "lat": 52.5247958,
+            "lon": 13.4204493
+          },
+          {
+            "lat": 52.5246968,
+            "lon": 13.4206556
+          }
+        ]
+      },
+      {
+        "osm_id": 1101404067,
+        "name": "Mollstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "5",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|left|through|through|right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5252484,
+            "lon": 13.4193904
+          },
+          {
+            "lat": 52.5252269,
+            "lon": 13.4194431
+          },
+          {
+            "lat": 52.5251729,
+            "lon": 13.4195773
+          }
+        ]
+      }
+    ],
+    "notes": [],
+    "geocoded": {
+      "display_name": "Mollstraße, Mitte, Berlin, 10249, Deutschland",
+      "lat": 52.5247616,
+      "lon": 13.4213796,
+      "osm_type": "way",
+      "osm_id": 300062060
+    },
+    "bike_facility": {
+      "type": "bike_lane",
+      "position": "right",
+      "source": "osm_tag",
+      "osm_evidence": {
+        "bike_facility_type": "bike_lane",
+        "position": "right",
+        "tags": {
+          "cycleway:right": "lane"
+        }
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "right",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

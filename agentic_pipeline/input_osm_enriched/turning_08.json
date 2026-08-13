@@ -1,0 +1,1350 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "turning_08",
+    "raw_text": "Ein Pkw befuhr die Reinickendorfer Straße und wollte links in die Pankstraße abbiegen. Ein Radfahrer überfuhr eine rote Ampel, wodurch es zum Zusammenstoß kam."
+  },
+  "classification": {
+    "scenario_type": "turning",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Reinickendorfer Straße",
+    "secondary_road": "Pankstraße",
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Reinickendorfer Straße / Pankstraße, Berlin, Germany",
+    "osm_roads": [
+      "Reinickendorfer Straße",
+      "Pankstraße"
+    ],
+    "direction_references": [],
+    "location_type": "intersection"
+  },
+  "road_context": {
+    "bike_facility_type": "separated_cycle_track",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "turn_left",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "cyclist_crosses_vehicle_path_from",
+    "collision_happened": true,
+    "collision_description": "A cyclist and collided with a car turning left."
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "intersection_lat": 52.545262,
+      "intersection_lon": 13.3706465,
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "separated_cycle_track",
+      "primary_bike_facility_position": "left",
+      "bike_lane_width_m": 2.0,
+      "primary_heading_rad": -0.37889793875701755,
+      "secondary_heading_rad": 0.8112798086013453,
+      "secondary_road_lanes": 2
+    },
+    "openscenario": {
+      "cyclist_lateral_position": "left"
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "separated_cycle_track",
+      "source": "osm_tag",
+      "reason": "OSM cycleway tags indicate separated_cycle_track."
+    },
+    {
+      "parameter": "primary_heading_rad",
+      "value_used": -0.378898,
+      "source": "osm_way_geometry",
+      "reason": "Primary road heading derived from OSM way geometry."
+    },
+    {
+      "parameter": "secondary_heading_rad",
+      "value_used": 0.81128,
+      "source": "osm_way_geometry",
+      "reason": "Secondary road heading derived from OSM way geometry."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "left",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    }
+  ],
+  "osm_context": {
+    "query": "Reinickendorfer Straße, Berlin, Germany",
+    "queries_tried": [
+      "Reinickendorfer Straße / Pankstraße, Berlin, Germany",
+      "Reinickendorfer Straße Pankstraße, Berlin, Germany",
+      "Reinickendorfer Straße, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 4543924,
+        "name": "Pankstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5456163,
+            "lon": 13.3708615
+          },
+          {
+            "lat": 52.5456543,
+            "lon": 13.3709149
+          },
+          {
+            "lat": 52.5457471,
+            "lon": 13.3710643
+          }
+        ]
+      },
+      {
+        "osm_id": 4596995,
+        "name": "Reinickendorfer Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:left": "separate",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5446943,
+            "lon": 13.3700805
+          },
+          {
+            "lat": 52.5446439,
+            "lon": 13.3702872
+          }
+        ]
+      },
+      {
+        "osm_id": 8005699,
+        "name": "Reinickendorfer Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5461846,
+            "lon": 13.3694171
+          },
+          {
+            "lat": 52.5461788,
+            "lon": 13.3692906
+          }
+        ]
+      },
+      {
+        "osm_id": 20160206,
+        "name": "Reinickendorfer Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5454268,
+            "lon": 13.3698
+          },
+          {
+            "lat": 52.5454499,
+            "lon": 13.3697294
+          },
+          {
+            "lat": 52.5455254,
+            "lon": 13.3696
+          },
+          {
+            "lat": 52.5455752,
+            "lon": 13.369552
+          },
+          {
+            "lat": 52.5456287,
+            "lon": 13.3695043
+          },
+          {
+            "lat": 52.5456969,
+            "lon": 13.3694665
+          },
+          {
+            "lat": 52.5460143,
+            "lon": 13.3694347
+          }
+        ]
+      },
+      {
+        "osm_id": 23635725,
+        "name": "Reinickendorfer Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "1",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5451952,
+            "lon": 13.3704023
+          },
+          {
+            "lat": 52.5451599,
+            "lon": 13.3705879
+          }
+        ]
+      },
+      {
+        "osm_id": 24700556,
+        "name": "Pankstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5460493,
+            "lon": 13.3712506
+          },
+          {
+            "lat": 52.5457866,
+            "lon": 13.3708175
+          },
+          {
+            "lat": 52.5457381,
+            "lon": 13.3707413
+          },
+          {
+            "lat": 52.5456878,
+            "lon": 13.3706778
+          },
+          {
+            "lat": 52.5456103,
+            "lon": 13.3706113
+          },
+          {
+            "lat": 52.5455692,
+            "lon": 13.3705873
+          },
+          {
+            "lat": 52.5455611,
+            "lon": 13.3705826
+          }
+        ]
+      },
+      {
+        "osm_id": 25712771,
+        "name": "Reinickendorfer Straße",
+        "highway": "pedestrian",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "no",
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5453159,
+            "lon": 13.3692396
+          },
+          {
+            "lat": 52.5451727,
+            "lon": 13.3692547
+          },
+          {
+            "lat": 52.5449679,
+            "lon": 13.3692721
+          },
+          {
+            "lat": 52.5449203,
+            "lon": 13.3692761
+          },
+          {
+            "lat": 52.5448767,
+            "lon": 13.3693904
+          }
+        ]
+      },
+      {
+        "osm_id": 25781481,
+        "name": "Reinickendorfer Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5452987,
+            "lon": 13.3704572
+          },
+          {
+            "lat": 52.5451952,
+            "lon": 13.3704023
+          }
+        ]
+      },
+      {
+        "osm_id": 42732303,
+        "name": "Reinickendorfer Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5451952,
+            "lon": 13.3704023
+          },
+          {
+            "lat": 52.5451318,
+            "lon": 13.3703641
+          },
+          {
+            "lat": 52.5448545,
+            "lon": 13.3701971
+          },
+          {
+            "lat": 52.5448174,
+            "lon": 13.3701701
+          },
+          {
+            "lat": 52.5447642,
+            "lon": 13.3701314
+          },
+          {
+            "lat": 52.5446943,
+            "lon": 13.3700805
+          }
+        ]
+      },
+      {
+        "osm_id": 42732309,
+        "name": "Reinickendorfer Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|left|through|none",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5446439,
+            "lon": 13.3702872
+          },
+          {
+            "lat": 52.5447114,
+            "lon": 13.3703312
+          },
+          {
+            "lat": 52.5447667,
+            "lon": 13.3703673
+          },
+          {
+            "lat": 52.5450264,
+            "lon": 13.3705124
+          },
+          {
+            "lat": 52.5450786,
+            "lon": 13.3705415
+          },
+          {
+            "lat": 52.5450934,
+            "lon": 13.37055
+          },
+          {
+            "lat": 52.5451599,
+            "lon": 13.3705879
+          },
+          {
+            "lat": 52.545262,
+            "lon": 13.3706465
+          }
+        ]
+      },
+      {
+        "osm_id": 48343154,
+        "name": "Reinickendorfer Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5461788,
+            "lon": 13.3692906
+          },
+          {
+            "lat": 52.5460537,
+            "lon": 13.3693032
+          },
+          {
+            "lat": 52.5457258,
+            "lon": 13.3693337
+          },
+          {
+            "lat": 52.5456302,
+            "lon": 13.3693635
+          },
+          {
+            "lat": 52.5455906,
+            "lon": 13.369384
+          }
+        ]
+      },
+      {
+        "osm_id": 377644574,
+        "name": "Reinickendorfer Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.545262,
+            "lon": 13.3706465
+          },
+          {
+            "lat": 52.5452987,
+            "lon": 13.3704572
+          }
+        ]
+      },
+      {
+        "osm_id": 377644577,
+        "name": "Reinickendorfer Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5438996,
+            "lon": 13.3698889
+          },
+          {
+            "lat": 52.5439288,
+            "lon": 13.3699018
+          },
+          {
+            "lat": 52.544232,
+            "lon": 13.3700338
+          }
+        ]
+      },
+      {
+        "osm_id": 377644580,
+        "name": "Reinickendorfer Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.544232,
+            "lon": 13.3700338
+          },
+          {
+            "lat": 52.5443787,
+            "lon": 13.3701203
+          },
+          {
+            "lat": 52.5444544,
+            "lon": 13.3701637
+          },
+          {
+            "lat": 52.544505,
+            "lon": 13.3701967
+          },
+          {
+            "lat": 52.5445757,
+            "lon": 13.3702428
+          },
+          {
+            "lat": 52.5446439,
+            "lon": 13.3702872
+          }
+        ]
+      },
+      {
+        "osm_id": 377644585,
+        "name": "Reinickendorfer Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|right|right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.545378,
+            "lon": 13.369625
+          },
+          {
+            "lat": 52.5453737,
+            "lon": 13.3696327
+          },
+          {
+            "lat": 52.5453167,
+            "lon": 13.369786
+          },
+          {
+            "lat": 52.5452393,
+            "lon": 13.3701776
+          },
+          {
+            "lat": 52.5452269,
+            "lon": 13.3702399
+          },
+          {
+            "lat": 52.5452194,
+            "lon": 13.3702784
+          },
+          {
+            "lat": 52.5451952,
+            "lon": 13.3704023
+          }
+        ]
+      },
+      {
+        "osm_id": 381497911,
+        "name": "Pankstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5455131,
+            "lon": 13.3705595
+          },
+          {
+            "lat": 52.5454748,
+            "lon": 13.3707583
+          }
+        ]
+      },
+      {
+        "osm_id": 381497912,
+        "name": "Pankstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.546177,
+            "lon": 13.3714611
+          },
+          {
+            "lat": 52.5460891,
+            "lon": 13.3716084
+          }
+        ]
+      },
+      {
+        "osm_id": 428997692,
+        "name": "Pankstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.545262,
+            "lon": 13.3706465
+          },
+          {
+            "lat": 52.5453372,
+            "lon": 13.3706859
+          },
+          {
+            "lat": 52.5453808,
+            "lon": 13.3707088
+          },
+          {
+            "lat": 52.5454047,
+            "lon": 13.3707213
+          },
+          {
+            "lat": 52.5454748,
+            "lon": 13.3707583
+          }
+        ]
+      },
+      {
+        "osm_id": 428997693,
+        "name": "Pankstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5455131,
+            "lon": 13.3705595
+          },
+          {
+            "lat": 52.5454731,
+            "lon": 13.3705393
+          },
+          {
+            "lat": 52.5454405,
+            "lon": 13.3705246
+          },
+          {
+            "lat": 52.5454156,
+            "lon": 13.3705128
+          },
+          {
+            "lat": 52.5452987,
+            "lon": 13.3704572
+          }
+        ]
+      },
+      {
+        "osm_id": 1102621825,
+        "name": "Pankstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5466029,
+            "lon": 13.3721521
+          },
+          {
+            "lat": 52.5462639,
+            "lon": 13.3716022
+          },
+          {
+            "lat": 52.546177,
+            "lon": 13.3714611
+          },
+          {
+            "lat": 52.5461581,
+            "lon": 13.3714319
+          },
+          {
+            "lat": 52.546122,
+            "lon": 13.3713705
+          },
+          {
+            "lat": 52.5461006,
+            "lon": 13.3713352
+          },
+          {
+            "lat": 52.5460493,
+            "lon": 13.3712506
+          }
+        ]
+      },
+      {
+        "osm_id": 1102622173,
+        "name": "Pankstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5458064,
+            "lon": 13.3711621
+          },
+          {
+            "lat": 52.5458533,
+            "lon": 13.3712331
+          },
+          {
+            "lat": 52.5460117,
+            "lon": 13.371485
+          },
+          {
+            "lat": 52.5460718,
+            "lon": 13.3715808
+          },
+          {
+            "lat": 52.5460891,
+            "lon": 13.3716084
+          },
+          {
+            "lat": 52.546175,
+            "lon": 13.3717465
+          },
+          {
+            "lat": 52.5463289,
+            "lon": 13.3719941
+          }
+        ]
+      },
+      {
+        "osm_id": 1189946621,
+        "name": "Pankstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5455611,
+            "lon": 13.3705826
+          },
+          {
+            "lat": 52.5455131,
+            "lon": 13.3705595
+          }
+        ]
+      },
+      {
+        "osm_id": 1191566236,
+        "name": "Pankstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5454748,
+            "lon": 13.3707583
+          },
+          {
+            "lat": 52.5455509,
+            "lon": 13.3707974
+          },
+          {
+            "lat": 52.5456163,
+            "lon": 13.3708615
+          }
+        ]
+      },
+      {
+        "osm_id": 1198117976,
+        "name": "Reinickendorfer Straße",
+        "highway": "primary",
+        "maxspeed": "30",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5446943,
+            "lon": 13.3700805
+          },
+          {
+            "lat": 52.5446235,
+            "lon": 13.370029
+          },
+          {
+            "lat": 52.5445614,
+            "lon": 13.3699838
+          },
+          {
+            "lat": 52.5445351,
+            "lon": 13.3699635
+          }
+        ]
+      },
+      {
+        "osm_id": 1199289619,
+        "name": "Reinickendorfer Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "1",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5463179,
+            "lon": 13.3692741
+          },
+          {
+            "lat": 52.5461788,
+            "lon": 13.3692906
+          }
+        ]
+      },
+      {
+        "osm_id": 1300623029,
+        "name": "Reinickendorfer Straße",
+        "highway": "service",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "no",
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5454508,
+            "lon": 13.369507
+          },
+          {
+            "lat": 52.545415,
+            "lon": 13.3694356
+          },
+          {
+            "lat": 52.5454065,
+            "lon": 13.3694191
+          },
+          {
+            "lat": 52.5453548,
+            "lon": 13.3693193
+          },
+          {
+            "lat": 52.5453344,
+            "lon": 13.3692789
+          },
+          {
+            "lat": 52.5453159,
+            "lon": 13.3692396
+          }
+        ]
+      },
+      {
+        "osm_id": 1308611917,
+        "name": "Reinickendorfer Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5462602,
+            "lon": 13.3694115
+          },
+          {
+            "lat": 52.5465329,
+            "lon": 13.3693828
+          },
+          {
+            "lat": 52.5467021,
+            "lon": 13.3693665
+          }
+        ]
+      },
+      {
+        "osm_id": 1396650506,
+        "name": "Reinickendorfer Straße",
+        "highway": "primary",
+        "maxspeed": "30",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "share_busway",
+          "cycleway:right:oneway": "yes"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5445351,
+            "lon": 13.3699635
+          },
+          {
+            "lat": 52.5442281,
+            "lon": 13.3697267
+          },
+          {
+            "lat": 52.5441437,
+            "lon": 13.3696769
+          },
+          {
+            "lat": 52.544063,
+            "lon": 13.3696392
+          },
+          {
+            "lat": 52.5440205,
+            "lon": 13.3696277
+          }
+        ]
+      },
+      {
+        "osm_id": 1396836393,
+        "name": "Pankstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5457471,
+            "lon": 13.3710643
+          },
+          {
+            "lat": 52.5458064,
+            "lon": 13.3711621
+          }
+        ]
+      },
+      {
+        "osm_id": 1412209244,
+        "name": "Reinickendorfer Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5461846,
+            "lon": 13.3694171
+          },
+          {
+            "lat": 52.5462602,
+            "lon": 13.3694115
+          }
+        ]
+      }
+    ],
+    "notes": [],
+    "geocoded": {
+      "display_name": "Reinickendorfer Straße, Müllerstraße, Antonkiez, Wedding, Mitte, Berlin, 13347, Deutschland",
+      "lat": 52.545262,
+      "lon": 13.3706465,
+      "osm_type": "node",
+      "osm_id": 5198810677,
+      "nominatim_lat": 52.5400429,
+      "nominatim_lon": 13.3702888,
+      "refined_by": "shared_node_lookup",
+      "refined_streets": [
+        "Reinickendorfer Straße",
+        "Pankstraße"
+      ],
+      "refined_way_id": 428997692
+    },
+    "bike_facility": {
+      "type": "separated_cycle_track",
+      "position": "left",
+      "source": "osm_tag",
+      "osm_evidence": {
+        "bike_facility_type": "separated_cycle_track",
+        "position": "left",
+        "tags": {
+          "cycleway:left": "separate"
+        }
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "left",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

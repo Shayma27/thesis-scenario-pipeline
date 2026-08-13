@@ -391,6 +391,18 @@ def _tool_query_osm(state: AgentState, osm_query: str) -> dict:
     check_agent1_preserved(state.agent1_snapshot, enriched)
     state.data = enriched
 
+    # Snapshot the state right after OSM enrichment, before parameter
+    # completion (Agent 3) touches it — distinct from both .agent1.json
+    # (before any enrichment) and .enriched.json (written later, after
+    # Agent 3 has also run). Gives a clean, inspectable middle checkpoint:
+    # exactly what OSM alone contributed, with no actor data yet (that's
+    # entirely Agent 3's job, not present at this point).
+    sid = state.data["source"]["source_id"]
+    osm_enriched_path = state.output_dir / f"{sid}.osm_enriched.json"
+    osm_enriched_path.write_text(
+        json.dumps(state.data, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+
     ctx = enriched.get("osm_context", {})
     status = ctx.get("enrichment_status", "unknown")
     notes = ctx.get("notes", [])
