@@ -4,7 +4,14 @@ from pathlib import Path
 
 from scenariogeneration import xosc
 
-from defaults import DEFAULT_CYCLIST_LATERAL_POSITION, DEFAULT_SIMULATION_DURATION_S
+# Shared staging/policy defaults — decisions the pipeline makes when
+# nothing else determines a value, not measurements. Kept here (not a
+# separate defaults.py) since this module already needs both and is the
+# one every other stage already imports shared template/geometry pieces
+# from (_TEMPLATE_DIR, _resolve_road_id, ...) — one place to look, not a
+# thin module that exists only to be imported.
+DEFAULT_SIMULATION_DURATION_S = 10.0  # scenario length in seconds; a staging choice, not a derived quantity
+DEFAULT_CYCLIST_LATERAL_POSITION = "rightmost"  # policy fallback when neither the report nor OSM specify a side
 
 _TEMPLATE_DIR = Path(__file__).resolve().parent / "templates"
 _JUNCTION_XODR_NAME = "intersection_4way.xodr"
@@ -418,6 +425,32 @@ def _evaluate_geometry_segment(seg, local_s):
 def _road_total_length(segments):
     last = segments[-1]
     return last["s0"] + last["length"]
+
+
+def _real_lane_width_m(xodr_filename, road_id, lane_id):
+    """The real, constant width of a specific lane on the actually-
+    selected template, read directly from its <width> element's "a"
+    coefficient. Both templates use a single, non-tapering <width>
+    segment per lane (b=c=d=0), so this is exact, not an approximation —
+    see complete_parameters.py's _real_lane_widths_m, which uses this to
+    replace flat width constants that didn't match either template
+    (verified directly: straight_road.xodr's driving lane is 3.07 m, not
+    the old 3.5 m default; both templates' biking lane is 1.25 m, not the
+    old 2.0 m default).
+    """
+    tree = ET.parse(_TEMPLATE_DIR / xodr_filename)
+    road_el = next(r for r in tree.getroot().findall("road") if r.get("id") == str(road_id))
+    for side in ("left", "right"):
+        side_el = road_el.find(f"lanes/laneSection/{side}")
+        if side_el is None:
+            continue
+        for lane in side_el.findall("lane"):
+            if int(lane.get("id")) == lane_id:
+                width_el = lane.find("width")
+                if width_el is None:
+                    raise ValueError(f"lane {lane_id} on road {road_id} of {xodr_filename} has no width element")
+                return float(width_el.get("a"))
+    raise ValueError(f"lane {lane_id} not found on road {road_id} of {xodr_filename}")
 
 
 def _road_point(segments, s):

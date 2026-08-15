@@ -10,14 +10,17 @@ from __future__ import annotations
 
 import copy
 
-from defaults import (
-    DEFAULT_BIKE_LANE_WIDTH_M,
+from generate_scenario import (
+    _TEMPLATE_DIR,
     DEFAULT_CYCLIST_LATERAL_POSITION,
-    DEFAULT_MOTOR_LANE_WIDTH_M,
-    DEFAULT_ROAD_LENGTH_M,
     DEFAULT_SIMULATION_DURATION_S,
-    DEFAULT_SPEEDS_MPS,
+    _clamp_initial_s_to_real_road,
+    _parse_xodr_road_geometry,
+    _real_lane_width_m,
+    _resolve_road_id,
+    _road_total_length,
 )
+from speed_estimation import estimate_actor_speed
 
 # "crossing" is the only category using the two-road crossing layout: the
 # motor vehicle goes straight on one road while the cyclist crosses it on
@@ -25,11 +28,62 @@ from defaults import (
 # approaches. "turning", "longitudinal", and "other" are all single-road
 # scenarios by comparison.
 
-# Traffic-engineering assumption, not an OSM measurement: an approaching
-# vehicle is modeled at this fraction of the posted speed limit. See
-# _apply_osm_derived_crossing_speed for why this is tracked separately from
-# the OSM-observed maxspeed it's applied to.
-APPROACH_SPEED_FACTOR = 0.65
+# Used only when the real template isn't known yet (data["template_used"]
+# absent) — rare now that topology/template resolution happens before
+# Agent 3 runs (pipeline.py's _tool_query_osm). Single-file use, so kept
+# local rather than in a shared defaults module. The lane-width fallbacks
+# are approximations by necessity (the two templates' real driving-lane
+# widths differ, 3.07 m vs 3.5 m — see _real_lane_widths_m below, which is
+# used whenever the template IS known, i.e. almost always in practice).
+_ROAD_LENGTH_FALLBACK_M = 100.0
+_MOTOR_LANE_WIDTH_FALLBACK_M = 3.5
+_BIKE_LANE_WIDTH_FALLBACK_M = 1.25  # identical real width in both templates
+
+
+def _real_primary_road_length_m(xodr_filename: str | None) -> float | None:
+    """The actually-selected template's real primary-road length, parsed
+    directly from the .xodr file — or None when the template isn't known
+    yet (data["template_used"] absent), so callers fall back to
+    _ROAD_LENGTH_FALLBACK_M exactly as before.
+
+    data["template_used"] is now resolved in pipeline.py's _tool_query_osm,
+    right after OSM enrichment — before complete_parameters() runs — instead
+    of later in _tool_generate_scenario (see docs/modeling_assumptions.md's
+    "Out of scope" history for why that used to be too late for Agent 3 to
+    use). This lets road_length_m (and, below, initial_road_id/initial_s_m)
+    reflect the real template from the start rather than a placeholder that
+    generate_scenario.py silently had to correct afterward.
+    """
+    if not xodr_filename:
+        return None
+    try:
+        road_id = _resolve_road_id(xodr_filename, is_secondary_approach=False)
+        segments = _parse_xodr_road_geometry(_TEMPLATE_DIR / xodr_filename, road_id)
+        return _road_total_length(segments)
+    except (OSError, ValueError):
+        return None
+
+
+def _real_lane_widths_m(xodr_filename: str | None) -> tuple[float | None, float | None]:
+    """(motor_lane_width_m, bike_lane_width_m) read directly from the
+    actually-selected template's real lanes (-1 driving, -2 biking — the
+    template's one real lane of each type, per Assumption 1/2 in
+    docs/modeling_assumptions.md) — or (None, None) when the template
+    isn't known yet. Replaces flat constants that didn't match either
+    template: the old 3.5 m motor-lane default matched only
+    intersection_4way.xodr (straight_road.xodr's real driving lane is
+    3.07 m), and the old 2.0 m bike-lane default matched neither template
+    (both are actually 1.25 m).
+    """
+    if not xodr_filename:
+        return None, None
+    try:
+        road_id = _resolve_road_id(xodr_filename, is_secondary_approach=False)
+        motor_width_m = _real_lane_width_m(xodr_filename, road_id, -1)
+        bike_width_m = _real_lane_width_m(xodr_filename, road_id, -2)
+        return motor_width_m, bike_width_m
+    except (OSError, ValueError):
+        return None, None
 
 
 def complete_parameters(data: dict) -> dict:
@@ -39,6 +93,7 @@ def complete_parameters(data: dict) -> dict:
     """
     data = copy.deepcopy(data)
     stype = data.get("classification", {}).get("scenario_type", "other")
+    xodr_filename = data.get("template_used")
 
     params = data.setdefault("generated_simulation_parameters", {})
     odr = params.setdefault("opendrive", {})
@@ -46,9 +101,11 @@ def complete_parameters(data: dict) -> dict:
     actors = osc.setdefault("actors", {})
 
     # ── Road geometry baseline ────────────────────────────────────────────
-    _setd(odr, "road_length_m", DEFAULT_ROAD_LENGTH_M)
-    _setd(odr, "motor_lane_width_m", DEFAULT_MOTOR_LANE_WIDTH_M)
-    _setd(odr, "bike_lane_width_m", DEFAULT_BIKE_LANE_WIDTH_M)
+    real_road_length_m = _real_primary_road_length_m(xodr_filename)
+    _setd(odr, "road_length_m", real_road_length_m if real_road_length_m is not None else _ROAD_LENGTH_FALLBACK_M)
+    real_motor_width_m, real_bike_width_m = _real_lane_widths_m(xodr_filename)
+    _setd(odr, "motor_lane_width_m", real_motor_width_m if real_motor_width_m is not None else _MOTOR_LANE_WIDTH_FALLBACK_M)
+    _setd(odr, "bike_lane_width_m", real_bike_width_m if real_bike_width_m is not None else _BIKE_LANE_WIDTH_FALLBACK_M)
     is_crossing = stype == "crossing"
     _setd(odr, "road_geometry", "crossing" if is_crossing else "line")
     road_len = float(odr["road_length_m"])
@@ -83,10 +140,10 @@ def complete_parameters(data: dict) -> dict:
         actors.setdefault(cid, {})
         a = actors[cid]
         ctype = cyclist_p.get("type", "bicycle")
-        cspeed = _cyclist_speed(ctype)
 
         _setd(a, "vehicle_category", ctype)
-        _setd(a, "initial_road_id", 0)
+        _setd(a, "initial_road_id",
+              _resolve_road_id(xodr_filename, is_secondary_approach=False) if xodr_filename else 0)
         _setd(a, "initial_lane_id", _cyclist_lane(odr, data))
         # See the function's own docstring: this can now genuinely find the
         # actor (the Agent 2/Agent 3 ordering bug fixed here), but its write
@@ -97,11 +154,31 @@ def complete_parameters(data: dict) -> dict:
             osc.get("cyclist_lateral_position", DEFAULT_CYCLIST_LATERAL_POSITION),
             odr,
         )
+        # Speed is settled before position, not after: initial_s_m's
+        # kinematic formula below needs the actor's actual final speed, not
+        # a value that might still change. Never wastes an LLM call on an
+        # already-decided speed — nothing currently sets a cyclist's speed
+        # earlier than this, but the guard keeps the contract explicit.
+        if "initial_speed_mps" not in a:
+            cspeed, speed_entry = estimate_actor_speed(data, cid, ctype, is_parked=False)
+            a["initial_speed_mps"] = cspeed
+            data.setdefault("missing_parameters", []).append(speed_entry)
+        else:
+            cspeed = a["initial_speed_mps"]
         if is_crossing:
             _setd(a, "initial_s_m", round(max(2.0, cs - cspeed * ct), 2))
         else:
             _setd(a, "initial_s_m", round(max(2.0, cs * 0.2), 2))
-        _setd(a, "initial_speed_mps", cspeed)
+        # Clamp to the real selected road's actual length now that it's
+        # known (see _real_primary_road_length_m's docstring) — the same
+        # correction generate_scenario.py already applies unconditionally
+        # right before writing the file, just done here too so the
+        # provenance record below (_note) matches what actually ends up in
+        # the generated .xosc instead of a pre-correction value.
+        if xodr_filename:
+            a["initial_s_m"] = _clamp_initial_s_to_real_road(
+                xodr_filename, a["initial_road_id"], float(a["initial_s_m"])
+            )
         _note(data, cid, a, stype)
 
     # ── Motor vehicle ─────────────────────────────────────────────────────
@@ -110,11 +187,11 @@ def complete_parameters(data: dict) -> dict:
         actors.setdefault(mid, {})
         a = actors[mid]
         mtype = motor_p.get("type", "car")
-        mmaneuver = motor_p.get("maneuver", "go_straight")
-        mspeed = _motor_speed(mtype, mmaneuver)
 
         _setd(a, "vehicle_category", mtype)
-        _setd(a, "initial_road_id", 1 if is_crossing else 0)
+        _setd(a, "initial_road_id",
+              _resolve_road_id(xodr_filename, is_secondary_approach=is_crossing)
+              if xodr_filename else (1 if is_crossing else 0))
         _setd(a, "initial_lane_id", _motor_lane(odr, data, mid, for_secondary_road=is_crossing))
         # Maneuver-aware override for "turning" (no-ops for every other
         # scenario_type, and for a turning report whose text already places
@@ -124,6 +201,29 @@ def complete_parameters(data: dict) -> dict:
         _apply_turning_vehicle_lane_id(
             data, int(odr.get("primary_road_lanes", odr.get("motor_lane_count", 1)))
         )
+        # Speed is settled before position — the initial_s_m formulas below
+        # need the actor's actual final speed, not a value that might still
+        # change afterward (previously mspeed was a flat default computed up
+        # front and used for position math, while a separately-applied
+        # OSM-derived speed could still override initial_speed_mps
+        # afterward, leaving position and speed mutually inconsistent for a
+        # crossing report — fixed here as part of wiring in the new
+        # estimate below, not a separate change).
+        # A crossing scenario's motor-vehicle default (RiLSA's 40 km/h
+        # approach speed, replacing a previously-unverified "65% of the
+        # posted limit" rule) now lives inside estimate_actor_speed()'s own
+        # envelope construction — see speed_estimation._grounded_envelope —
+        # instead of a separate function that pre-empted the LLM check
+        # entirely. That pre-emption was itself a bug: it meant a report's
+        # own "speeding car"-type language could never reach the LLM
+        # reasoning step for a crossing report with an OSM speed limit,
+        # since this used to claim initial_speed_mps first.
+        if "initial_speed_mps" not in a:
+            mspeed, speed_entry = estimate_actor_speed(data, mid, mtype, is_parked)
+            a["initial_speed_mps"] = mspeed
+            data.setdefault("missing_parameters", []).append(speed_entry)
+        else:
+            mspeed = a["initial_speed_mps"]
         if is_crossing:
             _setd(a, "initial_s_m", round(max(2.0, cs - mspeed * ct), 2))
         elif is_parked:
@@ -135,11 +235,12 @@ def complete_parameters(data: dict) -> dict:
             # longitudinal / other (not parked): a normal following distance
             # on a single straight road, no turn or crossing in progress.
             _setd(a, "initial_s_m", round(max(2.0, cs - 25.0), 2))
-        # OSM-measured maxspeed takes priority over the flat per-type/
-        # maneuver default below — must run before the _setd() below, since
-        # _setd() only fills a field that's still absent.
-        _apply_osm_derived_crossing_speed(data, mid, a, is_crossing)
-        _setd(a, "initial_speed_mps", mspeed)
+        # See the matching cyclist-block comment above: clamp now that the
+        # real road is known, so provenance matches the generated file.
+        if xodr_filename:
+            a["initial_s_m"] = _clamp_initial_s_to_real_road(
+                xodr_filename, a["initial_road_id"], float(a["initial_s_m"])
+            )
         _note(data, mid, a, stype)
 
     return data
@@ -511,62 +612,6 @@ def _apply_turning_vehicle_lane_id(data: dict, lane_count) -> None:
     )
 
 
-# Agent 2/Agent 3 ordering fix: this used to live in osm_enrichment.py's
-# _apply_osm_context() and run during Agent 2 (query_osm) — before Agent 3
-# (complete_parameters(), this module) ever creates
-# generated_simulation_parameters.openscenario.actors["car_1"]. It checked
-# "car_1" in actors, which was therefore always False (same bug class as
-# _apply_turning_vehicle_lane_id, commit 79d8000, and _apply_cyclist_lane_id,
-# commit 2c3a444). Unlike the cyclist-lane case, nothing in this module
-# already computes an equivalent (or more complete) value for
-# initial_speed_mps that this would conflict with — _motor_speed() below is
-# a flat per-type/maneuver constant that this OSM-measured value was always
-# meant to take priority over, matching the "values set by earlier agents
-# are never overwritten" contract this whole module already follows. So
-# this can use _setd() directly, the same as the turning-vehicle fix.
-#
-# The original hardcoded "car_1" (not the actual motor participant id) is
-# preserved unchanged: every "crossing" report in the reference corpus uses
-# a car as the motor vehicle, and generalizing this beyond what the
-# original code did would be a behavior change, not just an ordering fix.
-def _apply_osm_derived_crossing_speed(data: dict, mid: str, actor: dict, is_crossing: bool) -> None:
-    if not (is_crossing and mid == "car_1"):
-        return
-    maxspeed_kmh = data.get("osm_context", {}).get("derived", {}).get("maxspeed_kmh")
-    if maxspeed_kmh is None:
-        return
-
-    # These are two different kinds of fact and must not share one label:
-    # maxspeed_kmh is an observed OSM tag; APPROACH_SPEED_FACTOR is a
-    # traffic-engineering modeling assumption applied on top of it. The old
-    # single "osm_derived_assumption" source blurred them into one entry
-    # that read as if the resulting speed were itself measured from OSM.
-    speed_mps = round(float(maxspeed_kmh) * APPROACH_SPEED_FACTOR / 3.6, 2)
-    _setd(actor, "initial_speed_mps", speed_mps)
-    if actor.get("initial_speed_mps") != speed_mps:
-        return  # something else already set it first; don't misattribute it
-
-    _upsert_missing_parameter(
-        data,
-        parameter="car_1.approach_maxspeed_kmh",
-        value_used=maxspeed_kmh,
-        source="osm_tag",
-        reason="Posted speed limit near the geocoded location, from OSM's maxspeed tag.",
-    )
-    _upsert_missing_parameter(
-        data,
-        parameter="car_1.initial_speed_mps",
-        value_used=speed_mps,
-        source="engineering_assumption",
-        reason=(
-            "Not stated in the report and not itself observable from OSM. Modeled as "
-            f"{APPROACH_SPEED_FACTOR:.0%} of the OSM-observed maxspeed ({maxspeed_kmh} km/h) "
-            "as a typical intersection-approach speed — the 65% factor is a "
-            "traffic-engineering assumption, not an OSM-derived value."
-        ),
-    )
-
-
 def _upsert_missing_parameter(data: dict, parameter: str, value_used, source: str, reason: str) -> None:
     """Local copy of osm_enrichment.py's helper of the same name/behavior —
     this module deliberately doesn't import from osm_enrichment.py (see
@@ -589,41 +634,6 @@ def _upsert_missing_parameter(data: dict, parameter: str, value_used, source: st
         "source": source,
         "reason": reason,
     })
-
-
-# ── Speed defaults ────────────────────────────────────────────────────────────
-
-def _cyclist_speed(ctype: str) -> float:
-    if ctype == "e_bike":
-        return DEFAULT_SPEEDS_MPS["e_bike"]["normal"]
-    return DEFAULT_SPEEDS_MPS["cyclist"]["normal"]
-
-
-def _motor_speed(mtype: str, mmaneuver: str) -> float:
-    # A stationary/parked vehicle and a turning vehicle are both identified
-    # from the participant's own maneuver — decoupled from scenario_type,
-    # since e.g. "other" is too broad a category to imply either on its own.
-    maneuver_lower = mmaneuver.lower()
-    if maneuver_lower == "parked":
-        return 0.0
-    is_turn = any(t in maneuver_lower for t in ("turn_right", "turn_left", "turn"))
-    is_overtake = "overtake" in maneuver_lower
-
-    if mtype == "truck":
-        return (DEFAULT_SPEEDS_MPS["truck"]["turning"] if is_turn
-                else DEFAULT_SPEEDS_MPS["truck"]["urban_straight"])
-    if mtype == "bus":
-        # Buses share a truck's large-vehicle turning dynamics; only an
-        # "overtaking" speed is defined for buses (the one bus report in
-        # this corpus is a same-direction overtaking scenario), so that
-        # remains the straight-line/longitudinal default.
-        return DEFAULT_SPEEDS_MPS["truck"]["turning"] if is_turn else DEFAULT_SPEEDS_MPS["bus"]["overtaking"]
-    # car / default
-    if is_turn:
-        return DEFAULT_SPEEDS_MPS["car"]["turning"]
-    if is_overtake:
-        return DEFAULT_SPEEDS_MPS["car"]["overtaking"]
-    return DEFAULT_SPEEDS_MPS["car"]["urban_straight"]
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────

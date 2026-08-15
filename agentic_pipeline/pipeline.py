@@ -403,6 +403,29 @@ def _tool_query_osm(state: AgentState, osm_query: str) -> dict:
         json.dumps(state.data, indent=2, ensure_ascii=False), encoding="utf-8"
     )
 
+    # Topology detection and template selection used to happen later, in
+    # _tool_generate_scenario — after complete_parameters() (Agent 3) had
+    # already run and guessed at road geometry it had no way to get right
+    # (see docs/modeling_assumptions.md's "Out of scope" history: this is
+    # why generate_scenario.py grew _resolve_road_id()/
+    # _clamp_initial_s_to_real_road() to silently patch Agent 3's guesses
+    # afterward). detect_topology() only needs the report text and scenario
+    # id — both already exist at this point, before OSM enrichment even
+    # runs — so there's no reason to defer it. Moving it here lets Agent 3
+    # work with the real selected template's actual geometry from the
+    # start instead of a synthetic placeholder.
+    scenario_type = state.data.get("classification", {}).get("scenario_type", "")
+    report_text = state.data.get("source", {}).get("raw_text", "")
+    topology_result = _detect_topology(report_text, sid, cache_dir=OSM_CACHE_DIR)
+    state.data["topology"] = topology_result
+    state.record("detect_topology", topology_result)
+    print(
+        f"  ✓ Topology: {topology_result['topology']}"
+        f"  (streets={topology_result['streets']}, way_count={topology_result['way_count']})"
+    )
+    template_rel = _select_template(scenario_type, topology_result["topology"])
+    state.data["template_used"] = Path(template_rel).name
+
     ctx = enriched.get("osm_context", {})
     status = ctx.get("enrichment_status", "unknown")
     notes = ctx.get("notes", [])
@@ -504,22 +527,32 @@ def _tool_generate_scenario(state: AgentState, parameter_overrides: str | None =
     xosc_path = state.output_dir / f"{sid}.xosc"
     enriched_path = state.output_dir / f"{sid}.enriched.json"
 
-    scenario_type = state.data.get("classification", {}).get("scenario_type", "")
-    report_text = state.data.get("source", {}).get("raw_text", "")
-    topology_result = _detect_topology(report_text, sid, cache_dir=OSM_CACHE_DIR)
-    state.data["topology"] = topology_result
-    state.record("detect_topology", topology_result)
-    print(
-        f"  ✓ Topology: {topology_result['topology']}"
-        f"  (streets={topology_result['streets']}, way_count={topology_result['way_count']})"
-    )
+    # Topology detection and template selection now happen in _tool_query_osm,
+    # right after OSM enrichment, so Agent 3 (complete_parameters()) can work
+    # with the real selected template's geometry instead of a placeholder —
+    # see that function's comment. Reuse what's already there; only
+    # recompute as a defensive fallback for a caller that skipped that step
+    # (e.g. an older saved state resumed from before this change).
+    xodr_filename = state.data.get("template_used")
+    if xodr_filename:
+        topology_result = state.data.get("topology", {})
+    else:
+        scenario_type = state.data.get("classification", {}).get("scenario_type", "")
+        report_text = state.data.get("source", {}).get("raw_text", "")
+        topology_result = _detect_topology(report_text, sid, cache_dir=OSM_CACHE_DIR)
+        state.data["topology"] = topology_result
+        state.record("detect_topology", topology_result)
+        template_rel = _select_template(scenario_type, topology_result["topology"])
+        xodr_filename = Path(template_rel).name
+        state.data["template_used"] = xodr_filename
 
-    template_rel = _select_template(scenario_type, topology_result["topology"])
-    template_src = Path(__file__).resolve().parent / template_rel
-    xodr_filename = Path(template_rel).name
+    print(
+        f"  ✓ Topology: {topology_result.get('topology', 'unknown')}"
+        f"  (streets={topology_result.get('streets')}, way_count={topology_result.get('way_count')})"
+    )
+    template_src = Path(__file__).resolve().parent / "templates" / xodr_filename
     xodr_path = state.output_dir / xodr_filename
     shutil.copy2(template_src, xodr_path)
-    state.data["template_used"] = xodr_filename
 
     try:
         _generate_openscenario(state.data, xosc_path, xodr_filename=xodr_filename)

@@ -19,7 +19,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
-from defaults import DEFAULT_BIKE_LANE_WIDTH_M, DEFAULT_CYCLIST_LATERAL_POSITION
+from generate_scenario import DEFAULT_CYCLIST_LATERAL_POSITION
 
 
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
@@ -572,8 +572,13 @@ def _apply_bike_facility_context(data, context):
         opendrive_params["primary_has_bike_facility"] = True
         opendrive_params["primary_bike_facility_type"] = facility_type
         opendrive_params["primary_bike_facility_position"] = position
-        if float(opendrive_params.get("bike_lane_width_m", 0) or 0) <= 0:
-            opendrive_params["bike_lane_width_m"] = DEFAULT_BIKE_LANE_WIDTH_M
+        # bike_lane_width_m is deliberately NOT set here: OSM's own width
+        # tag is null for every road observed in this corpus, so this used
+        # to just copy in a flat constant that didn't match either
+        # template's real 1.25 m bike lane (verified directly against both
+        # .xodr files). complete_parameters.py now reads the real width
+        # from whichever template actually gets selected instead — see
+        # its _real_lane_widths_m.
         context["bike_facility"] = {
             "type": facility_type,
             "position": position,
