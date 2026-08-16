@@ -130,7 +130,23 @@ def _lane_position(actor):
 
 
 def _world_position_from_lane_s(actor, odr_params):
-    """Approximate lane positions for trajectory points on the straight road.
+    """Lane positions for trajectory points, straight from the fixed lane
+    layout — both templates have exactly ONE real driving lane (id ±1) and
+    ONE real biking lane (id ±2) per direction, always (Assumption 1/2,
+    docs/modeling_assumptions.md), enforced by test_lane_type_safety.py.
+    Geometric placement must never depend on a reported/OSM lane COUNT —
+    that count doesn't change which real lane exists, only complete_
+    parameters.py's flagging of when it exceeds what the template can
+    represent (_flag_lane_count_exceeds_template).
+
+    This used to branch on motor_lane_count instead of lane_index directly,
+    which was a live bug, not just an unnecessary computation: verified
+    directly against 4 real reports (turning_01/05/07/09, each with OSM
+    motor_lane_count=2), a cyclist's lane_index (always 2) satisfied
+    `2 <= motor_lane_count`, so its trajectory was computed with the
+    DRIVING-lane branch instead of the bike-lane branch — a real, wrong
+    lateral offset. Fixed the same way _cyclist_lateral_offset already was
+    for the crossing-scenario case.
 
     Assumption 1 (docs/modeling_assumptions.md): straight_road.xodr models a
     standard two-way road — lane id 1 is the real OpenDRIVE lane on the
@@ -139,12 +155,7 @@ def _world_position_from_lane_s(actor, odr_params):
     positive/negative pair is reinterpreted as two same-direction parallel
     lanes rather than opposing carriageways, so the lane id's sign (not its
     absolute value) decides which side of the center lane a point sits on.
-    This keeps lane 1 and lane -1 at distinct, correctly-adjacent lateral
-    offsets instead of collapsing onto the same y — required for a
-    lane-change between them (e.g. manual_classification_reference.md
-    reports 18/19) to show up as an actual lateral move. Every other
-    scenario type only ever uses negative lane ids, so this is a strict
-    generalization with no behavior change for them.
+    Every other scenario type only ever uses negative lane ids.
     """
     s = float(actor["initial_s_m"])
     lane_id = int(actor["initial_lane_id"])
@@ -152,18 +163,15 @@ def _world_position_from_lane_s(actor, odr_params):
     side = 1 if lane_id > 0 else -1
     motor_lane_width_m = float(odr_params.get("motor_lane_width_m", 3.5))
     bike_lane_width_m = float(odr_params.get("bike_lane_width_m", 2.0))
-    motor_lane_count = int(odr_params.get("motor_lane_count", 1))
 
-    if lane_index <= motor_lane_count:
-        y = side * motor_lane_width_m * (lane_index - 0.5)
-    elif lane_index == motor_lane_count + 1 and bike_lane_width_m > 0:
-        y = side * (motor_lane_width_m * motor_lane_count + bike_lane_width_m / 2)
+    if lane_index == 1:
+        y = side * motor_lane_width_m * 0.5
+    elif lane_index == 2:
+        y = side * (motor_lane_width_m + bike_lane_width_m / 2)
     else:
-        y = side * (
-            motor_lane_width_m * motor_lane_count
-            + max(0, bike_lane_width_m)
-            + 0.75
-        )
+        # Defensive fallback only — test_lane_type_safety.py guarantees no
+        # other lane_id is ever actually assigned in either template.
+        y = side * (motor_lane_width_m + max(0, bike_lane_width_m) + 0.75)
     return s, y
 
 

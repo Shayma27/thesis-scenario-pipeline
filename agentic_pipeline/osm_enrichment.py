@@ -440,10 +440,44 @@ def _apply_lane_context(data, context, cache_dir):
             params["secondary_road_lanes"] = secondary_lanes
         else:
             params["secondary_road_lanes"] = 1
-        if primary_heading is not None:
-            params["primary_heading_rad"] = primary_heading
-        if secondary_heading is not None:
-            params["secondary_heading_rad"] = secondary_heading
+
+        # location.primary_road/secondary_road (Agent 1) are NAME-based —
+        # "which street is the main one for geocoding" — with no rule tying
+        # them to a specific participant. generate_scenario.py's crossing
+        # geometry is ROLE-based instead: primary_heading_rad is used as the
+        # cyclist's own line of travel, secondary_heading_rad as the car's
+        # (matching _resolve_road_id's "primary approach=cyclist, secondary
+        # approach=car"). These two "primary/secondary" concepts silently
+        # disagreed whenever there's no secondary_road at all: "crossing" is
+        # defined (extract_scenario.py's own SCENARIO_TYPE rule) as the
+        # motor vehicle going straight while the cyclist's path crosses it
+        # at an angle, so a report naming only ONE road can only be
+        # describing the CAR's road — the cyclist crosses INTO it from a
+        # sidewalk/median/etc., never itself a second named, OSM-findable
+        # road. Verified directly against crossing_01/crossing_04 (the only
+        # two reports this affects): both explicitly have the car going
+        # straight along the one named road, the cyclist entering it from a
+        # sidewalk or median. Before this fix, the resolved road heading
+        # was assigned to primary_heading_rad — the CYCLIST's slot — so
+        # crossing_04's already-generated output had its cyclist's
+        # trajectory computed along Landsberger Allee's own heading
+        # (roughly west) instead of the cyclist's real, roughly-north
+        # crossing direction: a live, wrong-output bug, not just missing
+        # data. primary_heading_rad (the cyclist's real line) has no OSM
+        # road to resolve it from in this case at all; left unset here and
+        # filled downstream in complete_parameters.py from the cyclist's
+        # own extracted compass direction when the report states one.
+        no_named_secondary_road = not (
+            approaches["secondary"].get("from") or approaches["secondary"].get("toward")
+        )
+        if no_named_secondary_road:
+            if primary_heading is not None:
+                params["secondary_heading_rad"] = primary_heading
+        else:
+            if primary_heading is not None:
+                params["primary_heading_rad"] = primary_heading
+            if secondary_heading is not None:
+                params["secondary_heading_rad"] = secondary_heading
 
         _apply_lane_count_overrides(data, params, context)
         _apply_heading_overrides(data, params, context)
@@ -1505,6 +1539,19 @@ def _best_lane_count(roads, preferred_name=None):
 
 
 def _approach_lane_count_evidence(roads, approach):
+    """Despite the name (kept for the lane-count traceability flag this
+    also feeds — complete_parameters._flag_lane_count_exceeds_template),
+    this is also this pipeline's only source of real OSM-derived headings
+    for "crossing" scenarios. Heading and lane count are selected
+    independently — verified directly against crossing_02's real cached
+    OSM data: every one of its 7 candidate segments has a real, mutually
+    consistent heading (~34.5 deg) and correctly moves toward the target,
+    but none carries a usable OSM `lanes` tag. Gating heading selection
+    behind lane-count success (the previous behavior) meant every one of
+    the 19-report corpus's 8 "crossing" reports lost a real, available
+    heading for a reason that had nothing to do with heading — an
+    unrelated tag being absent. Fixed by selecting the two independently.
+    """
     from_names = _names_from_location_field(approach.get("from"))
     toward_names = _names_from_location_field(approach.get("toward"))
     candidates = [
@@ -1519,8 +1566,21 @@ def _approach_lane_count_evidence(roads, approach):
         for point in _representative_points(road)
     ]
 
+    def _distance_sort_key(segment):
+        return (
+            segment["end_distance_to_target_m"]
+            if segment["end_distance_to_target_m"] is not None
+            else 999999,
+            -(
+                segment["progress_toward_target_m"]
+                if segment["progress_toward_target_m"] is not None
+                else 0
+            ),
+        )
+
     considered_segments = []
-    directional_matches = []
+    directional_matches = []          # moves_toward_target AND a usable lane count
+    directional_heading_matches = []  # moves_toward_target only — no lane-count requirement
     for road in candidates:
         progress_m, end_distance_m = _progress_toward_target(road, target_points)
         moves_toward_target = progress_m is None or progress_m > 1.0
@@ -1545,22 +1605,19 @@ def _approach_lane_count_evidence(roads, approach):
             "moves_toward_target": moves_toward_target,
         }
         considered_segments.append(segment)
+        if moves_toward_target and heading_rad is not None:
+            directional_heading_matches.append(segment)
         if lane_count and moves_toward_target:
             directional_matches.append(segment)
 
+    if directional_heading_matches:
+        directional_heading_matches.sort(key=_distance_sort_key)
+        used_heading_rad = directional_heading_matches[0]["heading_rad"]
+    else:
+        used_heading_rad = None
+
     if directional_matches:
-        directional_matches.sort(
-            key=lambda segment: (
-                segment["end_distance_to_target_m"]
-                if segment["end_distance_to_target_m"] is not None
-                else 999999,
-                -(
-                    segment["progress_toward_target_m"]
-                    if segment["progress_toward_target_m"] is not None
-                    else 0
-                ),
-            )
-        )
+        directional_matches.sort(key=_distance_sort_key)
         best_distance = directional_matches[0]["end_distance_to_target_m"]
         selected_segments = [
             segment
@@ -1573,15 +1630,12 @@ def _approach_lane_count_evidence(roads, approach):
         if len(selected_counts) == 1:
             status = "used_directional_osm_way_match"
             used_count = selected_counts[0]
-            used_heading_rad = selected_segments[0].get("heading_rad")
         else:
             status = "not_used_ambiguous_directional_osm_way_matches"
             used_count = None
-            used_heading_rad = None
     else:
         selected_segments = []
         used_count = None
-        used_heading_rad = None
         if candidates:
             status = "not_used_no_directional_osm_way_match"
         else:

@@ -9,12 +9,14 @@ values set by earlier agents are never overwritten.
 from __future__ import annotations
 
 import copy
+import math
 
 from generate_scenario import (
     _TEMPLATE_DIR,
     DEFAULT_CYCLIST_LATERAL_POSITION,
     DEFAULT_SIMULATION_DURATION_S,
     _clamp_initial_s_to_real_road,
+    _normalize_angle,
     _parse_xodr_road_geometry,
     _real_lane_width_m,
     _resolve_road_id,
@@ -38,6 +40,29 @@ from speed_estimation import estimate_actor_speed
 _ROAD_LENGTH_FALLBACK_M = 100.0
 _MOTOR_LANE_WIDTH_FALLBACK_M = 3.5
 _BIKE_LANE_WIDTH_FALLBACK_M = 1.25  # identical real width in both templates
+
+# Maps Agent 1's 8-point compass enum (extract_scenario.py SCHEMA["directions"])
+# to this project's math-heading convention: standard atan2(dy, dx), 0 = East,
+# +pi/2 = North, increasing counter-clockwise — the same convention
+# osm_enrichment._road_heading_rad already uses (atan2(northward_m,
+# eastward_m)), verified directly against a real report before use: for
+# crossing_04, the car's real resolved road heading (~-154.6 deg) is
+# consistent with its reported "west" direction, and the missing cyclist
+# heading this table fills for that same report ("north" -> +pi/2) sits
+# close to the geometrically-expected perpendicular-to-the-road value —
+# not exact (roads aren't perfectly cardinal, police-report compass words
+# are approximate), but consistently the right side, confirming the sign
+# convention is correct, not flipped.
+_COMPASS_HEADING_RAD = {
+    "east": 0.0,
+    "northeast": math.pi / 4,
+    "north": math.pi / 2,
+    "northwest": 3 * math.pi / 4,
+    "west": math.pi,
+    "southwest": -3 * math.pi / 4,
+    "south": -math.pi / 2,
+    "southeast": -math.pi / 4,
+}
 
 
 def _real_primary_road_length_m(xodr_filename: str | None) -> float | None:
@@ -86,6 +111,17 @@ def _real_lane_widths_m(xodr_filename: str | None) -> tuple[float | None, float 
         return None, None
 
 
+def _heading_from_direction(participant: dict | None) -> float | None:
+    """A participant's own line of travel, in this project's math-heading
+    convention, derived from Agent 1's extracted compass direction — see
+    _COMPASS_HEADING_RAD's docstring. Returns None when the report doesn't
+    state a compass direction for this participant either.
+    """
+    if not participant:
+        return None
+    return _COMPASS_HEADING_RAD.get(participant.get("initial_direction"))
+
+
 def complete_parameters(data: dict) -> dict:
     """
     Return a deep copy of *data* with all required actor simulation
@@ -120,6 +156,98 @@ def complete_parameters(data: dict) -> dict:
     # "other" is a broad catch-all that includes many non-stationary cases
     # too, so this can't be inferred from the coarse category alone.
     is_parked = motor_maneuver == "parked"
+
+    # primary_heading_rad/secondary_heading_rad, for a "crossing" scenario,
+    # are the cyclist's and the car's own lines of travel respectively
+    # (generate_scenario.py's crossing geometry; see _resolve_road_id's
+    # "primary approach=cyclist, secondary approach=car" convention) — a
+    # value OSM enrichment has no named road left to resolve when the
+    # report only names one street (see osm_enrichment.py's
+    # _apply_lane_context crossing-branch comment on the role-assignment
+    # fix this pairs with). The only remaining source is each participant's
+    # own extracted compass direction; if that's null too, this is left for
+    # generate_scenario.py's existing geometric fallback. Scoped to
+    # "crossing" only — these fields mean something different (the shared
+    # main road's own orientation, not a specific participant's line) for
+    # every other scenario_type.
+    if is_crossing:
+        if "primary_heading_rad" not in odr:
+            cyclist_heading = _heading_from_direction(cyclist_p)
+            if cyclist_heading is not None:
+                odr["primary_heading_rad"] = cyclist_heading
+                data.setdefault("missing_parameters", []).append({
+                    "parameter": "primary_heading_rad",
+                    "value_used": round(cyclist_heading, 6),
+                    "source": "explicit_from_report",
+                    "reason": (
+                        "No named road for OSM to resolve the cyclist's own "
+                        "crossing line from (the report only names one "
+                        "street) — derived from the cyclist's own extracted "
+                        f"compass direction ({(cyclist_p or {}).get('initial_direction')})."
+                    ),
+                })
+        if "secondary_heading_rad" not in odr:
+            motor_heading = _heading_from_direction(motor_p)
+            if motor_heading is not None:
+                odr["secondary_heading_rad"] = motor_heading
+                data.setdefault("missing_parameters", []).append({
+                    "parameter": "secondary_heading_rad",
+                    "value_used": round(motor_heading, 6),
+                    "source": "explicit_from_report",
+                    "reason": (
+                        "No named road for OSM to resolve the motor "
+                        "vehicle's own line from — derived from its own "
+                        "extracted compass direction "
+                        f"({(motor_p or {}).get('initial_direction')})."
+                    ),
+                })
+
+        # Last-resort geometric default for whichever heading is STILL
+        # missing after both compass attempts above: "crossing" scenarios
+        # are defined (extract_scenario.py's own SCENARIO_TYPE rule) as the
+        # cyclist's path crossing the vehicle's straight path "at an
+        # angle." Once one of the two real lines is known (from OSM or the
+        # compass fallback above), a perpendicular default for the other is
+        # an honest engineering assumption, not an invented fact — the same
+        # kind of default generate_scenario.py's own turning-scenario
+        # fallback already makes (primary_heading - 90 deg when data's
+        # missing). Which of the two perpendicular sides is genuinely
+        # unknowable without a real signal — +90 deg is picked as an
+        # arbitrary but documented convention, same spirit as
+        # DEFAULT_CYCLIST_LATERAL_POSITION.
+        if "primary_heading_rad" not in odr and "secondary_heading_rad" in odr:
+            perp = _normalize_angle(odr["secondary_heading_rad"] + math.pi / 2)
+            odr["primary_heading_rad"] = perp
+            data.setdefault("missing_parameters", []).append({
+                "parameter": "primary_heading_rad",
+                "value_used": round(perp, 6),
+                "source": "engineering_assumption",
+                "reason": (
+                    "No compass direction stated for the cyclist either. "
+                    "'Crossing' scenarios are defined as the cyclist's "
+                    "path crossing the vehicle's straight path at an "
+                    "angle, so this defaults to perpendicular (+90 deg, an "
+                    "arbitrary but documented convention — the actual "
+                    "crossing side isn't knowable from the report) to the "
+                    "vehicle's own real/derived heading."
+                ),
+            })
+        elif "secondary_heading_rad" not in odr and "primary_heading_rad" in odr:
+            perp = _normalize_angle(odr["primary_heading_rad"] + math.pi / 2)
+            odr["secondary_heading_rad"] = perp
+            data.setdefault("missing_parameters", []).append({
+                "parameter": "secondary_heading_rad",
+                "value_used": round(perp, 6),
+                "source": "engineering_assumption",
+                "reason": (
+                    "No compass direction stated for the motor vehicle "
+                    "either. 'Crossing' scenarios are defined as the "
+                    "cyclist's path crossing the vehicle's straight path "
+                    "at an angle, so this defaults to perpendicular (+90 "
+                    "deg, an arbitrary but documented convention) to the "
+                    "cyclist's own real/derived heading."
+                ),
+            })
 
     # ── Conflict parameters ───────────────────────────────────────────────
     conf = osc.setdefault("conflict", {})
