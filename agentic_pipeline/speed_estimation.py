@@ -9,10 +9,34 @@ until now).
 
 Design (see docs/next_chat_briefing_parameter_completion.md and the
 conversation that scoped this module): the LLM never invents a number
-from nothing. It only narrows a real, sourced range, and only when the
-report gives it evidence to do so; its output is always clamped to a hard
-safety envelope before use, and any failure (unreachable server,
-malformed output, no textual evidence) falls back to the grounded default
+from nothing, and — as of the live-model verification pass that found the
+original design's flaw — it never invents a *calibrated* number at all.
+Live testing against the real 8B model on crossing_04 (report text:
+"deutlich überhöhter Geschwindigkeit" — clearly excessive speed) showed
+the model correctly reading the qualitative evidence but failing at
+turning it into a number: asked for a narrowed km/h range, it returned the
+full un-narrowed envelope, whose midpoint (25 km/h) ended up *slower* than
+the non-LLM grounded default (40 km/h) — the opposite of what "speeding"
+should produce. There is no rulebook (StVO, RiLSA, or otherwise) that
+defines what number "clearly excessive" means, so asking an 8B model to
+invent one was asking it to hallucinate a calibration nothing grounds.
+
+The fix, following the same LLM/formal-layer split used by SoVAR (Guo et
+al., "SoVAR: Building Generalizable Scenarios from Accident Reports for
+Autonomous Driving Testing," ASE 2024, DOI 10.1145/3691620.3695037 — LLM
+extracts, a formal solver concretizes) and the Extended Scenic DSL paper
+(LLM's output constrained to an enumerated, validated schema, not free
+numeric generation): the LLM's ONLY job is classifying qualitative
+evidence into a fixed category — is this specific actor's speed reported
+as stopped, slower, about normal, faster, or clearly faster than the
+grounded context, with a verbatim quote, or "unknown" if the report says
+nothing about THIS actor. Turning that category into a number is
+deterministic Python (_concretize_qualitative_relation), never the LLM,
+and the result is validated for direction-consistency before it can reach
+output (a "faster" classification that doesn't produce a value above the
+grounded nominal is rejected, not trusted). Any failure (unreachable
+server, malformed output, no textual evidence, a classification that
+fails its own consistency check) falls back to the grounded default
 directly. This module never blocks the pipeline on LLM availability —
 every code path returns a usable speed.
 
@@ -186,33 +210,64 @@ def _grounded_envelope(
     }
 
 
+_QUALITATIVE_RELATIONS = (
+    "stopped",
+    "clearly_slower_than_context",
+    "slower_than_context",
+    "approximately_contextual",
+    "faster_than_context",
+    "clearly_faster_than_context",
+)
+
+
 def _llm_speed_estimate(vehicle_label: str, envelope: dict, conflict: dict) -> dict | None:
-    """Ask the LLM whether the report's own words give evidence to narrow
-    the grounded envelope for this actor's speed. Returns a dict with
-    knowledge_status / speed_range_kmh / rationale on a well-formed
-    response, or None on any failure (unreachable server, malformed
-    output, out-of-range values) — callers must treat None as "use the
+    """Ask the LLM to classify — never quantify — what the report's own
+    words say about THIS SPECIFIC actor's speed. Returns a dict with
+    knowledge_status / qualitative_relation / evidence_quote on a
+    well-formed response, or None on any failure (unreachable server,
+    malformed output, a report_qualitative_signal with no evidence_quote
+    or an unrecognized relation) — callers must treat None as "use the
     grounded default directly," never as an error to propagate.
+
+    Deliberately asks for a category, not a number — see module docstring
+    for why numeric narrowing was tried and failed live verification.
     """
     prompt = (
         "A traffic-engineering pipeline is reconstructing a German police "
-        f"accident report as a simulation. For the {vehicle_label}, the "
-        f"grounded default speed range is {envelope['min_kmh']}-"
-        f"{envelope['max_kmh']} km/h (nominal {envelope['nominal_kmh']} "
-        "km/h). Based ONLY on the report text below, does it give "
-        "evidence that this specific vehicle was faster or slower than "
-        "that default? If yes, narrow the range and quote the relevant "
-        "phrase. If the report says nothing about this vehicle's speed, "
-        "say so — do not invent a narrower range without textual "
-        "evidence.\n\n"
+        f"accident report as a simulation. You are assessing ONLY the "
+        f"{vehicle_label}'s speed — never any other participant's, even if "
+        "the report describes one.\n\n"
+        f"For reference only (do not return a number): this vehicle's "
+        f"grounded typical/legal speed context is centered around "
+        f"{envelope['nominal_kmh']} km/h.\n\n"
+        "Based ONLY on the report text below, classify what it says about "
+        "THIS vehicle's own speed relative to that context:\n"
+        '- "stopped": the report says this vehicle was stationary/had '
+        "stopped (distinct from being parked throughout).\n"
+        '- "clearly_slower_than_context": clearly, markedly slower than '
+        "typical.\n"
+        '- "slower_than_context": somewhat slower than typical.\n'
+        '- "approximately_contextual": the report addresses this vehicle\'s '
+        "speed and indicates it was roughly typical.\n"
+        '- "faster_than_context": somewhat faster than typical.\n'
+        '- "clearly_faster_than_context": clearly, markedly faster / '
+        'exceeded the appropriate speed (e.g. "überhöhte Geschwindigkeit", '
+        '"raste", "deutlich zu schnell").\n'
+        '- "unknown": the report says nothing about THIS vehicle\'s own '
+        "speed.\n\n"
+        "If your evidence quote is actually about a different participant, "
+        "or isn't specific to this vehicle's own speed, you MUST classify "
+        'as "unknown" — never let another participant\'s speed evidence '
+        "apply to this one.\n\n"
         f"collision_description: {conflict.get('collision_description')}\n"
         f"severity_text: {conflict.get('severity_text')}\n"
         f"conflict_mechanism: {conflict.get('conflict_mechanism')}\n\n"
         "Respond as JSON only: "
         '{"knowledge_status": "report_qualitative_signal" or '
-        '"insufficient_evidence", '
-        '"speed_range_kmh": {"min": <float>, "max": <float>}, '
-        '"rationale": "<one sentence, quote the report text if applicable>"}'
+        '"not_reported", '
+        '"qualitative_relation": "<one of the categories above>", '
+        '"evidence_quote": "<verbatim phrase from the report text, or '
+        'empty string if not_reported>"}'
     )
     try:
         client = get_client()
@@ -220,16 +275,17 @@ def _llm_speed_estimate(vehicle_label: str, envelope: dict, conflict: dict) -> d
             model=MODEL,
             messages=[
                 {"role": "system", "content": (
-                    "You estimate plausible vehicle speed ranges for "
-                    "accident reconstruction from report text. You never "
-                    "invent a number unsupported by the text — you only "
-                    "narrow a given range when the text supports it, or "
-                    "say the text gives no evidence."
+                    "You classify qualitative speed evidence for accident "
+                    "reconstruction from report text into a fixed set of "
+                    "categories. You never output a number. You only "
+                    "report evidence that is specifically about the named "
+                    "vehicle — never about a different participant in the "
+                    "same report."
                 )},
                 {"role": "user", "content": prompt},
             ],
             temperature=0.0,
-            max_tokens=300,
+            max_tokens=200,
             response_format={"type": "json_object"},
             timeout=_LLM_TIMEOUT_S,
         )
@@ -238,20 +294,80 @@ def _llm_speed_estimate(vehicle_label: str, envelope: dict, conflict: dict) -> d
         return None
 
     status = parsed.get("knowledge_status")
-    if status not in ("report_qualitative_signal", "insufficient_evidence"):
+    if status not in ("report_qualitative_signal", "not_reported"):
         return None
-    if status == "report_qualitative_signal":
-        rng = parsed.get("speed_range_kmh")
-        if not isinstance(rng, dict):
-            return None
-        try:
-            lo, hi = float(rng["min"]), float(rng["max"])
-        except (KeyError, TypeError, ValueError):
-            return None
-        if lo < 0 or hi < lo:
-            return None
-        parsed["speed_range_kmh"] = {"min": lo, "max": hi}
-    return parsed
+    if status == "not_reported":
+        return {"knowledge_status": "not_reported", "qualitative_relation": "unknown", "evidence_quote": ""}
+
+    relation = parsed.get("qualitative_relation")
+    quote = parsed.get("evidence_quote")
+    if relation not in _QUALITATIVE_RELATIONS:
+        return None
+    if not isinstance(quote, str) or not quote.strip():
+        return None
+    return {"knowledge_status": status, "qualitative_relation": relation, "evidence_quote": quote}
+
+
+def _concretize_qualitative_relation(relation: str, envelope: dict) -> tuple[float, str] | None:
+    """Turn an LLM-classified qualitative relation into an actual km/h
+    value — deterministic Python, never the LLM (see module docstring for
+    why). Returns (value_kmh, note) or None for "unknown".
+
+    Uses only envelope['min_kmh']/['nominal_kmh']/['safety_cap_kmh'] as
+    reference points for "faster" concretization — deliberately NOT
+    envelope['max_kmh']: for a "crossing" motor vehicle, max_kmh is the
+    independent OSM speed limit, which can legitimately be BELOW the
+    RiLSA-fixed nominal (RiLSA's approach speed applies "regardless of the
+    speed limit" — see _grounded_envelope), so max_kmh is not guaranteed
+    to exceed nominal_kmh the way safety_cap_kmh always is by construction
+    (safety_cap_kmh >= nominal_kmh * MOTOR_SAFETY_CLAMP_FACTOR in every
+    branch). min_kmh IS always <= nominal_kmh in every branch, so it's
+    safe to use directly for "slower" concretization.
+    """
+    floor = envelope["min_kmh"]
+    nominal = envelope["nominal_kmh"]
+    cap = envelope["safety_cap_kmh"]
+
+    if relation == "stopped":
+        return 0.0, (
+            "the report gives explicit evidence this vehicle was "
+            "stationary, despite an otherwise-moving maneuver"
+        )
+    if relation == "clearly_slower_than_context":
+        return floor, (
+            f"the grounded envelope's own lower bound ({floor} km/h) — "
+            "'clearly slower' evidence, no source quantifies the "
+            "magnitude further, so the envelope's floor is used as a "
+            "conservative point estimate (engineering_assumption)"
+        )
+    if relation == "slower_than_context":
+        value = (floor + nominal) / 2
+        return value, (
+            f"midpoint between the grounded envelope's floor ({floor} "
+            f"km/h) and nominal ({nominal} km/h) — 'slower than context' "
+            "evidence, magnitude not quantifiable from any cited source "
+            "(engineering_assumption)"
+        )
+    if relation == "approximately_contextual":
+        return nominal, "report evidence indicates no meaningful deviation from the grounded nominal"
+    if relation == "faster_than_context":
+        value = (nominal + cap) / 2
+        return value, (
+            f"midpoint between the grounded nominal ({nominal} km/h) and "
+            f"this pipeline's existing safety-clamp backstop ({cap} "
+            "km/h) — 'faster than context' evidence, magnitude not "
+            "quantifiable from any cited source (engineering_assumption)"
+        )
+    if relation == "clearly_faster_than_context":
+        return cap, (
+            f"this pipeline's existing safety-clamp backstop ({cap} "
+            "km/h) — 'clearly faster' evidence explicitly implies "
+            "exceeding the typical/legal context; magnitude not "
+            "quantifiable from any cited source, so the pre-existing "
+            "engineering safety cap is used directly as the upper bound "
+            "of what's representable (engineering_assumption)"
+        )
+    return None  # "unknown"
 
 
 def estimate_actor_speed(
@@ -293,32 +409,39 @@ def estimate_actor_speed(
     if any(conflict.get(k) for k in ("collision_description", "severity_text", "conflict_mechanism")):
         llm_result = _llm_speed_estimate(f"{vehicle_category} ({actor_id})", envelope, conflict)
 
-    rng = (llm_result or {}).get("speed_range_kmh") if llm_result else None
-    valid_signal = (
-        llm_result
-        and llm_result.get("knowledge_status") == "report_qualitative_signal"
-        and isinstance(rng, dict)
-        and "min" in rng
-        and "max" in rng
-    )
-    if valid_signal:
-        cap = envelope["safety_cap_kmh"]
-        lo = max(0.0, min(rng["min"], cap))
-        hi = max(lo, min(rng["max"], cap))
-        clamped = lo != rng["min"] or hi != rng["max"]
-        nominal_kmh = (lo + hi) / 2
-        speed_mps = round(_kmh_to_mps(nominal_kmh), 2)
-        entry = {
-            "parameter": f"{actor_id}.initial_speed_mps",
-            "value_used": speed_mps,
-            "source": "llm_speed_estimate",
-            "reason": llm_result.get("rationale", ""),
-            "logical_range_kmh": [lo, hi],
-            "knowledge_status": "report_qualitative_signal",
-        }
-        if clamped:
-            entry["clamped_to_safety_cap"] = True
-        return speed_mps, entry
+    if llm_result and llm_result.get("knowledge_status") == "report_qualitative_signal":
+        relation = llm_result.get("qualitative_relation")
+        concretized = _concretize_qualitative_relation(relation, envelope)
+        if concretized is not None:
+            value_kmh, note = concretized
+            value_kmh = max(0.0, min(value_kmh, envelope["safety_cap_kmh"]))
+            # Direction-consistency check: a "faster" classification must
+            # actually produce a value above nominal, and vice versa — this
+            # is exactly the check that would have caught the live-verified
+            # crossing_04 bug (speeding evidence producing a slower value
+            # than the neutral default). Never trust a classification whose
+            # own concretization contradicts it.
+            consistent = True
+            if relation in ("faster_than_context", "clearly_faster_than_context"):
+                consistent = value_kmh > envelope["nominal_kmh"]
+            elif relation in ("slower_than_context", "clearly_slower_than_context"):
+                consistent = value_kmh < envelope["nominal_kmh"]
+            if consistent:
+                speed_mps = round(_kmh_to_mps(value_kmh), 2)
+                entry = {
+                    "parameter": f"{actor_id}.initial_speed_mps",
+                    "value_used": speed_mps,
+                    "source": "llm_qualitative_signal",
+                    "reason": (
+                        f"Report evidence classified as '{relation}' "
+                        f"(quote: \"{llm_result.get('evidence_quote', '')}\"). "
+                        f"Concretized deterministically, not by the LLM: {note}."
+                    ),
+                    "qualitative_relation": relation,
+                    "evidence_quote": llm_result.get("evidence_quote", ""),
+                }
+                return speed_mps, entry
+            # Consistency check failed — fall through to grounded default.
 
     # No LLM signal, no LLM available, or LLM output failed validation —
     # grounded default fires directly, offline, deterministic.

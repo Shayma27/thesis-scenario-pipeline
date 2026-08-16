@@ -87,40 +87,62 @@ def step3_speed_estimate_raw() -> None:
         print(f"_llm_speed_estimate() returned: {result}")
         if result is None:
             print("Returned None — re-running the same call WITHOUT the except to see why:")
-            # Manually inline the guarded section
+            # Manually inline the guarded section (kept in sync with
+            # speed_estimation._llm_speed_estimate's real prompt/schema —
+            # the categorical classify-only design, not the old numeric
+            # narrowing one it replaced after live testing found it
+            # producing direction-inconsistent speeds).
             response = client.chat.completions.create(
                 model=llm_client.MODEL,
                 messages=[
                     {"role": "system", "content": (
-                        "You estimate plausible vehicle speed ranges for "
-                        "accident reconstruction from report text. You never "
-                        "invent a number unsupported by the text — you only "
-                        "narrow a given range when the text supports it, or "
-                        "say the text gives no evidence."
+                        "You classify qualitative speed evidence for accident "
+                        "reconstruction from report text into a fixed set of "
+                        "categories. You never output a number. You only "
+                        "report evidence that is specifically about the named "
+                        "vehicle — never about a different participant in the "
+                        "same report."
                     )},
                     {"role": "user", "content": (
                         "A traffic-engineering pipeline is reconstructing a German police "
-                        f"accident report as a simulation. For the car (car_1), the "
-                        f"grounded default speed range is {envelope['min_kmh']}-"
-                        f"{envelope['max_kmh']} km/h (nominal {envelope['nominal_kmh']} "
-                        "km/h). Based ONLY on the report text below, does it give "
-                        "evidence that this specific vehicle was faster or slower than "
-                        "that default? If yes, narrow the range and quote the relevant "
-                        "phrase. If the report says nothing about this vehicle's speed, "
-                        "say so — do not invent a narrower range without textual "
-                        "evidence.\n\n"
+                        "accident report as a simulation. You are assessing ONLY the "
+                        "car (car_1)'s speed — never any other participant's, even if "
+                        "the report describes one.\n\n"
+                        f"For reference only (do not return a number): this vehicle's "
+                        f"grounded typical/legal speed context is centered around "
+                        f"{envelope['nominal_kmh']} km/h.\n\n"
+                        "Based ONLY on the report text below, classify what it says about "
+                        "THIS vehicle's own speed relative to that context:\n"
+                        '- "stopped": the report says this vehicle was stationary/had '
+                        "stopped (distinct from being parked throughout).\n"
+                        '- "clearly_slower_than_context": clearly, markedly slower than '
+                        "typical.\n"
+                        '- "slower_than_context": somewhat slower than typical.\n'
+                        '- "approximately_contextual": the report addresses this vehicle\'s '
+                        "speed and indicates it was roughly typical.\n"
+                        '- "faster_than_context": somewhat faster than typical.\n'
+                        '- "clearly_faster_than_context": clearly, markedly faster / '
+                        'exceeded the appropriate speed (e.g. "überhöhte Geschwindigkeit", '
+                        '"raste", "deutlich zu schnell").\n'
+                        '- "unknown": the report says nothing about THIS vehicle\'s own '
+                        "speed.\n\n"
+                        "If your evidence quote is actually about a different participant, "
+                        "or isn't specific to this vehicle's own speed, you MUST classify "
+                        'as "unknown" — never let another participant\'s speed evidence '
+                        "apply to this one.\n\n"
                         f"collision_description: {conflict.get('collision_description')}\n"
                         f"severity_text: {conflict.get('severity_text')}\n"
                         f"conflict_mechanism: {conflict.get('conflict_mechanism')}\n\n"
                         "Respond as JSON only: "
                         '{"knowledge_status": "report_qualitative_signal" or '
-                        '"insufficient_evidence", '
-                        '"speed_range_kmh": {"min": <float>, "max": <float>}, '
-                        '"rationale": "<one sentence, quote the report text if applicable>"}'
+                        '"not_reported", '
+                        '"qualitative_relation": "<one of the categories above>", '
+                        '"evidence_quote": "<verbatim phrase from the report text, or '
+                        'empty string if not_reported>"}'
                     )},
                 ],
                 temperature=0.0,
-                max_tokens=300,
+                max_tokens=200,
                 response_format={"type": "json_object"},
                 timeout=30,
             )
@@ -161,8 +183,8 @@ def step4_full_pipeline(scenario_ids: list[str]) -> None:
             print(f"    {e.get('parameter')}: {e.get('value_used')} m/s  source={e.get('source')}")
             if e.get("reason"):
                 print(f"      reason: {e['reason']}")
-            if e.get("logical_range_kmh"):
-                print(f"      llm range: {e['logical_range_kmh']} km/h  clamped={e.get('clamped_to_safety_cap', False)}")
+            if e.get("qualitative_relation"):
+                print(f"      relation: {e['qualitative_relation']}  quote: {e.get('evidence_quote', '')!r}")
 
         print(f"\n  xosc_path: {result.get('xosc_path')}")
         print(f"  valid: {result.get('valid')}")
