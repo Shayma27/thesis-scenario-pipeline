@@ -305,6 +305,18 @@ def _llm_speed_estimate(vehicle_label: str, envelope: dict, conflict: dict) -> d
         return None
     if not isinstance(quote, str) or not quote.strip():
         return None
+    # The model must ground its classification in the text it was actually
+    # given, not invent a plausible-sounding quote — verified live:
+    # turning_03's e-bike was classified "stopped" with evidence_quote
+    # "stopped", a word that appears nowhere in collision_description/
+    # severity_text (which instead say the e-bike was "going straight" —
+    # moving). A non-empty string alone doesn't prove the evidence is real;
+    # reject any quote that isn't an actual substring of what the LLM saw.
+    source_text = " ".join(
+        str(conflict.get(k) or "") for k in ("collision_description", "severity_text")
+    ).lower()
+    if quote.strip().lower() not in source_text:
+        return None
     return {"knowledge_status": status, "qualitative_relation": relation, "evidence_quote": quote}
 
 

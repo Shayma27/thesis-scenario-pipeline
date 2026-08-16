@@ -258,6 +258,75 @@ def test_raw_llm_json_unrecognized_relation_returns_none():
     check("raw LLM JSON unrecognized relation: returns None (triggers fallback)", result is None, result)
 
 
+def test_raw_llm_json_fabricated_quote_not_in_source_text_returns_none():
+    # A well-formed relation and a non-empty quote aren't enough — the quote
+    # must actually appear in the text the model was given. "raste" (raced)
+    # never appears anywhere in CONFLICT_WITH_SIGNAL's text.
+    class _FakeMessage:
+        content = '{"knowledge_status": "report_qualitative_signal", "qualitative_relation": "clearly_faster_than_context", "evidence_quote": "raste"}'
+
+    class _FakeChoice:
+        message = _FakeMessage()
+
+    class _FakeResponse:
+        choices = [_FakeChoice()]
+
+    class _FakeCompletions:
+        def create(self, **kwargs):
+            return _FakeResponse()
+
+    class _FakeChat:
+        completions = _FakeCompletions()
+
+    class _FakeClient:
+        chat = _FakeChat()
+
+    with patch.object(speed_estimation, "get_client", return_value=_FakeClient()):
+        result = speed_estimation._llm_speed_estimate("car (car_1)", {"min_kmh": 0, "max_kmh": 50, "nominal_kmh": 36, "safety_cap_kmh": 80}, CONFLICT_WITH_SIGNAL)
+    check("raw LLM JSON fabricated quote (not in source text): returns None (triggers fallback)", result is None, result)
+
+
+def test_turning_03_regression_fabricated_stopped_quote_rejected():
+    # The exact live-verified bug: turning_03's report says the e-bike was
+    # "going straight" (moving) into the intersection, but the LLM
+    # classified it as "stopped" with evidence_quote "stopped" — a word
+    # that appears nowhere in collision_description. Must fall back to the
+    # grounded default, never claim a fabricated "stopped" as real evidence.
+    conflict = {
+        "collision_description": "A truck turning right struck an e-bike going straight at a cycle crossing.",
+        "severity_text": None,
+        "conflict_mechanism": "right_turn_across_cycle_crossing",
+    }
+
+    class _FakeMessage:
+        content = '{"knowledge_status": "report_qualitative_signal", "qualitative_relation": "stopped", "evidence_quote": "stopped"}'
+
+    class _FakeChoice:
+        message = _FakeMessage()
+
+    class _FakeResponse:
+        choices = [_FakeChoice()]
+
+    class _FakeCompletions:
+        def create(self, **kwargs):
+            return _FakeResponse()
+
+    class _FakeChat:
+        completions = _FakeCompletions()
+
+    class _FakeClient:
+        chat = _FakeChat()
+
+    with patch.object(speed_estimation, "get_client", return_value=_FakeClient()):
+        speed_mps, entry = estimate_actor_speed(
+            {"conflict": conflict}, "cyclist_1", "e_bike", is_parked=False
+        )
+    check("turning_03 regression: fabricated 'stopped' quote rejected, falls back to grounded default",
+          entry["source"] != "llm_qualitative_signal", entry)
+    check("turning_03 regression: e-bike speed is not zeroed out by the fabricated evidence",
+          speed_mps > 0, f"got {speed_mps}")
+
+
 def test_ebike_envelope_uses_legal_ceiling():
     with patch.object(speed_estimation, "get_client", side_effect=_unreachable):
         speed_mps, entry = estimate_actor_speed(
@@ -334,6 +403,8 @@ def main() -> None:
     test_raw_llm_json_missing_fields_returns_none()
     test_raw_llm_json_empty_evidence_quote_returns_none()
     test_raw_llm_json_unrecognized_relation_returns_none()
+    test_raw_llm_json_fabricated_quote_not_in_source_text_returns_none()
+    test_turning_03_regression_fabricated_stopped_quote_rejected()
     test_ebike_envelope_uses_legal_ceiling()
     test_crossing_motor_vehicle_uses_rilsa_approach_speed()
     test_crossing_report_signal_now_reaches_llm()
