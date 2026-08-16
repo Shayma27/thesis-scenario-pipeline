@@ -5,12 +5,13 @@ LLM_BASE_URL pointed at the actual node running the job (see step 1's
 output — if it prints a connection error, that's your answer already).
 
 Usage:
-    python3 scripts/hpc_live_llm_verification.py [scenario_id ...]
+    python3 scripts/hpc_live_llm_verification.py [scenario_id ... | all]
 
 With no arguments, runs the three queued diagnostics plus a full
 run_agent() pass on crossing_04 (explicit "speeding car" language),
 turning_01 (no explicit speed language), and longitudinal_01. Pass
-specific scenario_ids to run only those.
+specific scenario_ids to run only those, or "all" to run the full
+19-report corpus (report_loader.load_reports()).
 """
 from __future__ import annotations
 
@@ -199,7 +200,12 @@ def main() -> None:
     step1_connectivity()
     step2_raw_llm_call()
     step3_speed_estimate_raw()
-    scenario_ids = args if args else ["crossing_04", "turning_01", "longitudinal_01"]
+    if args == ["all"]:
+        scenario_ids = [sid for sid, _text, _stype in load_reports()]
+    elif args:
+        scenario_ids = args
+    else:
+        scenario_ids = ["crossing_04", "turning_01", "longitudinal_01"]
     step4_full_pipeline(scenario_ids)
     print(f"\n{'=' * W}\nDONE — paste this entire output back for review.\n{'=' * W}")
 
