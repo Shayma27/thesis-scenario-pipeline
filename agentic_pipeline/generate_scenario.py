@@ -162,7 +162,7 @@ def _world_position_from_lane_s(actor, odr_params):
     lane_index = abs(lane_id)
     side = 1 if lane_id > 0 else -1
     motor_lane_width_m = float(odr_params.get("motor_lane_width_m", 3.5))
-    bike_lane_width_m = float(odr_params.get("bike_lane_width_m", 2.0))
+    bike_lane_width_m = float(odr_params.get("bike_lane_width_m", 1.25))
 
     if lane_index == 1:
         y = side * motor_lane_width_m * 0.5
@@ -648,7 +648,7 @@ def _cyclist_lateral_offset(odr_params, osc_params):
     disagree on where the cyclist starts.
     """
     lane_width_m = float(odr_params.get("motor_lane_width_m", 3.5))
-    bike_lane_width_m = float(odr_params.get("bike_lane_width_m", 2.0))
+    bike_lane_width_m = float(odr_params.get("bike_lane_width_m", 1.25))
     policy = osc_params.get("cyclist_lateral_position", DEFAULT_CYCLIST_LATERAL_POSITION)
     has_bike_facility = bool(odr_params.get("primary_has_bike_facility"))
 
