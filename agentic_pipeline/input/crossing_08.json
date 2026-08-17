@@ -27,7 +27,9 @@
       "maneuver": "go_straight",
       "initial_direction": null,
       "heading_reference": null,
-      "road_position": "rightmost_motor_lane"
+      "road_position": "rightmost_motor_lane",
+      "speed_evidence": null,
+      "speed_evidence_quote": null
     },
     {
       "id": "car_1",
@@ -36,12 +38,14 @@
       "maneuver": "go_straight",
       "initial_direction": null,
       "heading_reference": "toward Unter den Eichen",
-      "road_position": "leftmost_motor_lane"
+      "road_position": "leftmost_motor_lane",
+      "speed_evidence": null,
+      "speed_evidence_quote": null
     }
   ],
   "conflict": {
     "conflict_mechanism": "cyclist_crosses_vehicle_path_from_mixed_road",
     "collision_happened": true,
-    "collision_description": "A cyclist going straight on a mixed road collided with a car."
+    "collision_description": "A cyclist crossing from a mixed road was struck by a car."
   }
 }

@@ -27,7 +27,9 @@
       "maneuver": "go_straight",
       "initial_direction": "southeast",
       "heading_reference": "toward Müggelheim",
-      "road_position": null
+      "road_position": null,
+      "speed_evidence": "clearly_faster_than_context",
+      "speed_evidence_quote": "mit deutlich überhöhter Geschwindigkeit"
     },
     {
       "id": "cyclist_1",
@@ -36,12 +38,14 @@
       "maneuver": "go_straight",
       "initial_direction": null,
       "heading_reference": "toward Erwin-Bock-Straße",
-      "road_position": null
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
     }
   ],
   "conflict": {
     "conflict_mechanism": "cyclist_crosses_vehicle_path",
     "collision_happened": true,
-    "collision_description": "A car struck a cyclist crossing the road."
+    "collision_description": "A group of cyclists crossing the road were struck by a speeding car."
   }
 }

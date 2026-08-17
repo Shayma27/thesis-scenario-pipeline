@@ -21,27 +21,31 @@
   },
   "participants": [
     {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
       "id": "cyclist_1",
       "class": "cyclist",
       "type": "e_bike",
       "maneuver": "go_straight",
       "initial_direction": null,
       "heading_reference": "toward Spreeufer",
-      "road_position": null
-    },
-    {
-      "id": "car_1",
-      "class": "motor_vehicle",
-      "type": "car",
-      "maneuver": "enter_roadway",
-      "initial_direction": null,
-      "heading_reference": null,
-      "road_position": null
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
     }
   ],
   "conflict": {
-    "conflict_mechanism": "vehicle_entering_road_crosses",
+    "conflict_mechanism": "vehicle_crosses",
     "collision_happened": true,
-    "collision_description": "A car entering the road from the right side failed to see a cyclist and collided with them."
+    "collision_description": "A car crossing the path of a Pedelec rider collided with the rider."
   }
 }

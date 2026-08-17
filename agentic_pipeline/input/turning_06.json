@@ -27,7 +27,9 @@
       "maneuver": "go_straight",
       "initial_direction": null,
       "heading_reference": "toward Alte Schönhauser",
-      "road_position": null
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
     },
     {
       "id": "truck_1",
@@ -36,12 +38,14 @@
       "maneuver": "turn_right",
       "initial_direction": null,
       "heading_reference": null,
-      "road_position": null
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
     }
   ],
   "conflict": {
-    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_straight",
+    "conflict_mechanism": "right_turn_across",
     "collision_happened": true,
-    "collision_description": "A cyclist going straight was struck by a truck turning right."
+    "collision_description": "A truck turning right struck a cyclist going straight on the path."
   }
 }

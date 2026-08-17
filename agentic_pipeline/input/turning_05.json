@@ -27,7 +27,9 @@
       "maneuver": "turn_right",
       "initial_direction": null,
       "heading_reference": "toward Südostallee",
-      "road_position": null
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
     },
     {
       "id": "cyclist_1",
@@ -36,7 +38,9 @@
       "maneuver": "go_straight",
       "initial_direction": null,
       "heading_reference": null,
-      "road_position": null
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
     }
   ],
   "conflict": {

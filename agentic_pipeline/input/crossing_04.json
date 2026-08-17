@@ -27,7 +27,9 @@
       "maneuver": "go_straight",
       "initial_direction": "west",
       "heading_reference": null,
-      "road_position": null
+      "road_position": null,
+      "speed_evidence": "clearly_faster_than_context",
+      "speed_evidence_quote": "mit deutlich überhöhter Geschwindigkeit"
     },
     {
       "id": "cyclist_1",
@@ -36,7 +38,9 @@
       "maneuver": "go_straight",
       "initial_direction": "north",
       "heading_reference": null,
-      "road_position": null
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
     }
   ],
   "conflict": {
