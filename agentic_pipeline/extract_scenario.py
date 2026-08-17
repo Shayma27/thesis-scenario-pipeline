@@ -387,6 +387,69 @@ def _backfill_initial_direction(extracted: dict) -> None:
             participant["initial_direction"] = by_class[cls][0]
 
 
+_SPEED_EVIDENCE_PATTERN = re.compile(r"überhöht\w*", re.IGNORECASE)
+
+
+def _backfill_speed_evidence(extracted: dict) -> None:
+    """Deterministically surface explicit "überhöhte Geschwindigkeit"
+    (excessive/inappropriate speed) language from raw_text into
+    conflict.severity_text — a field Agent 3's speed_estimation.py already
+    reads (alongside collision_description/conflict_mechanism) but that
+    nothing in this pipeline had ever actually populated; it existed in the
+    downstream contract without a real source.
+
+    Same non-determinism class already handled elsewhere in this file for
+    compass/heading fields, not trusted to the LLM's own judgment here
+    either: live batch verification found the model captured this exact
+    phrase into collision_description for crossing_04 ("...struck by a
+    speeding car") but silently dropped the structurally identical "mit
+    deutlich überhöhter Geschwindigkeit" for crossing_03 — same wording,
+    inconsistent extraction.
+
+    Deliberately narrow — only the one verified pattern ("überhöht"), only
+    when attribution to a single participant class is unambiguous (same
+    position-based technique as _extract_heading_candidates: a class marker
+    must appear BEFORE the match in the same sentence, not just anywhere in
+    it — a naive "anywhere" check misattributes crossing_03's case, whose
+    sentence also mentions "Radfahrenden" later on). Never invents evidence
+    for an unstated participant; only ever adds a fact already true of the
+    raw text that the model happened to miss.
+    """
+    raw_text = extracted.get("source", {}).get("raw_text", "") or ""
+    sentences = re.split(r"(?<=[.!?])\s+", raw_text)
+
+    matched_class = None
+    for sentence in sentences:
+        match = _SPEED_EVIDENCE_PATTERN.search(sentence)
+        if not match:
+            continue
+        lowered = sentence.lower()
+        match_pos = match.start()
+        cyclist_positions = [lowered.find(m) for m in _CYCLIST_MARKERS if m in lowered]
+        motor_positions = [lowered.find(m) for m in _MOTOR_MARKERS if m in lowered]
+        cyclist_pos = min(cyclist_positions) if cyclist_positions else None
+        motor_pos = min(motor_positions) if motor_positions else None
+        candidates = []
+        if cyclist_pos is not None and cyclist_pos < match_pos:
+            candidates.append("cyclist")
+        if motor_pos is not None and motor_pos < match_pos:
+            candidates.append("motor_vehicle")
+        if len(candidates) == 1:
+            matched_class = candidates[0]
+            break
+
+    if matched_class is None:
+        return
+
+    for participant in extracted.get("participants", []):
+        if participant.get("class") == matched_class:
+            vehicle_type = participant.get("type") or matched_class.replace("_", " ")
+            extracted.setdefault("conflict", {})["severity_text"] = (
+                f"The {vehicle_type} was traveling at excessive/inappropriate speed."
+            )
+            break
+
+
 _HEADING_PATTERN = re.compile(
     r"(?:Richtung|nach)\s+"
     r"([A-ZÄÖÜ][\wÄÖÜäöüß-]*(?:\s+(?:den|der|die)\s+[A-ZÄÖÜ][\wÄÖÜäöüß-]*|\s+[A-ZÄÖÜ][\wÄÖÜäöüß-]*)*)"
@@ -862,6 +925,7 @@ def extract_scenario(report_text: str, scenario_id: str) -> dict:
     _enforce_turning_definition(extracted)
     _validate_direction_grounding(extracted)
     _backfill_initial_direction(extracted)
+    _backfill_speed_evidence(extracted)
     _backfill_heading_references(extracted)
     _backfill_road_position(extracted)
     _backfill_intersection(extracted)
