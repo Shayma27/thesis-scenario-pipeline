@@ -50,6 +50,15 @@ SCHEMA = {
     "road_positions": ["leftmost_motor_lane", "middle_motor_lane", "rightmost_motor_lane"],
     # Which side of the road a cycling facility is on, only if explicitly stated.
     "bike_facility_positions": ["left", "middle", "right", "rightmost"],
+    # Qualitative speed evidence, per participant — same vocabulary Agent 3
+    # (speed_estimation.py) already concretizes into an actual km/h value.
+    # Extracted here, not left to Agent 3's own text re-parsing, because
+    # only Agent 1 reads raw_text at all (see extract_scenario.py's own
+    # module docstring and the project's standing rule on this).
+    "speed_evidence_relations": [
+        "stopped", "clearly_slower_than_context", "slower_than_context",
+        "approximately_contextual", "faster_than_context", "clearly_faster_than_context",
+    ],
 }
 
 
@@ -119,11 +128,19 @@ RULES:
   participants independently every time. Write it in ENGLISH, short — "Richtung Torstraße"
   becomes "toward Torstraße", "in Höhe der Braunsdorfstraße" becomes "near Braunsdorfstraße" —
   never copy the German phrase verbatim. Null only if truly nothing like this is stated.
+- speed_evidence (per participant, ONLY about that participant's own speed — never the other
+  participant's, even if the report describes it): "deutlich überhöht(e/er)"/"raste"=
+  clearly_faster_than_context, "überhöht"/"zu schnell"=faster_than_context, "langsam"/"gering(e)"=
+  slower_than_context, "sehr langsam"/"deutlich zu langsam"=clearly_slower_than_context, explicitly
+  came to a stop mid-maneuver (NOT the same as maneuver=stop/wait/parked, which is stationary the
+  whole time)=stopped. speed_evidence_quote: the exact German phrase as it appears in the report
+  (verbatim substring, copy it exactly — do NOT translate it here, unlike heading_reference), or
+  null if speed_evidence is null. Never set speed_evidence without a literal phrase to quote.
 
 ALLOWED VALUES — scenario_type:{_pipe(SCHEMA['scenario_types'])} participant_type:{_pipe(SCHEMA['participant_types'])}
 maneuver:{_pipe(SCHEMA['maneuvers'])} bike_facility_type:{_pipe(SCHEMA['bike_facility_types'])}
 directions:{_pipe(SCHEMA['directions'])} road_position:{_pipe(SCHEMA['road_positions'])}
-bike_facility_position:{_pipe(SCHEMA['bike_facility_positions'])}
+bike_facility_position:{_pipe(SCHEMA['bike_facility_positions'])} speed_evidence:{_pipe(SCHEMA['speed_evidence_relations'])}
 
 STRUCTURE (fill exactly this, nothing more — no osm_query/city/lane counts/speeds/coordinates):
 {{ "schema_version": "0.2",
@@ -133,9 +150,11 @@ STRUCTURE (fill exactly this, nothing more — no osm_query/city/lane counts/spe
   "road_context": {{ "bike_facility_type": "<allowed or null>", "bike_facility_position": "<allowed or null>" }},
   "participants": [
     {{ "id": "<truck_1/car_1/bus_1>", "class": "motor_vehicle", "type": "<allowed>", "maneuver": "<allowed>",
-       "initial_direction": "<allowed or null>", "heading_reference": "<short English phrase or null>", "road_position": "<allowed or null>" }},
+       "initial_direction": "<allowed or null>", "heading_reference": "<short English phrase or null>", "road_position": "<allowed or null>",
+       "speed_evidence": "<allowed or null>", "speed_evidence_quote": "<verbatim German phrase or null>" }},
     {{ "id": "cyclist_1", "class": "cyclist", "type": "<bicycle/e_bike>", "maneuver": "<allowed>",
-       "initial_direction": "<allowed or null>", "heading_reference": "<short English phrase or null>", "road_position": "<allowed or null>" }}
+       "initial_direction": "<allowed or null>", "heading_reference": "<short English phrase or null>", "road_position": "<allowed or null>",
+       "speed_evidence": "<allowed or null>", "speed_evidence_quote": "<verbatim German phrase or null>" }}
   ],
   "conflict": {{ "conflict_mechanism": "<snake_case>",
     "collision_happened": <bool>, "collision_description": "<one English sentence>" }}
@@ -161,8 +180,8 @@ CORRECT OUTPUT:
   "location": { "primary_road": "Müggelheimer Damm", "secondary_road": "Straße zum Müggelhort", "house_number_reference": null },
   "road_context": { "bike_facility_type": "shared_foot_cycle_path", "bike_facility_position": null },
   "participants": [
-    { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "turn_right", "initial_direction": "south", "heading_reference": "toward Köpenick", "road_position": null },
-    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "go_straight", "initial_direction": null, "heading_reference": null, "road_position": null }
+    { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "turn_right", "initial_direction": "south", "heading_reference": "toward Köpenick", "road_position": null, "speed_evidence": null, "speed_evidence_quote": null },
+    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "go_straight", "initial_direction": null, "heading_reference": null, "road_position": null, "speed_evidence": null, "speed_evidence_quote": null }
   ],
   "conflict": { "conflict_mechanism": "right_turn_across_shared_path", "collision_happened": true, "collision_description": "A car turning right struck a cyclist going straight on the shared path." }
 }
@@ -178,8 +197,8 @@ CORRECT OUTPUT:
   "location": { "primary_road": "Landsberger Allee", "secondary_road": null, "house_number_reference": null },
   "road_context": { "bike_facility_type": "median_strip", "bike_facility_position": null },
   "participants": [
-    { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "go_straight", "initial_direction": "west", "heading_reference": null, "road_position": null },
-    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "go_straight", "initial_direction": "north", "heading_reference": null, "road_position": null }
+    { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "go_straight", "initial_direction": "west", "heading_reference": null, "road_position": null, "speed_evidence": "clearly_faster_than_context", "speed_evidence_quote": "mit deutlich überhöhter Geschwindigkeit" },
+    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "go_straight", "initial_direction": "north", "heading_reference": null, "road_position": null, "speed_evidence": null, "speed_evidence_quote": null }
   ],
   "conflict": { "conflict_mechanism": "cyclist_crosses_vehicle_path_from_median", "collision_happened": true, "collision_description": "A cyclist crossing from a green median strip was struck by a speeding car." }
 }
@@ -195,8 +214,8 @@ CORRECT OUTPUT:
   "location": { "primary_road": "Alt-Biesdorf", "secondary_road": null, "house_number_reference": null },
   "road_context": { "bike_facility_type": null, "bike_facility_position": null },
   "participants": [
-    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "change_lane_left_to_right", "initial_direction": null, "heading_reference": "toward Grabensprung", "road_position": "leftmost_motor_lane" },
-    { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "go_straight", "initial_direction": null, "heading_reference": null, "road_position": null }
+    { "id": "cyclist_1", "class": "cyclist", "type": "bicycle", "maneuver": "change_lane_left_to_right", "initial_direction": null, "heading_reference": "toward Grabensprung", "road_position": "leftmost_motor_lane", "speed_evidence": null, "speed_evidence_quote": null },
+    { "id": "car_1", "class": "motor_vehicle", "type": "car", "maneuver": "go_straight", "initial_direction": null, "heading_reference": null, "road_position": null, "speed_evidence": null, "speed_evidence_quote": null }
   ],
   "conflict": { "conflict_mechanism": "cyclist_lane_change_into_car_path", "collision_happened": true, "collision_description": "A cyclist changed from the leftmost to the rightmost of three lanes and collided with a car traveling in the same direction." }
 }
@@ -213,6 +232,7 @@ _TURNING_MANEUVERS = {"turn_right", "turn_left", "turn_right_into_parking"}
 _ENUM_FIELDS = {
     "initial_direction": SCHEMA["directions"],
     "road_position": SCHEMA["road_positions"],
+    "speed_evidence": SCHEMA["speed_evidence_relations"],
 }
 _ROAD_CONTEXT_ENUM_FIELDS = {
     "bike_facility_type": SCHEMA["bike_facility_types"],
@@ -234,6 +254,11 @@ def _sanitize_enum_fields(extracted: dict) -> None:
             value = participant.get(field)
             if value is not None and value not in allowed:
                 participant[field] = None
+                # speed_evidence_quote is meaningless without a valid
+                # category to attach to — clear it too so a later stage
+                # never sees an orphaned quote with no relation.
+                if field == "speed_evidence":
+                    participant["speed_evidence_quote"] = None
 
         # maneuver: invalid values degrade to the recognizable prefix rather
         # than being discarded wholesale — e.g. "turn_left_into_parking" (a
@@ -387,38 +412,59 @@ def _backfill_initial_direction(extracted: dict) -> None:
             participant["initial_direction"] = by_class[cls][0]
 
 
+def _validate_speed_evidence_grounding(extracted: dict) -> None:
+    """Null out a participant's speed_evidence (and its quote) unless
+    speed_evidence_quote actually appears verbatim in raw_text. Same
+    principle as _validate_direction_grounding, and the same lesson learned
+    live-verifying Agent 3's own speed classifier (turning_03: the model
+    claimed "stopped" quoting the word "stopped", which appears nowhere in
+    the actual text) — a non-empty quote string is not proof of anything;
+    only a real substring match is. Deliberately loose about attribution
+    (doesn't re-check which participant the quote "should" belong to,
+    only whether it's real at all) — that's what makes it safe to run
+    unconditionally: it can only null a value, never invent one.
+    """
+    raw_text = (extracted.get("source", {}).get("raw_text", "") or "").lower()
+    for participant in extracted.get("participants", []):
+        relation = participant.get("speed_evidence")
+        if relation is None:
+            continue
+        quote = participant.get("speed_evidence_quote")
+        if not isinstance(quote, str) or not quote.strip() or quote.strip().lower() not in raw_text:
+            participant["speed_evidence"] = None
+            participant["speed_evidence_quote"] = None
+
+
 _SPEED_EVIDENCE_PATTERN = re.compile(r"überhöht\w*", re.IGNORECASE)
 
 
 def _backfill_speed_evidence(extracted: dict) -> None:
-    """Deterministically surface explicit "überhöhte Geschwindigkeit"
-    (excessive/inappropriate speed) language from raw_text into
-    conflict.severity_text — a field Agent 3's speed_estimation.py already
-    reads (alongside collision_description/conflict_mechanism) but that
-    nothing in this pipeline had ever actually populated; it existed in the
-    downstream contract without a real source.
+    """Same position-based approach as _backfill_initial_direction, for the
+    one speed-evidence pattern verified live to be dropped inconsistently:
+    the model captured "mit deutlich überhöhter Geschwindigkeit" into
+    crossing_04's speed_evidence/collision_description but silently
+    dropped the structurally identical phrase for crossing_03 — same
+    wording, inconsistent extraction, not caught by
+    _validate_speed_evidence_grounding since it only nulls unsupported
+    claims, it can't fill a gap where the model left speed_evidence null
+    entirely. Only fills gaps (matches _backfill_initial_direction running
+    after its own validation pass), and only when attribution to a single
+    participant class is unambiguous (a class marker must appear BEFORE
+    the match in the same sentence, not just anywhere in it — a naive
+    "anywhere" check misattributes crossing_03's case, whose sentence also
+    mentions "Radfahrenden" later on).
 
-    Same non-determinism class already handled elsewhere in this file for
-    compass/heading fields, not trusted to the LLM's own judgment here
-    either: live batch verification found the model captured this exact
-    phrase into collision_description for crossing_04 ("...struck by a
-    speeding car") but silently dropped the structurally identical "mit
-    deutlich überhöhter Geschwindigkeit" for crossing_03 — same wording,
-    inconsistent extraction.
-
-    Deliberately narrow — only the one verified pattern ("überhöht"), only
-    when attribution to a single participant class is unambiguous (same
-    position-based technique as _extract_heading_candidates: a class marker
-    must appear BEFORE the match in the same sentence, not just anywhere in
-    it — a naive "anywhere" check misattributes crossing_03's case, whose
-    sentence also mentions "Radfahrenden" later on). Never invents evidence
-    for an unstated participant; only ever adds a fact already true of the
-    raw text that the model happened to miss.
+    Deliberately narrow: this is a backstop for one verified gap, not a
+    general speed-evidence extractor — that's the LLM's job, done directly
+    in the main extraction call now that speed_evidence is part of the
+    schema. Widen the pattern only against real, verified cases found the
+    same way this one was, never speculatively.
     """
     raw_text = extracted.get("source", {}).get("raw_text", "") or ""
     sentences = re.split(r"(?<=[.!?])\s+", raw_text)
 
     matched_class = None
+    matched_quote = None
     for sentence in sentences:
         match = _SPEED_EVIDENCE_PATTERN.search(sentence)
         if not match:
@@ -436,17 +482,16 @@ def _backfill_speed_evidence(extracted: dict) -> None:
             candidates.append("motor_vehicle")
         if len(candidates) == 1:
             matched_class = candidates[0]
+            matched_quote = match.group(0)
             break
 
     if matched_class is None:
         return
 
     for participant in extracted.get("participants", []):
-        if participant.get("class") == matched_class:
-            vehicle_type = participant.get("type") or matched_class.replace("_", " ")
-            extracted.setdefault("conflict", {})["severity_text"] = (
-                f"The {vehicle_type} was traveling at excessive/inappropriate speed."
-            )
+        if participant.get("class") == matched_class and participant.get("speed_evidence") is None:
+            participant["speed_evidence"] = "clearly_faster_than_context"
+            participant["speed_evidence_quote"] = matched_quote
             break
 
 
@@ -925,6 +970,7 @@ def extract_scenario(report_text: str, scenario_id: str) -> dict:
     _enforce_turning_definition(extracted)
     _validate_direction_grounding(extracted)
     _backfill_initial_direction(extracted)
+    _validate_speed_evidence_grounding(extracted)
     _backfill_speed_evidence(extracted)
     _backfill_heading_references(extracted)
     _backfill_road_position(extracted)

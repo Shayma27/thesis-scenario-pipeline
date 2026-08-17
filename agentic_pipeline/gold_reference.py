@@ -30,6 +30,19 @@ Two review passes went into the original version of this file:
 Sentinel used in this file only (not a real schema value):
     SKIP — this field is genuinely ambiguous from the text; do not test it,
     see the scenario's "notes" for why.
+
+speed_evidence (per participant, added after this file's original audits —
+docs/gold_reference_audit.md predates this field entirely, so its absence
+there is not something the audit missed, the field didn't exist yet):
+verified by directly scanning all 19 reports' raw_text for German
+speed/severity vocabulary (schnell, raste, rasant, geschwindigkeit, tempo,
+gering, langsam, bremst, etc.) — only crossing_03 and crossing_04 contain
+any of it, both "überhöhter Geschwindigkeit" for the car. Both are given an
+explicit gold entry below; every other participant in every other scenario
+is left without a speed_evidence key, which is a deliberate choice, not an
+oversight — omitted keys aren't checked by test_semantic_correctness.py's
+per-participant loop, and there is nothing to check: no other report has
+any speed-related language at all, verified programmatically, not assumed.
 """
 
 SKIP = "__SKIP__"
@@ -243,8 +256,8 @@ GOLD = {
         "location": {"primary_road": "Müggelheimer Damm", "secondary_road": None, "intersection": "Waldnesselweg/Erwin-Bock Str."},
         "road_context": {"bike_facility_type": None, "bike_facility_position": None},
         "participants": {
-            "car_1": {"type": "car", "maneuver": "go_straight", "initial_direction": "southeast", "heading_reference": "toward Müggelheim", "road_position": None},
-            "cyclist_1": {"type": "bicycle", "maneuver": "go_straight", "initial_direction": None, "heading_reference": "toward Erwin-Bock-Straße", "road_position": None},
+            "car_1": {"type": "car", "maneuver": "go_straight", "initial_direction": "southeast", "heading_reference": "toward Müggelheim", "road_position": None, "speed_evidence": "clearly_faster_than_context"},
+            "cyclist_1": {"type": "bicycle", "maneuver": "go_straight", "initial_direction": None, "heading_reference": "toward Erwin-Bock-Straße", "road_position": None, "speed_evidence": None},
         },
         "collision_happened": True,
         "extra_forbidden": [],
@@ -256,15 +269,21 @@ GOLD = {
                  "geometry. car_1 direction is explicit ('Richtung Südosten' = southeast) and was "
                  "missed in every run so far. car_1.heading_reference='toward Müggelheim': "
                  "'nach Müggelheim' is a destination phrase for the car ('nach X' construction, "
-                 "user decision to extend extraction to cover it alongside 'Richtung X').",
+                 "user decision to extend extraction to cover it alongside 'Richtung X'). "
+                 "car_1.speed_evidence='clearly_faster_than_context': raw_text says 'mit deutlich "
+                 "überhöhter Geschwindigkeit' — structurally identical phrasing to crossing_04's "
+                 "car, which the live model DID capture; this report is the exact live-verified "
+                 "case where it silently dropped the same evidence instead — the reason "
+                 "speed_evidence was added to Agent 1's schema at all, with a deterministic "
+                 "backfill (_backfill_speed_evidence) as a safety net for exactly this pattern.",
     },
     "crossing_04": {
         "scenario_type": "crossing",
         "location": {"primary_road": "Landsberger Allee", "secondary_road": None, "intersection": None},
         "road_context": {"bike_facility_type": "median_strip", "bike_facility_position": None},
         "participants": {
-            "car_1": {"type": "car", "maneuver": "go_straight", "initial_direction": "west", "heading_reference": None, "road_position": None},
-            "cyclist_1": {"type": "bicycle", "maneuver": "go_straight", "initial_direction": "north", "heading_reference": None, "road_position": None},
+            "car_1": {"type": "car", "maneuver": "go_straight", "initial_direction": "west", "heading_reference": None, "road_position": None, "speed_evidence": "clearly_faster_than_context"},
+            "cyclist_1": {"type": "bicycle", "maneuver": "go_straight", "initial_direction": "north", "heading_reference": None, "road_position": None, "speed_evidence": None},
         },
         "collision_happened": True,
         "extra_forbidden": [],
@@ -272,7 +291,10 @@ GOLD = {
                  "about 'begrünter Mittelstreifen' being confused with a traffic-light color: "
                  "current collision_description says 'green median strip', a normal English "
                  "rendering of 'begrünt' (vegetated/planted) — no actual signal-color "
-                 "confusion found in real output, so no correction needed here.",
+                 "confusion found in real output, so no correction needed here. "
+                 "car_1.speed_evidence='clearly_faster_than_context': raw_text says 'mit "
+                 "deutlich überhöhter Geschwindigkeit fuhr' — explicit, unambiguous, and this "
+                 "report is the file's own few-shot example demonstrating the field.",
     },
     "crossing_05": {
         "scenario_type": "crossing",

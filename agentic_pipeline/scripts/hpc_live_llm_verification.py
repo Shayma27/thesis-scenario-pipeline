@@ -63,93 +63,37 @@ def step2_raw_llm_call() -> None:
         traceback.print_exc()
 
 
-def step3_speed_estimate_raw() -> None:
-    print(f"\n{'=' * W}\nSTEP 3 — raw _llm_speed_estimate() call (bypasses its own except)\n{'=' * W}")
-    import speed_estimation
+def step3_speed_evidence_extraction_raw() -> None:
+    print(f"\n{'=' * W}\nSTEP 3 — raw extract_scenario() call for crossing_04\n{'=' * W}")
+    # Speed evidence is no longer a separate Agent 3 LLM call at all (see
+    # speed_estimation.py's module docstring for why that design was
+    # retired) — it's extracted directly by Agent 1's own extraction call,
+    # the only LLM call left in this pipeline that reads raw_text. This
+    # step calls extract_scenario() directly (bypassing the tool-calling
+    # loop) on crossing_04's real report text and prints exactly what
+    # came back for speed_evidence/speed_evidence_quote, to see the real
+    # traceback if something fails instead of a swallowed exception deep
+    # inside the tool loop.
+    from extract_scenario import extract_scenario
 
-    envelope = speed_estimation._grounded_envelope("car", 50.0, is_crossing=True)
-    conflict = {
-        "collision_description": "A cyclist crossing from a green median strip was struck by a speeding car.",
-        "severity_text": None,
-        "conflict_mechanism": "cyclist_crosses_vehicle_path_from_median",
-    }
-    prompt_fn = speed_estimation._llm_speed_estimate
+    report_text = (
+        "Eine Rad fahrende Person querte an einer Querungshilfe unachtsam die "
+        "stadteinwärts führende Richtungsfahrbahn der Landsberger Allee vom "
+        "begrünten Mittelstreifen kommend nach Norden. Dabei wurde sie von "
+        "einer Pkw fahrenden Person ungebremst erfasst, die auf der "
+        "Landsberger Allee Richtung Westen mit deutlich überhöhter "
+        "Geschwindigkeit fuhr."
+    )
     try:
-        client = llm_client.get_client()
-        # Reimplement the body of _llm_speed_estimate without its try/except
-        # to surface the real traceback instead of a bare None.
-        import inspect
-        print("Calling with real crossing_04 conflict text + car envelope...")
-        result = None
-        try:
-            result = prompt_fn("car (car_1)", envelope, conflict)
-        except Exception:
-            pass
-        print(f"_llm_speed_estimate() returned: {result}")
-        if result is None:
-            print("Returned None — re-running the same call WITHOUT the except to see why:")
-            # Manually inline the guarded section (kept in sync with
-            # speed_estimation._llm_speed_estimate's real prompt/schema —
-            # the categorical classify-only design, not the old numeric
-            # narrowing one it replaced after live testing found it
-            # producing direction-inconsistent speeds).
-            response = client.chat.completions.create(
-                model=llm_client.MODEL,
-                messages=[
-                    {"role": "system", "content": (
-                        "You classify qualitative speed evidence for accident "
-                        "reconstruction from report text into a fixed set of "
-                        "categories. You never output a number. You only "
-                        "report evidence that is specifically about the named "
-                        "vehicle — never about a different participant in the "
-                        "same report."
-                    )},
-                    {"role": "user", "content": (
-                        "A traffic-engineering pipeline is reconstructing a German police "
-                        "accident report as a simulation. You are assessing ONLY the "
-                        "car (car_1)'s speed — never any other participant's, even if "
-                        "the report describes one.\n\n"
-                        f"For reference only (do not return a number): this vehicle's "
-                        f"grounded typical/legal speed context is centered around "
-                        f"{envelope['nominal_kmh']} km/h.\n\n"
-                        "Based ONLY on the report text below, classify what it says about "
-                        "THIS vehicle's own speed relative to that context:\n"
-                        '- "stopped": the report says this vehicle was stationary/had '
-                        "stopped (distinct from being parked throughout).\n"
-                        '- "clearly_slower_than_context": clearly, markedly slower than '
-                        "typical.\n"
-                        '- "slower_than_context": somewhat slower than typical.\n'
-                        '- "approximately_contextual": the report addresses this vehicle\'s '
-                        "speed and indicates it was roughly typical.\n"
-                        '- "faster_than_context": somewhat faster than typical.\n'
-                        '- "clearly_faster_than_context": clearly, markedly faster / '
-                        'exceeded the appropriate speed (e.g. "überhöhte Geschwindigkeit", '
-                        '"raste", "deutlich zu schnell").\n'
-                        '- "unknown": the report says nothing about THIS vehicle\'s own '
-                        "speed.\n\n"
-                        "If your evidence quote is actually about a different participant, "
-                        "or isn't specific to this vehicle's own speed, you MUST classify "
-                        'as "unknown" — never let another participant\'s speed evidence '
-                        "apply to this one.\n\n"
-                        f"collision_description: {conflict.get('collision_description')}\n"
-                        f"severity_text: {conflict.get('severity_text')}\n"
-                        f"conflict_mechanism: {conflict.get('conflict_mechanism')}\n\n"
-                        "Respond as JSON only: "
-                        '{"knowledge_status": "report_qualitative_signal" or '
-                        '"not_reported", '
-                        '"qualitative_relation": "<one of the categories above>", '
-                        '"evidence_quote": "<verbatim phrase from the report text, or '
-                        'empty string if not_reported>"}'
-                    )},
-                ],
-                temperature=0.0,
-                max_tokens=200,
-                response_format={"type": "json_object"},
-                timeout=30,
+        extracted = extract_scenario(report_text, "crossing_04_diagnostic")
+        print("extract_scenario() returned OK. Participants:")
+        for p in extracted.get("participants", []):
+            print(
+                f"  {p.get('id')}: speed_evidence={p.get('speed_evidence')!r}"
+                f"  quote={p.get('speed_evidence_quote')!r}"
             )
-            print(f"Raw response content: {response.choices[0].message.content!r}")
     except Exception:
-        print("Raw diagnostic call FAILED — full traceback:")
+        print("extract_scenario() FAILED — full traceback:")
         traceback.print_exc()
 
 
@@ -199,7 +143,7 @@ def main() -> None:
     args = sys.argv[1:]
     step1_connectivity()
     step2_raw_llm_call()
-    step3_speed_estimate_raw()
+    step3_speed_evidence_extraction_raw()
     if args == ["all"]:
         scenario_ids = [sid for sid, _text, _stype in load_reports()]
     elif args:

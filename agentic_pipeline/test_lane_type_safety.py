@@ -45,7 +45,6 @@ from urllib.error import URLError
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import osm_enrichment
-import speed_estimation
 from complete_parameters import complete_parameters
 from generate_scenario import _resolve_road_id
 from osm_enrichment import detect_topology, enrich_with_osm
@@ -64,10 +63,6 @@ ALLOWED_TYPES = {
 
 def _no_network(*_args, **_kwargs):
     raise URLError("network calls disabled in test_lane_type_safety.py — cache only")
-
-
-def _no_llm(*_args, **_kwargs):
-    raise ConnectionError("LLM calls disabled in test_lane_type_safety.py — offline only")
 
 
 def _lane_types(xodr_filename: str, road_id: int) -> dict[int, str]:
@@ -133,15 +128,15 @@ def _audit_one(scenario_id: str, agent1_data: dict) -> list[str]:
 
 
 def main() -> None:
+    # speed_estimation.py makes no network call of any kind (Agent 3's
+    # speed evidence is read straight from Agent 1's already-grounded
+    # extraction), so only OSM network access needs patching here.
     network_patch = patch.object(osm_enrichment, "urlopen", side_effect=_no_network)
-    llm_patch = patch.object(speed_estimation, "get_client", side_effect=_no_llm)
     network_patch.start()
-    llm_patch.start()
     try:
         _run()
     finally:
         network_patch.stop()
-        llm_patch.stop()
 
 
 def _run() -> None:

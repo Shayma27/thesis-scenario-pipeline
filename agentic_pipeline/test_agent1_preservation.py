@@ -30,7 +30,6 @@ from urllib.error import URLError
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import osm_enrichment
-import speed_estimation
 from complete_parameters import complete_parameters
 from osm_enrichment import enrich_with_osm
 from pipeline import _fill_location_query_fields
@@ -44,29 +43,22 @@ def _no_network(*_args, **_kwargs):
     raise URLError("network calls disabled in test_agent1_preservation.py — cache only")
 
 
-def _no_llm(*_args, **_kwargs):
-    raise ConnectionError("LLM calls disabled in test_agent1_preservation.py — offline only")
-
-
 def main() -> None:
     # This test checks a structural invariant (enrichment never overwrites an
     # Agent-1 field), not OSM enrichment's own correctness — it doesn't need
     # live data to be meaningful, and live Nominatim/Overpass calls make a
     # regression test slow and flaky. Cache hits still work; cache misses
     # fail fast into osm_enrichment.py's already-handled network-error path
-    # instead of making a real request. Same reasoning for the LLM client:
-    # complete_parameters() now calls speed_estimation.estimate_actor_speed(),
-    # which is designed to fall back to its grounded default when the LLM is
-    # unreachable — patched here so that fallback path is what actually runs.
+    # instead of making a real request. speed_estimation.py makes no network
+    # call of any kind (Agent 3's speed evidence is read straight from
+    # Agent 1's already-grounded extraction — see its module docstring), so
+    # no LLM patching is needed here at all.
     network_patch = patch.object(osm_enrichment, "urlopen", side_effect=_no_network)
-    llm_patch = patch.object(speed_estimation, "get_client", side_effect=_no_llm)
     network_patch.start()
-    llm_patch.start()
     try:
         _run()
     finally:
         network_patch.stop()
-        llm_patch.stop()
 
 
 def _run() -> None:

@@ -1,44 +1,60 @@
 """
 Agent 3 — speed estimation
 ===========================
-Grounded, cited speed defaults for actors, with an optional LLM-reasoned
-narrowing step used only when the report's own text carries qualitative
-evidence about speed (conflict.collision_description / severity_text /
-conflict_mechanism — extracted by Agent 1, unused anywhere downstream
-until now).
+Grounded, cited speed defaults for actors, narrowed only when Agent 1's
+own extraction (participant.speed_evidence / speed_evidence_quote —
+extract_scenario.py) carries real, grounded qualitative evidence about
+that specific actor's speed.
 
-Design (see docs/next_chat_briefing_parameter_completion.md and the
-conversation that scoped this module): the LLM never invents a number
-from nothing, and — as of the live-model verification pass that found the
-original design's flaw — it never invents a *calibrated* number at all.
-Live testing against the real 8B model on crossing_04 (report text:
-"deutlich überhöhter Geschwindigkeit" — clearly excessive speed) showed
-the model correctly reading the qualitative evidence but failing at
-turning it into a number: asked for a narrowed km/h range, it returned the
-full un-narrowed envelope, whose midpoint (25 km/h) ended up *slower* than
-the non-LLM grounded default (40 km/h) — the opposite of what "speeding"
-should produce. There is no rulebook (StVO, RiLSA, or otherwise) that
-defines what number "clearly excessive" means, so asking an 8B model to
-invent one was asking it to hallucinate a calibration nothing grounds.
+Design history (see docs/next_chat_briefing_parameter_completion.md and
+the conversation that scoped this module) — two live-verified iterations:
 
-The fix, following the same LLM/formal-layer split used by SoVAR (Guo et
-al., "SoVAR: Building Generalizable Scenarios from Accident Reports for
-Autonomous Driving Testing," ASE 2024, DOI 10.1145/3691620.3695037 — LLM
-extracts, a formal solver concretizes) and the Extended Scenic DSL paper
-(LLM's output constrained to an enumerated, validated schema, not free
-numeric generation): the LLM's ONLY job is classifying qualitative
-evidence into a fixed category — is this specific actor's speed reported
-as stopped, slower, about normal, faster, or clearly faster than the
-grounded context, with a verbatim quote, or "unknown" if the report says
-nothing about THIS actor. Turning that category into a number is
-deterministic Python (_concretize_qualitative_relation), never the LLM,
-and the result is validated for direction-consistency before it can reach
-output (a "faster" classification that doesn't produce a value above the
-grounded nominal is rejected, not trusted). Any failure (unreachable
-server, malformed output, no textual evidence, a classification that
-fails its own consistency check) falls back to the grounded default
-directly. This module never blocks the pipeline on LLM availability —
-every code path returns a usable speed.
+1. This module originally asked its OWN LLM to both classify AND
+   numerically narrow speed evidence. Live testing against the real 8B
+   model on crossing_04 ("deutlich überhöhter Geschwindigkeit" — clearly
+   excessive speed) showed it correctly reading the evidence but failing
+   to turn it into a number: asked for a narrowed km/h range, it returned
+   the full un-narrowed envelope, whose midpoint (25 km/h) ended up
+   *slower* than the non-LLM grounded default (40 km/h) — backwards. No
+   rulebook (StVO, RiLSA, or otherwise) defines what number "clearly
+   excessive" means, so asking an 8B model to invent one was asking it to
+   hallucinate a calibration nothing grounds. Fixed by constraining the
+   LLM to classify only (a fixed category, never a number) and moving
+   concretization to deterministic Python (_concretize_qualitative_relation,
+   below) — following the same LLM/formal-layer split used by SoVAR (Guo
+   et al., "SoVAR: Building Generalizable Scenarios from Accident Reports
+   for Autonomous Driving Testing," ASE 2024, DOI 10.1145/3691620.3695037)
+   and the Extended Scenic DSL paper.
+
+2. That fix still had this module reading conflict.collision_description/
+   severity_text and running its own second LLM call to classify — but
+   Agent 1's OWN LLM call already reads raw_text once and had already
+   silently dropped this exact evidence for one report (crossing_03) while
+   catching it for another (crossing_04, identical phrasing) — a second
+   LLM call reading Agent 1's already-lossy summary couldn't fix a gap
+   that happened upstream of it. Consolidated: Agent 1 now extracts
+   speed_evidence/speed_evidence_quote directly from raw_text as part of
+   its one extraction call (the only place in this pipeline allowed to
+   read raw_text at all), with its own deterministic grounding
+   verification (_validate_speed_evidence_grounding — rejects a claim
+   whose quote isn't a real substring of the text, same principle as
+   turning_03's rejected fabricated "stopped" quote) and a deterministic
+   backfill for the one verified pattern the LLM has been seen to drop
+   (_backfill_speed_evidence). This module no longer makes any LLM call
+   at all — it only ever reads what Agent 1 already grounded, then
+   concretizes deterministically. One LLM call in the whole pipeline
+   reads raw text, matching the project's standing rule that Agent 3
+   never gets its own raw-text access.
+
+Turning a classified relation into a number is deterministic Python
+(_concretize_qualitative_relation), and the result is validated for
+direction-consistency before it can reach output (a "faster"
+classification that doesn't produce a value above the grounded nominal is
+rejected, not trusted — the exact check that would have caught the
+original crossing_04 bug). Any failure (no evidence, an unrecognized
+relation, a classification that fails its own consistency check) falls
+back to the grounded default directly. This module never depends on any
+network resource — every code path returns a usable speed offline.
 
 Citations for the grounded envelope (verified against primary sources,
 not secondhand summaries — see conversation history):
@@ -82,10 +98,6 @@ facts; the numbers above them are the only ones that are.
 """
 from __future__ import annotations
 
-import json
-
-from llm_client import get_client, MODEL
-
 # ── Grounded envelope constants ─────────────────────────────────────────
 
 MOTOR_STVO_INNERORTS_KMH = 50.0
@@ -102,9 +114,6 @@ EBIKE_LEGAL_CEILING_KMH = 25.0
 MOTOR_SAFETY_CLAMP_FACTOR = 1.6
 CYCLIST_SAFETY_CAP_KMH = 40.0
 EBIKE_SAFETY_CAP_KMH = 35.0
-
-_LLM_TIMEOUT_S = 10.0
-
 
 def _kmh_to_mps(kmh: float) -> float:
     return kmh / 3.6
@@ -220,104 +229,27 @@ _QUALITATIVE_RELATIONS = (
 )
 
 
-def _llm_speed_estimate(vehicle_label: str, envelope: dict, conflict: dict) -> dict | None:
-    """Ask the LLM to classify — never quantify — what the report's own
-    words say about THIS SPECIFIC actor's speed. Returns a dict with
-    knowledge_status / qualitative_relation / evidence_quote on a
-    well-formed response, or None on any failure (unreachable server,
-    malformed output, a report_qualitative_signal with no evidence_quote
-    or an unrecognized relation) — callers must treat None as "use the
-    grounded default directly," never as an error to propagate.
+def _read_speed_evidence(data: dict, actor_id: str) -> tuple[str, str] | None:
+    """Read this actor's already-grounded speed evidence directly from
+    Agent 1's output — no LLM call, no re-parsing of prose. Returns
+    (relation, quote) or None if Agent 1 found no evidence for this actor.
 
-    Deliberately asks for a category, not a number — see module docstring
-    for why numeric narrowing was tried and failed live verification.
+    Trusts Agent 1's own grounding verification
+    (extract_scenario._validate_speed_evidence_grounding) completely,
+    the same way this module already trusts every other Agent-1 field —
+    it's the only place in the pipeline that reads raw_text at all. A
+    defensive re-check against SCHEMA validity still guards against a
+    malformed/unexpected value reaching the concretizer.
     """
-    prompt = (
-        "A traffic-engineering pipeline is reconstructing a German police "
-        f"accident report as a simulation. You are assessing ONLY the "
-        f"{vehicle_label}'s speed — never any other participant's, even if "
-        "the report describes one.\n\n"
-        f"For reference only (do not return a number): this vehicle's "
-        f"grounded typical/legal speed context is centered around "
-        f"{envelope['nominal_kmh']} km/h.\n\n"
-        "Based ONLY on the report text below, classify what it says about "
-        "THIS vehicle's own speed relative to that context:\n"
-        '- "stopped": the report says this vehicle was stationary/had '
-        "stopped (distinct from being parked throughout).\n"
-        '- "clearly_slower_than_context": clearly, markedly slower than '
-        "typical.\n"
-        '- "slower_than_context": somewhat slower than typical.\n'
-        '- "approximately_contextual": the report addresses this vehicle\'s '
-        "speed and indicates it was roughly typical.\n"
-        '- "faster_than_context": somewhat faster than typical.\n'
-        '- "clearly_faster_than_context": clearly, markedly faster / '
-        'exceeded the appropriate speed (e.g. "überhöhte Geschwindigkeit", '
-        '"raste", "deutlich zu schnell").\n'
-        '- "unknown": the report says nothing about THIS vehicle\'s own '
-        "speed.\n\n"
-        "If your evidence quote is actually about a different participant, "
-        "or isn't specific to this vehicle's own speed, you MUST classify "
-        'as "unknown" — never let another participant\'s speed evidence '
-        "apply to this one.\n\n"
-        f"collision_description: {conflict.get('collision_description')}\n"
-        f"severity_text: {conflict.get('severity_text')}\n"
-        f"conflict_mechanism: {conflict.get('conflict_mechanism')}\n\n"
-        "Respond as JSON only: "
-        '{"knowledge_status": "report_qualitative_signal" or '
-        '"not_reported", '
-        '"qualitative_relation": "<one of the categories above>", '
-        '"evidence_quote": "<verbatim phrase from the report text, or '
-        'empty string if not_reported>"}'
-    )
-    try:
-        client = get_client()
-        response = client.chat.completions.create(
-            model=MODEL,
-            messages=[
-                {"role": "system", "content": (
-                    "You classify qualitative speed evidence for accident "
-                    "reconstruction from report text into a fixed set of "
-                    "categories. You never output a number. You only "
-                    "report evidence that is specifically about the named "
-                    "vehicle — never about a different participant in the "
-                    "same report."
-                )},
-                {"role": "user", "content": prompt},
-            ],
-            temperature=0.0,
-            max_tokens=200,
-            response_format={"type": "json_object"},
-            timeout=_LLM_TIMEOUT_S,
-        )
-        parsed = json.loads(response.choices[0].message.content)
-    except Exception:
-        return None
-
-    status = parsed.get("knowledge_status")
-    if status not in ("report_qualitative_signal", "not_reported"):
-        return None
-    if status == "not_reported":
-        return {"knowledge_status": "not_reported", "qualitative_relation": "unknown", "evidence_quote": ""}
-
-    relation = parsed.get("qualitative_relation")
-    quote = parsed.get("evidence_quote")
-    if relation not in _QUALITATIVE_RELATIONS:
-        return None
-    if not isinstance(quote, str) or not quote.strip():
-        return None
-    # The model must ground its classification in the text it was actually
-    # given, not invent a plausible-sounding quote — verified live:
-    # turning_03's e-bike was classified "stopped" with evidence_quote
-    # "stopped", a word that appears nowhere in collision_description/
-    # severity_text (which instead say the e-bike was "going straight" —
-    # moving). A non-empty string alone doesn't prove the evidence is real;
-    # reject any quote that isn't an actual substring of what the LLM saw.
-    source_text = " ".join(
-        str(conflict.get(k) or "") for k in ("collision_description", "severity_text")
-    ).lower()
-    if quote.strip().lower() not in source_text:
-        return None
-    return {"knowledge_status": status, "qualitative_relation": relation, "evidence_quote": quote}
+    for participant in data.get("participants", []):
+        if participant.get("id") != actor_id:
+            continue
+        relation = participant.get("speed_evidence")
+        if relation not in _QUALITATIVE_RELATIONS:
+            return None
+        quote = participant.get("speed_evidence_quote") or ""
+        return relation, quote
+    return None
 
 
 def _concretize_qualitative_relation(relation: str, envelope: dict) -> tuple[float, str] | None:
@@ -390,16 +322,13 @@ def estimate_actor_speed(
 ) -> tuple[float, dict]:
     """Return (initial_speed_mps, missing_parameter_entry) for this actor.
 
-    Never raises; always returns a usable speed. The LLM is consulted at
-    most once per call, only when not parked, and its output is always
-    clamped to a hard safety envelope before use — see module docstring.
-    Callers are responsible for checking whether initial_speed_mps is
-    already set by an earlier, higher-priority stage before calling this
-    (so an LLM call is never wasted on an actor whose speed is already
-    decided) — see complete_parameters.py. is_crossing is derived from
-    data itself (classification.scenario_type), not a separate argument,
-    since it only affects which grounded default a motor vehicle gets —
-    see _grounded_envelope.
+    Never raises; always returns a usable speed, entirely offline — no
+    network resource of any kind. Reads speed_evidence straight from
+    Agent 1's already-grounded extraction (see module docstring); makes no
+    LLM call itself. is_crossing is derived from data itself
+    (classification.scenario_type), not a separate argument, since it only
+    affects which grounded default a motor vehicle gets — see
+    _grounded_envelope.
     """
     if is_parked:
         return 0.0, {
@@ -416,23 +345,19 @@ def estimate_actor_speed(
     is_crossing = data.get("classification", {}).get("scenario_type") == "crossing"
     envelope = _grounded_envelope(vehicle_category, osm_maxspeed_kmh, is_crossing)
 
-    conflict = data.get("conflict", {})
-    llm_result = None
-    if any(conflict.get(k) for k in ("collision_description", "severity_text", "conflict_mechanism")):
-        llm_result = _llm_speed_estimate(f"{vehicle_category} ({actor_id})", envelope, conflict)
-
-    if llm_result and llm_result.get("knowledge_status") == "report_qualitative_signal":
-        relation = llm_result.get("qualitative_relation")
+    evidence = _read_speed_evidence(data, actor_id)
+    if evidence is not None:
+        relation, quote = evidence
         concretized = _concretize_qualitative_relation(relation, envelope)
         if concretized is not None:
             value_kmh, note = concretized
             value_kmh = max(0.0, min(value_kmh, envelope["safety_cap_kmh"]))
             # Direction-consistency check: a "faster" classification must
             # actually produce a value above nominal, and vice versa — this
-            # is exactly the check that would have caught the live-verified
+            # is exactly the check that would have caught the original
             # crossing_04 bug (speeding evidence producing a slower value
             # than the neutral default). Never trust a classification whose
-            # own concretization contradicts it.
+            # own concretization contradicts it, however it was derived.
             consistent = True
             if relation in ("faster_than_context", "clearly_faster_than_context"):
                 consistent = value_kmh > envelope["nominal_kmh"]
@@ -443,19 +368,19 @@ def estimate_actor_speed(
                 entry = {
                     "parameter": f"{actor_id}.initial_speed_mps",
                     "value_used": speed_mps,
-                    "source": "llm_qualitative_signal",
+                    "source": "agent1_speed_evidence",
                     "reason": (
                         f"Report evidence classified as '{relation}' "
-                        f"(quote: \"{llm_result.get('evidence_quote', '')}\"). "
-                        f"Concretized deterministically, not by the LLM: {note}."
+                        f"(quote: \"{quote}\") during Agent 1 extraction. "
+                        f"Concretized deterministically here: {note}."
                     ),
                     "qualitative_relation": relation,
-                    "evidence_quote": llm_result.get("evidence_quote", ""),
+                    "evidence_quote": quote,
                 }
                 return speed_mps, entry
             # Consistency check failed — fall through to grounded default.
 
-    # No LLM signal, no LLM available, or LLM output failed validation —
+    # No evidence, or the classification failed its own consistency check —
     # grounded default fires directly, offline, deterministic.
     speed_mps = round(_kmh_to_mps(envelope["nominal_kmh"]), 2)
     entry = {
