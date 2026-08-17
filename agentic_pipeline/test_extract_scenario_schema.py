@@ -15,7 +15,7 @@ response. Checks:
      maneuver is a turn, even if the model self-contradicts and picks a
      different scenario_type (a real failure seen in a live batch run).
   5. pipeline._fill_location_query_fields() correctly derives what
-     pipeline.py's tool-calling loop needs.
+     pipeline.py's deterministic step sequence needs.
   6. The result survives real (non-mocked) calls into
      osm_enrichment._build_location_queries() and
      complete_parameters.complete_parameters() without crashing.
@@ -160,7 +160,7 @@ def test_structure_and_downstream_compat() -> list[str]:
         failures.append(f"location_type mismatch: {result['location']['location_type']!r}")
 
     # pipeline.py's _tool_extract_scenario digest uses bracket access on these —
-    # they must exist or the real tool-calling loop would KeyError.
+    # they must exist or the real pipeline step sequence would KeyError.
     for section, key in (
         ("location", "primary_road"), ("location", "secondary_road"), ("location", "osm_query"),
         ("location", "location_type"), ("classification", "scenario_type"),

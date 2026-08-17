@@ -1,9 +1,30 @@
 """
 Agentic Scenario Pipeline — core logic.
 
-A vLLM-served Llama 3.1 8B Instruct model with function calling autonomously sequences
-5 tools to convert a German Berlin police accident report into validated
-OpenDRIVE + OpenSCENARIO simulation files.
+Converts a German Berlin police accident report into validated OpenDRIVE +
+OpenSCENARIO simulation files through five fixed, deterministically
+sequenced steps: extract_scenario -> query_osm -> complete_parameters ->
+generate_scenario -> validate_and_fix.
+
+run_agent() used to have an LLM decide the order of these five steps on
+every call, even though the order never actually varied — SYSTEM_PROMPT
+literally spelled it out as a "REQUIRED WORKFLOW" the model had to follow
+verbatim every time. That's not a real sequencing decision, and live
+testing showed it as a real cost: the model occasionally emitted
+malformed tool-call JSON mid-sequence, burning retries for no benefit.
+Removed — the five steps are now plain sequential Python calls to the
+same underlying tool functions, no LLM involved in deciding what happens
+next. The one LLM call left in the whole pipeline is inside
+extract_scenario.py's own extraction (called from step 1) — the only
+place that reads raw_text at all. See docs/modeling_assumptions.md and
+speed_estimation.py's module docstring for the same reasoning applied
+earlier to Agent 3.
+
+run_feedback_iteration() keeps its own LLM call deliberately: interpreting
+free-text human feedback ("move the cyclist closer") into a parameter
+change is genuinely variable, unpredictable input a fixed script can't
+handle — the kind of task an LLM is actually suited for, unlike walking a
+checklist that never changes.
 
 Entry point: run.py (at scenario_pipeline/ root).
 Public API:  run_agent(report_text, scenario_id)
@@ -18,11 +39,10 @@ import re
 import textwrap
 from datetime import datetime, timezone
 from pathlib import Path
-from types import SimpleNamespace
 
 PROJECT_DIR = Path(__file__).resolve().parent
 
-from llm_client import get_client, MODEL, message_to_dict
+from llm_client import get_client, MODEL
 
 import shutil
 
@@ -38,160 +58,12 @@ from provenance import check_agent1_preserved
 
 OUTPUT_BASE = PROJECT_DIR / "output" / "agentic"
 OSM_CACHE_DIR = PROJECT_DIR / "output" / "osm_cache"
-MAX_ITERATIONS = 25
 MAX_RETRIES = 3
 
 W = 70  # display width
 
 
-# ── Tool schemas ──────────────────────────────────────────────────────────────
-
-TOOLS = [
-    {
-        "type": "function",
-        "function": {
-            "name": "extract_scenario",
-            "description": (
-                "Extract structured scenario data from a raw German Berlin police accident "
-                "report. ALWAYS call this first. Returns scenario_type, participants, "
-                "location info (including osm_query), bike_facility_type, and conflict description."
-            ),
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "report_text": {
-                        "type": "string",
-                        "description": "The full raw German police report text.",
-                    },
-                    "scenario_id": {
-                        "type": "string",
-                        "description": "Unique scenario ID, e.g. right_turn_test_001.",
-                    },
-                },
-                "required": ["report_text", "scenario_id"],
-            },
-        },
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "query_osm",
-            "description": (
-                "Query OpenStreetMap for real road data at the accident location. "
-                "Returns actual lane counts, bike facility type and position, and speed limit. "
-                "Call after extract_scenario using the "
-                "osm_query string from the extraction result."
-            ),
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "osm_query": {
-                        "type": "string",
-                        "description": (
-                            "OSM geocoding query, e.g. "
-                            "'Salvador-Allende-Str / Müggelschlößchenweg, Berlin, Germany'."
-                        ),
-                    },
-                },
-                "required": ["osm_query"],
-            },
-        },
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "complete_parameters",
-            "description": (
-                "Fill in all remaining simulation parameters using scenario-type-aware "
-                "defaults: actor speeds, initial lane IDs, starting positions, timing. "
-                "Never overwrites values already set by OSM enrichment. "
-                "Call after query_osm — no arguments needed."
-            ),
-            "parameters": {
-                "type": "object",
-                "properties": {},
-                "required": [],
-            },
-        },
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "generate_scenario",
-            "description": (
-                "Select the correct .xodr road template and generate the OpenSCENARIO (.xosc) "
-                "script from the current scenario data. Returns file paths and success status. "
-                "Call after complete_parameters. On retry after validation failure, pass "
-                "parameter_overrides as a JSON string to fix specific errors."
-            ),
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "parameter_overrides": {
-                        "type": "string",
-                        "description": (
-                            "Optional JSON string with parameter overrides. "
-                            "Example: '{\"opendrive\": {\"motor_lane_count\": 1}}'. "
-                            "To fix a specific actor (e.g. initial_s_m, initial_lane_id), use "
-                            "'{\"actors\": {\"car_1\": {\"initial_s_m\": 10.0}}}'."
-                        ),
-                    },
-                },
-                "required": [],
-            },
-        },
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "validate_and_fix",
-            "description": (
-                "Validate the generated OpenDRIVE and OpenSCENARIO files. "
-                "Checks road references, actor lane IDs, trajectory vertex counts, "
-                "s-position bounds, and stop conditions. "
-                "Returns valid (bool), errors list, warnings, and fix suggestions. "
-                "If valid=false and retries_remaining>0, call generate_scenario with "
-                "parameter_overrides to fix the errors, then call validate_and_fix again. "
-                "Stop when valid=true."
-            ),
-            "parameters": {
-                "type": "object",
-                "properties": {},
-                "required": [],
-            },
-        },
-    },
-]
-
-
 # ── System prompts ────────────────────────────────────────────────────────────
-
-SYSTEM_PROMPT = """\
-You are an autonomous scenario generation agent for autonomous driving safety research at TU Berlin.
-Your task: process a German Berlin police accident report (car/truck vs cyclist) and produce
-valid OpenDRIVE + OpenSCENARIO simulation files by calling the available tools.
-
-REQUIRED WORKFLOW — follow this exact sequence:
-1. extract_scenario(report_text, scenario_id) — always first
-2. query_osm(osm_query) — use the osm_query from step 1's result
-3. complete_parameters() — no arguments
-4. generate_scenario() — no arguments on first attempt
-5. validate_and_fix() — check the generated files
-
-IF validate_and_fix returns valid=false AND retries_remaining > 0:
-  - Analyze each error carefully
-  - Call generate_scenario(parameter_overrides=...) with JSON fixes
-  - Call validate_and_fix() again
-  COMMON FIXES:
-  - "missing lane X": adjust lane IDs (negative integers: -1=rightmost driving lane)
-  - "outside road length": reduce initial_s_m to be within road_length_m (default 100m)
-  - "no trajectories": regenerate without overrides first
-
-STOP when validate_and_fix returns valid=true. Give a brief summary of what was generated.
-STOP after 3 retries even if still invalid — explain what failed and why.
-
-Be concise between tool calls. One or two sentences of reasoning is enough.
-"""
 
 FEEDBACK_SYSTEM_PROMPT = """\
 You are reviewing a generated simulation against the original police report.
@@ -646,20 +518,6 @@ def _tool_validate_and_fix(state: AgentState) -> dict:
 
 # ── Tool dispatcher ────────────────────────────────────────────────────────────
 
-def _dispatch(state: AgentState, name: str, args: dict) -> dict:
-    if name == "extract_scenario":
-        return _tool_extract_scenario(state, **args)
-    if name == "query_osm":
-        return _tool_query_osm(state, **args)
-    if name == "complete_parameters":
-        return _tool_complete_parameters(state)
-    if name == "generate_scenario":
-        return _tool_generate_scenario(state, **args)
-    if name == "validate_and_fix":
-        return _tool_validate_and_fix(state)
-    return {"error": f"Unknown tool: {name}"}
-
-
 # ── Feedback loop helpers ──────────────────────────────────────────────────────
 
 def _extract_json(text: str) -> dict | None:
@@ -778,12 +636,52 @@ def run_feedback_iteration(state: AgentState, report_text: str, user_feedback: s
 
 # ── Agent loop ─────────────────────────────────────────────────────────────────
 
+
+def _build_deterministic_summary(state: AgentState) -> str:
+    """Plain-Python recap of what was generated. Replaces the old closing
+    LLM call, which only ever restated data already computed
+    deterministically upstream — nothing in that summary required actual
+    reasoning, so producing it doesn't need a model either."""
+    data = state.data or {}
+    stype = data.get("classification", {}).get("scenario_type", "?")
+    mechanism = data.get("conflict", {}).get("conflict_mechanism", "?")
+    roles = ", ".join(
+        f"{p.get('id')} ({p.get('type')}, {p.get('maneuver')})"
+        for p in data.get("participants", [])
+    )
+    odr = data.get("generated_simulation_parameters", {}).get("opendrive", {})
+    osc = data.get("generated_simulation_parameters", {}).get("openscenario", {})
+    actors = osc.get("actors", {})
+    speeds = ", ".join(
+        f"{aid}={a.get('initial_speed_mps')} m/s" for aid, a in actors.items()
+    )
+    return (
+        f"{stype} scenario ({mechanism}). Participants: {roles}. "
+        f"Road length {odr.get('road_length_m')} m, "
+        f"duration {osc.get('simulation_duration_s')} s. "
+        f"Initial speeds: {speeds}."
+    )
+
+
 def run_agent(report_text: str, scenario_id: str) -> dict:
     """
-    Run the full agentic pipeline on one police report — no human interruption.
+    Run the full pipeline on one police report — no human interruption.
     Returns a result dict including the AgentState under key 'state'.
+
+    Five fixed steps, deterministic Python sequencing — see module
+    docstring for why this replaced an LLM tool-calling loop that only
+    ever executed the same order every time. The one LLM call anywhere in
+    this function is inside _tool_extract_scenario (step 1).
+
+    On a validation failure, retries regenerate deterministically — no
+    LLM-improvised parameter_overrides. If generate_scenario/
+    complete_parameters (already using real template geometry and cited
+    defaults) still produces invalid output after MAX_RETRIES attempts,
+    that's a real bug worth fixing at the source, not something to paper
+    over with a guessed patch (run_feedback_iteration still exists for
+    the genuinely different case of a human, not validate_and_fix,
+    reporting something wrong).
     """
-    client = get_client()
     state = AgentState(scenario_id)
 
     print(f"\n{'═' * W}")
@@ -792,191 +690,65 @@ def run_agent(report_text: str, scenario_id: str) -> dict:
     print(f"  {report_text[:120].strip()}...")
     print(f"{'═' * W}")
 
-    messages: list[dict] = [
-        {"role": "system", "content": SYSTEM_PROMPT},
-        {
-            "role": "user",
-            "content": (
-                f"Process this Berlin police accident report.\n"
-                f"Scenario ID: {scenario_id}\n\n"
-                f"Report:\n{report_text.strip()}"
-            ),
-        },
-    ]
-
-    iteration = 0
+    step = 0
     final_valid = False
     final_summary: str | None = None
-    last_tool_name: str | None = None
-    nudge_count = 0
-    MAX_NUDGES = 2
+    last_errors: list[str] = []
 
-    while iteration < MAX_ITERATIONS:
-        iteration += 1
-        print(f"\n[Step {iteration}]")
-
-        response = client.chat.completions.create(
-            model=MODEL,
-            messages=messages,
-            tools=TOOLS,
-            tool_choice="auto",
-            temperature=0.0,
-            max_tokens=768,
+    step += 1
+    print(f"\n[Step {step}] extract_scenario")
+    try:
+        extract_result = _tool_extract_scenario(
+            state, report_text=report_text.strip(), scenario_id=scenario_id
         )
-        msg = response.choices[0].message
+    except Exception as exc:
+        extract_result = {"error": f"Tool error: {exc}"}
 
-        if not getattr(msg, "tool_calls", None) and msg.content:
-            raw_content = msg.content
+    if "error" in extract_result:
+        last_errors = [extract_result["error"]]
+    else:
+        _show_extraction_summary(state.data)
+
+        step += 1
+        print(f"\n[Step {step}] query_osm")
+        osm_query = (state.data.get("location") or {}).get("osm_query") or ""
+        try:
+            osm_result = _tool_query_osm(state, osm_query=osm_query)
+        except Exception as exc:
+            osm_result = {"error": f"Tool error: {exc}"}
+
+        if "error" in osm_result:
+            last_errors = [osm_result["error"]]
+        else:
+            step += 1
+            print(f"\n[Step {step}] complete_parameters")
             try:
-                maybe_call = json.loads(raw_content)
-                if not isinstance(maybe_call, dict):
-                    maybe_call = None
-            except Exception:
-                maybe_call = None
-
-            if maybe_call is None:
-                maybe_call = _extract_json(raw_content)
-
-            if not isinstance(maybe_call, dict):
-                if "extract_scenario" in raw_content:
-                    maybe_call = {
-                        "name": "extract_scenario",
-                        "parameters": {
-                            "report_text": report_text.strip(),
-                            "scenario_id": scenario_id,
-                        },
-                    }
-                elif "query_osm" in raw_content:
-                    maybe_call = {
-                        "name": "query_osm",
-                        "parameters": {
-                            "osm_query": (state.data.get("location") or {}).get("osm_query", "") if state.data else "",
-                        },
-                    }
-                elif "complete_parameters" in raw_content:
-                    maybe_call = {"name": "complete_parameters", "parameters": {}}
-                elif "generate_scenario" in raw_content:
-                    maybe_call = {"name": "generate_scenario", "parameters": {}}
-                elif "validate_and_fix" in raw_content:
-                    maybe_call = {"name": "validate_and_fix", "parameters": {}}
-
-            if isinstance(maybe_call, dict) and maybe_call.get("name"):
-                fn_name = maybe_call.get("name")
-                fn_args = maybe_call.get("parameters", maybe_call.get("arguments", {}))
-
-                if isinstance(fn_args, str):
-                    try:
-                        fn_args = json.loads(fn_args)
-                    except Exception:
-                        fn_args = {}
-
-                if not isinstance(fn_args, dict):
-                    fn_args = {}
-
-                fake_tool_calls = [
-                    SimpleNamespace(
-                        id=f"manual_tool_call_{iteration}",
-                        type="function",
-                        function=SimpleNamespace(
-                            name=fn_name,
-                            arguments=json.dumps(fn_args, ensure_ascii=False),
-                        ),
-                    )
-                ]
-
-                object.__setattr__(msg, "tool_calls", fake_tool_calls)
-                object.__setattr__(msg, "content", None)
-
-        if msg.content:
-            print(f"  Agent: {textwrap.fill(msg.content.strip(), W - 10, subsequent_indent='          ')}")
-
-        if not msg.tool_calls:
-            if (
-                not final_valid
-                and last_tool_name == "generate_scenario"
-                and state.retry_count <= MAX_RETRIES
-                and nudge_count < MAX_NUDGES
-            ):
-                # generate_scenario ran (e.g. to apply a fix override) but the
-                # model stopped without re-validating. Left alone, this ends
-                # the run with final_valid still False regardless of whether
-                # the regenerated files actually pass now — an unverified
-                # result reported as INVALID. Push it to close the loop.
-                nudge_count += 1
-                messages.append({"role": "assistant", "content": msg.content or ""})
-                messages.append({
-                    "role": "user",
-                    "content": (
-                        "You regenerated the files but haven't verified them. "
-                        "Call validate_and_fix() now before concluding."
-                    ),
-                })
-                continue
-            final_summary = msg.content
-            messages.append({"role": "assistant", "content": msg.content or ""})
-            break
-
-        messages.append(message_to_dict(msg))
-
-        for tc in msg.tool_calls:
-            fn_name = tc.function.name
-            last_tool_name = fn_name
-            try:
-                fn_args = json.loads(tc.function.arguments) if tc.function.arguments else {}
-            except json.JSONDecodeError:
-                fn_args = {}
-            if not isinstance(fn_args, dict):
-                fn_args = {}
-
-            args_preview = ", ".join(f"{k}={repr(v)[:60]}" for k, v in fn_args.items())
-            print(f"\n  ┌─ {fn_name}({args_preview})")
-
-            state.record("tool_call", {"tool": fn_name, "args_keys": list(fn_args.keys())})
-
-            try:
-                tool_result = _dispatch(state, fn_name, fn_args)
+                _tool_complete_parameters(state)
             except Exception as exc:
-                tool_result = {"error": f"Tool error: {exc}"}
-                print(f"  ✗ {exc}")
+                last_errors = [f"Tool error: {exc}"]
+            else:
+                attempt = 0
+                while attempt < MAX_RETRIES and not final_valid:
+                    attempt += 1
+                    step += 1
+                    print(f"\n[Step {step}] generate_scenario (attempt {attempt})")
+                    gen_result = _tool_generate_scenario(state)
+                    if not gen_result.get("success"):
+                        last_errors = [gen_result.get("error", "generate_scenario failed")]
+                        continue
 
-            # Show extraction summary automatically (no human confirmation)
-            if fn_name == "extract_scenario" and state.data:
-                _show_extraction_summary(state.data)
+                    step += 1
+                    print(f"\n[Step {step}] validate_and_fix (attempt {attempt})")
+                    val_result = _tool_validate_and_fix(state)
+                    last_errors = val_result.get("errors", [])
+                    if val_result.get("valid"):
+                        final_valid = True
 
-            result_preview = json.dumps(tool_result, ensure_ascii=False)
-            if len(result_preview) > 500:
-                result_preview = result_preview[:500] + "  …"
-            print(f"  └─ {result_preview}")
-
-            state.record("tool_result", {
-                "tool": fn_name,
-                "result_keys": list(tool_result.keys()) if isinstance(tool_result, dict) else [],
-            })
-
-            if fn_name == "validate_and_fix" and isinstance(tool_result, dict) and tool_result.get("valid"):
-                final_valid = True
-
-            messages.append({
-                "role": "tool",
-                "tool_call_id": tc.id,
-                "content": json.dumps(tool_result, ensure_ascii=False),
-            })
-
-        if final_valid:
-            summary_resp = client.chat.completions.create(
-                model=MODEL,
-                messages=messages,
-                temperature=0.0,
-                max_tokens=256,
-            )
-            final_summary = summary_resp.choices[0].message.content or ""
-            if final_summary:
-                print(f"\n  {textwrap.fill(final_summary.strip(), W - 4, subsequent_indent='  ')}")
-            break
-
-        if state.retry_count > MAX_RETRIES:
-            print(f"\n  Max retries ({MAX_RETRIES}) reached.")
-            break
+    if final_valid:
+        final_summary = _build_deterministic_summary(state)
+        print(f"\n  {textwrap.fill(final_summary, W - 4, subsequent_indent='  ')}")
+    elif last_errors:
+        final_summary = "Failed: " + "; ".join(last_errors)
 
     # ── Save agent log ─────────────────────────────────────────────────────
     state.output_dir.mkdir(parents=True, exist_ok=True)
@@ -986,7 +758,7 @@ def run_agent(report_text: str, scenario_id: str) -> dict:
             {
                 "scenario_id": scenario_id,
                 "valid": final_valid,
-                "iterations": iteration,
+                "iterations": step,
                 "retries": state.retry_count,
                 "final_summary": final_summary,
                 "log": state.log,
@@ -1006,14 +778,16 @@ def run_agent(report_text: str, scenario_id: str) -> dict:
         print(f"  XOSC  {state.xosc_path}")
     else:
         print(f"  ✗ INVALID  —  {scenario_id}")
-    print(f"  Steps: {iteration}  |  Retries: {max(0, state.retry_count - 1)}")
+        for err in last_errors:
+            print(f"    ✗  {err}")
+    print(f"  Steps: {step}  |  Retries: {max(0, state.retry_count - 1)}")
     print(f"  Log:  {log_path}")
     print(f"{'═' * W}\n")
 
     return {
         "scenario_id": scenario_id,
         "valid": final_valid,
-        "iterations": iteration,
+        "iterations": step,
         "retries": state.retry_count,
         "xodr_path": str(state.xodr_path) if state.xodr_path else None,
         "xosc_path": str(state.xosc_path) if state.xosc_path else None,
