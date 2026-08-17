@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "turning_09",
+    "raw_text": "Eine Pkw fahrende Person fuhr auf der Straße zum Müggelhort nach Süden zum Müggelheimer Damm. Dort bog sie nach rechts nach Köpenick ab, ohne die Vorfahrtregelung durch Z.205 zu beachten. Sie übersah beim Abbiegen eine Rad fahrenden Person, die auf dem gemeinsamen Geh- und Radweg des Müggelheimer Damm vorfahrtberechtigt war. Beide Beteiligte waren nicht in der Lage, die Kollision abzuwenden."
+  },
+  "classification": {
+    "scenario_type": "turning",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Müggelheimer Damm",
+    "secondary_road": "Straße zum Müggelhort",
+    "house_number_reference": null
+  },
+  "road_context": {
+    "bike_facility_type": "shared_foot_cycle_path",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "turn_right",
+      "initial_direction": "south",
+      "heading_reference": null,
+      "road_position": null
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_violating_yield_sign_across_shared_path",
+    "collision_happened": true,
+    "collision_description": "A car turning right failed to observe a yield sign and struck a cyclist who had right of way on the shared path."
+  }
+}

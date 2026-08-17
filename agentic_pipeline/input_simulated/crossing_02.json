@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "crossing_02",
+    "raw_text": "Ein Pedelec-Fahrer befuhr die Rathausstraße von der Poststraße kommend in Richtung Spreeufer. Ein Pkw Fahrer fuhr vom rechten Fahrbahnrand an und übersah den Pedelec-Fahrer. Es kam zur Kollision."
+  },
+  "classification": {
+    "scenario_type": "crossing",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Rathausstraße",
+    "secondary_road": "Poststraße",
+    "house_number_reference": null
+  },
+  "road_context": {
+    "bike_facility_type": null,
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "e_bike",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": "toward Spreeufer",
+      "road_position": null
+    },
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "enter_roadway",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "vehicle_entering_roadway_across_cyclist_path",
+    "collision_happened": true,
+    "collision_description": "A car entering the road from the right side failed to observe a cyclist and collided with them."
+  }
+}

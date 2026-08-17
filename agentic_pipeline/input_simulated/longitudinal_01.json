@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "longitudinal_01",
+    "raw_text": "Ein Radfahrer befuhr den linken der drei Fahrstreifen auf der Straße Alt-Biesdorf von der Lötschbergstraße kommend in Richtung Grabensprung. In Höhe der Braunsdorfstraße wechselte der Radfahrer auf den äußerst rechten Fahrstreifen, wobei es zum Zusammenstoß mit einem Toyota-Fahrer kam, der mit seinem Wagen in die gleiche Richtung unterwegs war."
+  },
+  "classification": {
+    "scenario_type": "longitudinal",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Alt-Biesdorf",
+    "secondary_road": null,
+    "house_number_reference": null
+  },
+  "road_context": {
+    "bike_facility_type": null,
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "change_lane_left_to_right",
+      "initial_direction": null,
+      "heading_reference": "toward Grabensprung",
+      "road_position": "leftmost_motor_lane"
+    },
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "cyclist_lane_change_into_car_path",
+    "collision_happened": true,
+    "collision_description": "A cyclist changed from the leftmost to the rightmost of three lanes and collided with a car traveling in the same direction."
+  }
+}

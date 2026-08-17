@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "turning_07",
+    "raw_text": "Die Radfahrerin befuhr die Malteserstraße auf einem baulich von der Fahrbahn getrennten Radweg in südliche Richtung. In selber Richtung fuhr ein Lkw-Fahrer, welcher auf Höhe der Hausnummer 139 über den Radweg hinweg nach rechts auf den dortigen Parkplatz abbog. Während des Abbiegevorganges kam es zur Kollision zwischen Lkw und Fahrrad."
+  },
+  "classification": {
+    "scenario_type": "turning",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Malteserstraße",
+    "secondary_road": null,
+    "house_number_reference": "139"
+  },
+  "road_context": {
+    "bike_facility_type": "separated_cycle_track",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "truck_1",
+      "class": "motor_vehicle",
+      "type": "truck",
+      "maneuver": "turn_right_into_parking",
+      "initial_direction": "south",
+      "heading_reference": null,
+      "road_position": null
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "south",
+      "heading_reference": null,
+      "road_position": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "truck_turns_across_cycle_track",
+    "collision_happened": true,
+    "collision_description": "A truck turning right into a parking lot collided with a cyclist traveling on a separated bike path."
+  }
+}

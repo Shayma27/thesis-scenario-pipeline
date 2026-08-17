@@ -1,0 +1,66 @@
+esmini GIT REV: v3.0.4-0-1d33e9f2
+esmini GIT TAG: v3.0.4
+esmini GIT BRANCH: tags/v3.0.4^0
+esmini BUILD VERSION: 6144
+[] [info] Loaded config file: /home/chimo/tools/esmini/esmini-demo/config.yml (/home/chimo/tools/esmini/esmini-demo/bin/../config.yml)
+[] [info] Loaded reactive_collide_test.xosc
+[2026-08-04 17:47:47]
+[] [info] Player options: --osc reactive_collide_test.xosc --camera_mode orbit --ground_plane auto --info_text 1 --logfile_path log.txt --log_level info --text_scale 1.0 --traj_filter 0.1 
+[] [info] No fixed timestep specified - running in realtime speed
+[] [info] Generated seed 4238128107
+[] [info] Loading reactive_collide_test.xosc (v1.3)
+[] [info] 0 variables
+[] [error] Unsupported geo reference attr: 
+[] [error] Unsupported geo reference attr: +no_defs
+
+[] [info] Loaded OpenDRIVE: straight_road.xodr
+[] [info] Add and deactivate new object "truck_1" (id 0)
+[] [info] Add and deactivate new object "cyclist_1" (id 1)
+[] [info] 0 parameters
+[0.000] [info] Window created at 409,1648 with size 800,600
+[0.000] [info] Generating a simplistic 3D model of the road network
+[0.000] [info] Name: truck_1
+[0.000] [info] Name: cyclist_1
+[0.000] [info] Init truck_1 TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] truck_1 New position:
+[0.000] [info] Pos(10.00, -1.53, 0.00) Rot(0.00, 0.00, 0.00) roadId 1 laneId -1 s 10.00 offset 0.00 t -1.53
+[0.000] [info] Init truck_1 LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] Init cyclist_1 TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] cyclist_1 New position:
+[0.000] [info] Pos(60.00, -1.53, 0.00) Rot(0.00, 0.00, 0.00) roadId 1 laneId -1 s 60.00 offset 0.00 t -1.53
+[0.000] [info] Init cyclist_1 LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] storyBoard initState -> startTransition -> runningState
+[0.000] [info] story_act_maneuvuergroup_TruckReactiveBrakeManeuver initState -> startTransition -> runningState
+[0.000] [info] act_maneuvuergroup_TruckReactiveBrakeManeuver initState -> initToStandbyTransition -> standbyState
+[0.000] [info] Init truck_1 TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init truck_1 LongitudinalAction runningState -> endTransition -> completeState
+[0.000] [info] Init cyclist_1 TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init cyclist_1 LongitudinalAction runningState -> endTransition -> completeState
+[0.001] [info] act_start: true, delay: 0.00, 0.0010 > 0.0000, edge: rising
+[0.001] [info] Trigger /------------------------------------------------
+[0.001] [info] Group 0:
+[0.001] [info] act_start: true
+[0.001] [info] Trigger  ------------------------------------------------/
+[0.001] [info] act_maneuvuergroup_TruckReactiveBrakeManeuver standbyState -> startTransition -> runningState
+[0.001] [info] maneuvuergroup_TruckReactiveBrakeManeuver initState -> startTransition -> runningState
+[0.001] [info] TruckReactiveBrakeManeuver initState -> startTransition -> runningState
+[0.001] [info] TruckBrakeEvent initState -> initToStandbyTransition -> standbyState
+[2.827] [info] TruckBrakeStart: true, delay: 0.00, rel_dist: 9.97 < 10.00, edge: rising
+[2.827] [info] Trigger /------------------------------------------------
+[2.827] [info] Group 0:
+[2.827] [info] TruckBrakeStart: true
+[2.827] [info] Triggering entity 0: truck_1
+[2.827] [info] Trigger  ------------------------------------------------/
+[2.827] [info] TruckBrakeEvent standbyState -> startTransition -> runningState
+[2.827] [info] TruckBrakeAction initState -> startTransition -> runningState
+[5.325] [info] TruckBrakeAction runningState -> endTransition -> completeState
+[5.325] [info] TruckBrakeEvent complete after 1 execution
+[5.325] [info] TruckBrakeEvent runningState -> endTransition -> completeState
+[5.325] [info] TruckReactiveBrakeManeuver runningState -> endTransition -> completeState
+[5.325] [info] maneuvuergroup_TruckReactiveBrakeManeuver complete after 1 execution
+[5.325] [info] maneuvuergroup_TruckReactiveBrakeManeuver runningState -> endTransition -> completeState
+[5.325] [info] act_maneuvuergroup_TruckReactiveBrakeManeuver runningState -> endTransition -> completeState
+[5.325] [info] story_act_maneuvuergroup_TruckReactiveBrakeManeuver runningState -> endTransition -> completeState
+[12.119] [info] Closing

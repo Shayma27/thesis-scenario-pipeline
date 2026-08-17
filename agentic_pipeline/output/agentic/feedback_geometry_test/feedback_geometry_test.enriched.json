@@ -58,7 +58,7 @@
       "motor_lane_width_m": 3.5,
       "bike_lane_width_m": 2.0,
       "road_geometry": "line",
-      "primary_has_bike_facility": true,
+      "primary_has_bike_facility": false,
       "primary_bike_facility_type": "none",
       "primary_bike_facility_position": "right"
     },
@@ -1025,5 +1025,14 @@
       "maxspeed_kmh": 50.0,
       "urban_intersection_approach_factor": 0.65
     }
-  }
+  },
+  "topology": {
+    "scenario_id": "feedback_geometry_test",
+    "streets": [],
+    "house_number": null,
+    "topology": "needs_manual_review",
+    "way_count": null,
+    "reason": "0 candidate street names found ([]); the decision logic is only defined for exactly 1 or 2 — cannot deterministically pick which pair (if any) defines the collision location."
+  },
+  "template_used": "intersection_4way.xodr"
 }
