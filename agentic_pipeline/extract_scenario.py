@@ -492,6 +492,11 @@ def _backfill_speed_evidence(extracted: dict) -> None:
         if participant.get("class") == matched_class and participant.get("speed_evidence") is None:
             participant["speed_evidence"] = "clearly_faster_than_context"
             participant["speed_evidence_quote"] = matched_quote
+            print(
+                f"[speed_evidence backfill] LLM left speed_evidence null for "
+                f"participant {participant.get('id')!r} — regex backfill filled it "
+                f"(quote: {matched_quote!r})"
+            )
             break
 
 
