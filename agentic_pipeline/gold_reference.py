@@ -242,14 +242,18 @@ GOLD = {
         "road_context": {"bike_facility_type": None, "bike_facility_position": None},
         "participants": {
             "cyclist_1": {"type": "e_bike", "maneuver": "go_straight", "initial_direction": None, "heading_reference": "toward Spreeufer", "road_position": None},
-            "car_1": {"type": "car", "maneuver": "enter_roadway", "initial_direction": None, "heading_reference": None, "road_position": None},
+            "car_1": {"type": "car", "maneuver": "go_straight", "initial_direction": None, "heading_reference": None, "road_position": None},
         },
         "collision_happened": True,
         "extra_forbidden": [],
         "notes": "'in Richtung Spreeufer' is explicit and belongs in heading_reference. "
-                 "car_1.maneuver='enter_roadway' for 'fuhr vom rechten Fahrbahnrand an' "
-                 "(pulled away from the curb) is a defensible approximation given the "
-                 "available enum — not flagged as wrong.",
+                 "car_1.maneuver corrected to 'go_straight' (was 'enter_roadway' — a prior "
+                 "judgment call on 'fuhr vom rechten Fahrbahnrand an', overturned on review: "
+                 "the car was already on the roadway, not entering it from off-road/a driveway, "
+                 "so go_straight is the correct reading; also confirmed to have zero effect on "
+                 "generated geometry either way, since _maneuver_kind()/complete_parameters.py's "
+                 "lane-selection logic both only special-case turn_left/turn_right, treating "
+                 "enter_roadway and go_straight identically).",
     },
     "crossing_03": {
         "scenario_type": "crossing",
