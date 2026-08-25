@@ -1821,54 +1821,75 @@ def _apply_heading_overrides(data, opendrive_params, context):
 
 
 def _apply_lane_guided_maneuver_context(data, context):
+    """For "crossing" scenarios, set car_path="turn_left_from_secondary_to_primary"
+    whenever car_1's own (Agent 1, gold-verified) maneuver field says so —
+    that's the authoritative, already-grounded signal, sufficient on its own.
+
+    An earlier version of this function additionally *required* OSM
+    turn:lanes tag data (car_1 on the report's leftmost motor lane, and the
+    matched OSM approach's first tagged turn lane containing "left") before
+    it would ever set car_path, on top of car_maneuver already saying
+    turn_left. OSM turn:lanes tagging is sparse in practice, so this never
+    fired for any of the 19 real reports, even for ones unambiguously
+    describing a left-turning car — the report's own maneuver was already
+    sufficient evidence and the extra OSM requirement only ever discarded
+    it. OSM lane data is kept below as corroborating evidence in the
+    provenance record, not as a gate.
+    """
     if data.get("classification", {}).get("scenario_type") != "crossing":
         return
 
-    car_position = _participant_road_position(data, "car_1")
     car_maneuver = str(_participant_maneuver(data, "car_1") or "").casefold()
-    allow_inferred_turn = (
-        data.get("road_context", {}).get("infer_turn_from_turn_lanes") is True
-        or "turn_left" in car_maneuver
-    )
-    if not allow_inferred_turn:
+    if "turn_left" not in car_maneuver:
         context.setdefault("notes", []).append(
             "OSM turn:lanes tags were kept as evidence only; the report does "
             "not explicitly describe a left-turn maneuver for car_1."
         )
         return
 
-    lane_evidence = context.get("lane_count_evidence", {}).get("secondary", {})
-    selected_segments = lane_evidence.get("selected_segments", [])
-    turn_lanes = selected_segments[0].get("turn_lanes") if selected_segments else None
-    if car_position != "leftmost_motor_lane" or not turn_lanes:
-        return
-
-    first_lane = str(turn_lanes).split("|", 1)[0].casefold()
-    if "left" not in first_lane:
-        return
-
     osc_params = data.setdefault("generated_simulation_parameters", {}).setdefault(
         "openscenario", {}
     )
     osc_params["car_path"] = "turn_left_from_secondary_to_primary"
+
+    car_position = _participant_road_position(data, "car_1")
+    lane_evidence = context.get("lane_count_evidence", {}).get("secondary", {})
+    selected_segments = lane_evidence.get("selected_segments", [])
+    turn_lanes = selected_segments[0].get("turn_lanes") if selected_segments else None
+    osm_corroborates = bool(
+        car_position == "leftmost_motor_lane"
+        and turn_lanes
+        and "left" in str(turn_lanes).split("|", 1)[0].casefold()
+    )
+
     context["lane_guided_maneuver"] = {
         "actor": "car_1",
         "value": "turn_left_from_secondary_to_primary",
-        "source": "inferred_from_report_lane_and_osm_turn_lanes",
+        "source": "agent1_maneuver",
         "evidence": {
+            "report_maneuver": car_maneuver,
             "report_road_position": car_position,
             "osm_turn_lanes": turn_lanes,
+            "osm_corroborates": osm_corroborates,
         },
     }
     _upsert_missing_parameter(
         data,
         parameter="car_1.path",
         value_used="turn_left_from_secondary_to_primary",
-        source="inferred_from_report_lane_and_osm_turn_lanes",
+        source="agent1_maneuver",
         reason=(
-            "The report places the Pkw on the left lane of Drakestraße, and "
-            "the matched OSM approach marks the leftmost lane as a left-turn "
-            "lane. The resulting path is an inferred lane-guided maneuver."
+            "car_1.maneuver explicitly states a left turn "
+            f"({car_maneuver!r}); the path is derived directly from that "
+            "gold-verified extraction field"
+            + (
+                ", corroborated by an OSM turn:lanes tag on the report's "
+                "leftmost motor lane"
+                if osm_corroborates
+                else " (no corroborating OSM turn:lanes tag was available "
+                "for this report)"
+            )
+            + "."
         ),
     )
 

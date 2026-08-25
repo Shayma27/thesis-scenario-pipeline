@@ -62,11 +62,20 @@ def _participant(data: dict, pid: str) -> dict:
 
 def test_crossing_03_gap_is_backfilled():
     # The exact live-verified gap: raw_text says "mit deutlich überhöhter
-    # Geschwindigkeit" for car_1, but the frozen fixture (as the LLM
-    # actually produced it, before this field existed) has no
-    # speed_evidence at all.
+    # Geschwindigkeit" for car_1. speed_evidence is stripped from the
+    # loaded fixture before backfill runs, rather than relying on the
+    # fixture to naturally lack it: since input/crossing_03.json was
+    # regenerated via a live extraction run, the LLM now correctly
+    # classifies this field on its own (verified live, see
+    # hpc_live_llm_verification.py) -- the fixture no longer naturally
+    # lacks speed_evidence, which is the desired outcome, not something to
+    # route around. Stripping it isolates _backfill_speed_evidence's own
+    # behavior regardless of what the live LLM currently produces.
     data = _load_fixture("crossing_03")
-    check("crossing_03 fixture: no speed_evidence before backfill (sanity check on the test setup)",
+    for participant in data["participants"]:
+        participant.pop("speed_evidence", None)
+        participant.pop("speed_evidence_quote", None)
+    check("crossing_03 fixture (speed_evidence stripped): no speed_evidence before backfill (sanity check on the test setup)",
           "speed_evidence" not in _participant(data, "car_1"), _participant(data, "car_1"))
     _backfill_speed_evidence(data)
     car = _participant(data, "car_1")
@@ -81,7 +90,11 @@ def test_crossing_03_gap_is_backfilled():
 def test_crossing_04_still_attributes_to_car():
     # crossing_04's cyclist is mentioned earlier in the report than the
     # car — confirms the backfill still attributes correctly despite that.
+    # speed_evidence stripped for the same reason as crossing_03 above.
     data = _load_fixture("crossing_04")
+    for participant in data["participants"]:
+        participant.pop("speed_evidence", None)
+        participant.pop("speed_evidence_quote", None)
     _backfill_speed_evidence(data)
     car = _participant(data, "car_1")
     check("crossing_04: speed_evidence backfilled", car.get("speed_evidence") is not None, car)
