@@ -252,13 +252,27 @@ def complete_parameters(data: dict) -> dict:
     # ── Conflict parameters ───────────────────────────────────────────────
     conf = osc.setdefault("conflict", {})
     if is_crossing:
-        _setd(conf, "conflict_time_s", 4.0)
-        _setd(conf, "trigger_time_s", 1.0)
+        if "conflict_time_s" not in conf:
+            conf["conflict_time_s"] = 4.0
+            data.setdefault("missing_parameters", []).append({
+                "parameter": "conflict.conflict_time_s",
+                "value_used": 4.0,
+                "source": "engineering_assumption",
+                "reason": (
+                    "Simulated approach duration to impact (seconds before "
+                    "the conflict point each actor's kinematic starting "
+                    "position, below, is computed from) — a scene-staging "
+                    "choice, not a report-derived value; no police report "
+                    "records how long the approach phase actually lasted. "
+                    "4.0s gives a visible approach for typical urban speeds "
+                    "(car/cyclist envelopes elsewhere in this module) "
+                    "without an implausibly long empty lead-in."
+                ),
+            })
         ct = float(conf["conflict_time_s"])
         cs = road_len / 2
     else:
         _setd(conf, "conflict_s_m", road_len / 2)
-        _setd(conf, "trigger_time_s", 1.0)
         cs = float(conf["conflict_s_m"])
         ct = None
 
@@ -293,20 +307,43 @@ def complete_parameters(data: dict) -> dict:
             data.setdefault("missing_parameters", []).append(speed_entry)
         else:
             cspeed = a["initial_speed_mps"]
-        if is_crossing:
-            _setd(a, "initial_s_m", round(max(2.0, cs - cspeed * ct), 2))
-        else:
-            _setd(a, "initial_s_m", round(max(2.0, cs * 0.2), 2))
+        s_reason = None
+        if "initial_s_m" not in a:
+            if is_crossing:
+                a["initial_s_m"] = round(max(2.0, cs - cspeed * ct), 2)
+                s_reason = (
+                    "Kinematic backward projection from the conflict point "
+                    "(conflict_s_m - speed * conflict_time_s, floored at "
+                    "2m): the position the cyclist would need to start from "
+                    "to reach the conflict point after conflict_time_s "
+                    "seconds at its own estimated initial speed -- a "
+                    "scene-composition choice consistent with the chosen "
+                    "conflict_time_s, not a report-derived position."
+                )
+            else:
+                a["initial_s_m"] = round(max(2.0, cs * 0.2), 2)
+                s_reason = (
+                    "20% of the road length -- a fixed scene-composition "
+                    "fraction giving the cyclist a visible approach on a "
+                    "straight road with no crossing conflict; no report or "
+                    "OSM value states an approach distance, and no cited "
+                    "source quantifies a typical one for this case."
+                )
         # Clamp to the real selected road's actual length now that it's
         # known (see _real_primary_road_length_m's docstring) — the same
         # correction generate_scenario.py already applies unconditionally
         # right before writing the file, just done here too so the
-        # provenance record below (_note) matches what actually ends up in
-        # the generated .xosc instead of a pre-correction value.
+        # provenance records below match what actually ends up in the
+        # generated .xosc instead of a pre-correction value. The dedicated
+        # initial_s_m entry is recorded AFTER this clamp, not before, for
+        # exactly that reason -- reading it beforehand would record a value
+        # that might not be the one actually written to the file.
         if xodr_filename:
             a["initial_s_m"] = _clamp_initial_s_to_real_road(
                 xodr_filename, a["initial_road_id"], float(a["initial_s_m"])
             )
+        if s_reason is not None:
+            _note_initial_s_m(data, cid, a["initial_s_m"], s_reason)
         _note(data, cid, a, stype)
 
     # ── Motor vehicle ─────────────────────────────────────────────────────
@@ -352,23 +389,50 @@ def complete_parameters(data: dict) -> dict:
             data.setdefault("missing_parameters", []).append(speed_entry)
         else:
             mspeed = a["initial_speed_mps"]
-        if is_crossing:
-            _setd(a, "initial_s_m", round(max(2.0, cs - mspeed * ct), 2))
-        elif is_parked:
-            _setd(a, "initial_s_m", cs)
-        elif stype == "turning":
-            # A turn is imminent at the conflict point, so start closer to it.
-            _setd(a, "initial_s_m", round(max(2.0, cs - 20.0), 2))
-        else:
-            # longitudinal / other (not parked): a normal following distance
-            # on a single straight road, no turn or crossing in progress.
-            _setd(a, "initial_s_m", round(max(2.0, cs - 25.0), 2))
+        s_reason = None
+        if "initial_s_m" not in a:
+            if is_crossing:
+                a["initial_s_m"] = round(max(2.0, cs - mspeed * ct), 2)
+                s_reason = (
+                    "Kinematic backward projection from the conflict point "
+                    "(conflict_s_m - speed * conflict_time_s, floored at "
+                    "2m) -- same formula and rationale as the cyclist's, "
+                    "using this vehicle's own estimated initial speed."
+                )
+            elif is_parked:
+                a["initial_s_m"] = cs
+                s_reason = (
+                    "Placed exactly at the conflict point: a parked vehicle "
+                    "isn't approaching it, so no lead-in distance applies."
+                )
+            elif stype == "turning":
+                a["initial_s_m"] = round(max(2.0, cs - 20.0), 2)
+                s_reason = (
+                    "20m before the conflict point -- a fixed "
+                    "scene-composition offset giving a turn maneuver "
+                    "(imminent at the conflict point) visible lead-in "
+                    "distance; not derived from a report/OSM value or a "
+                    "cited source, this specific distance is an engineering "
+                    "choice, not a measured typical turn-approach length."
+                )
+            else:
+                a["initial_s_m"] = round(max(2.0, cs - 25.0), 2)
+                s_reason = (
+                    "25m before the conflict point -- a fixed "
+                    "scene-composition offset for a normal following "
+                    "distance on a single straight road with no turn or "
+                    "crossing in progress; not derived from a report/OSM "
+                    "value or a cited source."
+                )
         # See the matching cyclist-block comment above: clamp now that the
-        # real road is known, so provenance matches the generated file.
+        # real road is known, then record provenance with the final,
+        # post-clamp value -- not before, so it matches the generated file.
         if xodr_filename:
             a["initial_s_m"] = _clamp_initial_s_to_real_road(
                 xodr_filename, a["initial_road_id"], float(a["initial_s_m"])
             )
+        if s_reason is not None:
+            _note_initial_s_m(data, mid, a["initial_s_m"], s_reason)
         _note(data, mid, a, stype)
 
     return data
@@ -776,6 +840,22 @@ def _find(data: dict, participant_class: str) -> dict | None:
 def _setd(d: dict, key: str, value) -> None:
     if key not in d:
         d[key] = value
+
+
+def _note_initial_s_m(data: dict, actor_id: str, value: float, reason: str) -> None:
+    """Dedicated missing_parameters entry for a computed initial_s_m
+    default, explaining that specific branch's formula -- mirrors how
+    initial_speed_mps already gets its own specific entry (speed_entry,
+    from estimate_actor_speed) instead of _note()'s one generic reason
+    shared across every actor field. _note()'s existing "already recorded"
+    skip means it won't double-record initial_s_m once this entry exists.
+    """
+    data.setdefault("missing_parameters", []).append({
+        "parameter": f"{actor_id}.initial_s_m",
+        "value_used": value,
+        "source": "engineering_assumption",
+        "reason": reason,
+    })
 
 
 def _note(data: dict, actor_id: str, actor: dict, stype: str) -> None:
