@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='utf-8'?>
+<OpenSCENARIO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OpenScenario.xsd">
+    <FileHeader description="turning: turn_right vs go_straight. A car turning right struck a cyclist going straight on the shared path." author="Shayma" revMajor="1" revMinor="3" date="2026-08-26T17:06:32.475464"/>
+    <CatalogLocations/>
+    <RoadNetwork>
+        <LogicFile filepath="intersection_4way.xodr"/>
+    </RoadNetwork>
+    <Entities>
+        <ScenarioObject name="car_1">
+            <Vehicle name="car_1" vehicleCategory="car" model3d="car_red.osgb">
+                <BoundingBox>
+                    <Center x="1.3" y="0.0" z="0.8"/>
+                    <Dimensions width="1.8" length="4.5" height="1.6"/>
+                </BoundingBox>
+                <Performance maxSpeed="50.0" maxDeceleration="8.0" maxAcceleration="8.0"/>
+                <Axles>
+                    <FrontAxle maxSteering="0.5" wheelDiameter="0.6" trackWidth="1.6" positionX="3.0" positionZ="0.3"/>
+                    <RearAxle maxSteering="0.5" wheelDiameter="0.6" trackWidth="1.6" positionX="0.0" positionZ="0.3"/>
+                </Axles>
+            </Vehicle>
+        </ScenarioObject>
+        <ScenarioObject name="cyclist_1">
+            <Vehicle name="cyclist_1" vehicleCategory="bicycle" model3d="cyclist.osgb">
+                <BoundingBox>
+                    <Center x="0.3" y="0.0" z="0.8"/>
+                    <Dimensions width="0.6" length="1.8" height="1.5"/>
+                </BoundingBox>
+                <Performance maxSpeed="15.0" maxDeceleration="4.0" maxAcceleration="3.0"/>
+                <Axles>
+                    <FrontAxle maxSteering="0.0" wheelDiameter="0.3" trackWidth="0.5" positionX="1.2" positionZ="0.15"/>
+                    <RearAxle maxSteering="0.0" wheelDiameter="0.3" trackWidth="0.5" positionX="0.0" positionZ="0.15"/>
+                </Axles>
+            </Vehicle>
+        </ScenarioObject>
+    </Entities>
+    <Storyboard>
+        <Init>
+            <Actions>
+                <Private entityRef="car_1">
+                    <PrivateAction>
+                        <TeleportAction>
+                            <Position>
+                                <LanePosition roadId="0" laneId="-1" s="26.83" offset="0.0"/>
+                            </Position>
+                        </TeleportAction>
+                    </PrivateAction>
+                    <PrivateAction>
+                        <LongitudinalAction>
+                            <SpeedAction>
+                                <SpeedActionDynamics dynamicsShape="step" value="1.0" dynamicsDimension="time"/>
+                                <SpeedActionTarget>
+                                    <AbsoluteTargetSpeed value="8.33"/>
+                                </SpeedActionTarget>
+                            </SpeedAction>
+                        </LongitudinalAction>
+                    </PrivateAction>
+                </Private>
+                <Private entityRef="cyclist_1">
+                    <PrivateAction>
+                        <TeleportAction>
+                            <Position>
+                                <LanePosition roadId="0" laneId="-2" s="9.37" offset="0.0"/>
+                            </Position>
+                        </TeleportAction>
+                    </PrivateAction>
+                    <PrivateAction>
+                        <LongitudinalAction>
+                            <SpeedAction>
+                                <SpeedActionDynamics dynamicsShape="step" value="1.0" dynamicsDimension="time"/>
+                                <SpeedActionTarget>
+                                    <AbsoluteTargetSpeed value="4.25"/>
+                                </SpeedActionTarget>
+                            </SpeedAction>
+                        </LongitudinalAction>
+                    </PrivateAction>
+                </Private>
+            </Actions>
+        </Init>
+        <Story name="story_act_maneuvuergroup_MotorVehicleManeuverManeuver">
+            <Act name="act_maneuvuergroup_MotorVehicleManeuverManeuver">
+                <ManeuverGroup name="maneuvuergroup_MotorVehicleManeuverManeuver" maximumExecutionCount="1">
+                    <Actors selectTriggeringEntities="false">
+                        <EntityRef entityRef="car_1"/>
+                    </Actors>
+                    <Maneuver name="MotorVehicleManeuverManeuver">
+                        <Event name="MotorVehicleManeuverEvent" priority="override" maximumExecutionCount="1">
+                            <Action name="MotorVehicleManeuverFollowTrajectory">
+                                <PrivateAction>
+                                    <RoutingAction>
+                                        <FollowTrajectoryAction>
+                                            <TrajectoryRef>
+                                                <Trajectory name="MotorVehicleTrajectory" closed="false">
+                                                    <Shape>
+                                                        <Polyline>
+                                                            <Vertex time="0.0">
+                                                                <Position>
+                                                                    <WorldPosition x="34.95077346005139" y="-36.00910293732948" z="0.0" h="1.80317364820109" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="6.614215438317355">
+                                                                <Position>
+                                                                    <WorldPosition x="29.687137658384554" y="-13.179361623080679" z="0.0" h="1.7872631543115205" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="7.614215438317355">
+                                                                <Position>
+                                                                    <WorldPosition x="28.894433115026224" y="-9.455379894357343" z="0.0" h="1.7182911472878273" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.314215438317355">
+                                                                <Position>
+                                                                    <WorldPosition x="29.23046770256415" y="-6.51089855512083" z="0.0" h="1.1965520168531192" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.814215438317355">
+                                                                <Position>
+                                                                    <WorldPosition x="29.77726053383121" y="-5.44580123506578" z="0.0" h="0.987856364679235" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="10.0">
+                                                                <Position>
+                                                                    <WorldPosition x="29.77726053383121" y="-5.44580123506578" z="0.0" h="0.987856364679235" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                        </Polyline>
+                                                    </Shape>
+                                                </Trajectory>
+                                            </TrajectoryRef>
+                                            <TimeReference>
+                                                <Timing domainAbsoluteRelative="relative" scale="1.0" offset="0.0"/>
+                                            </TimeReference>
+                                            <TrajectoryFollowingMode followingMode="position"/>
+                                        </FollowTrajectoryAction>
+                                    </RoutingAction>
+                                </PrivateAction>
+                            </Action>
+                            <StartTrigger>
+                                <ConditionGroup>
+                                    <Condition name="MotorVehicleManeuverStart" delay="0.0" conditionEdge="none">
+                                        <ByValueCondition>
+                                            <SimulationTimeCondition value="0.1" rule="greaterThan"/>
+                                        </ByValueCondition>
+                                    </Condition>
+                                </ConditionGroup>
+                            </StartTrigger>
+                        </Event>
+                    </Maneuver>
+                </ManeuverGroup>
+                <StartTrigger>
+                    <ConditionGroup>
+                        <Condition name="act_start" delay="0.0" conditionEdge="rising">
+                            <ByValueCondition>
+                                <SimulationTimeCondition value="0.0" rule="greaterThan"/>
+                            </ByValueCondition>
+                        </Condition>
+                    </ConditionGroup>
+                </StartTrigger>
+                <StopTrigger/>
+            </Act>
+        </Story>
+        <Story name="story_act_maneuvuergroup_CyclistGoStraightManeuver">
+            <Act name="act_maneuvuergroup_CyclistGoStraightManeuver">
+                <ManeuverGroup name="maneuvuergroup_CyclistGoStraightManeuver" maximumExecutionCount="1">
+                    <Actors selectTriggeringEntities="false">
+                        <EntityRef entityRef="cyclist_1"/>
+                    </Actors>
+                    <Maneuver name="CyclistGoStraightManeuver">
+                        <Event name="CyclistGoStraightEvent" priority="override" maximumExecutionCount="1">
+                            <Action name="CyclistGoStraightFollowTrajectory">
+                                <PrivateAction>
+                                    <RoutingAction>
+                                        <FollowTrajectoryAction>
+                                            <TrajectoryRef>
+                                                <Trajectory name="CyclistGoStraightTrajectory" closed="false">
+                                                    <Shape>
+                                                        <Polyline>
+                                                            <Vertex time="0.0">
+                                                                <Position>
+                                                                    <WorldPosition x="33.31277382709613" y="-18.513993404863804" z="0.0" h="1.7937800425830528" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.614215438317355">
+                                                                <Position>
+                                                                    <WorldPosition x="29.920834502853005" y="-2.8061183766131776" z="0.0" h="1.7697175532878167" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.814215438317355">
+                                                                <Position>
+                                                                    <WorldPosition x="29.725050741175625" y="-1.8301239281311485" z="0.0" h="1.767796437516203" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="10.0">
+                                                                <Position>
+                                                                    <WorldPosition x="29.725050741175625" y="-1.8301239281311485" z="0.0" h="1.767796437516203" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                        </Polyline>
+                                                    </Shape>
+                                                </Trajectory>
+                                            </TrajectoryRef>
+                                            <TimeReference>
+                                                <Timing domainAbsoluteRelative="relative" scale="1.0" offset="0.0"/>
+                                            </TimeReference>
+                                            <TrajectoryFollowingMode followingMode="position"/>
+                                        </FollowTrajectoryAction>
+                                    </RoutingAction>
+                                </PrivateAction>
+                            </Action>
+                            <StartTrigger>
+                                <ConditionGroup>
+                                    <Condition name="CyclistGoStraightStart" delay="0.0" conditionEdge="none">
+                                        <ByValueCondition>
+                                            <SimulationTimeCondition value="0.1" rule="greaterThan"/>
+                                        </ByValueCondition>
+                                    </Condition>
+                                </ConditionGroup>
+                            </StartTrigger>
+                        </Event>
+                    </Maneuver>
+                </ManeuverGroup>
+                <StartTrigger>
+                    <ConditionGroup>
+                        <Condition name="act_start" delay="0.0" conditionEdge="rising">
+                            <ByValueCondition>
+                                <SimulationTimeCondition value="0.0" rule="greaterThan"/>
+                            </ByValueCondition>
+                        </Condition>
+                    </ConditionGroup>
+                </StartTrigger>
+                <StopTrigger/>
+            </Act>
+        </Story>
+        <StopTrigger>
+            <ConditionGroup>
+                <Condition name="StopSimulation" delay="0.0" conditionEdge="rising">
+                    <ByValueCondition>
+                        <SimulationTimeCondition value="10.0" rule="greaterThan"/>
+                    </ByValueCondition>
+                </Condition>
+            </ConditionGroup>
+        </StopTrigger>
+    </Storyboard>
+</OpenSCENARIO>

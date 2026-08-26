@@ -1,0 +1,58 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "crossing_01",
+    "raw_text": "Eine Pkw fahrende Person befuhr den äußerst linken Fahrstreifen der Mühlenstr. als eine Rad fahrende Person unvermittelt vom Gehweg auf Höhe der Hausnummer 89 auf die Fahrbahn fuhr. Es kam zum Zusammenstoß."
+  },
+  "classification": {
+    "scenario_type": "crossing",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Mühlenstr.",
+    "secondary_road": null,
+    "house_number_reference": "89",
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Mühlenstr., Berlin, Germany",
+    "osm_roads": [
+      "Mühlenstr."
+    ],
+    "direction_references": [],
+    "location_type": "midblock"
+  },
+  "road_context": {
+    "bike_facility_type": "sidewalk",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": "leftmost_motor_lane",
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "enter_roadway",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "cyclist_entering_road_from_sidewalk",
+    "collision_happened": true,
+    "collision_description": "A cyclist entering the road from the sidewalk collided with a car."
+  }
+}

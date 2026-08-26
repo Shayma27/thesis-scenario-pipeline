@@ -1,0 +1,776 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "crossing_05",
+    "raw_text": "Eine Rad fahrende Person befuhr die Storkower Straße in Richtung Osten und übersah beim Linksabbiegen einen in gleicher Richtung fahrenden Pkw. Es kam zum Zusammenstoß."
+  },
+  "classification": {
+    "scenario_type": "crossing",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Storkower Straße",
+    "secondary_road": null,
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Storkower Straße, Berlin, Germany",
+    "osm_roads": [
+      "Storkower Straße"
+    ],
+    "direction_references": [
+      "east"
+    ],
+    "location_type": null
+  },
+  "road_context": {
+    "bike_facility_type": "bike_lane",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "turn_left",
+      "initial_direction": "east",
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": "east",
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "cyclist_turns_across_vehicle_path",
+    "collision_happened": true,
+    "collision_description": "A cyclist turning left collided with a car traveling in the same direction."
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "intersection_lat": 52.5237432,
+      "intersection_lon": 13.4648885,
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "bike_lane",
+      "primary_bike_facility_position": "left",
+      "primary_road_lanes": 1,
+      "secondary_road_lanes": 1,
+      "secondary_heading_rad": 2.826729
+    },
+    "openscenario": {
+      "cyclist_lateral_position": "left"
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "bike_lane",
+      "source": "osm_tag",
+      "reason": "OSM cycleway tags indicate bike_lane."
+    },
+    {
+      "parameter": "intersection_lane_counts",
+      "value_used": "primary=1, secondary=1",
+      "source": "default_assumption_due_to_osm_uncertainty",
+      "reason": "At least one report approach could not be matched to an unambiguous directed OSM way segment, so uncertain approaches keep the conservative simulation abstraction."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "left",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    }
+  ],
+  "osm_context": {
+    "query": "Storkower Straße, Berlin, Germany",
+    "queries_tried": [
+      "Storkower Straße, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 25134568,
+        "name": "Storkower Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:left": "lane",
+          "cycleway:left:lane": "exclusive",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "advisory"
+        },
+        "sidewalk": "yes",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5230205,
+            "lon": 13.4719273
+          },
+          {
+            "lat": 52.5230523,
+            "lon": 13.4713165
+          },
+          {
+            "lat": 52.52308,
+            "lon": 13.4709665
+          },
+          {
+            "lat": 52.5230991,
+            "lon": 13.4707372
+          },
+          {
+            "lat": 52.5231148,
+            "lon": 13.4705911
+          },
+          {
+            "lat": 52.5231401,
+            "lon": 13.4703829
+          },
+          {
+            "lat": 52.523166,
+            "lon": 13.4701847
+          },
+          {
+            "lat": 52.5231793,
+            "lon": 13.4700924
+          },
+          {
+            "lat": 52.5232074,
+            "lon": 13.4699126
+          },
+          {
+            "lat": 52.5232591,
+            "lon": 13.4696119
+          },
+          {
+            "lat": 52.5232844,
+            "lon": 13.4694752
+          },
+          {
+            "lat": 52.5233249,
+            "lon": 13.4692723
+          },
+          {
+            "lat": 52.5234101,
+            "lon": 13.4688986
+          },
+          {
+            "lat": 52.5234932,
+            "lon": 13.4685729
+          },
+          {
+            "lat": 52.5235522,
+            "lon": 13.4683574
+          },
+          {
+            "lat": 52.5235888,
+            "lon": 13.4682358
+          },
+          {
+            "lat": 52.5236263,
+            "lon": 13.4681137
+          },
+          {
+            "lat": 52.5236767,
+            "lon": 13.4679522
+          },
+          {
+            "lat": 52.5239023,
+            "lon": 13.4672927
+          },
+          {
+            "lat": 52.5239718,
+            "lon": 13.467073
+          },
+          {
+            "lat": 52.5240381,
+            "lon": 13.4668282
+          }
+        ]
+      },
+      {
+        "osm_id": 30134941,
+        "name": "Storkower Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:left": "lane",
+          "cycleway:left:lane": "exclusive",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "advisory"
+        },
+        "sidewalk": "yes",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5240381,
+            "lon": 13.4668282
+          },
+          {
+            "lat": 52.524085,
+            "lon": 13.4666305
+          },
+          {
+            "lat": 52.5241374,
+            "lon": 13.4663864
+          },
+          {
+            "lat": 52.5241988,
+            "lon": 13.4660261
+          }
+        ]
+      },
+      {
+        "osm_id": 39352164,
+        "name": "Storkower Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:left": "lane",
+          "cycleway:left:lane": "exclusive",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "advisory"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5246156,
+            "lon": 13.4634302
+          },
+          {
+            "lat": 52.5246327,
+            "lon": 13.4633226
+          },
+          {
+            "lat": 52.5246945,
+            "lon": 13.4629543
+          },
+          {
+            "lat": 52.524706,
+            "lon": 13.462895
+          },
+          {
+            "lat": 52.5247394,
+            "lon": 13.4627191
+          }
+        ]
+      },
+      {
+        "osm_id": 385242699,
+        "name": "S Storkower Straße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5243553,
+            "lon": 13.4663523
+          },
+          {
+            "lat": 52.5243291,
+            "lon": 13.4663596
+          },
+          {
+            "lat": 52.5243635,
+            "lon": 13.4666937
+          },
+          {
+            "lat": 52.5243897,
+            "lon": 13.4666864
+          },
+          {
+            "lat": 52.5243553,
+            "lon": 13.4663523
+          }
+        ]
+      },
+      {
+        "osm_id": 385242700,
+        "name": "S Storkower Straße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5244525,
+            "lon": 13.4661991
+          },
+          {
+            "lat": 52.524485,
+            "lon": 13.4665663
+          }
+        ]
+      },
+      {
+        "osm_id": 494498825,
+        "name": "S Storkower Straße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5244065,
+            "lon": 13.4661614
+          },
+          {
+            "lat": 52.5243876,
+            "lon": 13.4661687
+          },
+          {
+            "lat": 52.5244351,
+            "lon": 13.4666168
+          },
+          {
+            "lat": 52.5244515,
+            "lon": 13.4666122
+          },
+          {
+            "lat": 52.5244065,
+            "lon": 13.4661614
+          }
+        ]
+      },
+      {
+        "osm_id": 1222522457,
+        "name": "Storkower Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:left": "lane",
+          "cycleway:left:lane": "exclusive",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "advisory"
+        },
+        "sidewalk": "yes",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5242313,
+            "lon": 13.4658356
+          },
+          {
+            "lat": 52.524242,
+            "lon": 13.4657719
+          },
+          {
+            "lat": 52.5243028,
+            "lon": 13.4654083
+          },
+          {
+            "lat": 52.5243316,
+            "lon": 13.4652142
+          }
+        ]
+      },
+      {
+        "osm_id": 1457822286,
+        "name": "Storkower Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:left": "lane",
+          "cycleway:left:lane": "exclusive",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "advisory"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5244351,
+            "lon": 13.4645541
+          },
+          {
+            "lat": 52.5245858,
+            "lon": 13.4636171
+          },
+          {
+            "lat": 52.5246156,
+            "lon": 13.4634302
+          }
+        ]
+      },
+      {
+        "osm_id": 1457822287,
+        "name": "Storkower Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:left": "lane",
+          "cycleway:left:lane": "exclusive",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "advisory"
+        },
+        "sidewalk": "yes",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5241988,
+            "lon": 13.4660261
+          },
+          {
+            "lat": 52.5242313,
+            "lon": 13.4658356
+          }
+        ]
+      },
+      {
+        "osm_id": 1457822290,
+        "name": "Storkower Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:left": "lane",
+          "cycleway:left:lane": "exclusive",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "advisory"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5243316,
+            "lon": 13.4652142
+          },
+          {
+            "lat": 52.5244069,
+            "lon": 13.4647296
+          },
+          {
+            "lat": 52.5244351,
+            "lon": 13.4645541
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "OSM turn:lanes tags were kept as evidence only; the report does not explicitly describe a left-turn maneuver for car_1."
+    ],
+    "geocoded": {
+      "display_name": "Storkower Straße, Hermann-Blankenstein-Straße, Eldenaer Viertel, Prenzlauer Berg, Pankow, Berlin, 10249, Deutschland",
+      "lat": 52.5237432,
+      "lon": 13.4648885,
+      "osm_type": "node",
+      "osm_id": 21385751
+    },
+    "bike_facility": {
+      "type": "bike_lane",
+      "position": "left",
+      "source": "osm_tag",
+      "osm_evidence": {
+        "bike_facility_type": "bike_lane",
+        "position": "left",
+        "tags": {
+          "cycleway:left": "lane"
+        }
+      }
+    },
+    "lane_count_evidence": {
+      "policy": "For police-report approaches, use OSM lanes only from way segments whose name matches the 'from' road and whose geometry moves toward the 'toward' road. Nearby road segments are kept as evidence but are not averaged.",
+      "primary": {
+        "approach": {
+          "from": "Storkower Straße",
+          "toward": null
+        },
+        "from_names": [
+          "Storkower Straße"
+        ],
+        "toward_names": [],
+        "candidate_count": 10,
+        "target_count": 0,
+        "considered_segments": [
+          {
+            "osm_id": 25134568,
+            "name": "Storkower Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 2.826729,
+            "heading_deg": 162.0,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 30134941,
+            "name": "Storkower Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 2.825568,
+            "heading_deg": 161.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 39352164,
+            "name": "Storkower Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 2.864749,
+            "heading_deg": 164.1,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 385242699,
+            "name": "S Storkower Straße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": null,
+            "heading_deg": null,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 385242700,
+            "name": "S Storkower Straße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 0.143459,
+            "heading_deg": 8.2,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 494498825,
+            "name": "S Storkower Straße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": null,
+            "heading_deg": null,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1222522457,
+            "name": "Storkower Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 2.884012,
+            "heading_deg": 165.2,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1457822286,
+            "name": "Storkower Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 2.885245,
+            "heading_deg": 165.3,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1457822287,
+            "name": "Storkower Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 2.870034,
+            "heading_deg": 164.4,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1457822290,
+            "name": "Storkower Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 2.891069,
+            "heading_deg": 165.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          }
+        ],
+        "selected_segments": [],
+        "used_count": null,
+        "used_heading_rad": 2.826729,
+        "used_heading_deg": 162.0,
+        "status": "not_used_no_directional_osm_way_match"
+      },
+      "secondary": {
+        "approach": {
+          "from": null,
+          "toward": null
+        },
+        "from_names": [],
+        "toward_names": [],
+        "candidate_count": 0,
+        "target_count": 0,
+        "considered_segments": [],
+        "selected_segments": [],
+        "used_count": null,
+        "used_heading_rad": null,
+        "used_heading_deg": null,
+        "status": "not_used_no_osm_way_name_match"
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "left",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

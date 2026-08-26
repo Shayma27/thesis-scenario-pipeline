@@ -1,0 +1,649 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "crossing_02",
+    "raw_text": "Ein Pedelec-Fahrer befuhr die Rathausstraße von der Poststraße kommend in Richtung Spreeufer. Ein Pkw Fahrer fuhr vom rechten Fahrbahnrand an und übersah den Pedelec-Fahrer. Es kam zur Kollision."
+  },
+  "classification": {
+    "scenario_type": "crossing",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Rathausstraße",
+    "secondary_road": "Poststraße",
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Rathausstraße / Poststraße, Berlin, Germany",
+    "osm_roads": [
+      "Rathausstraße",
+      "Poststraße"
+    ],
+    "direction_references": [],
+    "location_type": "intersection"
+  },
+  "road_context": {
+    "bike_facility_type": "bike_lane",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "e_bike",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": "toward Spreeufer",
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "vehicle_crosses",
+    "collision_happened": true,
+    "collision_description": "A car crossing the path of a Pedelec rider collided with the rider."
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "intersection_lat": 52.5176468,
+      "intersection_lon": 13.4053738,
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "bike_lane",
+      "primary_bike_facility_position": "both",
+      "primary_road_lanes": 1,
+      "secondary_road_lanes": 1,
+      "primary_heading_rad": 0.602564,
+      "secondary_heading_rad": -0.958509
+    },
+    "openscenario": {
+      "cyclist_lateral_position": "both"
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "bike_lane",
+      "source": "osm_tag",
+      "reason": "OSM cycleway tags indicate bike_lane."
+    },
+    {
+      "parameter": "intersection_lane_counts",
+      "value_used": "primary=1, secondary=1",
+      "source": "default_assumption_due_to_osm_uncertainty",
+      "reason": "At least one report approach could not be matched to an unambiguous directed OSM way segment, so uncertain approaches keep the conservative simulation abstraction."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "both",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    }
+  ],
+  "osm_context": {
+    "query": "Rathausstraße, Berlin, Germany",
+    "queries_tried": [
+      "Rathausstraße / Poststraße, Berlin, Germany",
+      "Rathausstraße Poststraße, Berlin, Germany",
+      "Rathausstraße, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 136571494,
+        "name": "Rathausstraße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5173193,
+            "lon": 13.4045954
+          },
+          {
+            "lat": 52.5176468,
+            "lon": 13.4053738
+          },
+          {
+            "lat": 52.517692,
+            "lon": 13.4054795
+          }
+        ]
+      },
+      {
+        "osm_id": 159482052,
+        "name": "Poststraße",
+        "highway": "pedestrian",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5176468,
+            "lon": 13.4053738
+          },
+          {
+            "lat": 52.5175961,
+            "lon": 13.4054319
+          },
+          {
+            "lat": 52.5175157,
+            "lon": 13.4055241
+          },
+          {
+            "lat": 52.5169272,
+            "lon": 13.4061985
+          },
+          {
+            "lat": 52.5166808,
+            "lon": 13.4064809
+          }
+        ]
+      },
+      {
+        "osm_id": 202156997,
+        "name": "Poststraße",
+        "highway": "pedestrian",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5166808,
+            "lon": 13.4064809
+          },
+          {
+            "lat": 52.516488,
+            "lon": 13.4067036
+          },
+          {
+            "lat": 52.5164414,
+            "lon": 13.4067575
+          }
+        ]
+      },
+      {
+        "osm_id": 562707499,
+        "name": "Rathausstraße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:both": "lane",
+          "cycleway:both:buffer:both": "no",
+          "cycleway:both:lane": "advisory",
+          "cycleway:both:marking:both": "dashed_line",
+          "cycleway:both:oneway": "yes",
+          "cycleway:both:surface": "asphalt",
+          "cycleway:both:surface:colour": "none",
+          "cycleway:both:traffic_sign": "none",
+          "cycleway:both:width": "1.5"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5183069,
+            "lon": 13.4069392
+          },
+          {
+            "lat": 52.5183639,
+            "lon": 13.4070838
+          }
+        ]
+      },
+      {
+        "osm_id": 751595928,
+        "name": "Rathausstraße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer:both": "no",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:left": "dashed_line",
+          "cycleway:right:marking:right": "no",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_sign": "none",
+          "cycleway:right:width": "1.5"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5182042,
+            "lon": 13.406692
+          },
+          {
+            "lat": 52.5182843,
+            "lon": 13.4068862
+          },
+          {
+            "lat": 52.5183069,
+            "lon": 13.4069392
+          }
+        ]
+      },
+      {
+        "osm_id": 780327577,
+        "name": "Rathausstraße",
+        "highway": "footway",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5181756,
+            "lon": 13.4071512
+          },
+          {
+            "lat": 52.5175157,
+            "lon": 13.4055241
+          }
+        ]
+      },
+      {
+        "osm_id": 1127595983,
+        "name": "Rathausstraße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:both": "lane",
+          "cycleway:both:buffer:both": "no",
+          "cycleway:both:marking:right": "no",
+          "cycleway:both:oneway": "yes",
+          "cycleway:both:separation:left": "no",
+          "cycleway:both:surface": "asphalt",
+          "cycleway:both:surface:colour": "no",
+          "cycleway:both:traffic_sign": "DE:237",
+          "cycleway:both:width": "1.85",
+          "cycleway:left:lane": "exclusive",
+          "cycleway:left:marking:left": "solid_line",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:left": "dashed_line"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5171978,
+            "lon": 13.4043066
+          },
+          {
+            "lat": 52.5172144,
+            "lon": 13.404346
+          },
+          {
+            "lat": 52.5172778,
+            "lon": 13.4044968
+          }
+        ]
+      },
+      {
+        "osm_id": 1395722654,
+        "name": "Rathausstraße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5172778,
+            "lon": 13.4044968
+          },
+          {
+            "lat": 52.5173193,
+            "lon": 13.4045954
+          }
+        ]
+      },
+      {
+        "osm_id": 1476466618,
+        "name": "Rathausstraße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "no",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.517692,
+            "lon": 13.4054795
+          },
+          {
+            "lat": 52.5180385,
+            "lon": 13.4062901
+          },
+          {
+            "lat": 52.5182042,
+            "lon": 13.406692
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "OSM turn:lanes tags were kept as evidence only; the report does not explicitly describe a left-turn maneuver for car_1."
+    ],
+    "geocoded": {
+      "display_name": "Rathausstraße, Spandauer Vorstadt, Mitte, Berlin, 10178, Deutschland",
+      "lat": 52.5176468,
+      "lon": 13.4053738,
+      "osm_type": "way",
+      "osm_id": 328920970,
+      "nominatim_lat": 52.5183924,
+      "nominatim_lon": 13.4071547,
+      "refined_by": "shared_node_lookup",
+      "refined_streets": [
+        "Rathausstraße",
+        "Poststraße"
+      ],
+      "refined_way_id": 159482052
+    },
+    "bike_facility": {
+      "type": "bike_lane",
+      "position": "both",
+      "source": "osm_tag",
+      "osm_evidence": {
+        "bike_facility_type": "bike_lane",
+        "position": "both",
+        "tags": {
+          "cycleway:both": "lane"
+        }
+      }
+    },
+    "lane_count_evidence": {
+      "policy": "For police-report approaches, use OSM lanes only from way segments whose name matches the 'from' road and whose geometry moves toward the 'toward' road. Nearby road segments are kept as evidence but are not averaged.",
+      "primary": {
+        "approach": {
+          "from": "Rathausstraße",
+          "toward": null
+        },
+        "from_names": [
+          "Rathausstraße"
+        ],
+        "toward_names": [],
+        "candidate_count": 7,
+        "target_count": 0,
+        "considered_segments": [
+          {
+            "osm_id": 136571494,
+            "name": "Rathausstraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": "no",
+            "width": "10",
+            "parsed_count": null,
+            "heading_rad": 0.602564,
+            "heading_deg": 34.5,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 562707499,
+            "name": "Rathausstraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": "10",
+            "parsed_count": null,
+            "heading_rad": 0.571623,
+            "heading_deg": 32.8,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 751595928,
+            "name": "Rathausstraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": "no",
+            "width": "10",
+            "parsed_count": null,
+            "heading_rad": 0.595778,
+            "heading_deg": 34.1,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 780327577,
+            "name": "Rathausstraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": -2.556954,
+            "heading_deg": -146.5,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1127595983,
+            "name": "Rathausstraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": "no",
+            "width": "10",
+            "parsed_count": null,
+            "heading_rad": 0.60151,
+            "heading_deg": 34.5,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1395722654,
+            "name": "Rathausstraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": "no",
+            "width": "10",
+            "parsed_count": null,
+            "heading_rad": 0.601824,
+            "heading_deg": 34.5,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1476466618,
+            "name": "Rathausstraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": "no",
+            "width": "10",
+            "parsed_count": null,
+            "heading_rad": 0.603537,
+            "heading_deg": 34.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          }
+        ],
+        "selected_segments": [],
+        "used_count": null,
+        "used_heading_rad": 0.602564,
+        "used_heading_deg": 34.5,
+        "status": "not_used_no_directional_osm_way_match"
+      },
+      "secondary": {
+        "approach": {
+          "from": "Poststraße",
+          "toward": null
+        },
+        "from_names": [
+          "Poststraße"
+        ],
+        "toward_names": [],
+        "candidate_count": 2,
+        "target_count": 0,
+        "considered_segments": [
+          {
+            "osm_id": 159482052,
+            "name": "Poststraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": -0.958509,
+            "heading_deg": -54.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 202156997,
+            "name": "Poststraße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": -0.954687,
+            "heading_deg": -54.7,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          }
+        ],
+        "selected_segments": [],
+        "used_count": null,
+        "used_heading_rad": -0.958509,
+        "used_heading_deg": -54.9,
+        "status": "not_used_no_directional_osm_way_match"
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "both",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 30.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

@@ -1,0 +1,377 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "crossing_03",
+    "raw_text": "Eine Pkw fahrende Person befuhr den Müggelheimer Damm mit deutlich überhöhter Geschwindigkeit Richtung Südosten nach Müggelheim und kollidierte an der Kreuzung Waldnesselweg/Erwin-Bock Str. mit einer unachtsam die Fahrbahn querenden Gruppe von Radfahrenden. Eine Rad fahrende Person wurde beim Überqueren des Müggelheimer Damm Richtung Erwin-Bock-Straße vom Pkw erfasst."
+  },
+  "classification": {
+    "scenario_type": "crossing",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Müggelheimer Damm",
+    "secondary_road": null,
+    "house_number_reference": null,
+    "intersection": "Waldnesselweg/Erwin-Bock Str.",
+    "city": "Berlin",
+    "osm_query": "Müggelheimer Damm, Berlin, Germany",
+    "osm_roads": [
+      "Müggelheimer Damm"
+    ],
+    "direction_references": [
+      "southeast"
+    ],
+    "location_type": null
+  },
+  "road_context": {
+    "bike_facility_type": "separated_cycle_track",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": "southeast",
+      "heading_reference": "toward Müggelheim",
+      "road_position": null,
+      "speed_evidence": "clearly_faster_than_context",
+      "speed_evidence_quote": "mit deutlich überhöhter Geschwindigkeit"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": "toward Erwin-Bock-Straße",
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "cyclist_crosses_vehicle_path",
+    "collision_happened": true,
+    "collision_description": "A group of cyclists crossing the road were struck by a speeding car."
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "intersection_lat": 52.4370232,
+      "intersection_lon": 13.5965353,
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "separated_cycle_track",
+      "primary_bike_facility_position": "left",
+      "primary_road_lanes": 1,
+      "secondary_road_lanes": 1,
+      "secondary_heading_rad": -0.556114
+    },
+    "openscenario": {
+      "cyclist_lateral_position": "left"
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "separated_cycle_track",
+      "source": "osm_tag",
+      "reason": "OSM cycleway tags indicate separated_cycle_track."
+    },
+    {
+      "parameter": "intersection_lane_counts",
+      "value_used": "primary=1, secondary=1",
+      "source": "default_assumption_due_to_osm_uncertainty",
+      "reason": "At least one report approach could not be matched to an unambiguous directed OSM way segment, so uncertain approaches keep the conservative simulation abstraction."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "left",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    }
+  ],
+  "osm_context": {
+    "query": "Müggelheimer Damm, Berlin, Germany",
+    "queries_tried": [
+      "Müggelheimer Damm, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 26708272,
+        "name": "Müggelheimer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:left": "separate",
+          "cycleway:right": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4382578,
+            "lon": 13.5932932
+          },
+          {
+            "lat": 52.4370555,
+            "lon": 13.5964483
+          },
+          {
+            "lat": 52.4370232,
+            "lon": 13.5965353
+          },
+          {
+            "lat": 52.4369208,
+            "lon": 13.596797
+          }
+        ]
+      },
+      {
+        "osm_id": 150916993,
+        "name": "Waldnesselweg",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "4.7",
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no",
+          "cycleway:traffic_sign": "none"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4370232,
+            "lon": 13.5965353
+          },
+          {
+            "lat": 52.436972,
+            "lon": 13.596487
+          },
+          {
+            "lat": 52.436925,
+            "lon": 13.5964789
+          },
+          {
+            "lat": 52.4367957,
+            "lon": 13.5964543
+          },
+          {
+            "lat": 52.435569,
+            "lon": 13.5964084
+          },
+          {
+            "lat": 52.4354202,
+            "lon": 13.5964085
+          }
+        ]
+      },
+      {
+        "osm_id": 1115122394,
+        "name": "Müggelheimer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:left": "separate",
+          "cycleway:right": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4369208,
+            "lon": 13.596797
+          },
+          {
+            "lat": 52.4366398,
+            "lon": 13.5975298
+          }
+        ]
+      },
+      {
+        "osm_id": 1115122395,
+        "name": "Müggelheimer Damm",
+        "highway": "secondary",
+        "maxspeed": null,
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:left": "separate",
+          "cycleway:right": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4366398,
+            "lon": 13.5975298
+          },
+          {
+            "lat": 52.4363181,
+            "lon": 13.5983686
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "OSM turn:lanes tags were kept as evidence only; the report does not explicitly describe a left-turn maneuver for car_1."
+    ],
+    "geocoded": {
+      "display_name": "Müggelheimer Damm, Salvador-Allende-Viertel II, Köpenick, Treptow-Köpenick, Berlin, 12557, Deutschland",
+      "lat": 52.4370232,
+      "lon": 13.5965353,
+      "osm_type": "way",
+      "osm_id": 169076546,
+      "nominatim_lat": 52.4329831,
+      "nominatim_lon": 13.6070581,
+      "refined_by": "shared_node_lookup",
+      "refined_streets": [
+        "Müggelheimer Damm",
+        "Waldnesselweg"
+      ],
+      "refined_way_id": 150916993
+    },
+    "bike_facility": {
+      "type": "separated_cycle_track",
+      "position": "left",
+      "source": "osm_tag",
+      "osm_evidence": {
+        "bike_facility_type": "separated_cycle_track",
+        "position": "left",
+        "tags": {
+          "cycleway:left": "separate"
+        }
+      }
+    },
+    "lane_count_evidence": {
+      "policy": "For police-report approaches, use OSM lanes only from way segments whose name matches the 'from' road and whose geometry moves toward the 'toward' road. Nearby road segments are kept as evidence but are not averaged.",
+      "primary": {
+        "approach": {
+          "from": "Müggelheimer Damm",
+          "toward": null
+        },
+        "from_names": [
+          "Müggelheimer Damm"
+        ],
+        "toward_names": [],
+        "candidate_count": 3,
+        "target_count": 0,
+        "considered_segments": [
+          {
+            "osm_id": 26708272,
+            "name": "Müggelheimer Damm",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": -0.556114,
+            "heading_deg": -31.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1115122394,
+            "name": "Müggelheimer Damm",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": -0.558306,
+            "heading_deg": -32.0,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1115122395,
+            "name": "Müggelheimer Damm",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": -0.558377,
+            "heading_deg": -32.0,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          }
+        ],
+        "selected_segments": [],
+        "used_count": null,
+        "used_heading_rad": -0.556114,
+        "used_heading_deg": -31.9,
+        "status": "not_used_no_directional_osm_way_match"
+      },
+      "secondary": {
+        "approach": {
+          "from": null,
+          "toward": null
+        },
+        "from_names": [],
+        "toward_names": [],
+        "candidate_count": 0,
+        "target_count": 0,
+        "considered_segments": [],
+        "selected_segments": [],
+        "used_count": null,
+        "used_heading_rad": null,
+        "used_heading_deg": null,
+        "status": "not_used_no_osm_way_name_match"
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "left",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

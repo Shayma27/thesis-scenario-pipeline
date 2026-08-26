@@ -1,0 +1,614 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "crossing_01",
+    "raw_text": "Eine Pkw fahrende Person befuhr den äußerst linken Fahrstreifen der Mühlenstr. als eine Rad fahrende Person unvermittelt vom Gehweg auf Höhe der Hausnummer 89 auf die Fahrbahn fuhr. Es kam zum Zusammenstoß."
+  },
+  "classification": {
+    "scenario_type": "crossing",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Mühlenstr.",
+    "secondary_road": null,
+    "house_number_reference": "89",
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Mühlenstr., Berlin, Germany",
+    "osm_roads": [
+      "Mühlenstr."
+    ],
+    "direction_references": [],
+    "location_type": "midblock"
+  },
+  "road_context": {
+    "bike_facility_type": "sidewalk",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": "leftmost_motor_lane",
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "enter_roadway",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "cyclist_entering_road_from_sidewalk",
+    "collision_happened": true,
+    "collision_description": "A cyclist entering the road from the sidewalk collided with a car."
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "intersection_lat": 52.5689394,
+      "intersection_lon": 13.4041122,
+      "primary_has_bike_facility": false,
+      "primary_road_lanes": 1,
+      "secondary_road_lanes": 1,
+      "secondary_heading_rad": 2.22817
+    },
+    "openscenario": {
+      "cyclist_lateral_position": "both"
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "intersection_lane_counts",
+      "value_used": "primary=1, secondary=1",
+      "source": "default_assumption_due_to_osm_uncertainty",
+      "reason": "At least one report approach could not be matched to an unambiguous directed OSM way segment, so uncertain approaches keep the conservative simulation abstraction."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "both",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    }
+  ],
+  "osm_context": {
+    "query": "Mühlenstr. 89, Berlin, Germany",
+    "queries_tried": [
+      "Mühlenstr. 89, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 46138148,
+        "name": "Mühlenstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "lane",
+        "cycleway_tags": {
+          "cycleway:both": "lane",
+          "cycleway:both:buffer:both": "no",
+          "cycleway:both:lane": "advisory",
+          "cycleway:both:marking:both": "dashed_line",
+          "cycleway:both:oneway": "yes",
+          "cycleway:both:surface": "asphalt",
+          "cycleway:both:surface:colour": "none",
+          "cycleway:both:traffic_sign": "none",
+          "cycleway:both:width": "1.5"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5692599,
+            "lon": 13.4035602
+          },
+          {
+            "lat": 52.5693548,
+            "lon": 13.4034467
+          },
+          {
+            "lat": 52.5693823,
+            "lon": 13.4034082
+          },
+          {
+            "lat": 52.5693928,
+            "lon": 13.4033926
+          }
+        ]
+      },
+      {
+        "osm_id": 454601001,
+        "name": "Mühlenstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": "3",
+        "lanes_backward": "1",
+        "turn_lanes": "left|left;through|right",
+        "oneway": null,
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "exclusive",
+          "cycleway:right:marking:both": "solid_line",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_sign": "none",
+          "cycleway:right:width": "1.5"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5688936,
+            "lon": 13.403849
+          },
+          {
+            "lat": 52.5691252,
+            "lon": 13.4036746
+          },
+          {
+            "lat": 52.5691962,
+            "lon": 13.4036157
+          },
+          {
+            "lat": 52.5692599,
+            "lon": 13.4035602
+          }
+        ]
+      },
+      {
+        "osm_id": 744464193,
+        "name": "Mühlenstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5682577,
+            "lon": 13.4043547
+          },
+          {
+            "lat": 52.5682965,
+            "lon": 13.4043231
+          },
+          {
+            "lat": 52.568599,
+            "lon": 13.4040768
+          },
+          {
+            "lat": 52.5686979,
+            "lon": 13.4039963
+          }
+        ]
+      },
+      {
+        "osm_id": 1202749140,
+        "name": "Mühlenstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5674668,
+            "lon": 13.404953
+          },
+          {
+            "lat": 52.5677085,
+            "lon": 13.4047713
+          },
+          {
+            "lat": 52.5678581,
+            "lon": 13.4046592
+          },
+          {
+            "lat": 52.5679616,
+            "lon": 13.404583
+          }
+        ]
+      },
+      {
+        "osm_id": 1339041353,
+        "name": "Mühlenstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": "3",
+        "lanes_backward": "1",
+        "turn_lanes": "left|left;through|right",
+        "oneway": null,
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5686979,
+            "lon": 13.4039963
+          },
+          {
+            "lat": 52.5687886,
+            "lon": 13.403928
+          },
+          {
+            "lat": 52.5688513,
+            "lon": 13.4038808
+          }
+        ]
+      },
+      {
+        "osm_id": 1449680790,
+        "name": "Mühlenstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5679616,
+            "lon": 13.404583
+          },
+          {
+            "lat": 52.5680499,
+            "lon": 13.404518
+          }
+        ]
+      },
+      {
+        "osm_id": 1449680791,
+        "name": "Mühlenstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5680499,
+            "lon": 13.404518
+          },
+          {
+            "lat": 52.568113,
+            "lon": 13.4044715
+          },
+          {
+            "lat": 52.5681839,
+            "lon": 13.4044148
+          }
+        ]
+      },
+      {
+        "osm_id": 1449680795,
+        "name": "Mühlenstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5681839,
+            "lon": 13.4044148
+          },
+          {
+            "lat": 52.5682577,
+            "lon": 13.4043547
+          }
+        ]
+      },
+      {
+        "osm_id": 1449680796,
+        "name": "Mühlenstraße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": "3",
+        "lanes_backward": "1",
+        "turn_lanes": "left|left;through|right",
+        "oneway": null,
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5688513,
+            "lon": 13.4038808
+          },
+          {
+            "lat": 52.5688936,
+            "lon": 13.403849
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "OSM turn:lanes tags were kept as evidence only; the report does not explicitly describe a left-turn maneuver for car_1."
+    ],
+    "geocoded": {
+      "display_name": "89, Mühlenstraße, Alt-Pankow, Florakiez, Pankow, Berlin, 13187, Deutschland",
+      "lat": 52.5689394,
+      "lon": 13.4041122,
+      "osm_type": "node",
+      "osm_id": 831808684
+    },
+    "lane_count_evidence": {
+      "policy": "For police-report approaches, use OSM lanes only from way segments whose name matches the 'from' road and whose geometry moves toward the 'toward' road. Nearby road segments are kept as evidence but are not averaged.",
+      "primary": {
+        "approach": {
+          "from": "Mühlenstr.",
+          "toward": null
+        },
+        "from_names": [
+          "Mühlenstr."
+        ],
+        "toward_names": [],
+        "candidate_count": 9,
+        "target_count": 0,
+        "considered_segments": [
+          {
+            "osm_id": 46138148,
+            "name": "Mühlenstraße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 2.22817,
+            "heading_deg": 127.7,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 454601001,
+            "name": "Mühlenstraße",
+            "lanes_tag": "4",
+            "turn_lanes": "left|left;through|right",
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 2.020419,
+            "heading_deg": 115.8,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 744464193,
+            "name": "Mühlenstraße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 2.03313,
+            "heading_deg": 116.5,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1202749140,
+            "name": "Mühlenstraße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 2.000054,
+            "heading_deg": 114.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1339041353,
+            "name": "Mühlenstraße",
+            "lanes_tag": "4",
+            "turn_lanes": "left|left;through|right",
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 2.002652,
+            "heading_deg": 114.7,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1449680790,
+            "name": "Mühlenstraße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 1.99414,
+            "heading_deg": 114.3,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1449680791,
+            "name": "Mühlenstraße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 2.011314,
+            "heading_deg": 115.2,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1449680795,
+            "name": "Mühlenstraße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 2.033224,
+            "heading_deg": 116.5,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1449680796,
+            "name": "Mühlenstraße",
+            "lanes_tag": "4",
+            "turn_lanes": "left|left;through|right",
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 2.002065,
+            "heading_deg": 114.7,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          }
+        ],
+        "selected_segments": [],
+        "used_count": null,
+        "used_heading_rad": 2.22817,
+        "used_heading_deg": 127.7,
+        "status": "not_used_no_directional_osm_way_match"
+      },
+      "secondary": {
+        "approach": {
+          "from": null,
+          "toward": null
+        },
+        "from_names": [],
+        "toward_names": [],
+        "candidate_count": 0,
+        "target_count": 0,
+        "considered_segments": [],
+        "selected_segments": [],
+        "used_count": null,
+        "used_heading_rad": null,
+        "used_heading_deg": null,
+        "status": "not_used_no_osm_way_name_match"
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "both",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

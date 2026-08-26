@@ -1,0 +1,1034 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "turning_04",
+    "raw_text": "Eine Radfahrerin befuhr den Spandauer Damm in Richtung Otto-Suhr-Allee. Ein in derselben Richtung fahrender Pkw bog nach rechts in die Sophie-Charlotten-Straße ab, wobei es zur Kollision kam."
+  },
+  "classification": {
+    "scenario_type": "turning",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Spandauer Damm",
+    "secondary_road": "Sophie-Charlotten-Straße",
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Spandauer Damm / Sophie-Charlotten-Straße, Berlin, Germany",
+    "osm_roads": [
+      "Spandauer Damm",
+      "Sophie-Charlotten-Straße"
+    ],
+    "direction_references": [],
+    "location_type": "intersection"
+  },
+  "road_context": {
+    "bike_facility_type": "separated_cycle_track",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "turn_right",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": "toward Otto-Suhr-Allee",
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "vehicle_turns_across",
+    "collision_happened": true,
+    "collision_description": "A car turning right struck a cyclist going straight."
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "intersection_lat": 52.5188147,
+      "intersection_lon": 13.2866547,
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "separated_cycle_track",
+      "primary_bike_facility_position": "rightmost",
+      "primary_heading_rad": 0.0896673242072903,
+      "secondary_heading_rad": -1.3942694357682146,
+      "road_length_m": 93.6608312256975,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 1.25,
+      "road_geometry": "line"
+    },
+    "openscenario": {
+      "cyclist_lateral_position": "rightmost",
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -2,
+          "initial_speed_mps": 4.25,
+          "initial_s_m": 9.37
+        },
+        "car_1": {
+          "vehicle_category": "car",
+          "initial_road_id": 0,
+          "initial_lane_id": -1,
+          "initial_speed_mps": 8.33,
+          "initial_s_m": 26.83
+        }
+      },
+      "simulation_duration_s": 10.0,
+      "conflict": {
+        "conflict_s_m": 46.83041561284875
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "separated_cycle_track",
+      "source": "osm_tag",
+      "reason": "OSM cycleway tags indicate separated_cycle_track."
+    },
+    {
+      "parameter": "primary_heading_rad",
+      "value_used": 0.089667,
+      "source": "osm_way_geometry",
+      "reason": "Primary road heading derived from OSM way geometry."
+    },
+    {
+      "parameter": "secondary_heading_rad",
+      "value_used": -1.394269,
+      "source": "osm_way_geometry",
+      "reason": "Secondary road heading derived from OSM way geometry."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "rightmost",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    },
+    {
+      "parameter": "road_context.bike_facility_type",
+      "value_used": "bike_lane (template fallback)",
+      "source": "unrepresentable_bike_facility_geometry",
+      "reason": "Report describes bike_facility_type='separated_cycle_track', which neither straight_road.xodr nor intersection_4way.xodr models precisely (see Assumption 2 in docs/modeling_assumptions.md). Falling back to the template's existing painted bike lane."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -2,
+      "source": "derived_from_cyclist_lateral_position",
+      "reason": "Cyclist OpenSCENARIO lane id follows the chosen lateral-position policy so the initial teleport matches the generated trajectory."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 4.25,
+      "source": "empirical_population_mean",
+      "reason": "Empirical mean urban cycling speed, 15.3 km/h (15th-85th percentile 12.3-18.1 km/h) — Schleinitz et al. 2014, UDV Forschungsbericht 27, TU Chemnitz naturalistic cycling study, p.80, n=28 conventional bicycles. Not Berlin-specific; not restricted to intersection crossings."
+    },
+    {
+      "parameter": "cyclist_1.initial_s_m",
+      "value_used": 9.37,
+      "source": "engineering_assumption",
+      "reason": "20% of the road length -- a fixed scene-composition fraction giving the cyclist a visible approach on a straight road with no crossing conflict; no report or OSM value states an approach distance, and no cited source quantifies a typical one for this case."
+    },
+    {
+      "parameter": "cyclist_1.vehicle_category",
+      "value_used": "bicycle",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'turning': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'turning': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_lane_id",
+      "value_used": -1,
+      "source": "derived_from_osm_motor_lane_count",
+      "reason": "For a right-turning vehicle, it starts in the rightmost motor-vehicle lane of the generated OpenDRIVE road — which, since the template models only one real driving lane per direction, is the same lane a left turn starts from."
+    },
+    {
+      "parameter": "car_1.initial_speed_mps",
+      "value_used": 8.33,
+      "source": "osm_tag",
+      "reason": "Posted-speed-limit-based default: an OSM-observed maxspeed tag (30.0 km/h) as the legal ceiling; nominal value is the lower of that and RiLSA's 36.0 km/h conservative motor-vehicle clearance reference (RiLSA 2015, FGSV, pp. 21-26, ISBN 978-3-939715-91-7), since no verified source differentiates a typical value by vehicle type or maneuver."
+    },
+    {
+      "parameter": "car_1.initial_s_m",
+      "value_used": 26.83,
+      "source": "engineering_assumption",
+      "reason": "20m before the conflict point -- a fixed scene-composition offset giving a turn maneuver (imminent at the conflict point) visible lead-in distance; not derived from a report/OSM value or a cited source, this specific distance is an engineering choice, not a measured typical turn-approach length."
+    },
+    {
+      "parameter": "car_1.vehicle_category",
+      "value_used": "car",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'turning': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'turning': derived from participant type and maneuver; not specified in report or OSM."
+    }
+  ],
+  "osm_context": {
+    "query": "Spandauer Damm, Berlin, Germany",
+    "queries_tried": [
+      "Spandauer Damm / Sophie-Charlotten-Straße, Berlin, Germany",
+      "Spandauer Damm Sophie-Charlotten-Straße, Berlin, Germany",
+      "Spandauer Damm, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 4421116,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "5",
+        "lanes_forward": "3",
+        "lanes_backward": "2",
+        "turn_lanes": "left|through|none",
+        "oneway": null,
+        "width": "18",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway": "separate",
+          "cycleway:both:width": "1.5"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5187726,
+            "lon": 13.2858724
+          },
+          {
+            "lat": 52.518789,
+            "lon": 13.2861536
+          },
+          {
+            "lat": 52.5188032,
+            "lon": 13.2864278
+          }
+        ]
+      },
+      {
+        "osm_id": 4495213,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate",
+          "cycleway:right:width": "1.5"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5187406,
+            "lon": 13.2853253
+          },
+          {
+            "lat": 52.5187203,
+            "lon": 13.2848731
+          },
+          {
+            "lat": 52.5187028,
+            "lon": 13.284575
+          }
+        ]
+      },
+      {
+        "osm_id": 28658317,
+        "name": "Sophie-Charlotten-Straße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "11",
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5221631,
+            "lon": 13.2856756
+          },
+          {
+            "lat": 52.5221053,
+            "lon": 13.2856916
+          },
+          {
+            "lat": 52.5220805,
+            "lon": 13.2856985
+          },
+          {
+            "lat": 52.5220212,
+            "lon": 13.285716
+          },
+          {
+            "lat": 52.521912,
+            "lon": 13.2857482
+          },
+          {
+            "lat": 52.5217727,
+            "lon": 13.2857894
+          },
+          {
+            "lat": 52.5217104,
+            "lon": 13.2858076
+          },
+          {
+            "lat": 52.5215633,
+            "lon": 13.2858505
+          },
+          {
+            "lat": 52.5214067,
+            "lon": 13.2858962
+          },
+          {
+            "lat": 52.5213405,
+            "lon": 13.2859159
+          },
+          {
+            "lat": 52.5210775,
+            "lon": 13.2859922
+          },
+          {
+            "lat": 52.5209164,
+            "lon": 13.2860392
+          },
+          {
+            "lat": 52.5207352,
+            "lon": 13.2860921
+          },
+          {
+            "lat": 52.5206184,
+            "lon": 13.2861253
+          },
+          {
+            "lat": 52.5205363,
+            "lon": 13.2861502
+          },
+          {
+            "lat": 52.5203627,
+            "lon": 13.2862007
+          },
+          {
+            "lat": 52.5203253,
+            "lon": 13.2862115
+          },
+          {
+            "lat": 52.5200354,
+            "lon": 13.2862962
+          },
+          {
+            "lat": 52.5198804,
+            "lon": 13.2863414
+          },
+          {
+            "lat": 52.5196789,
+            "lon": 13.2864002
+          },
+          {
+            "lat": 52.5194078,
+            "lon": 13.2864777
+          }
+        ]
+      },
+      {
+        "osm_id": 28658319,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "6",
+        "lanes_forward": "3",
+        "lanes_backward": "3",
+        "turn_lanes": "left|through|none",
+        "oneway": null,
+        "width": "18",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:both": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5188147,
+            "lon": 13.2866547
+          },
+          {
+            "lat": 52.5188202,
+            "lon": 13.2867602
+          },
+          {
+            "lat": 52.518824,
+            "lon": 13.2868329
+          },
+          {
+            "lat": 52.5188274,
+            "lon": 13.2868971
+          }
+        ]
+      },
+      {
+        "osm_id": 41081448,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate",
+          "cycleway:right:segregated": "no",
+          "cycleway:right:width": "1.5"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5185955,
+            "lon": 13.2846118
+          },
+          {
+            "lat": 52.5186105,
+            "lon": 13.2847358
+          },
+          {
+            "lat": 52.5186445,
+            "lon": 13.284917
+          },
+          {
+            "lat": 52.5187406,
+            "lon": 13.2853253
+          }
+        ]
+      },
+      {
+        "osm_id": 428720064,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "18",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:left": "separate",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "exclusive",
+          "cycleway:right:mapillary": "704286611969292",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:separation:left": "flex_post",
+          "cycleway:right:separation:right": "kerb",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "no",
+          "cycleway:right:width": "2.6"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.518924,
+            "lon": 13.2884972
+          },
+          {
+            "lat": 52.518931,
+            "lon": 13.2886201
+          },
+          {
+            "lat": 52.5189475,
+            "lon": 13.2888862
+          }
+        ]
+      },
+      {
+        "osm_id": 428859991,
+        "name": "Sophie-Charlotten-Straße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5187866,
+            "lon": 13.2875978
+          },
+          {
+            "lat": 52.5187651,
+            "lon": 13.2872331
+          }
+        ]
+      },
+      {
+        "osm_id": 1101200720,
+        "name": "Sophie-Charlotten-Straße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "11",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:both": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5188147,
+            "lon": 13.2866547
+          },
+          {
+            "lat": 52.5187268,
+            "lon": 13.2866768
+          },
+          {
+            "lat": 52.5186925,
+            "lon": 13.2866854
+          },
+          {
+            "lat": 52.5186448,
+            "lon": 13.2866987
+          }
+        ]
+      },
+      {
+        "osm_id": 1101200721,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "5",
+        "lanes_forward": "3",
+        "lanes_backward": "2",
+        "turn_lanes": "left|through|none",
+        "oneway": null,
+        "width": "18",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:both": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5188032,
+            "lon": 13.2864278
+          },
+          {
+            "lat": 52.5188063,
+            "lon": 13.2864896
+          },
+          {
+            "lat": 52.5188093,
+            "lon": 13.2865494
+          },
+          {
+            "lat": 52.5188147,
+            "lon": 13.2866547
+          }
+        ]
+      },
+      {
+        "osm_id": 1101200759,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "6",
+        "lanes_forward": "3",
+        "lanes_backward": "3",
+        "turn_lanes": "left|through|none",
+        "oneway": null,
+        "width": "18",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5188274,
+            "lon": 13.2868971
+          },
+          {
+            "lat": 52.5188316,
+            "lon": 13.2869785
+          },
+          {
+            "lat": 52.5188627,
+            "lon": 13.287507
+          },
+          {
+            "lat": 52.518882,
+            "lon": 13.2878355
+          }
+        ]
+      },
+      {
+        "osm_id": 1101200760,
+        "name": "Sophie-Charlotten-Straße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "11",
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5190162,
+            "lon": 13.2866025
+          },
+          {
+            "lat": 52.5189371,
+            "lon": 13.2866233
+          },
+          {
+            "lat": 52.5189059,
+            "lon": 13.2866313
+          },
+          {
+            "lat": 52.5188147,
+            "lon": 13.2866547
+          }
+        ]
+      },
+      {
+        "osm_id": 1128015615,
+        "name": "Sophie-Charlotten-Straße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "11",
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5194078,
+            "lon": 13.2864777
+          },
+          {
+            "lat": 52.5193854,
+            "lon": 13.2864854
+          },
+          {
+            "lat": 52.5192044,
+            "lon": 13.2865478
+          },
+          {
+            "lat": 52.5191704,
+            "lon": 13.2865546
+          },
+          {
+            "lat": 52.5190162,
+            "lon": 13.2866025
+          }
+        ]
+      },
+      {
+        "osm_id": 1319014670,
+        "name": "Sophie-Charlotten-Straße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "11",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway": "separate",
+          "cycleway:both:width": "1.25"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5179831,
+            "lon": 13.2869036
+          },
+          {
+            "lat": 52.5179325,
+            "lon": 13.2869194
+          },
+          {
+            "lat": 52.5178767,
+            "lon": 13.2869368
+          },
+          {
+            "lat": 52.5175382,
+            "lon": 13.2870422
+          }
+        ]
+      },
+      {
+        "osm_id": 1319230308,
+        "name": "Sophie-Charlotten-Straße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5191977,
+            "lon": 13.2866151
+          },
+          {
+            "lat": 52.5190953,
+            "lon": 13.286647
+          }
+        ]
+      },
+      {
+        "osm_id": 1319230309,
+        "name": "Sophie-Charlotten-Straße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5188715,
+            "lon": 13.2861341
+          },
+          {
+            "lat": 52.5188871,
+            "lon": 13.286403
+          }
+        ]
+      },
+      {
+        "osm_id": 1319267355,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "5",
+        "lanes_forward": "3",
+        "lanes_backward": "2",
+        "turn_lanes": "left|through|none",
+        "oneway": null,
+        "width": "18",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway": "separate",
+          "cycleway:both:width": "1.5"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5187406,
+            "lon": 13.2853253
+          },
+          {
+            "lat": 52.5187726,
+            "lon": 13.2858724
+          }
+        ]
+      },
+      {
+        "osm_id": 1324116368,
+        "name": "Sophie-Charlotten-Straße",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "11",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway": "separate",
+          "cycleway:both:width": "1.25"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5186448,
+            "lon": 13.2866987
+          },
+          {
+            "lat": 52.5186269,
+            "lon": 13.2867033
+          },
+          {
+            "lat": 52.5186129,
+            "lon": 13.2867074
+          },
+          {
+            "lat": 52.5179831,
+            "lon": 13.2869036
+          }
+        ]
+      },
+      {
+        "osm_id": 1324116379,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "18",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:left": "separate",
+          "cycleway:right": "lane",
+          "cycleway:right:lane": "exclusive",
+          "cycleway:right:mapillary": "704286611969292",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:separation:left": "flex_post",
+          "cycleway:right:separation:right": "kerb",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "no",
+          "cycleway:right:traffic_sign": "none",
+          "cycleway:right:width": "2.6"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.518895,
+            "lon": 13.2880513
+          },
+          {
+            "lat": 52.5189014,
+            "lon": 13.2881535
+          },
+          {
+            "lat": 52.5189147,
+            "lon": 13.2883551
+          },
+          {
+            "lat": 52.518924,
+            "lon": 13.2884972
+          }
+        ]
+      },
+      {
+        "osm_id": 1324116380,
+        "name": "Spandauer Damm",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "6",
+        "lanes_forward": "3",
+        "lanes_backward": "3",
+        "turn_lanes": "left|through|none",
+        "oneway": null,
+        "width": "18",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.518882,
+            "lon": 13.2878355
+          },
+          {
+            "lat": 52.518895,
+            "lon": 13.2880513
+          }
+        ]
+      }
+    ],
+    "notes": [],
+    "geocoded": {
+      "display_name": "Spandauer Damm, Neu-Westend, Westend, Charlottenburg-Wilmersdorf, Berlin, 14052, Deutschland",
+      "lat": 52.5188147,
+      "lon": 13.2866547,
+      "osm_type": "way",
+      "osm_id": 328440059,
+      "nominatim_lat": 52.5218102,
+      "nominatim_lon": 13.2588477,
+      "refined_by": "shared_node_lookup",
+      "refined_streets": [
+        "Spandauer Damm",
+        "Sophie-Charlotten-Straße"
+      ],
+      "refined_way_id": 1101200720
+    },
+    "bike_facility": {
+      "type": "separated_cycle_track",
+      "position": "rightmost",
+      "source": "osm_tag",
+      "osm_evidence": {
+        "bike_facility_type": "separated_cycle_track",
+        "position": "rightmost",
+        "tags": {
+          "cycleway": "separate"
+        }
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "rightmost",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 30.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  },
+  "topology": {
+    "scenario_id": "turning_04",
+    "streets": [
+      "Spandauer Damm",
+      "Sophie-Charlotten-Straße"
+    ],
+    "house_number": null,
+    "topology": "4way_junction",
+    "way_count": 4,
+    "reason": "4 ways at the shared node — a genuine 4-way crossing."
+  },
+  "template_used": "intersection_4way.xodr"
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "crossing_06",
+    "raw_text": "Eine Rad fahrende Person befuhr den Radfahrschutzstreifen der Oranienburger Straße nach Norden und wollte nach links in den Taldorfer Weg abbiegen, ohne auf den nachfolgenden in gleicher Richtung fahrenden Pkw zu achten. Es kam zum Zusammenstoß."
+  },
+  "classification": {
+    "scenario_type": "crossing",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Oranienburger Straße",
+    "secondary_road": "Taldorfer Weg",
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Oranienburger Straße / Taldorfer Weg, Berlin, Germany",
+    "osm_roads": [
+      "Oranienburger Straße",
+      "Taldorfer Weg"
+    ],
+    "direction_references": [
+      "north"
+    ],
+    "location_type": "intersection"
+  },
+  "road_context": {
+    "bike_facility_type": "bike_lane",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "turn_left",
+      "initial_direction": "north",
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": "north",
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "cyclist_turns_across_vehicle_path",
+    "collision_happened": true,
+    "collision_description": "A cyclist turning left collided with a car traveling in the same direction."
+  }
+}

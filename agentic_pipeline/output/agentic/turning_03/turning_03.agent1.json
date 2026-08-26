@@ -1,0 +1,61 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "turning_03",
+    "raw_text": "Eine Lkw fahrende Person befuhr die Gutschmidtstraße in Richtung Westen und bog nach rechts auf den Buckower Damm Richtung Britzer Damm ab. Dabei kam es in Höhe der Radverkehrsfuhrt zum Zusammenstoß mit einer E-Bike fahrenden Person, die aus der Gutschmidtstraße kommend geradeaus auf die Kreuzung fuhr."
+  },
+  "classification": {
+    "scenario_type": "turning",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Buckower Damm",
+    "secondary_road": "Gutschmidtstraße",
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Buckower Damm / Gutschmidtstraße, Berlin, Germany",
+    "osm_roads": [
+      "Buckower Damm",
+      "Gutschmidtstraße"
+    ],
+    "direction_references": [
+      "west"
+    ],
+    "location_type": "intersection"
+  },
+  "road_context": {
+    "bike_facility_type": "cycle_crossing",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "truck_1",
+      "class": "motor_vehicle",
+      "type": "truck",
+      "maneuver": "turn_right",
+      "initial_direction": "west",
+      "heading_reference": "toward Britzer Damm",
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "e_bike",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across_cycle_crossing",
+    "collision_happened": true,
+    "collision_description": "A truck turning right struck an e-bike going straight at a cycle crossing."
+  }
+}

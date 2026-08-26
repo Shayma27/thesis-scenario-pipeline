@@ -1,0 +1,1675 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "crossing_07",
+    "raw_text": "Eine Radfahrerin befuhr eine Straße in Charlottenburg vom Luisenplatz in Richtung Kaiser-Friedrich-Straße und fuhr in eine Kreuzung ein. Dabei kam es zur Kollision mit einem Pkw, der von der Otto-Suhr-Allee in Richtung Spandauer Damm unterwegs war."
+  },
+  "classification": {
+    "scenario_type": "crossing",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Kaiser-Friedrich-Straße",
+    "secondary_road": "Otto-Suhr-Allee",
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Kaiser-Friedrich-Straße / Otto-Suhr-Allee, Berlin, Germany",
+    "osm_roads": [
+      "Kaiser-Friedrich-Straße",
+      "Otto-Suhr-Allee"
+    ],
+    "direction_references": [],
+    "location_type": "intersection"
+  },
+  "road_context": {
+    "bike_facility_type": "separated_cycle_track",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": "toward Kaiser-Friedrich-Straße",
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": "toward Spandauer Damm",
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_unknown",
+    "collision_happened": true,
+    "collision_description": "A cyclist going straight collided with a car going straight at an intersection."
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "intersection_lat": 52.5195435,
+      "intersection_lon": 13.2995282,
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "separated_cycle_track",
+      "primary_bike_facility_position": "right",
+      "primary_road_lanes": 1,
+      "secondary_road_lanes": 1,
+      "primary_heading_rad": -1.436202,
+      "secondary_heading_rad": -0.474407
+    },
+    "openscenario": {
+      "cyclist_lateral_position": "right"
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "separated_cycle_track",
+      "source": "osm_tag",
+      "reason": "OSM cycleway tags indicate separated_cycle_track."
+    },
+    {
+      "parameter": "intersection_lane_counts",
+      "value_used": "primary=1, secondary=1",
+      "source": "default_assumption_due_to_osm_uncertainty",
+      "reason": "At least one report approach could not be matched to an unambiguous directed OSM way segment, so uncertain approaches keep the conservative simulation abstraction."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "right",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    }
+  ],
+  "osm_context": {
+    "query": "Kaiser-Friedrich-Straße, Berlin, Germany",
+    "queries_tried": [
+      "Kaiser-Friedrich-Straße / Otto-Suhr-Allee, Berlin, Germany",
+      "Kaiser-Friedrich-Straße Otto-Suhr-Allee, Berlin, Germany",
+      "Kaiser-Friedrich-Straße, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 4403985,
+        "name": "Otto-Suhr-Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5190519,
+            "lon": 13.3011245
+          },
+          {
+            "lat": 52.5190262,
+            "lon": 13.3012086
+          },
+          {
+            "lat": 52.5189869,
+            "lon": 13.3013306
+          },
+          {
+            "lat": 52.5189771,
+            "lon": 13.3013622
+          }
+        ]
+      },
+      {
+        "osm_id": 4446693,
+        "name": "Otto-Suhr-Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "15",
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5195435,
+            "lon": 13.2995282
+          },
+          {
+            "lat": 52.5195077,
+            "lon": 13.2997097
+          }
+        ]
+      },
+      {
+        "osm_id": 4446696,
+        "name": "Kaiser-Friedrich-Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "9",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5197046,
+            "lon": 13.2994926
+          },
+          {
+            "lat": 52.5195435,
+            "lon": 13.2995282
+          }
+        ]
+      },
+      {
+        "osm_id": 302429245,
+        "name": "Kaiser-Friedrich-Straße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|through;right",
+        "oneway": "yes",
+        "width": "12",
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5192961,
+            "lon": 13.2997495
+          },
+          {
+            "lat": 52.5193374,
+            "lon": 13.299741
+          },
+          {
+            "lat": 52.5194092,
+            "lon": 13.299727
+          },
+          {
+            "lat": 52.5195077,
+            "lon": 13.2997097
+          }
+        ]
+      },
+      {
+        "osm_id": 302429250,
+        "name": "Kaiser-Friedrich-Straße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through;right",
+        "oneway": "yes",
+        "width": "11",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5187042,
+            "lon": 13.2998988
+          },
+          {
+            "lat": 52.518779,
+            "lon": 13.2998636
+          },
+          {
+            "lat": 52.5189535,
+            "lon": 13.2998139
+          }
+        ]
+      },
+      {
+        "osm_id": 302429293,
+        "name": "Otto-Suhr-Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|through|right",
+        "oneway": "yes",
+        "width": "12.7",
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5193445,
+            "lon": 13.3007893
+          },
+          {
+            "lat": 52.5193864,
+            "lon": 13.3006677
+          },
+          {
+            "lat": 52.519509,
+            "lon": 13.3003114
+          },
+          {
+            "lat": 52.5196321,
+            "lon": 13.29992
+          }
+        ]
+      },
+      {
+        "osm_id": 428661761,
+        "name": "Otto-Suhr-Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "share_busway",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:traffic_sign": "DE:245,Zusatzzeichen",
+          "cycleway:right:width": "2.8"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5191576,
+            "lon": 13.3013286
+          },
+          {
+            "lat": 52.5191879,
+            "lon": 13.3012378
+          },
+          {
+            "lat": 52.5193445,
+            "lon": 13.3007893
+          }
+        ]
+      },
+      {
+        "osm_id": 889152982,
+        "name": "Otto-Suhr-Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "15",
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5195077,
+            "lon": 13.2997097
+          },
+          {
+            "lat": 52.5194794,
+            "lon": 13.2997939
+          },
+          {
+            "lat": 52.5194532,
+            "lon": 13.2998718
+          },
+          {
+            "lat": 52.5194389,
+            "lon": 13.2999171
+          }
+        ]
+      },
+      {
+        "osm_id": 1101185154,
+        "name": "Otto-Suhr-Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "share_busway",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:traffic_sign": "DE:245,Zusatzzeichen",
+          "cycleway:right:width": "2.8"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5191134,
+            "lon": 13.3014658
+          },
+          {
+            "lat": 52.5191206,
+            "lon": 13.3014435
+          },
+          {
+            "lat": 52.5191576,
+            "lon": 13.3013286
+          }
+        ]
+      },
+      {
+        "osm_id": 1101185242,
+        "name": "Kaiser-Friedrich-Straße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "9",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5195435,
+            "lon": 13.2995282
+          },
+          {
+            "lat": 52.5194392,
+            "lon": 13.2995461
+          },
+          {
+            "lat": 52.5193785,
+            "lon": 13.2995583
+          },
+          {
+            "lat": 52.5193538,
+            "lon": 13.2995611
+          }
+        ]
+      },
+      {
+        "osm_id": 1101185243,
+        "name": "Kaiser-Friedrich-Straße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|through;right",
+        "oneway": "yes",
+        "width": "12",
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5189535,
+            "lon": 13.2998139
+          },
+          {
+            "lat": 52.5192961,
+            "lon": 13.2997495
+          }
+        ]
+      },
+      {
+        "osm_id": 1101185244,
+        "name": "Otto-Suhr-Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "share_busway",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:traffic_sign": "none",
+          "cycleway:right:width": "4.8"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5194389,
+            "lon": 13.2999171
+          },
+          {
+            "lat": 52.5194157,
+            "lon": 13.2999903
+          },
+          {
+            "lat": 52.5193004,
+            "lon": 13.3003538
+          },
+          {
+            "lat": 52.5192673,
+            "lon": 13.3004566
+          }
+        ]
+      },
+      {
+        "osm_id": 1101185246,
+        "name": "Otto-Suhr-Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|through|right",
+        "oneway": "yes",
+        "width": "14",
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5196321,
+            "lon": 13.29992
+          },
+          {
+            "lat": 52.5196519,
+            "lon": 13.2998576
+          },
+          {
+            "lat": 52.5196844,
+            "lon": 13.2997566
+          },
+          {
+            "lat": 52.5197098,
+            "lon": 13.2996776
+          }
+        ]
+      },
+      {
+        "osm_id": 1118159016,
+        "name": "Kaiser-Friedrich-Straße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "9",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5190281,
+            "lon": 13.2996183
+          },
+          {
+            "lat": 52.5189016,
+            "lon": 13.2996397
+          },
+          {
+            "lat": 52.5187791,
+            "lon": 13.2996783
+          },
+          {
+            "lat": 52.5187732,
+            "lon": 13.2996802
+          },
+          {
+            "lat": 52.5187504,
+            "lon": 13.2996907
+          },
+          {
+            "lat": 52.5186524,
+            "lon": 13.2997361
+          },
+          {
+            "lat": 52.518644,
+            "lon": 13.2997412
+          }
+        ]
+      },
+      {
+        "osm_id": 1118159032,
+        "name": "Kaiser-Friedrich-Straße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "9",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5179143,
+            "lon": 13.3004051
+          },
+          {
+            "lat": 52.5185239,
+            "lon": 13.2999965
+          }
+        ]
+      },
+      {
+        "osm_id": 1169672096,
+        "name": "Kaiser-Friedrich-Straße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "9",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "share_busway",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:traffic_sign": "none"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5193538,
+            "lon": 13.2995611
+          },
+          {
+            "lat": 52.519171,
+            "lon": 13.2995929
+          },
+          {
+            "lat": 52.5190281,
+            "lon": 13.2996183
+          }
+        ]
+      },
+      {
+        "osm_id": 1416713992,
+        "name": "Kaiser-Friedrich-Straße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through;right",
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5185239,
+            "lon": 13.2999965
+          },
+          {
+            "lat": 52.5187042,
+            "lon": 13.2998988
+          }
+        ]
+      },
+      {
+        "osm_id": 1416713993,
+        "name": "Kaiser-Friedrich-Straße",
+        "highway": "secondary",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "9",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.518644,
+            "lon": 13.2997412
+          },
+          {
+            "lat": 52.5183561,
+            "lon": 13.2999174
+          },
+          {
+            "lat": 52.5178996,
+            "lon": 13.300248
+          }
+        ]
+      },
+      {
+        "osm_id": 1480090521,
+        "name": "Otto-Suhr-Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5190929,
+            "lon": 13.3009973
+          },
+          {
+            "lat": 52.5190519,
+            "lon": 13.3011245
+          }
+        ]
+      },
+      {
+        "osm_id": 1480090522,
+        "name": "Otto-Suhr-Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5192067,
+            "lon": 13.3006446
+          },
+          {
+            "lat": 52.5190929,
+            "lon": 13.3009973
+          }
+        ]
+      },
+      {
+        "osm_id": 1480090523,
+        "name": "Otto-Suhr-Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "optional_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "share_busway",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:traffic_sign": "DE:245,Zusatzzeichen",
+          "cycleway:right:width": "2.8"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.518883,
+            "lon": 13.3021805
+          },
+          {
+            "lat": 52.5191134,
+            "lon": 13.3014658
+          }
+        ]
+      },
+      {
+        "osm_id": 1480090526,
+        "name": "Otto-Suhr-Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5189771,
+            "lon": 13.3013622
+          },
+          {
+            "lat": 52.5187543,
+            "lon": 13.3020798
+          }
+        ]
+      },
+      {
+        "osm_id": 1480090527,
+        "name": "Otto-Suhr-Allee",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "10",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5192673,
+            "lon": 13.3004566
+          },
+          {
+            "lat": 52.5192067,
+            "lon": 13.3006446
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "OSM turn:lanes tags were kept as evidence only; the report does not explicitly describe a left-turn maneuver for car_1."
+    ],
+    "geocoded": {
+      "display_name": "Kaiser-Friedrich-Straße, Gierkekiez, Danckelmannkiez, Charlottenburg, Charlottenburg-Wilmersdorf, Berlin, 10627, Deutschland",
+      "lat": 52.5195435,
+      "lon": 13.2995282,
+      "osm_type": "way",
+      "osm_id": 1169674077,
+      "nominatim_lat": 52.5107981,
+      "nominatim_lon": 13.301719,
+      "refined_by": "shared_node_lookup",
+      "refined_streets": [
+        "Kaiser-Friedrich-Straße",
+        "Otto-Suhr-Allee"
+      ],
+      "refined_way_id": 4446693
+    },
+    "bike_facility": {
+      "type": "separated_cycle_track",
+      "position": "right",
+      "source": "osm_tag",
+      "osm_evidence": {
+        "bike_facility_type": "separated_cycle_track",
+        "position": "right",
+        "tags": {
+          "cycleway:right": "separate"
+        }
+      }
+    },
+    "lane_count_evidence": {
+      "policy": "For police-report approaches, use OSM lanes only from way segments whose name matches the 'from' road and whose geometry moves toward the 'toward' road. Nearby road segments are kept as evidence but are not averaged.",
+      "primary": {
+        "approach": {
+          "from": "Kaiser-Friedrich-Straße",
+          "toward": null
+        },
+        "from_names": [
+          "Kaiser-Friedrich-Straße"
+        ],
+        "toward_names": [],
+        "candidate_count": 10,
+        "target_count": 0,
+        "considered_segments": [
+          {
+            "osm_id": 4446696,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "4",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "9",
+            "parsed_count": 4,
+            "heading_rad": -1.436202,
+            "heading_deg": -82.3,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 302429245,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "3",
+            "turn_lanes": "left|through|through;right",
+            "oneway": "yes",
+            "width": "12",
+            "parsed_count": 3,
+            "heading_rad": 1.685549,
+            "heading_deg": 96.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 302429250,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "2",
+            "turn_lanes": "left|through;right",
+            "oneway": "yes",
+            "width": "11",
+            "parsed_count": 2,
+            "heading_rad": 1.776533,
+            "heading_deg": 101.8,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1101185242,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "9",
+            "parsed_count": 2,
+            "heading_rad": -1.464917,
+            "heading_deg": -83.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1101185243,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "3",
+            "turn_lanes": "left|through|through;right",
+            "oneway": "yes",
+            "width": "12",
+            "parsed_count": 3,
+            "heading_rad": 1.68548,
+            "heading_deg": 96.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1118159016,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "9",
+            "parsed_count": 2,
+            "heading_rad": -1.377178,
+            "heading_deg": -78.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1118159032,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "9",
+            "parsed_count": 2,
+            "heading_rad": 1.960533,
+            "heading_deg": 112.3,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1169672096,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "9",
+            "parsed_count": 2,
+            "heading_rad": -1.46359,
+            "heading_deg": -83.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1416713992,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "2",
+            "turn_lanes": "left|through;right",
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 2,
+            "heading_rad": 1.8914,
+            "heading_deg": 108.4,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1416713993,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "9",
+            "parsed_count": 2,
+            "heading_rad": -1.175546,
+            "heading_deg": -67.4,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          }
+        ],
+        "selected_segments": [
+          {
+            "osm_id": 4446696,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "4",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "9",
+            "parsed_count": 4,
+            "heading_rad": -1.436202,
+            "heading_deg": -82.3,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 302429245,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "3",
+            "turn_lanes": "left|through|through;right",
+            "oneway": "yes",
+            "width": "12",
+            "parsed_count": 3,
+            "heading_rad": 1.685549,
+            "heading_deg": 96.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 302429250,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "2",
+            "turn_lanes": "left|through;right",
+            "oneway": "yes",
+            "width": "11",
+            "parsed_count": 2,
+            "heading_rad": 1.776533,
+            "heading_deg": 101.8,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1101185242,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "9",
+            "parsed_count": 2,
+            "heading_rad": -1.464917,
+            "heading_deg": -83.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1101185243,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "3",
+            "turn_lanes": "left|through|through;right",
+            "oneway": "yes",
+            "width": "12",
+            "parsed_count": 3,
+            "heading_rad": 1.68548,
+            "heading_deg": 96.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1118159016,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "9",
+            "parsed_count": 2,
+            "heading_rad": -1.377178,
+            "heading_deg": -78.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1118159032,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "9",
+            "parsed_count": 2,
+            "heading_rad": 1.960533,
+            "heading_deg": 112.3,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1169672096,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "9",
+            "parsed_count": 2,
+            "heading_rad": -1.46359,
+            "heading_deg": -83.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1416713992,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "2",
+            "turn_lanes": "left|through;right",
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 2,
+            "heading_rad": 1.8914,
+            "heading_deg": 108.4,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1416713993,
+            "name": "Kaiser-Friedrich-Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "9",
+            "parsed_count": 2,
+            "heading_rad": -1.175546,
+            "heading_deg": -67.4,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          }
+        ],
+        "used_count": null,
+        "used_heading_rad": -1.436202,
+        "used_heading_deg": -82.3,
+        "status": "not_used_ambiguous_directional_osm_way_matches"
+      },
+      "secondary": {
+        "approach": {
+          "from": "Otto-Suhr-Allee",
+          "toward": null
+        },
+        "from_names": [
+          "Otto-Suhr-Allee"
+        ],
+        "toward_names": [],
+        "candidate_count": 13,
+        "target_count": 0,
+        "considered_segments": [
+          {
+            "osm_id": 4403985,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 2,
+            "heading_rad": -0.474407,
+            "heading_deg": -27.2,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 4446693,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "4",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "15",
+            "parsed_count": 4,
+            "heading_rad": -0.31141,
+            "heading_deg": -17.8,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 302429293,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "4",
+            "turn_lanes": "left|through|through|right",
+            "oneway": "yes",
+            "width": "12.7",
+            "parsed_count": 4,
+            "heading_rad": 2.646539,
+            "heading_deg": 151.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 428661761,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "3",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 3,
+            "heading_rad": 2.626892,
+            "heading_deg": 150.5,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 889152982,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "15",
+            "parsed_count": 2,
+            "heading_rad": -0.496171,
+            "heading_deg": -28.4,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1101185154,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "3",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 3,
+            "heading_rad": 2.65758,
+            "heading_deg": 152.3,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1101185244,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 2,
+            "heading_rad": -0.478778,
+            "heading_deg": -27.4,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1101185246,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "4",
+            "turn_lanes": "left|through|through|right",
+            "oneway": "yes",
+            "width": "14",
+            "parsed_count": 4,
+            "heading_rad": 2.659639,
+            "heading_deg": 152.4,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1480090521,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 2,
+            "heading_rad": -0.484229,
+            "heading_deg": -27.7,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1480090522,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 2,
+            "heading_rad": -0.484648,
+            "heading_deg": -27.8,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1480090523,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "3",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": 2.657305,
+            "heading_deg": 152.3,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1480090526,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 2,
+            "heading_rad": -0.468963,
+            "heading_deg": -26.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1480090527,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 2,
+            "heading_rad": -0.484248,
+            "heading_deg": -27.7,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          }
+        ],
+        "selected_segments": [
+          {
+            "osm_id": 4403985,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 2,
+            "heading_rad": -0.474407,
+            "heading_deg": -27.2,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 4446693,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "4",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "15",
+            "parsed_count": 4,
+            "heading_rad": -0.31141,
+            "heading_deg": -17.8,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 302429293,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "4",
+            "turn_lanes": "left|through|through|right",
+            "oneway": "yes",
+            "width": "12.7",
+            "parsed_count": 4,
+            "heading_rad": 2.646539,
+            "heading_deg": 151.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 428661761,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "3",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 3,
+            "heading_rad": 2.626892,
+            "heading_deg": 150.5,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 889152982,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "15",
+            "parsed_count": 2,
+            "heading_rad": -0.496171,
+            "heading_deg": -28.4,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1101185154,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "3",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 3,
+            "heading_rad": 2.65758,
+            "heading_deg": 152.3,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1101185244,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 2,
+            "heading_rad": -0.478778,
+            "heading_deg": -27.4,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1101185246,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "4",
+            "turn_lanes": "left|through|through|right",
+            "oneway": "yes",
+            "width": "14",
+            "parsed_count": 4,
+            "heading_rad": 2.659639,
+            "heading_deg": 152.4,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1480090521,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 2,
+            "heading_rad": -0.484229,
+            "heading_deg": -27.7,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1480090522,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 2,
+            "heading_rad": -0.484648,
+            "heading_deg": -27.8,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1480090523,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "3",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": 2.657305,
+            "heading_deg": 152.3,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1480090526,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 2,
+            "heading_rad": -0.468963,
+            "heading_deg": -26.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1480090527,
+            "name": "Otto-Suhr-Allee",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "10",
+            "parsed_count": 2,
+            "heading_rad": -0.484248,
+            "heading_deg": -27.7,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          }
+        ],
+        "used_count": null,
+        "used_heading_rad": -0.474407,
+        "used_heading_deg": -27.2,
+        "status": "not_used_ambiguous_directional_osm_way_matches"
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "right",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

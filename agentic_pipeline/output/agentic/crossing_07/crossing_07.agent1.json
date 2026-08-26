@@ -1,0 +1,59 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "crossing_07",
+    "raw_text": "Eine Radfahrerin befuhr eine Straße in Charlottenburg vom Luisenplatz in Richtung Kaiser-Friedrich-Straße und fuhr in eine Kreuzung ein. Dabei kam es zur Kollision mit einem Pkw, der von der Otto-Suhr-Allee in Richtung Spandauer Damm unterwegs war."
+  },
+  "classification": {
+    "scenario_type": "crossing",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Kaiser-Friedrich-Straße",
+    "secondary_road": "Otto-Suhr-Allee",
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Kaiser-Friedrich-Straße / Otto-Suhr-Allee, Berlin, Germany",
+    "osm_roads": [
+      "Kaiser-Friedrich-Straße",
+      "Otto-Suhr-Allee"
+    ],
+    "direction_references": [],
+    "location_type": "intersection"
+  },
+  "road_context": {
+    "bike_facility_type": null,
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": "toward Kaiser-Friedrich-Straße",
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": "toward Spandauer Damm",
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_unknown",
+    "collision_happened": true,
+    "collision_description": "A cyclist going straight collided with a car going straight at an intersection."
+  }
+}

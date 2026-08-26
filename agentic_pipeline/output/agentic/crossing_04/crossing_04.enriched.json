@@ -1,0 +1,644 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "crossing_04",
+    "raw_text": "Eine Rad fahrende Person querte an einer Querungshilfe unachtsam die stadteinwärts führende Richtungsfahrbahn der Landsberger Allee vom begrünten Mittelstreifen kommend nach Norden. Dabei wurde sie von einer Pkw fahrenden Person ungebremst erfasst, die auf der Landsberger Allee Richtung Westen mit deutlich überhöhter Geschwindigkeit fuhr."
+  },
+  "classification": {
+    "scenario_type": "crossing",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Landsberger Allee",
+    "secondary_road": null,
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Landsberger Allee, Berlin, Germany",
+    "osm_roads": [
+      "Landsberger Allee"
+    ],
+    "direction_references": [
+      "west",
+      "north"
+    ],
+    "location_type": null
+  },
+  "road_context": {
+    "bike_facility_type": "median_strip",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": "west",
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": "clearly_faster_than_context",
+      "speed_evidence_quote": "mit deutlich überhöhter Geschwindigkeit"
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "north",
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "cyclist_crosses_vehicle_path_from_median",
+    "collision_happened": true,
+    "collision_description": "A cyclist crossing from a green median strip was struck by a speeding car."
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "intersection_lat": 52.529482,
+      "intersection_lon": 13.4547803,
+      "primary_has_bike_facility": false,
+      "primary_road_lanes": 3,
+      "secondary_road_lanes": 1,
+      "secondary_heading_rad": -2.697862,
+      "road_length_m": 500.0,
+      "motor_lane_width_m": 3.07,
+      "bike_lane_width_m": 1.25,
+      "road_geometry": "crossing",
+      "primary_heading_rad": 1.5707963267948966
+    },
+    "openscenario": {
+      "cyclist_lateral_position": "left",
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 1,
+          "initial_lane_id": -2,
+          "initial_speed_mps": 4.25,
+          "initial_s_m": 233.0
+        },
+        "car_1": {
+          "vehicle_category": "car",
+          "initial_road_id": 1,
+          "initial_lane_id": -1,
+          "initial_speed_mps": 22.22,
+          "initial_s_m": 161.12
+        }
+      },
+      "simulation_duration_s": 10.0,
+      "conflict": {
+        "conflict_time_s": 4.0
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "intersection_lane_counts",
+      "value_used": "primary=3, secondary=1",
+      "source": "mixed_osm_directional_and_default_due_to_osm_uncertainty",
+      "reason": "At least one report approach could not be matched to an unambiguous directed OSM way segment, so uncertain approaches keep the conservative simulation abstraction."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "left",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    },
+    {
+      "parameter": "primary_heading_rad",
+      "value_used": 1.570796,
+      "source": "explicit_from_report",
+      "reason": "No named road for OSM to resolve the cyclist's own crossing line from (the report only names one street) — derived from the cyclist's own extracted compass direction (north)."
+    },
+    {
+      "parameter": "conflict.conflict_time_s",
+      "value_used": 4.0,
+      "source": "engineering_assumption",
+      "reason": "Simulated approach duration to impact (seconds before the conflict point each actor's kinematic starting position, below, is computed from) — a scene-staging choice, not a report-derived value; no police report records how long the approach phase actually lasted. 4.0s gives a visible approach for typical urban speeds (car/cyclist envelopes elsewhere in this module) without an implausibly long empty lead-in."
+    },
+    {
+      "parameter": "road_context.bike_facility_type",
+      "value_used": "bike_lane (template fallback)",
+      "source": "unrepresentable_bike_facility_geometry",
+      "reason": "Report describes bike_facility_type='median_strip', which neither straight_road.xodr nor intersection_4way.xodr models precisely (see Assumption 2 in docs/modeling_assumptions.md). Falling back to the template's existing painted bike lane."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": "template's one real lane of the intended type",
+      "source": "lane_count_exceeds_template_capacity",
+      "reason": "OSM or the report implied 3 lanes, but neither straight_road.xodr nor intersection_4way.xodr models more than one real driving lane and one real biking lane per direction (see Assumption 1 in docs/modeling_assumptions.md). Any numbered-lane distinction beyond that isn't representable; the actor is placed on the template's one real lane of the intended type instead."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 4.25,
+      "source": "empirical_population_mean",
+      "reason": "Empirical mean urban cycling speed, 15.3 km/h (15th-85th percentile 12.3-18.1 km/h) — Schleinitz et al. 2014, UDV Forschungsbericht 27, TU Chemnitz naturalistic cycling study, p.80, n=28 conventional bicycles. Not Berlin-specific; not restricted to intersection crossings."
+    },
+    {
+      "parameter": "cyclist_1.initial_s_m",
+      "value_used": 233.0,
+      "source": "engineering_assumption",
+      "reason": "Kinematic backward projection from the conflict point (conflict_s_m - speed * conflict_time_s, floored at 2m): the position the cyclist would need to start from to reach the conflict point after conflict_time_s seconds at its own estimated initial speed -- a scene-composition choice consistent with the chosen conflict_time_s, not a report-derived position."
+    },
+    {
+      "parameter": "cyclist_1.vehicle_category",
+      "value_used": "bicycle",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'crossing': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_road_id",
+      "value_used": 1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'crossing': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_speed_mps",
+      "value_used": 22.22,
+      "source": "agent1_speed_evidence",
+      "reason": "Report evidence classified as 'clearly_faster_than_context' (quote: \"mit deutlich überhöhter Geschwindigkeit\") during Agent 1 extraction. Concretized deterministically here: this pipeline's existing safety-clamp backstop (80.0 km/h) — 'clearly faster' evidence explicitly implies exceeding the typical/legal context; magnitude not quantifiable from any cited source, so the pre-existing engineering safety cap is used directly as the upper bound of what's representable (engineering_assumption).",
+      "qualitative_relation": "clearly_faster_than_context",
+      "evidence_quote": "mit deutlich überhöhter Geschwindigkeit"
+    },
+    {
+      "parameter": "car_1.initial_s_m",
+      "value_used": 161.12,
+      "source": "engineering_assumption",
+      "reason": "Kinematic backward projection from the conflict point (conflict_s_m - speed * conflict_time_s, floored at 2m) -- same formula and rationale as the cyclist's, using this vehicle's own estimated initial speed."
+    },
+    {
+      "parameter": "car_1.vehicle_category",
+      "value_used": "car",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'crossing': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_road_id",
+      "value_used": 1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'crossing': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_lane_id",
+      "value_used": -1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'crossing': derived from participant type and maneuver; not specified in report or OSM."
+    }
+  ],
+  "osm_context": {
+    "query": "Landsberger Allee, Berlin, Germany",
+    "queries_tried": [
+      "Landsberger Allee, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 28247402,
+        "name": "Landsberger Allee",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5284114,
+            "lon": 13.4547771
+          },
+          {
+            "lat": 52.5283796,
+            "lon": 13.4546625
+          },
+          {
+            "lat": 52.5281948,
+            "lon": 13.4541752
+          },
+          {
+            "lat": 52.5281746,
+            "lon": 13.4541218
+          },
+          {
+            "lat": 52.5280786,
+            "lon": 13.4538187
+          },
+          {
+            "lat": 52.5279877,
+            "lon": 13.4534387
+          },
+          {
+            "lat": 52.5278749,
+            "lon": 13.4529349
+          }
+        ]
+      },
+      {
+        "osm_id": 28312386,
+        "name": "Landsberger Allee Brücke",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5287044,
+            "lon": 13.45605
+          },
+          {
+            "lat": 52.5287004,
+            "lon": 13.4560317
+          },
+          {
+            "lat": 52.5284993,
+            "lon": 13.4550945
+          },
+          {
+            "lat": 52.528471,
+            "lon": 13.454992
+          }
+        ]
+      },
+      {
+        "osm_id": 390476289,
+        "name": "S Landsberger Allee",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5299391,
+            "lon": 13.4565149
+          },
+          {
+            "lat": 52.5300431,
+            "lon": 13.4564117
+          }
+        ]
+      },
+      {
+        "osm_id": 1487237219,
+        "name": "Landsberger Allee",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.528471,
+            "lon": 13.454992
+          },
+          {
+            "lat": 52.5284114,
+            "lon": 13.4547771
+          }
+        ]
+      },
+      {
+        "osm_id": 1487237220,
+        "name": "Landsberger Allee",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5287159,
+            "lon": 13.4561067
+          },
+          {
+            "lat": 52.5287044,
+            "lon": 13.45605
+          }
+        ]
+      },
+      {
+        "osm_id": 1487237221,
+        "name": "Landsberger Allee",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5288039,
+            "lon": 13.4565404
+          },
+          {
+            "lat": 52.5287159,
+            "lon": 13.4561067
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "OSM turn:lanes tags were kept as evidence only; the report does not explicitly describe a left-turn maneuver for car_1."
+    ],
+    "geocoded": {
+      "display_name": "Landsberger Allee, 117, Landsberger Allee, Eldenaer Viertel, Prenzlauer Berg, Pankow, Berlin, 10407, Deutschland",
+      "lat": 52.529482,
+      "lon": 13.4547803,
+      "osm_type": "node",
+      "osm_id": 3872632789
+    },
+    "lane_count_evidence": {
+      "policy": "For police-report approaches, use OSM lanes only from way segments whose name matches the 'from' road and whose geometry moves toward the 'toward' road. Nearby road segments are kept as evidence but are not averaged.",
+      "primary": {
+        "approach": {
+          "from": "Landsberger Allee",
+          "toward": null
+        },
+        "from_names": [
+          "Landsberger Allee"
+        ],
+        "toward_names": [],
+        "candidate_count": 6,
+        "target_count": 0,
+        "considered_segments": [
+          {
+            "osm_id": 28247402,
+            "name": "Landsberger Allee",
+            "lanes_tag": "3",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": -2.697862,
+            "heading_deg": -154.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 28312386,
+            "name": "Landsberger Allee Brücke",
+            "lanes_tag": "3",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": -2.795968,
+            "heading_deg": -160.2,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 390476289,
+            "name": "S Landsberger Allee",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 2.117023,
+            "heading_deg": 121.3,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1487237219,
+            "name": "Landsberger Allee",
+            "lanes_tag": "3",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": -2.716513,
+            "heading_deg": -155.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1487237220,
+            "name": "Landsberger Allee",
+            "lanes_tag": "3",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": -2.821896,
+            "heading_deg": -161.7,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1487237221,
+            "name": "Landsberger Allee",
+            "lanes_tag": "3",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": -2.821773,
+            "heading_deg": -161.7,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          }
+        ],
+        "selected_segments": [
+          {
+            "osm_id": 28247402,
+            "name": "Landsberger Allee",
+            "lanes_tag": "3",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": -2.697862,
+            "heading_deg": -154.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 28312386,
+            "name": "Landsberger Allee Brücke",
+            "lanes_tag": "3",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": -2.795968,
+            "heading_deg": -160.2,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1487237219,
+            "name": "Landsberger Allee",
+            "lanes_tag": "3",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": -2.716513,
+            "heading_deg": -155.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1487237220,
+            "name": "Landsberger Allee",
+            "lanes_tag": "3",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": -2.821896,
+            "heading_deg": -161.7,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1487237221,
+            "name": "Landsberger Allee",
+            "lanes_tag": "3",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": -2.821773,
+            "heading_deg": -161.7,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          }
+        ],
+        "used_count": 3,
+        "used_heading_rad": -2.697862,
+        "used_heading_deg": -154.6,
+        "status": "used_directional_osm_way_match"
+      },
+      "secondary": {
+        "approach": {
+          "from": null,
+          "toward": null
+        },
+        "from_names": [],
+        "toward_names": [],
+        "candidate_count": 0,
+        "target_count": 0,
+        "considered_segments": [],
+        "selected_segments": [],
+        "used_count": null,
+        "used_heading_rad": null,
+        "used_heading_deg": null,
+        "status": "not_used_no_osm_way_name_match"
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "left",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  },
+  "topology": {
+    "scenario_id": "crossing_04",
+    "streets": [
+      "Landsberger Allee"
+    ],
+    "house_number": null,
+    "topology": "midblock",
+    "way_count": null,
+    "reason": "Only one street name found in the report text; no distinct cross-street mentioned."
+  },
+  "template_used": "straight_road.xodr"
+}

@@ -1,0 +1,525 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "turning_09",
+    "raw_text": "Eine Pkw fahrende Person fuhr auf der Straße zum Müggelhort nach Süden zum Müggelheimer Damm. Dort bog sie nach rechts nach Köpenick ab, ohne die Vorfahrtregelung durch Z.205 zu beachten. Sie übersah beim Abbiegen eine Rad fahrenden Person, die auf dem gemeinsamen Geh- und Radweg des Müggelheimer Damm vorfahrtberechtigt war. Beide Beteiligte waren nicht in der Lage, die Kollision abzuwenden."
+  },
+  "classification": {
+    "scenario_type": "turning",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Müggelheimer Damm",
+    "secondary_road": "Straße zum Müggelhort",
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Müggelheimer Damm / Straße zum Müggelhort, Berlin, Germany",
+    "osm_roads": [
+      "Müggelheimer Damm",
+      "Straße zum Müggelhort"
+    ],
+    "direction_references": [
+      "south"
+    ],
+    "location_type": "intersection"
+  },
+  "road_context": {
+    "bike_facility_type": "shared_foot_cycle_path",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "turn_right",
+      "initial_direction": "south",
+      "heading_reference": "toward Köpenick",
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across_shared_path",
+    "collision_happened": true,
+    "collision_description": "A car turning right struck a cyclist going straight on the shared path."
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "intersection_lat": 52.4167225,
+      "intersection_lon": 13.6536592,
+      "primary_has_bike_facility": false,
+      "motor_lane_count": 2,
+      "primary_heading_rad": -0.42763734508157364,
+      "secondary_heading_rad": 1.2636880039324514
+    },
+    "openscenario": {
+      "cyclist_lateral_position": "both"
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "motor_lane_count",
+      "value_used": 2,
+      "source": "osm_tag",
+      "reason": "OpenDRIVE motor-lane count was derived from nearby OSM lanes tags."
+    },
+    {
+      "parameter": "primary_heading_rad",
+      "value_used": -0.427637,
+      "source": "osm_way_geometry",
+      "reason": "Primary road heading derived from OSM way geometry."
+    },
+    {
+      "parameter": "secondary_heading_rad",
+      "value_used": 1.263688,
+      "source": "osm_way_geometry",
+      "reason": "Secondary road heading derived from OSM way geometry."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "both",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    }
+  ],
+  "osm_context": {
+    "query": "Müggelheimer Damm, Berlin, Germany",
+    "queries_tried": [
+      "Müggelheimer Damm / Straße zum Müggelhort, Berlin, Germany",
+      "Müggelheimer Damm Straße zum Müggelhort, Berlin, Germany",
+      "Müggelheimer Damm, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 24229551,
+        "name": "Straße zum Müggelhort",
+        "highway": "unclassified",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4167225,
+            "lon": 13.6536592
+          },
+          {
+            "lat": 52.4167637,
+            "lon": 13.6537142
+          },
+          {
+            "lat": 52.4167892,
+            "lon": 13.6537396
+          },
+          {
+            "lat": 52.4168276,
+            "lon": 13.6537771
+          },
+          {
+            "lat": 52.4169887,
+            "lon": 13.6538601
+          },
+          {
+            "lat": 52.4172429,
+            "lon": 13.6539911
+          },
+          {
+            "lat": 52.4188931,
+            "lon": 13.6548216
+          },
+          {
+            "lat": 52.4197343,
+            "lon": 13.6552457
+          },
+          {
+            "lat": 52.4202741,
+            "lon": 13.6555192
+          },
+          {
+            "lat": 52.4220658,
+            "lon": 13.6564183
+          }
+        ]
+      },
+      {
+        "osm_id": 26427693,
+        "name": "Müggelheimer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:left": "separate",
+          "cycleway:right": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4252708,
+            "lon": 13.6231199
+          },
+          {
+            "lat": 52.4251458,
+            "lon": 13.623456
+          },
+          {
+            "lat": 52.4250895,
+            "lon": 13.6236294
+          },
+          {
+            "lat": 52.4250086,
+            "lon": 13.6238858
+          },
+          {
+            "lat": 52.4248338,
+            "lon": 13.6245884
+          },
+          {
+            "lat": 52.4246839,
+            "lon": 13.6253287
+          },
+          {
+            "lat": 52.4239533,
+            "lon": 13.6290599
+          },
+          {
+            "lat": 52.4239287,
+            "lon": 13.6291864
+          },
+          {
+            "lat": 52.4239089,
+            "lon": 13.6292918
+          },
+          {
+            "lat": 52.4226014,
+            "lon": 13.6359123
+          },
+          {
+            "lat": 52.4221438,
+            "lon": 13.638275
+          },
+          {
+            "lat": 52.4217324,
+            "lon": 13.6404172
+          },
+          {
+            "lat": 52.4216543,
+            "lon": 13.6408295
+          },
+          {
+            "lat": 52.4216033,
+            "lon": 13.6410976
+          },
+          {
+            "lat": 52.4212539,
+            "lon": 13.6429676
+          },
+          {
+            "lat": 52.4208719,
+            "lon": 13.6451354
+          },
+          {
+            "lat": 52.4206351,
+            "lon": 13.6462022
+          },
+          {
+            "lat": 52.4204651,
+            "lon": 13.6467441
+          },
+          {
+            "lat": 52.4201739,
+            "lon": 13.6474618
+          },
+          {
+            "lat": 52.4196496,
+            "lon": 13.6484439
+          },
+          {
+            "lat": 52.419114,
+            "lon": 13.6493861
+          },
+          {
+            "lat": 52.4185009,
+            "lon": 13.6504777
+          },
+          {
+            "lat": 52.4178863,
+            "lon": 13.651564
+          },
+          {
+            "lat": 52.417255,
+            "lon": 13.6526902
+          },
+          {
+            "lat": 52.4167225,
+            "lon": 13.6536592
+          }
+        ]
+      },
+      {
+        "osm_id": 325347114,
+        "name": "Müggelheimer Damm",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4168497,
+            "lon": 13.656431
+          },
+          {
+            "lat": 52.4171117,
+            "lon": 13.6558485
+          },
+          {
+            "lat": 52.4173102,
+            "lon": 13.6553915
+          },
+          {
+            "lat": 52.4169048,
+            "lon": 13.6548083
+          },
+          {
+            "lat": 52.4168545,
+            "lon": 13.6547837
+          },
+          {
+            "lat": 52.4168238,
+            "lon": 13.6548163
+          },
+          {
+            "lat": 52.4166715,
+            "lon": 13.6551152
+          },
+          {
+            "lat": 52.4164013,
+            "lon": 13.6555901
+          }
+        ]
+      },
+      {
+        "osm_id": 325347116,
+        "name": "Müggelheimer Damm",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.416025,
+            "lon": 13.6549546
+          },
+          {
+            "lat": 52.4160706,
+            "lon": 13.6550157
+          },
+          {
+            "lat": 52.4161058,
+            "lon": 13.655062
+          },
+          {
+            "lat": 52.416213,
+            "lon": 13.6552028
+          },
+          {
+            "lat": 52.4164013,
+            "lon": 13.6555901
+          },
+          {
+            "lat": 52.41661,
+            "lon": 13.6559815
+          },
+          {
+            "lat": 52.4166251,
+            "lon": 13.6560098
+          },
+          {
+            "lat": 52.4166559,
+            "lon": 13.6560675
+          },
+          {
+            "lat": 52.4168497,
+            "lon": 13.656431
+          },
+          {
+            "lat": 52.4168947,
+            "lon": 13.6565049
+          },
+          {
+            "lat": 52.4169121,
+            "lon": 13.6565336
+          },
+          {
+            "lat": 52.4169347,
+            "lon": 13.6565707
+          },
+          {
+            "lat": 52.4170622,
+            "lon": 13.6567803
+          }
+        ]
+      },
+      {
+        "osm_id": 897363744,
+        "name": "Müggelheimer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:both": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.4167225,
+            "lon": 13.6536592
+          },
+          {
+            "lat": 52.4166746,
+            "lon": 13.6537461
+          },
+          {
+            "lat": 52.4161281,
+            "lon": 13.6547627
+          },
+          {
+            "lat": 52.416025,
+            "lon": 13.6549546
+          }
+        ]
+      },
+      {
+        "osm_id": 1448007176,
+        "name": "Müggelheimer Damm",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "separate",
+        "cycleway_tags": {
+          "cycleway:both": "separate"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.416025,
+            "lon": 13.6549546
+          },
+          {
+            "lat": 52.4156956,
+            "lon": 13.6555581
+          }
+        ]
+      }
+    ],
+    "notes": [],
+    "geocoded": {
+      "display_name": "Müggelheimer Damm, Salvador-Allende-Viertel II, Köpenick, Treptow-Köpenick, Berlin, 12557, Deutschland",
+      "lat": 52.4167225,
+      "lon": 13.6536592,
+      "osm_type": "way",
+      "osm_id": 169076546,
+      "nominatim_lat": 52.4329831,
+      "nominatim_lon": 13.6070581,
+      "refined_by": "shared_node_lookup",
+      "refined_streets": [
+        "Müggelheimer Damm",
+        "Straße zum Müggelhort"
+      ],
+      "refined_way_id": 24229551
+    },
+    "cyclist_lateral_position": {
+      "value": "both",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 30.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

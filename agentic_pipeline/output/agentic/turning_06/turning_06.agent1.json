@@ -1,0 +1,59 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "turning_06",
+    "raw_text": "Eine Radfahrerin befuhr die Schönhauser Straße in Richtung Torstraße. Als sie auf die Kreuzung der Torstraße in Richtung Alte Schönhauser fuhr, erfasste sie ein Lkw-Fahrer, der zunächst in gleicher Richtung fahrend dort nach rechts in die Torstraße abbog."
+  },
+  "classification": {
+    "scenario_type": "turning",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Torstraße",
+    "secondary_road": "Schönhauser Straße",
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Torstraße / Schönhauser Straße, Berlin, Germany",
+    "osm_roads": [
+      "Torstraße",
+      "Schönhauser Straße"
+    ],
+    "direction_references": [],
+    "location_type": "intersection"
+  },
+  "road_context": {
+    "bike_facility_type": null,
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": "toward Alte Schönhauser",
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
+      "id": "truck_1",
+      "class": "motor_vehicle",
+      "type": "truck",
+      "maneuver": "turn_right",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across",
+    "collision_happened": true,
+    "collision_description": "A truck turning right struck a cyclist going straight on the path."
+  }
+}

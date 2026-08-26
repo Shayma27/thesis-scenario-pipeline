@@ -1,0 +1,750 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "longitudinal_01",
+    "raw_text": "Ein Radfahrer befuhr den linken der drei Fahrstreifen auf der Straße Alt-Biesdorf von der Lötschbergstraße kommend in Richtung Grabensprung. In Höhe der Braunsdorfstraße wechselte der Radfahrer auf den äußerst rechten Fahrstreifen, wobei es zum Zusammenstoß mit einem Toyota-Fahrer kam, der mit seinem Wagen in die gleiche Richtung unterwegs war."
+  },
+  "classification": {
+    "scenario_type": "longitudinal",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Alt-Biesdorf",
+    "secondary_road": null,
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Alt-Biesdorf, Berlin, Germany",
+    "osm_roads": [
+      "Alt-Biesdorf"
+    ],
+    "direction_references": [],
+    "location_type": null
+  },
+  "road_context": {
+    "bike_facility_type": "separated_cycle_track",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "change_lane_left_to_right",
+      "initial_direction": null,
+      "heading_reference": "toward Grabensprung",
+      "road_position": "leftmost_motor_lane",
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "cyclist_lane_change_into_car_path",
+    "collision_happened": true,
+    "collision_description": "A cyclist changed from the leftmost to the rightmost of three lanes and collided with a car traveling in the same direction."
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "intersection_lat": 52.509525,
+      "intersection_lon": 13.5475135,
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "separated_cycle_track",
+      "primary_bike_facility_position": "right",
+      "primary_heading_rad": -0.09441863291447408,
+      "road_length_m": 500.0,
+      "motor_lane_width_m": 3.07,
+      "bike_lane_width_m": 1.25,
+      "road_geometry": "line"
+    },
+    "openscenario": {
+      "cyclist_lateral_position": "leftmost_motor_lane",
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 1,
+          "initial_lane_id": 1,
+          "initial_speed_mps": 4.25,
+          "initial_s_m": 50.0
+        },
+        "car_1": {
+          "vehicle_category": "car",
+          "initial_road_id": 1,
+          "initial_lane_id": -1,
+          "initial_speed_mps": 10.0,
+          "initial_s_m": 225.0
+        }
+      },
+      "simulation_duration_s": 10.0,
+      "conflict": {
+        "conflict_s_m": 250.0
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "separated_cycle_track",
+      "source": "osm_tag",
+      "reason": "OSM cycleway tags indicate separated_cycle_track."
+    },
+    {
+      "parameter": "primary_heading_rad",
+      "value_used": -0.094419,
+      "source": "osm_way_geometry",
+      "reason": "Primary road heading derived from OSM way geometry."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "leftmost_motor_lane",
+      "source": "explicit_from_report",
+      "reason": "The report explicitly places the cyclist on a motor-vehicle lane."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 4.25,
+      "source": "empirical_population_mean",
+      "reason": "Empirical mean urban cycling speed, 15.3 km/h (15th-85th percentile 12.3-18.1 km/h) — Schleinitz et al. 2014, UDV Forschungsbericht 27, TU Chemnitz naturalistic cycling study, p.80, n=28 conventional bicycles. Not Berlin-specific; not restricted to intersection crossings."
+    },
+    {
+      "parameter": "cyclist_1.initial_s_m",
+      "value_used": 50.0,
+      "source": "engineering_assumption",
+      "reason": "20% of the road length -- a fixed scene-composition fraction giving the cyclist a visible approach on a straight road with no crossing conflict; no report or OSM value states an approach distance, and no cited source quantifies a typical one for this case."
+    },
+    {
+      "parameter": "cyclist_1.vehicle_category",
+      "value_used": "bicycle",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'longitudinal': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_road_id",
+      "value_used": 1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'longitudinal': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": 1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'longitudinal': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_speed_mps",
+      "value_used": 10.0,
+      "source": "osm_tag",
+      "reason": "Posted-speed-limit-based default: an OSM-observed maxspeed tag (50.0 km/h) as the legal ceiling; nominal value is the lower of that and RiLSA's 36.0 km/h conservative motor-vehicle clearance reference (RiLSA 2015, FGSV, pp. 21-26, ISBN 978-3-939715-91-7), since no verified source differentiates a typical value by vehicle type or maneuver."
+    },
+    {
+      "parameter": "car_1.initial_s_m",
+      "value_used": 225.0,
+      "source": "engineering_assumption",
+      "reason": "25m before the conflict point -- a fixed scene-composition offset for a normal following distance on a single straight road with no turn or crossing in progress; not derived from a report/OSM value or a cited source."
+    },
+    {
+      "parameter": "car_1.vehicle_category",
+      "value_used": "car",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'longitudinal': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_road_id",
+      "value_used": 1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'longitudinal': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_lane_id",
+      "value_used": -1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'longitudinal': derived from participant type and maneuver; not specified in report or OSM."
+    }
+  ],
+  "osm_context": {
+    "query": "Alt-Biesdorf, Berlin, Germany",
+    "queries_tried": [
+      "Alt-Biesdorf, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 31609037,
+        "name": "Alt-Biesdorf",
+        "highway": "primary",
+        "maxspeed": "60",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5096962,
+            "lon": 13.5449888
+          },
+          {
+            "lat": 52.5096244,
+            "lon": 13.5462241
+          },
+          {
+            "lat": 52.50962,
+            "lon": 13.5463016
+          }
+        ]
+      },
+      {
+        "osm_id": 192497992,
+        "name": "Alt-Biesdorf",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5097028,
+            "lon": 13.546267
+          },
+          {
+            "lat": 52.5097394,
+            "lon": 13.5455259
+          },
+          {
+            "lat": 52.5097608,
+            "lon": 13.5451056
+          },
+          {
+            "lat": 52.5098279,
+            "lon": 13.5437861
+          }
+        ]
+      },
+      {
+        "osm_id": 192497995,
+        "name": "Alt-Biesdorf",
+        "highway": "primary",
+        "maxspeed": "60",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.509525,
+            "lon": 13.5475135
+          },
+          {
+            "lat": 52.509466,
+            "lon": 13.5481251
+          },
+          {
+            "lat": 52.5094039,
+            "lon": 13.5487691
+          },
+          {
+            "lat": 52.5093566,
+            "lon": 13.549353
+          },
+          {
+            "lat": 52.5093516,
+            "lon": 13.5494581
+          },
+          {
+            "lat": 52.5093276,
+            "lon": 13.5499019
+          },
+          {
+            "lat": 52.5093067,
+            "lon": 13.5502876
+          },
+          {
+            "lat": 52.5093012,
+            "lon": 13.5503892
+          },
+          {
+            "lat": 52.5092984,
+            "lon": 13.5504407
+          },
+          {
+            "lat": 52.5092953,
+            "lon": 13.5504975
+          },
+          {
+            "lat": 52.5092872,
+            "lon": 13.5506485
+          },
+          {
+            "lat": 52.5092581,
+            "lon": 13.5510287
+          },
+          {
+            "lat": 52.5092538,
+            "lon": 13.5510849
+          },
+          {
+            "lat": 52.5091983,
+            "lon": 13.5516033
+          },
+          {
+            "lat": 52.5091273,
+            "lon": 13.5522558
+          },
+          {
+            "lat": 52.509106,
+            "lon": 13.5524515
+          }
+        ]
+      },
+      {
+        "osm_id": 304196023,
+        "name": "Alt-Biesdorf",
+        "highway": "service",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5086996,
+            "lon": 13.5488817
+          },
+          {
+            "lat": 52.5091508,
+            "lon": 13.5488998
+          },
+          {
+            "lat": 52.5092837,
+            "lon": 13.548768
+          },
+          {
+            "lat": 52.5093513,
+            "lon": 13.5487686
+          },
+          {
+            "lat": 52.5094039,
+            "lon": 13.5487691
+          }
+        ]
+      },
+      {
+        "osm_id": 304196024,
+        "name": "Alt-Biesdorf",
+        "highway": "service",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5088597,
+            "lon": 13.5481377
+          },
+          {
+            "lat": 52.5087975,
+            "lon": 13.5481341
+          },
+          {
+            "lat": 52.5087164,
+            "lon": 13.5482801
+          },
+          {
+            "lat": 52.5086996,
+            "lon": 13.5488817
+          },
+          {
+            "lat": 52.5086928,
+            "lon": 13.5490814
+          }
+        ]
+      },
+      {
+        "osm_id": 316319551,
+        "name": "Alt-Biesdorf",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer:left": "no",
+          "cycleway:right:buffer:right": "0.6",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:both": "dashed_line",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_mode:right": "parking",
+          "cycleway:right:traffic_sign": "DE:237",
+          "cycleway:right:width": "1.3"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5094724,
+            "lon": 13.5499699
+          },
+          {
+            "lat": 52.5095042,
+            "lon": 13.5493476
+          },
+          {
+            "lat": 52.5095269,
+            "lon": 13.5489058
+          },
+          {
+            "lat": 52.5095318,
+            "lon": 13.5488119
+          },
+          {
+            "lat": 52.5095594,
+            "lon": 13.5482755
+          },
+          {
+            "lat": 52.5095756,
+            "lon": 13.5479897
+          }
+        ]
+      },
+      {
+        "osm_id": 319496490,
+        "name": "Alt-Biesdorf",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "none|through|right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5096711,
+            "lon": 13.5467325
+          },
+          {
+            "lat": 52.5096857,
+            "lon": 13.546517
+          },
+          {
+            "lat": 52.5096942,
+            "lon": 13.5463894
+          },
+          {
+            "lat": 52.5096995,
+            "lon": 13.5463118
+          },
+          {
+            "lat": 52.5097028,
+            "lon": 13.546267
+          }
+        ]
+      },
+      {
+        "osm_id": 439101183,
+        "name": "Alt-Biesdorf",
+        "highway": "primary",
+        "maxspeed": "60",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5095793,
+            "lon": 13.5469398
+          },
+          {
+            "lat": 52.509569,
+            "lon": 13.5470491
+          },
+          {
+            "lat": 52.509525,
+            "lon": 13.5475135
+          }
+        ]
+      },
+      {
+        "osm_id": 865948249,
+        "name": "Alt-Biesdorf",
+        "highway": "primary",
+        "maxspeed": "60",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.50962,
+            "lon": 13.5463016
+          },
+          {
+            "lat": 52.5095793,
+            "lon": 13.5469398
+          }
+        ]
+      },
+      {
+        "osm_id": 949330590,
+        "name": "Alt-Biesdorf",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer:both": "no",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:both": "dashed_line",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_sign": "DE:237",
+          "cycleway:right:width": "1.7"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5096157,
+            "lon": 13.5475012
+          },
+          {
+            "lat": 52.509632,
+            "lon": 13.5472827
+          },
+          {
+            "lat": 52.5096593,
+            "lon": 13.5469022
+          },
+          {
+            "lat": 52.5096711,
+            "lon": 13.5467325
+          }
+        ]
+      },
+      {
+        "osm_id": 1429362519,
+        "name": "Alt-Biesdorf",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer:both": "no",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:left": "dashed_line",
+          "cycleway:right:marking:right": "no",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_sign": "DE:237",
+          "cycleway:right:width": "1.8"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5095756,
+            "lon": 13.5479897
+          },
+          {
+            "lat": 52.5096052,
+            "lon": 13.5476474
+          },
+          {
+            "lat": 52.5096115,
+            "lon": 13.5475597
+          },
+          {
+            "lat": 52.5096157,
+            "lon": 13.5475012
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "maxspeed_kmh manually overridden to 50.0 — see _MANUAL_MAXSPEED_OVERRIDES_KMH's comment for why."
+    ],
+    "geocoded": {
+      "display_name": "Alt-Biesdorf, Grüne Aue, Biesdorf, Marzahn-Hellersdorf, Berlin, 12683, Deutschland",
+      "lat": 52.509525,
+      "lon": 13.5475135,
+      "osm_type": "way",
+      "osm_id": 31578375,
+      "nominatim_lat": 52.5067275,
+      "nominatim_lon": 13.5678284,
+      "refined_by": "shared_node_lookup",
+      "refined_streets": [
+        "Alt-Biesdorf",
+        "Lötschbergstraße"
+      ],
+      "refined_way_id": 1087383175
+    },
+    "bike_facility": {
+      "type": "separated_cycle_track",
+      "position": "right",
+      "source": "osm_tag",
+      "osm_evidence": {
+        "bike_facility_type": "separated_cycle_track",
+        "position": "right",
+        "tags": {
+          "cycleway:right": "separate"
+        }
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "leftmost_motor_lane",
+      "source": "explicit_from_report",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  },
+  "topology": {
+    "scenario_id": "longitudinal_01",
+    "streets": [
+      "Lötschbergstraße",
+      "Braunsdorfstraße"
+    ],
+    "house_number": null,
+    "topology": "needs_manual_review",
+    "way_count": null,
+    "reason": "No shared OSM node found between 'Lötschbergstraße' and 'Braunsdorfstraße' within 5000m of the geocoded location (fragmentation, a genuine data gap, or a wrong geocode)."
+  },
+  "template_used": "straight_road.xodr"
+}

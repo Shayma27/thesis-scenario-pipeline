@@ -1,0 +1,61 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "turning_01",
+    "raw_text": "Der Fahrer wartete in dem von ihm geführten LKW auf der Fahrbahn der Salvador-Allende-Str. vor der Rotlicht abstrahlenden LSA. Als die LSA für seine Richtung grünes Licht abstrahlte, bog er nach rechts in den Müggelschlößchenweg ab und erfasste die neben ihm in gleicher Richtung geradeaus fahrende Radfahrerin. Sie befuhr den von der Fahrbahn baulich getrennten Radweg der Salvador-Allende-Str. in nördliche Richtung. Die LSA für Radfahrende strahlte grünes Wechsellicht ab. Die Radfahrerin und das Fahrrad wurden durch den rechts abbiegenden LKW vollständig überrollt."
+  },
+  "classification": {
+    "scenario_type": "turning",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Salvador-Allende-Str.",
+    "secondary_road": "Müggelschlößchenweg",
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Salvador-Allende-Str. / Müggelschlößchenweg, Berlin, Germany",
+    "osm_roads": [
+      "Salvador-Allende-Str.",
+      "Müggelschlößchenweg"
+    ],
+    "direction_references": [
+      "north"
+    ],
+    "location_type": "intersection"
+  },
+  "road_context": {
+    "bike_facility_type": "separated_cycle_track",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "truck_1",
+      "class": "motor_vehicle",
+      "type": "truck",
+      "maneuver": "turn_right",
+      "initial_direction": "north",
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "north",
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across_cycle_track",
+    "collision_happened": true,
+    "collision_description": "A truck turning right struck a cyclist going straight on the separated cycle track."
+  }
+}

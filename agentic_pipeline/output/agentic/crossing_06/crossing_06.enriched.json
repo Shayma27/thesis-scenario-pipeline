@@ -1,0 +1,1959 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "crossing_06",
+    "raw_text": "Eine Rad fahrende Person befuhr den Radfahrschutzstreifen der Oranienburger Straße nach Norden und wollte nach links in den Taldorfer Weg abbiegen, ohne auf den nachfolgenden in gleicher Richtung fahrenden Pkw zu achten. Es kam zum Zusammenstoß."
+  },
+  "classification": {
+    "scenario_type": "crossing",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Oranienburger Straße",
+    "secondary_road": "Taldorfer Weg",
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Oranienburger Straße / Taldorfer Weg, Berlin, Germany",
+    "osm_roads": [
+      "Oranienburger Straße",
+      "Taldorfer Weg"
+    ],
+    "direction_references": [
+      "north"
+    ],
+    "location_type": "intersection"
+  },
+  "road_context": {
+    "bike_facility_type": "bike_lane",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "turn_left",
+      "initial_direction": "north",
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "go_straight",
+      "initial_direction": "north",
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "cyclist_turns_across_vehicle_path",
+    "collision_happened": true,
+    "collision_description": "A cyclist turning left collided with a car traveling in the same direction."
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "intersection_lat": 52.588196,
+      "intersection_lon": 13.3344444,
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "bike_lane",
+      "primary_bike_facility_position": "right",
+      "primary_road_lanes": 1,
+      "secondary_road_lanes": 1,
+      "primary_heading_rad": -1.447599,
+      "secondary_heading_rad": 0.101172,
+      "road_length_m": 93.6608312256975,
+      "motor_lane_width_m": 3.5,
+      "bike_lane_width_m": 1.25,
+      "road_geometry": "crossing"
+    },
+    "openscenario": {
+      "cyclist_lateral_position": "right",
+      "actors": {
+        "cyclist_1": {
+          "vehicle_category": "bicycle",
+          "initial_road_id": 0,
+          "initial_lane_id": -2,
+          "initial_speed_mps": 4.25,
+          "initial_s_m": 29.83
+        },
+        "car_1": {
+          "vehicle_category": "car",
+          "initial_road_id": 1,
+          "initial_lane_id": -1,
+          "initial_speed_mps": 11.11,
+          "initial_s_m": 2.39
+        }
+      },
+      "simulation_duration_s": 10.0,
+      "conflict": {
+        "conflict_time_s": 4.0
+      }
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "bike_lane",
+      "source": "explicit_from_report",
+      "reason": "The report explicitly describes the cycling infrastructure."
+    },
+    {
+      "parameter": "intersection_lane_counts",
+      "value_used": "primary=1, secondary=1",
+      "source": "default_assumption_due_to_osm_uncertainty",
+      "reason": "At least one report approach could not be matched to an unambiguous directed OSM way segment, so uncertain approaches keep the conservative simulation abstraction."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "right",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    },
+    {
+      "parameter": "conflict.conflict_time_s",
+      "value_used": 4.0,
+      "source": "engineering_assumption",
+      "reason": "Simulated approach duration to impact (seconds before the conflict point each actor's kinematic starting position, below, is computed from) — a scene-staging choice, not a report-derived value; no police report records how long the approach phase actually lasted. 4.0s gives a visible approach for typical urban speeds (car/cyclist envelopes elsewhere in this module) without an implausibly long empty lead-in."
+    },
+    {
+      "parameter": "cyclist_1.initial_lane_id",
+      "value_used": -2,
+      "source": "derived_from_cyclist_lateral_position",
+      "reason": "Cyclist OpenSCENARIO lane id follows the chosen lateral-position policy so the initial teleport matches the generated trajectory."
+    },
+    {
+      "parameter": "cyclist_1.initial_speed_mps",
+      "value_used": 4.25,
+      "source": "empirical_population_mean",
+      "reason": "Empirical mean urban cycling speed, 15.3 km/h (15th-85th percentile 12.3-18.1 km/h) — Schleinitz et al. 2014, UDV Forschungsbericht 27, TU Chemnitz naturalistic cycling study, p.80, n=28 conventional bicycles. Not Berlin-specific; not restricted to intersection crossings."
+    },
+    {
+      "parameter": "cyclist_1.initial_s_m",
+      "value_used": 29.83,
+      "source": "engineering_assumption",
+      "reason": "Kinematic backward projection from the conflict point (conflict_s_m - speed * conflict_time_s, floored at 2m): the position the cyclist would need to start from to reach the conflict point after conflict_time_s seconds at its own estimated initial speed -- a scene-composition choice consistent with the chosen conflict_time_s, not a report-derived position."
+    },
+    {
+      "parameter": "cyclist_1.vehicle_category",
+      "value_used": "bicycle",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'crossing': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "cyclist_1.initial_road_id",
+      "value_used": 0,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'crossing': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_speed_mps",
+      "value_used": 11.11,
+      "source": "engineering_assumption",
+      "reason": "RiLSA's 40.0 km/h motor-vehicle approach-speed assumption (RiLSA 2015, FGSV, § 2.5.3, p.26 — official English translation, FGSV-Nr. 321 E), used there for signalized-intersection intergreen-time calculation and applied here as this pipeline's 'crossing' scenario default (the vehicle is always moving straight through, never stopped/queued/yielding — signal state itself is never modeled, see Assumption 3, docs/modeling_assumptions.md). RiLSA states this value applies 'regardless of the speed limit,' so it is not scaled by an OSM-observed maxspeed tag (50.0 km/h). Replaces an earlier, unverified 'approach speed = 65% of the posted limit' rule that had no primary-source basis."
+    },
+    {
+      "parameter": "car_1.initial_s_m",
+      "value_used": 2.39,
+      "source": "engineering_assumption",
+      "reason": "Kinematic backward projection from the conflict point (conflict_s_m - speed * conflict_time_s, floored at 2m) -- same formula and rationale as the cyclist's, using this vehicle's own estimated initial speed."
+    },
+    {
+      "parameter": "car_1.vehicle_category",
+      "value_used": "car",
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'crossing': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_road_id",
+      "value_used": 1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'crossing': derived from participant type and maneuver; not specified in report or OSM."
+    },
+    {
+      "parameter": "car_1.initial_lane_id",
+      "value_used": -1,
+      "source": "agent3_default_assumption",
+      "reason": "Agent 3 default for scenario type 'crossing': derived from participant type and maneuver; not specified in report or OSM."
+    }
+  ],
+  "osm_context": {
+    "query": "Oranienburger Straße, Berlin, Germany",
+    "queries_tried": [
+      "Oranienburger Straße / Taldorfer Weg, Berlin, Germany",
+      "Oranienburger Straße Taldorfer Weg, Berlin, Germany",
+      "Oranienburger Straße, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 4071979,
+        "name": "Oranienburger Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate",
+          "cycleway:right:bicycle": "yes"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5874891,
+            "lon": 13.3345853
+          },
+          {
+            "lat": 52.5873547,
+            "lon": 13.3346125
+          }
+        ]
+      },
+      {
+        "osm_id": 4765747,
+        "name": "Taldorfer Weg",
+        "highway": "residential",
+        "maxspeed": "50",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "separate",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.588196,
+            "lon": 13.3344444
+          },
+          {
+            "lat": 52.588205,
+            "lon": 13.3345893
+          }
+        ]
+      },
+      {
+        "osm_id": 4765765,
+        "name": "Oranienburger Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|none",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate",
+          "cycleway:right:bicycle": "yes"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5880375,
+            "lon": 13.3344741
+          },
+          {
+            "lat": 52.5876375,
+            "lon": 13.3345552
+          },
+          {
+            "lat": 52.5875934,
+            "lon": 13.3345641
+          }
+        ]
+      },
+      {
+        "osm_id": 4765766,
+        "name": "Oranienburger Straße",
+        "highway": "secondary",
+        "maxspeed": null,
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|none",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate",
+          "cycleway:right:bicycle": "yes"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5875934,
+            "lon": 13.3345641
+          },
+          {
+            "lat": 52.5875404,
+            "lon": 13.3345749
+          },
+          {
+            "lat": 52.5874891,
+            "lon": 13.3345853
+          }
+        ]
+      },
+      {
+        "osm_id": 4765767,
+        "name": "Oranienburger Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "share_busway",
+          "cycleway:right:bicycle": "yes",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:traffic_sign": "none",
+          "cycleway:right:width": "3.7"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5876045,
+            "lon": 13.3347229
+          },
+          {
+            "lat": 52.5879226,
+            "lon": 13.3346498
+          },
+          {
+            "lat": 52.5879648,
+            "lon": 13.3346395
+          },
+          {
+            "lat": 52.5880106,
+            "lon": 13.3346355
+          }
+        ]
+      },
+      {
+        "osm_id": 4765864,
+        "name": "Taldorfer Weg",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "5",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "right",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5881788,
+            "lon": 13.3341765
+          },
+          {
+            "lat": 52.5881316,
+            "lon": 13.3334483
+          },
+          {
+            "lat": 52.5880932,
+            "lon": 13.3325671
+          },
+          {
+            "lat": 52.5880664,
+            "lon": 13.3317362
+          },
+          {
+            "lat": 52.5880601,
+            "lon": 13.3310562
+          }
+        ]
+      },
+      {
+        "osm_id": 62192860,
+        "name": "Oranienburger Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "exclusive",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_sign": "DE:237",
+          "cycleway:right:width": "1.5"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5852572,
+            "lon": 13.3350871
+          },
+          {
+            "lat": 52.5852764,
+            "lon": 13.3350921
+          },
+          {
+            "lat": 52.5853928,
+            "lon": 13.3351141
+          },
+          {
+            "lat": 52.5855267,
+            "lon": 13.3351244
+          },
+          {
+            "lat": 52.5856173,
+            "lon": 13.3351218
+          },
+          {
+            "lat": 52.5856604,
+            "lon": 13.3351206
+          },
+          {
+            "lat": 52.5858222,
+            "lon": 13.3350998
+          },
+          {
+            "lat": 52.5859816,
+            "lon": 13.3350651
+          },
+          {
+            "lat": 52.5864431,
+            "lon": 13.3349648
+          },
+          {
+            "lat": 52.5869713,
+            "lon": 13.3348445
+          }
+        ]
+      },
+      {
+        "osm_id": 221755405,
+        "name": "Oranienburger Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "yes",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_sign": "DE:237",
+          "cycleway:right:width": "1.5"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5873643,
+            "lon": 13.334769
+          },
+          {
+            "lat": 52.587499,
+            "lon": 13.3347436
+          }
+        ]
+      },
+      {
+        "osm_id": 395225597,
+        "name": "Am Nordgraben/Oranienburger Straße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5869463,
+            "lon": 13.334627
+          },
+          {
+            "lat": 52.5870905,
+            "lon": 13.3345966
+          }
+        ]
+      },
+      {
+        "osm_id": 395225598,
+        "name": "Am Nordgraben/Oranienburger Straße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5874817,
+            "lon": 13.3339875
+          },
+          {
+            "lat": 52.5875031,
+            "lon": 13.3342884
+          }
+        ]
+      },
+      {
+        "osm_id": 395225599,
+        "name": "Am Nordgraben/Oranienburger Straße",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5879298,
+            "lon": 13.3347531
+          },
+          {
+            "lat": 52.5878325,
+            "lon": 13.3347733
+          }
+        ]
+      },
+      {
+        "osm_id": 395225634,
+        "name": "Oranienburger Straße/Alt-Wittenau",
+        "highway": "platform",
+        "maxspeed": null,
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": null,
+        "cycleway_tags": {},
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5893265,
+            "lon": 13.3341279
+          },
+          {
+            "lat": 52.5894678,
+            "lon": 13.3340983
+          }
+        ]
+      },
+      {
+        "osm_id": 420492436,
+        "name": "Oranienburger Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "yes",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_sign": "DE:237",
+          "cycleway:right:width": "1.5"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.587499,
+            "lon": 13.3347436
+          },
+          {
+            "lat": 52.5875509,
+            "lon": 13.3347334
+          },
+          {
+            "lat": 52.5876045,
+            "lon": 13.3347229
+          }
+        ]
+      },
+      {
+        "osm_id": 445676176,
+        "name": "Oranienburger Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:buffer:right": "0.6",
+          "cycleway:right:lane": "exclusive",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_mode:right": "parking",
+          "cycleway:right:traffic_sign": "DE:237",
+          "cycleway:right:width": "1.5"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5892699,
+            "lon": 13.3342327
+          },
+          {
+            "lat": 52.5888304,
+            "lon": 13.3343245
+          },
+          {
+            "lat": 52.5888253,
+            "lon": 13.3343256
+          },
+          {
+            "lat": 52.5883085,
+            "lon": 13.3344354
+          },
+          {
+            "lat": 52.5882978,
+            "lon": 13.3344372
+          },
+          {
+            "lat": 52.5882498,
+            "lon": 13.3344453
+          },
+          {
+            "lat": 52.588196,
+            "lon": 13.3344444
+          }
+        ]
+      },
+      {
+        "osm_id": 487197440,
+        "name": "Oranienburger Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_sign": "DE:237",
+          "cycleway:right:width": "1.5"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.589349,
+            "lon": 13.3343439
+          },
+          {
+            "lat": 52.5895085,
+            "lon": 13.3343164
+          },
+          {
+            "lat": 52.5895507,
+            "lon": 13.3343093
+          },
+          {
+            "lat": 52.5896856,
+            "lon": 13.3342813
+          }
+        ]
+      },
+      {
+        "osm_id": 961724103,
+        "name": "Oranienburger Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "yes",
+          "cycleway:right:buffer:right": "0.6",
+          "cycleway:right:lane": "exclusive",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_mode:right": "parking",
+          "cycleway:right:traffic_sign": "DE:237",
+          "cycleway:right:width": "1.5"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5880106,
+            "lon": 13.3346355
+          },
+          {
+            "lat": 52.588205,
+            "lon": 13.3345893
+          }
+        ]
+      },
+      {
+        "osm_id": 961724104,
+        "name": "Oranienburger Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:buffer:right": "0.6",
+          "cycleway:right:lane": "exclusive",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_mode:right": "parking",
+          "cycleway:right:traffic_sign": "DE:237",
+          "cycleway:right:width": "1.5"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.588205,
+            "lon": 13.3345893
+          },
+          {
+            "lat": 52.5883054,
+            "lon": 13.3345678
+          },
+          {
+            "lat": 52.5888352,
+            "lon": 13.3344561
+          },
+          {
+            "lat": 52.5888378,
+            "lon": 13.3344556
+          },
+          {
+            "lat": 52.5890153,
+            "lon": 13.3344167
+          }
+        ]
+      },
+      {
+        "osm_id": 961724105,
+        "name": "Oranienburger Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate",
+          "cycleway:right:bicycle": "yes"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.588196,
+            "lon": 13.3344444
+          },
+          {
+            "lat": 52.5880375,
+            "lon": 13.3344741
+          }
+        ]
+      },
+      {
+        "osm_id": 961724106,
+        "name": "Oranienburger Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "share_busway",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:traffic_sign": "DE:237",
+          "cycleway:right:width": "3"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5893635,
+            "lon": 13.3342106
+          },
+          {
+            "lat": 52.5893423,
+            "lon": 13.3342149
+          },
+          {
+            "lat": 52.5893387,
+            "lon": 13.3342157
+          },
+          {
+            "lat": 52.5892699,
+            "lon": 13.3342327
+          }
+        ]
+      },
+      {
+        "osm_id": 961724107,
+        "name": "Oranienburger Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "share_busway",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:traffic_sign": "DE:237",
+          "cycleway:right:width": "3"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5895464,
+            "lon": 13.3341718
+          },
+          {
+            "lat": 52.5893635,
+            "lon": 13.3342106
+          }
+        ]
+      },
+      {
+        "osm_id": 962783126,
+        "name": "Oranienburger Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "share_busway",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:width": "3"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5872316,
+            "lon": 13.3346349
+          },
+          {
+            "lat": 52.5871845,
+            "lon": 13.3346448
+          },
+          {
+            "lat": 52.5869631,
+            "lon": 13.3346914
+          },
+          {
+            "lat": 52.5868613,
+            "lon": 13.3347128
+          }
+        ]
+      },
+      {
+        "osm_id": 962783127,
+        "name": "Oranienburger Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5873547,
+            "lon": 13.3346125
+          },
+          {
+            "lat": 52.5873102,
+            "lon": 13.3346205
+          },
+          {
+            "lat": 52.5872572,
+            "lon": 13.33463
+          },
+          {
+            "lat": 52.5872316,
+            "lon": 13.3346349
+          }
+        ]
+      },
+      {
+        "osm_id": 1152406255,
+        "name": "Oranienburger Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "none|through|right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "exclusive",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_sign": "DE:237",
+          "cycleway:right:width": "1.5"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5869713,
+            "lon": 13.3348445
+          },
+          {
+            "lat": 52.5872218,
+            "lon": 13.3347964
+          },
+          {
+            "lat": 52.5872669,
+            "lon": 13.3347877
+          },
+          {
+            "lat": 52.5873197,
+            "lon": 13.3347776
+          },
+          {
+            "lat": 52.5873643,
+            "lon": 13.334769
+          }
+        ]
+      },
+      {
+        "osm_id": 1293406524,
+        "name": "Taldorfer Weg",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "right",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.588196,
+            "lon": 13.3344444
+          },
+          {
+            "lat": 52.5881887,
+            "lon": 13.3343288
+          },
+          {
+            "lat": 52.5881864,
+            "lon": 13.3342932
+          }
+        ]
+      },
+      {
+        "osm_id": 1293631005,
+        "name": "Oranienburger Straße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:buffer:right": "0.6",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:oneway": "yes",
+          "cycleway:right:surface": "asphalt",
+          "cycleway:right:surface:colour": "none",
+          "cycleway:right:traffic_mode:right": "parking",
+          "cycleway:right:traffic_sign": "DE:237",
+          "cycleway:right:width": "1.5"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5890153,
+            "lon": 13.3344167
+          },
+          {
+            "lat": 52.589349,
+            "lon": 13.3343439
+          }
+        ]
+      },
+      {
+        "osm_id": 1460600754,
+        "name": "Taldorfer Weg",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": null,
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": "right",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5881864,
+            "lon": 13.3342932
+          },
+          {
+            "lat": 52.5881788,
+            "lon": 13.3341765
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "OSM turn:lanes tags were kept as evidence only; the report does not explicitly describe a left-turn maneuver for car_1."
+    ],
+    "geocoded": {
+      "display_name": "Oranienburger Straße, Tucholskystraße, Spandauer Vorstadt, Mitte, Berlin, 10117, Deutschland",
+      "lat": 52.588196,
+      "lon": 13.3344444,
+      "osm_type": "node",
+      "osm_id": 2134525648,
+      "nominatim_lat": 52.5252246,
+      "nominatim_lon": 13.3930145,
+      "refined_by": "shared_node_lookup",
+      "refined_streets": [
+        "Oranienburger Straße",
+        "Taldorfer Weg"
+      ],
+      "refined_way_id": 4765747,
+      "refined_anchor_note": "anchored at 'Taldorfer Weg''s own geocode, not the primary road's"
+    },
+    "bike_facility": {
+      "type": "bike_lane",
+      "position": "right",
+      "source": "explicit_from_report",
+      "osm_evidence": {
+        "bike_facility_type": "separated_cycle_track",
+        "position": "right",
+        "tags": {
+          "cycleway:right": "separate"
+        }
+      }
+    },
+    "lane_count_evidence": {
+      "policy": "For police-report approaches, use OSM lanes only from way segments whose name matches the 'from' road and whose geometry moves toward the 'toward' road. Nearby road segments are kept as evidence but are not averaged.",
+      "primary": {
+        "approach": {
+          "from": "Oranienburger Straße",
+          "toward": null
+        },
+        "from_names": [
+          "Oranienburger Straße"
+        ],
+        "toward_names": [],
+        "candidate_count": 22,
+        "target_count": 0,
+        "considered_segments": [
+          {
+            "osm_id": 4071979,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": "left|through",
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -1.447599,
+            "heading_deg": -82.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 4765765,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "3",
+            "turn_lanes": "left|through|none",
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": -1.447434,
+            "heading_deg": -82.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 4765766,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "3",
+            "turn_lanes": "left|through|none",
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": -1.44707,
+            "heading_deg": -82.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 4765767,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 1.70172,
+            "heading_deg": 97.5,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 62192860,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 1.657178,
+            "heading_deg": 94.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 221755405,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 1.685661,
+            "heading_deg": 96.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 395225597,
+            "name": "Am Nordgraben/Oranienburger Straße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 1.699076,
+            "heading_deg": 97.3,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 395225598,
+            "name": "Am Nordgraben/Oranienburger Straße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 0.115721,
+            "heading_deg": 6.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 395225599,
+            "name": "Am Nordgraben/Oranienburger Straße",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": -1.444454,
+            "heading_deg": -82.8,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 395225634,
+            "name": "Oranienburger Straße/Alt-Wittenau",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 1.698265,
+            "heading_deg": 97.3,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 420492436,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 1.690272,
+            "heading_deg": 96.8,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 445676176,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -1.450767,
+            "heading_deg": -83.1,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 487197440,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 1.684092,
+            "heading_deg": 96.5,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 961724103,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 1.715188,
+            "heading_deg": 98.3,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 961724104,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 1.700388,
+            "heading_deg": 97.4,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 961724105,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -1.456649,
+            "heading_deg": -83.5,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 961724106,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -1.427333,
+            "heading_deg": -81.8,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 961724107,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -1.44173,
+            "heading_deg": -82.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 962783126,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -1.442787,
+            "heading_deg": -82.7,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 962783127,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -1.459919,
+            "heading_deg": -83.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1152406255,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "3",
+            "turn_lanes": "none|through|right",
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": 1.687801,
+            "heading_deg": 96.7,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1293631005,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 1.703485,
+            "heading_deg": 97.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          }
+        ],
+        "selected_segments": [
+          {
+            "osm_id": 4071979,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": "left|through",
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -1.447599,
+            "heading_deg": -82.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 4765765,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "3",
+            "turn_lanes": "left|through|none",
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": -1.447434,
+            "heading_deg": -82.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 4765766,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "3",
+            "turn_lanes": "left|through|none",
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": -1.44707,
+            "heading_deg": -82.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 4765767,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 1.70172,
+            "heading_deg": 97.5,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 62192860,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 1.657178,
+            "heading_deg": 94.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 221755405,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 1.685661,
+            "heading_deg": 96.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 420492436,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 1.690272,
+            "heading_deg": 96.8,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 445676176,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -1.450767,
+            "heading_deg": -83.1,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 487197440,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 1.684092,
+            "heading_deg": 96.5,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 961724103,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 1.715188,
+            "heading_deg": 98.3,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 961724104,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 1.700388,
+            "heading_deg": 97.4,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 961724105,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -1.456649,
+            "heading_deg": -83.5,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 961724106,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -1.427333,
+            "heading_deg": -81.8,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 961724107,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -1.44173,
+            "heading_deg": -82.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 962783126,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -1.442787,
+            "heading_deg": -82.7,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 962783127,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": -1.459919,
+            "heading_deg": -83.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1152406255,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "3",
+            "turn_lanes": "none|through|right",
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 3,
+            "heading_rad": 1.687801,
+            "heading_deg": 96.7,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1293631005,
+            "name": "Oranienburger Straße",
+            "lanes_tag": "2",
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": 2,
+            "heading_rad": 1.703485,
+            "heading_deg": 97.6,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          }
+        ],
+        "used_count": null,
+        "used_heading_rad": -1.447599,
+        "used_heading_deg": -82.9,
+        "status": "not_used_ambiguous_directional_osm_way_matches"
+      },
+      "secondary": {
+        "approach": {
+          "from": "Taldorfer Weg",
+          "toward": null
+        },
+        "from_names": [
+          "Taldorfer Weg"
+        ],
+        "toward_names": [],
+        "candidate_count": 4,
+        "target_count": 0,
+        "considered_segments": [
+          {
+            "osm_id": 4765747,
+            "name": "Taldorfer Weg",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": null,
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": 0.101172,
+            "heading_deg": 5.8,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 4765864,
+            "name": "Taldorfer Weg",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": "5",
+            "parsed_count": null,
+            "heading_rad": -3.079496,
+            "heading_deg": -176.4,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1293406524,
+            "name": "Taldorfer Weg",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": -3.038188,
+            "heading_deg": -174.1,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          },
+          {
+            "osm_id": 1460600754,
+            "name": "Taldorfer Weg",
+            "lanes_tag": null,
+            "turn_lanes": null,
+            "oneway": "yes",
+            "width": null,
+            "parsed_count": null,
+            "heading_rad": -3.03555,
+            "heading_deg": -173.9,
+            "progress_toward_target_m": null,
+            "end_distance_to_target_m": null,
+            "moves_toward_target": true
+          }
+        ],
+        "selected_segments": [],
+        "used_count": null,
+        "used_heading_rad": 0.101172,
+        "used_heading_deg": 5.8,
+        "status": "not_used_no_directional_osm_way_match"
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "right",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  },
+  "topology": {
+    "topology": "4way_junction",
+    "streets": [
+      "Oranienburger Straße",
+      "Taldorfer Weg"
+    ],
+    "house_number": null,
+    "way_count": null,
+    "reason": "Manually confirmed as a real intersection this session — Oranienburger Straße (maxspeed 50) meets Taldorfer Weg (maxspeed 30) in Reinickendorf. detect_topology's own geocode-fallback list (combined query, then name_a alone, then name_b alone) stops at 'Oranienburger Straße' alone, which matches a same-named but unrelated street ~7km away in Mitte — outside even the 5km shared-node search radius — so it never reaches the real intersection. (enrich_with_osm's own geocoding has since been fixed to retry anchored at each street's own geocode — see _find_shared_node_any_anchor — but detect_topology's simpler fallback list hasn't been unified with it yet.)",
+    "scenario_id": "crossing_06"
+  },
+  "template_used": "intersection_4way.xodr"
+}
