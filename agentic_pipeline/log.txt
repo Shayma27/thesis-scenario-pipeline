@@ -3,14 +3,17 @@ esmini GIT TAG: v3.0.4
 esmini GIT BRANCH: tags/v3.0.4^0
 esmini BUILD VERSION: 6144
 [] [info] Loaded config file: /home/chimo/tools/esmini/esmini-demo/config.yml (/home/chimo/tools/esmini/esmini-demo/bin/../config.yml)
-[] [info] Loaded /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/turning_09/turning_09.xosc
-[2026-08-31 16:14:34]
-[] [info] Player options: --osc /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/turning_09/turning_09.xosc --camera_mode orbit --ground_plane auto --info_text 1 --logfile_path log.txt --log_level info --text_scale 1.0 --traj_filter 0.1 
+[] [info] Loaded /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/longitudinal_02/longitudinal_02.xosc
+[2026-08-31 17:08:43]
+[] [info] Player options: --osc /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/longitudinal_02/longitudinal_02.xosc --camera_mode orbit --ground_plane auto --info_text 1 --logfile_path log.txt --log_level info --text_scale 1.0 --traj_filter 0.1 
 [] [info] No fixed timestep specified - running in realtime speed
-[] [info] Generated seed 4152482566
-[] [info] Loading /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/turning_09/turning_09.xosc (v1.3)
+[] [info] Generated seed 3037070543
+[] [info] Loading /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/longitudinal_02/longitudinal_02.xosc (v1.3)
 [] [info] 0 variables
-[] [info] Loaded OpenDRIVE: /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/turning_09/intersection_4way.xodr
+[] [error] Unsupported geo reference attr: 
+[] [error] Unsupported geo reference attr: +no_defs
+
+[] [info] Loaded OpenDRIVE: /home/chimo/Shayma/Shayma/agentic_pipeline/output/agentic/longitudinal_02/straight_road.xodr
 [] [info] Add and deactivate new object "car_1" (id 0)
 [] [info] Add and deactivate new object "cyclist_1" (id 1)
 [] [info] 0 parameters
@@ -21,18 +24,18 @@ esmini BUILD VERSION: 6144
 [0.000] [info] Init car_1 TeleportAction initState -> startTransition -> runningState
 [0.000] [info] Starting teleport Action
 [0.000] [info] car_1 New position:
-[0.000] [info] Pos(31.53, -36.74, 0.00) Rot(4.94, 0.00, 0.00) roadId 0 laneId -1 s 26.83 offset 0.00 t -1.75
+[0.000] [info] Pos(160.00, -1.53, 0.00) Rot(0.00, 0.00, 0.00) roadId 1 laneId -1 s 160.00 offset -0.00 t -1.54
 [0.000] [info] Init car_1 LongitudinalAction initState -> startTransition -> runningState
 [0.000] [info] Init cyclist_1 TeleportAction initState -> startTransition -> runningState
 [0.000] [info] Starting teleport Action
 [0.000] [info] cyclist_1 New position:
-[0.000] [info] Pos(25.25, -20.25, 0.00) Rot(4.94, 0.00, 0.00) roadId 0 laneId -2 s 9.37 offset 0.00 t -4.12
+[0.000] [info] Pos(211.75, -3.69, 0.00) Rot(0.00, 0.00, 0.00) roadId 1 laneId -1 s 211.75 offset -2.16 t -3.70
 [0.000] [info] Init cyclist_1 LongitudinalAction initState -> startTransition -> runningState
 [0.000] [info] storyBoard initState -> startTransition -> runningState
 [0.000] [info] story_act_maneuvuergroup_MotorVehicleManeuverManeuver initState -> startTransition -> runningState
 [0.000] [info] act_maneuvuergroup_MotorVehicleManeuverManeuver initState -> initToStandbyTransition -> standbyState
-[0.000] [info] story_act_maneuvuergroup_CyclistGoStraightManeuver initState -> startTransition -> runningState
-[0.000] [info] act_maneuvuergroup_CyclistGoStraightManeuver initState -> initToStandbyTransition -> standbyState
+[0.000] [info] story_act_maneuvuergroup_CyclistLaneChangeManeuver initState -> startTransition -> runningState
+[0.000] [info] act_maneuvuergroup_CyclistLaneChangeManeuver initState -> initToStandbyTransition -> standbyState
 [0.000] [info] Init car_1 TeleportAction runningState -> endTransition -> completeState
 [0.000] [info] Init car_1 LongitudinalAction runningState -> endTransition -> completeState
 [0.000] [info] Init cyclist_1 TeleportAction runningState -> endTransition -> completeState
@@ -51,44 +54,44 @@ esmini BUILD VERSION: 6144
 [0.001] [info] Group 0:
 [0.001] [info] act_start: true
 [0.001] [info] Trigger  ------------------------------------------------/
-[0.001] [info] act_maneuvuergroup_CyclistGoStraightManeuver standbyState -> startTransition -> runningState
-[0.001] [info] maneuvuergroup_CyclistGoStraightManeuver initState -> startTransition -> runningState
-[0.001] [info] CyclistGoStraightManeuver initState -> startTransition -> runningState
-[0.001] [info] CyclistGoStraightEvent initState -> initToStandbyTransition -> standbyState
-[0.101] [info] MotorVehicleManeuverStart: true, delay: 0.00, 0.1007 > 0.1000, edge: none
-[0.101] [info] Trigger /------------------------------------------------
-[0.101] [info] Group 0:
-[0.101] [info] MotorVehicleManeuverStart: true
-[0.101] [info] Trigger  ------------------------------------------------/
-[0.101] [info] MotorVehicleManeuverEvent standbyState -> startTransition -> runningState
-[0.101] [info] MotorVehicleManeuverFollowTrajectory initState -> startTransition -> runningState
-[0.101] [info] CyclistGoStraightStart: true, delay: 0.00, 0.1007 > 0.1000, edge: none
-[0.101] [info] Trigger /------------------------------------------------
-[0.101] [info] Group 0:
-[0.101] [info] CyclistGoStraightStart: true
-[0.101] [info] Trigger  ------------------------------------------------/
-[0.101] [info] CyclistGoStraightEvent standbyState -> startTransition -> runningState
-[0.101] [info] CyclistGoStraightFollowTrajectory initState -> startTransition -> runningState
-[10.010] [info] StopSimulation: true, delay: 0.00, 10.0097 > 10.0000, edge: rising
-[10.010] [info] Trigger /------------------------------------------------
-[10.010] [info] Group 0:
-[10.010] [info] StopSimulation: true
-[10.010] [info] Trigger  ------------------------------------------------/
-[10.010] [info] MotorVehicleManeuverFollowTrajectory runningState -> stopTransition -> completeState
-[10.010] [info] MotorVehicleManeuverEvent complete after 1 execution
-[10.010] [info] MotorVehicleManeuverEvent runningState -> endTransition -> completeState
-[10.010] [info] MotorVehicleManeuverManeuver runningState -> endTransition -> completeState
-[10.010] [info] maneuvuergroup_MotorVehicleManeuverManeuver complete after 1 execution
-[10.010] [info] maneuvuergroup_MotorVehicleManeuverManeuver runningState -> endTransition -> completeState
-[10.010] [info] act_maneuvuergroup_MotorVehicleManeuverManeuver runningState -> endTransition -> completeState
-[10.010] [info] story_act_maneuvuergroup_MotorVehicleManeuverManeuver runningState -> endTransition -> completeState
-[10.010] [info] CyclistGoStraightFollowTrajectory runningState -> stopTransition -> completeState
-[10.010] [info] CyclistGoStraightEvent complete after 1 execution
-[10.010] [info] CyclistGoStraightEvent runningState -> endTransition -> completeState
-[10.010] [info] CyclistGoStraightManeuver runningState -> endTransition -> completeState
-[10.010] [info] maneuvuergroup_CyclistGoStraightManeuver complete after 1 execution
-[10.010] [info] maneuvuergroup_CyclistGoStraightManeuver runningState -> endTransition -> completeState
-[10.010] [info] act_maneuvuergroup_CyclistGoStraightManeuver runningState -> endTransition -> completeState
-[10.010] [info] story_act_maneuvuergroup_CyclistGoStraightManeuver runningState -> endTransition -> completeState
-[10.010] [info] storyBoard runningState -> stopTransition -> completeState
-[10.010] [info] Closing
+[0.001] [info] act_maneuvuergroup_CyclistLaneChangeManeuver standbyState -> startTransition -> runningState
+[0.001] [info] maneuvuergroup_CyclistLaneChangeManeuver initState -> startTransition -> runningState
+[0.001] [info] CyclistLaneChangeManeuver initState -> startTransition -> runningState
+[0.001] [info] CyclistLaneChangeEvent initState -> initToStandbyTransition -> standbyState
+[0.103] [info] MotorVehicleManeuverStart: true, delay: 0.00, 0.1034 > 0.1000, edge: none
+[0.103] [info] Trigger /------------------------------------------------
+[0.103] [info] Group 0:
+[0.103] [info] MotorVehicleManeuverStart: true
+[0.103] [info] Trigger  ------------------------------------------------/
+[0.103] [info] MotorVehicleManeuverEvent standbyState -> startTransition -> runningState
+[0.103] [info] MotorVehicleManeuverFollowTrajectory initState -> startTransition -> runningState
+[0.103] [info] CyclistLaneChangeStart: true, delay: 0.00, 0.1034 > 0.1000, edge: none
+[0.103] [info] Trigger /------------------------------------------------
+[0.103] [info] Group 0:
+[0.103] [info] CyclistLaneChangeStart: true
+[0.103] [info] Trigger  ------------------------------------------------/
+[0.103] [info] CyclistLaneChangeEvent standbyState -> startTransition -> runningState
+[0.103] [info] CyclistLaneChangeFollowTrajectory initState -> startTransition -> runningState
+[10.003] [info] StopSimulation: true, delay: 0.00, 10.0027 > 10.0000, edge: rising
+[10.003] [info] Trigger /------------------------------------------------
+[10.003] [info] Group 0:
+[10.003] [info] StopSimulation: true
+[10.003] [info] Trigger  ------------------------------------------------/
+[10.003] [info] MotorVehicleManeuverFollowTrajectory runningState -> stopTransition -> completeState
+[10.003] [info] MotorVehicleManeuverEvent complete after 1 execution
+[10.003] [info] MotorVehicleManeuverEvent runningState -> endTransition -> completeState
+[10.003] [info] MotorVehicleManeuverManeuver runningState -> endTransition -> completeState
+[10.003] [info] maneuvuergroup_MotorVehicleManeuverManeuver complete after 1 execution
+[10.003] [info] maneuvuergroup_MotorVehicleManeuverManeuver runningState -> endTransition -> completeState
+[10.003] [info] act_maneuvuergroup_MotorVehicleManeuverManeuver runningState -> endTransition -> completeState
+[10.003] [info] story_act_maneuvuergroup_MotorVehicleManeuverManeuver runningState -> endTransition -> completeState
+[10.003] [info] CyclistLaneChangeFollowTrajectory runningState -> stopTransition -> completeState
+[10.003] [info] CyclistLaneChangeEvent complete after 1 execution
+[10.003] [info] CyclistLaneChangeEvent runningState -> endTransition -> completeState
+[10.003] [info] CyclistLaneChangeManeuver runningState -> endTransition -> completeState
+[10.003] [info] maneuvuergroup_CyclistLaneChangeManeuver complete after 1 execution
+[10.003] [info] maneuvuergroup_CyclistLaneChangeManeuver runningState -> endTransition -> completeState
+[10.003] [info] act_maneuvuergroup_CyclistLaneChangeManeuver runningState -> endTransition -> completeState
+[10.003] [info] story_act_maneuvuergroup_CyclistLaneChangeManeuver runningState -> endTransition -> completeState
+[10.003] [info] storyBoard runningState -> stopTransition -> completeState
+[10.003] [info] Closing
