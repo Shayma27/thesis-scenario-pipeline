@@ -7,13 +7,6 @@
     "timestamp": "2026-08-27T13:08:30+00:00"
   },
   {
-    "scenario_id": "longitudinal_02",
-    "scenario_type": "longitudinal",
-    "status": "reviewed",
-    "note": null,
-    "timestamp": "2026-08-31T15:08:57+00:00"
-  },
-  {
     "scenario_id": "turning_01",
     "scenario_type": "turning",
     "status": "reviewed",
@@ -131,5 +124,12 @@
     "status": "reviewed",
     "note": null,
     "timestamp": "2026-08-31T16:37:19+00:00"
+  },
+  {
+    "scenario_id": "longitudinal_02",
+    "scenario_type": "longitudinal",
+    "status": "reviewed",
+    "note": null,
+    "timestamp": "2026-08-31T16:37:46+00:00"
   }
 ]
