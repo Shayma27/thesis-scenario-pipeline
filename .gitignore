@@ -10,3 +10,4 @@ wheels/
 .venv
 agentic_pipeline/output/osm_cache/
 *.log
+agentic_pipeline/docs/session_visual_validation_and_bugfixes.md
