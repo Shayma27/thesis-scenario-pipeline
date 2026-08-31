@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <OpenSCENARIO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OpenScenario.xsd">
-    <FileHeader description="longitudinal: go_straight vs change_lane_left_to_right. A cyclist changed from the leftmost to the rightmost of three lanes and collided with a car traveling in the same direction." author="Shayma" revMajor="1" revMinor="3" date="2026-08-26T16:56:35.362700"/>
+    <FileHeader description="longitudinal: change_lane_left_to_right vs go_straight. A cyclist changed from the leftmost to the rightmost of three lanes and collided with a car traveling in the same direction." author="Shayma" revMajor="1" revMinor="3" date="2026-08-30T17:06:52.627957"/>
     <CatalogLocations/>
     <RoadNetwork>
         <LogicFile filepath="straight_road.xodr"/>
@@ -40,7 +40,7 @@
                     <PrivateAction>
                         <TeleportAction>
                             <Position>
-                                <LanePosition roadId="1" laneId="-1" s="225.0" offset="0.0"/>
+                                <WorldPosition x="160.0" y="-1.535" z="0.0" h="0.0" p="0.0" r="0.0"/>
                             </Position>
                         </TeleportAction>
                     </PrivateAction>
@@ -59,7 +59,7 @@
                     <PrivateAction>
                         <TeleportAction>
                             <Position>
-                                <LanePosition roadId="1" laneId="1" s="50.0" offset="0.0"/>
+                                <WorldPosition x="211.75" y="1.535" z="0.0" h="0.0" p="0.0" r="0.0"/>
                             </Position>
                         </TeleportAction>
                     </PrivateAction>
@@ -94,32 +94,17 @@
                                                         <Polyline>
                                                             <Vertex time="0.0">
                                                                 <Position>
-                                                                    <WorldPosition x="-25.033364138641296" y="0.8287972624158941" z="0.0" h="-0.09441863291447408" p="0.0" r="0.0"/>
-                                                                </Position>
-                                                            </Vertex>
-                                                            <Vertex time="6.8">
-                                                                <Position>
-                                                                    <WorldPosition x="-8.109084325589599" y="-0.7739356565482884" z="0.0" h="-0.09441863291447408" p="0.0" r="0.0"/>
-                                                                </Position>
-                                                            </Vertex>
-                                                            <Vertex time="7.8">
-                                                                <Position>
-                                                                    <WorldPosition x="-4.354293536536251" y="-1.430857364547077" z="0.0" h="-0.3441752488748626" p="0.0" r="0.0"/>
-                                                                </Position>
-                                                            </Vertex>
-                                                            <Vertex time="8.5">
-                                                                <Position>
-                                                                    <WorldPosition x="-1.0122263280862493" y="2.0395153494712925" z="0.0" h="-1.1939760616709016" p="0.0" r="0.0"/>
+                                                                    <WorldPosition x="160.0" y="-1.535" z="0.0" h="0.0" p="0.0" r="0.0"/>
                                                                 </Position>
                                                             </Vertex>
                                                             <Vertex time="9.0">
                                                                 <Position>
-                                                                    <WorldPosition x="0.14471735474176567" y="1.5281629125314309" z="0.0" h="-1.6652149597093706" p="0.0" r="0.0"/>
+                                                                    <WorldPosition x="250.0" y="-1.535" z="0.0" h="0.0" p="0.0" r="0.0"/>
                                                                 </Position>
                                                             </Vertex>
                                                             <Vertex time="10.0">
                                                                 <Position>
-                                                                    <WorldPosition x="0.14471735474176567" y="1.5281629125314309" z="0.0" h="-1.6652149597093706" p="0.0" r="0.0"/>
+                                                                    <WorldPosition x="250.0" y="-1.535" z="0.0" h="0.0" p="0.0" r="0.0"/>
                                                                 </Position>
                                                             </Vertex>
                                                         </Polyline>
@@ -158,40 +143,40 @@
                 <StopTrigger/>
             </Act>
         </Story>
-        <Story name="story_act_maneuvuergroup_CyclistGoStraightManeuver">
-            <Act name="act_maneuvuergroup_CyclistGoStraightManeuver">
-                <ManeuverGroup name="maneuvuergroup_CyclistGoStraightManeuver" maximumExecutionCount="1">
+        <Story name="story_act_maneuvuergroup_CyclistLaneChangeManeuver">
+            <Act name="act_maneuvuergroup_CyclistLaneChangeManeuver">
+                <ManeuverGroup name="maneuvuergroup_CyclistLaneChangeManeuver" maximumExecutionCount="1">
                     <Actors selectTriggeringEntities="false">
                         <EntityRef entityRef="cyclist_1"/>
                     </Actors>
-                    <Maneuver name="CyclistGoStraightManeuver">
-                        <Event name="CyclistGoStraightEvent" priority="override" maximumExecutionCount="1">
-                            <Action name="CyclistGoStraightFollowTrajectory">
+                    <Maneuver name="CyclistLaneChangeManeuver">
+                        <Event name="CyclistLaneChangeEvent" priority="override" maximumExecutionCount="1">
+                            <Action name="CyclistLaneChangeFollowTrajectory">
                                 <PrivateAction>
                                     <RoutingAction>
                                         <FollowTrajectoryAction>
                                             <TrajectoryRef>
-                                                <Trajectory name="CyclistGoStraightTrajectory" closed="false">
+                                                <Trajectory name="CyclistLaneChangeTrajectory" closed="false">
                                                     <Shape>
                                                         <Polyline>
                                                             <Vertex time="0.0">
                                                                 <Position>
-                                                                    <WorldPosition x="-198.96445691645442" y="20.383844312110025" z="0.0" h="-0.09441863291447408" p="0.0" r="0.0"/>
+                                                                    <WorldPosition x="211.75" y="1.535" z="0.0" h="0.0" p="0.0" r="0.0"/>
                                                                 </Position>
                                                             </Vertex>
-                                                            <Vertex time="8.8">
+                                                            <Vertex time="7.0">
                                                                 <Position>
-                                                                    <WorldPosition x="-0.8508285166142064" y="1.622441319529325" z="0.0" h="-0.09441863291447408" p="0.0" r="0.0"/>
+                                                                    <WorldPosition x="241.5" y="1.535" z="0.0" h="0.0" p="0.0" r="0.0"/>
                                                                 </Position>
                                                             </Vertex>
                                                             <Vertex time="9.0">
                                                                 <Position>
-                                                                    <WorldPosition x="0.14471735474176567" y="1.5281629125314309" z="0.0" h="-0.09441863291447408" p="0.0" r="0.0"/>
+                                                                    <WorldPosition x="250.0" y="-1.535" z="0.0" h="0.0" p="0.0" r="0.0"/>
                                                                 </Position>
                                                             </Vertex>
                                                             <Vertex time="10.0">
                                                                 <Position>
-                                                                    <WorldPosition x="0.14471735474176567" y="1.5281629125314309" z="0.0" h="-0.09441863291447408" p="0.0" r="0.0"/>
+                                                                    <WorldPosition x="250.0" y="-1.535" z="0.0" h="0.0" p="0.0" r="0.0"/>
                                                                 </Position>
                                                             </Vertex>
                                                         </Polyline>
@@ -208,7 +193,7 @@
                             </Action>
                             <StartTrigger>
                                 <ConditionGroup>
-                                    <Condition name="CyclistGoStraightStart" delay="0.0" conditionEdge="none">
+                                    <Condition name="CyclistLaneChangeStart" delay="0.0" conditionEdge="none">
                                         <ByValueCondition>
                                             <SimulationTimeCondition value="0.1" rule="greaterThan"/>
                                         </ByValueCondition>

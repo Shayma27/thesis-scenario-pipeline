@@ -25,6 +25,21 @@ _ENTRY_RE = re.compile(
     re.DOTALL,
 )
 
+# Dropped from the active corpus, 2026-08-28: turning_07 describes a
+# turn-right-into-parking-lot-access conflict ("turn_right_into_parking").
+# Neither straight_road.xodr nor intersection_4way.xodr models a parking
+# lot access geometry (both templates have exactly one real driving lane
+# and one real biking lane per direction, no parking area — see
+# docs/modeling_assumptions.md), so no amount of parameter tuning can make
+# this report's real topology representable. User decision, not a code
+# fix — write this up as a corpus limitation in the thesis rather than
+# silently forcing it onto an unsuitable template. The report's text stays
+# in manual_classification_reference.md (an unaltered historical record);
+# it's filtered out here instead of deleted so turning_08/turning_09's
+# scenario_ids (position-based) don't shift.
+EXCLUDED_SCENARIO_IDS = {"turning_07"}
+
+
 def load_reports() -> list[tuple[str, str, str]]:
     """Parse manual_classification_reference.md into (scenario_id, report_text, scenario_type).
 
@@ -53,6 +68,8 @@ def load_reports() -> list[tuple[str, str, str]]:
                 line.strip() for line in match.group("narrative").strip().splitlines()
             )
             scenario_id = f"{scenario_type}_{position:02d}"
+            if scenario_id in EXCLUDED_SCENARIO_IDS:
+                continue
             records.append((scenario_id, report_text, scenario_type))
 
     return records

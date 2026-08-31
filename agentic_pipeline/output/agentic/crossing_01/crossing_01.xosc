@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <OpenSCENARIO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OpenScenario.xsd">
-    <FileHeader description="crossing: enter_roadway vs go_straight. A cyclist entering the road from the sidewalk collided with a car." author="Shayma" revMajor="1" revMinor="3" date="2026-08-26T17:06:35.379627"/>
+    <FileHeader description="crossing: enter_roadway vs go_straight. A cyclist entering the road from the sidewalk collided with a car." author="Shayma" revMajor="1" revMinor="3" date="2026-08-30T17:06:52.529830"/>
     <CatalogLocations/>
     <RoadNetwork>
         <LogicFile filepath="straight_road.xodr"/>
@@ -40,7 +40,7 @@
                     <PrivateAction>
                         <TeleportAction>
                             <Position>
-                                <LanePosition roadId="1" laneId="-2" s="233.0" offset="0.0"/>
+                                <WorldPosition x="250.0" y="-18.535" z="0.0" h="1.5707963267948966" p="0.0" r="0.0"/>
                             </Position>
                         </TeleportAction>
                     </PrivateAction>
@@ -59,7 +59,7 @@
                     <PrivateAction>
                         <TeleportAction>
                             <Position>
-                                <LanePosition roadId="1" laneId="-1" s="205.56" offset="0.0"/>
+                                <WorldPosition x="205.56" y="-1.535" z="0.0" h="0.0" p="0.0" r="0.0"/>
                             </Position>
                         </TeleportAction>
                     </PrivateAction>
@@ -94,22 +94,17 @@
                                                         <Polyline>
                                                             <Vertex time="0.0">
                                                                 <Position>
-                                                                    <WorldPosition x="12.519249414027522" y="11.60278497212509" z="0.0" h="-2.4842189803846897" p="0.0" r="0.0"/>
-                                                                </Position>
-                                                            </Vertex>
-                                                            <Vertex time="3.7">
-                                                                <Position>
-                                                                    <WorldPosition x="1.7020388255997652" y="3.25292389031022" z="0.0" h="-2.4842189803846897" p="0.0" r="0.0"/>
+                                                                    <WorldPosition x="250.0" y="-18.535" z="0.0" h="1.5707963267948966" p="0.0" r="0.0"/>
                                                                 </Position>
                                                             </Vertex>
                                                             <Vertex time="4.0">
                                                                 <Position>
-                                                                    <WorldPosition x="0.2771592749835945" y="2.1530519585673193" z="0.0" h="-2.4842189803846897" p="0.0" r="0.0"/>
+                                                                    <WorldPosition x="250.0" y="-1.535" z="0.0" h="1.5707963267948966" p="0.0" r="0.0"/>
                                                                 </Position>
                                                             </Vertex>
                                                             <Vertex time="10.0">
                                                                 <Position>
-                                                                    <WorldPosition x="0.2771592749835945" y="2.1530519585673193" z="0.0" h="-2.4842189803846897" p="0.0" r="0.0"/>
+                                                                    <WorldPosition x="250.0" y="-1.535" z="0.0" h="1.5707963267948966" p="0.0" r="0.0"/>
                                                                 </Position>
                                                             </Vertex>
                                                         </Polyline>
@@ -166,22 +161,17 @@
                                                         <Polyline>
                                                             <Vertex time="0.0">
                                                                 <Position>
-                                                                    <WorldPosition x="28.369721531583505" y="-34.24074656342069" z="0.0" h="2.22817" p="0.0" r="0.0"/>
-                                                                </Position>
-                                                            </Vertex>
-                                                            <Vertex time="3.7">
-                                                                <Position>
-                                                                    <WorldPosition x="1.804759180182067" y="0.17405258271152668" z="0.0" h="2.22817" p="0.0" r="0.0"/>
+                                                                    <WorldPosition x="205.56" y="-1.535" z="0.0" h="0.0" p="0.0" r="0.0"/>
                                                                 </Position>
                                                             </Vertex>
                                                             <Vertex time="4.0">
                                                                 <Position>
-                                                                    <WorldPosition x="0.2771592749835945" y="2.1530519585673193" z="0.0" h="2.22817" p="0.0" r="0.0"/>
+                                                                    <WorldPosition x="250.0" y="-1.535" z="0.0" h="0.0" p="0.0" r="0.0"/>
                                                                 </Position>
                                                             </Vertex>
                                                             <Vertex time="10.0">
                                                                 <Position>
-                                                                    <WorldPosition x="0.2771592749835945" y="2.1530519585673193" z="0.0" h="2.22817" p="0.0" r="0.0"/>
+                                                                    <WorldPosition x="250.0" y="-1.535" z="0.0" h="0.0" p="0.0" r="0.0"/>
                                                                 </Position>
                                                             </Vertex>
                                                         </Polyline>

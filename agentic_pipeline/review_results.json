@@ -1,47 +1,5 @@
 [
   {
-    "scenario_id": "turning_01",
-    "scenario_type": "turning",
-    "status": "skipped",
-    "note": "alright but the bike continue  going straight even after the collision . normally it has  to  stop at the collision",
-    "timestamp": "2026-08-27T12:58:20+00:00"
-  },
-  {
-    "scenario_id": "turning_02",
-    "scenario_type": "turning",
-    "status": "skipped",
-    "note": null,
-    "timestamp": "2026-08-27T12:58:51+00:00"
-  },
-  {
-    "scenario_id": "turning_03",
-    "scenario_type": "turning",
-    "status": "skipped",
-    "note": "alright but the bike continue  going straight even after the collision . normally it has  to  stop at the collision",
-    "timestamp": "2026-08-27T13:05:04+00:00"
-  },
-  {
-    "scenario_id": "turning_04",
-    "scenario_type": "turning",
-    "status": "skipped",
-    "note": "alright but the bike continue  going straight even after the collision . normally it has  to  stop at the collision",
-    "timestamp": "2026-08-27T13:05:29+00:00"
-  },
-  {
-    "scenario_id": "turning_05",
-    "scenario_type": "turning",
-    "status": "skipped",
-    "note": "alright but the bike continue  going straight even after the collision . normally it has  to  stop at the collision",
-    "timestamp": "2026-08-27T13:05:55+00:00"
-  },
-  {
-    "scenario_id": "turning_06",
-    "scenario_type": "turning",
-    "status": "skipped",
-    "note": "alright but the bike continue  going straight even after the collision . normally it has  to  stop at the collision",
-    "timestamp": "2026-08-27T13:06:25+00:00"
-  },
-  {
     "scenario_id": "turning_07",
     "scenario_type": "turning",
     "status": "skipped",
@@ -49,87 +7,129 @@
     "timestamp": "2026-08-27T13:08:30+00:00"
   },
   {
-    "scenario_id": "turning_08",
-    "scenario_type": "turning",
-    "status": "skipped",
-    "note": "wrong cyclist position . not collision happened . and the raw text scenario  from the beginning didnt have that much infos",
-    "timestamp": "2026-08-27T13:14:24+00:00"
-  },
-  {
-    "scenario_id": "turning_09",
-    "scenario_type": "turning",
-    "status": "skipped",
-    "note": null,
-    "timestamp": "2026-08-27T13:22:57+00:00"
-  },
-  {
-    "scenario_id": "crossing_01",
-    "scenario_type": "crossing",
-    "status": "skipped",
-    "note": "all wrong and weird simulation",
-    "timestamp": "2026-08-27T13:24:06+00:00"
-  },
-  {
     "scenario_id": "crossing_02",
     "scenario_type": "crossing",
-    "status": "skipped",
-    "note": "no collision happened . but  right  topology and scenario",
-    "timestamp": "2026-08-27T13:25:19+00:00"
+    "status": "reviewed",
+    "note": null,
+    "timestamp": "2026-08-29T20:09:37+00:00"
   },
   {
     "scenario_id": "crossing_03",
     "scenario_type": "crossing",
-    "status": "skipped",
-    "note": "it could be okay  if  we adjust the time of collision . position of the is also not  right . cylist in the middle of the driveway",
-    "timestamp": "2026-08-27T13:29:32+00:00"
-  },
-  {
-    "scenario_id": "crossing_04",
-    "scenario_type": "crossing",
-    "status": "skipped",
-    "note": "right template  and cyliste position  and direction but the cas was  very wrong  coming from nowhree . it ssupposed to go very normal in the driveway",
-    "timestamp": "2026-08-27T13:31:40+00:00"
+    "status": "reviewed",
+    "note": null,
+    "timestamp": "2026-08-29T20:10:44+00:00"
   },
   {
     "scenario_id": "crossing_05",
     "scenario_type": "crossing",
-    "status": "skipped",
-    "note": "and the bike was going in  the driveway",
-    "timestamp": "2026-08-27T13:33:32+00:00"
+    "status": "reviewed",
+    "note": null,
+    "timestamp": "2026-08-29T20:14:34+00:00"
   },
   {
     "scenario_id": "crossing_06",
     "scenario_type": "crossing",
-    "status": "skipped",
-    "note": "no collision happened .  and the turn left of the bike didint happen",
-    "timestamp": "2026-08-27T13:36:31+00:00"
+    "status": "reviewed",
+    "note": null,
+    "timestamp": "2026-08-29T20:15:48+00:00"
   },
   {
     "scenario_id": "crossing_07",
     "scenario_type": "crossing",
-    "status": "skipped",
-    "note": "collision didnt  happen but   everything else was right",
-    "timestamp": "2026-08-27T13:38:02+00:00"
+    "status": "reviewed",
+    "note": null,
+    "timestamp": "2026-08-29T20:16:05+00:00"
   },
   {
     "scenario_id": "crossing_08",
     "scenario_type": "crossing",
-    "status": "skipped",
+    "status": "reviewed",
     "note": null,
-    "timestamp": "2026-08-27T13:38:42+00:00"
+    "timestamp": "2026-08-29T20:17:32+00:00"
+  },
+  {
+    "scenario_id": "crossing_01",
+    "scenario_type": "crossing",
+    "status": "reviewed",
+    "note": null,
+    "timestamp": "2026-08-30T14:54:28+00:00"
+  },
+  {
+    "scenario_id": "crossing_04",
+    "scenario_type": "crossing",
+    "status": "reviewed",
+    "note": null,
+    "timestamp": "2026-08-30T14:54:41+00:00"
   },
   {
     "scenario_id": "longitudinal_01",
     "scenario_type": "longitudinal",
-    "status": "skipped",
-    "note": "very werid  simualtion and positions of the car  and cylist !!  only the template was right",
-    "timestamp": "2026-08-27T13:39:58+00:00"
+    "status": "reviewed",
+    "note": null,
+    "timestamp": "2026-08-30T14:55:24+00:00"
   },
   {
     "scenario_id": "longitudinal_02",
     "scenario_type": "longitudinal",
-    "status": "skipped",
-    "note": "same as longi1",
-    "timestamp": "2026-08-27T13:41:27+00:00"
+    "status": "reviewed",
+    "note": null,
+    "timestamp": "2026-08-30T14:55:56+00:00"
+  },
+  {
+    "scenario_id": "turning_01",
+    "scenario_type": "turning",
+    "status": "reviewed",
+    "note": null,
+    "timestamp": "2026-08-31T14:09:41+00:00"
+  },
+  {
+    "scenario_id": "turning_02",
+    "scenario_type": "turning",
+    "status": "reviewed",
+    "note": null,
+    "timestamp": "2026-08-31T14:11:27+00:00"
+  },
+  {
+    "scenario_id": "turning_03",
+    "scenario_type": "turning",
+    "status": "reviewed",
+    "note": null,
+    "timestamp": "2026-08-31T14:11:42+00:00"
+  },
+  {
+    "scenario_id": "turning_04",
+    "scenario_type": "turning",
+    "status": "reviewed",
+    "note": null,
+    "timestamp": "2026-08-31T14:12:15+00:00"
+  },
+  {
+    "scenario_id": "turning_05",
+    "scenario_type": "turning",
+    "status": "reviewed",
+    "note": null,
+    "timestamp": "2026-08-31T14:12:37+00:00"
+  },
+  {
+    "scenario_id": "turning_06",
+    "scenario_type": "turning",
+    "status": "reviewed",
+    "note": null,
+    "timestamp": "2026-08-31T14:12:59+00:00"
+  },
+  {
+    "scenario_id": "turning_08",
+    "scenario_type": "turning",
+    "status": "reviewed",
+    "note": null,
+    "timestamp": "2026-08-31T14:14:00+00:00"
+  },
+  {
+    "scenario_id": "turning_09",
+    "scenario_type": "turning",
+    "status": "reviewed",
+    "note": null,
+    "timestamp": "2026-08-31T14:15:00+00:00"
   }
 ]

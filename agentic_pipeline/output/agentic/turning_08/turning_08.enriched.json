@@ -83,10 +83,10 @@
         },
         "car_1": {
           "vehicle_category": "car",
-          "initial_road_id": 0,
+          "initial_road_id": 1,
           "initial_lane_id": -1,
           "initial_speed_mps": 10.0,
-          "initial_s_m": 26.83
+          "initial_s_m": 16.909178810488743
         }
       },
       "simulation_duration_s": 10.0,

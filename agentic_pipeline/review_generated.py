@@ -15,7 +15,8 @@ Deliberately has no feedback ([f]) option, unlike run_all.py's menu --
 run_feedback_iteration() needs the LLM this script doesn't have access to.
 
 Usage:
-    python3 review_generated.py
+    python3 review_generated.py                  # all 19, in report order
+    python3 review_generated.py crossing_05 crossing_06   # only these
 """
 from __future__ import annotations
 
@@ -137,6 +138,12 @@ def _review_one(idx: int, total: int, scenario_id: str, scenario_type: str) -> d
 
 def main() -> None:
     reports = load_reports()
+    if len(sys.argv) > 1:
+        wanted = set(sys.argv[1:])
+        reports = [r for r in reports if r[0] in wanted]
+        missing = wanted - {r[0] for r in reports}
+        if missing:
+            print(f"  Unknown scenario id(s), skipping: {', '.join(sorted(missing))}")
     total = len(reports)
     entries: list[dict] = []
 

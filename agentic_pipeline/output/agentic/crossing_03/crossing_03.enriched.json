@@ -88,7 +88,7 @@
           "initial_road_id": 1,
           "initial_lane_id": -1,
           "initial_speed_mps": 22.22,
-          "initial_s_m": 2.0
+          "initial_s_m": 16.909178810488743
         }
       },
       "simulation_duration_s": 10.0,
@@ -174,9 +174,9 @@
     },
     {
       "parameter": "car_1.initial_s_m",
-      "value_used": 2.0,
+      "value_used": 16.909178810488743,
       "source": "engineering_assumption",
-      "reason": "Kinematic backward projection from the conflict point (conflict_s_m - speed * conflict_time_s, floored at 2m) -- same formula and rationale as the cyclist's, using this vehicle's own estimated initial speed."
+      "reason": "Extended from 2.00m to 16.91m (still within the real road's 16.91m modeled length) so this actor can drive continuously at its own real initial_speed_mps for the whole approach instead of crawling or parking near the junction to synchronize with the other actor's much longer natural travel time -- a rendering-time correction, same category as _clamp_initial_s_to_real_road's."
     },
     {
       "parameter": "car_1.vehicle_category",

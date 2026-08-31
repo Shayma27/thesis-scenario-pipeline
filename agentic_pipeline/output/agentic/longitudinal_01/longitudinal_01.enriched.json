@@ -76,14 +76,14 @@
           "initial_road_id": 1,
           "initial_lane_id": 1,
           "initial_speed_mps": 4.25,
-          "initial_s_m": 50.0
+          "initial_s_m": 211.75
         },
         "car_1": {
           "vehicle_category": "car",
           "initial_road_id": 1,
           "initial_lane_id": -1,
           "initial_speed_mps": 10.0,
-          "initial_s_m": 225.0
+          "initial_s_m": 160.0
         }
       },
       "simulation_duration_s": 10.0,
@@ -119,9 +119,9 @@
     },
     {
       "parameter": "cyclist_1.initial_s_m",
-      "value_used": 50.0,
+      "value_used": 211.75,
       "source": "engineering_assumption",
-      "reason": "20% of the road length -- a fixed scene-composition fraction giving the cyclist a visible approach on a straight road with no crossing conflict; no report or OSM value states an approach distance, and no cited source quantifies a typical one for this case."
+      "reason": "Recomputed from 50.00m to 211.75m so this actor can drive continuously at its own real initial_speed_mps for the whole approach to the conflict point, instead of needing to exceed its real speed (or, if its original distance genuinely wasn't reachable at real speed within the scenario's time budget, remaining permanently short of the conflict point) -- a rendering-time correction, same category as _clamp_initial_s_to_real_road's."
     },
     {
       "parameter": "cyclist_1.vehicle_category",
@@ -149,9 +149,9 @@
     },
     {
       "parameter": "car_1.initial_s_m",
-      "value_used": 225.0,
+      "value_used": 160.0,
       "source": "engineering_assumption",
-      "reason": "25m before the conflict point -- a fixed scene-composition offset for a normal following distance on a single straight road with no turn or crossing in progress; not derived from a report/OSM value or a cited source."
+      "reason": "Recomputed from 225.00m to 160.00m so this actor can drive continuously at its own real initial_speed_mps for the whole approach to the conflict point, instead of needing to exceed its real speed (or, if its original distance genuinely wasn't reachable at real speed within the scenario's time budget, remaining permanently short of the conflict point) -- a rendering-time correction, same category as _clamp_initial_s_to_real_road's."
     },
     {
       "parameter": "car_1.vehicle_category",

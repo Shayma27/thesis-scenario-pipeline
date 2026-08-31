@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <OpenSCENARIO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OpenScenario.xsd">
-    <FileHeader description="right_turn_conflict: turn_right vs go_straight. The truck turned right and completely overran the cyclist who was riding straight in the same direction on a separated cycle track." author="Shayma" revMajor="1" revMinor="3" date="2026-08-17T01:00:44.036773"/>
+    <FileHeader description="right_turn_conflict: turn_right vs go_straight. The truck turned right and completely overran the cyclist who was riding straight in the same direction on a separated cycle track." author="Shayma" revMajor="1" revMinor="3" date="2026-08-25T16:01:55.357968"/>
     <CatalogLocations/>
     <RoadNetwork>
         <LogicFile filepath="intersection_4way.xodr"/>

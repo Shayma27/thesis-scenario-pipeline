@@ -150,7 +150,7 @@ def main() -> None:
         print(f"{'═' * 78}\n")
         sys.exit(1)
     else:
-        print("  All 19 scenarios match the gold reference.")
+        print(f"  All {total} scenarios match the gold reference.")
         print(f"{'═' * 78}\n")
 
 
