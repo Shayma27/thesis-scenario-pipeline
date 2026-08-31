@@ -1142,45 +1142,20 @@ def _generate_straight_crossing_openscenario(data, output_path, xodr_filename):
             points.append((straight_impact_time_s, impact_x, impact_y, heading))
             return points
 
-        def _along(start, heading, dist_before_impact):
-            return (
-                impact_x - math.cos(heading) * dist_before_impact,
-                impact_y - math.sin(heading) * dist_before_impact,
-            )
-
         cyclist_points = _straight_points(cyclist_start, cyclist_heading, cyclist_dist0, cyclist_speed_mps)
         cyclist_points.append((duration_s, impact_x, impact_y, cyclist_heading))
 
-        if car_path == "turn_left_from_secondary_to_primary":
-            nominal_left_exit = _normalize_angle(car_heading + math.pi / 2)
-            exit_heading = _closest_heading(
-                nominal_left_exit,
-                [cyclist_heading, _normalize_angle(cyclist_heading + math.pi)],
-            )
-            car_turn_entry_x, car_turn_entry_y = _along(car_start, car_heading, 6.0)
-            car_turn_pre_x, car_turn_pre_y = _along(car_start, exit_heading, 2.5)
-
-            def _car_time_for(dist_before_impact):
-                if car_speed_mps <= 0:
-                    return straight_impact_time_s
-                return max(0.0, straight_impact_time_s - dist_before_impact / car_speed_mps)
-
-            car_start_time = _car_time_for(car_dist0)
-            car_points = [(0.0, car_start[0], car_start[1], car_heading)]
-            if car_start_time > 1e-6:
-                car_points.append((car_start_time, car_start[0], car_start[1], car_heading))
-            if 0 < 6.0 < car_dist0:
-                car_points.append((_car_time_for(6.0), car_turn_entry_x, car_turn_entry_y, car_heading))
-            if 0 < 2.5 < car_dist0:
-                car_points.append((
-                    _car_time_for(2.5), car_turn_pre_x, car_turn_pre_y,
-                    _interpolate_heading(car_heading, exit_heading, 0.65),
-                ))
-            car_points.append((straight_impact_time_s, impact_x, impact_y, exit_heading))
-            car_points.append((duration_s, impact_x, impact_y, exit_heading))
-        else:
-            car_points = _straight_points(car_start, car_heading, car_dist0, car_speed_mps)
-            car_points.append((duration_s, impact_x, impact_y, car_heading))
+        # A turning-car special case ("turn_left_from_secondary_to_primary")
+        # used to live here, gated on car_path -- removed as dead code, zero
+        # coverage across all 8 active straight_road.xodr/junction-template
+        # crossing reports (car_path is None for every one; only a report
+        # whose car turns left within a "crossing" scenario_type would ever
+        # set it, and none currently do). If a future report needs it, this
+        # is the same class of fix as the junction crossing generator's own
+        # turn handling (_junction_maneuver_samples/_find_junction_crossing_
+        # point), not something to restore from git history blindly.
+        car_points = _straight_points(car_start, car_heading, car_dist0, car_speed_mps)
+        car_points.append((duration_s, impact_x, impact_y, car_heading))
 
     storyboard = xosc.StoryBoard(
         init,
@@ -1441,9 +1416,20 @@ def _generate_longitudinal_openscenario(data, output_path, xodr_filename):
 
 
 def generate_openscenario(data, output_path, xodr_filename):
-    """Generate the OpenSCENARIO file for "turning"/"longitudinal"/"other"
-    scenarios (dispatches to _generate_straight_crossing_openscenario for
-    "crossing", _generate_longitudinal_openscenario for "longitudinal")."""
+    """Generate the OpenSCENARIO file for "turning" scenarios (dispatches
+    to _generate_straight_crossing_openscenario for "crossing",
+    _generate_longitudinal_openscenario for "longitudinal").
+
+    Junction-template only: every "turning" report in the active corpus
+    resolves to intersection_4way.xodr (the one straight_road.xodr
+    "turning" report, turning_07, needs parking-lot access geometry
+    neither template can represent and is excluded from the corpus --
+    see report_loader.py's EXCLUDED_SCENARIO_IDS). The straight_road.xodr
+    trajectory model this function used to also support was removed as
+    dead code once that was confirmed (zero coverage across all 18 active
+    reports); _is_junction_template's assertion below fails loudly instead
+    of a confusing NameError if a future report ever needs it back.
+    """
     output_path = Path(output_path)
     scenario_type = data.get("classification", {}).get("scenario_type")
     if scenario_type == "crossing":
@@ -1452,6 +1438,12 @@ def generate_openscenario(data, output_path, xodr_filename):
     if scenario_type == "longitudinal":
         _generate_longitudinal_openscenario(data, output_path, xodr_filename)
         return
+    assert _is_junction_template(xodr_filename), (
+        f"generate_openscenario's 'turning' trajectory model only supports "
+        f"the junction template; got {xodr_filename!r}. The straight_road.xodr "
+        f"variant was removed as dead code (see this function's docstring) -- "
+        f"if a real report now needs it, that model must be restored, not assumed."
+    )
 
     osc_params = _osc_params(data)
     odr_params = data.get("generated_simulation_parameters", {}).get("opendrive", {})
@@ -1520,14 +1512,6 @@ def generate_openscenario(data, output_path, xodr_filename):
         xosc.AbsoluteSpeedAction(float(cyclist_actor["initial_speed_mps"]), transition),
     )
 
-    road_length_m = float(odr_params.get("road_length_m", 100))
-    primary_heading = float(odr_params.get("primary_heading_rad", 0))
-    secondary_heading = float(
-        odr_params.get("secondary_heading_rad", primary_heading - math.pi / 2)
-    )
-    # Turn angle relative to primary road (negative = rightward)
-    turn_rel = _normalize_angle(secondary_heading - primary_heading)
-
     motor_start_s, motor_y = _world_position_from_lane_s(motor_actor, odr_params)
     cyclist_start_s, cyclist_y = _world_position_from_lane_s(cyclist_actor, odr_params)
     motor_speed_mps = float(motor_actor["initial_speed_mps"])
@@ -1538,7 +1522,6 @@ def generate_openscenario(data, output_path, xodr_filename):
         else duration_s * 0.7
     )
     conflict_time_s = min(duration_s - 1.0, max(4.0, cyclist_conflict_time_s))
-    turn_duration_s = 2.2
     impact_x = conflict_s_m
     impact_y = cyclist_y
 
@@ -1556,215 +1539,148 @@ def generate_openscenario(data, output_path, xodr_filename):
             approach_margin_m=max(30.0, impact_x - cyclist_start_s + 5),
         )
 
-        # Parked motor vehicle (dooring) or motor already past conflict: static trajectory.
-        # This case has zero coverage among the 19 real reports (every
-        # turning_* report has a moving motor vehicle) -- kept as the
-        # original simple "own connector midpoint" placement rather than
-        # risking an unverified change to a code path nothing exercises.
-        if motor_speed_mps <= 0 or motor_start_s >= conflict_s_m - 5:
-            cyclist_impact_dist = cyc_j_start + 0.5 * (cyc_j_end - cyc_j_start)
+        motor_samples, motor_j_start, motor_j_end = _junction_maneuver_samples(
+            motor_entry_road, motor_maneuver, motor_y,
+            approach_margin_m=max(30.0, impact_x - motor_start_s + 5),
+        )
+        # Each vehicle's own connector-road midpoint is generally NOT the
+        # same physical point once each vehicle's real lane offset is
+        # applied -- same live-verified bug as the crossing generator's
+        # (see _find_junction_crossing_point's docstring): the cyclist
+        # and the turning motor vehicle would each reach a DIFFERENT
+        # point at the scripted "impact" time, so their paths never
+        # actually meet -- no visible collision, and afterward both
+        # actors just look like they drove on past each other normally
+        # ("the bike continues going straight even after the collision"
+        # -- turning_01/03/04/05/06, first visual review).
+        cyclist_impact_dist, motor_impact_dist = _find_junction_crossing_point(
+            cyclist_samples, (cyc_j_start, cyc_j_end), motor_samples, (motor_j_start, motor_j_end)
+        )
+        # Live-verified degenerate case (turning_08, turn_left): the
+        # real nearest-approach point between a straight cyclist and a
+        # turning motor vehicle can legitimately fall right at the very
+        # start of the motor's own connector -- before the connector has
+        # curved away from the entry road at all, since a turn lane
+        # initially hugs the same line as going straight. Geometrically
+        # correct as a minimum-distance answer, but it means the turn
+        # has zero visible progress before the scripted impact freezes
+        # the vehicle -- "the car was supposed to turn left but didn't."
+        #
+        # A first attempt forced the search to require some minimum
+        # turn-progress before accepting an impact point -- rejected on
+        # sight: any meaningful progress requirement pushes the
+        # "impact" location tens of meters past where the paths
+        # actually come close (verified: even 15% progress widens the
+        # gap from 2.37m to 2.70m, and it only gets worse from there --
+        # 40% progress needs a 4.18m gap), so the car visibly turning
+        # made "no collision happened" worse, not better. The real
+        # tension is structural (this turn lane and the straight lane
+        # diverge almost immediately in this template), not a number to
+        # tune away.
+        #
+        # Instead: keep the impact at the genuine tightest-gap point
+        # (best chance of a believable collision), and let the turn
+        # become visible AFTER impact instead of before it -- the motor
+        # vehicle keeps curving along its real connector for a couple
+        # more meters/seconds post-collision before finally stopping
+        # (a real car does not stop dead on contact), rather than
+        # freezing at the exact moment of impact. See the
+        # "post-impact continuation" markers added to motor_points
+        # below.
 
-            def _cyclist_at(dist_before_impact):
-                return _path_point_at_distance(
-                    cyclist_samples, cyclist_impact_dist - dist_before_impact
+        def _cyclist_at(dist_before_impact):
+            return _path_point_at_distance(
+                cyclist_samples, cyclist_impact_dist - dist_before_impact
+            )
+
+        def _motor_at(dist_before_impact):
+            return _path_point_at_distance(
+                motor_samples, motor_impact_dist - dist_before_impact
+            )
+
+        cyclist_dist0 = cyclist_impact_dist - (cyc_j_start - cyclist_start_s)
+        motor_dist0 = motor_impact_dist - (motor_j_start - motor_start_s)
+
+        # Same real-speed timing as the crossing generator: neither
+        # actor is ever asked to move faster than its own configured
+        # speed. Whichever actor has slack stays parked at its own real
+        # starting position until it needs to start driving continuously
+        # at full real speed.
+        motor_natural_time = (
+            motor_dist0 / motor_speed_mps if motor_speed_mps > 0 else conflict_time_s
+        )
+        cyclist_natural_time = (
+            cyclist_dist0 / cyclist_speed_mps if cyclist_speed_mps > 0 else conflict_time_s
+        )
+        junction_impact_time_s = min(
+            duration_s - 1.0,
+            max(conflict_time_s, motor_natural_time, cyclist_natural_time),
+        )
+
+        def _real_speed_points_local(at_fn, dist0, marker_dists, speed_mps):
+            def _time_for(dist_before_impact):
+                if speed_mps <= 0:
+                    return junction_impact_time_s
+                return max(0.0, junction_impact_time_s - dist_before_impact / speed_mps)
+
+            start_time = _time_for(dist0)
+            points = [(0.0, *at_fn(dist0))]
+            if start_time > 1e-6:
+                points.append((start_time, *at_fn(dist0)))
+            for marker in marker_dists:
+                if 0 < marker < dist0:
+                    points.append((_time_for(marker), *at_fn(marker)))
+            points.append((junction_impact_time_s, *at_fn(0.0)))
+            return points
+
+        def _curve_markers_local(samples, j_start, impact_dist, dist0):
+            lo = max(j_start, impact_dist - dist0)
+            return sorted(
+                {impact_dist - d for (d, x, y, h) in samples if lo < d < impact_dist},
+                reverse=True,
+            )
+
+        cyclist_markers = _curve_markers_local(cyclist_samples, cyc_j_start, cyclist_impact_dist, cyclist_dist0)
+        cyclist_points = _real_speed_points_local(
+            _cyclist_at, cyclist_dist0, cyclist_markers, cyclist_speed_mps
+        )
+        cyclist_points.append((duration_s, *_cyclist_at(0.0)))
+
+        motor_markers = _curve_markers_local(motor_samples, motor_j_start, motor_impact_dist, motor_dist0)
+        motor_points = _real_speed_points_local(
+            _motor_at, motor_dist0, motor_markers, motor_speed_mps
+        )
+        # Post-impact continuation (see the comment above
+        # _find_junction_crossing_point's call): a real car doesn't
+        # stop dead on contact, so when the pre-impact turn had
+        # near-zero visible progress (the degenerate case -- turn_right
+        # already shows ~61% progress before impact on its own and
+        # doesn't need this; only fires when progress is small, e.g.
+        # turning_08's turn_left), keep it curving along its own real
+        # connector a bit further before finally holding, instead of
+        # freezing exactly at the impact point -- this is what actually
+        # makes the turn visible, without moving the collision point
+        # itself away from the genuine tightest-gap location. Scoped
+        # tightly so already-confirmed turn_right reports (which never
+        # hit this condition) render byte-identical to before.
+        motor_span_check = motor_j_end - motor_j_start
+        motor_progress_check = (
+            (motor_impact_dist - motor_j_start) / motor_span_check if motor_span_check > 0 else 1.0
+        )
+        motor_final_dist_before_impact = 0.0
+        if (
+            motor_maneuver in ("turn_left", "turn_right")
+            and motor_speed_mps > 0
+            and motor_progress_check < 0.2
+        ):
+            continue_dist = min(6.0, motor_j_end - motor_impact_dist)
+            if continue_dist > 0.5:
+                continue_time = continue_dist / motor_speed_mps
+                motor_points.append(
+                    (junction_impact_time_s + continue_time, *_motor_at(-continue_dist))
                 )
-
-            cyclist_dist0 = cyclist_impact_dist - (cyc_j_start - cyclist_start_s)
-            cyclist_points = [
-                (0, *_cyclist_at(cyclist_dist0)),
-                (conflict_time_s - 0.2, *_cyclist_at(1.0)),
-                (conflict_time_s, *_cyclist_at(0.0)),
-                (duration_s, *_cyclist_at(0.0)),
-            ]
-            motor_samples, motor_j_start, _ = _junction_maneuver_samples(
-                motor_entry_road, "go_straight", motor_y,
-                approach_margin_m=max(30.0, impact_x - motor_start_s + 5),
-            )
-            point = _path_point_at_distance(motor_samples, motor_j_start - motor_start_s)
-            motor_points = [(0, *point), (duration_s, *point)]
-        else:
-            motor_samples, motor_j_start, motor_j_end = _junction_maneuver_samples(
-                motor_entry_road, motor_maneuver, motor_y,
-                approach_margin_m=max(30.0, impact_x - motor_start_s + 5),
-            )
-            # Each vehicle's own connector-road midpoint is generally NOT the
-            # same physical point once each vehicle's real lane offset is
-            # applied -- same live-verified bug as the crossing generator's
-            # (see _find_junction_crossing_point's docstring): the cyclist
-            # and the turning motor vehicle would each reach a DIFFERENT
-            # point at the scripted "impact" time, so their paths never
-            # actually meet -- no visible collision, and afterward both
-            # actors just look like they drove on past each other normally
-            # ("the bike continues going straight even after the collision"
-            # -- turning_01/03/04/05/06, first visual review).
-            cyclist_impact_dist, motor_impact_dist = _find_junction_crossing_point(
-                cyclist_samples, (cyc_j_start, cyc_j_end), motor_samples, (motor_j_start, motor_j_end)
-            )
-            # Live-verified degenerate case (turning_08, turn_left): the
-            # real nearest-approach point between a straight cyclist and a
-            # turning motor vehicle can legitimately fall right at the very
-            # start of the motor's own connector -- before the connector has
-            # curved away from the entry road at all, since a turn lane
-            # initially hugs the same line as going straight. Geometrically
-            # correct as a minimum-distance answer, but it means the turn
-            # has zero visible progress before the scripted impact freezes
-            # the vehicle -- "the car was supposed to turn left but didn't."
-            #
-            # A first attempt forced the search to require some minimum
-            # turn-progress before accepting an impact point -- rejected on
-            # sight: any meaningful progress requirement pushes the
-            # "impact" location tens of meters past where the paths
-            # actually come close (verified: even 15% progress widens the
-            # gap from 2.37m to 2.70m, and it only gets worse from there --
-            # 40% progress needs a 4.18m gap), so the car visibly turning
-            # made "no collision happened" worse, not better. The real
-            # tension is structural (this turn lane and the straight lane
-            # diverge almost immediately in this template), not a number to
-            # tune away.
-            #
-            # Instead: keep the impact at the genuine tightest-gap point
-            # (best chance of a believable collision), and let the turn
-            # become visible AFTER impact instead of before it -- the motor
-            # vehicle keeps curving along its real connector for a couple
-            # more meters/seconds post-collision before finally stopping
-            # (a real car does not stop dead on contact), rather than
-            # freezing at the exact moment of impact. See the
-            # "post-impact continuation" markers added to motor_points
-            # below.
-
-            def _cyclist_at(dist_before_impact):
-                return _path_point_at_distance(
-                    cyclist_samples, cyclist_impact_dist - dist_before_impact
-                )
-
-            def _motor_at(dist_before_impact):
-                return _path_point_at_distance(
-                    motor_samples, motor_impact_dist - dist_before_impact
-                )
-
-            cyclist_dist0 = cyclist_impact_dist - (cyc_j_start - cyclist_start_s)
-            motor_dist0 = motor_impact_dist - (motor_j_start - motor_start_s)
-
-            # Same real-speed timing as the crossing generator: neither
-            # actor is ever asked to move faster than its own configured
-            # speed. Whichever actor has slack stays parked at its own real
-            # starting position until it needs to start driving continuously
-            # at full real speed.
-            motor_natural_time = (
-                motor_dist0 / motor_speed_mps if motor_speed_mps > 0 else conflict_time_s
-            )
-            cyclist_natural_time = (
-                cyclist_dist0 / cyclist_speed_mps if cyclist_speed_mps > 0 else conflict_time_s
-            )
-            junction_impact_time_s = min(
-                duration_s - 1.0,
-                max(conflict_time_s, motor_natural_time, cyclist_natural_time),
-            )
-
-            def _real_speed_points_local(at_fn, dist0, marker_dists, speed_mps):
-                def _time_for(dist_before_impact):
-                    if speed_mps <= 0:
-                        return junction_impact_time_s
-                    return max(0.0, junction_impact_time_s - dist_before_impact / speed_mps)
-
-                start_time = _time_for(dist0)
-                points = [(0.0, *at_fn(dist0))]
-                if start_time > 1e-6:
-                    points.append((start_time, *at_fn(dist0)))
-                for marker in marker_dists:
-                    if 0 < marker < dist0:
-                        points.append((_time_for(marker), *at_fn(marker)))
-                points.append((junction_impact_time_s, *at_fn(0.0)))
-                return points
-
-            def _curve_markers_local(samples, j_start, impact_dist, dist0):
-                lo = max(j_start, impact_dist - dist0)
-                return sorted(
-                    {impact_dist - d for (d, x, y, h) in samples if lo < d < impact_dist},
-                    reverse=True,
-                )
-
-            cyclist_markers = _curve_markers_local(cyclist_samples, cyc_j_start, cyclist_impact_dist, cyclist_dist0)
-            cyclist_points = _real_speed_points_local(
-                _cyclist_at, cyclist_dist0, cyclist_markers, cyclist_speed_mps
-            )
-            cyclist_points.append((duration_s, *_cyclist_at(0.0)))
-
-            motor_markers = _curve_markers_local(motor_samples, motor_j_start, motor_impact_dist, motor_dist0)
-            motor_points = _real_speed_points_local(
-                _motor_at, motor_dist0, motor_markers, motor_speed_mps
-            )
-            # Post-impact continuation (see the comment above
-            # _find_junction_crossing_point's call): a real car doesn't
-            # stop dead on contact, so when the pre-impact turn had
-            # near-zero visible progress (the degenerate case -- turn_right
-            # already shows ~61% progress before impact on its own and
-            # doesn't need this; only fires when progress is small, e.g.
-            # turning_08's turn_left), keep it curving along its own real
-            # connector a bit further before finally holding, instead of
-            # freezing exactly at the impact point -- this is what actually
-            # makes the turn visible, without moving the collision point
-            # itself away from the genuine tightest-gap location. Scoped
-            # tightly so already-confirmed turn_right reports (which never
-            # hit this condition) render byte-identical to before.
-            motor_span_check = motor_j_end - motor_j_start
-            motor_progress_check = (
-                (motor_impact_dist - motor_j_start) / motor_span_check if motor_span_check > 0 else 1.0
-            )
-            motor_final_dist_before_impact = 0.0
-            if (
-                motor_maneuver in ("turn_left", "turn_right")
-                and motor_speed_mps > 0
-                and motor_progress_check < 0.2
-            ):
-                continue_dist = min(6.0, motor_j_end - motor_impact_dist)
-                if continue_dist > 0.5:
-                    continue_time = continue_dist / motor_speed_mps
-                    motor_points.append(
-                        (junction_impact_time_s + continue_time, *_motor_at(-continue_dist))
-                    )
-                    motor_final_dist_before_impact = -continue_dist
-            motor_points.append((duration_s, *_motor_at(motor_final_dist_before_impact)))
-    else:
-        # Parked motor vehicle (dooring) or motor already past conflict: static trajectory.
-        # All other types: right-turn approach to the conflict point so the collision is
-        # visible in esmini regardless of the exact scenario sub-type.
-        if motor_speed_mps <= 0 or motor_start_s >= conflict_s_m - 5:
-            motor_points = [
-                (0, motor_start_s, motor_y, 0),
-                (duration_s, motor_start_s, motor_y, 0),
-            ]
-        else:
-            motor_turn_start_time_s = max(1.0, conflict_time_s - turn_duration_s)
-            motor_approach_s = min(
-                conflict_s_m - 8.0,
-                motor_start_s + motor_speed_mps * motor_turn_start_time_s,
-            )
-            motor_points = [
-                (0, motor_start_s, motor_y, 0),
-                (motor_turn_start_time_s, motor_approach_s, motor_y, 0),
-                (conflict_time_s - 1.2, impact_x - 4.2, motor_y - 0.3, turn_rel * 0.159),
-                (conflict_time_s - 0.5, impact_x - 1.2, impact_y + 0.4, turn_rel * 0.700),
-                (conflict_time_s, impact_x, impact_y, turn_rel),
-                (duration_s, impact_x, impact_y, turn_rel),
-            ]
-
-        cyclist_points = [
-            (0, cyclist_start_s, cyclist_y, 0),
-            (conflict_time_s - 0.2, impact_x - 1.0, cyclist_y, 0),
-            (conflict_time_s, impact_x, impact_y, 0),
-            (duration_s, impact_x, impact_y, 0),
-        ]
-
-        def _to_world(points):
-            result = []
-            for t, s, lat, hdg in points:
-                wx, wy = _world_from_road_s_t(road_length_m, primary_heading, s, lat)
-                result.append((t, wx, wy, primary_heading + hdg))
-            return result
-
-        motor_points = _to_world(motor_points)
-        cyclist_points = _to_world(cyclist_points)
+                motor_final_dist_before_impact = -continue_dist
+        motor_points.append((duration_s, *_motor_at(motor_final_dist_before_impact)))
 
     storyboard = xosc.StoryBoard(
         init,
