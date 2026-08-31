@@ -1,13 +1,3 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
+1 matches in 1 files:
 
-# Virtual environments
-.venv
-agentic_pipeline/output/osm_cache/
-*.log
-agentic_pipeline/docs/session_visual_validation_and_bugfixes.md
+.gitignore:13:agentic_pipeline/docs/session_visual_validation_and_bugfixes.md
