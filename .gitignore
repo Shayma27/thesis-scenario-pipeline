@@ -8,5 +8,10 @@ wheels/
 
 # Virtual environments
 .venv
-agentic_pipeline/output/osm_cache/
+scenario_generation_pipeline/data/osm_cache/
 *.log
+log.txt
+
+# Personal / tool-local files, not project content
+/CLAUDE.md
+/PAPERS NOTES !.docx
