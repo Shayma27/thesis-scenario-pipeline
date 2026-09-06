@@ -22,7 +22,7 @@ sys.path.insert(0, str(PROJECT_DIR))
 sys.path.insert(0, str(PROJECT_DIR / "src"))
 
 from pipeline import run_agent, run_feedback_iteration
-from report_loader import load_reports as _load_reports
+from utils.report_loader import load_reports as _load_reports
 
 ESMINI_BIN = "/home/chimo/tools/esmini/esmini-demo/bin/esmini"
 RESULTS_FILE = PROJECT_DIR / "data" / "results.json"
@@ -31,7 +31,7 @@ W = 70
 
 
 # ── Scenario registry ────────────────────────────────────────────────────────
-# Reports are loaded from docs/manual_classification_reference.md (see report_loader.py).
+# Reports are loaded from docs/manual_classification_reference.md (see utils/report_loader.py).
 
 _LABELS = {
     "turning": "Turning",

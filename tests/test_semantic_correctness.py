@@ -27,7 +27,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from gold_reference import GOLD, SKIP, GLOBAL_FORBIDDEN_TERMS, BIKE_FACILITY_IMPLYING_TERMS
-from report_loader import load_reports
+from utils.report_loader import load_reports
 
 INPUT_DIR = Path(__file__).resolve().parent.parent / "data" / "stage1_extracted"
 

@@ -11,7 +11,7 @@ With no arguments, runs the three queued diagnostics plus a full
 run_agent() pass on crossing_04 (explicit "speeding car" language),
 turning_01 (no explicit speed language), and longitudinal_01. Pass
 specific scenario_ids to run only those, or "all" to run the full
-19-report corpus (report_loader.load_reports()).
+19-report corpus (utils.report_loader.load_reports()).
 """
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ sys.path.insert(0, str(PROJECT_DIR / "src"))
 
 from utils import llm_client
 from pipeline import run_agent
-from report_loader import load_reports
+from utils.report_loader import load_reports
 
 W = 78
 

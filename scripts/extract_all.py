@@ -26,7 +26,7 @@ sys.path.insert(0, str(PROJECT_DIR))
 sys.path.insert(0, str(PROJECT_DIR / "src"))
 
 from extract_scenario import extract_scenario
-from report_loader import load_reports
+from utils.report_loader import load_reports
 
 INPUT_DIR = PROJECT_DIR / "data" / "stage1_extracted"
 W = 70

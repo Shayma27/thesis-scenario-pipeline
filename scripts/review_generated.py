@@ -31,7 +31,7 @@ PROJECT_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_DIR))
 sys.path.insert(0, str(PROJECT_DIR / "src"))
 
-from report_loader import load_reports
+from utils.report_loader import load_reports
 
 ESMINI_BIN = "/home/chimo/tools/esmini/esmini-demo/bin/esmini"
 OUTPUT_BASE = PROJECT_DIR / "data" / "stage4_generated"
