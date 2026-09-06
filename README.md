@@ -5,10 +5,6 @@ standardized **ASAM OpenSCENARIO + OpenDRIVE** scenario, ready to play back in
 [esmini](https://github.com/esmini/esmini) and validate against ADAS functions
 that address car-cyclist conflicts.
 
-Part of the thesis *Generation of Car-Cyclist Accident Scenarios Using
-Foundation Models* — see [`docs/THESIS_MASTER_CONTEXT.md`](docs/THESIS_MASTER_CONTEXT.md)
-for the full research context, evaluation results, and open questions.
-
 ## Not an "AI agent" pipeline
 
 Only **one step** in this pipeline calls a language model. Everything else —
@@ -79,7 +75,6 @@ not an agentic loop.
 │   ├── results.json / review_results.json   human review history from scripts/run_all.py and scripts/review_generated.py
 │   └── hpc_live_llm_verification/  output from the HPC smoke test
 └── docs/                     reference material the code or a reader actually needs
-    ├── THESIS_MASTER_CONTEXT.md
     ├── manual_classification_reference.md   the 19-report corpus (parsed by report_loader.py)
     ├── modeling_assumptions.md
     ├── gold_reference_audit.md
@@ -141,14 +136,11 @@ connection (it exercises the feedback-correction loop, not the main pipeline).
 
 - **Extraction (Stage 1):** 19/19 reports in full field-level agreement with
   the manually verified, independently cross-checked gold reference.
-- **Generation/simulation corpus:** 18 of 19 reports (1 excluded — see
-  `docs/THESIS_MASTER_CONTEXT.md` for why).
+- **Generation/simulation corpus:** 18 of 19 reports. The 19th describes a
+  parking-lot access conflict that neither of the two OpenDRIVE templates can
+  represent, so it's excluded from generation (it stays in the extraction/gold
+  set — see `data/stage1_extracted/`).
 - **esmini:** all 18 active reports individually watched and confirmed
   correct by the thesis author; a final automated geometry sweep across all
   18 found zero issues.
-- **DYNA4:** not yet performed — see `docs/THESIS_MASTER_CONTEXT.md`'s open
-  questions.
-
-See `docs/THESIS_MASTER_CONTEXT.md` for the complete, authoritative,
-up-to-date project context (supervisor decisions, confirmed design
-decisions, open questions, evaluation detail).
+- **DYNA4:** not yet performed.
