@@ -16,7 +16,6 @@ by definition) or as a fallback while a report's topology is still
 |------|----------|--------------|------------------------|
 | `intersection_4way.xodr` | 4-way intersection | esmini `fabriksgatan.xodr` [esmini v2.57.0] | `turning`, `crossing`, `other` |
 | `straight_road.xodr` | Straight road 500 m | esmini `straight_500m.xodr` [esmini v2.57.0] | `longitudinal` |
-| `tjunction.xodr` | T-junction | placeholder — replace before production use | unused — not referenced by `template_selector.py` |
 
 ## Bike lane modifications
 
@@ -29,21 +28,6 @@ outermost driving lane on each approach road and each connecting road:
 - **Shoulder/sidewalk lanes** renumbered outward to preserve adjacency order
 - **Junction laneLinks** added for all right-side-incoming biking movements
   (`intersection_4way.xodr` only)
-
-## Known limitation: parked-vehicle (dooring) reports
-
-Under the previous 9-category system, a distinct `dooring` scenario_type let
-`select_template()` reject door-opening reports outright (no suitable static
-template exists — esmini cannot model a door-opening event). Under the
-4-category system, dooring-like reports fall under `other` alongside many
-unrelated, representable scenarios, so scenario_type alone can no longer
-identify and exclude them at the template-selection stage — `other` reports
-now get a template like any other unresolved case (see the table above).
-`complete_parameters.py` still detects a stationary motor vehicle from the
-participant's own `maneuver == "parked"` field (not from scenario_type) and
-places it correctly, but the underlying limitation — esmini has no template
-for an actual door-opening event — is unchanged; it's just no longer
-enforced as a hard rejection at template selection.
 
 ## Source attribution
 
