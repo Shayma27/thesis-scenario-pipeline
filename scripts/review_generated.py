@@ -74,7 +74,7 @@ def _review_one(idx: int, total: int, scenario_id: str, scenario_type: str) -> d
     xosc_path = OUTPUT_BASE / scenario_id / f"{scenario_id}.xosc"
     if not xosc_path.exists():
         print(f"\n  ⚠ Not generated locally yet: {xosc_path}")
-        print("  Skipping -- pull it from the HPC run first (see docs/hpc_quickstart.md).")
+        print("  Skipping -- pull it from the HPC run first (see the HPC quickstart notes).")
         entry = {
             "scenario_id": scenario_id,
             "scenario_type": scenario_type,

@@ -12,6 +12,10 @@ data/osm_cache/
 *.log
 log.txt
 
+# Raw machine-readable audit dump — docs/osm_audit_report.md is the
+# human-facing version that's actually tracked; this is redundant.
+docs/osm_audit_report.json
+
 # Personal / tool-local files, not project content
 /CLAUDE.md
 /PAPERS NOTES !.docx
