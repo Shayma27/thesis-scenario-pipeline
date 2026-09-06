@@ -27,7 +27,7 @@ change is genuinely variable, unpredictable input a fixed script can't
 handle — the kind of task an LLM is actually suited for, unlike walking a
 checklist that never changes.
 
-Entry point: scripts/run.py (at scenario_generation_pipeline/ root).
+Entry point: scripts/run.py (at the repo root).
 Public API:  run_agent(report_text, scenario_id)
              run_feedback_iteration(state, report_text, user_feedback)
 """

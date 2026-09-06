@@ -284,7 +284,7 @@ happens to agree with `_cyclist_lane()`'s. See that commit for the exact
 per-report comparison.
 
 **Update (readiness audit before HPC testing):** a general audit of
-`scenario_generation_pipeline/` (pyflakes + a real, offline end-to-end generation run
+the pipeline (pyflakes + a real, offline end-to-end generation run
 of all 19 reference reports — not just the parameter-completion logic in
 isolation) turned up three more issues, all now fixed:
 

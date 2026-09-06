@@ -120,7 +120,7 @@ Wait for the line `Starting vLLM server on http://0.0.0.0:<port>`, then Ctrl+C a
 ## 5. Run the pipeline
 
 ```bash
-cd scenario_generation_pipeline
+cd thesis-scenario-pipeline     # repo root — the pipeline code lives directly here now
 python run_batch_19.py          # or whatever the current entry point is — CHECK FIRST, see below
 ```
 
@@ -146,6 +146,6 @@ scancel <jobid>
 
 - **Typing commands into the wrong terminal.** You have (at least) two terminals in play: local WSL (`chimo@ShaymaHichri`) and the HPC session (`shayma27@frontend02`). Commands like `/mnt/c/Users/...` only work locally; `/scratch/...` only works on HPC. Check your prompt before pasting.
 - **Literal placeholder brackets.** `sbatch <your_script.sh>` and `scancel <jobid>` — the `< >` means "put the real value here," never type them literally. Bash reads `<` as file-redirect and throws a syntax error.
-- **Path mixups from nested directories.** If you're already inside `scenario_generation_pipeline/`, don't prefix paths with `scenario_generation_pipeline/` again. Use `pwd` if unsure where you are.
+- **Path mixups from nested directories.** If you're already inside the repo root, don't prefix paths with the repo name again. Use `pwd` if unsure where you are.
 - **git push with a password instead of a token.** GitHub disabled plain password auth years ago. Username: your GitHub username. Password field: a Personal Access Token (repo scope), generated at github.com → Settings → Developer settings → Personal access tokens. Set `git config --global credential.helper 'cache --timeout=31536000'` once so you're not regenerating this every session.
 - **Assuming `R` means ready.** It means the SLURM job started. It does NOT mean vLLM finished loading the model. Always `curl` before trusting the connection.
