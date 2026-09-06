@@ -4,8 +4,15 @@ Scenario Generation Pipeline — core logic.
 Converts a German Berlin police accident report into validated OpenDRIVE +
 OpenSCENARIO simulation files through five fixed, deterministically
 sequenced stages: extract_scenario -> query_osm -> complete_parameters ->
-generate_scenario -> validate_and_fix. Only stage 1 (extract_scenario) calls
+generate_scenario -> validate. Only stage 1 (extract_scenario) calls
 an LLM — stages 2-5 are plain deterministic Python, no model involved.
+
+Stage 5 is a one-shot structural check (validate_outputs.py), not a
+retry-until-correct loop: since every earlier stage is deterministic, a
+validation failure means the same input would fail the same way on a second
+attempt too — there is nothing to "retry" without changing something, and
+nothing here changes anything. A failure here means a bug upstream, not a
+transient problem retrying can fix.
 
 run_agent() used to have an LLM decide the order of these five steps on
 every call, even though the order never actually varied — SYSTEM_PROMPT
@@ -59,7 +66,6 @@ from provenance import check_agent1_preserved
 
 OUTPUT_BASE = PROJECT_DIR / "data" / "stage4_generated"
 OSM_CACHE_DIR = PROJECT_DIR / "data" / "osm_cache"
-MAX_RETRIES = 3
 
 W = 70  # display width
 
@@ -138,7 +144,6 @@ class AgentState:
         self.output_dir: Path = OUTPUT_BASE / scenario_id
         self.xodr_path: Path | None = None
         self.xosc_path: Path | None = None
-        self.retry_count: int = 0
         self.log: list[dict] = []
 
     def record(self, event_type: str, payload: dict) -> None:
@@ -467,39 +472,28 @@ def _tool_generate_scenario(state: AgentState, parameter_overrides: str | None =
         return {"success": False, "error": str(exc)}
 
 
-def _tool_validate_and_fix(state: AgentState) -> dict:
+def _tool_validate(state: AgentState) -> dict:
+    """One-shot structural check of the generated .xodr/.xosc pair.
+
+    Not a retry-with-correction step: nothing here changes state.data, so a
+    failure reported here would reproduce identically on a second call. A
+    failure means a bug upstream (generate_scenario or an earlier stage),
+    not something this function can fix by trying again.
+    """
     print("  → Validating generated files...")
     if state.xodr_path is None or state.xosc_path is None:
         return {
             "valid": False,
-            "errors": ["generate_scenario must be called before validate_and_fix"],
+            "errors": ["generate_scenario must be called before validate"],
             "warnings": [],
-            "suggestions": [],
-            "retry_count": state.retry_count,
-            "retries_remaining": MAX_RETRIES,
         }
 
-    state.retry_count += 1
     result = _validate_outputs(state.data, state.xodr_path, state.xosc_path)
-    state.record("validate_and_fix", {
+    state.record("validate", {
         "valid": result.ok,
         "errors": result.errors,
         "warnings": result.warnings,
-        "retry_count": state.retry_count,
     })
-
-    suggestions = []
-    for err in result.errors:
-        el = err.lower()
-        if "missing lane" in el or "unknown lane" in el:
-            suggestions.append(
-                "Fix: set initial_lane_id to a valid lane. "
-                "OpenDRIVE uses negative IDs: -1=rightmost driving, -2=bike lane if present."
-            )
-        if "outside road" in el or "s=" in el:
-            suggestions.append("Fix: reduce initial_s_m to [0, road_length_m] (default 100m).")
-        if "no trajectories" in el:
-            suggestions.append("Fix: call generate_scenario before validate_and_fix.")
 
     print(f"  {'✓' if result.ok else '✗'} Validation: {'VALID' if result.ok else f'INVALID ({len(result.errors)} error(s))'}")
     for err in result.errors:
@@ -511,9 +505,6 @@ def _tool_validate_and_fix(state: AgentState) -> dict:
         "valid": result.ok,
         "errors": result.errors,
         "warnings": result.warnings,
-        "suggestions": suggestions,
-        "retry_count": state.retry_count,
-        "retries_remaining": max(0, MAX_RETRIES - state.retry_count + 1),
     }
 
 
@@ -623,7 +614,7 @@ def run_feedback_iteration(state: AgentState, report_text: str, user_feedback: s
     if not gen_result.get("success"):
         return {"success": False, "error": gen_result.get("error")}
 
-    val_result = _tool_validate_and_fix(state)
+    val_result = _tool_validate(state)
 
     return {
         "success": True,
@@ -674,14 +665,14 @@ def run_agent(report_text: str, scenario_id: str) -> dict:
     ever executed the same order every time. The one LLM call anywhere in
     this function is inside _tool_extract_scenario (step 1).
 
-    On a validation failure, retries regenerate deterministically — no
-    LLM-improvised parameter_overrides. If generate_scenario/
-    complete_parameters (already using real template geometry and cited
-    defaults) still produces invalid output after MAX_RETRIES attempts,
-    that's a real bug worth fixing at the source, not something to paper
-    over with a guessed patch (run_feedback_iteration still exists for
-    the genuinely different case of a human, not validate_and_fix,
-    reporting something wrong).
+    Step 5 (_tool_validate) runs once, not in a retry loop: every step here
+    is deterministic, so a validation failure on the first attempt would
+    fail identically on a second one — there is no different input to try.
+    A failure means a bug in generate_scenario/complete_parameters (already
+    using real template geometry and cited defaults), worth fixing at the
+    source, not something to paper over with a guessed patch. That's a
+    different case from run_feedback_iteration, which still exists for a
+    human reporting something that actually looks wrong.
     """
     state = AgentState(scenario_id)
 
@@ -728,19 +719,15 @@ def run_agent(report_text: str, scenario_id: str) -> dict:
             except Exception as exc:
                 last_errors = [f"Tool error: {exc}"]
             else:
-                attempt = 0
-                while attempt < MAX_RETRIES and not final_valid:
-                    attempt += 1
+                step += 1
+                print(f"\n[Step {step}] generate_scenario")
+                gen_result = _tool_generate_scenario(state)
+                if not gen_result.get("success"):
+                    last_errors = [gen_result.get("error", "generate_scenario failed")]
+                else:
                     step += 1
-                    print(f"\n[Step {step}] generate_scenario (attempt {attempt})")
-                    gen_result = _tool_generate_scenario(state)
-                    if not gen_result.get("success"):
-                        last_errors = [gen_result.get("error", "generate_scenario failed")]
-                        continue
-
-                    step += 1
-                    print(f"\n[Step {step}] validate_and_fix (attempt {attempt})")
-                    val_result = _tool_validate_and_fix(state)
+                    print(f"\n[Step {step}] validate")
+                    val_result = _tool_validate(state)
                     last_errors = val_result.get("errors", [])
                     if val_result.get("valid"):
                         final_valid = True
@@ -760,7 +747,6 @@ def run_agent(report_text: str, scenario_id: str) -> dict:
                 "scenario_id": scenario_id,
                 "valid": final_valid,
                 "iterations": step,
-                "retries": state.retry_count,
                 "final_summary": final_summary,
                 "log": state.log,
             },
@@ -781,7 +767,7 @@ def run_agent(report_text: str, scenario_id: str) -> dict:
         print(f"  ✗ INVALID  —  {scenario_id}")
         for err in last_errors:
             print(f"    ✗  {err}")
-    print(f"  Steps: {step}  |  Retries: {max(0, state.retry_count - 1)}")
+    print(f"  Steps: {step}")
     print(f"  Log:  {log_path}")
     print(f"{'═' * W}\n")
 
@@ -789,7 +775,6 @@ def run_agent(report_text: str, scenario_id: str) -> dict:
         "scenario_id": scenario_id,
         "valid": final_valid,
         "iterations": step,
-        "retries": state.retry_count,
         "xodr_path": str(state.xodr_path) if state.xodr_path else None,
         "xosc_path": str(state.xosc_path) if state.xosc_path else None,
         "scenario_type": (

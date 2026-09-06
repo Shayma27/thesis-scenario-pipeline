@@ -51,7 +51,7 @@ def main() -> None:
     state.output_dir.mkdir(parents=True, exist_ok=True)
 
     # Pre-generate so state.xodr_path / xosc_path are set
-    from pipeline import _tool_generate_scenario, _tool_validate_and_fix
+    from pipeline import _tool_generate_scenario
     gen = _tool_generate_scenario(state)
     if not gen.get("success"):
         print(f"Pre-generation failed: {gen.get('error')}")

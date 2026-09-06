@@ -28,7 +28,7 @@ Stage 3 — complete_parameters.py     (deterministic, zero network)
 Stage 4 — generate_scenario.py       (deterministic, zero network)
         │  writes the .xosc (OpenSCENARIO) + .xodr (OpenDRIVE) files
         ▼
-Stage 5 — validate_outputs.py        (deterministic structural check, retry loop)
+Stage 5 — validate_outputs.py        (deterministic structural check)
         │
         ▼
      esmini                          (external C++ simulator — plays the .xosc/.xodr)
@@ -41,6 +41,14 @@ not to an autonomous LLM agent — stages 2–5 involve no model call at all,
 and stage 1's LLM call is a single, schema-constrained extraction request,
 not an agentic loop.
 
+Stage 5 is a one-shot check, not a retry-until-correct loop: it verifies the
+generated `.xosc`/`.xodr` pair is structurally sound — every actor referenced
+in the story actually exists, every actor's starting lane/road actually
+exists in the road network, trajectory timestamps never go backwards, files
+are well-formed XML. Since stages 1–5 are all deterministic, a failure here
+means a bug in an earlier stage, not something a second attempt would fix
+without changing anything — so there's no retry loop to explain.
+
 ## Repository layout
 
 ```
@@ -51,7 +59,7 @@ not an agentic loop.
 │   ├── complete_parameters.py + speed_estimation.py   Stage 3 — parameter completion
 │   ├── template_selector.py   picks one of the two OpenDRIVE templates
 │   ├── generate_scenario.py Stage 4 — .xosc/.xodr generation
-│   ├── validate_outputs.py  Stage 5 — structural validation + retry
+│   ├── validate_outputs.py  Stage 5 — one-shot structural validation
 │   ├── provenance.py        invariant check: Stage 1's output is never overwritten downstream
 │   ├── report_loader.py     parses the 19-report corpus (docs/manual_classification_reference.md)
 │   └── gold_reference.py    hand-verified gold answer key, used by the tests
