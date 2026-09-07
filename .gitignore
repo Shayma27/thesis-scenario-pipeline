@@ -19,3 +19,9 @@ docs/osm_audit_report.json
 # Personal / tool-local files, not project content
 /CLAUDE.md
 /PAPERS NOTES !.docx
+
+# Local-only compat symlinks so old chat sessions pointed at the pre-rename
+# folder paths (agentic_pipeline/, scenario_generation_pipeline/) still work
+# after the repo was renamed and flattened. Not part of the repo itself.
+/agentic_pipeline
+/scenario_generation_pipeline
