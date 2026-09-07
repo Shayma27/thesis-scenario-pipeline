@@ -50,7 +50,7 @@ def _auto_scenario_id(report_text: str) -> str:
 
 def _read_report() -> str:
     print("=" * W)
-    print("  AGENTIC SCENARIO PIPELINE")
+    print("  SCENARIO GENERATION PIPELINE")
     print("  Convert a German Berlin police report → OpenDRIVE + OpenSCENARIO")
     print("=" * W)
     print()

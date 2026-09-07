@@ -5,7 +5,7 @@ standardized **ASAM OpenSCENARIO + OpenDRIVE** scenario, ready to play back in
 [esmini](https://github.com/esmini/esmini) and validate against ADAS functions
 that address car-cyclist conflicts.
 
-## Not an "AI agent" pipeline
+## How it works
 
 Only **one step** in this pipeline calls a language model. Everything else —
 map lookups, unit conversion, geometry, file generation, validation — is
@@ -34,21 +34,6 @@ Stage 5 — validate_outputs.py        (deterministic structural check)
         ▼
      esmini                          (external C++ simulator — plays the .xosc/.xodr)
 ```
-
-You'll still see the word "Agent" here and there in the code (a leftover
-naming convention: `AgentState`, `run_agent()`, the `"agent1_speed_evidence"`
-field in the extraction schema). It refers to *stage* in that older sense,
-not to an autonomous LLM agent — stages 2–5 involve no model call at all,
-and stage 1's LLM call is a single, schema-constrained extraction request,
-not an agentic loop.
-
-Stage 5 is a one-shot check, not a retry-until-correct loop: it verifies the
-generated `.xosc`/`.xodr` pair is structurally sound — every actor referenced
-in the story actually exists, every actor's starting lane/road actually
-exists in the road network, trajectory timestamps never go backwards, files
-are well-formed XML. Since stages 1–5 are all deterministic, a failure here
-means a bug in an earlier stage, not something a second attempt would fix
-without changing anything — so there's no retry loop to explain.
 
 ## Repository layout
 
