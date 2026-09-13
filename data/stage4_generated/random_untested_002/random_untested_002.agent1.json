@@ -1,0 +1,61 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "random_untested_002",
+    "raw_text": "Eine Radfahrerin befuhr die Danziger Straße in östlicher Richtung auf dem\nstraßenbegleitenden Radweg. Ein Pkw-Fahrer, der aus der Kollwitzstraße kam,\nbog nach links in die Danziger Straße ein und übersah dabei die Radfahrerin,\ndie auf dem Radweg Vorfahrt hatte. Es kam zum Zusammenstoß, bei dem die\nRadfahrerin leicht verletzt wurde."
+  },
+  "classification": {
+    "scenario_type": "turning",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Danziger Straße",
+    "secondary_road": "Kollwitzstraße",
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Danziger Straße / Kollwitzstraße, Berlin, Germany",
+    "osm_roads": [
+      "Danziger Straße",
+      "Kollwitzstraße"
+    ],
+    "direction_references": [
+      "east"
+    ],
+    "location_type": "intersection"
+  },
+  "road_context": {
+    "bike_facility_type": "bike_lane",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "turn_left",
+      "initial_direction": null,
+      "heading_reference": "toward Danziger Straße",
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "east",
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across_cycle_lane",
+    "collision_happened": true,
+    "collision_description": "A car turning left struck a cyclist going straight on the bike lane."
+  }
+}

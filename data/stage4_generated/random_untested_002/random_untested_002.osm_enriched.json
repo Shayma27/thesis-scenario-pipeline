@@ -1,0 +1,934 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "random_untested_002",
+    "raw_text": "Eine Radfahrerin befuhr die Danziger Straße in östlicher Richtung auf dem\nstraßenbegleitenden Radweg. Ein Pkw-Fahrer, der aus der Kollwitzstraße kam,\nbog nach links in die Danziger Straße ein und übersah dabei die Radfahrerin,\ndie auf dem Radweg Vorfahrt hatte. Es kam zum Zusammenstoß, bei dem die\nRadfahrerin leicht verletzt wurde."
+  },
+  "classification": {
+    "scenario_type": "turning",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Danziger Straße",
+    "secondary_road": "Kollwitzstraße",
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Danziger Straße / Kollwitzstraße, Berlin, Germany",
+    "osm_roads": [
+      "Danziger Straße",
+      "Kollwitzstraße"
+    ],
+    "direction_references": [
+      "east"
+    ],
+    "location_type": "intersection"
+  },
+  "road_context": {
+    "bike_facility_type": "bike_lane",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "turn_left",
+      "initial_direction": null,
+      "heading_reference": "toward Danziger Straße",
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": "east",
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across_cycle_lane",
+    "collision_happened": true,
+    "collision_description": "A car turning left struck a cyclist going straight on the bike lane."
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "intersection_lat": 52.5395047,
+      "intersection_lon": 13.4215376,
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "bike_lane",
+      "primary_bike_facility_position": "right",
+      "primary_heading_rad": -0.27412530201487456,
+      "secondary_heading_rad": 1.077906807690358,
+      "secondary_road_lanes": 2
+    },
+    "openscenario": {
+      "cyclist_lateral_position": "right"
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "bike_lane",
+      "source": "explicit_from_report",
+      "reason": "The report explicitly describes the cycling infrastructure."
+    },
+    {
+      "parameter": "primary_heading_rad",
+      "value_used": -0.274125,
+      "source": "osm_way_geometry",
+      "reason": "Primary road heading derived from OSM way geometry."
+    },
+    {
+      "parameter": "secondary_heading_rad",
+      "value_used": 1.077907,
+      "source": "osm_way_geometry",
+      "reason": "Secondary road heading derived from OSM way geometry."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "right",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    }
+  ],
+  "osm_context": {
+    "query": "Danziger Straße, Berlin, Germany",
+    "queries_tried": [
+      "Danziger Straße / Kollwitzstraße, Berlin, Germany",
+      "Danziger Straße Kollwitzstraße, Berlin, Germany",
+      "Danziger Straße, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 41954397,
+        "name": "Danziger Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|through;right",
+        "oneway": "yes",
+        "width": "9",
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.539228,
+            "lon": 13.4232547
+          },
+          {
+            "lat": 52.5392266,
+            "lon": 13.4232639
+          },
+          {
+            "lat": 52.5391553,
+            "lon": 13.4237162
+          },
+          {
+            "lat": 52.5391438,
+            "lon": 13.4237873
+          },
+          {
+            "lat": 52.5391091,
+            "lon": 13.4239621
+          },
+          {
+            "lat": 52.5390991,
+            "lon": 13.4240109
+          },
+          {
+            "lat": 52.5390941,
+            "lon": 13.4240321
+          }
+        ]
+      },
+      {
+        "osm_id": 333966516,
+        "name": "Danziger Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "exclusive"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5400568,
+            "lon": 13.4180322
+          },
+          {
+            "lat": 52.5399457,
+            "lon": 13.4186848
+          },
+          {
+            "lat": 52.5399334,
+            "lon": 13.4187618
+          },
+          {
+            "lat": 52.539901,
+            "lon": 13.4189823
+          },
+          {
+            "lat": 52.5398389,
+            "lon": 13.4194058
+          },
+          {
+            "lat": 52.5398312,
+            "lon": 13.4194584
+          },
+          {
+            "lat": 52.5397667,
+            "lon": 13.4198973
+          },
+          {
+            "lat": 52.5397587,
+            "lon": 13.4199521
+          },
+          {
+            "lat": 52.5396784,
+            "lon": 13.4204335
+          }
+        ]
+      },
+      {
+        "osm_id": 333967936,
+        "name": "Danziger Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|none",
+        "oneway": "yes",
+        "width": "6.5",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:buffer:both": "no",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:both": "dashed_line",
+          "cycleway:right:width": "1.6"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5395355,
+            "lon": 13.4213455
+          },
+          {
+            "lat": 52.5395255,
+            "lon": 13.4214078
+          },
+          {
+            "lat": 52.5395047,
+            "lon": 13.4215376
+          }
+        ]
+      },
+      {
+        "osm_id": 333967937,
+        "name": "Danziger Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "6.5",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:buffer:both": "no",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:both": "dashed_line",
+          "cycleway:right:width": "1.6"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5395047,
+            "lon": 13.4215376
+          },
+          {
+            "lat": 52.5394608,
+            "lon": 13.4218111
+          },
+          {
+            "lat": 52.539455,
+            "lon": 13.421847
+          }
+        ]
+      },
+      {
+        "osm_id": 334160408,
+        "name": "Danziger Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|none",
+        "oneway": "yes",
+        "width": "9",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:buffer:both": "no",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:both": "dashed_line",
+          "cycleway:right:width": "1.4"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5396406,
+            "lon": 13.4219547
+          },
+          {
+            "lat": 52.5396486,
+            "lon": 13.4218922
+          },
+          {
+            "lat": 52.5396753,
+            "lon": 13.4216861
+          }
+        ]
+      },
+      {
+        "osm_id": 974124532,
+        "name": "Danziger Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "9",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:buffer:both": "no",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:both": "dashed_line",
+          "cycleway:right:width": "1.4"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5396753,
+            "lon": 13.4216861
+          },
+          {
+            "lat": 52.5397014,
+            "lon": 13.4214844
+          },
+          {
+            "lat": 52.5397056,
+            "lon": 13.4214518
+          }
+        ]
+      },
+      {
+        "osm_id": 1052669153,
+        "name": "Kollwitzstraße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "15",
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5393861,
+            "lon": 13.4214336
+          },
+          {
+            "lat": 52.5393954,
+            "lon": 13.4214417
+          },
+          {
+            "lat": 52.5394149,
+            "lon": 13.4214588
+          },
+          {
+            "lat": 52.5395047,
+            "lon": 13.4215376
+          }
+        ]
+      },
+      {
+        "osm_id": 1097005256,
+        "name": "Danziger Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "11",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "advisory"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5397893,
+            "lon": 13.420921
+          },
+          {
+            "lat": 52.5398146,
+            "lon": 13.4207603
+          },
+          {
+            "lat": 52.5398456,
+            "lon": 13.4205641
+          }
+        ]
+      },
+      {
+        "osm_id": 1097005257,
+        "name": "Danziger Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "11",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "exclusive"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5398456,
+            "lon": 13.4205641
+          },
+          {
+            "lat": 52.5399019,
+            "lon": 13.4202066
+          },
+          {
+            "lat": 52.5399337,
+            "lon": 13.4200053
+          },
+          {
+            "lat": 52.5399791,
+            "lon": 13.4197174
+          }
+        ]
+      },
+      {
+        "osm_id": 1133761502,
+        "name": "Kollwitzstraße",
+        "highway": "residential",
+        "maxspeed": "30",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "15",
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5382975,
+            "lon": 13.4202572
+          },
+          {
+            "lat": 52.5384679,
+            "lon": 13.4204421
+          },
+          {
+            "lat": 52.5385427,
+            "lon": 13.4205232
+          },
+          {
+            "lat": 52.5386159,
+            "lon": 13.4206026
+          },
+          {
+            "lat": 52.5387797,
+            "lon": 13.4207803
+          },
+          {
+            "lat": 52.538908,
+            "lon": 13.4209194
+          },
+          {
+            "lat": 52.5390306,
+            "lon": 13.4210524
+          },
+          {
+            "lat": 52.5391938,
+            "lon": 13.4212294
+          },
+          {
+            "lat": 52.5393861,
+            "lon": 13.4214336
+          }
+        ]
+      },
+      {
+        "osm_id": 1133761503,
+        "name": "Danziger Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "9",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:buffer:left": "no",
+          "cycleway:right:buffer:right": "0.7",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:both": "dashed_line",
+          "cycleway:right:width": "2"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.539455,
+            "lon": 13.421847
+          },
+          {
+            "lat": 52.5394201,
+            "lon": 13.4220606
+          },
+          {
+            "lat": 52.5393233,
+            "lon": 13.4226535
+          },
+          {
+            "lat": 52.5392991,
+            "lon": 13.4228014
+          }
+        ]
+      },
+      {
+        "osm_id": 1133761508,
+        "name": "Danziger Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|none",
+        "oneway": "yes",
+        "width": "13",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:buffer:both": "no",
+          "cycleway:right:lane": "exclusive",
+          "cycleway:right:marking:left": "dashed_line",
+          "cycleway:right:marking:right": "no",
+          "cycleway:right:width": "1"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5396784,
+            "lon": 13.4204335
+          },
+          {
+            "lat": 52.5395743,
+            "lon": 13.4210982
+          }
+        ]
+      },
+      {
+        "osm_id": 1133761532,
+        "name": "Danziger Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|none",
+        "oneway": "yes",
+        "width": "9",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:buffer:left": "no",
+          "cycleway:right:buffer:right": "0.6",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:both": "dashed_line",
+          "cycleway:right:width": "1.2"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5395543,
+            "lon": 13.4225223
+          },
+          {
+            "lat": 52.5396406,
+            "lon": 13.4219547
+          }
+        ]
+      },
+      {
+        "osm_id": 1133761533,
+        "name": "Danziger Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "11",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:buffer:left": "no",
+          "cycleway:right:buffer:right": "1",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:both": "dashed_line",
+          "cycleway:right:width": "1.6"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5397056,
+            "lon": 13.4214518
+          },
+          {
+            "lat": 52.5397607,
+            "lon": 13.4211022
+          },
+          {
+            "lat": 52.5397893,
+            "lon": 13.420921
+          }
+        ]
+      },
+      {
+        "osm_id": 1133992711,
+        "name": "Danziger Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": "9",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "advisory"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5393479,
+            "lon": 13.4238302
+          },
+          {
+            "lat": 52.5394196,
+            "lon": 13.4233831
+          },
+          {
+            "lat": 52.5394494,
+            "lon": 13.4231969
+          },
+          {
+            "lat": 52.5394579,
+            "lon": 13.4231419
+          },
+          {
+            "lat": 52.5395077,
+            "lon": 13.4228219
+          },
+          {
+            "lat": 52.5395174,
+            "lon": 13.4227594
+          },
+          {
+            "lat": 52.5395543,
+            "lon": 13.4225223
+          }
+        ]
+      },
+      {
+        "osm_id": 1416737936,
+        "name": "Danziger Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|through;right",
+        "oneway": "yes",
+        "width": "9",
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5392991,
+            "lon": 13.4228014
+          },
+          {
+            "lat": 52.5392796,
+            "lon": 13.4229258
+          },
+          {
+            "lat": 52.539228,
+            "lon": 13.4232547
+          }
+        ]
+      },
+      {
+        "osm_id": 1416737939,
+        "name": "Danziger Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|none",
+        "oneway": "yes",
+        "width": "13",
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:buffer:both": "no",
+          "cycleway:right:lane": "advisory",
+          "cycleway:right:marking:left": "dashed_line",
+          "cycleway:right:marking:right": "no",
+          "cycleway:right:width": "1.6"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5395743,
+            "lon": 13.4210982
+          },
+          {
+            "lat": 52.5395355,
+            "lon": 13.4213455
+          }
+        ]
+      },
+      {
+        "osm_id": 1490527053,
+        "name": "Danziger Straße",
+        "highway": "primary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "lane",
+          "cycleway:right:bicycle": "designated",
+          "cycleway:right:lane": "exclusive"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5399791,
+            "lon": 13.4197174
+          },
+          {
+            "lat": 52.5400468,
+            "lon": 13.4192882
+          }
+        ]
+      }
+    ],
+    "notes": [],
+    "geocoded": {
+      "display_name": "Danziger Straße, Grüne Stadt, Prenzlauer Berg, Pankow, Berlin, 10407, Deutschland",
+      "lat": 52.5395047,
+      "lon": 13.4215376,
+      "osm_type": "way",
+      "osm_id": 1096709262,
+      "nominatim_lat": 52.5308559,
+      "nominatim_lon": 13.4430464,
+      "refined_by": "shared_node_lookup",
+      "refined_streets": [
+        "Danziger Straße",
+        "Kollwitzstraße"
+      ],
+      "refined_way_id": 1052669153
+    },
+    "bike_facility": {
+      "type": "bike_lane",
+      "position": "right",
+      "source": "explicit_from_report",
+      "osm_evidence": {
+        "bike_facility_type": "separated_cycle_track",
+        "position": "right",
+        "tags": {
+          "cycleway:right": "separate"
+        }
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "right",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 50.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "scenario_id": "random_untested_002",
+  "valid": true,
+  "iterations": 5,
+  "final_summary": "turning scenario (right_turn_across_cycle_lane). Participants: car_1 (car, turn_left), cyclist_1 (bicycle, go_straight). Road length 93.6608312256975 m, duration 10.0 s. Initial speeds: cyclist_1=4.25 m/s, car_1=10.0 m/s.",
+  "log": [
+    {
+      "timestamp": "2026-09-13T18:51:53.627660+00:00",
+      "type": "extract_scenario",
+      "scenario_type": "turning",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2026-09-13T18:52:59.676582+00:00",
+      "type": "detect_topology",
+      "scenario_id": "random_untested_002",
+      "streets": [
+        "Danziger Straße",
+        "Kollwitzstraße"
+      ],
+      "house_number": null,
+      "topology": "4way_junction",
+      "way_count": 4,
+      "reason": "4 ways at the shared node — a genuine 4-way crossing."
+    },
+    {
+      "timestamp": "2026-09-13T18:52:59.676871+00:00",
+      "type": "query_osm",
+      "status": "ok",
+      "query": "Danziger Straße / Kollwitzstraße, Berlin, Germany",
+      "notes": []
+    },
+    {
+      "timestamp": "2026-09-13T18:52:59.748217+00:00",
+      "type": "complete_parameters"
+    },
+    {
+      "timestamp": "2026-09-13T18:53:00.892455+00:00",
+      "type": "generate_scenario",
+      "template": "/beegfs/home/users/s/shayma27/thesis-scenario-pipeline/templates/intersection_4way.xodr",
+      "xodr": "/beegfs/home/users/s/shayma27/thesis-scenario-pipeline/data/stage4_generated/random_untested_002/intersection_4way.xodr",
+      "xosc": "/beegfs/home/users/s/shayma27/thesis-scenario-pipeline/data/stage4_generated/random_untested_002/random_untested_002.xosc"
+    },
+    {
+      "timestamp": "2026-09-13T18:53:01.061797+00:00",
+      "type": "validate",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    }
+  ]
+}
