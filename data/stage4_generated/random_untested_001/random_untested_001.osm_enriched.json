@@ -1,0 +1,706 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "random_untested_001",
+    "raw_text": "Ein 87-jähriger Autofahrer bog von der Landsberger Allee nach rechts in die\nAlte Rhinstraße ab und übersah dabei nach bisherigen Erkenntnissen einen in\ngleicher Richtung fahrenden 45-jährigen Radfahrer. Der Radfahrer erlitt\nKopf- und Beinverletzungen und musste ins Krankenhaus gebracht werden."
+  },
+  "classification": {
+    "scenario_type": "turning",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Alte Rhinstraße",
+    "secondary_road": "Landsberger Allee",
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Alte Rhinstraße / Landsberger Allee, Berlin, Germany",
+    "osm_roads": [
+      "Alte Rhinstraße",
+      "Landsberger Allee"
+    ],
+    "direction_references": [],
+    "location_type": "intersection"
+  },
+  "road_context": {
+    "bike_facility_type": "separated_cycle_track",
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "turn_right",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across",
+    "collision_happened": true,
+    "collision_description": "A car turning right struck a cyclist going straight."
+  },
+  "generated_simulation_parameters": {
+    "opendrive": {
+      "intersection_lat": 52.5354932,
+      "intersection_lon": 13.519437,
+      "primary_has_bike_facility": true,
+      "primary_bike_facility_type": "separated_cycle_track",
+      "primary_bike_facility_position": "right",
+      "primary_heading_rad": 1.9792759251942866,
+      "secondary_heading_rad": 0.09427194186193891
+    },
+    "openscenario": {
+      "cyclist_lateral_position": "right"
+    }
+  },
+  "missing_parameters": [
+    {
+      "parameter": "bike_facility_type",
+      "value_used": "separated_cycle_track",
+      "source": "osm_tag",
+      "reason": "OSM cycleway tags indicate separated_cycle_track."
+    },
+    {
+      "parameter": "primary_heading_rad",
+      "value_used": 1.979276,
+      "source": "osm_way_geometry",
+      "reason": "Primary road heading derived from OSM way geometry."
+    },
+    {
+      "parameter": "secondary_heading_rad",
+      "value_used": 0.094272,
+      "source": "osm_way_geometry",
+      "reason": "Secondary road heading derived from OSM way geometry."
+    },
+    {
+      "parameter": "cyclist_lateral_position",
+      "value_used": "right",
+      "source": "osm_tag",
+      "reason": "OSM cycleway side tags indicate the cycling facility position."
+    }
+  ],
+  "osm_context": {
+    "query": "Alte Rhinstraße, Berlin, Germany",
+    "queries_tried": [
+      "Alte Rhinstraße / Landsberger Allee, Berlin, Germany",
+      "Alte Rhinstraße Landsberger Allee, Berlin, Germany",
+      "Alte Rhinstraße, Berlin, Germany"
+    ],
+    "source": "OpenStreetMap via Nominatim and Overpass",
+    "enrichment_status": "ok",
+    "radius_m": 140,
+    "matched_roads": [
+      {
+        "osm_id": 4696042,
+        "name": "Landsberger Allee",
+        "highway": "primary",
+        "maxspeed": "60",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|through|through",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": null,
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5353235,
+            "lon": 13.5172376
+          },
+          {
+            "lat": 52.5353312,
+            "lon": 13.5173711
+          },
+          {
+            "lat": 52.5353325,
+            "lon": 13.517393
+          },
+          {
+            "lat": 52.5353339,
+            "lon": 13.5174173
+          },
+          {
+            "lat": 52.5353349,
+            "lon": 13.5174344
+          },
+          {
+            "lat": 52.5353446,
+            "lon": 13.5176019
+          }
+        ]
+      },
+      {
+        "osm_id": 110147009,
+        "name": "Landsberger Allee",
+        "highway": "primary",
+        "maxspeed": "60",
+        "lanes": "5",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|through|through|right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5356269,
+            "lon": 13.5194189
+          },
+          {
+            "lat": 52.5355106,
+            "lon": 13.5178876
+          },
+          {
+            "lat": 52.5355059,
+            "lon": 13.5178252
+          },
+          {
+            "lat": 52.5355006,
+            "lon": 13.5177623
+          },
+          {
+            "lat": 52.5354807,
+            "lon": 13.5174939
+          }
+        ]
+      },
+      {
+        "osm_id": 110147012,
+        "name": "Landsberger Allee",
+        "highway": "primary",
+        "maxspeed": "60",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5354932,
+            "lon": 13.519437
+          },
+          {
+            "lat": 52.5355528,
+            "lon": 13.5201192
+          },
+          {
+            "lat": 52.5355897,
+            "lon": 13.5205345
+          },
+          {
+            "lat": 52.5356405,
+            "lon": 13.5210968
+          },
+          {
+            "lat": 52.5357427,
+            "lon": 13.522031
+          }
+        ]
+      },
+      {
+        "osm_id": 191635999,
+        "name": "Landsberger Allee",
+        "highway": "primary",
+        "maxspeed": "60",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|through|through|through",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5354807,
+            "lon": 13.5174939
+          },
+          {
+            "lat": 52.535478,
+            "lon": 13.5174532
+          },
+          {
+            "lat": 52.5354748,
+            "lon": 13.5174033
+          },
+          {
+            "lat": 52.5354703,
+            "lon": 13.5173345
+          },
+          {
+            "lat": 52.5354674,
+            "lon": 13.5172898
+          },
+          {
+            "lat": 52.5354639,
+            "lon": 13.5171414
+          }
+        ]
+      },
+      {
+        "osm_id": 191639335,
+        "name": "Landsberger Allee",
+        "highway": "primary",
+        "maxspeed": "60",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5353446,
+            "lon": 13.5176019
+          },
+          {
+            "lat": 52.5353581,
+            "lon": 13.5177882
+          },
+          {
+            "lat": 52.5353649,
+            "lon": 13.5178603
+          },
+          {
+            "lat": 52.5354932,
+            "lon": 13.519437
+          }
+        ]
+      },
+      {
+        "osm_id": 191640672,
+        "name": "Rhinstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "5",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|left|through|through|right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5342501,
+            "lon": 13.518377
+          },
+          {
+            "lat": 52.5343657,
+            "lon": 13.5183192
+          },
+          {
+            "lat": 52.5351313,
+            "lon": 13.5177596
+          },
+          {
+            "lat": 52.535148,
+            "lon": 13.5177475
+          },
+          {
+            "lat": 52.5351674,
+            "lon": 13.5177347
+          },
+          {
+            "lat": 52.5352943,
+            "lon": 13.5176392
+          }
+        ]
+      },
+      {
+        "osm_id": 191640673,
+        "name": "Rhinstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "4",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|left|through|through",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5353446,
+            "lon": 13.5176019
+          },
+          {
+            "lat": 52.5354807,
+            "lon": 13.5174939
+          }
+        ]
+      },
+      {
+        "osm_id": 355854207,
+        "name": "Landsberger Allee",
+        "highway": "primary",
+        "maxspeed": "60",
+        "lanes": "3",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5358481,
+            "lon": 13.5219872
+          },
+          {
+            "lat": 52.5357446,
+            "lon": 13.5211562
+          },
+          {
+            "lat": 52.5356905,
+            "lon": 13.5203568
+          },
+          {
+            "lat": 52.5356269,
+            "lon": 13.5194189
+          }
+        ]
+      },
+      {
+        "osm_id": 888311297,
+        "name": "Rhinstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "5",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": "left|left|through|through|right",
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5352943,
+            "lon": 13.5176392
+          },
+          {
+            "lat": 52.5353446,
+            "lon": 13.5176019
+          }
+        ]
+      },
+      {
+        "osm_id": 938252956,
+        "name": "Rhinstraße",
+        "highway": "secondary",
+        "maxspeed": "50",
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": "yes",
+        "width": null,
+        "lane_markings": "yes",
+        "bicycle": "use_sidepath",
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:left": "no",
+          "cycleway:right": "separate"
+        },
+        "sidewalk": "no",
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5354807,
+            "lon": 13.5174939
+          },
+          {
+            "lat": 52.535508,
+            "lon": 13.5174731
+          },
+          {
+            "lat": 52.5355397,
+            "lon": 13.517449
+          },
+          {
+            "lat": 52.5355692,
+            "lon": 13.5174267
+          },
+          {
+            "lat": 52.535639,
+            "lon": 13.5173731
+          },
+          {
+            "lat": 52.5356685,
+            "lon": 13.5173528
+          },
+          {
+            "lat": 52.5357107,
+            "lon": 13.5173191
+          },
+          {
+            "lat": 52.5360053,
+            "lon": 13.517101
+          }
+        ]
+      },
+      {
+        "osm_id": 1143845167,
+        "name": "Alte Rhinstraße",
+        "highway": "residential",
+        "maxspeed": null,
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": null,
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.535353,
+            "lon": 13.5194708
+          },
+          {
+            "lat": 52.5354163,
+            "lon": 13.5194562
+          },
+          {
+            "lat": 52.5354332,
+            "lon": 13.5194514
+          },
+          {
+            "lat": 52.5354932,
+            "lon": 13.519437
+          }
+        ]
+      },
+      {
+        "osm_id": 1434612654,
+        "name": "Alte Rhinstraße",
+        "highway": "residential",
+        "maxspeed": null,
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "5.5",
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5342119,
+            "lon": 13.5197363
+          },
+          {
+            "lat": 52.5344307,
+            "lon": 13.5196851
+          },
+          {
+            "lat": 52.5347207,
+            "lon": 13.5196199
+          },
+          {
+            "lat": 52.5348961,
+            "lon": 13.5195776
+          },
+          {
+            "lat": 52.5350582,
+            "lon": 13.5195384
+          },
+          {
+            "lat": 52.5351059,
+            "lon": 13.5195276
+          },
+          {
+            "lat": 52.5352631,
+            "lon": 13.5194918
+          }
+        ]
+      },
+      {
+        "osm_id": 1434612655,
+        "name": "Alte Rhinstraße",
+        "highway": "residential",
+        "maxspeed": null,
+        "lanes": "2",
+        "lanes_forward": null,
+        "lanes_backward": null,
+        "turn_lanes": null,
+        "oneway": null,
+        "width": "5.5",
+        "lane_markings": "no",
+        "bicycle": null,
+        "segregated": null,
+        "cycleway": "no",
+        "cycleway_tags": {
+          "cycleway:both": "no"
+        },
+        "sidewalk": null,
+        "center": null,
+        "geometry": [
+          {
+            "lat": 52.5352631,
+            "lon": 13.5194918
+          },
+          {
+            "lat": 52.5353026,
+            "lon": 13.5194824
+          },
+          {
+            "lat": 52.535353,
+            "lon": 13.5194708
+          }
+        ]
+      }
+    ],
+    "notes": [],
+    "geocoded": {
+      "display_name": "Alte Rhinstraße, Marzahn, Marzahn-Hellersdorf, Berlin, 12681, Deutschland",
+      "lat": 52.5354932,
+      "lon": 13.519437,
+      "osm_type": "way",
+      "osm_id": 1434612654,
+      "nominatim_lat": 52.5347379,
+      "nominatim_lon": 13.5196158,
+      "refined_by": "shared_node_lookup",
+      "refined_streets": [
+        "Alte Rhinstraße",
+        "Landsberger Allee"
+      ],
+      "refined_way_id": 110147012
+    },
+    "bike_facility": {
+      "type": "separated_cycle_track",
+      "position": "right",
+      "source": "osm_tag",
+      "osm_evidence": {
+        "bike_facility_type": "separated_cycle_track",
+        "position": "right",
+        "tags": {
+          "cycleway:right": "separate"
+        }
+      }
+    },
+    "cyclist_lateral_position": {
+      "value": "right",
+      "source": "osm_tag",
+      "policy": "default rightmost unless report or OSM indicate left/middle."
+    },
+    "derived": {
+      "maxspeed_kmh": 60.0,
+      "urban_intersection_approach_factor": 0.65
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "scenario_id": "random_untested_001",
+  "valid": true,
+  "iterations": 5,
+  "final_summary": "turning scenario (right_turn_across). Participants: car_1 (car, turn_right), cyclist_1 (bicycle, go_straight). Road length 93.6608312256975 m, duration 10.0 s. Initial speeds: cyclist_1=4.25 m/s, car_1=10.0 m/s.",
+  "log": [
+    {
+      "timestamp": "2026-09-13T16:11:25.461494+00:00",
+      "type": "extract_scenario",
+      "scenario_type": "turning",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2026-09-13T16:12:43.852509+00:00",
+      "type": "detect_topology",
+      "scenario_id": "random_untested_001",
+      "streets": [
+        "Landsberger Allee",
+        "Alte Rhinstraße"
+      ],
+      "house_number": null,
+      "topology": "needs_manual_review",
+      "way_count": 3,
+      "reason": "3 ways at the shared node — not the clean 2 or 4 case; do not force a template."
+    },
+    {
+      "timestamp": "2026-09-13T16:12:43.852648+00:00",
+      "type": "query_osm",
+      "status": "ok",
+      "query": "Alte Rhinstraße / Landsberger Allee, Berlin, Germany",
+      "notes": []
+    },
+    {
+      "timestamp": "2026-09-13T16:12:44.166180+00:00",
+      "type": "complete_parameters"
+    },
+    {
+      "timestamp": "2026-09-13T16:12:45.186937+00:00",
+      "type": "generate_scenario",
+      "template": "/beegfs/home/users/s/shayma27/thesis-scenario-pipeline/templates/intersection_4way.xodr",
+      "xodr": "/beegfs/home/users/s/shayma27/thesis-scenario-pipeline/data/stage4_generated/random_untested_001/intersection_4way.xodr",
+      "xosc": "/beegfs/home/users/s/shayma27/thesis-scenario-pipeline/data/stage4_generated/random_untested_001/random_untested_001.xosc"
+    },
+    {
+      "timestamp": "2026-09-13T16:12:45.205920+00:00",
+      "type": "validate",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    }
+  ]
+}

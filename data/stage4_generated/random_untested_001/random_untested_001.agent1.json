@@ -1,0 +1,59 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "dataset": "Berlin Police Reports",
+    "source_id": "random_untested_001",
+    "raw_text": "Ein 87-jähriger Autofahrer bog von der Landsberger Allee nach rechts in die\nAlte Rhinstraße ab und übersah dabei nach bisherigen Erkenntnissen einen in\ngleicher Richtung fahrenden 45-jährigen Radfahrer. Der Radfahrer erlitt\nKopf- und Beinverletzungen und musste ins Krankenhaus gebracht werden."
+  },
+  "classification": {
+    "scenario_type": "turning",
+    "confidence": 1.0
+  },
+  "location": {
+    "primary_road": "Alte Rhinstraße",
+    "secondary_road": "Landsberger Allee",
+    "house_number_reference": null,
+    "intersection": null,
+    "city": "Berlin",
+    "osm_query": "Alte Rhinstraße / Landsberger Allee, Berlin, Germany",
+    "osm_roads": [
+      "Alte Rhinstraße",
+      "Landsberger Allee"
+    ],
+    "direction_references": [],
+    "location_type": "intersection"
+  },
+  "road_context": {
+    "bike_facility_type": null,
+    "bike_facility_position": null
+  },
+  "participants": [
+    {
+      "id": "car_1",
+      "class": "motor_vehicle",
+      "type": "car",
+      "maneuver": "turn_right",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    },
+    {
+      "id": "cyclist_1",
+      "class": "cyclist",
+      "type": "bicycle",
+      "maneuver": "go_straight",
+      "initial_direction": null,
+      "heading_reference": null,
+      "road_position": null,
+      "speed_evidence": null,
+      "speed_evidence_quote": null
+    }
+  ],
+  "conflict": {
+    "conflict_mechanism": "right_turn_across",
+    "collision_happened": true,
+    "collision_description": "A car turning right struck a cyclist going straight."
+  }
+}

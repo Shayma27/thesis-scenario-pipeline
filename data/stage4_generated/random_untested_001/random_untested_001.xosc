@@ -1,0 +1,323 @@
+<?xml version='1.0' encoding='utf-8'?>
+<OpenSCENARIO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OpenScenario.xsd">
+    <FileHeader description="turning: turn_right vs go_straight. A car turning right struck a cyclist going straight." author="Shayma" revMajor="1" revMinor="3" date="2026-09-13T18:12:45.136364"/>
+    <CatalogLocations/>
+    <RoadNetwork>
+        <LogicFile filepath="intersection_4way.xodr"/>
+    </RoadNetwork>
+    <Entities>
+        <ScenarioObject name="car_1">
+            <Vehicle name="car_1" vehicleCategory="car" model3d="car_red.osgb">
+                <BoundingBox>
+                    <Center x="1.3" y="0.0" z="0.8"/>
+                    <Dimensions width="1.8" length="4.5" height="1.6"/>
+                </BoundingBox>
+                <Performance maxSpeed="50.0" maxDeceleration="8.0" maxAcceleration="8.0"/>
+                <Axles>
+                    <FrontAxle maxSteering="0.5" wheelDiameter="0.6" trackWidth="1.6" positionX="3.0" positionZ="0.3"/>
+                    <RearAxle maxSteering="0.5" wheelDiameter="0.6" trackWidth="1.6" positionX="0.0" positionZ="0.3"/>
+                </Axles>
+            </Vehicle>
+        </ScenarioObject>
+        <ScenarioObject name="cyclist_1">
+            <Vehicle name="cyclist_1" vehicleCategory="bicycle" model3d="cyclist.osgb">
+                <BoundingBox>
+                    <Center x="0.3" y="0.0" z="0.8"/>
+                    <Dimensions width="0.6" length="1.8" height="1.5"/>
+                </BoundingBox>
+                <Performance maxSpeed="15.0" maxDeceleration="4.0" maxAcceleration="3.0"/>
+                <Axles>
+                    <FrontAxle maxSteering="0.0" wheelDiameter="0.3" trackWidth="0.5" positionX="1.2" positionZ="0.15"/>
+                    <RearAxle maxSteering="0.0" wheelDiameter="0.3" trackWidth="0.5" positionX="0.0" positionZ="0.15"/>
+                </Axles>
+            </Vehicle>
+        </ScenarioObject>
+    </Entities>
+    <Storyboard>
+        <Init>
+            <Actions>
+                <Private entityRef="car_1">
+                    <PrivateAction>
+                        <TeleportAction>
+                            <Position>
+                                <LanePosition roadId="0" laneId="-1" s="26.83" offset="0.0"/>
+                            </Position>
+                        </TeleportAction>
+                    </PrivateAction>
+                    <PrivateAction>
+                        <LongitudinalAction>
+                            <SpeedAction>
+                                <SpeedActionDynamics dynamicsShape="step" value="1.0" dynamicsDimension="time"/>
+                                <SpeedActionTarget>
+                                    <AbsoluteTargetSpeed value="10.0"/>
+                                </SpeedActionTarget>
+                            </SpeedAction>
+                        </LongitudinalAction>
+                    </PrivateAction>
+                </Private>
+                <Private entityRef="cyclist_1">
+                    <PrivateAction>
+                        <TeleportAction>
+                            <Position>
+                                <LanePosition roadId="0" laneId="-2" s="9.37" offset="0.0"/>
+                            </Position>
+                        </TeleportAction>
+                    </PrivateAction>
+                    <PrivateAction>
+                        <LongitudinalAction>
+                            <SpeedAction>
+                                <SpeedActionDynamics dynamicsShape="step" value="1.0" dynamicsDimension="time"/>
+                                <SpeedActionTarget>
+                                    <AbsoluteTargetSpeed value="4.25"/>
+                                </SpeedActionTarget>
+                            </SpeedAction>
+                        </LongitudinalAction>
+                    </PrivateAction>
+                </Private>
+            </Actions>
+        </Init>
+        <Story name="story_act_maneuvuergroup_MotorVehicleManeuverManeuver">
+            <Act name="act_maneuvuergroup_MotorVehicleManeuverManeuver">
+                <ManeuverGroup name="maneuvuergroup_MotorVehicleManeuverManeuver" maximumExecutionCount="1">
+                    <Actors selectTriggeringEntities="false">
+                        <EntityRef entityRef="car_1"/>
+                    </Actors>
+                    <Maneuver name="MotorVehicleManeuverManeuver">
+                        <Event name="MotorVehicleManeuverEvent" priority="override" maximumExecutionCount="1">
+                            <Action name="MotorVehicleManeuverFollowTrajectory">
+                                <PrivateAction>
+                                    <RoutingAction>
+                                        <FollowTrajectoryAction>
+                                            <TrajectoryRef>
+                                                <Trajectory name="MotorVehicleTrajectory" closed="false">
+                                                    <Shape>
+                                                        <Polyline>
+                                                            <Vertex time="0.0">
+                                                                <Position>
+                                                                    <WorldPosition x="34.95077346005139" y="-36.00910293732948" z="0.0" h="1.80317364820109" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="5.572593508657162">
+                                                                <Position>
+                                                                    <WorldPosition x="34.95077346005139" y="-36.00910293732948" z="0.0" h="1.80317364820109" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.306377320444453">
+                                                                <Position>
+                                                                    <WorldPosition x="28.87151349551154" y="-9.32005667432804" z="0.0" h="1.6944137460675206" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.357161132231743">
+                                                                <Position>
+                                                                    <WorldPosition x="28.83121745255773" y="-8.813985351366084" z="0.0" h="1.6060940733939848" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.407944944019032">
+                                                                <Position>
+                                                                    <WorldPosition x="28.83571643805028" y="-8.306332207840175" z="0.0" h="1.517774400720449" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.458728755806323">
+                                                                <Position>
+                                                                    <WorldPosition x="28.884975381068163" y="-7.801054549977728" z="0.0" h="1.4294547280469134" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.509512567593614">
+                                                                <Position>
+                                                                    <WorldPosition x="28.978610293598212" y="-7.302091166393632" z="0.0" h="1.3411350553733778" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.560296379380903">
+                                                                <Position>
+                                                                    <WorldPosition x="29.11589126383512" y="-6.81333162406938" z="0.0" h="1.252815382699842" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.611080191168194">
+                                                                <Position>
+                                                                    <WorldPosition x="29.29574814605961" y="-6.338585948029371" z="0.0" h="1.1644957100263063" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.661864002955484">
+                                                                <Position>
+                                                                    <WorldPosition x="29.516778902740448" y="-5.881554921070266" z="0.0" h="1.076176037352771" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.712647814742773">
+                                                                <Position>
+                                                                    <WorldPosition x="29.77726053383121" y="-5.44580123506578" z="0.0" h="0.987856364679235" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.763431626530064">
+                                                                <Position>
+                                                                    <WorldPosition x="30.075162508064654" y="-5.034721718731026" z="0.0" h="0.8995366920056993" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.814215438317355">
+                                                                <Position>
+                                                                    <WorldPosition x="30.408162591543825" y="-4.651520858339161" z="0.0" h="0.8112170193321636" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="10.0">
+                                                                <Position>
+                                                                    <WorldPosition x="30.408162591543825" y="-4.651520858339161" z="0.0" h="0.8112170193321636" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                        </Polyline>
+                                                    </Shape>
+                                                </Trajectory>
+                                            </TrajectoryRef>
+                                            <TimeReference>
+                                                <Timing domainAbsoluteRelative="relative" scale="1.0" offset="0.0"/>
+                                            </TimeReference>
+                                            <TrajectoryFollowingMode followingMode="position"/>
+                                        </FollowTrajectoryAction>
+                                    </RoutingAction>
+                                </PrivateAction>
+                            </Action>
+                            <StartTrigger>
+                                <ConditionGroup>
+                                    <Condition name="MotorVehicleManeuverStart" delay="0.0" conditionEdge="none">
+                                        <ByValueCondition>
+                                            <SimulationTimeCondition value="0.1" rule="greaterThan"/>
+                                        </ByValueCondition>
+                                    </Condition>
+                                </ConditionGroup>
+                            </StartTrigger>
+                        </Event>
+                    </Maneuver>
+                </ManeuverGroup>
+                <StartTrigger>
+                    <ConditionGroup>
+                        <Condition name="act_start" delay="0.0" conditionEdge="rising">
+                            <ByValueCondition>
+                                <SimulationTimeCondition value="0.0" rule="greaterThan"/>
+                            </ByValueCondition>
+                        </Condition>
+                    </ConditionGroup>
+                </StartTrigger>
+                <StopTrigger/>
+            </Act>
+        </Story>
+        <Story name="story_act_maneuvuergroup_CyclistGoStraightManeuver">
+            <Act name="act_maneuvuergroup_CyclistGoStraightManeuver">
+                <ManeuverGroup name="maneuvuergroup_CyclistGoStraightManeuver" maximumExecutionCount="1">
+                    <Actors selectTriggeringEntities="false">
+                        <EntityRef entityRef="cyclist_1"/>
+                    </Actors>
+                    <Maneuver name="CyclistGoStraightManeuver">
+                        <Event name="CyclistGoStraightEvent" priority="override" maximumExecutionCount="1">
+                            <Action name="CyclistGoStraightFollowTrajectory">
+                                <PrivateAction>
+                                    <RoutingAction>
+                                        <FollowTrajectoryAction>
+                                            <TrajectoryRef>
+                                                <Trajectory name="CyclistGoStraightTrajectory" closed="false">
+                                                    <Shape>
+                                                        <Polyline>
+                                                            <Vertex time="0.0">
+                                                                <Position>
+                                                                    <WorldPosition x="33.31277382709613" y="-18.513993404863804" z="0.0" h="1.7937800425830528" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="5.524463579568957">
+                                                                <Position>
+                                                                    <WorldPosition x="33.31277382709613" y="-18.513993404863804" z="0.0" h="1.7937800425830528" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="7.849730125965838">
+                                                                <Position>
+                                                                    <WorldPosition x="31.171123880956287" y="-8.822378659237936" z="0.0" h="1.781725284468775" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="7.970290790009778">
+                                                                <Position>
+                                                                    <WorldPosition x="31.064598595421746" y="-8.3236354642193" z="0.0" h="1.7807189163033323" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.090851454053718">
+                                                                <Position>
+                                                                    <WorldPosition x="30.958573980496695" y="-7.82478135502281" z="0.0" h="1.7797143133802449" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.211412118097655">
+                                                                <Position>
+                                                                    <WorldPosition x="30.853049266536893" y="-7.325816999597585" z="0.0" h="1.7787114748238078" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.331972782141596">
+                                                                <Position>
+                                                                    <WorldPosition x="30.748023683881268" y="-6.8267430659492145" z="0.0" h="1.7777103997471946" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.452533446185535">
+                                                                <Position>
+                                                                    <WorldPosition x="30.643496462851726" y="-6.327560222139421" z="0.0" h="1.776711087252557" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.573094110229475">
+                                                                <Position>
+                                                                    <WorldPosition x="30.539466833752908" y="-5.828269136285722" z="0.0" h="1.775713536431124" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.693654774273416">
+                                                                <Position>
+                                                                    <WorldPosition x="30.435934026872015" y="-5.32887047656111" z="0.0" h="1.7747177463633013" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="8.814215438317355">
+                                                                <Position>
+                                                                    <WorldPosition x="30.332897272478597" y="-4.829364911193719" z="0.0" h="1.7737237161187691" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                            <Vertex time="10.0">
+                                                                <Position>
+                                                                    <WorldPosition x="30.332897272478597" y="-4.829364911193719" z="0.0" h="1.7737237161187691" p="0.0" r="0.0"/>
+                                                                </Position>
+                                                            </Vertex>
+                                                        </Polyline>
+                                                    </Shape>
+                                                </Trajectory>
+                                            </TrajectoryRef>
+                                            <TimeReference>
+                                                <Timing domainAbsoluteRelative="relative" scale="1.0" offset="0.0"/>
+                                            </TimeReference>
+                                            <TrajectoryFollowingMode followingMode="position"/>
+                                        </FollowTrajectoryAction>
+                                    </RoutingAction>
+                                </PrivateAction>
+                            </Action>
+                            <StartTrigger>
+                                <ConditionGroup>
+                                    <Condition name="CyclistGoStraightStart" delay="0.0" conditionEdge="none">
+                                        <ByValueCondition>
+                                            <SimulationTimeCondition value="0.1" rule="greaterThan"/>
+                                        </ByValueCondition>
+                                    </Condition>
+                                </ConditionGroup>
+                            </StartTrigger>
+                        </Event>
+                    </Maneuver>
+                </ManeuverGroup>
+                <StartTrigger>
+                    <ConditionGroup>
+                        <Condition name="act_start" delay="0.0" conditionEdge="rising">
+                            <ByValueCondition>
+                                <SimulationTimeCondition value="0.0" rule="greaterThan"/>
+                            </ByValueCondition>
+                        </Condition>
+                    </ConditionGroup>
+                </StartTrigger>
+                <StopTrigger/>
+            </Act>
+        </Story>
+        <StopTrigger>
+            <ConditionGroup>
+                <Condition name="StopSimulation" delay="0.0" conditionEdge="rising">
+                    <ByValueCondition>
+                        <SimulationTimeCondition value="10.0" rule="greaterThan"/>
+                    </ByValueCondition>
+                </Condition>
+            </ConditionGroup>
+        </StopTrigger>
+    </Storyboard>
+</OpenSCENARIO>
