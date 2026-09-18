@@ -56,6 +56,13 @@ part of the pipeline itself: neither tool is invoked by any pipeline code
 
 Each folder has its own short README explaining exactly what's in it and why.
 
+## HPC setup
+
+See [HPC setup and connection guide](docs/hpc_setup.md) for SSH access,
+starting the model server, current connection settings, and the recorded
+thesis configuration. Use the current job's node and port rather than the
+example defaults below.
+
 ## Requirements
 
 ```bash

@@ -5,6 +5,7 @@ or drafts (those are kept outside the repo).
 
 | File | Why it's here |
 |---|---|
+| [hpc_setup.md](hpc_setup.md) | Connecting to HPC, starting the prepared vLLM server, and the recorded thesis configuration. |
 | `manual_classification_reference.md` | The 19 source police reports. Parsed at runtime by `utils/report_loader.py` — this is data the code depends on, not just documentation. |
 | `modeling_assumptions.md` | The deliberate scope decisions behind the pipeline's design (e.g. why only two road templates exist), referenced throughout the code's own comments. |
 | `gold_reference_audit.md` | How the hand-verified gold-reference answer key (`tests/gold_reference.py`) was built and independently cross-checked — the evidence behind the 19/19 extraction-agreement claim. |
