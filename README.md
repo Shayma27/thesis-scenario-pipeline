@@ -1,9 +1,6 @@
 # Scenario Generation Pipeline
 
-Converts a German Berlin police accident report (car/truck vs. cyclist) into a
-standardized **ASAM OpenSCENARIO + OpenDRIVE** scenario, ready to play back in
-[esmini](https://github.com/esmini/esmini) — in a format suitable for
-validating ADAS functions that address car-cyclist conflicts.
+Converts manually prepared German accident narratives involving a motor vehicle and a cyclist into ASAM OpenSCENARIO files linked to OpenDRIVE road templates. The generated scenarios provide a basis for simulation-based investigation of car–cyclist conflicts and require visual review.
 ## How it works
 
 Only **one step** in this pipeline calls a language model. Everything else —
@@ -18,7 +15,7 @@ Stage 1 — extract_scenario.py       ◀── the only LLM call in the whole p
         │  semantic JSON: who, what maneuver, where, how they relate
         ▼
 Stage 2 — osm_enrichment.py          (deterministic — Nominatim + Overpass)
-        │  real road geometry, lane counts, headings, topology
+        │  real road-context information
         ▼
 Stage 3 — complete_parameters.py     (deterministic)
         │  + speed_estimation.py       concrete simulation parameters: speeds, positions, lane IDs
@@ -42,7 +39,7 @@ The pipeline ends with scenario generation and structural checks. Playback is a 
 ├── utils/                  shared code used by src/, scripts/, and tests/ — see utils/README.md
 ├── scripts/                things you run — see scripts/README.md
 ├── tests/                  19 regression tests + fixtures — see tests/README.md
-├── templates/              the 2 hand-built OpenDRIVE road templates — see templates/README.md
+├── templates/              the 2 manually adapted OpenDRIVE road templates — see templates/README.md
 ├── data/                   per-stage snapshots of the 19-report corpus — see data/README.md
 └── docs/                   reference material — see docs/README.md
 ```
@@ -53,8 +50,7 @@ Each folder has its own short README explaining exactly what's in it and why.
 
 See [HPC setup and connection guide](docs/hpc_setup.md) for SSH access,
 starting the model server, current connection settings, and the recorded
-thesis configuration. Use the current job's node and port rather than the
-example defaults below.
+thesis configuration.
 
 ## Running it
 
