@@ -1,17 +1,11 @@
 # Scenario Generation Pipeline
 
-Converts a German Berlin police accident report (car/truck vs. cyclist) into a
-standardized **ASAM OpenSCENARIO + OpenDRIVE** scenario, ready to play back in
-[esmini](https://github.com/esmini/esmini) — in a format suitable for
-validating ADAS functions that address car-cyclist conflicts, though no such
-validation is performed by this pipeline itself.
-
+Converts manually prepared German accident narratives involving a motor vehicle and a cyclist into ASAM OpenSCENARIO files linked to OpenDRIVE road templates. The generated scenarios provide a basis for simulation-based investigation of car–cyclist conflicts and require visual review.
 ## How it works
 
 Only **one step** in this pipeline calls a language model. Everything else —
 map lookups, unit conversion, geometry, file generation, validation — is
-plain deterministic Python that produces the same output every time for the
-same input:
+plain deterministic Python.
 
 ```
 German police report (text)
@@ -20,28 +14,23 @@ German police report (text)
 Stage 1 — extract_scenario.py       ◀── the only LLM call in the whole pipeline
         │  semantic JSON: who, what maneuver, where, how they relate
         ▼
-Stage 2 — osm_enrichment.py          (deterministic — Nominatim + Overpass, no LLM)
-        │  real road geometry, lane counts, headings, topology
+Stage 2 — osm_enrichment.py          (deterministic — Nominatim + Overpass)
+        │  real road-context information
         ▼
-Stage 3 — complete_parameters.py     (deterministic, zero network)
+Stage 3 — complete_parameters.py     (deterministic)
         │  + speed_estimation.py       concrete simulation parameters: speeds, positions, lane IDs
         ▼
-Stage 4 — generate_scenario.py       (deterministic, zero network)
+Stage 4 — generate_scenario.py       (deterministic)
         │  writes the .xosc (OpenSCENARIO) file; the .xodr (OpenDRIVE) road
         │  network is a pre-built template, just copied in, never generated
         ▼
 Stage 5 — validate_outputs.py        (deterministic structural check)
         │
         ▼
-  .xosc + .xodr  (pipeline's final output — done)
+  .xosc + .xodr  (pipeline's final output)
 ```
 
-The pipeline's job ends there. Playing the result back for demonstration —
-in [esmini](https://github.com/esmini/esmini) (done, all 18 scenarios
-confirmed) or DYNA4 (pending) — is a separate, external, manual step, not
-part of the pipeline itself: neither tool is invoked by any pipeline code
-(`src/`), only by the operator scripts in `scripts/` that launch esmini
-*after* the pipeline has already produced its output.
+The pipeline ends with scenario generation and structural checks. Playback is a separate manual step: all 18 visually assessed scenarios reproduced the intended conflicts in esmini. In DYNA4, two longitudinal scenarios succeeded after file adaptations, while the tested intersection scenarios did not.
 
 ## Repository layout
 
@@ -50,7 +39,7 @@ part of the pipeline itself: neither tool is invoked by any pipeline code
 ├── utils/                  shared code used by src/, scripts/, and tests/
 ├── scripts/                things you run
 ├── tests/                  19 regression tests + fixtures
-├── templates/              the 2 hand-built OpenDRIVE road templates
+├── templates/              the 2 manually adapted OpenDRIVE road templates
 ├── data/                   per-stage snapshots of the 19-report corpus
 └── docs/                   reference material, including docs/hpc_setup.md
 ```
@@ -59,26 +48,7 @@ part of the pipeline itself: neither tool is invoked by any pipeline code
 
 See [HPC setup and connection guide](docs/hpc_setup.md) for SSH access,
 starting the model server, current connection settings, and the recorded
-thesis configuration. Use the current job's node and port rather than the
-example defaults below.
-
-## Requirements
-
-```bash
-pip install -r requirements.txt   # scenariogeneration, openai
-```
-
-The LLM client (`utils/llm_client.py`) talks to a vLLM server hosting Llama
-3.1 8B Instruct, configured entirely through environment variables:
-
-```bash
-export LLM_BASE_URL="http://gpu026:8000/v1"   # default shown
-export LLM_API_KEY="EMPTY"                     # default shown
-export LLM_MODEL="llama31"                     # default shown
-```
-
-esmini itself is a separate, external binary (not part of this repo) — see
-[esmini](https://github.com/esmini/esmini).
+thesis configuration.
 
 ## Running it
 
@@ -103,19 +73,3 @@ python3 tests/test_semantic_correctness.py   # or any other tests/test_*.py
 Most tests run fully offline against the frozen `data/` snapshots. The one
 exception is `tests/test_feedback_geometry.py`, which needs a live LLM
 connection (it exercises the feedback-correction loop, not the main pipeline).
-
-## Status
-
-**Pipeline**
-- **Extraction (Stage 1):** 19/19 reports in full field-level agreement with
-  the manually verified, independently cross-checked gold reference.
-- **Generation (Stages 2–5):** 18 of 19 reports. The 19th describes a
-  parking-lot access conflict that neither of the two OpenDRIVE templates can
-  represent, so it's excluded from generation (it stays in the extraction/gold
-  set — see `data/stage1_extracted/`).
-
-**Demonstration** (external, downstream of the pipeline — see "How it works")
-- **esmini:** all 18 active reports individually watched and confirmed
-  correct by the thesis author; a final automated geometry sweep across all
-  18 found zero issues.
-- **DYNA4:** not yet performed.
