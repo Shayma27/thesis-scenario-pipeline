@@ -33,12 +33,7 @@ Stage 5 — validate_outputs.py        (deterministic structural check)
   .xosc + .xodr  (pipeline's final output)
 ```
 
-The pipeline's job ends there. Playing the result back for demonstration —
-in [esmini](https://github.com/esmini/esmini) (done, all 18 scenarios
-confirmed) or DYNA4 (pending) — is a separate, external, manual step, not
-part of the pipeline itself: neither tool is invoked by any pipeline code
-(`src/`), only by the operator scripts in `scripts/` that launch esmini
-*after* the pipeline has already produced its output.
+The pipeline ends with scenario generation and structural checks. Playback is a separate manual step: all 18 visually assessed scenarios reproduced the intended conflicts in esmini. In DYNA4, two longitudinal scenarios succeeded after file adaptations, while the tested intersection scenarios did not.
 
 ## Repository layout
 
