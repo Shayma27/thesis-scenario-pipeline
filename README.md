@@ -46,16 +46,14 @@ part of the pipeline itself: neither tool is invoked by any pipeline code
 ## Repository layout
 
 ```
-├── src/                    the 5 pipeline stage modules — see src/README.md
-├── utils/                  shared code used by src/, scripts/, and tests/ — see utils/README.md
-├── scripts/                things you run — see scripts/README.md
-├── tests/                  19 regression tests + fixtures — see tests/README.md
-├── templates/              the 2 hand-built OpenDRIVE road templates — see templates/README.md
-├── data/                   per-stage snapshots of the 19-report corpus — see data/README.md
-└── docs/                   reference material — see docs/README.md
+├── src/                    the 5 pipeline stage modules
+├── utils/                  shared code used by src/, scripts/, and tests/
+├── scripts/                things you run
+├── tests/                  19 regression tests + fixtures
+├── templates/              the 2 hand-built OpenDRIVE road templates
+├── data/                   per-stage snapshots of the 19-report corpus
+└── docs/                   reference material, including docs/hpc_setup.md
 ```
-
-Each folder has its own short README explaining exactly what's in it and why.
 
 ## HPC setup
 
