@@ -2,8 +2,9 @@
 
 Converts a German Berlin police accident report (car/truck vs. cyclist) into a
 standardized **ASAM OpenSCENARIO + OpenDRIVE** scenario, ready to play back in
-[esmini](https://github.com/esmini/esmini) and validate against ADAS functions
-that address car-cyclist conflicts.
+[esmini](https://github.com/esmini/esmini) — in a format suitable for
+validating ADAS functions that address car-cyclist conflicts, though no such
+validation is performed by this pipeline itself.
 
 ## How it works
 
